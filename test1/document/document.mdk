@@ -1,4 +1,5 @@
 Title         : TITLE OF YOUR PAPER, IN CAPITAL LETTERS CENTERED ON PAGE, USING ONE OR MORE LINES AS NECESSARY
+Subtitle      : An optional subtitle.
 
 Author        : First Author Name
 Affiliation   : Research institute
@@ -6,19 +7,29 @@ Email         : you@bar.com
 
 Author        : My co-author 1
 Affiliation   : Other institute
-Email         : other@bar.com
+Email         : other1@bar.com
 
 Author        : My co-author 2
 Affiliation   : Other institute
-Email         : other@bar.com
+Email         : other2@bar.com
 
 Bibliography  : references.bib
 Doc class     : [reprint,nocopyrightspace]style/sigplanconf.cls
+Logo          : False
+Package       : pgfplots
+
+Tex Header    :
+  \def\refname{&name-references;}
+
+name-references   : REFERENCES
 
 [TITLE]
 
 ~ Abstract
-Papers should follow standard technical paper format, an abstract followed by the more detailed presentation. The abstract should be typed on this area of the first page, with the presentation following after two lines of space.
+Papers should follow standard technical paper format, an abstract
+followed by the more detailed presentation. The abstract should be typed
+on this area of the first page, with the presentation following after two
+lines of space.
 ~
 
 [editor]: https://www.madoko.net/editor.html "Madoko.net Editor"
@@ -27,33 +38,61 @@ Papers should follow standard technical paper format, an abstract followed by th
 
 ~ TexRaw
 % any commands necessary for your particular style
+\def\refname{&name-references;}
 \category{D.2.5}{Software Engineering}{Testing and Debugging}[symbolic execution]
 \terms{Algorithms, Experimentation}
 \keywords{Games for learning, white box testing}
 ~
 
+
 # GENERAL INSTRUCTIONS { #sec-intro }
-You are encouraged to use the [Madoko.net Editor][editor] while using the [Madoko Reference Manual][reference-manual] to edit/commit your documents to the [femtc2016] GitHub repository.  More information about this method of contribution will be covered below.
+You are encouraged to use the [Madoko.net Editor][editor] while using
+the [Madoko Reference Manual][reference-manual] to edit/commit your
+documents to the [femtc2016] GitHub repository. More information about
+this method of contribution will be covered below.
 
-Text styling, links, sub- and super-script, footnotes and other topics are covered in section [Syntax: Inline elements](http://research.microsoft.com/en-us/um/people/daan/madoko/doc/reference.html#sec-syntax--inline-elements) of the manual.
+Text styling, links, sub- and super-script, footnotes and other topics
+are covered in section [Syntax: Inline
+elements](http://research.microsoft.com/en-us/um/people/daan/madoko/doc/reference.html#sec-syntax--inline-elements)
+of the manual.
 
-Headings, Figures and Tables, Lists, Code Blocks, Mathematics, etc are covered in section [Syntax: Block elements](http://research.microsoft.com/en-us/um/people/daan/madoko/doc/reference.html#sec-syntax--block-elements) of the manual.
+Headings, Figures and Tables, Lists, Code Blocks, Mathematics, etc are
+covered in section [Syntax: Block
+elements](http://research.microsoft.com/en-us/um/people/daan/madoko/doc/reference.html#sec-syntax--block-elements)
+of the manual.
 
-The target length for submitted and invited papers is about eight pages. This length includes all figures and tables. However, because the Proceedings will not be printed on paper, there is no maximum limit on the number of pages. You are free to exceed the target length of eight pages.
+The target length for submitted and invited papers is about eight pages.
+This length includes all figures and tables. However, because the
+Proceedings will not be printed on paper, there is no maximum limit on
+the number of pages. You are free to exceed the target length of eight
+pages.
 
 # MAIN HEADINGS LIKE THIS STYLE
-Main Headings are all upper case letters and underlined. In Madoko, a Single '#' symbol at the start of the line, followed by a space and then the heading text.
+Main Headings are all upper case letters and underlined. In Madoko, a
+Single '#' symbol at the start of the line, followed by a space and then
+the heading text.
 
 ## Subheadings Like This Style
-Subheadings within sections follow the same format as section titles, but with upper and lower case. In Madoko, a Double '#' symbol at the start of the line, followed by a space and then the heading text.
+Subheadings within sections follow the same format as section titles, but
+with upper and lower case. In Madoko, a Double '#' symbol at the start of
+the line, followed by a space and then the heading text.
 
 ### Subsubheadings like this style
-Subsubheadings have no underline, and only the first letter capitalized. In Madoko, a Triple '#' symbol at the start of the line, followed by a space and then the heading text.
+Subsubheadings have no underline, and only the first letter capitalized.
+In Madoko, a Triple '#' symbol at the start of the line, followed by a
+space and then the heading text.
 
 # FIGURES, TABLES, AND EQUATIONS
-Original drawings and photos may be included in your paper as figures. Diagrams may be in color.
+Original drawings and photos may be included in your paper as figures.
+Diagrams may be in color.
 
-Figures and tables should immediately follow first mention of them in the text and can be placed in one column, or in the case of wider figures, can cover two columns (but only at the top or bottom of the page). The caption should start with either the word “figure” spelled out or abbreviated, followed by the figure number (i.e., Figure 1 or Fig. 1). The figure caption should be followed by a single line of space before the text resumes.
+Figures and tables should immediately follow first mention of them in the
+text and can be placed in one column, or in the case of wider figures,
+can cover two columns (but only at the top or bottom of the page). The
+caption should start with either the word “figure” spelled out or
+abbreviated, followed by the figure number (i.e., Figure 1 or Fig. 1).
+The figure caption should be followed by a single line of space before
+the text resumes.
 
 ## Figures
 Figure [#fig-smokeview] in Section [#sec-intro] shows an image from an older version of Smokeview. Note that you can drag&drop images into the editor pane to include them in the document, and similarly with bibtex files, latex style files, etc.
@@ -88,7 +127,9 @@ Table [#table-sample] shows an example table figure.
 ~
 
 ## Equations
-Standard terminology should be used in equations. If possible, keep equations to one column. All equations should be numbered. A definition of $e$ is shown in Equation [#euler]:
+Standard terminology should be used in equations. If possible, keep
+equations to one column. All equations should be numbered. A definition
+of $e$ is shown in Equation [#euler]:
 
 ~ Equation { #euler }
 e = \lim_{n\to\infty} \left( 1 + \frac{1}{n} \right)^n
@@ -101,12 +142,17 @@ function hello() {
   return "hello world!"
 }
 ```
-# REFERENCES
-When references are used in the text, tie them to an alphabetical (by principal author) list of references to be included as the last item of your paper. The format commonly used in scientific literature follows:
 
-Smith, J. S., Bloggs, R. T. and Jones, E. R. (1974), "Magnetic Anomalies in Geothermal Systems,” Journal of Fluid Mechanics, 254, 73-79. <Reference Style>
+# BIBLIOGRAPHY AND REFERENCES
+When references are used in the text, tie them to an alphabetical (by
+principal author) list of references to be included as the last item of
+your paper. The format commonly used in scientific literature follows:
 
-Please include full title of journal articles or other references, journal, volume, date, pages.
+    [1] Smith, J. S., Bloggs, R. T. and Jones, E. R. (1974), "Magnetic Anomalies in Geothermal
+        Systems", Journal of Fluid Mechanics, 254, 73-79
+    [2] Leslie Lamport, LaTeX: A Document Preparation System (2nd Edition), Addison-Wesley, 1994
+
+Please include full title of journal articles or other references, journal, volume, date, pages.  There is a nice [table on Wikipedia](https://en.wikibooks.org/wiki/LaTeX/Bibliography_Management#BibTeX) that shows all of the different data fields for the BibTeX file.
 
 When using Madoko, edit the content of the .bib file in the document folder, and use the reference methods as shown in the [Bibliography and Citations Section](http://research.microsoft.com/en-us/um/people/daan/madoko/doc/reference.html#sec-bib) of the Madoko Manual.
 
@@ -133,7 +179,7 @@ Each author must present his/her paper within the allotted time, allowing for so
 
 All presentations will be made using the computer projector available in the conference room. We will not have overhead projectors or slide projectors in the meeting rooms.
 
-Your presentation, in final form, must be received by October 15th, 2014. A final commit of the files to the GitHub repository is preferred.  Once the final draft is complete and reviewed it will be merged into the master branch of the repository. If you decide to use some other tool for creating your presentation, PDF format is preferred, but ODP, PPT, or PPTX formats are acceptable. Please e-mail the files to [conference@thunderheadeng.com][email link].
+Your presentation, in final form, must be received by **October 15th, 2016**. A final commit of the files to the GitHub repository is preferred.  Once the final draft is complete and reviewed it will be merged into the master branch of the repository. If you decide to use some other tool for creating your presentation, PDF format is preferred, but ODP, PPT, or PPTX formats are acceptable. Please e-mail the files to [conference@thunderheadeng.com][email link].
 
 All presentations will be pre-loaded on the computers that are present. Please note that this approach will make it necessary for us to receive the presentation files prior to the conference. If you have a different software requirement, it should still be possible for you to attach your own computer to the projector if you bring it with you. This is not optimal, as it takes time and slows down the session.
 
@@ -144,6 +190,7 @@ The papers and presentation materials will be made available online during and a
 
 Author(s) retain all rights to submitted material. The organizers are granted a non-exclusive right to copy and redistribute conference material submitted by the author(s). 
 
+[name-references]: REFERENCES
 [BIB]
 
 &pagebreak;
