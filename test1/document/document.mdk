@@ -88,6 +88,39 @@ Table [#table-sample] shows an example table figure.
 { .booktable }
 ~
 
+## Figures
+Figure [#fig-smokeview] in Section [#sec-intro] shows an image from an older version of Smokeview. Note that you can drag&drop images into the editor pane to include them in the document, and similarly with bibtex files, latex style files, etc.
+
+~ Figure { #fig-smokeview; caption:"Illustration of placement of figure and caption. (use the `.wide` class for wide figure)."}
+![Ex1_0]
+~
+
+~ Note
+Images larger than about 1Mb in size will be rejected by the Madoko.net server.
+~
+
+[Ex1_0]: images/Ex1_0.png "Ex1_0" { width:auto; max-width:90% }
+
+## Tables
+
+Table [#table-sample] shows an example table figure.
+
+~ TableFigure { #table-sample; \
+    caption: "Modelle mit unterschiedlich geschätztem baseline hazard"; }
+|                 | $c(t)$                                         ||||
+|                 |---------|---------|---------|---------------------|
+|                 | (A0)    | (A1)    | (A2)    | (A3)                |
+|                 | ohne    | Log     | Polynom | Stückweise konstant |
+|:----------------|:-------:|:-------:|:-------:|:-------------------:|
+| Log likelihood  | -6.798  | -6.733  | -6.715  | -6.686              |
+| Pseudeo $R^{2}$ | 0,048   | 0,057   | 0,059   | -                   |
+| AIC             | 13.615  | 13.489  | 13.456  | 13.483              |
+| BIC             | 13.711  | 13.594  | 13.580  | 14.009              |
+| N               | 105.484 | 105.484 | 105.484 | 105.484             |
+|-----------------|---------|---------|---------|---------------------|
+{ .booktable }
+~
+
 ## Equations
 
 Standard terminology should be used in equations. If possible, keep equations to one column. All equations should be numbered. A definition of $e$ is shown in Equation [#euler]:
