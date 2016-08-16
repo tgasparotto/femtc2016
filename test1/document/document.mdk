@@ -1,14 +1,14 @@
-Title         : My Academic Paper
+Title         : TITLE OF YOUR PAPER, IN CAPITAL LETTERS CENTERED ON PAGE, USING ONE OR MORE LINES AS NECESSARY
 
-Author        : You
+Author        : First Author Name
 Affiliation   : Research institute
 Email         : you@bar.com
 
-Author        : My co-author
+Author        : My co-author 1
 Affiliation   : Other institute
 Email         : other@bar.com
 
-Author        : My co-author
+Author        : My co-author 2
 Affiliation   : Other institute
 Email         : other@bar.com
 
@@ -18,10 +18,10 @@ Doc class     : [reprint,nocopyrightspace]style/sigplanconf.cls
 [TITLE]
 
 ~ Abstract
-There is more in you of good than you know, child of the kindly West.
-Some courage and some wisdom, blended in measure. If more of us valued
-food and cheer and song above hoarded gold, it would be a merrier world.
-But sad or merry, I must leave it now. Farewell!
+Papers should follow standard technical paper format, an abstract followed by the more detailed presentation. The abstract should be typed on this area of the first page, with the presentation following after two lines of space. You are encouraged to use the Madoko Editor and edit/commit your documents to the femtc2016 GitHub repository.
+
+[Madoko Reference Manual]: http://research.microsoft.com/en-us/um/people/daan/madoko/doc/reference.html "Madoko Reference Manual"
+
 ~
 
 ~ TexRaw
@@ -31,11 +31,11 @@ But sad or merry, I must leave it now. Farewell!
 \keywords{Games for learning, white box testing}
 ~
 
-# Introduction     { #sec-intro }
+# LENGTH OF PAPER     { #sec-intro }
 
-Let's start with a sub section.
+The target length for submitted and invited papers is about eight pages. This length includes all figures and tables. However, because the Proceedings will not be printed on paper, there is no maximum limit on the number of pages. You are free to exceed the target length of eight pages.
 
-## A short overview
+# GENERAL INSTRUCTIONS
 
 Figure [#fig-butterfly] in Section [#sec-intro] shows a monarch
 butterfly. Note that you can drag&drop images into the editor pane to
@@ -55,7 +55,25 @@ Our contributions are:
 * And some source code;
 * And references to Tex books [@Knuth:TeX;@Lamport:LaTeX;@Goo93;@Fberg04] and others [@Grandstrand]. 
 
-# Content
+# MAIN HEADINGS _Heading 1_ STYLE
+Main Headings are all upper case letters and underlined. In Madoko, a Single '#' symbol at the start of the line, followed by a space and then the heading text.
+
+## Subheadings Like This _Heading 2_ Style
+Subheadings within sections follow the same format as section titles, but with upper and lower case. In Madoko, a Double '#' symbol at the start of the line, followed by a space and then the heading text.
+
+### Subsubheadings like this _Heading 3_ style
+Subsubheadings have no underline, and only the first letter capitalized. In Madoko, a Triple '#' symbol at the start of the line, followed by a space and then the heading text.
+
+NOTE
+
+# FIGURES, TABLES, AND EQUATIONS
+Standard terminology should be used in equations. If possible, keep equations to one column. All equations should be numbered.
+
+Original drawings and photos may be included in your paper as figures. Diagrams may be in color.
+
+Figures and tables should immediately follow first mention of them in the text and can be placed in one column, or in the case of wider figures, can cover two columns (but only at the top or bottom of the page). The caption should start with either the word “figure” spelled out or abbreviated, followed by the figure number (i.e., Figure 1 or Fig. 1). The figure caption should be followed by a single line of space before the text resumes.
+
+# Content Examples
 
 A definition of $e$ is shown in Equation [#euler]:
 
