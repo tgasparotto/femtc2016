@@ -88,39 +88,6 @@ Table [#table-sample] shows an example table figure.
 { .booktable }
 ~
 
-## Figures
-Figure [#fig-smokeview] in Section [#sec-intro] shows an image from an older version of Smokeview. Note that you can drag&drop images into the editor pane to include them in the document, and similarly with bibtex files, latex style files, etc.
-
-~ Figure { #fig-smokeview; caption:"Illustration of placement of figure and caption. (use the `.wide` class for wide figure)."}
-![Ex1_0]
-~
-
-~ Note
-Images larger than about 1Mb in size will be rejected by the Madoko.net server.
-~
-
-[Ex1_0]: images/Ex1_0.png "Ex1_0" { width:auto; max-width:90% }
-
-## Tables
-
-Table [#table-sample] shows an example table figure.
-
-~ TableFigure { #table-sample; \
-    caption: "Modelle mit unterschiedlich geschätztem baseline hazard"; }
-|                 | $c(t)$                                         ||||
-|                 |---------|---------|---------|---------------------|
-|                 | (A0)    | (A1)    | (A2)    | (A3)                |
-|                 | ohne    | Log     | Polynom | Stückweise konstant |
-|:----------------|:-------:|:-------:|:-------:|:-------------------:|
-| Log likelihood  | -6.798  | -6.733  | -6.715  | -6.686              |
-| Pseudeo $R^{2}$ | 0,048   | 0,057   | 0,059   | -                   |
-| AIC             | 13.615  | 13.489  | 13.456  | 13.483              |
-| BIC             | 13.711  | 13.594  | 13.580  | 14.009              |
-| N               | 105.484 | 105.484 | 105.484 | 105.484             |
-|-----------------|---------|---------|---------|---------------------|
-{ .booktable }
-~
-
 ## Equations
 
 Standard terminology should be used in equations. If possible, keep equations to one column. All equations should be numbered. A definition of $e$ is shown in Equation [#euler]:
@@ -129,7 +96,7 @@ Standard terminology should be used in equations. If possible, keep equations to
 e = \lim_{n\to\infty} \left( 1 + \frac{1}{n} \right)^n
 ~
 
-# Content Examples
+# CONTENT EXAMPLES
 
 Let's program some JavaScript:
 ``` javascript
@@ -138,98 +105,40 @@ function hello() {
 }
 ```
 
-## There and back again
+# REFERENCES
 
-It had a perfectly round door like a porthole, painted green, with a
-shiny yellow brass knob in the exact middle. The door opened on to a
-tube-shaped hall like a tunnel: a very comfortable tunnel without smoke,
-with paneled walls, and floors tiled and carpeted, provided with
-polished chairs, and lots and lots of pegs for hats and coats; the hobbit
-was fond of visitors. The tunnel wound on and on, going fairly but not
-quite straight into the side of the hill -- The Hill, as all the people for
-many miles round called it -- and many little round doors opened out of it,
-first on one side and then on another. No going upstairs for the hobbit:
-bedrooms, bathrooms, cellars, pantries (lots of these), wardrobes (he had
-whole rooms devoted to clothes), kitchens, dining-rooms, all were on the
-same floor, and indeed on the same passage. The best rooms were all on
-the left-hand side (going in), for these were the only ones to have
-windows, deep-set round windows looking over his garden, and meadows
-beyond, sloping down to the river.
+When references are used in the text, tie them to an alphabetical (by principal author) list of references to be included as the last item of your paper. The format commonly used in scientific literature follows:
+
+Smith, J. S., Bloggs, R. T. and Jones, E. R. (1974), "Magnetic Anomalies in Geothermal Systems,” Journal of Fluid Mechanics, 254, 73-79. <Reference Style>
+
+Please include full title of journal articles or other references, journal, volume, date, pages.
+
+When using Madoko, edit the content of the .bib file in the document folder, and use the reference methods as shown in the [Bibliography and Citations Section](http://research.microsoft.com/en-us/um/people/daan/madoko/doc/reference.html#sec-bib) of the Madoko Manual.
 
 
-~ Lemma { #lemma-test; caption:"A __lemma__ caption" }
-There he lay, a vast red-golden dragon, fast asleep; thrumming came from
-his jaws and nostrils, and wisps of smoke, but his fires were low in
-slumber
-~
+# DEADLINE
 
-~ Proof { caption:"Of Lemma [#lemma-test]" }
-Roads go ever ever on.
-~
+Your paper, in final form, must be received by October 15th, 2016. The best way to edit and submit is to use the Madoko [editor] to edit your document in the 'authoring' branch of the GitHub [femtc2016] repository.
 
-~ Todo 
-Finish the proof
-~
+# CONFERENCE CONTENT DISTRIBUTION
 
-## The dinner
+The papers and presentation materials will be made available online during and after the conference. In addition, the organizers are planning to may broadcast live presentations online during the event. The papers, presentations, and videos will be archived and made available on the web after the conference.
 
-And suddenly first one and then another began to sing as they played,
-deep-throated singing of the dwarves in the deep places of their ancient
-homes; and this is like a fragment of their song, if it can be like their
-song without their music. \[...\] As they sang the hobbit felt the love
-of beautiful things made by hands and by cunning and by magic moving
-through him, a fierce and jealous love, the desire of the hearts of
-dwarves. Then something Tookish woke up inside him, and he wished to go
-and see the great mountains, and hear the pine-trees and the waterfalls,
-and explore the caves, and wear a sword instead of a walking-stick. He
-looked out of the window. The stars were out in a dark sky above the
-trees. He thought of the jewels of the dwarves shining in dark caverns.
-Suddenly in the wood beyond The Water a flame leapt up -- probably
-somebody lighting a wood-fire -- and he thought of plundering dragons
-settling on his quiet Hill and kindling it all to flames. He shuddered;
-and very quickly he was plain Mr. Baggins of Bag-End, Under-Hill, again.
-He got up trembling.
+Author(s) retain all rights to submitted material. The organizers are granted a non-exclusive right to copy and redistribute conference material submitted by the author(s). 
 
-## A turn of events
+# PRESENTATION
+Each author must present his/her paper within the allotted time, allowing for some minutes of open discussion. The session chair is responsible for keeping authors within their time limit, in order to ensure that each author has enough time for their presentation. When preparing your presentation slides, make sure they are clear and large enough so that your audience can read them from as far as 80 feet away. 
 
-"Halt!" cried Gandalf, who appeared suddenly, and stood alone, with arms
-uplifted, between the advancing dwarves and the ranks awaiting them.
-"Halt!" he called in a voice like thunder, and his staff blazed forth
-with a flash like the lightning. "Dread has come upon you all! Alas! it
-has come more swiftly than I guessed."
+All presentations will be made using the computer projector available in the conference room. We will not have overhead projectors or slide projectors in the meeting rooms.
 
-    for i:=maxint to 0 do
-    begin 
-        j:=square(root(i));
-    end;
+Your presentation, in final form, must be received by October 15th, 2014. PDF format is preferred, but ODP, PPT, or PPTX formats are acceptable. Please e-mail the files to [link].
+ 
+All presentations will be pre-loaded on the computers that are present. Please note that this approach will make it necessary for us to receive the presentation files prior to the conference. 
 
-"If you mean you think it is my job to go into the secret passage first, O
-Thorin Thrain's son Oakenshield, may your beard grow ever longer," he
-said crossly, "say so at once and have done!"
+[link]: mailto:conference@thunderheadeng.com "link title"
 
-## A description
+If you have a different software requirement, it should still be possible for you to attach your own computer to the projector if you bring it with you. This is not optimal, as it takes time and slows down the session.
 
-I suppose hobbits need some description nowadays, since they have become
-rare and shy of the Big People, as they call us. They are (or were) a
-little people, about half our height, and smaller than the bearded
-Dwarves. Hobbits have no beards. There is little or no magic about them,
-except the ordinary everyday sort which helps them to disappear quietly
-and quickly when large stupid folk like you and me come blundering along,
-making a noise like elephants which they can hear a mile off. They are
-inclined to be fat in the stomach; they dress in bright colors (chiefly
-green and yellow);
-
-~ Lemma { caption:"Another lemma" }
-There is little or no magic about them, except the ordinary everyday sort
-which helps them to disappear quietly and quickly when large stupid folk
-like you and me come blundering along, making a noise like elephants
-which they can hear a mile off.
-~
-
-
-### Acknowledgments {-}
-
-I would like to thank ...
 
 [BIB]
 
