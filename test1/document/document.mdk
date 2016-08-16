@@ -88,7 +88,7 @@ the text resumes.
 ## Figures
 Figure [#fig-smokeview] in Section [#sec-intro] shows an image from an older version of Smokeview. Note that you can drag&drop images into the editor pane to include them in the document, and similarly with bibtex files, latex style files, etc.
 
-~ Figure { #fig-smokeview; caption:"Illustration of placement of figure and caption. (use the `.wide` class for wide figure)."; .wide}
+~ Figure { #fig-smokeview; caption:"Illustration of placement of figure and caption. (use the `.wide` class for wide figure)."}
 ![Ex1_0]
 ~
 
@@ -101,8 +101,7 @@ Images larger than about 1Mb in size will be rejected by the Madoko.net server.
 ## Tables
 Table [#table-sample] shows an example table figure.
 
-~ TableFigure { #table-sample; \
-    caption: "Modelle mit unterschiedlich geschätztem baseline hazard"; }
+~ TableFigure { #table-sample; caption: "Modelle mit unterschiedlich geschätztem baseline hazard" }
 |                 | $c(t)$                                         ||||
 |                 |---------|---------|---------|---------------------|
 |                 | (A0)    | (A1)    | (A2)    | (A3)                |
@@ -114,7 +113,6 @@ Table [#table-sample] shows an example table figure.
 | BIC             | 13.711  | 13.594  | 13.580  | 14.009              |
 | N               | 105.484 | 105.484 | 105.484 | 105.484             |
 |-----------------|---------|---------|---------|---------------------|
-{ .booktable }
 ~
 
 ## Equations
