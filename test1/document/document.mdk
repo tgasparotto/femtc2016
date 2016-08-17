@@ -1,3 +1,4 @@
+[INCLUDE=style/lncs]
 Title         : TITLE OF YOUR PAPER, IN CAPITAL LETTERS CENTERED ON PAGE, USING ONE OR MORE LINES AS NECESSARY
 Subtitle      : An optional subtitle.
 
@@ -14,7 +15,6 @@ Affiliation   : Other institute
 Email         : other2@bar.com
 
 Bibliography  : references.bib
-Doc class     : [reprint,nocopyrightspace,10pt]style/sigplanconf.cls
 Logo          : False
 Tex Header    :
   \def\refname{&name-references;}
