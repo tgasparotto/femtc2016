@@ -144,7 +144,6 @@ function hello() {
 }
 ```
 Here is a footnote[^fn] reference.
-
 [^fn]: This is the content of the example footnote. 
     You can continue a footnote by indenting content.
     And notice the back link.
