@@ -14,7 +14,7 @@ Affiliation   : Other institute
 Email         : other2@bar.com
 
 Bibliography  : references.bib
-Doc class     : [reprint,nocopyrightspace]style/sigplanconf.cls
+Doc class     : [reprint,nocopyrightspace,10pt]style/sigplanconf.cls
 Logo          : False
 Tex Header    :
   \def\refname{&name-references;}
