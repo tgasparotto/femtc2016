@@ -18,7 +18,6 @@ Doc class     : [reprint,nocopyrightspace,10pt]style/sigplanconf.cls
 Logo          : False
 Tex Header    :
   \def\refname{&name-references;}
-
 name-references : REFERENCES
 
 [TITLE]
@@ -33,12 +32,13 @@ lines of space.
 [editor]: https://www.madoko.net/editor.html "Madoko.net Editor"
 [reference-manual]: http://research.microsoft.com/en-us/um/people/daan/madoko/doc/reference.html "Madoko Reference Manual"
 [femtc2016]: https://github.com/thunderheadeng/femtc2016
+[emaillink]: mailto:conference@thunderheadeng.com "conference@thunderheadeng.com"
 
 # GENERAL INSTRUCTIONS { #sec-intro }
 You are encouraged to use the [Madoko.net Editor][editor] while using
 the [Madoko Reference Manual][reference-manual] to edit/commit your
-documents to the [femtc2016] GitHub repository. More information about
-this method of contribution will be covered below.
+documents into the 'authoring' branch of the [femtc2016] GitHub repository. 
+More information about this method of contribution will be covered below.
 
 Text styling, links, sub- and super-script, footnotes and other topics
 are covered in section [Syntax: Inline
@@ -221,8 +221,6 @@ software requirement, it should still be possible for you to attach your
 own computer to the projector if you bring it with you. This is not
 optimal, as it takes time and slows down the session.
 
-[emaillink]: mailto:conference@thunderheadeng.com "conference@thunderheadeng.com"
-
 # CONFERENCE CONTENT DISTRIBUTION
 The papers and presentation materials will be made available online
 during and after the conference. In addition, the organizers are planning
@@ -234,7 +232,6 @@ Author(s) retain all rights to submitted material. The organizers are
 granted a non-exclusive right to copy and redistribute conference
 material submitted by the author(s).
 
-[name-references]: REFERENCES
 [BIB]
 
 &pagebreak;
