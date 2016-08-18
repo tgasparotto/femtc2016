@@ -50,6 +50,9 @@ http://research.microsoft.com/en-us/um/people/daan/madoko/doc/reference.html
 FEMTC 2016 GitHub Project:  
 https://github.com/thunderheadeng/femtc2016
 
+If you want to know more about Madoko system and watch a talk from the creator of it.  
+https://youtu.be/RMTrSwSQ-lQ
+
 # Event Registration
 We have a discounted rate for speakers until October 1st of $360 US. On October 1st, 2016 the price is increased to $400.  This fee covers 2.5 days of talks (~38 Presentations), 2 tea/coffee breaks per day and a buffet lunch all 3 days.  We are doing our best to maximize value to you and minimize costs.  You can pay for your registration through the event site.  https://femtc2016.dryfta.com/en/buy-tickets it works best if you login to the site first with your account and then buy your tickets.
 
