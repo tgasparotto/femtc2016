@@ -15,7 +15,7 @@ Beamer Theme  : singapore
 
 # Madoko Presentation
 
-Using [Madoko] it is easy to create beautiful presentations.
+Using [Madoko] it is easy to create beautiful presentations. See how it updates in real time.
 
 * [Html][slide]:
   Uses the `Reveal.js` library by [Hakim El Hattab](http://hakim.se).\
