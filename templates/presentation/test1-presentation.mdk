@@ -145,7 +145,13 @@ You can select from different transitions, like:\
 [None](?transition=none#/transitions) -
 [Default](?#/transitions)
 
-
+## Video
+~ Center
+Describe that video if you want to.
+~
+<div>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/4BNfN6fLYIA" frameborder="0" allowfullscreen></iframe>
+</div>
 
 ## Pauses?
 
