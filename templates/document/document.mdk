@@ -73,7 +73,7 @@ Subsubheadings have no underline, and only the first letter capitalized.
 In Madoko, a Triple '#' symbol at the start of the line, followed by a
 space and then the heading text.
 
-# FIGURES, TABLES, AND EQUATIONS
+# FIGURES, TABLES, AND EQUATIONS { #sec-FTE }
 Original drawings and photos may be included in your paper as figures.
 Diagrams may be in color.
 
@@ -85,8 +85,8 @@ abbreviated, followed by the figure number (i.e., Figure 1 or Fig. 1).
 The figure caption should be followed by a single line of space before
 the text resumes.
 
-## Figures
-Figure [#fig-smokeview] in Section [#sec-intro] shows an image from an
+## Figures { #sec-FTE-figures }
+Figure [#fig-smokeview] in Section [#sec-FTE-figures] shows an image from an
 older version of Smokeview. Note that you can drag&drop images into the
 editor pane to include them in the document, and similarly with bibtex
 files, latex style files, etc.
@@ -118,8 +118,9 @@ Table [#table-sample] shows an example full width table figure.
 |----------------|---------|---------|---------|-----------|
 ~
 
+
 ## Equations
-Standard terminology should be used in equations. If possible, keep
+Standard **terminology** should be used in equations. If possible, keep
 equations to one column. All equations should be numbered. A definition
 of $e$ is shown in Equation [#euler]:
 
