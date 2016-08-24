@@ -26,7 +26,8 @@ name-references : REFERENCES
 Papers should follow standard technical paper format, an abstract
 followed by the more detailed presentation. The abstract should be typed
 on this area of the first page, with the presentation following after two
-lines of space.
+lines of space. The Abstract section should be indented from the main
+body of text.
 ~
 
 [editor]: https://www.madoko.net/editor.html "Madoko.net Editor"
