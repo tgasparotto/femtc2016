@@ -1,18 +1,16 @@
 [INCLUDE=style/lncs]
-Title         : TITLE OF YOUR PAPER, IN CAPITAL LETTERS CENTERED ON PAGE, USING ONE OR MORE LINES AS NECESSARY
+Title         : VALIDATING FDS AGAINST A LARGE-SCALE FIRE TEST FOR FACADE SYSTEMS
 Subtitle      : An optional subtitle.
 
-Author        : First Author Name
-Affiliation   : Research institute
-Email         : you@bar.com
+Author        : Markus Nilsson
+Affiliation   : Brandskyddslaget AB, Sweden
+Email         : markus.nilsson@brandskyddslaget.se
 
-Author        : My co-author 1
-Affiliation   : Other institute
-Email         : other1@bar.com
+Author        : Johan Nilsen
+Affiliation   : Brandskyddslaget AB, Sweden
 
-Author        : My co-author 2
-Affiliation   : Other institute
-Email         : other2@bar.com
+Author        : Axel Mossberg
+Affiliation   : Brandskyddslaget AB, Sweden
 
 Bibliography  : references.bib
 Logo          : False
