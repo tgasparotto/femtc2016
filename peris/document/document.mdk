@@ -1,18 +1,18 @@
 [INCLUDE=style/lncs]
-Title         : TITLE OF YOUR PAPER, IN CAPITAL LETTERS CENTERED ON PAGE, USING ONE OR MORE LINES AS NECESSARY
-Subtitle      : An optional subtitle.
+Title         : Study of the parameters that influence the I-girder bridges behaviour during fire events
+Subtitle      : 
 
-Author        : First Author Name
-Affiliation   : Research institute
-Email         : you@bar.com
+Author        : Peris-Sayol G.
+Affiliation   : Euroestudios, Ingenieros de Consulta. c/Ramón de Aguinaga 8, 28028, Madrid, Spain.
+Email         : guillem.peris@euroestudios.es
 
-Author        : My co-author 1
-Affiliation   : Other institute
-Email         : other1@bar.com
+Author        : Payá-Zaforteza I.
+Affiliation   : ICITECH, Departamento de Ingeniería de la Construcción. Universitat Politècnica de València. Camino de Vera S/N, 46071, Spain.
+Email         : igpaza@upv.es
 
-Author        : My co-author 2
-Affiliation   : Other institute
-Email         : other2@bar.com
+Author        : 
+Affiliation   : 
+Email         : 
 
 Bibliography  : references.bib
 Logo          : False
@@ -23,10 +23,16 @@ name-references : REFERENCES
 [TITLE]
 
 ~ Abstract
-Papers should follow standard technical paper format, an abstract
-followed by the more detailed presentation. The abstract should be typed
-on this area of the first page, with the presentation following after two
-lines of space.
+Bridges are a critical element of the transportation system of a country. To ensure bridge safety
+and functionality, bridge design is guided by bridge standards which prescribe the loads to be considered when designing
+a bridge or when assessing its structural performance. However, bridge standards do not make any reference to fire,
+despite the fact that bridge fires are a real threat and a major concern nowadays. This paper uses Computational Fluid
+Dynamics simulations to study the parameters influencing the temperatures in the gas surrounding I girder bridges during a fire,
+since this is a critical parameter governing the response of the bridge. More specifically, the study considers 
+four geometric parameters (vertical clearance, bridge substructure configuration, span length and bridge width)
+and two fire scenario parameters (position of the fire load and type of fuel). Results show that vertical clearance,
+type of fuel and position of the fire load are the most influential parameters for the flange temperatures and that web
+temperatures are also influenced by the bridge substructure configuration.
 ~
 
 [editor]: https://www.madoko.net/editor.html "Madoko.net Editor"
@@ -34,7 +40,28 @@ lines of space.
 [femtc2016]: https://github.com/thunderheadeng/femtc2016
 [emaillink]: mailto:conference@thunderheadeng.com "conference@thunderheadeng.com"
 
-# GENERAL INSTRUCTIONS { #sec-intro }
+# INTRODUCTION { #sec-intro }
+
+# METHODS { #sec-intro }
+## Parameters Studied
+This study considers six parameters: four of them describe the geometry of the bridge (vertical clearance, bridge substructure configuration,
+span length and bridge width) and two of them (position of the fire load and type of fuel) are related to the fire scenario.
+Other parameters such as the soot yield or the position of bridge transverse diaphragms have not been included in this study.
+
+## Computational Fluid Dynamics Models (CFDs)
+### Control Volume and Mesh
+### Fire Load and Combustion Model
+### Adiabatic Temperatures
+
+## Design of Experiments
+
+
+# RESULTS AND DISCUSSION
+
+# FEM ANALYSIS { #sec-intro }
+# CONCLUSION
+
+# INTRODUCTION { #sec-intro }
 You are encouraged to use the [Madoko.net Editor][editor] while using
 the [Madoko Reference Manual][reference-manual] to edit/commit your
 documents into the 'authoring' branch of the [femtc2016] GitHub repository. 
