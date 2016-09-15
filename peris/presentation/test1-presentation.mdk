@@ -3,202 +3,195 @@ Title         : Study of the parameters that influence the I-girder bridges beha
 Author        : G. Peris-Sayol, I. Payá-Zaforteza
 Affiliation   : Euroestudios S.L, Universidad Politécnica de Valencia
 Email         : guillem.peris@euroestudios.es
-Reveal Theme  : sky
+Reveal Theme  : night
 Beamer Theme  : singapore
+Title       : My document title
 
-[TITLE]
+@nopreview Reveal Url: ../reveal.js
 
-# Content
+# Study of the parameters that influence the I-girder bridges behavior during fire events
 
-[TOC]
+~ Begin Columns
+~ Column { width:50% }
+![title1]
+~
+~ Column
+![title2]
+~
+~ End Columns
 
-# Mac Arthur Maze Collapse, US, 2007 { data-background-image:images/MacArthurMazeCollapse.jpg }
+G. Peris-Sayol, I. Payá-Zaforteza  
+Euroestudios S.L  
+Universidad Politécnica de Valencia
 
-* 22 min until collapse.
-* 1 month closed 
-* Repair Cost: 9 millions US$
-* Indirect Cost: 180 millions US$ (6M US$/day)
+[title2]: images/title2.png "title2" { width:auto; max-width:90%; vertical-align:top }
+[title1]: images/title1.png "title1" { width:auto; max-width:90%; vertical-align:top }
+
+# Mac Arthur Maze Collapse, USA, 2007 { data-background-image:images/MacArthurMazeCollapse.jpg }
+
+~ Framed {background-color:#808080; width:75%}
+22 min until collapse  
+1 month closed  
+Repair Cost: 9 millions USD  
+Indirect Cost: 180 millions USD (6M USD/day)
+
+![collapse]
+[collapse]: images/MacArthurMazeCollapse.jpg "Mac Arthur Maze Collapse Photo" { display:none }
+~
 
 # INTRODUCTION
+
+## Bridge Fires
 
 ~ Begin Columns
 ~ Column { width:50% }
 ![bridge1]
+Bridge near Hazel Park  
+Detroit, USA - July 15th, 2009
 ~
 ~ Column
 ![bridge2]
 ~
 ~ End Columns
 
-[bridge1]: images/BridgeFire1.png "Bridge Fire Photo 1" { width:280px; vertical-align:middle }
-[bridge2]: images/BridgeFire2.png "Bridge Fire Photo 2" { width:280px; vertical-align:middle }
+[bridge1]: images/BridgeFire1.png "Bridge Fire Photo 1" { width:100%; vertical-align:top }
+[bridge2]: images/BridgeFire2.png "Bridge Fire Photo 2" { width:100%; vertical-align:top }
 
-~ Begin Framed { padding:1ex; margin-top:1ex }
-Bridge near Hazel Park, Detroit, USA
-July 15th, 2009
-~ End Framed
+## Building Codes
 
-## Code
+![code1]
 
-Here is code, highlighted by Madoko 
+![code2]
 
-``` javascript
-function sqr( x ) {
-  var \(&pi;\) = 3.141593;
-  return x*x;  /* the square */
-}
-```
-We used `\(` and `\)` to escape into markdown to write &pi;.
-
-<!-- Example of nested vertical slides -->
-~ Begin Vertical { data-background:Gainsboro }
-
-## Vertical Slides {#vertical}
-Slides can be nested inside of other slides,
-try pressing [down].
-
-[![arrowdown]][down]
+[code1]: images/code1.png "Eurocode 1" { width:50%; vertical-align:top }
+[code2]: images/code2.png "Eurocode 2" { width:80%; vertical-align:top; float:right }
 
 
-[down]: # { .navigate-down }
-[arrowdown]: images/arrow.png "Down arrow" { width:178px; height:238px }
+# OBJECTIVE
 
-## Basement Level 1
-Press down or up to navigate.
+## To improve bridge resilience against fires
 
-## Basement Level 2
+![objective1]
 
-Use `columns` to put blocks next to each other:
+[objective1]: images/objective1.jpg "objective1" { width:auto; max-width:100% }
+
+## I-Girder Bridges
+![objective2]
 
 ~ Begin Columns
 ~ Column { width:50% }
-A monarch butterfly (shown to the right)
-spends the winter in Mexico.
+I-Girder bridge construction
 ~
 ~ Column
-![butterfly]
+https://erkrishneelram.wordpress.com
 ~
 ~ End Columns
 
-[butterfly]: images/butterfly.png "A Monarch butterfly" { width:280px; vertical-align:middle }
+[objective2]: images/objective2.jpg "objective2" { width:100%; max-width:100% }
 
+## Very vulnerable structural system
+Peris-Sayol et al. 2016, Garlock et al., 2012
 
-<!-- 
-For local background images, we need to have a reference to the image
-such that it's data gets embedded into the HTML page. We define
-it using "display=none" so it is hidden in the presentation. 
-We can then refer to the image in "data-background-image". 
--->
+![objective3]
 
-![bfly]
-[bfly]: images/butterfly.png "Butterfly" { display:none }
+[objective3]: images/objective3.jpg "objective3" { width:100%; max-width:100% }
 
-## Basement Level 3 { data-background-image:images/butterfly.png }
-That's it, time to go back up.
+## Very vulnerable structural system
 
-[![arrowup]][back2]
+![objective4]
 
-[arrowup]:  images/arrow.png "Up arrow" { width:178px; height:238px; transform:rotate(180deg) }
-[back2]:    #vertical { .image }
-
-~ End Vertical
-
-
-## Themes {#themes}
-
-Reveal.js comes with a few themes built in:
-
-* [Default](?#/themes)
-* [Sky](?theme=sky#/themes)
-* [Beige](?theme=beige#/themes)
-* [Serif](?theme=serif#/themes)
-* [Simple](?theme=simple#/themes)
-* [Night](?theme=night#/themes)
-* [Moon](?theme=moon#/themes)
-* [Solarized](?theme=solarized#/themes)
-
-Theme demos are loaded after the presentation which leads to flicker. In
-production you should load your theme in the `<head>` using a
-`<link>`.
-
-## Transitions { #transitions }
-
-You can select from different transitions, like:\
-[Cube](?transition=cube#/transitions) -
-[Page](?transition=page#/transitions) -
-[Concave](?transition=concave#/transitions) -
-[Zoom](?transition=zoom#/transitions) -
-[Linear](?transition=linear#/transitions) -
-[Fade](?transition=fade#/transitions) -
-[None](?transition=none#/transitions) -
-[Default](?#/transitions)
-
-
-
-## Pauses?
-
-Some pauses.
-
-* {.fragment} One
-* {.fragment} Two
-* {.fragment} Three
-
-And more:
-
-- Test 1
-- Test 2
-- Test 3
-{.fragmented}
-
-Cool!.
-
-~ Slide
-A slide with no header
+~ Begin Columns
+~ Column { width:50% }
+Montebello Bridge Fire
 ~
+~ Column
+http://latimesblogs.latimes.com
+~
+~ End Columns
 
+[objective4]: images/objective4.jpg "objective4" { width:100%; max-width:100% }
 
-## Point of View
+## Very Common Type of Bridge
+Approaches to Port Authority Bus Station, NYC
 
-In Reveal.js Press **ESC** to enter the slide overview.
+![objective5]
 
-Hold down alt and click on any element to zoom in on it using 
- [zoom.js]. Alt + click anywhere to zoom back out.
+[objective5]: images/objective5.jpg "objective5" { width:100%; max-width:100% }
 
+# PARAMETERS { data-background-image:images/parameters1.jpg }
 
-[zoom.js]: http://lab.hakim.se/zoom-js
+![parameters1]
+[parameters1]: images/parameters1.jpg "parameters1" { display:none }
 
+## Importance of several parameters on the maximum gas temperatures
 
-## Works in Mobile Safari
+~ Begin Columns
+~ Column { width:50%; vertical-align:top }
+![chart1]
+~
+~ Column
+![objective6]
+~
+~ End Columns
+Four geometric parameters  
+Two fire scenario parameters
 
-Try it out! You can swipe through the slides and pinch your way to the
-overview.
+[chart1]: images/chart1.png "chart1" { width:auto; max-width:100% }
+[objective6]: images/objective6.jpg "objective6" { width:auto; max-width:100% }
 
+## Geometric Parameters
+Vertical Clearance
 
-## Printing
+![geometric1]
 
-You can print a `revealjs` presentation nicely from the browser.
+[geometric1]: images/geometric1.jpg "geometric1" { width:auto; max-width:100% }
 
-First give the `?print-pdf` or `?print-paper` query on your final
-presentation (in the browser address bar) and then print from the Chrome
-browser selecting `Save to PDF`.
+## Geometric Parameters
+Span
 
-Read more about it at the [revealjs documentation](https://github.com/hakimel/reveal.js#pdf-export)
+![geometric2]
 
-## RevealJS library
+[geometric2]: images/geometric2.jpg "geometric2" { width:auto; max-width:100% }
 
-Normally, the `revealjs` library is loaded from a CDN but you can specify your
-own url using metadata:
+## Geometric Parameters
+Width
 
-    Reveal Url: <my url>
+![geometric3]
 
-This can be useful when using a [server to run revealjs](https://github.com/hakimel/reveal.js#full-setup)
-where you may use something like:
+[geometric3]: images/geometric3.jpg "geometric3" { width:auto; max-width:100% }
 
-    @nopreview Reveal Url: http://localhost:8000/reveal.js
+## Geometric Parameters
+Bridge Substructure
 
+![geometric4]
+
+[geometric4]: images/geometric4.jpg "geometric4" { width:auto; max-width:100% }
+
+## Geometric Parameters
+Bridge Substructure
+
+![geometric5]
+
+[geometric5]: images/geometric5.jpg "geometric5" { width:auto; max-width:100% }
+
+## Fire Scenario Parameters
+Tanker Truck Accident
+![firescenario1]
+
+~ Begin Columns
+~ Column { width:50% }
+Montebello Bridge Fire
+~
+~ Column
+http://latimesblogs.latimes.com
+~
+~ End Columns
+
+[firescenario1]: images/firescenario1.jpg "firescenario1" { width:auto; max-width:90% }
 
 ## Thanks for looking :-)
-
 [slide]: http://research.microsoft.com/en-us/um/people/daan/madoko/samples/slidedemo/out/slidedemo.html
 [slide-mdk]: https://www.madoko.net/editor.html?#url=http://research.microsoft.com/en-us/um/people/daan/madoko/samples/slidedemo/slidedemo.mdk&options={"delayedUpdate":"true"}
 [slide-pdf]: http://research.microsoft.com/en-us/um/people/daan/madoko/samples/slidedemo/out/slidedemo.pdf
+
+
