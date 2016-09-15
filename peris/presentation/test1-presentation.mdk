@@ -1,9 +1,9 @@
 [INCLUDE=presentation]
-Title         : Demo presentation in Madoko
+Title         : Study of the parameters that influence the I-girder bridges behaviour during fire events
 Sub Title     : In both HTML and PDF
-Author        : Daan Leijen
-Affiliation   : Microsoft Research
-Email         : daan@microsoft.com
+Author        : G. Peris-Sayol, I. Payá-Zaforteza
+Affiliation   : Euroestudios S.L, Universidad Politécnica de Valencia
+Email         : guillem.peris@euroestudios.es
 Reveal Theme  : sky
 Beamer Theme  : singapore
 
