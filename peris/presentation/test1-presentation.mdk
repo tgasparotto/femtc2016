@@ -1,5 +1,5 @@
 [INCLUDE=presentation]
-Title         : Study of the parameters that influence the I-girder bridges behavior during fire events
+Title         : STUDY OF THE PARAMETERS THAT INFLUENCE THE I-GIRDER BRIDGE BEHAVIOR DURING FIRE EVENTS
 Author        : G. Peris-Sayol, I. Payá-Zaforteza
 Affiliation   : Euroestudios S.L, Universidad Politécnica de Valencia
 Email         : guillem.peris@euroestudios.es
@@ -8,15 +8,15 @@ Beamer Theme  : singapore
 
 @nopreview Reveal Url: ../reveal.js
 
-# Study of the parameters that influence the I-girder bridges behavior during fire events
+# STUDY OF THE PARAMETERS THAT INFLUENCE THE I-GIRDER BRIDGE BEHAVIOR DURING FIRE EVENTS
 
 ~ Begin Columns
-~ Column { width:50% }
+~~ Column { width:50% }
 ![title1]
-~
-~ Column
+~~
+~~ Column
 ![title2]
-~
+~~
 ~ End Columns
 
 G. Peris-Sayol, I. Payá-Zaforteza  
@@ -31,8 +31,8 @@ Universidad Politécnica de Valencia
 ~~ Framed {background-color:#404040; width:75%; padding:1em}
 22 min until collapse  
 1 month closed  
-Repair Cost: 9 millions USD  
-Indirect Cost: 180 millions USD (6M USD/day)
+Repair Cost: 9 million USD  
+Indirect Cost: 180 million USD (6M USD/day)
 
 ![collapse]
 [collapse]: images/MacArthurMazeCollapse.jpg "Mac Arthur Maze Collapse Photo" { display:none }
@@ -45,14 +45,14 @@ Indirect Cost: 180 millions USD (6M USD/day)
 ## Bridge Fires
 
 ~ Begin Columns
-~ Column { width:50% }
-![bridge1]
+~~ Column { width:50% }
+![bridge1]  
 Bridge near Hazel Park  
 Detroit, USA - July 15th, 2009
-~
-~ Column
+~~
+~~ Column
 ![bridge2]
-~
+~~
 ~ End Columns
 
 [bridge1]: images/BridgeFire1.png "Bridge Fire Photo 1" { width:100%; vertical-align:top }
@@ -241,7 +241,7 @@ http://latimesblogs.latimes.com
 
 ## Fire Scenario Parameters
 
-~ TableFigure {caption:"Table of Scenario Parameters"; font-size:large ; padding: 4em 2em; }
+~ TableFigure {caption:"Table of Scenario Parameters"}
 |-----------|---------------|------|-----------------------|------------------|--------|
 | Vertical  | Bridge        | Span | Heat                  | Position         | Width  |
 | Clearance | Substructure  |      | Release               |                  |        |
@@ -251,7 +251,7 @@ http://latimesblogs.latimes.com
 |-----------|---------------|------|-----------------------|------------------|--------|
 | 9 m       | Abutment      | 24 m | 2400 kW/m2 (gasoline) | Abutment or Pier | 23.4 m |
 |-----------|---------------|------|-----------------------|------------------|--------|
-{ .parameterstable; color:white}
+{ .parameterstable; font-size:large }
 ~
 
 ~ Columns
@@ -266,7 +266,7 @@ http://latimesblogs.latimes.com
 Taguchi design of  
 experiments technique
 ~~~
-~~
+~~ 
 ~~ Column { vertical-align=top }
 ~~~ Align-Left
 2^6-1^ = 32 cases
