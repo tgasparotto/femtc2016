@@ -1,14 +1,14 @@
 [INCLUDE=presentation]
-Title         : STUDY OF THE PARAMETERS THAT INFLUENCE THE I-GIRDER BRIDGE BEHAVIOR DURING FIRE EVENTS
+Title         : STUDY OF PARAMETERS THAT INFLUENCE I-GIRDER BRIDGE BEHAVIOR DURING FIRE EVENTS
 Author        : G. Peris-Sayol, I. Payá-Zaforteza
 Affiliation   : Euroestudios S.L, Universidad Politécnica de Valencia
 Email         : guillem.peris@euroestudios.es
 Reveal Theme  : night
 Beamer Theme  : singapore
+Logo          : False
+Embed         : 2000
 
-@nopreview Reveal Url: ../reveal.js
-
-# STUDY OF THE PARAMETERS THAT INFLUENCE THE I-GIRDER BRIDGE BEHAVIOR DURING FIRE EVENTS
+# STUDY OF PARAMETERS THAT INFLUENCE I-GIRDER BRIDGE BEHAVIOR DURING FIRE EVENTS
 
 ~ Begin Columns
 ~~ Column { width:50% }
@@ -35,6 +35,7 @@ Repair Cost: 9 million USD
 Indirect Cost: 180 million USD (6M USD/day)
 
 ![collapse]
+
 [collapse]: images/MacArthurMazeCollapse.jpg "Mac Arthur Maze Collapse Photo" { display:none }
 ~~
 ~
