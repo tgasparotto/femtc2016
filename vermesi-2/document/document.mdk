@@ -34,10 +34,9 @@ name-references : REFERENCES
 [TITLE]
 
 ~ Abstract
-To reduce the computational time for modelling large tunnel networks, we used FDS6 
-to investigate the solver’s capabilities for multi-scale modelling by combining both 1D 
-and full CFD models in the same domain. The outcome of this study is to inform practitioners 
-the capabilities of FDS6.1 for simulating a tunnel ventilation system (cold and fire) using 
+To reduce the computational time for modelling large tunnel networks, we used FDS6.1 
+to investigate the solver’s capabilities for multi-scale modelling by combining 1D 
+and full CFD models in the same domain. This study is to investigate the capabilities of FDS6.1 for simulating a tunnel ventilation system (cold and fire) using 
 the multi-scale method.
 
 Firstly, we replicated the physical condition for cold flow using the multi-scale
@@ -49,12 +48,10 @@ Firstly, we replicated the physical condition for cold flow using the multi-scal
    reduction in the computational time for the multi-scale method varies from 20% 
    to 220% compared to the full CFD method.
 
-Secondly, we introduced a fire up to 75 MW in both the multi-scale and full CFD models. 
-Both the models exhibit oscillatory mass flows along the tunnel similar to the 
+Secondly, we introduced a fire up to 75 MW in the multi-scale and full CFD models. 
+Both models exhibit oscillatory mass flows along the tunnel similar to the 
 pulsation effect observed in a tunnel fire. In the multi-scale method, the models significantly 
-under or over-predicted the mass flows and the multi-scale models took 4 times 
-longer to reach steady state compared to the full CFD models. 
-Further work is necessary to study these observations.
+under or over-predicted the mass flows. 
 
 At this juncture we recommend FDS6.1 full CFD tunnel fire modelling should only 
 be used with consideration to the oscillatory mass flows. For multi-scale fire modelling, 
@@ -70,7 +67,7 @@ FDS6 full CFD and multi-scale methods showed good predictive capabilities.
 [femtc2016]: https://github.com/thunderheadeng/femtc2016
 [emaillink]: mailto:conference@thunderheadeng.com "conference@thunderheadeng.com"
 
-# INTRODUCTION { #sec-intro }
+# RESEARCH INTRODUCTION { #sec-intro }
 With exponential increase in population growth and development of ever larger densely 
 populated cities, tunnels are often the only viable option to expand the transport infrastructure
 connecting towns and cities.  Construction of modern road and rail tunnels increasingly becomes longer, larger and 
@@ -81,12 +78,20 @@ With an increasing number of long tunnels used fir transport infrastructure, the
 need to be adequately ventilated to ensure tunnel users will not be negatively impacted
 by fumes from vehicles or by smoke in a fire.  
 
-ALthough there are various options to provide ventilation in a tunnel, these methods can be
-broadly categories into longitudinal, transverse or semi-transverse ventilation.  
+Although there are various options to provide ventilation in a tunnel, these methods can be
+broadly categories into longitudinal, transverse or semi-transverse ventilation. In design 
+and engineering, the ventilation system in tunnels are currently designed using both 1D and full 
+CFD modelling methods.  
 
-Increasingly, both the road and rail tunnels are 
+1D is used at the early stages of a project where time and resources
+are constrained, whereas full CFD modelling is used at the later stages to validate the designs
+informed by the 1D modelling method. Although full CFD modelling provides detailed results, 
+this method is significantly constrainted by the computational time which can take days to 
+weeks. In addition, to ensure the computational time is kept to a realistic timeframe for the design
+and engineering process, only a section, instead of the larger tunnel network is modelled. 
 
-With explosive population growth and urbanisation of modern cities, 
+
+
 
 You are encouraged to use the [Madoko.net Editor][editor] while using
 the [Madoko Reference Manual][reference-manual] to edit/commit your
@@ -110,6 +115,16 @@ the number of pages. You are free to exceed the target length of eight
 pages.
 
 Please watch this short YouTube Video for a tutorial on how to use the system as intended.
+
+# THE DARTFORD TUNNEL, UK
+
+# MULTI-SCALE MODELLING METHOD
+## FIRE MODELLING 
+
+## COLD FLOW MODELLING
+
+# CONCLUSION AND RECOMMENDATIONS
+
 
 # MAIN HEADINGS LIKE THIS STYLE
 Main Headings are all upper case letters and underlined. In Madoko, a
