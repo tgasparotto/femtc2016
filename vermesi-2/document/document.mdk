@@ -1,18 +1,27 @@
 [INCLUDE=style/lncs]
-Title         : TITLE OF YOUR PAPER, IN CAPITAL LETTERS CENTERED ON PAGE, USING ONE OR MORE LINES AS NECESSARY
-Subtitle      : An optional subtitle.
+Title         : INVESTIGATION OF A COMPUTATIONALLY EFFICIENT MULTI-SCALE MODELLING METHOD IN LONGITUNDIALLY VENTILATED TUNNELS FOR FDS6
 
-Author        : First Author Name
-Affiliation   : Research institute
-Email         : you@bar.com
+<!--Subtitle      : An optional subtitle.-->
 
-Author        : My co-author 1
-Affiliation   : Other institute
-Email         : other1@bar.com
+Author        : Chin Ding (Edmund) Ang
+Affiliation   : Imperial College London
+Email         : chin.ang13@imperial.ac.uk
 
-Author        : My co-author 2
-Affiliation   : Other institute
-Email         : other2@bar.com
+Author        : Guillermo Rein
+Affiliation   : Imperial College London
+Email         : g.rein@imperial.ac.uk
+
+Author        : Joaquim Peiro
+Affiliation   : Imperial College London
+Email         : j.peiro@imperial.ac.uk
+
+Author        : Roger Harrison 
+Affiliation   : AECOM UK
+Email         : roger.harrison@aecom.com
+
+Author        : Izabella Vermesi
+Affiliation   : Imperial College London
+Email         : i.vermesi14@imperial.ac.uk
 
 Bibliography  : references.bib
 Logo          : False
