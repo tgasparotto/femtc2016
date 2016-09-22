@@ -252,7 +252,7 @@ http://latimesblogs.latimes.com
 |-----------|---------------|------|-----------------------|------------------|--------|
 | 9 m       | Abutment      | 24 m | 2400 kW/m2 (gasoline) | Abutment or Pier | 23.4 m |
 |-----------|---------------|------|-----------------------|------------------|--------|
-{ .parameterstable; font-size:large }
+{ .parameterstable; font-size:large; padding:1em; color:black; th-background-color:rgb(191,191,191); td-background-color:rgb(191,191,191)}
 ~
 
 ~ Columns
@@ -299,8 +299,90 @@ Fire Model using CFD (FDS)
 ![title1]
 ~
 
+## CFD Simulations
+
+~ Columns
+~~ Column { width:"70%"; vertical-align=top }
+![method1]
+~~
+~~ Column { vertical-align=top }
+![method2]
+
+Alós Moya et Al. “Analysis of a Bridge Failure due to fire using Computational Fluid Dynamics and Finite Element  Models.” Engineering Structures, 68, pp 96-110, 2014.
+~~
+~
+
+[method1]: images/method1.jpg "method1" { width:auto; max-width:90% }
+[method2]: images/method2.jpg "method2" { width:auto; max-width:90% }
+
+## CFD Simulations
+
+~ Center
+![method3]
+~
+
+[method3]: images/method3.jpg "method3" { width:auto; max-width:90% }
+
+Control Volume: Varies according to the scenario.
+
+* X-direction: 28 to 58 m
+* Y-direction: 27 to 30 m
+* Z-direction: 12 to 15 m
+
+Mesh: 0.20 x 0.20 x 0.20 m.
+
+* Total amount of cells: 1,134,000 to 3,262,500 cells
+
+## CFD Simulations
+
+~ Center
+![method3]
+~
+
+Fire Load:
+
+* Tanker truck: 30 m2 (12 x 2.5 m)
+* HRR is a parameter
+* CO yield and Soot Yield according to SFPE Handbook
+* CO yield = 0.019 g/g
+* Soot yield = 0.059 g/g
+
+## CFD Simulations
+
+~ Center
+![method3]
+~
+
+~ Columns
+~~ Column { width:"50%"; vertical-align=top }
+Adiabatic Temperatures
+
+* Sensors every 20 cm 
+* 3 sensors per section
+~~
+~~ Column { vertical-align=top }
+![method4]
+~~
+~
+
+[method4]: images/method4.jpg "method4" { width:auto; max-width:100% }
+
+## CFD Simulations
+
+~ Center
+![method5]
+~
+
+[method5]: images/method5.jpg "method5" { width:auto; max-width:90% }
+
+
+## CFD Simulations
+
+~ Center
+![method6]
+~
+
+[method6]: images/method6.jpg "method6" { width:auto; max-width:90% }
+
 
 ## Thanks for looking :-)
-[slide]: http://research.microsoft.com/en-us/um/people/daan/madoko/samples/slidedemo/out/slidedemo.html
-[slide-mdk]: https://www.madoko.net/editor.html?#url=http://research.microsoft.com/en-us/um/people/daan/madoko/samples/slidedemo/slidedemo.mdk&options={"delayedUpdate":"true"}
-[slide-pdf]: http://research.microsoft.com/en-us/um/people/daan/madoko/samples/slidedemo/out/slidedemo.pdf
