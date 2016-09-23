@@ -244,15 +244,15 @@ http://latimesblogs.latimes.com
 
 ~ TableFigure {caption:"Table of Scenario Parameters"}
 |-----------|---------------|------|-----------------------|------------------|--------|
-| Vertical  | Bridge        | Span | Heat                  | Position         | Width  |
 | Clearance | Substructure  |      | Release               |                  |        |
+| Vertical  | Bridge        | Span | Heat                  | Position         | Width  |
 |           | Configuration |      | Rate                  |                  |        |
 +:---------:+:-------------:+:----:+:---------------------:+:----------------:+:------:+
 | 6 m       | Piers         | 16 m | 1800 kW/m2 (diesel)   | Mid-span         | 13 m   |
 |-----------|---------------|------|-----------------------|------------------|--------|
 | 9 m       | Abutment      | 24 m | 2400 kW/m2 (gasoline) | Abutment or Pier | 23.4 m |
 |-----------|---------------|------|-----------------------|------------------|--------|
-{ .parameterstable; font-size:large; padding:1em; color:black; th-background-color:rgb(191,191,191); td-background-color:rgb(191,191,191)}
+{ .parameterstable; font-size:large; cell-padding:0.5 em; color:black; th-background-color:rgb(191,191,191); td-background-color:rgb(191,191,191)}
 ~
 
 ~ Columns
