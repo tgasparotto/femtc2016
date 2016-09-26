@@ -1,9 +1,9 @@
 [INCLUDE=style/lncs]
-Title         : TITLE OF YOUR PAPER, IN CAPITAL LETTERS CENTERED ON PAGE, USING ONE OR MORE LINES AS NECESSARY
-Subtitle      : An optional subtitle.
+Title         : PERFORMANCE OF OPTIMIZATION ALGORITHMS FOR DERIVING MATERIAL DATA FROM BENCH SCALE TESTS
+Subtitle      : 
 
-Author        : First Author Name
-Affiliation   : Research institute
+Author        : Patrick Lauer
+Affiliation   : University of Wuppertal
 Email         : you@bar.com
 
 Author        : My co-author 1
