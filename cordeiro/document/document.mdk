@@ -1,6 +1,5 @@
 [INCLUDE=style/lncs]
 Title         : COMPARISON BETWEEN THE HUMAN REACTIONS IN A SIMULACRUM AND IN A REAL FIRE SITUATION
-Subtitle      : 
 
 Author        : Elisabete Cordeiro
 Affiliation   : Universidade da Beira Interior
@@ -69,8 +68,8 @@ The following table shows the results of the sample of each survey [^fa].
 
 It should be noted that in relation to Survey 3, 84% were aware of the fire drill.
 
-### Analysis of Surveys Type 1, 2, and 3 - Common Questions[^fb]
-[^fb]: The questions not answered were excluded.
+### Analysis of Surveys Type 1, 2, and 3 - Common Questions
+For all survey data reported below, questions not answered were excluded.
 
 **PANIC**
 
@@ -87,10 +86,13 @@ It should be noted that in one of the residential fires, 2 respondents indicated
 **HELP OTHERS**
 
 One of the questions was "Do people have the spirit of mutual help?” In total 76% responded positively.
+
 ~ Figure {#Figure3; caption: "Help others[^fc]"}
 ![Figure3]
 ~
+
 [^fc]: Type 1 survey has undergone some changes between the first survey concerning the first fire and the second, the first did not contain these questions.
+
 The inferential statistical analysis suggests that the existence of mutual aid in a fire situation is independent of gender (Χi = 0.197, df = 1, ρ = 0.657), age group (Χi = 9.484, df = 4, ρ = 0.05 ), education level (Χi = 0.3619, df = 4, ρ = 0.460) and fire safety training (Χi = 2.32; df = 1; ρ = 0.128) and having or not lived a fire condition ( Χi = 0.337, df = 1, ρ = 0.562).
 
 **EVACUATION ROUTES**
