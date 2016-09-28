@@ -110,12 +110,12 @@ Peris-Sayol et al. 2016, Garlock et al., 2012
 ~
 
 ~ Begin Columns
-~ Column { width:50% }
+~~ Column { width:50% }
 Montebello Bridge Fire
-~
-~ Column
+~~
+~~ Column
 http://latimesblogs.latimes.com
-~
+~~
 ~ End Columns
 
 [objective4]: images/objective4.jpg "objective4" { width:auto; max-width:90% }
@@ -137,12 +137,12 @@ Approaches to Port Authority Bus Station, NYC
 ## Importance of several parameters on the maximum gas temperatures
 
 ~ Begin Columns
-~ Column { width:50%; vertical-align:top }
+~~ Column { width:50%; vertical-align:top }
 ![chart1]
-~
-~ Column
+~~
+~~ Column
 ![objective6]
-~
+~~
 ~ End Columns
 Four Geometric Parameters  
 Two Fire Scenario Parameters
@@ -252,7 +252,7 @@ http://latimesblogs.latimes.com
 |-----------|---------------|------|-----------------------|------------------|--------|
 | 9 m       | Abutment      | 24 m | 2400 kW/m2 (gasoline) | Abutment or Pier | 23.4 m |
 |-----------|---------------|------|-----------------------|------------------|--------|
-{ .parameterstable; font-size:large; cell-padding:0.5 em; color:black; th-background-color:rgb(191,191,191); td-background-color:rgb(191,191,191)}
+{ .parameterstable; font-size:large; cell-padding:0.5em; color:black; th-background-color:rgb(191,191,191); td-background-color:rgb(191,191,191)}
 ~
 
 ~ Columns
