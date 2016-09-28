@@ -26,10 +26,16 @@ name-references : REFERENCES
 Human reaction to a fire situation in buildings depends on the characteristics of each individual, of the building and the actual emergency situation. To minimize the consequences of an emergency fire situation in a building, it is important to have a safe, orderly and rapid evacuation [@SPE03]. For this purpose the occupants should be trained to respond in an appropriate way. Therefore, it is necessary to assess whether simulacrums or fire drills are effective or not.
 ~
 
-[editor]: https://www.madoko.net/editor.html "Madoko.net Editor"
-[reference-manual]: http://research.microsoft.com/en-us/um/people/daan/madoko/doc/reference.html "Madoko Reference Manual"
 [femtc2016]: https://github.com/thunderheadeng/femtc2016
-[emaillink]: mailto:conference@thunderheadeng.com "conference@thunderheadeng.com"
+
+[Figure1]: images/Figure1.jpg "Figure1" { width:auto; max-width:80% }
+[Figure3]: images/Figure3.jpg "Figure3" { width:auto; max-width:90% }
+[Figure2]: images/Figure2.jpg "Figure2" { width:auto; max-width:70% }
+[Figure4]: images/Figure4.jpg "Figure4" { width:auto; max-width:90% }
+[Figure5]: images/Figure5.jpg "Figure5" { width:auto; max-width:70% }
+[Figure6]: images/Figure6.jpg "Figure6" { width:auto; max-width:70% }
+[Figure7]: images/Figure7.jpg "Figure7" { width:auto; max-width:70% }
+[Figure8]: images/Figure8.jpg "Figure8" { width:auto; max-width:70% }
 
 # INTRODUCTION { #sec-intro }
 In hazardous situations such as a fire, people's behavior will have a strong impact on risk. In an emergency situation of a building, it is important to have a safe, orderly and rapid evacuation, but this is only possible if the occupants are trained to respond in an appropriate way. This is because human behavior in an emergency situation of a building depends on the characteristics of the occupants themselves, the characteristics of the buildings and the actual emergency situation [@CANTER85; @Kin2014].
@@ -43,19 +49,22 @@ In order to minimize the difficulties and problems related to the acquisition of
 # SURVEY
 
 In total it was possible to collect 818 surveys, divided between surveys Type 1, Type 2 and Type 3. The three types of surveys had several common questions with the purpose of comparing responses between the different types of surveys.
+
 ~ Figure { #Figure1; caption: "Number of Surveys"}
 ![Figure1]
-[Figure1]{ width:auto; max-width:80% }
 ~
 
 ## Summary of the Results of the Study
 ### General data - Survey type 1, 2 and 3
 The following table shows the results of the sample of each survey [^fa].
+
 [^fa]: The answers to the type 1 survey were from 3 different fires. 
+
 ~ TableFigure { #table-sample; caption: "Global Sample"}
-![Table1 ]
+![Table1]
 ~
-[Table1 ]: images/Table1-.jpg "Table1 " { width:auto; max-width:90% }
+
+[Table1]: images/Table1-.jpg "Table1 " { width:auto; max-width:90% }
 
 
 It should be noted that in relation to Survey 3, 84% were aware of the fire drill.
@@ -63,14 +72,12 @@ It should be noted that in relation to Survey 3, 84% were aware of the fire dril
 ### Analysis of Surveys Type 1, 2, and 3 - Common Questions[^fb]
 [^fb]: The questions not answered were excluded.
 
-
 **PANIC**
 
 The first question common to all surveys was "Do people panic in a fire situation?” 92,6% answered to this question affirmatively which corresponds to 753 of respondents.
 
 ~ Figure {#Figure2; caption: "Panic"}
 ![Figure2]
-[Figure2]{ width:auto; max-width:70% }
 ~
 
 When analyzing the responses of people who experienced a fire or a similar situation it is possible to verify they are less conducive to indicating existence of panic in such cases. 
@@ -82,7 +89,6 @@ It should be noted that in one of the residential fires, 2 respondents indicated
 One of the questions was "Do people have the spirit of mutual help?” In total 76% responded positively.
 ~ Figure {#Figure3; caption: "Help others[^fc]"}
 ![Figure3]
-[Figure3]{ width:auto; max-width:70% }
 ~
 [^fc]: Type 1 survey has undergone some changes between the first survey concerning the first fire and the second, the first did not contain these questions.
 The inferential statistical analysis suggests that the existence of mutual aid in a fire situation is independent of gender (Χi = 0.197, df = 1, ρ = 0.657), age group (Χi = 9.484, df = 4, ρ = 0.05 ), education level (Χi = 0.3619, df = 4, ρ = 0.460) and fire safety training (Χi = 2.32; df = 1; ρ = 0.128) and having or not lived a fire condition ( Χi = 0.337, df = 1, ρ = 0.562).
@@ -104,8 +110,6 @@ The inferential statistical analysis suggests that identifying an emergency exit
 ~ Figure {#Figure5; caption: "Ability to identify the emergency exits"}
 ![Figure5]
 ~
-
-[Figure5]: images/Figure5.jpg "Figure5" { width:auto; max-width:70% }
 
 **LOCATION OF EMERGENCY EXITS**
 
@@ -230,16 +234,6 @@ Survey type 2 had the following question “If you were leaving the building and
 Survey Type 1 asked the respondents to say how much time they spent before leaving the building. In the residential fire 67% indicated that it took them “between 1 to 3 minutes” and 33% were “unable to assess”, while the two responses obtained in the other residential fire, namely 50% “between 1 to 3 minutes” and 50% “between 3 to 5 minutes”. As for the industrial fire 18 of the 22 respondents responded to this question, of whom 67% indicated it took “between 1 to 3 minutes”, 12% indicated “less than 1 minute” and “unable to assess”, 5.5% “more than 5 minutes” and “between 1 to 3 minutes”.
 
 Survey type 3 with 136 respondents answered this question and 43% replied “between 1 to 3 minutes”, 21% “less than 1 minutes”, 20% “between 3 to 5 minutes”, 10% “unable to assess” and 6% “more than 5 minutes”. 
-
-
-[Figure1]: images/Figure1.jpg "Figure1" { width:auto; max-width:60% }
-[Figure3]: images/Figure3.jpg "Figure3" { width:auto; max-width:90% }
-[Figure2]: images/Figure2.jpg "Figure2" { width:auto; max-width:70% }
-[Figure4]: images/Figure4.jpg "Figure4" { width:auto; max-width:90% }
-
-[Figure6]: images/Figure6.jpg "Figure6" { width:auto; max-width:70% }
-[Figure7]: images/Figure7.jpg "Figure7" { width:auto; max-width:70% }
-[Figure8]: images/Figure8.jpg "Figure8" { width:auto; max-width:70% }
 
 # CONCLUSION
 During the field work developed over two years, it was possible to constitute a unique source of information on behavioral aspects of the Portuguese population regarding a  fire situation. In fact the sample collected has a dimension that even in foreign studies is rarely found. A behavioral model is being developed with this sample, however it is not yet complete due to all the inferential analysis which have not been concluded.
