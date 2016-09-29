@@ -1,0 +1,390 @@
+[INCLUDE=style/lncs]
+Title         : Experimental Study the Impact of Visibility on Individual Ascent Speed in Stair
+
+Author        : Jianyu Wang
+Affiliation   : School of Transportation & Logistics, National United Engineering Laboratory of Integrated and Intelligent Transportation, Southwest Jiaotong University, Sichuan, 610031, China
+Email         : jianyuwang0602@163.com
+
+Author        : junmin Chen
+Affiliation   : Faculty of Geosciences and Environmental Engineering, Southwest Jiaotong University, State-province Joint Engineering Laboratory of Spatial Information Technology of High-Speed Rail Safety, Chengdu, Sichuan, 610031, China
+Email         :junminchen@dingtalk.com
+
+Author        : Rong Liu
+Affiliation   : Faculty of Geosciences and Environmental Engineering, Southwest Jiaotong University, State-province Joint Engineering Laboratory of Spatial Information Technology of High-Speed Rail Safety, Chengdu, Sichuan, 610031, China
+Email         : 369338310@qq.com
+
+Author        : Peng Lin
+Affiliation   : Faculty of Geosciences and Environmental Engineering, Southwest Jiaotong University, State-province Joint Engineering Laboratory of Spatial Information Technology of High-Speed Rail Safety, Chengdu, Sichuan, 610031, China
+Email         : drag76@163.com
+
+Author        : Xi Chen
+Affiliation   : Faculty of Geosciences and Environmental Engineering, Southwest Jiaotong University, State-province Joint Engineering Laboratory of Spatial Information Technology of High-Speed Rail Safety, Chengdu, Sichuan, 610031, China
+Email         : cx19191919@qq.com
+
+Bibliography  : references.bib
+Logo          : False
+Tex Header    :
+  \def\refname{&name-references;}
+name-references : REFERENCES
+
+[TITLE] Experimental Study the Impact of Visibility on Individual Ascent Speed in Stair
+~ Abstract
+An experiment was conducted in a 20-level building, where 120 participants were asked to walk upward in the stair in four kinds of visibility conditions (i.e., normal visibility condition, lighting-out condition, the condition of wearing 27% transmittance eye-patch and the condition of wearing 16% transmittance eye-patch). Their upward movement, ascent speeds and behaviors were recorded by cameras. In normal visibility condition, the ascent speeds of males and females decrease continuously for the 1–10 levels, and then the speeds keep at around 0.69 m/s for the males and 0.57 m/s for the females. In lighting-out condition, the ascent speeds of males and females decrease continuously for the 1–12 floors and 1-10 floors respectively, and then keep at around 0.68 m/s for the males and 0.57 m/s for the females. For the two scenarios, participants used the handrail in upward movement process as physical exertion. In condition of wearing 27% transmittance eye-patch, the ascent speeds of males and females maintain at 0.71m/s and 0.51m/s. In condition of wearing 16% transmittance eye-patch, the ascent speeds of males and females maintain at 0.54m/s and 0.48m/s. In the movement process of the two scenarios, participants used handrail to identify the direction of movement. The experimental results showed that individual ascent speed and characteristics of movement are affected by gender, traveling distance and visibility, whilst visibility could be a dominator factor when it is below a certain value.
+
+~
+
+[editor]: https://www.madoko.net/editor.html "Madoko.net Editor"
+[reference-manual]: http://research.microsoft.com/en-us/um/people/daan/madoko/doc/reference.html "Madoko Reference Manual"
+[femtc2016]: https://github.com/thunderheadeng/femtc2016
+[emaillink]: mailto:conference@thunderheadeng.com "conference@thunderheadeng.com"
+
+# Introduction { #sec-intro }
+Staircase is the key to vertical evacuation, whether it is on the ground of multi-story buildings, high-rise buildings or underground facilities, pedestrian must use varieties of stairs ascent or decent to the ground or safety places in case of fire emergency.
+
+In the early 1960s, the behaviors and laws of evacuation on stairs have been raised people’s attention. Pauls[1], Fruin[2], Proulx[3], Frantzich[4] and Fujiyama[5] et al. conducted a comprehensive studies of the evacuation on staircase. The effects of individuals’ density, age, gender, merger, the dimensions and the inclination of the stairs on the movement speed were systematic analyzed. An increasing number of high-rise buildings and underground facilities were built or under construction due to the rapid development of modern cities. Many studies have been conducted to understand the behaviors of human on long stairs. Kretz[6] found that the ascending speeds were 0.4-0.5m/s by observing the pedestrians on long stairs outside Netherlands pavilion in Hanover World Expo. Galea[7] interviewed 245 survivors of the 911 event, obtained that the average descending speed was 0.29m/s. Peacock[8] statistically analyzed the drill video data of 8 office buildings (floor 6-62) and found that the average descending speeds on stairwell were 0.48±0.16m/s. Choi[9] conducted an evacuation experiment in a 50 levels high-rise building, in which 30 females and 30 males took part, and measured that the descending speeds of males and females were 0.83m/s and 0.74m/s, the ascending speeds were 0.66m/s and 0.48m/s respectively.
+
+These researches were all carried out in normal conditions. However, with the decline of personnel visibility level during evacuation caused many casualties, evacuation behavior characteristics in different visibility conditions have attracted wide attention.
+
+About 30 years ago, Jin[10] (1970-1990), Weber (1979) carried out a large number of experiments in different visibility conditions to analyze the effects of extinction coefficient (flue and gas conditions) on evacuation speed, level of visibility and visual perception. From 1999 to 2006, in order to explore the effects of phosphorescent materials on evacuation on stairs, National Research Council of Canada (NRC) [11-13] investigated evacuation behavior of 457 people in a 10-story office building while Public Works and Government Services Canada (PWGSC) carried out some evacuation experiments on evacuation behavior of 1198 people in a 13-story office building. It was concluded that using the handrails was a main factor leading to evacuation congestion and 80% of the participants used the handrails during evacuation. In 2011, experiments on evacuation behavior of 125 people under 4 different visibility conditions were implemented in a underground 4-story subway station by Jeon[14,15] in Kyungpook National University to explore the influence of visibility conditions on evacuation for underground constructions. For the first time, smoke conditions were simulated by the method of wearing eye-patches. 
+
+Bellamy, Boer and Frantzich et al. performed a lot of research on evacuation speed under different fire conditions. In 1990, Bellamy[16] found that pedestrian speed were 0.5-1.0m/s in the smoke tunnels without lighting and 1.0-1.45m/s in lighting condition. In 2005, it was found that the average velocity of personnel was 1.37m/s in the road tunnels with smoke by Boer[17]. In 2003, Nilsson[18]. in Lund University implemented evacuation experiments in a 37-meter-long tunnel. Irritant gases were used to simulate conditions of fire and they pointed out that in the absence of light the average velocity of personnel was 0.2 - 0.8m/s with the smoke dissipation coefficient being 2.0-8.0m-1. Besides, using the same simulation method, Fridolf[19] carried out evacuation experiments under different visibility conditions in a 200-metre-long tunnel and got the conclusion that personnel movement speed was 0.42m/s to 0.81m/s when the smoke dissipation coefficient was 2.2 m-1 in 2005.
+
+As noted, only Jeon and NRC et al. studied the effect of visibility on evacuation behavior on stairs. However, Jeon’s researches were finished in an underground 4-story subway station, most evacuation in it was horizontal. The conclusions obtained were not suitable for long-distance evacuations on stairs. NRC carried out the experiments in a 10-story office building but they didn’t pay any attention to upward evacuation experiments. Also, they didn’t consider the effect of smoke conditions on individuals’ speed. Therefore, exploring the effects of visibility on evacuation speed on stairs, studying the evacuation laws and behavior and building evacuation velocity models in different visibility conditions are important problems that are needed to be solved urgently.
+
+In this work, based on the previous researches of stair evacuation and considered the evacuation particularity in buildings, individuals ascending and descending experiments were carried out in four type visibility conditions, including: (1) participants didn’t wear eye masks and lighting systems on stairs were normally open (Condition 1), on behalf of the normal condition; (2) participants didn’t wear eye masks and lighting systems were closed (Condition 2), on behalf of the condition in which the lighting was fail while personnel was not affected by the smoke conditions; (3) participants wore 27% transmittance eye-patches (Condition 3), on behalf of the condition in which personnel was not familiar with the building structure and slightly affected by smoke; (4) participants wore 16% transmittance eye-patches (Condition 4) on behalf of the condition in which personnel was familiar with the building structure and seriously influenced by smoke.
+
+# Experimental Settings
+## Experimental Project
+
+~ Center
+![Figure 1]
+~
+[Figure 1]: images/Figure-1.png "Figure 1" { width:auto; max-width:90% }
+~ Center
+Figure1. The dimension of the staircase in the study: a Section diagrammatic of stairwell; b Size diagrammatic of step (Unit: cm); c Plan of stairwell 1-2 (Unit: cm); d Plan of stairwell2-20 (Unit: cm).
+~
+
+The experiment was conducted in a 26-level typical residential building located in Chengdu, PRC China. One of the staircases from the 1st floor to the 20th floor in this building was selected for the study. The height of the first floor is around 4.48 m and the height of all other levels is 2.72 m. The total length of the staircase is 53.44 m and the width of the stair is 1.16 m. The first floor has two flights, each with 14 steps and a landing in the middle. The dimension of the landing is 0.260m×0.192m. The stairs connecting other floor have single flight, each with 17 steps and a landing in the entrance. The dimension of the landing is 0.260m×0.140m.All the stairs is 26 cm for the tread riser and 16 cm for the tread depth.
+~ Center
+![Figure 2(a)]    ![Figure2 (c)]
+[Figure 2(a)]: images/Figure-2(a).jpg "Figure 2(a)" { width:45%; max-width:45% }
+[Figure2 (c)]: images/Figure2-(c).jpg "Figure2 (c)" { width:45%; max-width:90% }
+~
+
+~ Center
+Figure2. The view of the staircase in lighting-out condition: a on the inside of the stair; b on the outside of the stair.
+~
+~ Center
+Table1. Participant information
+
+|----------|----------|-------------|----------------|----------------|
+|   SEX    | Number   | Average Age | Average Height | Average Weight |
+|          |          |             |      (cm)      |     (kg)       |
++----------|----------|-------------|----------------|----------------+
+|   Male   |    60    |    19.6     |     173.2      |      66.4      |
+|  Female  |    60    |    19.5     |     159.2      |       55       |
+|----------|----------|-------------|----------------|----------------|
+~
+
+~ Center
+Table2. Illumination statistics information
+
+|---------|---------|-------------|-------------|-------------|-------------|
+|         | Time    | Condition 1 | Condition 2 | Condition 3 | Condition 5 |
++---------|---------|-------------|-------------|-------------|-------------+
+|         | t=0     |   113.0     |      0      |  112.7      |  57.5       |
+| Point 1 | t=30min |   127.3     |      0      |  134.6      |  59.4       |
+|         | t=60min |   84.8      |      0      |  108.6      |  26.4       |
+|         | t=90min |   64.7      |      0      |  100.6      |  16.9       |
+|---------|---------|-------------|-------------|-------------|-------------|
+|         | t=0     |   38.3      |      0      |   33.9      |  26.0       |
+| Point 2 | t=30min |   35.2      |      0      |   35.1      |  14.8       |
+|         | t=60min |   41.1      |      0      |   32.6      |  7.9        |
+|         | t=90min |   19.7      |      0      |   27.8      |  5.6        |
+|---------|---------|-------------|-------------|-------------|-------------|
+{  }
+~
+
+A high-definition camera was installed on the platform of each floor to record the behavior and time before the experiment. Figue2 shows the view of the staircase in lighting-out condition. According to different visibility conditions and number, only 1 participant took part in each time. And in order to avoid interferences by adjacent participants, each time the interval was more than 3 minutes. Each condition selected 30 individuals, including 15 males and 15 females. A total of 120 pedestrians aged from 18 to 21 were college students. The participant information was listed in Table 1.
+
+Besides, using the spherical illuminometer monitored the illumination condition in stairs every 30 minutes. Each floor chose two places as a detection point, point 1 was set in the corner of the platform and point 2 was set in the middle of the staircase. The illumination statistics information was listed in Table 2.
+
+## Visibility Parameters
+Smoke is one of the most focus on characteristics in the fire dynamics study.Only a part of light could through smoke due to the effect of absorption and scattering, which lead to reduce the visibility within the scope of the fire area and go against evacuation and rescue. When a bunch of wavelength λ passes through the smoke, the Lambert-Beer's law can be describe as equation（1）:
+~
+Equation { #eq-alignment; #eq-euler  }
+Cs = log e {{I~λ0~}{I~λ~}}
+~
+
+Cs: Photosensitivity coefficient (m^-1^);
+L: Distance between light source and lighted object (m);
+I~λ0~:Luminosity without smoke (lux);
+I~0~: Luminosity with smoke (lux);
+
+Equation (1) illustrates that the distance L and photosensitivity coefficient Cs have an inverse relationship. Besides, the relation between Iλ0 and I0 by smoke can be expressed as the transimissivity (T) of the eye-patch.
+
+~ Center
+Table3. Relation between the distance and photosensitivity coefficient
+~
+|-{width:10%}--|------{width:10%}-----|-{width:10%}--|-{width:10%}-|---{width:10%}--|-{width:10%}-|-{width:10%}-|-{width:10%}-|
+|              |      27%Transimissivity             |             |                |16%Transimissivity         |             |
+| _L_(m)       |_Cs_(m^-1^)           | _L_(m)       |_Cs_(m^-1^)  | _L_(m)         |_Cs_(m^-1^)  | _L_(m)      |_Cs_(m^-1^)  |
++--------------|----------------------|--------------|-------------|----------------|-------------|-------------|-------------+
+|   1          |  1.304               | 6            | 0.217       | 1              | 1.827       | 6           | 0.304       |
+|   2          |  0.652               | 7            | 0.186       | 2              | 0.913       | 7           | 0.261       |
+|   3          |  0.434               | 8            | 0.163       | 3              | 0.609       | 8           | 0.228       |
+|   4          |  0.326               | 9            | 0.145       | 4              | 0.456       | 9           | 0.203       |
+|   5          |  0.260               | 10           | 0.130       | 5              | 0.365       | 10          | 0.183       |
+|--------------|----------------------|--------------|-------------|----------------|-------------|-------------|-------------|
+
+From the equation (2) above, the relation between the distance and photosensitivity coefficient is as in Table 3. As Table 3 shows, when the visibility that can identify the luminaries and objects is 5-10m while wearing an eye-patch with 27% transmissivity, it can be said that the smoke density is 0.13m-1–0.26 m-1. Also, when the visibility that can identify the luminaries and objects is 3–7m while wearing an eye-patch with 16% transmissivity, it can be said that the smoke density is 0.26 m^-1^–0.60 m^-1^[20].
+
+## The Estimation of Distance and Ascent Speed
+London Transport Board (1958), pauls(1971-1980), Predtechenskii (1978), Fruin (1987), Proulx (2007) and Peacock (2010) et al.have done many research on the caculate of the travel distance on the stairs and prospered their calculation methods. Hoskins[21] through comparatived and analysised different calculation methods and combined with the occupants’ behaviors in the buildings, suggested the traveling distance on the stair includes two components, the first part is the distance on the inclined stair and the second component is the distance on the platform landing. The travel distance on the platform on the stairs is a semi-circle.
+
+
+
+_b_:the width of the stairwell, 2.56m;
+_d_:the trend of the stairwell, 0.27m;
+_h_: the height of the stairwell, 0.16m;
+_n_:the number of the steps on the stairwell,where i=1,n=14; where i=2,3,4 …, 18, 19,n=18;
+
+The traveling distance on the first floor is 13.37 m and the traveling on other floors is around 7.01 m. The total traveling distance from the first floor to the 20th floor is around 139.59 m as shown in Table4.
+
+~ Center
+Table4. The Distance of Stairs
+
+|--{width:30%}-|---{width:30%}----------|
+| Stairs       | Traveling distance (m) |
++--------------|------------------------+
+| S~1-2~       | 13.37                  |
+| S~i-j~       | 7.01                   |
+| S~1-20~      | 139.59                 |
+|--------------|------------------------|
+Where i = 2, 3, 4, …, 18, 19; j = i + 1
+~
+
+The speeds of participants on each floor in this study and can be calculated as:
+~ Equation { #eq-euler ;#eq-gaussian;}
+V = \frac{L}{T} \
+~
+_V_: the velocity on the stair on each floor, m/s;
+_L_: the traveling distance on the stair on adjacent two floors, m;
+_T_:the traveling time on the stair on adjacent two floors, s;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Text styling, links, sub- and super-script, footnotes and other topics
+are covered in section [Syntax: Inline
+elements](http://research.microsoft.com/en-us/um/people/daan/madoko/doc/reference.html#sec-syntax--inline-elements)
+of the manual.
+
+Headings, Figures and Tables, Lists, Code Blocks, Mathematics, etc. are
+covered in section [Syntax: Block
+elements](http://research.microsoft.com/en-us/um/people/daan/madoko/doc/reference.html#sec-syntax--block-elements)
+of the manual.
+
+The target length for submitted and invited papers is about eight pages.
+This length includes all figures and tables. However, because the
+Proceedings will not be printed on paper, there is no maximum limit on
+the number of pages. You are free to exceed the target length of eight
+pages.
+
+Please watch this short YouTube Video for a tutorial on how to use the system as intended.
+
+# MAIN HEADINGS LIKE THIS STYLE
+Main Headings are all upper case letters and underlined. In Madoko, a
+Single '#' symbol at the start of the line, followed by a space and then
+the heading text.
+
+## Subheadings Like This Style
+Subheadings within sections follow the same format as section titles, but
+with upper and lower case. In Madoko, a Double '#' symbol at the start of
+the line, followed by a space and then the heading text.
+
+### Subsubheadings like this style
+Subsubheadings have no underline, and only the first letter capitalized.
+In Madoko, a Triple '#' symbol at the start of the line, followed by a
+space and then the heading text.
+
+# FIGURES, TABLES, AND EQUATIONS
+Original drawings and photos may be included in your paper as figures.
+Diagrams may be in color.
+
+Figures and tables should immediately follow first mention of them in the
+text and can be placed in one column, or in the case of wider figures,
+can cover two columns (but only at the top or bottom of the page). The
+caption should start with either the word “figure” spelled out or
+abbreviated, followed by the figure number (i.e., Figure 1 or Fig. 1).
+The figure caption should be followed by a single line of space before
+the text resumes.
+
+~ Figure { #fig-smokeview; caption:"Illustration of placement of figure and caption. (use the `.wide` class for wide figure)."}
+![Ex1_0]
+~
+[Ex1_0]: images/Ex1_0.png "Ex1_0" { width:auto; max-width:90% }
+
+~ Note
+Images larger than about 1Mb in size will be rejected by the Madoko.net server.
+~
+
+## Tables
+Table [#table-sample] shows an example full width table figure.
+
+~ TableFigure { #table-sample; caption: "Modelle mit unterschiedlich geschätztem baseline hazard"; .wide }
+|                | $c(t)$                               ||||
+|                |---------|---------|---------|-----------|
+|                | (A0)    | (A1)    | (A2)    | (A3)      |
+|                | ohne    | Log     | Polynom | Stückweise|
+|                |         |         |         | konstant  |
+|:---------------|:-------:|:-------:|:-------:|:---------:|
+| Log likelihood | -6.798  | -6.733  | -6.715  | -6.686    |
+| Pseudeo $R^{2}$| 0,048   | 0,057   | 0,059   | -         |
+| AIC            | 13.615  | 13.489  | 13.456  | 13.483    |
+| BIC            | 13.711  | 13.594  | 13.580  | 14.009    |
+| N              | 105.484 | 105.484 | 105.484 | 105.484   |
+|----------------|---------|---------|---------|-----------|
+~
+
+## Equations
+Standard terminology should be used in equations. If possible, keep
+equations to one column. All equations should be numbered. A definition
+of $e$ is shown in Equation [#euler]:
+
+~ Equation { #euler }
+e = \lim_{n\to\infty} \left( 1 + \frac{1}{n} \right)^n
+~
+
+Or to use &logolatex; to align equations.
+
+~ Equation { #eq-alignment; caption:"Alignment example" }
+\begin{aligned} 
+ f(x)  &= a x^2+b x +c   &   g(x)  &= d x^3 \\
+ f'(x) &= 2 a x +b       &   g'(x) &= 3 d x^2
+\end{aligned}
+~
+
+# FUN CONTENT EXAMPLES
+Let's program some JavaScript:
+``` javascript
+function hello() {
+  return "hello world!"
+}
+```
+Here is a footnote[^fn] reference.
+[^fn]: This is the content of the example footnote. 
+    You can continue a footnote by indenting content.
+    And notice the back link.
+
+# BIBLIOGRAPHY AND REFERENCES
+When references are used in the text, tie them to an alphabetical (by
+principal author) list of references to be included as the last item of
+your paper. The format commonly used in scientific literature follows:
+
+Smith, J. S., Bloggs, R. T. and Jones, E. R. (1974), "Magnetic Anomalies
+in Geothermal Systems", Journal of Fluid Mechanics, 254, 73-79
+
+Leslie Lamport, LaTeX: A Document Preparation System (2nd Edition), Addison-Wesley, 1994
+
+When using Madoko, edit the content of the .bib file in the document
+folder, and use the reference methods as shown in the [Bibliography and
+Citations
+Section](http://research.microsoft.com/en-us/um/people/daan/madoko/doc/reference.html#sec-bib)
+of the Madoko Manual.
+
+A bibliography file consists of all your references in the BibTeX format, for example:
+
+    @BOOK{ Knuth:TeX,  
+        author   = "Knuth, Donald E.",  
+        title    = "The {\TeX} book",  
+        publisher= "Addison-Wesley",  
+        year     = 1984  
+    }
+
+Entries in the bibliography files can now be referenced using semi-colon
+separated references, for example:
+``` Markdown 
+Read about LaTeX and TeX [@Knuth:TeX; @Lamport:LaTeX].
+```
+Results in: Read about LaTeX and TeX [@Knuth:TeX; @Lamport:LaTeX].
+
+Please include full title of journal articles or other references,
+journal, volume, date, pages. There is a nice [table on
+Wikipedia](https://en.wikibooks.org/wiki/LaTeX/Bibliography_Management#BibTeX)
+that shows all of the different data fields for the BibTeX file.
+
+# PAPER DEADLINE
+Your paper, in final form, must be received by October 15th, 2016. The
+best way to edit and submit is to use the Madoko [editor] to edit your
+document in the 'authoring' branch of the GitHub [femtc2016] repository.
+If you choose to use some other document format and editing tool, PDF
+format is preferred, but ODT, DOC, or DOCX formats are acceptable. Please
+e-mail the files to [conference@thunderheadeng.com][emaillink].
+
+# PRESENTATION
+Each author must present his/her paper within the allotted time, allowing
+for some minutes of open discussion. The session chair is responsible for
+keeping authors within their time limit, in order to ensure that each
+author has enough time for their presentation. When preparing your
+presentation slides, make sure they are clear and large enough so that
+your audience can read them from as far as 80 feet away.
+
+All presentations will be made using the computer projector available in
+the conference room. We will not have overhead projectors or slide
+projectors in the meeting rooms.
+
+Your presentation, in final form, must be received by **October 15th,
+2016**. A final commit of the files to the GitHub repository is
+preferred. Once the final draft is complete and reviewed it will be
+merged into the master branch of the repository. If you decide to use
+some other tool for creating your presentation, PDF format is preferred,
+but ODP, PPT, or PPTX formats are acceptable. Please e-mail the files
+to [conference@thunderheadeng.com][emaillink].
+
+All presentations will be pre-loaded on the computers that are present.
+Please note that this approach will make it necessary for us to receive
+the presentation files prior to the conference. If you have a different
+software requirement, it should still be possible for you to attach your
+own computer to the projector if you bring it with you. This is not
+optimal, as it takes time and slows down the session.
+
+# CONFERENCE CONTENT DISTRIBUTION
+The papers and presentation materials will be made available online
+during and after the conference. In addition, the organizers are planning
+to may broadcast live presentations online during the event. The papers,
+presentations, and videos will be archived and made available on the web
+after the conference.
+
+Author(s) retain all rights to submitted material. The organizers are
+granted a non-exclusive right to copy and redistribute conference
+material submitted by the author(s).
+
+[BIB]
+
+&pagebreak;
+
+# An appendix { @h1:"A" }
+"All the same, I should like it all plain and clear," said he
+obstinately, putting on his business manner (usually reserved for people
+who tried to borrow money off him), and doing his best to appear wise and
+prudent and professional and live up to Gandalf's recommendation. "Also I
+should like to know about risks, out-of-pocket expenses, time required
+and remuneration, and so forth" -- by which he meant: "What am I going to
+get out of it? and am I going to come back alive?"
+
+# Conclusion
+If you have any questions concerning your paper and/or the Conference,
+please email us at [conference@thunderheadeng.com][emaillink].
