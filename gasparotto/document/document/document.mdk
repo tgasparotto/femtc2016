@@ -121,25 +121,113 @@ speed $V$ due to congestion effects.
 The pedestrian motion model needs the introduction of four key parameters:\
 1) Preferred - or free - walking speed $V_{0}$, which depends on gender, age and 
 culture.\
-2) Reaction- and pre movement-time, which is variable according to hazard 
+2) Reaction- and pre movement-time $\tau$, which is variable according to hazard 
 perception by people.\
 3) Critical people density $\rho_{c}$, estimated at 5,4 persons per square meter\
-4) Critical flowrate through a door, which depends on the width of the opening. 
+4) Critical flowrate through a door $\Phi_{c}$, which depends on the width of the opening. 
 For a 90 centimeter-wide door, we can estimate it at 1,1 person per second.\
 
 
 ## Numerical algorithm without fire constraint
 
+The implementation of our model and the algorithm used in order to solve it 
+numerically (which is similar to the one adopted by Roudneff-Chupin7) are presented 
+in figure [#algo]. Two parts are involved in a sequential process: subroutines PAULO 
+(Pathfinding Algorithm Using Length Optimization) and MARCOE (Macroscopic Analysis 
+of Rescue Configuration for Optimal Evacuation).
+
+~ Figure { #algo; caption:"Algorithm used for the computation of egress model"}
+![algo]
+~
+[algo]: images/algo.png "algo" { width:auto; max-width:90% }
+
 ### Scenario creation
+The computational domain is discretized with a mesh of square cells, which can be 
+classified into three categories:\
+1)	Walls and other obstacles are considered as blocked cells which cannot be 
+entered by people.\
+2)	Exit cells refer to the outward exit openings and are characterized by the 
+critical flowrate.\
+3)	Free cells symbolize available space for motion and can be occupied by people.\
+
+In order to study a mean configuration representative for all particular scenarios, 
+the initial distribution of people density in the calculation area is considered 
+uniform and fairly distributed on free cells.
 
 ### Preferred velocities computation
 
+The preliminary step for the resolution of the density balance equation is the 
+computation of the velocity field in which the people density is transported. This 
+calculation is based on a simple observation: people tend to minimize their travel 
+time to their goal8. So it is assumed in this study that people have a perfect 
+knowledge of their environment and of the configuration of the building. For each 
+free cell, the velocity is directed along the shortest path to the nearest exit cell. 
+The shortest path between a current cell and its nearest exit cell is computed thanks 
+to the PAULO algorithm (Pathfinding Algorithm Using Length Optimization) inspired 
+from Dijkstra and able to take into consideration the specificities of the geometry 
+(particularly blocked cells). At this stage, it can be noticed that the norm of the 
+velocity is the preferred walking speed $V_{0}$.
+
 ### Transport at preferred speed
+The space- and time-varying evolution of people density in the pre-calculated 
+velocity field is governed by the equation (1). The equation is solved numerically 
+using a finite volume method with an explicit temporal scheme. The advective part 
+of the equation is treated thanks to a QUICK scheme, which consists in a second 
+order interpolation in space and represents a good compromise between accuracy and 
+computational time. At this step, exit cells are treated as particular cases and 
+their outgoing flow is limited by the critical flux $\Phi_{c}$. This transport step is 
+the first part of the MARCOE algorithm (Macroscopic Analysis of Rescue 
+Configuration for Optimal Evacuation).
 
 ### Corrective step
 
+The previous calculation step (transport at preferred velocity) can lead to 
+non-physical situations where the people density can locally exceed the critical 
+density $\rho_{c}$. So a corrective part extracted from literature9 is introduced 
+in order to respect congestion constraint for each cell. This corrective part 
+consists in a stochastic projection of local excess density:\
+1)	The saturated cells are identified.\
+2)	For each saturated cell, the density excess is calculated and redistributed 
+along a random walk, i.e. one of the four neighbors of the current cell is randomly 
+chosen to receive as much density as it can to respect critical density.\
+3)	The random walk continues until the excess density is fully redistributed.\
+
+It should be noticed that this corrective part is mathematically equivalent to 
+Equation (2) and consists in its algorithmic implementation. This step is the 
+second part of the MARCOE algorithm.
+
+
 ## Integration of fire effects
 
+The present model allows the inclusion of fire influence on egress conditions. 
+Three different ways are considered to represent fire impact on evacuation 
+circumstances:\
+1)	Burning cells are treated as blocked cells (physical obstacles)\
+2)	The cells with thermal constraints (temperature, heat flux) and optical 
+constraints (optical density) above threshold values introduced in table 
+[#fire-effects] are also considered as blocked cells.\
+3)	Extinction coefficient of the smoke locally reduces the walking speed of 
+humans according to the empirical formula given by Frantzich and Nilsson10:\
+
+~ Equation { #frantzich-nilsson }
+v(\beta) = \max (0.1 V_{0}, (1-0.0807 \beta) V_{0})
+~
+
+where $v$ is the effective speed, $V_{0}$ is the preferred speed and $\beta$ is 
+the extinction coefficient ($m^{-1}$).
+Fire-related data are extracted from Fire Dynamics Simulator 6 (developed by the 
+NIST) and are updated at each time step.
+
+
+~ TableFigure { #fire-effects; caption: "Example of threshold values for fire constraints"}
++------------------------+-----------------+
+| Fire effect            | Threshold value |
++:----------------------:+:---------------:+
+| Temperature            | 60°C            |
+| Thermal flux           | 2,5 $kW.m^{-2}$ |
+| Extinction coefficient | 0,3 $m^{-1}$    |
+|------------------------|-----------------|
+~
 
 
 # FIGURES, TABLES, AND EQUATIONS
