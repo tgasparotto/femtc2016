@@ -92,25 +92,54 @@ from literature leads to promising results.
 
 ### Basis hypothesis
 
+The people motion model follows the temporal and spatial evolution of a macroscopic 
+quantity, which is the people density &rho; (person per square meter). It is based on 
+three fundamental assumptions:\
+1)	Without external constraint, people move at their preferred walking speed.\
+2)	People density has to respect a strict congestion constraint: it cannot exceed 
+a critical density.\
+3)	Flowrate through a door cannot exceed a critical rate.
+
 ### Mathematical formulation
+Mathematically, a balance is written for the time- and space-varying people density 
+in a pre-calculated velocity field:\
+
+~ Equation { caption:"Alignment example" }
+\begin{aligned} 
+ \frac{\partial \rho}{\partial t}+\nabla (\rho \overrightarrow{v})  &= 0 \\
+ \overrightarrow{v} &= P \overrightarrow{V}
+\end{aligned}
+~
+
+where $\overrightarrow{v}$ is the effective transport velocity of people density 
+and $\overrightarrow{V}$ is the preferred walking speed of people. The operator P 
+refers to the projection of preferred speeds on the permissible velocity space in a 
+least square sense. So, real speed $v$  is necessarily lower than preferred walking 
+speed $V$ due to congestion effects.
 
 ### Key parameters
-Main Headings are all upper case letters and underlined. In Madoko, a
-Single '#' symbol at the start of the line, followed by a space and then
-the heading text.
+The pedestrian motion model needs the introduction of four key parameters:\
+1) Preferred - or free - walking speed $V_{0}$, which depends on gender, age and 
+culture.\
+2) Reaction- and pre movement-time, which is variable according to hazard 
+perception by people.\
+3) Critical people density $\rho_{c}$, estimated at 5,4 persons per square meter\
+4) Critical flowrate through a door, which depends on the width of the opening. 
+For a 90 centimeter-wide door, we can estimate it at 1,1 person per second.\
+
 
 ## Numerical algorithm without fire constraint
 
-Subheadings within sections follow the same format as section titles, but
-with upper and lower case. In Madoko, a Double '#' symbol at the start of
-the line, followed by a space and then the heading text.
+### Scenario creation
 
-### Subsubheadings like this style
-Subsubheadings have no underline, and only the first letter capitalized.
-In Madoko, a Triple '#' symbol at the start of the line, followed by a
-space and then the heading text.
+### Preferred velocities computation
+
+### Transport at preferred speed
+
+### Corrective step
 
 ## Integration of fire effects
+
 
 
 # FIGURES, TABLES, AND EQUATIONS
