@@ -1,18 +1,26 @@
 [INCLUDE=style/lncs]
 Title         : AN EMERGENCY EGRESS MODEL BASED ON A MACROSCOPIC CONTINUOUS APPROACH
-Subtitle      : An optional subtitle.
+Subtitle      :
 
-Author        : First Author Name
-Affiliation   : Research institute
-Email         : you@bar.com
+Author        : Thomas GASPAROTTO
+Affiliation   : CNPP/LEMTA-Université de Lorraine
+Email         : thomas.gasparotto@cnpp.com
 
-Author        : My co-author 1
-Affiliation   : Other institute
-Email         : other1@bar.com
+Author        : Anthony COLLIN
+Affiliation   : LEMTA-Université de Lorraine
+Email         : anthony.collin@univ-lorraine.fr
 
-Author        : My co-author 2
-Affiliation   : Other institute
-Email         : other2@bar.com
+Author        : Pascal BOULET
+Affiliation   : LEMTA-Université de Lorraine
+Email         : pascal.boulet@univ-lorraine.fr
+
+Author        : Grégoire PIANET
+Affiliation   : CNPP
+Email         : gregoire.pianet@cnpp.com
+
+Author        : Armelle MULLER
+Affiliation   : CNPP
+Email         : armelle.muller@cnpp.com
 
 Bibliography  : references.bib
 Logo          : False
@@ -23,10 +31,14 @@ name-references : REFERENCES
 [TITLE]
 
 ~ Abstract
-Papers should follow standard technical paper format, an abstract
-followed by the more detailed presentation. The abstract should be typed
-on this area of the first page, with the presentation following after two
-lines of space.
+Many modelling approaches can be used to assess evacuation time of buildings in fire 
+situations. We present in this paper a new model, implemented in a collaborative work between 
+LEMTA and CNPP, and based on a macroscopic continuous approach. 
+First, the assumptions and algorithm of  pedestrian movement model are detailed. 
+Secondly, our model is confronted to results from full-scale tests 
+carried out without any fire constraints and to other egress models on typical test 
+cases extracted from literature. Finally, the complete model (including fire 
+stresses) is compared with FDS+Evac on a simple fire scenario.
 ~
 
 [editor]: https://www.madoko.net/editor.html "Madoko.net Editor"
@@ -34,36 +46,61 @@ lines of space.
 [femtc2016]: https://github.com/thunderheadeng/femtc2016
 [emaillink]: mailto:conference@thunderheadeng.com "conference@thunderheadeng.com"
 
-# GENERAL INSTRUCTIONS { #sec-intro }
-You are encouraged to use the [Madoko.net Editor][editor] while using
-the [Madoko Reference Manual][reference-manual] to edit/commit your
-documents into the 'authoring' branch of the [femtc2016] GitHub repository. 
-More information about this method of contribution will be covered below.
+# INTRODUCTION { #sec-intro }
+Assessment of fire safety performance of buildings requires an estimation of 
+Required Safe Egress Time (RSET) in fire situation. Many egress models have 
+therefore been developed during the last decades, using various mechanisms. 
+First evacuation models were based on empiric relations between people density, 
+walking speed and geometric characteristics of the building (Togawa1, Pauls2). 
+Then, advancement of numerical simulation and progress in human behaviour modelling 
+led to finer analysis of pedestrian motion, particularly microscopic approaches. 
+For instance, Lagrangian-type models (Evac3, Simulex) consider people as particles, 
+whose respective motion is governed by different attractive or repulsive forces and 
+characteristic velocities. Another kind of physical model, such as cellular 
+automata (Blue and Adler4, Klüpfel5, Tissera6), considers a space-and-time 
+discretization with people who jump from cell to neighbouring cell following given 
+transition laws. The main part of current evacuation computational tools are based on microscopic approaches. 
+However, these kinds of models provide output results which are 
+significant for the only simulated evacuation scenario and a particular initial 
+people distribution. So, these microscopic descriptions need a statistical treatment 
+of numerous simulations for a particular configuration to provide average data 
+(required evacuation time, flowrates through openings in terms of persons per time 
+unit) which can be considered representative of all scenarios likely to occur.
 
-Text styling, links, sub- and super-script, footnotes and other topics
-are covered in section [Syntax: Inline
-elements](http://research.microsoft.com/en-us/um/people/daan/madoko/doc/reference.html#sec-syntax--inline-elements)
-of the manual.
+A macroscopic continuous egress model was developed in the present work, as an 
+alternative to this limitation. Instead of considering people as individual 
+entities with particular characteristics, our model tracks the evolution of people 
+density in space and time and takes into consideration average input parameters to 
+describe the population. The model is based on a people density balance solved in a 
+discretized two-dimensional space, with additional constraints, such as critical 
+flows through doors or congestion constraints, which make the problem more complex. 
+The complete model is also able to take fire stresses into account, in terms 
+of temperature, heat flux and visibility.
 
-Headings, Figures and Tables, Lists, Code Blocks, Mathematics, etc. are
-covered in section [Syntax: Block
-elements](http://research.microsoft.com/en-us/um/people/daan/madoko/doc/reference.html#sec-syntax--block-elements)
-of the manual.
+This paper details the algorithm used to solve the problem and our
+perspectives in order to integrate fire effects into the pedestrian motion model. 
+Real-scale tests were carried out to check that our basis pedestrian motion model is able to 
+reproduce experimental data (without any fire constraint). At this stage, validation 
+of the complete model including fire stresses seems very difficult. Nevertheless, a 
+comparison between our model and FDS+Evac considering a simple test case extracted 
+from literature leads to promising results.
 
-The target length for submitted and invited papers is about eight pages.
-This length includes all figures and tables. However, because the
-Proceedings will not be printed on paper, there is no maximum limit on
-the number of pages. You are free to exceed the target length of eight
-pages.
 
-Please watch this short YouTube Video for a tutorial on how to use the system as intended.
+# THE EGRESS MODEL
 
-# MAIN HEADINGS LIKE THIS STYLE
+## Assumptions and formulation
+
+### Basis hypothesis
+
+### Mathematical formulation
+
+### Key parameters
 Main Headings are all upper case letters and underlined. In Madoko, a
 Single '#' symbol at the start of the line, followed by a space and then
 the heading text.
 
-## Subheadings Like This Style
+## Numerical algorithm without fire constraint
+
 Subheadings within sections follow the same format as section titles, but
 with upper and lower case. In Madoko, a Double '#' symbol at the start of
 the line, followed by a space and then the heading text.
@@ -72,6 +109,9 @@ the line, followed by a space and then the heading text.
 Subsubheadings have no underline, and only the first letter capitalized.
 In Madoko, a Triple '#' symbol at the start of the line, followed by a
 space and then the heading text.
+
+## Integration of fire effects
+
 
 # FIGURES, TABLES, AND EQUATIONS
 Original drawings and photos may be included in your paper as figures.
