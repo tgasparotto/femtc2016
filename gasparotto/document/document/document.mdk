@@ -58,7 +58,7 @@ For instance, Lagrangian-type models (Evac3, Simulex) consider people as particl
 whose respective motion is governed by different attractive or repulsive forces and 
 characteristic velocities. Another kind of physical model, such as cellular 
 automata (Blue and Adler4, Klüpfel5, Tissera6), considers a space-and-time 
-discretization with people who jump from cell to neighbouring cell following given 
+discretization with people who jump from cell to neighboring cell following given 
 transition laws. The main part of current evacuation computational tools are based on microscopic approaches. 
 However, these kinds of models provide output results which are 
 significant for the only simulated evacuation scenario and a particular initial 
@@ -81,12 +81,17 @@ This paper details the algorithm used to solve the problem and our
 perspectives in order to integrate fire effects into the pedestrian motion model. 
 Real-scale tests were carried out to check that our basis pedestrian motion model is able to 
 reproduce experimental data (without any fire constraint). At this stage, validation 
-of the complete model including fire stresses seems very difficult. Nevertheless, a 
-comparison between our model and FDS+Evac considering a simple test case extracted 
-from literature leads to promising results.
-
+of the complete model including fire stresses seems very difficult, due to the lack of 
+experimental data. Nevertheless, a comparison between our model and FDS+Evac 
+considering a simple test case extracted from literature leads to promising results.
 
 # THE EGRESS MODEL
+
+The model presented here relies on a macroscopic approach, in which people are 
+assimiled to their people density. These types of models have been studied since the 
+1960's, with the apparition of first vehicular traffic models. The application of 
+these models to people motion modelling is more recent and started with Hughes' studies.
+
 
 ## Assumptions and formulation
 
