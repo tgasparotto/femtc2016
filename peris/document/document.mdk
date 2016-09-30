@@ -23,16 +23,11 @@ name-references : REFERENCES
 [TITLE]
 
 ~ Abstract
-Bridges are a critical element of the transportation system of a country. To ensure bridge safety
-and functionality, bridge design is guided by bridge standards which prescribe the loads to be considered when designing
-a bridge or when assessing its structural performance. However, bridge standards do not make any reference to fire,
-despite the fact that bridge fires are a real threat and a major concern nowadays. This paper uses Computational Fluid
-Dynamics simulations to study the parameters influencing the temperatures in the gas surrounding I girder bridges during a fire,
-since this is a critical parameter governing the response of the bridge. More specifically, the study considers 
-four geometric parameters (vertical clearance, bridge substructure configuration, span length and bridge width)
-and two fire scenario parameters (position of the fire load and type of fuel). Results show that vertical clearance,
-type of fuel and position of the fire load are the most influential parameters for the flange temperatures and that web
-temperatures are also influenced by the bridge substructure configuration.
+The structural response of bridges against fire is an under researched topic not covered in current design codes
+in spite of its frequency and consequences. This paper uses Computational Fluid Dynamics simulations to study the
+parameters influencing the temperatures in the gas surrounding I girder bridges during a fire, since this is a
+critical parameter governing the response of the bridge. For the most critical case a methodology that uses
+numerical models to analyze the damage caused by fires is shown.
 ~
 
 [editor]: https://www.madoko.net/editor.html "Madoko.net Editor"
@@ -41,6 +36,14 @@ temperatures are also influenced by the bridge substructure configuration.
 [emaillink]: mailto:conference@thunderheadeng.com "conference@thunderheadeng.com"
 
 # INTRODUCTION { #sec-intro }
+The structural response of bridges against fire is an under researched topic not covered in current design codes
+in spite of its frequency and consequences as it is shown in Peris-Sayol et Al (2016). In this paper, 154 bridge
+fires have been collected between 1997 to 2015. The bridge damage level has been characterized and the main factors
+involved in bridge fire damage have been studied. This analysis shows he main conclusions are that the only scenarios likely to
+cause damage to concrete and steel bridges are a tanker fire close to the structure and a high calorific storage 
+fire under the bridge.
+
+This paper 
 
 # METHODS { #sec-intro }
 ## Parameters Studied
