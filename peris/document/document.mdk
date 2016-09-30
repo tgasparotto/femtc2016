@@ -38,12 +38,15 @@ numerical models to analyze the damage caused by fires is shown.
 # INTRODUCTION { #sec-intro }
 The structural response of bridges against fire is an under researched topic not covered in current design codes
 in spite of its frequency and consequences as it is shown in Peris-Sayol et Al (2016). In this paper, 154 bridge
-fires have been collected between 1997 to 2015. The bridge damage level has been characterized and the main factors
-involved in bridge fire damage have been studied. This analysis shows he main conclusions are that the only scenarios likely to
+fires have been collected between 1997 and 2015 and the bridge damage level and the main factors involved in
+bridge fire damage has been characterized and studied. This analysis shows that the only scenarios likely to
 cause damage to concrete and steel bridges are a tanker fire close to the structure and a high calorific storage 
-fire under the bridge.
+fire under the bridge, being overpasses the most susceptible.
 
-This paper 
+This paper uses Computational Fluid Dynamics simulations to study the parameters influencing the temperatures in
+the gas surrounding I girder bridges during a fire, since this is a critical parameter governing the response of 
+the bridge. This study complements previous work (Peris-Sayol et al. 2016) since the parameters analyzed by CFD
+were impossible to characterize in real cases, so the influence were not possible to study.
 
 # METHODS { #sec-intro }
 ## Parameters Studied
