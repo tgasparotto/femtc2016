@@ -173,10 +173,13 @@ _L_: the traveling distance on the stair on adjacent two floors, m;
 _T_:the traveling time on the stair on adjacent two floors, s;
 
 
-
-
-
-
+# The Results and Discussion
+## The Ascent Travelling Time
+The probability and statistics results of evacuation time were shown in figure 3 to figure 6.
+~ Center
+![Firgue3 a]![Firgue3 b]
+[Firgue3 a]: images/Firgue3-a.png "Firgue3 a" { width:45%; max-width:90% }
+[Firgue3 b]: images/Firgue3-b.png "Firgue3 b" { width:45%; max-width:90% }
 
 
 
