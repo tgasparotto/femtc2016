@@ -74,6 +74,7 @@ The experiment was conducted in a 26-level typical residential building located 
 ~ Center
 Figure2. The view of the staircase in lighting-out condition: a on the inside of the stair; b on the outside of the stair.
 ~
+
 ~ Center
 Table1. Participant information
 
@@ -112,8 +113,8 @@ Besides, using the spherical illuminometer monitored the illumination condition 
 ## Visibility Parameters
 Smoke is one of the most focus on characteristics in the fire dynamics study.Only a part of light could through smoke due to the effect of absorption and scattering, which lead to reduce the visibility within the scope of the fire area and go against evacuation and rescue. When a bunch of wavelength λ passes through the smoke, the Lambert-Beer's law can be describe as equation（1）:
 ~
-Equation { #eq-alignment; #eq-euler  }
-Cs = log e {{I~λ0~}{I~λ~}}
+Equation { #eq-alignment;}
+Cs = \log e\{\{I~λ0~}{I~λ~}}
 ~
 
 Cs: Photosensitivity coefficient (m^-1^);
