@@ -165,6 +165,7 @@ Table4. The Distance of Stairs
 | S~i-j~       | 7.01                   |
 | S~1-20~      | 139.59                 |
 |--------------|------------------------|
+
 Where i = 2, 3, 4, …, 18, 19; j = i + 1
 ~
 
@@ -195,11 +196,14 @@ Figure4. The probability distribution of evacuation time in Condition 2: a Male;
 ![Firgue5 a]![Firgue5 b]
 [Firgue5 a]: images/Firgue5-a.png "Firgue5 a" { width:45%; max-width:90% }
 [Firgue5 b]: images/Firgue5-b.png "Firgue5 b" { width:45%; max-width:90% }
+
 Figure5. The probability distribution of evacuation time in Condition9: a Male; b female.
 
 ![Firgue6 a]![Firgue6 b]
 [Firgue6 a]: images/Firgue6-a.png "Firgue6 a" { width:45%; max-width:90% }
 [Firgue6 b]: images/Firgue6-b.png "Firgue6 b" { width:45%; max-width:90% }
+
+
 Figure6. The probability distribution of evacuation time in condition: a Male; b female.
 ~
 Males’ and females’ evacuation time distribution ranges are quite wide but not even. Males’ showed a trend of increasing before decreasing, while females’ increased gradually. In Condition 1, 93.33% of males’ evacuation time was in the range of 140s-200s, and 93.33% of females’ evacuation time was in the range of 200s-260s. In Condition 2, 93.33% of males’ evacuation time distributed in the range of 160s-240s, and 86.67% of females’ evacuation time distributed in the range of 180s-260s. In Condition 3, 93.33% of males’ and females’ evacuation time were in the ranges of 160s-260s and 240s-320s respectively. In Condition 4, 80% of males’ evacuation time was in the range of 240s-280s and the rest was 300s-320s, and 80% of females’ evacuation time was in the range of 240s-320s, only 6.67% of the whole females’ is greater than 420s.
