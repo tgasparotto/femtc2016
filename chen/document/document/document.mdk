@@ -114,7 +114,9 @@ Besides, using the spherical illuminometer monitored the illumination condition 
 Smoke is one of the most focus on characteristics in the fire dynamics study.Only a part of light could through smoke due to the effect of absorption and scattering, which lead to reduce the visibility within the scope of the fire area and go against evacuation and rescue. When a bunch of wavelength λ passes through the smoke, the Lambert-Beer's law can be describe as equation（1）:
 ~
 Equation { #eq-alignment;}
-Cs = \log e\{\{I~λ0~}{I~λ~}}
+Cs = \frac{1}{L}\log e\{\{I~λ0~}{I~λ~}}
+
+\[Cs = \frac{1}{L}\log e\left( {\frac{{{I_{{\lambda _0}}}}}{{{I_\lambda }}}} \right).\]
 
 ~
 
@@ -187,6 +189,7 @@ Figure3. The probability distribution of evacuation time in Condition 1: a Male;
 ![Firgue4 a]![Firgue4 b]
 [Firgue4 a]: images/Firgue4-a.png "Firgue4 a" { width:45%; max-width:90% }
 [Firgue4 b]: images/Firgue4-b.png "Firgue4 b" { width:45%; max-width:90% }
+
 Figure4. The probability distribution of evacuation time in Condition 2: a Male; b female.
 
 ![Firgue5 a]![Firgue5 b]
@@ -304,7 +307,7 @@ This paper studied the individual ascent speeds of college students in China on 
 
 
 
-
+# BIBLIOGRAPHY AND REFERENCES
 
 
 
