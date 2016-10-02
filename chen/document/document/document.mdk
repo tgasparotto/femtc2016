@@ -115,6 +115,7 @@ Smoke is one of the most focus on characteristics in the fire dynamics study.Onl
 ~
 Equation { #eq-alignment;}
 Cs = \log e\{\{I~λ0~}{I~λ~}}
+
 ~
 
 Cs: Photosensitivity coefficient (m^-1^);
