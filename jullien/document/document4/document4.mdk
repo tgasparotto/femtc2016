@@ -107,7 +107,7 @@ files, latex style files, etc.
 ~ Figure { #fig-smokeview; caption:"Illustration of placement of figure and caption. (use the `.wide` class for wide figure)."}
 ![fig3-1]
 ~
-[fig3-1]: images/fig3-1q.gif "fig3-1" { width:auto; max-width:90% }
+[fig3-1]: images/fig3-1q.JPG "fig3-1" { width:auto; max-width:90% }
 
 
 
