@@ -111,21 +111,22 @@ A high-definition camera was installed on the platform of each floor to record t
 Besides, using the spherical illuminometer monitored the illumination condition in stairs every 30 minutes. Each floor chose two places as a detection point, point 1 was set in the corner of the platform and point 2 was set in the middle of the staircase. The illumination statistics information was listed in Table 2.
 
 ## Visibility Parameters
-Smoke is one of the most focus on characteristics in the fire dynamics study.Only a part of light could through smoke due to the effect of absorption and scattering, which lead to reduce the visibility within the scope of the fire area and go against evacuation and rescue. When a bunch of wavelength λ passes through the smoke, the Lambert-Beer's law can be describe as equation（1）:
-~
-Equation { #eq-alignment;}
-Cs = \frac{1}{L}\log e\{\{I~λ0~}{I~λ~}}
+Smoke is one of the most focus on characteristics in the fire dynamics study.Only a part of light could through smoke due to the effect of absorption and scattering, which lead to reduce the visibility within the scope of the fire area and go against evacuation and rescue. When a bunch of wavelength &lambda; passes through the smoke, the Lambert-Beer's law can be describe as equation（1）:
 
-\[Cs = \frac{1}{L}\log e\left( {\frac{{{I_{{\lambda _0}}}}}{{{I_\lambda }}}} \right).\]
-
+~ Equation { #eq-gaussian-1}
+Cs = \frac{1}{L} log e (\frac{I~\lambda_0~}{I~\lambda~}) 
 ~
 
 Cs: Photosensitivity coefficient (m^-1^);
 L: Distance between light source and lighted object (m);
-I~λ0~:Luminosity without smoke (lux);
-I~0~: Luminosity with smoke (lux);
+I~&lambda;0~:Luminosity without smoke (lux);
+I~&lambda;~: Luminosity with smoke (lux);
 
-Equation (1) illustrates that the distance L and photosensitivity coefficient Cs have an inverse relationship. Besides, the relation between Iλ0 and I0 by smoke can be expressed as the transimissivity (T) of the eye-patch.
+Equation (1) illustrates that the distance L and photosensitivity coefficient Cs have an inverse relationship. Besides, the relation between I~&lambda;0~ and I~&lambda;~ by smoke can be expressed as the transimissivity (T) of the eye-patch.
+
+~ Equation {#eq-gaussian-2}
+T[\perc] = 1  \ast 100 = 100 \ast e\caret(CsL)
+~
 
 ~ Center
 Table3. Relation between the distance and photosensitivity coefficient
@@ -145,8 +146,23 @@ From the equation (2) above, the relation between the distance and photosensitiv
 
 ## The Estimation of Distance and Ascent Speed
 London Transport Board (1958), pauls(1971-1980), Predtechenskii (1978), Fruin (1987), Proulx (2007) and Peacock (2010) et al.have done many research on the caculate of the travel distance on the stairs and prospered their calculation methods. Hoskins[21] through comparatived and analysised different calculation methods and combined with the occupants’ behaviors in the buildings, suggested the traveling distance on the stair includes two components, the first part is the distance on the inclined stair and the second component is the distance on the platform landing. The travel distance on the platform on the stairs is a semi-circle.
+~ 
+
+~ Equation {#eq-gaussian-3}
+
+ L~inclination,n~ = n( d&sup2; &plus; h&sup2;)&frac12;
+~ 
 
 
+
+
+
+
+
+Equation {[ #eq-euler;#eq-gaussian;][#eq-alignment]}
+
+L~L~ = &sum;{i=1}&{n=20}\left(L~turning,i~ + L~inclination,i~ \right)
+~
 
 _b_:the width of the stairwell, 2.56m;
 _d_:the trend of the stairwell, 0.27m;
@@ -294,7 +310,7 @@ Figure16. The behavior of handrail utilization: a Male; b Female.
 [Firgue17 b]: images/Firgue17-b.png "Firgue17 b" { width:45%; max-width:90% }
 ![Firgue17 c]![Firgue17 d]
 [Firgue17 c]: images/Firgue17-c.png "Firgue17 c" { width:45%; max-width:90% }
-[Firgue17 d]: images/Firgue17-d.png "Firgue17 d" { width:45%; max-width:90% }
+[Firgue17 d]: images/Firgue17-d.png "Firgue17 d" { width:45%; max-width:90% } 
 Figure17. The ration of handrail utilization on different levels: a Condition 1; b Condition 2;c Condition 3; d Condition 4.
 ~
 In Condition 1, the ratio of handrail utilization on the first few floors was quite low and it increased continuously with the ascending floors. For the males, the ratio reached the peak was on the 17th floor, which occupied around 20%. For the females, the ratio reaches the peak was on the 8th floor, which occupied around 40%. In Condition 2, the ratio of handrail utilization was fluctuated with the ascending floors. The ratio reaches the top of males was 46.7% on the 14th level and females was 53% on the 8th level. In Condition 3, the ratio of handrail utilization for the males was quite low at first and it increased on the 1-9floors and it decreased on the rest of stairs. For the males, the peak of the ratio was 93.3% on the 5th and 8th floors, and the bottom of the ratio was 53.3% on the 15th floor. For the males, the ratio was around 100% with the ascending floors. In condition 4, generally all the participants used the handrail during the upward movement.
