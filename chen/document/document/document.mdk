@@ -125,7 +125,7 @@ I~&lambda;~: Luminosity with smoke (lux);
 Equation (1) illustrates that the distance L and photosensitivity coefficient Cs have an inverse relationship. Besides, the relation between I~&lambda;0~ and I~&lambda;~ by smoke can be expressed as the transimissivity (T) of the eye-patch.
 
 ~ Equation {#eq-gaussian-2}
-T[\perc] = 1  \ast 100 = 100 \ast e\caret(CsL)
+T  = (\frac{I~\lambda~}{I~\lambda_0~})   \ast 100 = 100 \ast e^{(CsL)}
 ~
 
 ~ Center
@@ -146,23 +146,18 @@ From the equation (2) above, the relation between the distance and photosensitiv
 
 ## The Estimation of Distance and Ascent Speed
 London Transport Board (1958), pauls(1971-1980), Predtechenskii (1978), Fruin (1987), Proulx (2007) and Peacock (2010) et al.have done many research on the caculate of the travel distance on the stairs and prospered their calculation methods. Hoskins[21] through comparatived and analysised different calculation methods and combined with the occupants’ behaviors in the buildings, suggested the traveling distance on the stair includes two components, the first part is the distance on the inclined stair and the second component is the distance on the platform landing. The travel distance on the platform on the stairs is a semi-circle.
-~ 
 
 ~ Equation {#eq-gaussian-3}
-
- L~inclination,n~ = n( d&sup2; &plus; h&sup2;)&frac12;
-~ 
-
-
-
-
-
-
-
-Equation {[ #eq-euler;#eq-gaussian;][#eq-alignment]}
-
-L~L~ = &sum;{i=1}&{n=20}\left(L~turning,i~ + L~inclination,i~ \right)
+L~L~ = \sum_{i=1}^{n=20}\left(L~turning,i~ + L~inclination,i~ \right)
 ~
+
+~ Equation {#eq-gaussian-4}
+L~inclination,n~ = n \ast (d^{2} + h^{2}) ^{\frac{1}{2}} \
+~
+
+~ Equation { #eq-gaussian-5}
+L~turning~ = \pi \ast \frac{b}{2} \
+~ 
 
 _b_:the width of the stairwell, 2.56m;
 _d_:the trend of the stairwell, 0.27m;
