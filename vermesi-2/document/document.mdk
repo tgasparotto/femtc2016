@@ -40,10 +40,10 @@ and full CFD models in the same domain. This study is to investigate the capabil
 the multi-scale method.
 
 Firstly, we replicated the physical condition for cold flow using the multi-scale
- method and we validated the predictions against experimental measurements in 
+ method and we validated the predictions against field measurements in 
  the Dartford Tunnel, UK. The tunnel is 1.5 km long, has an 8.5 m bore diameter and
   14 jet fans pairs. This study demonstrated both the multi-scale and full models have
-   good correlation with each other, and with the experimental measurements. 
+   good correlation with each other, and with the field measurements. 
    Depending on the ratio of 1D and full CFD plus the scenarios modelled, the 
    reduction in the computational time for the multi-scale method varies from 20% 
    to 220% compared to the full CFD method.
@@ -74,11 +74,9 @@ connecting towns and cities.  Construction of modern road and rail tunnels incre
 intricately connected.  For example, Laerdal Tunnel is currently the world's longest 
 tunnel at 24.51 km.  
 
-With an increasing number of long tunnels used fir transport infrastructure, these tunnels 
+With an increasing number of long tunnels used for transport infrastructure, these tunnels 
 need to be adequately ventilated to ensure tunnel users will not be negatively impacted
-by fumes from vehicles or by smoke in a fire.  
-
-Although there are various options to provide ventilation in a tunnel, these methods can be
+by fumes from vehicles or by smoke in a fire.  Although there are various options to provide ventilation in a tunnel, these methods can be
 broadly categories into longitudinal, transverse or semi-transverse ventilation. In design 
 and engineering, the ventilation system in tunnels are currently designed using both 1D and full 
 CFD modelling methods.  
@@ -86,39 +84,42 @@ CFD modelling methods.
 1D is used at the early stages of a project where time and resources
 are constrained, whereas full CFD modelling is used at the later stages to validate the designs
 informed by the 1D modelling method. Although full CFD modelling provides detailed results, 
-this method is significantly constrainted by the computational time which can take days to 
-weeks. In addition, to ensure the computational time is kept to a realistic timeframe for the design
-and engineering process, only a section, instead of the larger tunnel network is modelled. 
+this method is significantly constrained by the computational time which can take from days to 
+weeks. In addition, to ensure the computational time is kept to a realistic time frame for the design
+and engineering process, only a section instead of the larger tunnel network is modelled.  This shows the current 
+limitations for the practical application of the full CFD method.  
 
+With the multi-scale method, this is a hybrid approach combining CFD for complex regions and 1D for far-field regions
+of a tunnel section where an area-average representation of the variables is acceptable.  This approach
+allows designers to simulate a significantly longer tunnel section that is impractical using only either
+the full CFD, or the 1D method due to the constraints of computational time.  
 
+In this research, we have used FDS6.1 and the built-in HVAC feasture to implement the multi-scale modelling method.  The tunnel
+model in this research has been based on the Dartford West Tunnel and the onsite cold flow ventilation data (velocity)
+ collected by Collela _et al_ (ref). The onsite cold flow data is used to determine whether the multi-scale modelling method
+ has a good correlation with both the field data and the predictions from the full CFD method.  This is important to demonstrate
+ the predictions obtained from the multi-scale modelling method correlates with real world observation. The computational times
+ from modelling the cold flow ventilation of the Dartford West Tunnel have also been used to assess the reduction in 
+ computational time between the full CFD method and the multi-scale modelling method.  
 
+ Following on that, we have used the same tunnel models but this time included a fire up to 75 MW in both the full CFD and
+ multi-scale models to consider the feasibility of modelling a tunnel fire using the multi-scale modelling method. 
 
-You are encouraged to use the [Madoko.net Editor][editor] while using
-the [Madoko Reference Manual][reference-manual] to edit/commit your
-documents into the 'authoring' branch of the [femtc2016] GitHub repository. 
-More information about this method of contribution will be covered below.
-
-Text styling, links, sub- and super-script, footnotes and other topics
-are covered in section [Syntax: Inline
-elements](http://research.microsoft.com/en-us/um/people/daan/madoko/doc/reference.html#sec-syntax--inline-elements)
-of the manual.
-
-Headings, Figures and Tables, Lists, Code Blocks, Mathematics, etc. are
-covered in section [Syntax: Block
-elements](http://research.microsoft.com/en-us/um/people/daan/madoko/doc/reference.html#sec-syntax--block-elements)
-of the manual.
-
-The target length for submitted and invited papers is about eight pages.
-This length includes all figures and tables. However, because the
-Proceedings will not be printed on paper, there is no maximum limit on
-the number of pages. You are free to exceed the target length of eight
-pages.
-
-Please watch this short YouTube Video for a tutorial on how to use the system as intended.
+For the full CFD models, a grid sensitivity study and a non-dimensionalised validation study have also been considered. 
+We have benchmarked the full CFD models against the ArupFire Tunnel Fire Experiments documented in the FDS VAlidation Guide (ref). 
+The results of the validation study has not been presented here.  
 
 # THE DARTFORD TUNNEL, UK
 
+
 # MULTI-SCALE MODELLING METHOD
+## OVERVIEW OF THE MULTI-SCALE MODELLING METHOD 
+we have used FDS6.1 and the built-in HVAC feature to implement the multi-scale modelling method. 
+Briefly, multi-scale modelling method can be divided into two methods, namely the direct method and the 
+indirect method (cite my TUST).  
+
+## COMPARISON OF NUMERICAL MODELLING TO FIELD DATA
+
 ## FIRE MODELLING 
 
 ## COLD FLOW MODELLING
