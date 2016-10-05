@@ -41,7 +41,10 @@ An experiment was conducted in a 20-level building, where 120 participants were 
 # Introduction { #sec-intro }
 Staircase is the key to vertical evacuation, whether it is on the ground of multi-story buildings, high-rise buildings or underground facilities, pedestrian must use varieties of stairs ascent or decent to the ground or safety places in case of fire emergency.
 
-In the early 1960s, the behaviors and laws of evacuation on stairs have been raised people’s attention. Pauls[1], Fruin[2], Proulx[3], Frantzich[4] and Fujiyama[5] et al. conducted a comprehensive studies of the evacuation on staircase. The effects of individuals’ density, age, gender, merger, the dimensions and the inclination of the stairs on the movement speed were systematic analyzed. An increasing number of high-rise buildings and underground facilities were built or under construction due to the rapid development of modern cities. Many studies have been conducted to understand the behaviors of human on long stairs. Kretz[6] found that the ascending speeds were 0.4-0.5m/s by observing the pedestrians on long stairs outside Netherlands pavilion in Hanover World Expo. Galea[7] interviewed 245 survivors of the 911 event, obtained that the average descending speed was 0.29m/s. Peacock[8] statistically analyzed the drill video data of 8 office buildings (floor 6-62) and found that the average descending speeds on stairwell were 0.48±0.16m/s. Choi[9] conducted an evacuation experiment in a 50 levels high-rise building, in which 30 females and 30 males took part, and measured that the descending speeds of males and females were 0.83m/s and 0.74m/s, the ascending speeds were 0.66m/s and 0.48m/s respectively.
+In the early 1960s, the behaviors and laws of evacuation on stairs have been raised people’s attention. 
+Paulsen R [@Knuth:TeX], Fruin[@Fruin:TeX], Proulx[3], Frantzich[4] and Fujiyama[5] et al. conducted a comprehensive studies of the evacuation on staircase. 
+The effects of individuals’ density, age, gender, merger, the dimensions and the inclination of the stairs on the movement speed were systematic analyzed. 
+An increasing number of high-rise buildings and underground facilities were built or under construction due to the rapid development of modern cities. Many studies have been conducted to understand the behaviors of human on long stairs. Kretz[6] found that the ascending speeds were 0.4-0.5m/s by observing the pedestrians on long stairs outside Netherlands pavilion in Hanover World Expo. Galea[7] interviewed 245 survivors of the 911 event, obtained that the average descending speed was 0.29m/s. Peacock[8] statistically analyzed the drill video data of 8 office buildings (floor 6-62) and found that the average descending speeds on stairwell were 0.48±0.16m/s. Choi[9] conducted an evacuation experiment in a 50 levels high-rise building, in which 30 females and 30 males took part, and measured that the descending speeds of males and females were 0.83m/s and 0.74m/s, the ascending speeds were 0.66m/s and 0.48m/s respectively.
 
 These researches were all carried out in normal conditions. However, with the decline of personnel visibility level during evacuation caused many casualties, evacuation behavior characteristics in different visibility conditions have attracted wide attention.
 
@@ -324,7 +327,7 @@ This paper studied the individual ascent speeds of college students in China on 
 
 # BIBLIOGRAPHY AND REFERENCES
 
-
+[BIB]
 
 
 Text styling, links, sub- and super-script, footnotes and other topics
@@ -392,24 +395,6 @@ Table [#table-sample] shows an example full width table figure.
 | BIC            | 13.711  | 13.594  | 13.580  | 14.009    |
 | N              | 105.484 | 105.484 | 105.484 | 105.484   |
 |----------------|---------|---------|---------|-----------|
-~
-
-## Equations
-Standard terminology should be used in equations. If possible, keep
-equations to one column. All equations should be numbered. A definition
-of $e$ is shown in Equation [#euler]:
-
-~ Equation { #euler }
-e = \lim_{n\to\infty} \left( 1 + \frac{1}{n} \right)^n
-~
-
-Or to use &logolatex; to align equations.
-
-~ Equation { #eq-alignment; caption:"Alignment example" }
-\begin{aligned} 
- f(x)  &= a x^2+b x +c   &   g(x)  &= d x^3 \\
- f'(x) &= 2 a x +b       &   g'(x) &= 3 d x^2
-\end{aligned}
 ~
 
 # FUN CONTENT EXAMPLES
@@ -507,7 +492,6 @@ Author(s) retain all rights to submitted material. The organizers are
 granted a non-exclusive right to copy and redistribute conference
 material submitted by the author(s).
 
-[BIB]
 
 &pagebreak;
 
