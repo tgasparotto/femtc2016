@@ -1,0 +1,683 @@
+[INCLUDE=style/lncs]
+Title         : STOCHASTIC ANALYSIS OF EGRESS SIMULATIONS
+Subtitle      : 
+
+Author        : JULLIEN Quentin
+Affiliation   : Université Paris-Est, Centre Scientifique et Technique du Bâtiment (CSTB), Safety, Structures & Fire Department, Expertise, Regulatory Advice & Research Division
+Email         : quentin.jullien@cstb.fr
+
+Author        : LARDET Paul
+Affiliation   : Université Paris-Est, Centre Scientifique et Technique du Bâtiment (CSTB), Safety, Structures & Fire Department, Expertise, Regulatory Advice & Research Division
+Email         : lardet.paul@cstb.fr
+
+Bibliography  : references.bib
+Logo          : False
+Tex Header    :
+  \def\refname{&name-references;}
+name-references : REFERENCES
+
+[TITLE]
+
+~ Abstract
+The use of egress simulation models in performance-based analysis relies on the confidence in the input and output data. These data strongly depend on a large number of parameters. The undertaking study presented here focuses on the statistical aspects of these data, especially the population behavioural parameters which are the most likely to be scattered. The study proposes a method to analyse the statistical aspects of an egress simulation model. The method is based on statistical estimations of the distribution quantiles of the output parameters and can be applied to stochastic simulations results, in order to provide quantitative informations on the key parameters dispersion, such as RSET. It also gives a justification to the required number of simulations and input parameters precision to ensure a relevant output precision level. It gives access to quantitative criteria to compare experimental and numerical data. This method will be applied to analyse case studies simulated with BuildingExodus.
+~
+
+# INTRODUCTION
+
+The practice of the egress engineering leans on digital modelings. Their purpose
+is to determine the time put by last occupant to evacuate a building in accidental
+situation or not. This time is called Required Safe Egress Time (RSET) during
+the present document. The diverse phenomena bounded to the human behavior
+occurring during an evacuation highlight they are not determinist. Indeed, the
+intrinsic behavior of a person, for example its response time before putting in
+movement, can be scattered from a situation to an other one.
+
+Furthermore, from a point of view modelling, we do not know in a explicit way
+the distribution of population and we create a panel which we consider
+representative and envelope of the situation who can be scattered too. So, the fact that
+the input data of the simulation are subjected to a statistical
+spread implies a statistical spread on the out and particularly on the
+RSET. But, what we wish at first sight of a egress simulation is
+it supplies a RSET which insures compatible
+tenability conditions with the evacuation and for 100 % of the cases. So, it seems
+necessary to use a statistical approach to explore the field of possibilities
+for the RSET and do an adequate number of simulation. The numerical tool is
+suited to it and allows to determine a representative RSET in which we can
+trust.
+
+The numerical tool used within the framework of this document is BuildingExodus
+v6.2. It allows by means of sophisticated sub-models to take into
+account interactions type like occupant-occupant, occupant-fire and occupant-building.
+So, it is possible to do egress simulations by taking into
+account in a individual way the occupants. That is to say, that each occupant
+is identifiable and has its own characteristics. This is essential to the study
+presented here. BuildingExodus is also able to generate and process a large number of
+simulations needed to conduct this study.
+
+The statistical analysis method set up here requires some precautions.
+First, it is essential to know the parameters (response time, walking speed, interactions
+between people), which the dispersion may affect the desired results. The
+knowledge of their quantitative statistical distribution is essential. However,
+when we observe that exists in the literature, the results are not often presented
+in form of statistical distribution. Usually there is a range with a minimum
+value, a maximum value and a mean value. Thus, in this paper, we use only occupants
+whose parameters are fixed or variable between two bounds and coming from
+a uniform law to determine the influence of a particular parameter.
+
+The statistical analysis method setting up is based on statistical estimation
+of the output parameters quantile distribution (RSET in this document).
+The aim of this method is to provide quantitative elements
+in particular the statistical distribution of RSET and also validate the number
+of simulations done for its determination. We will take an interest in particular in the confidence
+interval for the 95th percentile. Thus, this paper presents the implementation off the statistical analysis method,
+its application on simple test cases and results of its
+application.
+
+# STATISTICAL ANALYSIS METHOD : IMPLEMENTATION AND STATISTICAL ELEMENTS
+
+To introduce the statistical analysis method we consider a sample of n realizations
+of a random variable that follows a normal law distribution. We draw a
+sample of 60 achievements. In the following chapters, the variable considered
+will be the RSET.
+
+Then, we build a confidence interval I~p~ for each order quantile &alpha; from the sample of size
+n = 60 by choosing a level of confidence p 90%. The confidence interval
+of quantile reflects the fact that the real value of the distribution function for
+this quantile is in this interval associated with a confidence level of 90% here.
+This confidence interval is expressed as:
+
+~ Equation { #eq-alignment; caption:"Alignment example" }
+\begin{aligned} 
+ Ip  &= [F^-1( &alpha; +a x^2+b x +c   &   g(x)  &= d x^3
+\end{aligned}
+~
+
+
+with: 
+
+* F the empirical distribution function,
+* c the quantile (1-p/2) of the normal law distribution. c is 1.645 to p = 90%.
+
+The distribution function is said empirical as opposed to the real distribution
+function. In fact, F is built on the achievements and is not the distribution function
+whose equation is unknown in the case of the random variable is RSET.
+
+Figure 3 1 shows the random variable realizations ranked in ascending order
+constituting the empirical distribution function as well as lower and upper
+bounds of each percentile confidence intervals.
+
+
+Figure [#fig-smokeview] in Section [#sec-intro] shows an image from an
+older version of Smokeview. Note that you can drag&drop images into the
+editor pane to include them in the document, and similarly with bibtex
+files, latex style files, etc.
+
+~ Figure { #fig-smokeview; caption:"Illustration of placement of figure and caption. (use the `.wide` class for wide figure)."}
+![fig3-1]
+~
+[fig3-1]: images/fig3-1q.JPG "fig3-1" { width:auto; max-width:90% }
+
+
+
+
+
+
+
+
+
+
+This example highlights the problems related to extreme values of a random
+variable.
+
+On the one hand, a random variable can, not show a theoretical maximum. This is the case
+of this simplistic example. It is also true in the general case of an egress engineering study,
+where the random variable of interest is the RSET.
+
+On the other hand, even in the case where the maximum value exists, the
+finite size of the samples did not allow to access to this maximum value. Only are
+available percentiles even greater than the sample size grows.
+
+Furthermore, the width of the confidence interval decreases when the size of
+the sample increases.
+
+Consequently, during a stochastic study, the required number of draws is set
+by:
+
+* the desired precision, which requires a gap width of confidence,
+* the order of the desired quantile, which imposes a number of prints.
+
+# HYPOTHESIS OF THE MODEL
+
+The numerical tool used in this study is BuildingExodus. However, statistical processing
+can be performed with any simulator.
+
+We remember that BuildingExodus is based on a discretization of space in nodes
+of 50 cm x 50 cm interconnected. The connection model is the one of Moore as shown in Figure 4 1.
+
+XXX
+
+The test case is a room, square with sides of 16 m and 4 exits distributed on
+each side (Figure 4 2). An occupant occupies an area of 0.25 m² (0.5 m x 0.5 m)
+or a node. Two occupants can not coexist on the same node. The exits measure 3 m of width,
+and their flow rate is 2.0 occupant/m/s.
+
+XXX
+
+Concerning population, some attributes are arbitrarily fixed and others are variable
+depending on test cases:
+
+* occupants are all men,
+* occupants have identical leaderships (in this case 10). This parameter affects how conflicts are resolved
+when two occupants want to occupy the same node which is impossible.
+BuildingExodus applies by default to the occupants a conflict resolution time of 0.8
+s and 1.5 s before one of them occupies the node point of contention. According
+to the test cases, conflict resolution time can be set at the average value of the
+interval, that is to say 1.15 s.
+* occupant's patience is fixed to 10 s. This implies that the occupants
+are willing to remain static in a queue for 10 seconds before attempting
+to change direction.
+* occupants are all valid,
+* their speed is 1.2 m/s,
+* the response time is set at 15 s or variable between 0 and 30 s depending on the
+test case. The response time in this study is the delay for
+the occupants begin to move toward the exit.
+* occupants act independently of each other, that is to say that if an occupant begins
+to move toward the exit it will not make another occupant in movement before its response time is elapsed.
+
+This document do not present the attributes specifically related to fire such as incapacitating
+concentrations of toxic gases (HCl, HBr, HF, SO~2~, NO~2~, CH~2~CHO, …) because
+they have no influence on the cases treated.
+
+Regarding the choice of varying parameter values between two bounds,
+it is carried out with a draw on a uniform law in the context of this study.
+
+The most advanced behavioral options are left at their default values (e.g:
+occupants are aware of all exits). The objective of the occupants is to reach
+the nearest exit from their initial position.
+
+Finally, when several simulations in large numbers for the same
+test cases are performed, they are not used again from one case to another. That is to say that if
+100 and 1,000 achievements are performed, the first 100 are not part of the following
+1,000. The draw is completely redone every time.
+
+# STUDY
+
+## Use of the statistical analysis method
+
+In this reference test case we draw 100 times then 1,000 times between 1 and
+1,000 people that were randomly positioned in the room. The Figure 5. Figure 5.
+1 and 2 show the distribution functions as well as the lower and upper bounds
+of the confidence intervals for 100 draws, respectively 1,000 draws. The selected
+level of confidence is 90% (we keep this level of confidence in the rest of the
+document).
+
+XXX
+
+XXX
+
+Note that the number of draws is too low to reach the theoretical minimum
+RSET corresponding to a single occupant positioned in front of an exit. Indeed,
+we could expect a RSET close to 15 s in this case (RSET = response time + travel
+time).
+
+In accordance with what has been announced above, it is observed that:
+* the confidence interval decreases with increase of the draw number from 8.1 s on average for
+100 draws to 2.5s on average for 1,000 draws,
+* Extreme percentiles have a confidence
+interval of which one bound is infinite for 100 and 1,000 draws.
+
+Thus, it is not possible to statistically determine a RSET implying that
+all occupants have evacuated in 100% of cases. This equals to the impossibility
+to obtain a max RSET. In addition, in the case where we determine a RSET
+max, we might question the relevance of such a value that would be drawn from a
+disaster scenario and so wold be very severe in a more realistic study case. It seems preferable
+to retain the associated RSET 95th percentile value of which we can estimate an
+relevant confidence interval with a limited number of draws. Table 5 1 shows
+the confidence intervals associated with the 95th percentile for 100, 200, 500,
+1,000 and 5,000 draws. This choice implies that in 95% of cases all occupants have
+evacuated with a probability of 90%. It is also arbitrary. Indeed, it is quite
+possible to select another percentile associated with another level of confidence 
+according to the desired accuracy on the RSET.
+
+XXX
+
+Figure 5 3 shows the width of the confidence interval of the 95th percentile
+according to the number of simulation. There are a number of simulations for
+which the width of the confidence interval is sufficiently low to be acceptable.
+Moreover, beyond this number an increase of the number of simulation does not provide
+significant accuracy (see Table 5 2) while it increases the computing time
+considerably. Indeed, the simulations are all performed in very short times,
+despite the fact that the population can vary from 1 to 1,000 occupants. So we
+deduce that the time spent to perform the simulations is proportional
+to the number of simulations (simulations are achieved in a sequentially way). So for all
+these reasons, 1,000 simulations seem to be sufficient in the case studied here.
+
+In conclusion, the application of statistical analysis method evaluates quantitatively
+the number of simulations that seems most relevant to carry out a study.
+
+XXX
+
+XXX
+
+## Complementary analysis
+
+It is observed that at least three separate evacuation schemes exist according to the
+number of occupants (see Figure 5 Figure 1 and 5 2) the Table 5 3 gives the
+correspondence with the RSET obtained. These three schemes correspond to three
+density ranges of people highlighting the influence of this one on the RSET.
+Indeed, the density of people influences on congestion time and average speed of
+the occupants which has a direct influence on the RSET.
+
+XXX
+
+The Figure 5. Figure 5. 4 and 5 show the dispersion of the number of occupants
+according to RSET for 100 and 1,000 simulations. A greater dispersion is
+observed for the scheme n°1. This implies that for this scheme, it is not the
+number of occupant who controls the RSET but the distance from the last occupant
+of the exist. This shows the interest of the approach developed in this
+document, which provides additional elements of understanding of evacuation
+behavior.
+
+XXX
+
+XXX
+
+Applying the method to the reference test case shows that there is very little
+simulations with the same number of occupant. This implies that we can not
+quantify the influence of position and conflict resolution time on the RSET at
+this stage of the study. This is the topic of the next chapter.
+
+# ANALYSIS OF THE PARAMETERS' STATISTICAL INFLUENCE
+
+In this part, we look at the influence of certain parameters on the results of the
+reference test case for the three schemes previously identified and at the quantification
+of this impact using the statistical analysis method. Table 6 1 shows the
+characteristics of each test case.
+
+XXX
+
+In each case there is provided 3 sets of simulations. Each of these series take
+into account a fixed number of people, corresponding to the median RSET of each
+scheme identified above.
+
+Table 6 2 shows the characteristics of these simulations.
+
+XXX
+
+## Test case n°1
+We run 1,000 times each of these 3 selected simulations by keeping
+the same initial positions and the same occupants. Figure 6 1, 
+6 2 and 6 3 present the distribution functions as
+well as the lower and upper bounds of the confidence intervals. We observe that
+the empirical distribution functions are not linear. Yet, the only
+source of dispersal is bounded to the conflict resolution time and to the effect of history. 
+It involves that the variability
+of the conflict resolution time and the effects of histories
+have an influence on the RSET.
+
+XXX
+
+XXX
+
+XXX
+
+In a synthetic way the table 6 3 presents for three simulations:
+* the confidence interval of the 95th percentile called I~p95%~ afterward,
+* the width of this one called L~Ip95%~ (see Figure 6 4),
+* the interval between the lower bound of the 5th percentile and the upper bound of the 95th percentile called I~p5-95%~,
+* the width of this one called L~Ip5-95%~ (see Figure 6 4),
+* the ratio between the interval described above and the 50th percentile called L~Ip5-95%~/q~50%~.
+
+These notations are used during the document.
+
+XXX
+
+XXX
+
+We observe that there is a certain variability of the RSET even when the
+starting positions of the occupants are fixed. This variability is due to the variability
+of the conflict resolution time as well as to the effect
+of history produced by the various collisions. It is coherent with the fact
+that L~Ip95%~ is higher for the scheme including a bigger density of people. We
+also observe the same phenomenon for the width of I~p5-95%~. We call back
+that the choice of the 95th percentile and by extension the one of the 5th percentile
+depends on objectives of studies.
+
+## Test case n°2
+
+For this second test case the conflict resolution time is fixed to the average value of the
+interval so 1.15 s in order to differentiate the effect of the conflict resolution time variability
+of the history effect. We run again 1,000 times each of the three simulations.
+
+In this case too, the distribution functions are not linear despite the fact that
+conflict resolution time is fixed to 1.15 s. We deduce that history effects
+are nonlinear witch is consistent with what we might suppose. In addition, this implies that the
+distribution functions of test case 3 and 4 will not be linear. Synthetically Table
+6 4 presents I~p95%~, L~Ip95%~, I~p5%-95%~, L~Ip5-95%~ and L~Ip5%-95%~/q~50%~ for
+the three simulations and compared to those of the test case n°1. The widths of
+intervals are included in Figure 6 5. We deduce that the fix of conflict resolution
+time changes only little results. Thus, the vast majority of the variability comes
+from the history effect and not from the value of conflict resolution time which seems
+logical given the low variability of this one.
+
+XXX
+
+XXX
+
+## Test case n°3
+For this third test case we take again the values by default of the software
+for the conflict resolution time and we draw randomly
+the position of the people. We make 1,000 times each of these 3 simulations.
+
+In a synthetic way the Table 6 5 presents I~p95%~, L~Ip95%~, I~p5%-95%~, L~Ip5-95%~ and L~Ip5%-95%~/q~50%~
+for three simulations and compares them
+to those of the test case n°1. The widths of interval are included
+in Figure 6 6. We deduct from it that the position has more influence on
+the low and the average densities of population than on a strong density
+what is in accordance with what we could wait.
+
+XXX
+
+XXX
+
+## Test case n°4
+In this fourth and final test case response time varies between 0 and 30 s for
+the occupants (draw according to a uniform law). We retain the default value for conflict
+resolution time and vary the position of the people. We run 1,000 times
+each of these three simulations.
+
+Synthetically Table 6 6 shows I~p95%~, L~Ip95%~, I~p5%-95%~, L~Ip5-95%~ and L~Ip5%-95%~/q~50%~
+for the three simulations and compared to those of the test case
+n°3. The widths of intervals are included in Figure 6 7. We conclude that the
+variability in response time affects the RSET which is logical. It is also observed
+that the RSET min increases for scheme n°1 when the variability is added to the
+response time. It is possible that on the 1,000 achievements few extreme cases
+were drawn.
+
+XXX
+
+XXX
+
+# SYNTHESIS
+The application of this statistical analysis method based on the quantile distribution has allowed:
+
+* to assess the number of simulations to perform to get a
+confidence interval width in line with the desired accuracy or 1,000 simulations
+in this document,
+* to better understand the phenomena occurring during
+an evacuation such as the existence of different evacuation schemes during this
+study,
+* to show the nonlinear nature of the effects of the input parameters on the
+RSET which are in this case: conflict resolution time, the position of occupants,
+their number and response time,
+* to estimate the influence on the RSET of the
+dispersion of the previously parameters mentioned above in a quantitative way for the test cases
+shown in this study and particularly in using I~p95%~ and I~p5%-95%).
+
+This last point is particularly important. It allows to do more reliable studies
+thereafter and informs on which parameters should concentrate research efforts
+including the test campaigns.
+
+Table 7 1 summarizes in a quantitative way the influences of different parameters tested.
+
+XXX
+
+Of course, the results obtained in this study are preliminary results with vocation of illustration.
+They need to be extended to more complex geometries and most important parameters dispersions
+and non uniforms.
+
+# CONCLUSION
+
+In this document, we presented the statistical analysis method used and its application
+to several test cases. The aim was firstly to interpret the influence of
+variability of an input parameter to an output parameter: the RSET and secondly
+to quantify the number of simulations required to make to have a short confidence interval.
+This objective is reached on the test cases presented.
+Moreover, we have also obtained information allowing on one hand to highlight some
+physical phenomena as the existence of different evacuation schemes depending on
+the density of people and on the other hand to claim that the distribution functions are
+not linear despite the fact that the input parameters are drawn to a uniform
+law or fixed. Finally, despite the fact it is impossible to statistically determine a
+max RSET the method can provide a representative RSET linked to a confidence
+interval.
+
+There is a real interest in using this method, but there is still work because
+this method is still in development and more complex geometries
+and cross interactions between parameters will need to be study. Regarding the cross interactions, it
+may be interesting to implement experimental designs. Indeed, the test cases
+in this study have consisted in the study of the influence of few variable parameters
+simultaneously. But, the reality has a part of variability more significant and it is
+still difficult to grasp. This type of approach shows interests for future
+readjustments on evacuation trials.
+
+The need for a bibliography work and evacuation test was also highlighted,
+in order to obtain reliable quantitative data on the input parameters of the
+evacuation simulations. Finally, it would be interesting to industrialize the use
+of this analysis method, relying on tools dedicated to stochastic analysis. Comparisons
+between simulation tools also allow to precisely identify the behavioral
+phenomena occurring during an evacuation, separating the internal
+models influence of each other.
+
+
+
+
+
+
+[editor]: https://www.madoko.net/editor.html "Madoko.net Editor"
+[reference-manual]: http://research.microsoft.com/en-us/um/people/daan/madoko/doc/reference.html "Madoko Reference Manual"
+[femtc2016]: https://github.com/thunderheadeng/femtc2016
+[emaillink]: mailto:conference@thunderheadeng.com "conference@thunderheadeng.com"
+
+# GENERAL INSTRUCTIONS { #sec-intro }
+You are encouraged to use the [Madoko.net Editor][editor] while using
+the [Madoko Reference Manual][reference-manual] to edit/commit your
+documents into the 'authoring' branch of the [femtc2016] GitHub repository. 
+More information about this method of contribution will be covered below.
+
+Text styling, links, sub- and super-script, footnotes and other topics
+are covered in section [Syntax: Inline
+elements](http://research.microsoft.com/en-us/um/people/daan/madoko/doc/reference.html#sec-syntax--inline-elements)
+of the manual.
+
+Headings, Figures and Tables, Lists, Code Blocks, Mathematics, etc. are
+covered in section [Syntax: Block
+elements](http://research.microsoft.com/en-us/um/people/daan/madoko/doc/reference.html#sec-syntax--block-elements)
+of the manual.
+
+The target length for submitted and invited papers is about eight pages.
+This length includes all figures and tables. However, because the
+Proceedings will not be printed on paper, there is no maximum limit on
+the number of pages. You are free to exceed the target length of eight
+pages.
+
+Please watch this short YouTube Video for a tutorial on how to use the system as intended.
+
+# MAIN HEADINGS LIKE THIS STYLE
+Main Headings are all upper case letters and underlined. In Madoko, a
+Single '#' symbol at the start of the line, followed by a space and then
+the heading text.
+
+## Subheadings Like This Style
+Subheadings within sections follow the same format as section titles, but
+with upper and lower case. In Madoko, a Double '#' symbol at the start of
+the line, followed by a space and then the heading text.
+
+### Subsubheadings like this style
+Subsubheadings have no underline, and only the first letter capitalized.
+In Madoko, a Triple '#' symbol at the start of the line, followed by a
+space and then the heading text.
+
+# FIGURES, TABLES, AND EQUATIONS
+Original drawings and photos may be included in your paper as figures.
+Diagrams may be in color.
+
+Figures and tables should immediately follow first mention of them in the
+text and can be placed in one column, or in the case of wider figures,
+can cover two columns (but only at the top or bottom of the page). The
+caption should start with either the word “figure” spelled out or
+abbreviated, followed by the figure number (i.e., Figure 1 or Fig. 1).
+The figure caption should be followed by a single line of space before
+the text resumes.
+
+## Figures
+Figure [#fig-smokeview] in Section [#sec-intro] shows an image from an
+older version of Smokeview. Note that you can drag&drop images into the
+editor pane to include them in the document, and similarly with bibtex
+files, latex style files, etc.
+
+~ Figure { #fig-smokeview; caption:"Illustration of placement of figure and caption. (use the `.wide` class for wide figure)."}
+![Ex1_0]
+~
+[Ex1_0]: images/Ex1_0.png "Ex1_0" { width:auto; max-width:90% }
+
+~ Note
+Images larger than about 1Mb in size will be rejected by the Madoko.net server.
+~
+
+## Tables
+Table [#table-sample] shows an example full width table figure.
+
+~ TableFigure { #table-sample; caption: "Modelle mit unterschiedlich geschätztem baseline hazard"; .wide }
+|                | $c(t)$                               ||||
+|                |---------|---------|---------|-----------|
+|                | (A0)    | (A1)    | (A2)    | (A3)      |
+|                | ohne    | Log     | Polynom | Stückweise|
+|                |         |         |         | konstant  |
+|:---------------|:-------:|:-------:|:-------:|:---------:|
+| Log likelihood | -6.798  | -6.733  | -6.715  | -6.686    |
+| Pseudeo $R^{2}$| 0,048   | 0,057   | 0,059   | -         |
+| AIC            | 13.615  | 13.489  | 13.456  | 13.483    |
+| BIC            | 13.711  | 13.594  | 13.580  | 14.009    |
+| N              | 105.484 | 105.484 | 105.484 | 105.484   |
+|----------------|---------|---------|---------|-----------|
+~
+
+## Equations
+Standard terminology should be used in equations. If possible, keep
+equations to one column. All equations should be numbered. A definition
+of $e$ is shown in Equation [#euler]:
+
+~ Equation { #euler }
+e = \lim_{n\to\infty} \left( 1 + \frac{1}{n} \right)^n
+~
+
+Or to use &logolatex; to align equations.
+
+~ Equation { #eq-alignment; caption:"Alignment example" }
+\begin{aligned} 
+ f(x)  &= a x^2+b x +c   &   g(x)  &= d x^3 \\
+ f'(x) &= 2 a x +b       &   g'(x) &= 3 d x^2
+\end{aligned}
+~
+
+# FUN CONTENT EXAMPLES
+Let's program some JavaScript:
+``` javascript
+function hello() {
+  return "hello world!"
+}
+```
+Here is a footnote[^fn] reference.
+[^fn]: This is the content of the example footnote. 
+    You can continue a footnote by indenting content.
+    And notice the back link.
+
+# BIBLIOGRAPHY AND REFERENCES
+When references are used in the text, tie them to an alphabetical (by
+principal author) list of references to be included as the last item of
+your paper. The format commonly used in scientific literature follows:
+
+Smith, J. S., Bloggs, R. T. and Jones, E. R. (1974), "Magnetic Anomalies
+in Geothermal Systems", Journal of Fluid Mechanics, 254, 73-79
+
+Leslie Lamport, LaTeX: A Document Preparation System (2nd Edition), Addison-Wesley, 1994
+
+When using Madoko, edit the content of the .bib file in the document
+folder, and use the reference methods as shown in the [Bibliography and
+Citations
+Section](http://research.microsoft.com/en-us/um/people/daan/madoko/doc/reference.html#sec-bib)
+of the Madoko Manual.
+
+A bibliography file consists of all your references in the BibTeX format, for example:
+
+    @BOOK{ Knuth:TeX,  
+        author   = "Knuth, Donald E.",  
+        title    = "The {\TeX} book",  
+        publisher= "Addison-Wesley",  
+        year     = 1984  
+    }
+
+Entries in the bibliography files can now be referenced using semi-colon
+separated references, for example:
+``` Markdown 
+Read about LaTeX and TeX [@Knuth:TeX; @Lamport:LaTeX].
+```
+Results in: Read about LaTeX and TeX [@Knuth:TeX; @Lamport:LaTeX].
+
+Please include full title of journal articles or other references,
+journal, volume, date, pages. There is a nice [table on
+Wikipedia](https://en.wikibooks.org/wiki/LaTeX/Bibliography_Management#BibTeX)
+that shows all of the different data fields for the BibTeX file.
+
+# PAPER DEADLINE
+Your paper, in final form, must be received by October 15th, 2016. The
+best way to edit and submit is to use the Madoko [editor] to edit your
+document in the 'authoring' branch of the GitHub [femtc2016] repository.
+If you choose to use some other document format and editing tool, PDF
+format is preferred, but ODT, DOC, or DOCX formats are acceptable. Please
+e-mail the files to [conference@thunderheadeng.com][emaillink].
+
+# PRESENTATION
+Each author must present his/her paper within the allotted time, allowing
+for some minutes of open discussion. The session chair is responsible for
+keeping authors within their time limit, in order to ensure that each
+author has enough time for their presentation. When preparing your
+presentation slides, make sure they are clear and large enough so that
+your audience can read them from as far as 80 feet away.
+
+All presentations will be made using the computer projector available in
+the conference room. We will not have overhead projectors or slide
+projectors in the meeting rooms.
+
+Your presentation, in final form, must be received by **October 15th,
+2016**. A final commit of the files to the GitHub repository is
+preferred. Once the final draft is complete and reviewed it will be
+merged into the master branch of the repository. If you decide to use
+some other tool for creating your presentation, PDF format is preferred,
+but ODP, PPT, or PPTX formats are acceptable. Please e-mail the files
+to [conference@thunderheadeng.com][emaillink].
+
+All presentations will be pre-loaded on the computers that are present.
+Please note that this approach will make it necessary for us to receive
+the presentation files prior to the conference. If you have a different
+software requirement, it should still be possible for you to attach your
+own computer to the projector if you bring it with you. This is not
+optimal, as it takes time and slows down the session.
+
+# CONFERENCE CONTENT DISTRIBUTION
+The papers and presentation materials will be made available online
+during and after the conference. In addition, the organizers are planning
+to may broadcast live presentations online during the event. The papers,
+presentations, and videos will be archived and made available on the web
+after the conference.
+
+Author(s) retain all rights to submitted material. The organizers are
+granted a non-exclusive right to copy and redistribute conference
+material submitted by the author(s).
+
+[BIB]
+
+&pagebreak;
+
+# An appendix { @h1:"A" }
+"All the same, I should like it all plain and clear," said he
+obstinately, putting on his business manner (usually reserved for people
+who tried to borrow money off him), and doing his best to appear wise and
+prudent and professional and live up to Gandalf's recommendation. "Also I
+should like to know about risks, out-of-pocket expenses, time required
+and remuneration, and so forth" -- by which he meant: "What am I going to
+get out of it? and am I going to come back alive?"
+
+# Conclusion
+If you have any questions concerning your paper and/or the Conference,
+please email us at [conference@thunderheadeng.com][emaillink].
