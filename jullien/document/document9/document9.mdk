@@ -138,7 +138,7 @@ The numerical tool used in this study is BuildingExodus. However, statistical pr
 can be performed with any simulator.
 
 We remember that BuildingExodus is based on a discretization of space in nodes
-of 50 cm x 50 cm interconnected. The connection model is the one of Moore as shown on Figure [#fig4_1].
+of 50 cm x 50 cm interconnected. The connection model is the one of Moore as shown on figure [#fig4_1].
 
 ~ Figure { #fig4_1; caption:"Nodes connectivity under BuildingExodus"}
 ![fig4_1]
@@ -146,7 +146,7 @@ of 50 cm x 50 cm interconnected. The connection model is the one of Moore as sho
 [fig4_1]: images/fig4_1.PNG "fig4_1" { width:auto; max-width:90% }
 
 The test case is a room, square with sides of 16 m and 4 exits distributed on
-each side (Figure [#fig4_2]). An occupant occupies an area of 0.25 m² (0.5 m x 0.5 m)
+each side (figure [#fig4_2]). An occupant occupies an area of 0.25 m² (0.5 m x 0.5 m)
 or a node. Two occupants can not coexist on the same node. The exits measure 3 m of width,
 and their flow rate is 2.0 occupant/m/s.
 
@@ -197,7 +197,7 @@ test cases are performed, they are not used again from one case to another. That
 ## Use of the statistical analysis method
 
 In this reference test case we draw 100 times then 1,000 times between 1 and
-1,000 people that were randomly positioned in the room. The figure [#fig5_1] and [#fig5_2]
+1,000 people that were randomly positioned in the room. Figures [#fig5_1] and [#fig5_2]
 show the distribution functions as well as the lower and upper bounds
 of the confidence intervals for 100 draws, respectively 1,000 draws. The selected
 level of confidence is 90% (we keep this level of confidence in the rest of the
@@ -311,7 +311,7 @@ the occupants which has a direct influence on the RSET.
 |                              |                         |                         |                         |
 ~
 
-The Figure [#fig5_4] and [#fig5_5] show the dispersion of the number of occupants
+The figures [#fig5_4] and [#fig5_5] show the dispersion of the number of occupants
 according to RSET for 100 and 1,000 simulations. A greater dispersion is
 observed for the scheme n°1. This implies that for this scheme, it is not the
 number of occupant who controls the RSET but the distance from the last occupant
@@ -398,9 +398,9 @@ have an influence on the RSET.
 In a synthetic way the table [#table-6] presents for three simulations:
 
 * the confidence interval of the 95th percentile called I~p95%~ afterward,
-* the width of this one called L~Ip95%~ (see Figure [#fig6_4]),
+* the width of this one called L~Ip95%~ (see figure [#fig6_4]),
 * the interval between the lower bound of the 5th percentile and the upper bound of the 95th percentile called I~p5-95%~,
-* the width of this one called L~yIp5-95%~ (see Figure [#fig6_4]),
+* the width of this one called L~yIp5-95%~ (see figure [#fig6_4]),
 * the ratio between the interval described above and the 50th percentile called L~Ip5-95%~/q~50%~.
 
 These notations are used during the document.
@@ -448,7 +448,7 @@ are nonlinear witch is consistent with what we might suppose. In addition, this 
 distribution functions of test case 3 and 4 will not be linear. Synthetically Table
 [#table-7] presents I~p95%~, L~Ip95%~, I~p5%-95%~, L~Ip5-95%~ and L~Ip5%-95%~/q~50%~ for
 the three simulations and compared to those of the test case n°1. The widths of
-intervals are included in Figure [#fig6_5]. We deduce that the fix of conflict resolution
+intervals are included in figure [#fig6_5]. We deduce that the fix of conflict resolution
 time changes only little results. Thus, the vast majority of the variability comes
 from the history effect and not from the value of conflict resolution time which seems
 logical given the low variability of this one.
@@ -484,7 +484,7 @@ the position of the people. We make 1,000 times each of these 3 simulations.
 In a synthetic way the Table [#table-8] presents I~p95%~, L~Ip95%~, I~p5%-95%~, L~Ip5-95%~ and L~Ip5%-95%~/q~50%~
 for three simulations and compares them
 to those of the test case n°1. The widths of interval are included
-in Figure [#fig6_6]. We deduct from it that the position has more influence on
+in figure [#fig6_6]. We deduct from it that the position has more influence on
 the low and the average densities of population than on a strong density
 what is in accordance with what we could wait.
 
@@ -518,7 +518,7 @@ each of these three simulations.
 
 Synthetically Table [#table-9] shows I~p95%~, L~Ip95%~, I~p5%-95%~, L~Ip5-95%~ and L~Ip5%-95%~/q~50%~
 for the three simulations and compared to those of the test case
-n°3. The widths of intervals are included in Figure [#fig6_7]. We conclude that the
+n°3. The widths of intervals are included in figure [#fig6_7]. We conclude that the
 variability in response time affects the RSET which is logical. It is also observed
 that the RSET min increases for scheme n°1 when the variability is added to the
 response time. It is possible that on the 1,000 achievements few extreme cases
