@@ -346,8 +346,8 @@ It can be seen that males’ and females’ cumulative average speeds were gradu
 and not changed with the floor in Condition 3 and Condition 4.
 
 ~ Center
-![Firgue11 a]![Firgue11 b]
-[Firgue11 a]: images/Firgue11-a.png "Firgue11 a" { width:45%; max-width:90% }
+![Figure11.(a)]![Firgue11 b]
+[Figure11.(a)]: images/Figure11.(a).png "Figure11.(a)" { width:45%; max-width:90% }
 [Firgue11 b]: images/Firgue11-b.png "Firgue11 b" { width:45%; max-width:90% }
 Figure11. The cumulative average velocity on each floor in Condition 1 (The error bar illustrates the uncertainty of the mean ascent velocity): a Male; b Female.
 
