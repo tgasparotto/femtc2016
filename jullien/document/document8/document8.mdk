@@ -22,7 +22,7 @@ name-references : REFERENCES
 The use of egress simulation models in performance-based analysis relies on the confidence in the input and output data. These data strongly depend on a large number of parameters. The undertaking study presented here focuses on the statistical aspects of these data, especially the population behavioural parameters which are the most likely to be scattered. The study proposes a method to analyse the statistical aspects of an egress simulation model. The method is based on statistical estimations of the distribution quantiles of the output parameters and can be applied to stochastic simulations results, in order to provide quantitative informations on the key parameters dispersion, such as RSET. It also gives a justification to the required number of simulations and input parameters precision to ensure a relevant output precision level. It gives access to quantitative criteria to compare experimental and numerical data. This method will be applied to analyse case studies simulated with BuildingExodus.
 ~
 
-# INTRODUCTION
+# INTRODUCTION { #sec-intro }
 
 The practice of the egress engineering leans on digital modelings. Their purpose
 is to determine the time put by last occupant to evacuate a building in accidental
@@ -73,7 +73,7 @@ interval for the 95th percentile. Thus, this paper presents the implementation o
 its application on simple test cases and results of its
 application.
 
-# STATISTICAL ANALYSIS METHOD : IMPLEMENTATION AND STATISTICAL ELEMENTS
+# STATISTICAL ANALYSIS METHOD : IMPLEMENTATION AND STATISTICAL ELEMENTS { #sec-statistical }
 
 To introduce the statistical analysis method we consider a sample of n realizations
 of a random variable that follows a normal law distribution. We draw a
@@ -102,27 +102,15 @@ The distribution function is said empirical as opposed to the real distribution
 function. In fact, F is built on the achievements and is not the distribution function
 whose equation is unknown in the case of the random variable is RSET.
 
-Figure 3 1 shows the random variable realizations ranked in ascending order
+Figure [#fig3_1] in in Section [#sec-statistical] shows the random variable realizations ranked
+in ascending order
 constituting the empirical distribution function as well as lower and upper
 bounds of each percentile confidence intervals.
 
-
-Figure [#fig-smokeview] in Section [#sec-intro] shows an image from an
-older version of Smokeview. Note that you can drag&drop images into the
-editor pane to include them in the document, and similarly with bibtex
-files, latex style files, etc.
-
-~ Figure { #fig-smokeview; caption:"Illustration of placement of figure and caption. (use the `.wide` class for wide figure)."}
-![fig3-1final]
+~ Figure { #fig3_1; caption:"Empirical distribution function of the random variable, lower and upper bounds of the confidence interval and real distribution function"}
+![fig3_1]
 ~
-[fig3-1final]: images/fig3_1.PNG "fig3-1final" { width:auto; max-width:90% }
-
-
-
-
-
-
-
+[fig3_1]: images/fig3_1.PNG "fig3_1" { width:auto; max-width:90% }
 
 This example highlights the problems related to extreme values of a random
 variable.
@@ -152,14 +140,20 @@ can be performed with any simulator.
 We remember that BuildingExodus is based on a discretization of space in nodes
 of 50 cm x 50 cm interconnected. The connection model is the one of Moore as shown in Figure 4 1.
 
-XXX
+~ Figure { #fig-smokeview; caption:"Nodes connectivity under BuildingExodus"}
+![fig4_1]
+~
+[fig4_1]: images/fig4_1.PNG "fig4_1" { width:auto; max-width:90% }
 
 The test case is a room, square with sides of 16 m and 4 exits distributed on
 each side (Figure 4 2). An occupant occupies an area of 0.25 m² (0.5 m x 0.5 m)
 or a node. Two occupants can not coexist on the same node. The exits measure 3 m of width,
 and their flow rate is 2.0 occupant/m/s.
 
-XXX
+~ Figure { #fig-smokeview; caption:"Test case geometry"}
+![fig4_2]
+~
+[fig4_2]: images/fig4_2.PNG "fig4_2" { width:auto; max-width:90% }
 
 Concerning population, some attributes are arbitrarily fixed and others are variable
 depending on test cases:
@@ -209,9 +203,15 @@ of the confidence intervals for 100 draws, respectively 1,000 draws. The selecte
 level of confidence is 90% (we keep this level of confidence in the rest of the
 document).
 
-XXX
+~ Figure { #fig-smokeview; caption:"Distribution function for 100 draws and lower and upper bounds of the confidence interval (reference test case)"}
+![fig5_1]
+~
+[fig5_1]: images/fig5_1.PNG "fig5_1" { width:auto; max-width:90% }
 
-XXX
+~ Figure { #fig-smokeview; caption:"Distribution function for 1,000 draws and lower and upper bounds of the confidence interval (reference test case)"}
+![fig5_2]
+~
+[fig5_2]: images/fig5_2.PNG "fig5_2" { width:auto; max-width:90% }
 
 Note that the number of draws is too low to reach the theoretical minimum
 RSET corresponding to a single occupant positioned in front of an exit. Indeed,
@@ -275,7 +275,10 @@ these reasons, 1,000 simulations seem to be sufficient in the case studied here.
 In conclusion, the application of statistical analysis method evaluates quantitatively
 the number of simulations that seems most relevant to carry out a study.
 
-XXX
+~ Figure { #fig-smokeview; caption:"Width of the confidence interval according to the number of simulations"}
+![fig5_3]
+~
+[fig5_3]: images/fig5_3.PNG "fig5_3" { width:auto; max-width:90% }
 
 ~ TableFigure { #table-sample; caption: "Decrease of the width of the confidence interval according to the number of simulations"; .wide }
 |                  |--------------------------------------------------|-----|
@@ -320,9 +323,15 @@ of the exist. This shows the interest of the approach developed in this
 document, which provides additional elements of understanding of evacuation
 behavior.
 
-XXX
+~ Figure { #fig-smokeview; caption:"Dispersion of the number of occupants according to the RSET for 100 draws"}
+![fig5_4]
+~
+[fig5_4]: images/fig5_4.PNG "fig5_4" { width:auto; max-width:90% }
 
-XXX
+~ Figure { #fig-smokeview; caption:"Dispersion of the number of occupants according to the RSET for 1,000 draws"}
+![fig5_5]
+~
+[fig5_5]: images/fig5_5.PNG "fig5_5" { width:auto; max-width:90% }
 
 Applying the method to the reference test case shows that there is very little
 simulations with the same number of occupant. This implies that we can not
@@ -375,11 +384,20 @@ It involves that the variability
 of the conflict resolution time and the effects of histories
 have an influence on the RSET.
 
-XXX
+~ Figure { #fig-smokeview; caption:"Distribution function for 1,000 draws and lower and upper bounds of the confidence interval under the scheme 1 (test case n°1)"}
+![fig6_1]
+~
+[fig6_1]: images/fig6_1.PNG "fig6_1" { width:auto; max-width:90% }
 
-XXX
+~ Figure { #fig-smokeview; caption:"Distribution function for 1,000 draws and lower and upper bounds of the confidence interval under the scheme 2 (test case n°1)"}
+![fig6_2]
+~
+[fig6_2]: images/fig6_2.PNG "fig6_2" { width:auto; max-width:90% }
 
-XXX
+~ Figure { #fig-smokeview; caption:"Distribution function for 1,000 draws and lower and upper bounds of the confidence interval under the scheme 3 (test case n°1)"}
+![fig6_3]
+~
+[fig6_3]: images/fig6_3.PNG "fig6_3" { width:auto; max-width:90% }
 
 In a synthetic way the table 6 3 presents for three simulations:
 * the confidence interval of the 95th percentile called I~p95%~ afterward,
@@ -407,7 +425,10 @@ These notations are used during the document.
 
 ~
 
-XXX
+~ Figure { #fig-smokeview; caption:"Width of the confidence intervals for the 3 Schemes of the test case n°1"}
+![fig6_4]
+~
+[fig6_4]: images/fig6_4.PNG "fig6_4" { width:auto; max-width:90% }
 
 We observe that there is a certain variability of the RSET even when the
 starting positions of the occupants are fixed. This variability is due to the variability
@@ -453,7 +474,10 @@ logical given the low variability of this one.
 |      |        |                         |          |                         |             |                   |
 ~
 
-XXX
+~ Figure { #fig-smokeview; caption:"Comparison of the width of the confidence interval for the 3 schemes between test cases n°1 and n°2"}
+![fig6_5]
+~
+[fig6_5]: images/fig6_5.PNG "fig6_5" { width:auto; max-width:90% }
 
 ## Test case n°3
 For this third test case we take again the values by default of the software
@@ -484,7 +508,10 @@ what is in accordance with what we could wait.
 |      |        |                         |          |                         |             |                   |
 ~
 
-XXX
+~ Figure { #fig-smokeview; caption:"Comparison of the width of the confidence interval for the 3 schemes between test cases n°1 and n°3"}
+![fig6_6]
+~
+[fig6_6]: images/fig6_6.PNG "fig6_6" { width:auto; max-width:90% }
 
 ## Test case n°4
 In this fourth and final test case response time varies between 0 and 30 s for
@@ -517,7 +544,10 @@ were drawn.
 |      |        |                         |          |                         |             |                   |
 ~
 
-XXX
+~ Figure { #fig-smokeview; caption:"Comparison of the width of the confidence interval for the 3 schemes between test cases n°3 and n°4"}
+![fig6_7]
+~
+[fig6_7]: images/fig6_7.PNG "fig6_7" { width:auto; max-width:90% }
 
 # SYNTHESIS
 The application of this statistical analysis method based on the quantile distribution has allowed:
@@ -601,7 +631,7 @@ models influence of each other.
 [femtc2016]: https://github.com/thunderheadeng/femtc2016
 [emaillink]: mailto:conference@thunderheadeng.com "conference@thunderheadeng.com"
 
-# GENERAL INSTRUCTIONS { #sec-intro }
+# GENERAL INSTRUCTIONS 
 You are encouraged to use the [Madoko.net Editor][editor] while using
 the [Madoko Reference Manual][reference-manual] to edit/commit your
 documents into the 'authoring' branch of the [femtc2016] GitHub repository. 
