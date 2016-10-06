@@ -4,15 +4,19 @@ Subtitle      :
 
 Author        : Patrick Lauer
 Affiliation   : University of Wuppertal
-Email         : you@bar.com
+Email         : lauer@uni-wuppertal.de
 
-Author        : My co-author 1
-Affiliation   : Other institute
-Email         : other1@bar.com
+Author        : Corinna Trettin
+Affiliation   : University of Wuppertal
+Email         : trettin@uni-wuppertal.de
 
-Author        : My co-author 2
-Affiliation   : Other institute
-Email         : other2@bar.com
+Author        : Friedrich-Wilhelm Wittbecker
+Affiliation   : University of Wuppertal
+Email         : wittbeck@uni-wuppertal.de
+
+Author        : Lukas Arnold
+Affiliation   : FZ Jülich
+Email         : wittbeck@uni-wuppertal.de
 
 Bibliography  : references.bib
 Logo          : False
@@ -23,10 +27,13 @@ name-references : REFERENCES
 [TITLE]
 
 ~ Abstract
-Papers should follow standard technical paper format, an abstract
-followed by the more detailed presentation. The abstract should be typed
-on this area of the first page, with the presentation following after two
-lines of space.
+Inferring material parameters for fire modeling from bench scale tests trough optimization strategies is a widely used process. Unknown input parameters are estimated by processing them in a pyrolysis model and fit these results to bench scale test results. Though in order to find the best fitting solution, computing time significantly rises by making the model more complex via increasing the number of unknown material parameters. Hence there is a need to find good performing optimization algorithms.
+
+Former research on gaining material property parameters through optimization showed that a parameter optimization method called Shuffled Complex Evolution Algorithm (SCE-UA) is the most efficient (how quickly it converges to a solution) and accurate (how close the solution to the global optimum is) performing method in many applications among the already examined methods in the past. Thus, SCE-UA provides as comparative basis for other algorithms that will be presented in this work pertaining to efficiency and accuracy.
+
+The used optimization strategies that are compared to SCE-UA are Modified Shuffled Complex Evolution algorithm (MSCE), Artificial Bee Colony algorithm (ABC) and Fitness- Scaled Chaotic Artificial Bee Colony (FSCABC). First, these algorithms are tested with synthetic data, where all the properties are certain in advance. After that, the algorithms are tested with real data gained from bench scale tests, namely thermogravimetric analysis (TGA) and mass loss calorimeter (MLC), for different materials. Fire Dynamics Simulator (FDS) with its implemented pyrolysis model is used to carry out the simulations in an automated optimization framework on a high performance computing cluster.
+
+The achieved results show which of the compared optimization strategies perform better than SCE-UA related to efficiency and accuracy.
 ~
 
 [editor]: https://www.madoko.net/editor.html "Madoko.net Editor"
@@ -34,7 +41,7 @@ lines of space.
 [femtc2016]: https://github.com/thunderheadeng/femtc2016
 [emaillink]: mailto:conference@thunderheadeng.com "conference@thunderheadeng.com"
 
-# GENERAL INSTRUCTIONS { #sec-intro }
+# Introduction { #sec-intro }
 You are encouraged to use the [Madoko.net Editor][editor] while using
 the [Madoko Reference Manual][reference-manual] to edit/commit your
 documents into the 'authoring' branch of the [femtc2016] GitHub repository. 
@@ -58,22 +65,48 @@ pages.
 
 Please watch this short YouTube Video for a tutorial on how to use the system as intended.
 
-# MAIN HEADINGS LIKE THIS STYLE
+# Method
 Main Headings are all upper case letters and underlined. In Madoko, a
 Single '#' symbol at the start of the line, followed by a space and then
 the heading text.
 
-## Subheadings Like This Style
+## Pyrolysis and Simulation Modell
 Subheadings within sections follow the same format as section titles, but
 with upper and lower case. In Madoko, a Double '#' symbol at the start of
 the line, followed by a space and then the heading text.
 
-### Subsubheadings like this style
+## Synthetic Data and Bench Scale Tests
 Subsubheadings have no underline, and only the first letter capitalized.
 In Madoko, a Triple '#' symbol at the start of the line, followed by a
 space and then the heading text.
 
-# FIGURES, TABLES, AND EQUATIONS
+### Synthetic Data
+
+### Thermogravimetric Analysis
+
+###Mass Loss Cone Calorimeter
+
+## Optimization Process
+Subsubheadings have no underline, and only the first letter capitalized.
+In Madoko, a Triple '#' symbol at the start of the line, followed by a
+space and then the heading text.
+
+###FDS
+
+###Spotpy
+
+## Optimization Algorithms
+Subsubheadings have no underline, and only the first letter capitalized.
+In Madoko, a Triple '#' symbol at the start of the line, followed by a
+space and then the heading text.
+
+###Shuffled Complex Evolution
+
+###Modified Shuffled Complex Evolution
+
+###A
+
+# Results
 Original drawings and photos may be included in your paper as figures.
 Diagrams may be in color.
 
@@ -136,7 +169,7 @@ Or to use &logolatex; to align equations.
 \end{aligned}
 ~
 
-# FUN CONTENT EXAMPLES
+# Results
 Let's program some JavaScript:
 ``` javascript
 function hello() {
