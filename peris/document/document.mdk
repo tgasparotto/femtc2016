@@ -58,18 +58,22 @@ This section explains the parameters analyzed, the methodology used and the CFD 
 This study considers six parameters: four of them describe the geometry of the bridge (vertical clearance, bridge substructure configuration,
 span length and bridge width) and two of them (position of the fire load and type of fuel) are related to the fire scenario.
 Other parameters such as the soot yield or the position of bridge transverse diaphragms have not been included in this study.
-Table I and Figure 1 describe the parameters considered and the value for each parameter. It must be noted that, for all the 
+Table [#fig-parameters] and Figure [#fig-figure] describe the parameters considered and the value for each parameter. It must be noted that, for all the 
 bridges studied in this paper, the distance between two adjacent girders was taken as 2.6 m and the girder depth as 0.8 m.
 All the bridges also had a concrete slab 0.2 m thick on top of the I-girders.
 
+~ TableFigure { #fig-parameters; caption:"Parameters Studied"}
 |----------------------------------------------------------------------------------------------------------------------------||||||
 | Vertical Clearance | Bridge Substructure Configuration | Span         | Heat Release Rate | Position         | Width            |
-+:---{width:20%}----:|:---{width:20%}-------------------:|:-{width:12%}:|:---{width:20%}---:|:---{width:15%}--:|:--{width:13%}---:+
++:---{width:20%}----:|:---{width:20%}-------------------:|:-{width:11%}:|:---{width:20%}---:|:---{width:18%}--:|:--{width:13%}---:+
 |6 m                 |Piers                              | 16 m         |1800 kW/m^2^       | Center-Span      | 13 m             |
-|9 m                 | Abutments                         | 24 m         | 2400 kW/m2        | Abutment         | 23.4 m           |
+|9 m                 | Abutments                         | 24 m         | 2400 kW/m^2^        | Abutment         | 23.4 m           |
 |----------------------------------------------------------------------------------------------------------------------------||||||
 |                    |                                   |              |                   |                  |                  |
 {thead-tr-background-color:Gainsboro}
+~
+
+
 
 
 ![Figura 1]
@@ -87,14 +91,6 @@ representing the volume in which the entire analysis is carried out, (2) a geome
 represents the geometry of the case study, (3) a mesh or discretization of the control volume, (4) material properties, (5)
 fire sources, (6) a combustion model, and (7) sensors or elementsof the model where the outputs are recorded. 
 
-FDS Software 6.1.1 has been chosen to obtain the temperatures in the gas surrounding the bridge deck. FDS was developed
-at the National Institute of Standards and Technology (NIST) and applies computational fluid dynamics (CFD) techniques 
-to fire engineering. FDS has been succesfully used to study real bridge fires (Wright et Al. 2013, Alós-Moya et Al. 2014, 
-Gond and Agrawal 2015). Building the FDS model requires defining: (1) a control volume with its boundary conditions
-representing the volume in which the entire analysis is carried out, (2) a geometry included in the control volume which
-represents the geometry of the case study, (3) a mesh or discretization of the control volume, (4) material properties, (5)
-fire sources, (6) a combustion model, and (7) sensors or elementsof the model where the outputs are recorded. 
-
 ### Control Volume and Mesh
 The control volume used in this study includes the bridge as well as part of its approaches. The model varies according 
 to the scenario from 28 to 58 meters in the x-direction, 27 to 30 meters in the y-direction and 12 to 15 meters in the z-direction.
@@ -102,11 +98,6 @@ The variations depend on the span length, vertical clearance, span width and abu
 of cells in the model ranges from 1,134,000 to 3,262,500, having all cells dimensions of 0.20 m acoording to FDS Technical Reference
 (McGrattan et Al. 2016) for coarse mesh. This mesh is fine enough for the purpose of the present study.
 
-The control volume used in this study includes the bridge as well as part of its approaches. The model varies according 
-to the scenario from 28 to 58 meters in the x-direction, 27 to 30 meters in the y-direction and 12 to 15 meters in the z-direction.
-The variations depend on the span length, vertical clearance, span width and abutment configuration considered. The total amount
-of cells in the model ranges from 1,134,000 to 3,262,500, having all cells dimensions of 0.20 m acoording to FDS Technical Reference
-(McGrattan et Al. 2016) for coarse mesh. This mesh is fine enough for the purpose of the present study.
 
 ### Fire Load and Combustion Model
 The FDS model includes the tanker of the tanker truck modeled as a horizontal surface of 12 x 2.5 meters at one meter
@@ -131,22 +122,17 @@ that the structural element is a perfect insulator and is commonly used for calc
 radiative heat transfer. The use in this paper of adiabatic temperatures is justified because it is a value that 
 does not depend on the material of the bridge and can be used as an input in the thermo-mechanical models.
 
-Adiabatic temperatures are measured in FDS with sensors defined by the user. Sensors have been placed in cross sections
-spaced 20 cm with three sensors each located in: bottom flange (sensor 0), the south face (sensor 1), and
-the north face (sensor 2). The total number of sensor varies according to the span length. Only the analysis of the temperatures
-of the most heated girder are studied here.
-
 ## Design of Experiments
 A combination of all six parameters with two level each would have required 64 simulations, running those was undesirable
 due to the high computational cost. A Taguchi's method XXX has been carried out to select
 which fire scenarios should be modeled to extract the maximum information and to know
 which parameter interactions are important. The resulting scenarios that had to be run are shown in table II.
-
+~ TableFigure { #fig-cases; caption:"Experimental Design of the Simulations"}
 |--------------------------------------------------------------------------------------------------------------------------------------------|||||||
 |Parameters                                                                                                                                  |||||||
 |Nº Case       |Vertical Clearance| Bridge Substructure Configuration| Span              |Heat Release Rate  |Position          |Width             |
 |              | 9 m/6 m          | Abutment/Piers                   | 16m/ 24m          | 1800/2400 kW/m^2^ | Central/Abutment | 13m/ 23.4m       |
-+:-{width:5%}-:|:---{width:5%}---:|:---{width:21%}------------------:|:---{width:20%}---:|:---{width:20%}:   |:---{width:5%}---:|:---{width:5%}---:+
++:-{width:5%}-:|:---{width:5%}---:|:---{width:21%}------------------:|:---{width:20%}---:|:---{width:20%}:   |:---{width:3%}---:|:---{width:5%}---:+
 | 1            | 9m               | Piers                            | 24m               | 2400 kW/m^2^      | Abutment         | 23.4m            |
 | 2            | 6m               | Piers                            | 24m               | 2400 kW/m^2^      | Abutment         | 13m              |
 | 3            | 9m               | Abutments                        | 24m               | 2400 kW/m^2^      | Abutment         | 13m              |
@@ -182,10 +168,15 @@ which parameter interactions are important. The resulting scenarios that had to 
 |--------------------------------------------------------------------------------------------------------------------------------------------|||||||
 |              |                  |                                  |                   |                   |                  |                  |
 {thead-tr-background-color:Gainsboro}
+~
+
+
 ## Results and Discussion
 Table III shows the maximum web and flange adiabatic temperatures reached on the structure. Web
 temperatures are the average of the temperatures in the two web faces.
 
+
+~ Figure { #fig-results; caption:"Maximum temperatures reached over the structure."}
 |---------------------------------------------------|||------------------------------------------------------|||----------------------------------------------------|||
 |Maximum Temperatures                               |||Maximum Temperatures                                  |||Maximum Temperatures                                |||
 |               |                  |                  |                  |                  |                  |                 |                  |                 |
@@ -206,6 +197,9 @@ temperatures are the average of the temperatures in the two web faces.
 |---------------|------------------|------------------|------------------|------------------|------------------|-----------------|------------------|-----------------|
 |               |                  |                  |                  |                  |                  |                 |                  |                 |
 {thead-tr-background-color:Gainsboro}
+~
+
+
 
 To asses the significance of the parameters in the maximum adiabatic temperatures reached 
 over the structure an analysis of variance (ANOVA) using the STATGRAPHICS software XXX was carried out. An 
@@ -215,7 +209,9 @@ dependent variables (temperatures reached by the structure) in a regression anal
 is given by a coefficient known as the p-value. Low p-values indicate a significant influence (Values below of 0.05)
 Table IV and V show the ANOVA results. These results show that:
 
-|------------------------------------------------------------------------------------------------------||||||
+
+~ TableFigure { #fig-resultsflange; caption:"Results of the Anova analysis for flange temperatures"}
+  |------------------------------------------------------------------------------------------------------||||||
 |Flange Temperatures            | Sum of squares | Degrees of Freedom | Mean Square| F-ratio|p-value        |
 +:---{width:28%}----------------|:--------------:|:---{width:14%}----:|:----------:|:------:|:-{width:12%}-:+
 |**Principal Effects**          |                |                    |            |        |               |
@@ -246,8 +242,9 @@ Table IV and V show the ANOVA results. These results show that:
 |------------------------------------------------------------------------------------------------------||||||
 |                               |                |                    |            |        |               |
 {thead-tr-background-color:Gainsboro}
-\
+~
 
+~ TableFigure { #fig-resultsweb; caption:"Results of the Anova analysis for web temperatures"}
 |------------------------------------------------------------------------------------------------------||||||
 | Web Temperatures              | Sum of squares | Degrees of Freedom | Mean Square| F-ratio|p-value        |
 +:---{width:28%}----------------|:--------------:|:---{width:14%}----:|:----------:|:------:|:-{width:12%}-:+
@@ -279,6 +276,9 @@ Table IV and V show the ANOVA results. These results show that:
 |------------------------------------------------------------------------------------------------------||||||
 |                               |                |                    |            |        |               |
 {thead-tr-background-color:Gainsboro}
+~
+
+
 
 A combination of all six parameters with two level each would have required 64 simulations, running those was undesirable
 due to the high computational time.
