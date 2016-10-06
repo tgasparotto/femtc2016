@@ -117,10 +117,17 @@ in ascending order
 constituting the empirical distribution function as well as lower and upper
 bounds of each percentile confidence intervals.
 
+
+
+
+
+
+
+
 ~ Figure { #fig3_1; caption:"Empirical distribution function of the random variable, lower and upper bounds of the confidence interval and real distribution function"}
 ![fig3_1]
 ~
-[fig3_1]: images/fig3_1.PNG "fig3_1" { width:auto; max-width:90% }
+[fig3_1]: images/fig3_1.PNG "fig3_1" { width:auto; max-width:90%}
 
 This example highlights the problems related to extreme values of a random
 variable.
@@ -153,7 +160,7 @@ of 50 cm x 50 cm interconnected. The connection model is the one of Moore as sho
 ~ Figure { #fig4_1; caption:"Nodes connectivity under BuildingExodus"}
 ![fig4_1]
 ~
-[fig4_1]: images/fig4_1.PNG "fig4_1" { width:auto; max-width:90% }
+[fig4_1]: images/fig4_1.PNG "fig4_1" { width:auto; max-width:20% }
 
 The test case is a room, square with sides of 16 m and 4 exits distributed on
 each side (figure [#fig4_2]). An occupant occupies an area of 0.25 m² (0.5 m x 0.5 m)
