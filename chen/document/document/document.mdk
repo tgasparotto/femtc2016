@@ -175,7 +175,7 @@ T  = (\frac{I~\lambda~}{I~\lambda_0~})   \ast 100 = 100 \ast e^{(CsL)}
 
 ~ Center
 Table3. Relation between the distance and photosensitivity coefficient
-~
+
 |-{width:10%}--|------{width:10%}-----|-{width:10%}--|-{width:10%}-|---{width:10%}--|-{width:10%}-|-{width:10%}-|-{width:10%}-|
 |              |      27%Transimissivity             |             |                |16%Transimissivity         |             |
 | _L_(m)       |_Cs_(m^-1^)           | _L_(m)       |_Cs_(m^-1^)  | _L_(m)         |_Cs_(m^-1^)  | _L_(m)      |_Cs_(m^-1^)  |
@@ -186,6 +186,7 @@ Table3. Relation between the distance and photosensitivity coefficient
 |   4          |  0.326               | 9            | 0.145       | 4              | 0.456       | 9           | 0.203       |
 |   5          |  0.260               | 10           | 0.130       | 5              | 0.365       | 10          | 0.183       |
 |--------------|----------------------|--------------|-------------|----------------|-------------|-------------|-------------|
+~
 
 From the equation (2) above, the relation between the distance and photosensitivity coefficient is as in Table 3. 
 As Table 3 shows, when the visibility that can identify the luminaries and objects is 5-10m while wearing an eye-patch with 27% transmissivity, 
