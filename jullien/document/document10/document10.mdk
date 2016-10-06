@@ -106,7 +106,7 @@ This confidence interval is expressed as:
 with: 
 
 * F the empirical distribution function,
-* c the quantile ($1-\frac{p}{2}$) of the normal law distribution. c is 1.645 to p = 90%.
+* c the quantile ($1-\frac{p}{2}$) of the normal law distribution. c is equal to 1.645 for p = 90%.
 
 The distribution function is said empirical as opposed to the real distribution
 function. In fact, F is built on the achievements and is not the distribution function
@@ -116,12 +116,6 @@ Figure [#fig3_1] shows the random variable realizations ranked
 in ascending order
 constituting the empirical distribution function as well as lower and upper
 bounds of each percentile confidence intervals.
-
-
-
-
-
-
 
 
 ~ Figure { #fig3_1; caption:"Empirical distribution function of the random variable, lower and upper bounds of the confidence interval and real distribution function";  page-align:here}
