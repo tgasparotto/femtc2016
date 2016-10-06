@@ -268,8 +268,6 @@ according to the desired accuracy on the RSET.
 
 
 
-
-
 Figure [#fig5_3] shows the width of the confidence interval of the 95th percentile
 according to the number of simulation. There are a number of simulations for
 which the width of the confidence interval is sufficiently low to be acceptable.
