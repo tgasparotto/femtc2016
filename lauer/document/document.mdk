@@ -15,7 +15,7 @@ Affiliation   : University of Wuppertal
 Email         : wittbeck@uni-wuppertal.de
 
 Author        : Lukas Arnold
-Affiliation   : FZ Jülich
+Affiliation   : Forschungszentrum Jülich
 Email         : wittbeck@uni-wuppertal.de
 
 Bibliography  : references.bib
@@ -41,7 +41,7 @@ Thus, SCE-UA provides as comparative basis for other algorithms that will be pre
 pertaining to efficiency and accuracy.
 
 The used optimization strategies that are compared to SCE-UA are Modified Shuffled Complex Evolution
-algorithm (MSCE), Artificial Bee Colony algorithm (ABC) and Fitness- Scaled Chaotic Artificial
+algorithm (MSCE), Artificial Bee Colony algorithm (ABC) and Fitness-Scaled Chaotic Artificial
 Bee Colony (FSCABC). First, these algorithms are tested with synthetic data, where all the
 properties are certain in advance. After that, the algorithms are tested with real data gained
 from bench scale tests, namely thermogravimetric analysis (TGA) and mass loss calorimeter (MLC),
@@ -96,6 +96,19 @@ the line, followed by a space and then the heading text.
 Subsubheadings have no underline, and only the first letter capitalized.
 In Madoko, a Triple '#' symbol at the start of the line, followed by a
 space and then the heading text.
+
+~ Figure { #fig-smokeview; caption:"Left: Equipment of the TGA with PU and PMMA samples, Right: MLC with a Wood sample"}
+![Ex1_1]
+~
+[Ex1_1]: images/TGA_MLC.png "Ex1_0" { width:auto; max-width:90% }
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics [width=0.97\textwidth]{figs/TGA_MLC.png}
+	
+	\caption{Left: Equipment of the TGA with PU and PMMA samples, Right: MLC with a Wood sample}
+	\label{fig:WP1-1}
+\end{figure}
 
 ### Synthetic Data
 
