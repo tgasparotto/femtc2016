@@ -27,13 +27,30 @@ name-references : REFERENCES
 [TITLE]
 
 ~ Abstract
-Inferring material parameters for fire modeling from bench scale tests trough optimization strategies is a widely used process. Unknown input parameters are estimated by processing them in a pyrolysis model and fit these results to bench scale test results. Though in order to find the best fitting solution, computing time significantly rises by making the model more complex via increasing the number of unknown material parameters. Hence there is a need to find good performing optimization algorithms.
+Inferring material parameters for fire modeling from bench scale tests trough optimization strategies 
+is a widely used process. Unknown input parameters are estimated by processing them in a pyrolysis model
+and fit these results to bench scale test results. Though in order to find the best fitting solution, 
+computing time significantly rises by making the model more complex via increasing the number of
+unknown material parameters. Hence there is a need to find good performing optimization algorithms.
 
-Former research on gaining material property parameters through optimization showed that a parameter optimization method called Shuffled Complex Evolution Algorithm (SCE-UA) is the most efficient (how quickly it converges to a solution) and accurate (how close the solution to the global optimum is) performing method in many applications among the already examined methods in the past. Thus, SCE-UA provides as comparative basis for other algorithms that will be presented in this work pertaining to efficiency and accuracy.
+Former research on gaining material property parameters through optimization showed that a parameter
+optimization method called Shuffled Complex Evolution Algorithm (SCE-UA) is the most efficient
+(how quickly it converges to a solution) and accurate (how close the solution to the global optimum is)
+performing method in many applications among the already examined methods in the past. 
+Thus, SCE-UA provides as comparative basis for other algorithms that will be presented in this work
+pertaining to efficiency and accuracy.
 
-The used optimization strategies that are compared to SCE-UA are Modified Shuffled Complex Evolution algorithm (MSCE), Artificial Bee Colony algorithm (ABC) and Fitness- Scaled Chaotic Artificial Bee Colony (FSCABC). First, these algorithms are tested with synthetic data, where all the properties are certain in advance. After that, the algorithms are tested with real data gained from bench scale tests, namely thermogravimetric analysis (TGA) and mass loss calorimeter (MLC), for different materials. Fire Dynamics Simulator (FDS) with its implemented pyrolysis model is used to carry out the simulations in an automated optimization framework on a high performance computing cluster.
+The used optimization strategies that are compared to SCE-UA are Modified Shuffled Complex Evolution
+algorithm (MSCE), Artificial Bee Colony algorithm (ABC) and Fitness- Scaled Chaotic Artificial
+Bee Colony (FSCABC). First, these algorithms are tested with synthetic data, where all the
+properties are certain in advance. After that, the algorithms are tested with real data gained
+from bench scale tests, namely thermogravimetric analysis (TGA) and mass loss calorimeter (MLC),
+for different materials. Fire Dynamics Simulator (FDS) with its implemented pyrolysis model is
+used to carry out the simulations in an automated optimization framework on a high performance
+computing cluster.
 
-The achieved results show which of the compared optimization strategies perform better than SCE-UA related to efficiency and accuracy.
+The achieved results show which of the compared optimization strategies perform better than
+SCE-UA related to efficiency and accuracy.
 ~
 
 [editor]: https://www.madoko.net/editor.html "Madoko.net Editor"
