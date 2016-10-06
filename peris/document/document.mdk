@@ -53,6 +53,7 @@ steel-girder bridge against tanker through finite element models has been studie
 
 # CFD ANALYSIS { #sec-intro }
 This section explains the parameters analyzed, the methodology used and the CFD models design.
+This section explains the parameters analyzed, the methodology used and the CFD models design.
 ## Parameters Studied
 This study considers six parameters: four of them describe the geometry of the bridge (vertical clearance, bridge substructure configuration,
 span length and bridge width) and two of them (position of the fire load and type of fuel) are related to the fire scenario.
@@ -86,7 +87,21 @@ representing the volume in which the entire analysis is carried out, (2) a geome
 represents the geometry of the case study, (3) a mesh or discretization of the control volume, (4) material properties, (5)
 fire sources, (6) a combustion model, and (7) sensors or elementsof the model where the outputs are recorded. 
 
+FDS Software 6.1.1 has been chosen to obtain the temperatures in the gas surrounding the bridge deck. FDS was developed
+at the National Institute of Standards and Technology (NIST) and applies computational fluid dynamics (CFD) techniques 
+to fire engineering. FDS has been succesfully used to study real bridge fires (Wright et Al. 2013, Alós-Moya et Al. 2014, 
+Gond and Agrawal 2015). Building the FDS model requires defining: (1) a control volume with its boundary conditions
+representing the volume in which the entire analysis is carried out, (2) a geometry included in the control volume which
+represents the geometry of the case study, (3) a mesh or discretization of the control volume, (4) material properties, (5)
+fire sources, (6) a combustion model, and (7) sensors or elementsof the model where the outputs are recorded. 
+
 ### Control Volume and Mesh
+The control volume used in this study includes the bridge as well as part of its approaches. The model varies according 
+to the scenario from 28 to 58 meters in the x-direction, 27 to 30 meters in the y-direction and 12 to 15 meters in the z-direction.
+The variations depend on the span length, vertical clearance, span width and abutment configuration considered. The total amount
+of cells in the model ranges from 1,134,000 to 3,262,500, having all cells dimensions of 0.20 m acoording to FDS Technical Reference
+(McGrattan et Al. 2016) for coarse mesh. This mesh is fine enough for the purpose of the present study.
+
 The control volume used in this study includes the bridge as well as part of its approaches. The model varies according 
 to the scenario from 28 to 58 meters in the x-direction, 27 to 30 meters in the y-direction and 12 to 15 meters in the z-direction.
 The variations depend on the span length, vertical clearance, span width and abutment configuration considered. The total amount
@@ -100,6 +115,16 @@ Handbook Manual (Morgan J. Hurley et Al. 2016) for hydrocarbon liquids and have 
 It has been assumed that diesel and gasoline have the same yields.
 
 ### Adiabatic Temperatures
+The adiabatic surface temperature developed by Wickström et Al. (2007) is used to transfer the information obtained by the fire 
+model to the thermal model. This adiabatic surface temperature is a fictituous temperature obtained by FDS assuming
+that the structural element is a perfect insulator and is commonly used for calculating both convective and 
+radiative heat transfer. The use in this paper of adiabatic temperatures is justified because it is a value that 
+does not depend on the material of the bridge and can be used as an input in the thermo-mechanical models.
+
+Adiabatic temperatures are measured in FDS with sensors defined by the user. Sensors have been placed in cross sections
+spaced 20 cm with three sensors each located in: bottom flange (sensor 0), the south face (sensor 1), and
+the north face (sensor 2). The total number of sensor varies according to the span length. Only the analysis of the temperatures
+of the most heated girder are studied here.
 The adiabatic surface temperature developed by Wickström et Al. (2007) is used to transfer the information obtained by the fire 
 model to the thermal model. This adiabatic surface temperature is a fictituous temperature obtained by FDS assuming
 that the structural element is a perfect insulator and is commonly used for calculating both convective and 
@@ -253,7 +278,10 @@ Table IV and V show the ANOVA results. These results show that:
 | **Total**                     | 1.57E+06       | 31                 |            |        |               |
 |------------------------------------------------------------------------------------------------------||||||
 |                               |                |                    |            |        |               |
+{thead-tr-background-color:Gainsboro}
 
+A combination of all six parameters with two level each would have required 64 simulations, running those was undesirable
+due to the high computational time.
 
 1) The bridge span and bridge width do not influence the maximum adiabatic temperatures of the bridge
 (p-values of 0.10 and 0.52 for the bottom flange temperatures and 0.35 and 0.77 for web temperatures respectively), although
