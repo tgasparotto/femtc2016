@@ -61,9 +61,21 @@ Table I and Figure 1 describe the parameters considered and the value for each p
 bridges studied in this paper, the distance between two adjacent girders was taken as 2.6 m and the girder depth as 0.8 m.
 All the bridges also had a concrete slab 0.2 m thick on top of the I-girders.
 
-Table I
+|----------------------------------------------------------------------------------------------------------------------------||||||
+| Vertical Clearance | Bridge Substructure Configuration | Span         | Heat Release Rate | Position         | Width            |
++:---{width:20%}----:|:---{width:20%}-------------------:|:-{width:12%}:|:---{width:20%}---:|:---{width:15%}--:|:--{width:13%}---:+
+|6 m                 |Piers                              | 16 m         |1800 kW/m^2^       | Center-Span      | 13 m             |
+|9 m                 | Abutments                         | 24 m         | 2400 kW/m2        | Abutment         | 23.4 m           |
+|----------------------------------------------------------------------------------------------------------------------------||||||
+|                    |                                   |              |                   |                  |                  |
+{thead-tr-background-color:Gainsboro}
 
-Figure I
+
+![Figura 1]
+~ Figure { #fig-figure; caption:"Parameters studied in the analysis. 3D view of two CFD models."}
+  [Figura 1]: images/Figura-1.jpg "Figura 1" { width:auto; max-width:100% }
+~
+
 
 ## Computational Fluid Dynamics Models (CFDs)
 FDS Software 6.1.1 has been chosen to obtain the temperatures in the gas surrounding the bridge deck. FDS was developed
@@ -105,13 +117,70 @@ due to the high computational cost. A Taguchi's method XXX has been carried out 
 which fire scenarios should be modeled to extract the maximum information and to know
 which parameter interactions are important. The resulting scenarios that had to be run are shown in table II.
 
-Table II.
-
+|--------------------------------------------------------------------------------------------------------------------------------------------|||||||
+|Parameters                                                                                                                                  |||||||
+|Nº Case       |Vertical Clearance| Bridge Substructure Configuration| Span              |Heat Release Rate  |Position          |Width             |
+|              | 9 m/6 m          | Abutment/Piers                   | 16m/ 24m          | 1800/2400 kW/m^2^ | Central/Abutment | 13m/ 23.4m       |
++:-{width:5%}-:|:---{width:5%}---:|:---{width:21%}------------------:|:---{width:20%}---:|:---{width:20%}:   |:---{width:5%}---:|:---{width:5%}---:+
+| 1            | 9m               | Piers                            | 24m               | 2400 kW/m^2^      | Abutment         | 23.4m            |
+| 2            | 6m               | Piers                            | 24m               | 2400 kW/m^2^      | Abutment         | 13m              |
+| 3            | 9m               | Abutments                        | 24m               | 2400 kW/m^2^      | Abutment         | 13m              |
+| 4            | 6m               | Abutments                        | 24m               | 2400 kW/m^2^      | Abutment         | 23.4m            |
+| 5            | 9m               | Piers                            | 16m               | 2400 kW/m^2^      | Abutment         | 13m              |
+| 6            | 6m               | Piers                            | 16m               | 2400 kW/m^2^      | Abutment         | 23.4m            |
+| 7            | 9m               | Abutments                        | 16m               | 2400 kW/m^2^      | Abutment         | 23.4m            |
+| 8            | 6m               | Abutments                        | 16m               | 2400 kW/m^2^      | Abutment         | 13m              |
+| 9            | 9m               | Piers                            | 24m               | 1600 kW/m^2^      | Abutment         | 13m              |
+| 10           | 6m               | Piers                            | 24m               | 1600 kW/m^2^      | Abutment         | 23.4m            |
+| 11           | 9m               | Abutments                        | 24m               | 1600 kW/m^2^      | Abutment         | 23.4m            |
+| 12           | 6m               | Abutments                        | 24m               | 1600 kW/m^2^      | Abutment         | 13m              |
+| 13           | 9m               | Piers                            | 16m               | 1600 kW/m^2^      | Abutment         | 23.4m            |
+| 14           | 6m               | Piers                            | 16m               | 1600 kW/m^2^      | Abutment         | 13m              |
+| 15           | 9m               | Abutments                        | 16m               | 1600 kW/m^2^      | Abutment         | 13m              |
+| 16           | 6m               | Abutments                        | 16m               | 1600 kW/m^2^      | Abutment         | 23.4m            |
+| 17           | 9m               | Piers                            | 24m               | 2400 kW/m^2^      | Center-Span      | 13m              |
+| 18           | 6m               | Piers                            | 24m               | 2400 kW/m^2^      | Center-Span      | 23.4m            |
+| 19           | 9m               | Abutments                        | 24m               | 2400 kW/m^2^      | Center-Span      | 23.4m            |
+| 20           | 6m               | Abutments                        | 24m               | 2400 kW/m^2^      | Center-Span      | 13m              |
+| 21           | 9m               | Piers                            | 16m               | 2400 kW/m^2^      | Center-Span      | 23.4m            |
+| 22           | 6m               | Piers                            | 16m               | 2400 kW/m^2^      | Center-Span      | 13m              |
+| 23           | 9m               | Abutments                        | 16m               | 2400 kW/m^2^      | Center-Span      | 13m              |
+| 24           | 6m               | Abutments                        | 16m               | 2400 kW/m^2^      | Center-Span      | 23.4m            |
+| 25           | 9m               | Piers                            | 24m               | 1600 kW/m^2^      | Center-Span      | 23.4m            |
+| 26           | 6m               | Piers                            | 24m               | 1600 kW/m^2^      | Center-Span      | 13m              |
+| 27           | 9m               | Abutments                        | 24m               | 1600 kW/m^2^      | Center-Span      | 13m              |
+| 28           | 6m               | Abutments                        | 24m               | 1600 kW/m^2^      | Center-Span      | 23.4m            |
+| 29           | 9m               | Piers                            | 16m               | 1600 kW/m^2^      | Center-Span      | 13m              |
+| 30           | 6m               | Piers                            | 16m               | 1600 kW/m^2^      | Center-Span      | 23.4m            |
+| 31           | 9m               | Abutments                        | 16m               | 1600 kW/m^2^      | Center-Span      | 23.4m            |
+| 32           | 6m               | Abutments                        | 16m               | 1600 kW/m^2^      | Center-Span      | 13m              |
+|--------------------------------------------------------------------------------------------------------------------------------------------|||||||
+|              |                  |                                  |                   |                   |                  |                  |
+{thead-tr-background-color:Gainsboro}
 ## Results and Discussion
 Table III shows the maximum web and flange adiabatic temperatures reached on the structure. Web
 temperatures are the average of the temperatures in the two web faces.
 
-Table III
+|---------------------------------------------------|||------------------------------------------------------|||----------------------------------------------------|||
+|Maximum Temperatures                               |||Maximum Temperatures                                  |||Maximum Temperatures                                |||
+|               |                  |                  |                  |                  |                  |                 |                  |                 |
+|               |                  |                  |                  |                  |                  |                 |                  |                 |
+|Case           |Flange            |Web               |Case              |Flange            |Web               |Case             |Flange            |Web              |
++:-{width:11%}-:|:--{width:11%}---:|:--{width:11%}---:+:---{width:11%}--:|:--{width:11%}---:|:--{width:11%}---:+:-{width:11%}---:|:--{width:11%}---:|:-{width:11%}---:+
+| 1             | 1126             | 1014             | 12               | 1114             | 1160             | 23              | 909              | 886             |
+| 2             | 1323             | 1294             | 13               | 990              | 820              | 24              | 1073             | 1166            |
+| 3             | 1301             | 1340             | 14               | 1253             | 1157             | 25              | 694              | 629             |
+| 4             | 1248             | 1312             | 15               | 1178             | 1215             | 26              | 1043             | 1038            |
+| 5             | 1170             | 1064             | 16               | 1225             | 1290             | 27              | 711              | 650             |
+| 6             | 1288             | 1278             | 17               | 905              | 877              | 28              | 1022             | 1028            |
+| 7             | 1170             | 1226             | 18               | 1162             | 1208             | 29              | 702              | 646             |
+| 8             | 1081             | 1133             | 19               | 902              | 871              | 30              | 1037             | 1044            |
+| 9             | 990              | 821              | 20               | 1158             | 1208             | 31              | 696              | 641             |
+| 10            | 1246             | 1173             | 21               | 704              | 646              | 32              | 973              | 1000            |
+| 11            | 1188             | 1216             | 22               | 1157             | 1204             |                 |                  |                 |
+|---------------|------------------|------------------|------------------|------------------|------------------|-----------------|------------------|-----------------|
+|               |                  |                  |                  |                  |                  |                 |                  |                 |
+{thead-tr-background-color:Gainsboro}
 
 To asses the significance of the parameters in the maximum adiabatic temperatures reached 
 over the structure an analysis of variance (ANOVA) using the STATGRAPHICS software XXX was carried out. An 
@@ -120,6 +189,71 @@ and is used to determine the impact of independent variables (e.g the parameters
 dependent variables (temperatures reached by the structure) in a regression analysis. This impact
 is given by a coefficient known as the p-value. Low p-values indicate a significant influence (Values below of 0.05)
 Table IV and V show the ANOVA results. These results show that:
+
+|------------------------------------------------------------------------------------------------------||||||
+|Flange Temperatures            | Sum of squares | Degrees of Freedom | Mean Square| F-ratio|p-value        |
++:---{width:30%}----------------|:--------------:|:---{width:14%}----:|:----------:|:------:|:-{width:12%}-:+
+|**Principal Effects**          |                |                    |            |        |               |
+| *A: Vertical Clearance*       | 294352         | 1                  | 294352     | 107.8  | **0.000**     |
+| *B:Bridge Substructure*       | 782            | 1                  | 782        | 0.3    | 0.604         |
+| *C: Span Length*              | 8739           | 1                  | 8739       | 3.2    | 0.104         |
+| *D: Heat Release Rate*        | 81467          | 1                  | 81467      | 29.8   | **0.000**     |
+| *E:Position of the Fire Load* | 511435         | 1                  | 511435     | 187.3  | **0.000**     |
+| *F:Bridge Width*              | 1214           | 1                  | 1214       | 0.4    | 0.520         |
+| **Interactions**              |                |                    |            |        |               |
+| *AB:Clearance-Bridge Sub.*    | 60498          | 1                  | 60498      | 22.2   | **0.001**     |
+| *AC:*                         | 145            | 1                  | 145        | 0.1    | 0.822         |
+| *AD:*                         | 6628           | 1                  | 6628       | 2.4    | 0.150         |
+| *AE:Clearance-Position*       | 93894          | 1                  | 93894      | 34.4   | **0.000**     |
+| *AF:*                         | 11044          | 1                  | 11044      | 4.0    | 0.072         |
+| *BC:*                         | 724            | 1                  | 724        | 0.3    | 0.618         |
+| *BD:*                         | 655            | 1                  | 655        | 0.2    | 0.635         |
+| *BE:*                         | 194            | 1                  | 194        | 0.1    | 0.795         |
+| *BF:*                         | 4866           | 1                  | 4866       | 1.8    | 0.212         |
+| *CD:*                         | 11940          | 1                  | 11940      | 4.4    | 0.063         |
+| *CE:*                         | 857            | 1                  | 857        | 0.3    | 0.588         |
+| *CF:*                         | 2484           | 1                  | 2484       | 0.9    | 0.363         |
+| *DE:*                         | 10029          | 1                  | 10029      | 3.7    | 0.084         |
+| *DF:*                         | 6705           | 1                  | 6705       | 2.5    | 0.148         |
+| *EF:*                         | 3588           | 1                  | 3588       | 1.3    | 0.278         |
+| **Residuals**                 | 27313          | 10                 | 2731       |        |               |
+| **Total**                     | 1.14E+06       | 31                 |            |        |               |
+|------------------------------------------------------------------------------------------------------||||||
+|                               |                |                    |            |        |               |
+{thead-tr-background-color:Gainsboro}
+\
+
+|------------------------------------------------------------------------------------------------------||||||
+| Web Temperatures              | Sum of squares | Degrees of Freedom | Mean Square| F-ratio|p-value        |
++:---{width:30%}----------------|:--------------:|:---{width:14%}----:|:----------:|:------:|:-{width:12%}-:+
+|**Principal Effects**          |                |                    |            |        |               |
+| *A: Vertical Clearance*       | 533413         | 1                  | 533413     | 93.8   | **0.000**     |
+| *B:Bridge Substructure*       | 63858          | 1                  | 63858      | 11.2   | **0.007**     |
+| *C: Span Length*              | 5517           | 1                  |5517        | 1.0    | 0.348         |
+| *D: Heat Release Rate*        | 151161         | 1                  |151161      | 26.6   | **0.000**     |
+| *E:Position of the Fire Load* | 444768         | 1                  | 444768     | 78.2   | **0.000**     |
+| *F:Bridge Width*              | 532            | 1                  | 532        | 0.1    | 0.766         |
+| **Interactions**              |                |                    |            |        |               |
+| *AB:Clearance-Bridge Sub.*    | 83045          | 1                  | 83045      | 14.6   | **0.003**     |
+| *AC:*                         | 510            | 1                  | 510        | 0.1    | 0.771         |
+| *AD:*                         | 4305           | 1                  | 4305       | 0.8    | 0.404         |
+| *AE:Clearance-Position*       | 121255         | 1                  | 121255     | 21.3   | **0.001**     |
+| *AF:*                         | 17145          | 1                  | 17145      | 3.0    | 0.113         |
+| *BC:*                         | 33             | 1                  | 33         | 0.0    | 0.940         |
+| *BD:*                         | 3086           | 1                  | 3086       | 0.5    | 0.478         |
+| *BE:Bridge Sub.-Position*     | 38680          | 1                  | 38680      | 6.8    | **0.026**     |
+| *BF:*                         | 6239           | 1                  | 6239       | 1.1    | 0.320         |
+| *CD:*                         | 12050          | 1                  | 12050      | 2.1    | 0.176         |
+| *CE:*                         | 523            | 1                  | 523        | 0.1    | 0.768         |
+| *CF:*                         | 2076           | 1                  | 2076       | 0.4    | 0.559         |
+| *DE:*                         | 10553          | 1                  | 10553      | 1.9    | 0.203         |
+| *DF:*                         | 6037           | 1                  | 6037       | 1.1    | 0.327         |
+| *EF:*                         | 5513           | 1                  | 5513       | 1.0    | 0.348         |
+| **Residuals**                 | 56867          | 10                 | 5687       |        |               |
+| **Total**                     | 1.57E+06       | 31                 |            |        |               |
+|------------------------------------------------------------------------------------------------------||||||
+|                               |                |                    |            |        |               |
+
 
 1) The bridge span and bridge width do not influence the maximum adiabatic temperatures of the bridge
 (p-values of 0.10 and 0.52 for the bottom flange temperatures and 0.35 and 0.77 for web temperatures respectively), although
