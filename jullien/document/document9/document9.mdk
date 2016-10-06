@@ -19,7 +19,17 @@ name-references : REFERENCES
 [TITLE]
 
 ~ Abstract
-The use of egress simulation models in performance-based analysis relies on the confidence in the input and output data. These data strongly depend on a large number of parameters. The undertaking study presented here focuses on the statistical aspects of these data, especially the population behavioural parameters which are the most likely to be scattered. The study proposes a method to analyse the statistical aspects of an egress simulation model. The method is based on statistical estimations of the distribution quantiles of the output parameters and can be applied to stochastic simulations results, in order to provide quantitative informations on the key parameters dispersion, such as RSET. It also gives a justification to the required number of simulations and input parameters precision to ensure a relevant output precision level. It gives access to quantitative criteria to compare experimental and numerical data. This method will be applied to analyse case studies simulated with BuildingExodus.
+The use of egress simulation models in performance-based analysis relies on the confidence in the input and output data.
+These data strongly depend on a large number of parameters. 
+The undertaking study presented here focuses on the statistical aspects of these data, 
+especially the population behavioural parameters which are the most likely to be scattered. 
+The study proposes a method to analyse the statistical aspects of an egress simulation model. 
+The method is based on statistical estimations of the distribution quantiles of the output parameters 
+and can be applied to stochastic simulations results, in order to provide quantitative informations 
+on the key parameters dispersion, such as RSET. It also gives a justification to the required number 
+of simulations and input parameters precision to ensure a relevant output precision level. 
+It gives access to quantitative criteria to compare experimental and numerical data. 
+This method will be applied to analyse case studies simulated with BuildingExodus.
 ~
 
 # INTRODUCTION { #sec-intro }
@@ -230,7 +240,7 @@ to obtain a max RSET. In addition, in the case where we determine a RSET
 max, we might question the relevance of such a value that would be drawn from a
 disaster scenario and so wold be very severe in a more realistic study case. It seems preferable
 to retain the associated RSET 95th percentile value of which we can estimate an
-relevant confidence interval with a limited number of draws. Table [#table-1] shows
+relevant confidence interval with a limited number of draws. table [#table-1] shows
 the confidence intervals associated with the 95th percentile for 100, 200, 500,
 1,000 and 5,000 draws. This choice implies that in 95% of cases all occupants have
 evacuated with a probability of 90%. It is also arbitrary. Indeed, it is quite
@@ -261,7 +271,7 @@ Figure [#fig5_3] shows the width of the confidence interval of the 95th percenti
 according to the number of simulation. There are a number of simulations for
 which the width of the confidence interval is sufficiently low to be acceptable.
 Moreover, beyond this number an increase of the number of simulation does not provide
-significant accuracy (see [#table-2]) while it increases the computing time
+significant accuracy (see table [#table-2]) while it increases the computing time
 considerably. Indeed, the simulations are all performed in very short times,
 despite the fact that the population can vary from 1 to 1,000 occupants. So we
 deduce that the time spent to perform the simulations is proportional
@@ -292,7 +302,7 @@ the number of simulations that seems most relevant to carry out a study.
 ## Complementary analysis
 
 It is observed that at least three separate evacuation schemes exist according to the
-number of occupants (see figures [#fig5_1] and [#fig5_2]) the Table [#table-3] gives the
+number of occupants (see figures [#fig5_1] and [#fig5_2]) the table [#table-3] gives the
 correspondence with the RSET obtained. These three schemes correspond to three
 density ranges of people highlighting the influence of this one on the RSET.
 Indeed, the density of people influences on congestion time and average speed of
@@ -445,7 +455,7 @@ of the history effect. We run again 1,000 times each of the three simulations.
 In this case too, the distribution functions are not linear despite the fact that
 conflict resolution time is fixed to 1.15 s. We deduce that history effects
 are nonlinear witch is consistent with what we might suppose. In addition, this implies that the
-distribution functions of test case 3 and 4 will not be linear. Synthetically Table
+distribution functions of test case 3 and 4 will not be linear. Synthetically table
 [#table-7] presents I~p95%~, L~Ip95%~, I~p5%-95%~, L~Ip5-95%~ and L~Ip5%-95%~/q~50%~ for
 the three simulations and compared to those of the test case n°1. The widths of
 intervals are included in figure [#fig6_5]. We deduce that the fix of conflict resolution
@@ -481,7 +491,7 @@ For this third test case we take again the values by default of the software
 for the conflict resolution time and we draw randomly
 the position of the people. We make 1,000 times each of these 3 simulations.
 
-In a synthetic way the Table [#table-8] presents I~p95%~, L~Ip95%~, I~p5%-95%~, L~Ip5-95%~ and L~Ip5%-95%~/q~50%~
+In a synthetic way the table [#table-8] presents I~p95%~, L~Ip95%~, I~p5%-95%~, L~Ip5-95%~ and L~Ip5%-95%~/q~50%~
 for three simulations and compares them
 to those of the test case n°1. The widths of interval are included
 in figure [#fig6_6]. We deduct from it that the position has more influence on
@@ -516,7 +526,7 @@ the occupants (draw according to a uniform law). We retain the default value for
 resolution time and vary the position of the people. We run 1,000 times
 each of these three simulations.
 
-Synthetically Table [#table-9] shows I~p95%~, L~Ip95%~, I~p5%-95%~, L~Ip5-95%~ and L~Ip5%-95%~/q~50%~
+Synthetically table [#table-9] shows I~p95%~, L~Ip95%~, I~p5%-95%~, L~Ip5-95%~ and L~Ip5%-95%~/q~50%~
 for the three simulations and compared to those of the test case
 n°3. The widths of intervals are included in figure [#fig6_7]. We conclude that the
 variability in response time affects the RSET which is logical. It is also observed
