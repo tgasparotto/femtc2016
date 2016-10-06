@@ -217,7 +217,7 @@ Table IV and V show the ANOVA results. These results show that:
 
 |------------------------------------------------------------------------------------------------------||||||
 |Flange Temperatures            | Sum of squares | Degrees of Freedom | Mean Square| F-ratio|p-value        |
-+:---{width:30%}----------------|:--------------:|:---{width:14%}----:|:----------:|:------:|:-{width:12%}-:+
++:---{width:28%}----------------|:--------------:|:---{width:14%}----:|:----------:|:------:|:-{width:12%}-:+
 |**Principal Effects**          |                |                    |            |        |               |
 | *A: Vertical Clearance*       | 294352         | 1                  | 294352     | 107.8  | **0.000**     |
 | *B:Bridge Substructure*       | 782            | 1                  | 782        | 0.3    | 0.604         |
@@ -250,7 +250,7 @@ Table IV and V show the ANOVA results. These results show that:
 
 |------------------------------------------------------------------------------------------------------||||||
 | Web Temperatures              | Sum of squares | Degrees of Freedom | Mean Square| F-ratio|p-value        |
-+:---{width:30%}----------------|:--------------:|:---{width:14%}----:|:----------:|:------:|:-{width:12%}-:+
++:---{width:28%}----------------|:--------------:|:---{width:14%}----:|:----------:|:------:|:-{width:12%}-:+
 |**Principal Effects**          |                |                    |            |        |               |
 | *A: Vertical Clearance*       | 533413         | 1                  | 533413     | 93.8   | **0.000**     |
 | *B:Bridge Substructure*       | 63858          | 1                  | 63858      | 11.2   | **0.007**     |
