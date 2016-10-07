@@ -264,14 +264,14 @@ Figure4. The probability distribution of evacuation time in Condition 2: a Male;
 [Firgue5 a]: images/Firgue5-a.png "Firgue5 a" { width:45%; max-width:90% }
 [Firgue5 b]: images/Firgue5-b.png "Firgue5 b" { width:45%; max-width:90% }
 
-Figure5. The probability distribution of evacuation time in Condition9: a Male; b female.
+Figure5. The probability distribution of evacuation time in Condition3: a Male; b female.
 
 ![Firgue6 a]![Firgue6 b]
 [Firgue6 a]: images/Firgue6-a.png "Firgue6 a" { width:45%; max-width:90% }
 [Firgue6 b]: images/Firgue6-b.png "Firgue6 b" { width:45%; max-width:90% }
 
 
-Figure6. The probability distribution of evacuation time in condition: a Male; b female.
+Figure6. The probability distribution of evacuation time in condition4: a Male; b female.
 ~
 Males’ and females’ evacuation time distribution ranges are quite wide but not even. 
 Males’ showed a trend of increasing before decreasing, while females’ increased gradually. 
