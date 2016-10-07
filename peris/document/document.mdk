@@ -132,7 +132,7 @@ which parameter interactions are important. The resulting scenarios that had to 
 |Parameters                                                                                                                                  |||||||
 |Nº Case       |Vertical Clearance| Bridge Substructure Configuration| Span              |Heat Release Rate  |Position          |Width             |
 |              | 9 m/6 m          | Abutment/Piers                   | 16m/ 24m          | 1800/2400 kW/m^2^ | Central/Abutment | 13m/ 23.4m       |
-+:-{width:5%}-:|:---{width:5%}---:|:---{width:21%}------------------:|:---{width:20%}---:|:---{width:20%}:   |:---{width:3%}---:|:---{width:5%}---:+
++:-{width:5%}-:|:---{width:5%}---:|:---{width:21%}------------------:|:---{width:20%}---:|:---{width:25%}:   |:---{width:5%}---:|:---{width:5%}---:+
 | 1            | 9m               | Piers                            | 24m               | 2400 kW/m^2^      | Abutment         | 23.4m            |
 | 2            | 6m               | Piers                            | 24m               | 2400 kW/m^2^      | Abutment         | 13m              |
 | 3            | 9m               | Abutments                        | 24m               | 2400 kW/m^2^      | Abutment         | 13m              |
@@ -300,4 +300,42 @@ are usually in the bottom flange, because there is less accumulation of smoke wi
 to the abutments, then the smoke accumulates within the girders and the maximum temperatures are located in the web.
 
 # FEM ANALYSIS { #sec-intro }
+In this section a FEM Analysis of 21.34 m span and 5 m vertical clearance steel-girder bridge has been carried out. 
+The bridge deck has five W36x300 hot rolled steel girders that support a reinforced concrete slab 0.2 deep not connected
+to the girders. The thermo-mechanical response of the bridge
+is obtained with the finite element software Abaqus. The Abaqus analysis consists of 2 steps. In the first step (a) the thermal 
+analysis is carried out by using the adiabatic surface temperature given in the previous analysis as input and
+the heat transfer method provides the transient nodal temperatures with respect to time using the thermal properties
+of the material. In the second step (the structural analysis), the nodal temperatures are read from the thermal analysis
+and corresponding temperature dependent mechanical material properties are used to find the equilibrium of the structure.
+More information about the model building can be found in XXXXXX Peris-Computers Peris ASCE.
+
+Two different fire scenarios have been considered (See Fig. [#fig-firescenarios]) as it have been shown that even they have the same value of maximum adiabatic temperatures
+they have different types and times of failure.
+
+~ Figure { #fig-firescenarios; caption:"Fire scenarios considered"}
+![Figura Fire Scenarios]
+~
+
+[Figura Fire Scenarios]: images/Figura-Fire-Scenarios.png "Figura Fire Scenarios" { width:auto; max-width:90% }
+
+The next Figure [#fig-yieldings] compares yielding extension and deformed shapes for both fire scenarios at collapse time.
+
+~ Figure { #fig-yieldings; caption:"Compartion of yielding areas and deformations. a) fire under the bridge mid-span. b) fire close to the abutments."}
+![Yielding1]
+
+[Yielding1]: images/Yielding1.png "Yielding1" { width:auto; max-width:90% }
+
+~
+
+
+As it is shown above, the failure of the structure is different depending on the position of the fire source. When the fire is located under the mid-span,
+the failure occurs at 12 minutes because a high web yielding appears at mid-span in the central girders. In case the fire source is located close to the abutments
+the structural integrity of the bridge would be affected, collapsing around 4 minutes, 8 minutes earlier than the *fire1* scenario. 
+The failure in this case occurs because a high web-yielding appears on the contact with the abutment.
+
 # CONCLUSIONS
+
+This paper studies the factors that influence the maximum temperatures in the gas surrounding I-girder bridges and also
+applies a methodology to obtain their structural response. Results show that vertical clearance, type of fuel and position of
+the fire load are the most influential parameters for the flange temperatures. Web temperatures are also influenced by the bridge substructure configuration.
