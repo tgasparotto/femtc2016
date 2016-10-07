@@ -95,7 +95,7 @@ of cells in the model ranges from 1,134,000 to 3,262,500, having all cells dimen
 
 
 ### Fire Load and Combustion Model
-The FDS model includes the tanker of the tanker truck modeled as an horizontal surface of 12 x 2.5 meters at one meter
+The FDS model includes the tanker of the tanker truck modeled as a horizontal surface of 12 x 2.5 meters at one meter
 above the road level. The CO and soot yields have been chosen according to the values showed in the table A.39 of the SFPE
 Handbook Manual [@SFPE2016] for hydrocarbon liquids and have values of 0.019 and 0.059 respectively.
 It has been assumed that diesel and gasoline have the same yields.
