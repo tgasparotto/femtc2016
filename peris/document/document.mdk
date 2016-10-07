@@ -43,11 +43,12 @@ the gas surrounding I girder bridges during a fire, since this is a critical par
 the bridge. More specifically, the study considers four geometric parameters (vertical clearance, bridge
 substructure configuration, span length and bridge width) and two fire scenario parameters (position of the fire load
 and type of fuel). This study complements previous work [@PerisSayol2016] since the parameters analyzed by CFD
-were impossible to characterize in real cases. Also, in this paper, the structural behavior of a simply supported
-steel-girder bridge against tanker through finite element models has been studied
+were impossible to characterize in real cases. Also, in this paper, the structural behavior of a 21 meters span simply supported
+steel-girder bridge against tanker with finite element models has been studied to see if the position of the fire influence on the times and
+type of failures.
 
 # CFD ANALYSIS { #sec-intro }
-This section explains the parameters analyzed, the methodology used and the CFD models design.
+This section explains the parameters analyzed, the methodology used and the CFD models construction.
 ## Parameters Studied
 This study considers six parameters: four of them describe the geometry of the bridge (vertical clearance, bridge substructure configuration,
 span length and bridge width) and two of them (position of the fire load and type of fuel) are related to the fire scenario.
@@ -77,13 +78,13 @@ All the bridges also had a concrete slab 0.2 m thick on top of the I-girders.
 
 
 ## Computational Fluid Dynamics Models (CFDs)
-FDS Software 6.1.1 [@FDS2016] has been chosen to obtain the temperatures in the gas surrounding the bridge deck. FDS was developed
+FDS Software 6.1.1 [@FDS2016] has been used to obtain the temperatures in the gas surrounding the bridge deck. FDS was developed
 at the National Institute of Standards and Technology (NIST) and applies computational fluid dynamics (CFD) techniques 
-to fire engineering. FDS has been succesfully used to study real bridge fires [@AlosMoya2014; @GongandAgrawal2015; @Wright2013]. 
+to fire engineering. FDS has been successfully used to study real bridge fires [@AlosMoya2014; @GongandAgrawal2015; @Wright2013]. 
 Building the FDS model requires defining: (1) a control volume with its boundary conditions
 representing the volume in which the entire analysis is carried out, (2) a geometry included in the control volume which
 represents the geometry of the case study, (3) a mesh or discretization of the control volume, (4) material properties, (5)
-fire sources, (6) a combustion model, and (7) sensors or elementsof the model where the outputs are recorded. 
+fire sources, (6) a combustion model, and (7) sensors or elements of the model where the outputs are recorded. 
 
 ### Control Volume and Mesh
 The control volume used in this study includes the bridge as well as part of its approaches. The model varies according 
@@ -110,16 +111,11 @@ Adiabatic temperatures are measured in FDS with sensors defined by the user. Sen
 spaced 20 cm with three sensors each located in: bottom flange (sensor 0), the south face (sensor 1), and
 the north face (sensor 2). The total number of sensor varies according to the span length. Only the analysis of the temperatures
 of the most heated girder are studied here.
-The adiabatic surface temperature developed by Wickström et Al. [@Wickstrom2007] is used to transfer the information obtained by the fire 
-model to the thermal model. This adiabatic surface temperature is a fictitious temperature obtained by FDS assuming
-that the structural element is a perfect insulator and is commonly used for calculating both convective and 
-radiative heat transfer. The use in this paper of adiabatic temperatures is justified because it is a value that 
-does not depend on the material of the bridge and can be used as an input in the thermo-mechanical models.
 
 ## Design of Experiments
 A combination of all six parameters with two level each would have required 64 simulations, running those was undesirable
 due to the high computational cost. A Taguchi's method [@Taguchi2015] has been carried out to reduce the simulations to 32,
-which fire scenarios are modeled to extract the maximum information and to know
+where fire scenarios are modeled to extract the maximum information and to know
 which interactions are important. The resulting scenarios that had to be run are shown in table [#fig-cases].
 ~ TableFigure { #fig-cases; caption:"Experimental Design of the Simulations"}
 |--------------------------------------------------------------------------------------------------------------------------------------------|||||||
@@ -195,12 +191,12 @@ temperatures are the average of the temperatures in the two web faces.
 
 
 To asses the significance of the parameters in the maximum adiabatic temperatures reached 
-over the structure an analysis of variance (ANOVA) using the STATGRAPHICS software [@statgraphics] was carried out. An 
+over the structure, an analysis of variance (ANOVA) using the STATGRAPHICS software [@statgraphics] was carried out. An 
 ANOVA statistical test compares the means of three groups in response to one or several variables
 and is used to determine the impact of independent variables (e.g the parameters studied) on the
 dependent variables (temperatures reached by the structure) in a regression analysis. This impact
 is given by a coefficient known as the p-value. Low p-values indicate a significant influence (Values below of 0.05)
-Table [#fig-resultsflange] and [#fig-resultsweb] show the ANOVA results. These results show that:
+Table [#fig-resultsflange] and [#fig-resultsweb] show the ANOVA results.
 
 
 ~ TableFigure { #fig-resultsflange; caption:"Results of the Anova analysis for flange temperatures"}
@@ -271,7 +267,7 @@ Table [#fig-resultsflange] and [#fig-resultsweb] show the ANOVA results. These r
 {thead-tr-background-color:Gainsboro}
 ~
 
-The main conclusions of this analysis show:
+The main conclusions of this analysis are:
 
 1) The bridge span and bridge width do not influence the maximum adiabatic temperatures of the bridge
 (p-values of 0.10 and 0.52 for the bottom flange temperatures and 0.35 and 0.77 for web temperatures respectively), although
@@ -290,18 +286,20 @@ are usually in the bottom flange, because there is less accumulation of smoke wi
 to the abutments, then the smoke accumulates within the girders and the maximum temperatures are located in the web.
 
 # FEM ANALYSIS { #sec-intro }
-In this section a FEM Analysis of 21.34 m span and 5 m vertical clearance steel-girder bridge has been carried out. 
+In this section a FEM Analysis of a 21.34 m span and 5 m vertical clearance steel-girder bridge has been carried out. 
 The bridge deck has five W36x300 hot rolled steel girders that support a reinforced concrete slab 0.2 deep not connected
-to the girders. The thermo-mechanical response of the bridge
-is obtained with the finite element software Abaqus. The Abaqus analysis consists of 2 steps. In the first step (a) the thermal 
+to the girders, so there is non-composite action. The thermo-mechanical response of the bridge
+is obtained with the finite element software Abaqus. The Abaqus analysis consists of 2 steps. In the first step the thermal 
 analysis is carried out by using the adiabatic surface temperature given in the previous analysis as input and
 the heat transfer method provides the transient nodal temperatures with respect to time using the thermal properties
 of the material. In the second step (the structural analysis), the nodal temperatures are read from the thermal analysis
 and corresponding temperature dependent mechanical material properties are used to find the equilibrium of the structure.
 More information about the model building can be found in [@PerisSayol2015;@PerisSayolASCE].
 
-Two different fire scenarios have been considered (See Fig. [#fig-firescenarios]) as it have been shown that even they have the same value of maximum adiabatic temperatures
-they have different types and times of failure.
+Two different fire scenarios have been considered (See Fig. [#fig-firescenarios]), tanker truck centered under the central
+girder of the bridge (Girder 3) and located under the bridge mid-span (scenario "fire1") or close to the east abutment (scenario "fire2").
+The purpose of carry out two different fire positions is to see if the bridge have different structural behaviour if the position of the fire 
+changes even if the maximum adiabatic temperatures reached over the structure are in the same range. 
 
 ~ Figure { #fig-firescenarios; caption:"Fire scenarios considered"}
 ![Figura Fire Scenarios]
@@ -311,28 +309,29 @@ they have different types and times of failure.
 
 The next Figure [#fig-yieldings] compares yielding extension and deformed shapes for both fire scenarios at collapse time.
 
-~ Figure { #fig-yieldings; caption:"Compartion of yielding areas and deformations. a) fire under the bridge mid-span. b) fire close to the abutments."}
-![Yielding1]
+~ Figure { #fig-yieldings; caption:"Comparation of yielding areas and deformations. a) fire under the bridge mid-span. b) fire close to the abutments."}
 
-[Yielding1]: images/Yielding1.png "Yielding1" { width:auto; max-width:90% }
+![Yielding1]
 
 ~
 
+[Yielding1]: images/Yielding1.png "Yielding1" { width:auto; max-width:90% }
 
-As it is shown above, the failure of the structure is different depending on the position of the fire source. When the fire is located under the mid-span,
-the failure occurs at 12 minutes because a high web yielding appears at mid-span in the central girders. In case the fire source is located close to the abutments
+As it is shown above, the failure of the structure is different depending on the position of the fire. When the fire is located under the mid-span,
+the failure occurs at 12 minutes because a high web yielding appears at mid-span in the central girders. In the case that the fire source is located close to the abutments
 the structural integrity of the bridge would be affected, collapsing around 4 minutes, 8 minutes earlier than the *fire1* scenario. 
-The failure in this case occurs because a high web-yielding appears on the contact with the abutment.
+That's because the failure in this case occurs when a high web-yielding appears on the contact with the abutment, creating high stresses into the girder in the area affected by the fire.
 
 # CONCLUSIONS
 
 This paper studies the factors that influence the maximum temperatures in the gas surrounding I-girder bridges and also
-applies a methodology to obtain their structural response. Results show that vertical clearance, type of fuel and position of
+applies a methodology to obtain the structural response of a 21.34 meters span steel-girder bridge subjected to two different fire scenarios.
+
+Results show that vertical clearance, type of fuel and position of
 the fire load are the most influential parameters for the flange temperatures. Web temperatures are also influenced by the bridge substructure configuration.
 This type of analysis is very relevant as it constitutes the basis for the development of parametric temperature curves specific for bridges.
 
-Also, it has been shown that even the maximum adiabatic temperatures are on the same range, the position of the fire load influence on the type and time of failure.
+Also, it has been shown that even the maximum adiabatic temperatures are on the same range, the position of the fire load has an influence on the type and time of failure.
 Remark that this conclusion has to be taken into account in case of simplistic analysis of the structural behaviour of bridges against fire.
 
-#REFERENCES
 [BIB]
