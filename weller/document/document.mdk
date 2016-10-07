@@ -1,18 +1,18 @@
 [INCLUDE=style/lncs]
-Title         : TITLE OF YOUR PAPER, IN CAPITAL LETTERS CENTERED ON PAGE, USING ONE OR MORE LINES AS NECESSARY
-Subtitle      : An optional subtitle.
+Title         : TE PAPA MUSEUM - A CASE STUDY OF THE BENEFITS OF MODERN FIRE ENGINEERING TOOLS 
+Subtitle      : 
 
-Author        : First Author Name
-Affiliation   : Research institute
-Email         : you@bar.com
+Author        : Kevin Weller
+Affiliation   : Beca
+Email         : kevin.weller@beca.com
 
-Author        : My co-author 1
-Affiliation   : Other institute
-Email         : other1@bar.com
+Author        : Ben Hume
+Affiliation   : 
+Email         : ben.hume@beca.com
 
-Author        : My co-author 2
-Affiliation   : Other institute
-Email         : other2@bar.com
+Author        : 
+Affiliation   : 
+Email         : 
 
 Bibliography  : references.bib
 Logo          : False
@@ -23,10 +23,9 @@ name-references : REFERENCES
 [TITLE]
 
 ~ Abstract
-Papers should follow standard technical paper format, an abstract
-followed by the more detailed presentation. The abstract should be typed
-on this area of the first page, with the presentation following after two
-lines of space.
+Designed at a time when fire zone models, ball-bearing evacuation models and safety factors were on the forefront of fire engineering design, Te Papa Museum stretched the boundaries of performance based fire engineering. The result was a heavily engineered approach to fire safety with a complex array of fire safety systems.
+This paper outlines the case study of a reassessment of the museum using computation fluid dynamics and agent based evacuation modeling. Coupled with a more comprehensive regulatory environment, these tools have enabled engineers to better understand the impacts of fire and smoke on the building, and how to improve life safety and asset protection in a cost effective manner. 
+
 ~
 
 [editor]: https://www.madoko.net/editor.html "Madoko.net Editor"
@@ -34,74 +33,202 @@ lines of space.
 [femtc2016]: https://github.com/thunderheadeng/femtc2016
 [emaillink]: mailto:conference@thunderheadeng.com "conference@thunderheadeng.com"
 
-# INTRODUCTION
-
+#Introduction
 Te Papa Museum is a landmark building and the national museum of New Zealand. Designed and built in the 1990’s, the building has numerous atria connecting six floors and nearly four hectares of museum exhibitions, function centres and collections stores.
 
-Twenty years on, things have changed significantly in the field of fire engineering. CFD modelling, agent-based evacuation simulations have become prevalent over zone modelling and nodal based evacuation simulations. Vastly improved computational performance makes possible the opportunity to carry out fire engineering to a level not previously possible.
+Twenty years on, things have changed significantly in the field of fire engineering. Computation fluid dynamics (CFD) and agent-based evacuation simulations have become prevalent over zone modelling and nodal based evacuation simulations. Vastly improved computational performance makes possible the opportunity to carry out fire engineering to a level not previously possible for a fraction of the cost.
 
-With a major upgrade planned, Beca were asked by Te Papa to retrospectively interrogate the building’s design. While primarily aimed at investigating the life safety of the building, protection of the invaluable artwork and historic treasures was also a key consideration. 
+With a major upgrade planned, Beca were asked by Te Papa to retrospectively interrogate the building’s design. While primarily aimed at investigating the life safety of the building, protection of the exhibitions, invaluable artwork and historic treasures was also a key consideration. 
 
-This paper outlines the investigation and fire assessment that was undertaken and aims to assess the benefits offered by modern tools, whether these give us a better understanding of the risks and impacts of fire and smoke in the building, or if they just add complication. 
+This paper outlines the investigation and fire assessment that was undertaken and considers the benefits offered by modern tools. Do they give us a better understanding of the risks and impacts of fire and smoke in the building, or if they just add complication. 
 
-# Building features. 
+#Building features
 
-One of the key architectural features of Te Papa museum is the openness of the public areas of the building, large atria connecting the public areas of the building in a single compartment or firecell.  For up to ten thousand visitors per day, the six floors of exhibition and function spaces, access between levels is by large open stairwells in the Entrance and Orientation atrium. 
+One of the key architectural features of Te Papa museum is the openness of the public areas of the building, large atria connecting the public areas of the building in a single compartment or firecell.  
 
-A number of fire safety systems are provided in the building to maintain the safety of visitors. Automatic sprinkler systems are provided throughout the building, with smoke detection provided in most public spaces. 
-The building is also equipped with a smoke control system. There are eight smoke extract in the museum. Each of these activates independently when smoke is detected in different areas of the building, each drawing between 100m3s-1 and 15m3s-1. Depending on which extract systems activate, a matrix of make-up air vents open to direct airflow as required. Escape route pressurisation systems also provide a source of make-up air.
+A number of fire safety systems are provided in the building to maintain the safety of visitors. Automatic sprinkler systems are provided throughout the building, with smoke detection provided in most public spaces. Collection spaces, escape routes, and office areas are separated from the exhibition and function spaces by fire rated construction. The building is also equipped with a smoke control system. There are eight smoke extract systems in the museum. Each of these activates independently when smoke is detected in different areas of the building, each drawing between 100m3s-1 and 15m3s-1. Depending on which extract systems activate, a matrix of make-up air vents open to direct airflow as required. Escape route pressurisation systems also provide a source of make-up air.
 
-Finally, collection spaces, escape routes, and office areas are separated from the exhibition and function spaces by fire rated construction. 
-
-# Fire Engineering Methodology. 
-
+#Fire Engineering Methodology
 A number of tools were used in the development of the fire engineering design of the building, starting in the early 1990’s. 
 
-##Smoke modelling.
+##Smoke control
 
-The large, interconnecting atriums in the museum, with open bridge links and balconies represent a fire engineering challenge, to protect occupants on the upper floors from the effects of fire and smoke long enough to evacuate the building. 
+The large, interconnecting atriums in the museum, with open bridge links and balconies represent a fire engineering challenge. The museum has a smoke control systems to protect occupants on the upper floors from the effects of fire and smoke long enough to evacuate the building. 
 
-When the design of the museum began in the early 1990’s, the designer recognized the need for complex fire engineering assessment. PHOENICS Fire, a computation fluid dynamics (CFD) program, was available at the time, but with a cost of about £50,000 per run from a UK based firm, the use of PHOENICS was simply cost prohibitive. 
+When the design of the museum began in the early 1990’s, the designer recognized the complexities of the building architecture, and the impact this would have on the fire engineering design. Computational fluid dynamics (CFD) analysis of smoke movement was considered, using PHOENICS Fire program. At a cost of about £50,000 per run it was simply cost prohibitive. 
 
-The designer instead elected to use FPEtool Fire Simulator was used. Fire Simulator was one of a suite of four packages in the FPEtool collection, developed by NIST, and was originally available on a 3 ½ inch floppy disk. Fire Simulator, is a zone model, which considers a single room with an upper and lower layer. Whist this model was unable to account for spill plumes smoke movement to other parts of the museum, it was able to be used to model forced ventilation, to calculate the smoke extract rate required to maintain a desired smoke layer height. 
+Instead, the designer used FPEtool Fire Simulator, one of a suite of four packages in the FPEtool collection, developed by NIST, and was originally available on a 3 ½ inch floppy disk. Fire Simulator is a zone model programme, limited to modelling a single room with an upper and lower layer.  It was able to be used to model individual spaces in the museum to calculate the smoke extract rates required to maintain desired smoke layer heights.  For makeup air, the a selection of the 12 makeup air vents were programed to open to provide a makeup air at a velocity of approximately 5m/s. Additional makeup air was provided by spill air from the escape route pressurisation systems in the building. To support the smoke control system, suppression systems were provided to limit potential fire sizes. Sprinklers were installed throughout the building. Flame detection and deluge systems was installed in the large atriums where sprinkler response times would be slow, “to limit the maximum fire size to no more than 4.0 MW” [@basebuild]. 
 
-For the fire engineering re-assessment of the building, Beca elected to use Fire Dynamics Simulator (FDS). FDS is a CFD model of ﬁre-driven ﬂuid ﬂow [REF FDS USERGUIDE] developed by NIST, and was used to model the smoke spread around the museum.  To building the model, PyroSim software, developed by Thunderhead engineering, was used to create the FDS input files. A more efficient drafting software, AutoDesk Revit was used to create a 3D model of the museum, which was then imported into PyroSim. Once the FDS simulation was complete, the results were viewed using the Smokeview visualisation tool. 
+In reassessing the fire engineering design of the building, Beca elected to use Fire Dynamics Simulator (FDS). FDS is a CFD model of ﬁre-driven ﬂuid ﬂow [REF FDS USERGUIDE] developed by NIST, and was considered capable of modelling the smoke spread around the museum.  A number of tools were used to visualise the inputs and results for the FDS model. PyroSim, a graphic user interface (GUI) developed by Thunderhead Engineering, was used to create the FDS input files. Model geometry was imported from a 3D AutoDesk Revit model of the museum. Once the FDS simulation was complete, the results were viewed using the Smokeview visualisation tool. 
 
-## Required safe egress time.
+The FDS model was made to include the whole museum exhibition and functions compartment, spanning six floors. All eight smoke extract systems were incorporated into the FDS model of the building, with beam detector devices used to trigger when each extract system started, and opening make-up air vents as per the building control matrix. 
 
-The museum has a large number of protected stairwell and corridor escape routes, as well as exits directly to outside, with numerous converging and diverging escape routes, travel and queuing times to be considered. These factors make it difficult to calculate the required safe egress time (RSET), the time required to evacuate the building, by hand. 
-In the original design of the building, EVACNET+, created by ####, was used to carry out the egress calculation. EVACNET+ is a nodal model, where the building is represented as a network of nodes, representing rooms and spaces, and arcs, representing travel paths and passageways [REF]. Inputs are code based, with the number of occupants in each area of the building defined in the model inputs. Importantly, the nodal model can simulate converging and diverging flows and queues to estimate the evacuation time. 
+One feature which was not modelled in FDS was the escape route pressurisation systems.  The five stairwell pressurisation systems and three corridor pressurisation systems account are capable of injecting between 20cbm/s and 60cbm/s of fresh air into the building. Some of this air leaks out of the escape routes into both the museum, with the remainder venting to outside. Estimating the portion of pressurisation air leaking into the museum has not been possible, based on a large number of uncertainties. 
+
+##Evacuation modelling
+The museum has a large number of escape routes, including protected stairwells and corridors, with numerous converging and diverging paths. Calculating the required safe egress time (RSET) for the building by hand would be challenging. 
+
+In the 1990’s EVACNET+ was used to carry out the egress calculation. EVACNET+ is a nodal evacuation model. A building is represented as a network of nodes, representing rooms spaces, connected by arcs, representing travel paths and passageways [REF]. Inputs are code based, with the number of occupants in each area of the building defined in the model inputs. Importantly, the nodal model can simulate converging and diverging flows and queues to estimate the evacuation time. 
+
 For the re-assessment of the museum, Beca elected to use Pathfinder to estimate the evacuation time. Pathfinder, created by Thunderhead Engineering, is an ‘agent based egress and human movement simulator’ [REF Pathfinder Manual], with a graphic user interface (GUI) and visualisation tools for reviewing results. In ‘steering’ mode, “occupants use a steering system to move and interact with others”, trying “to emulate human behaviour and movement”. This mode was chosen to account for occupant queuing and flow, as well as an element of decision making where occupants stuck in a long queue can switch to a more favourable evacuation route. As with PyroSim, the 3D Revit model was imported into Pathfinder to create the basis for the model environment.   
 
+#Building Code requirements
 
-# Building Code requirements
-With changes in technologies available, compliance requirements in New Zealand have also changed. The fire engineering design for Te Papa was based on compliance document C2/AS1 to comply with the New Zealand Building Code (NZBC) [REF BASE BUILD REPORT].  This was an ‘acceptable solution’ or ‘deemed to satify’ approach to fire engineering. However, complex building features such as the large atriums could not be demonstrated to comply with C2/AS1. Therefore, the complex features were demonstrated to comply using an alternate solution approach, and were subject to peer review by experts from the Building Research Association of New Zealand’s (BRANZ). 
-Without a regulatory framework to support the design, tenability criteria were derived from literature and best practise. “Fire safety systems were designed such that untenable conditions should not occur in a fire situation” [Ref BASE BUILD REPORT]. To do this, suppression systems were provided to limit potential fire sizes. For example a flame detection and deluge system was installed in the large atriums, where sprinkler response times would be slow, “to limit the maximum fire size to no more than 4.0 MW” [Ref BASE BUILD]. Sprinklers were installed throughout the building. The smoke extract systems were designed to maintain the smoke layer height, within between 2.5m and 7m clear air above occupied floors, thus maintaining the visibility of building occupants, and protecting them from the effects of smoke. Based on a recommendation from BRANZ, sufficient escape routes were then provided to ensure that the building could be safely evacuated with a maximum egress time of 10 minutes. 
+With changes in technologies available, compliance requirements in New Zealand have also changed. The fire engineering design for Te Papa was based on compliance document C2/AS1 to comply with the New Zealand Building Code (NZBC) [REF BASE BUILD REPORT].  This was an ‘acceptable solution’ or ‘deemed to satisfy’ approach to fire engineering. However, complex building features such as the large atriums did not fit within the scope of C2/AS1. Therefore, complex features such as the atriums were demonstrated to comply with the NZBC using an alternate solution, calculation based approach. 
 
-The modern NZBC ‘Protection from Fire’ clauses are performance based, with tenability acceptance criteria specified within the building code. Given the number of people in the building, the NZBC considers tenability to fail when visibility for any occupants drops below 10m. Compliance is based on the available safe egress time (ASET) for occupants exceeding the required safe egress time (RSET). This enables a designer to balance prolonging failure of tenability in the building against providing features to accelerate evacuation. The fire engineering reassessment of Te Papa was carried out using NZBC compliance document Verification Method 2 (C/VM2) which specifies modelling inputs such as fire growth rates, fire chemistry and occupant travel speeds. Another requirement of the NZBC is the robustness check. In the event that a life safety system fails, such as the smoke extract system, no occupants can be exposed to a fractional effective dose of carbon monoxide of greater than 0.3. Note that the automatic sprinklers and the fire alarm system are considered reliable and unlikely to fail, provided they are installed in accordance with a recognized standard. 
+Without a regulatory framework to support the fire engineering design of this multi-level atrium building, acceptance criteria were derived from literature and best practise. “Fire safety systems were designed such that untenable conditions should not occur in a fire situation” [Ref BASE BUILD REPORT]. Smoke extract systems were designed to maintain the smoke layer height, within between 2.5m and 7m clear air above occupied floors, thus maintaining the visibility of building occupants, and protecting them from the effects of smoke. Sufficient escape routes were then provided to ensure that the building could be safely evacuated with a maximum egress time of 10 minutes. 
 
-Assessment outcomes
+The current NZBC ‘Protection from Fire’ clauses are performance based, with tenability acceptance criteria specified within the building code. For Te Papa museum, tenability is considered to fail when visibility for any occupants drops below 10m, or when occupants are exposed to a fractional effective dose of carbon monoxide (FEDCO) of 0.3 or greater. Compliance is achieved when the available safe egress time (ASET) for occupants exceeds the required safe egress time (RSET). This enables a designer to balance prolonging the time to failure of tenability, such as with smoke control systems, against providing features to speed up the evacuation, such as larger escape routes. Another requirement of the NZBC is the robustness check. In the event that a life safety system fails, such as the smoke extract system, no occupants can be exposed to a fractional effective dose of carbon monoxide of greater than 0.3. Note that the automatic sprinklers and the fire alarm system are considered reliable and unlikely to fail, provided they are installed in accordance with a recognized standard. 
+
+#Assessment outcomes
+
 The fire engineering reassessment by Beca demonstrated that Te Papa Museum generally complies with the Building Code, despite changes in the Building Code requirements. A number of these changes can be attributed to alterations made to the museum after its construction, which are of little interest to this paper, while others can be attributed to changes fire engineering tools over the past twenty years. Other findings of the reassessment have identified potential improvements in property protection measures to safeguard museum exhibitions.  A number of examples have been presented below. 
-Example 1
 
-Example 2
+##Atrium Fire
+The Entrance Atrium was designed with a 100cbm/s smoke extract system. Fire Simulator would have been used to model the atrium as a single room, with makeup air supply, accounting for a 4MW fire at the base of the atrium. This would have assumed and axisymmetric smoke plume, being extracted from the top of the atrium. 
 
-Example 3
-
-Example 4
-
-Discussion
-Life Safety
-
-Property Protection
+In the re-assessment of the building, it was elected to model a spill plume into the atrium, rather than a fire at the base of the atrium itself. A fire was modelled in the Level 1 shop, spilling up atrium. Visual interrogation of the FDS models in Smokeview showed spill plume from the shop fire became noticeable disturbed when the smoke extract system activated. Makeup air, drawn through the front entrance doors at approximately 5m/s, disturbed the spill plume, resulting in significant additional entrainment. The extent of the disturbance can be seen in the slice files below, showing the velocity and air movement before (left) and after (right) the extract system activates.  
 
 
-Conclusion
+FDS model results showed that given 1.5MW fire on Level 1, with a spill plume up the Entrance Atrium, visibility would fall below 10m for occupants on the upper floors of the building, a failure in tenable conditions. 
+To reduce the extent of disturbance of the spill plume, this FDS simulation was altered and re-run. In the second simulation, all of the existing makeup air vents in the building were set to open simultaneously on activation of the Entrance Atrium extract system. This was shown to significantly reduce makeup air velocities to in the order of 1m/s, and almost illuminating any disturbance of the spill plume. With less entrainment, the entrance atrium extract system could then maintain tenable conditions on the upper floors of the building indefinitely. 
 
 
 
+![Entrance vel comp1]
 
-# GENERAL INSTRUCTIONS { #sec-intro }
+[Entrance vel comp1]: images/Entrance-vel-comp1.GIF "Entrance vel comp1" { width:auto; max-width:100% }
+
+~ Figure { #fig-smokeview; caption:"Smokeview slicefile showing velocity profile in atrium with existing (left) and ammended (right) makeup air configurations. (use the `.wide` class for wide figure)."}
+
+~
+
+
+As mentioned above, the FDS model fails to take account of air introduced to the building by the escape route pressurisation system. If for example half of the peak makeup air volume, 30 cbm/s, can be relied upon to discharge into the atrium firecell, this would reduce the required makeup air area from 100cbm/s to 70cbm/s.  The corresponding 30% reduction makeup air velocity to about 3.5m/s is could reduce the fire plume disturbance. Nevertheless, reconfiguring the makeup air system and reducing the makeup air velocity to approximately 1m/s has been shown to improve the efficiency of the smoke control system, making the difference between passing and failing NZBC acceptance criteria. 
+
+##Function space fire
+The Icon Function centre is located on Level 2 of the museum. The space is provided with two escape routes, and an automatic sprinkler system. Of interest is that there is an actuated door to outside, which provides makeup air for the Entrance Atrium smoke extract system. It is separated from the remainder of the atrium firecell by a glass partition and doors which are commonly held open.  
+
+For the purpose of the fire engineering design of the building, it would have been designed to comply with the Acceptable Solution document C2/AS1. 
+
+As part of the reassessment of the building, a fire was modelled in Icon function space. This fire was modelled to assess the impact of having a fire in a room on a makeup air path. A FDS simulation of the fire demonstrated that if the doors to the function space are held open, smoke is able to spill from the enclosure into the wider atrium firecell. Bridge links and the Entrance Atrium stairs guide the smoke spill up both the Entrance Atrium and Core Atrium, activating the extract systems in these areas. On activation of the smoke extract systems, makeup air passing through the function space draws smoke from the room of fire origin, spreading it around the museum, as shown in Figure ###. This results in a failure of visibility on the main entrance stairs, blocking this escape routes, and eventually leads to a failure of tenable conditions on Levels 5 and 6 of the building. 
+
+
+
+
+Whilst further assessment demonstrates that the ASET for occupants exceeds the RSET, thereby achieving compliance with the NZBC, a fire in the function centre does represent a risk to of smoke damage to museum exhibitions and artefacts. Having identified the risk, numerous relatively easy options are being investigated to minimize it. These include creating a smoke separation between the Icon space and the atriums, and reprogramming the makeup air vent in the Icon space so that it does not open on activation of the smoke extract systems in the Entrance and Core atriums. 
+
+
+##Evacuation Modelling
+
+The nodal model EVACNET+ was to demonstrate that the building could be evacuated in under 10 minutes when it was designed, to satisfy the building authority at the time. The calculated the evacuation movement time, excluding detection and pre-movement times, for 4200 occupants in the building was 520 seconds. This assessment assumed that all of the escape routes in the building were clear and available during the evacuation. 
+Pathfinder modelling accounted for 3500 people in the building, the maximum number of occupants expected in the building based on peak visitor numbers over the past few years. With all escape routes available, the movement time was estimated at 610 seconds, based on a Pathfinder simulation. 
+
+Only one EVACNET+ simulation was documented, and whilst this accounted for a large number of occupants, it did not account for scenarios where escape routes were blocked in a fire. The building reassessment included a number of scenarios, including when the museum hosts functions, with high occupant densities in function spaces, and escape routes blocked by the effects of fire. One scenario was the evacuation of the building with the entrance atrium stairs were blocked by smoke. The atrium stair is the main egress route from the top three floors of the East wing of the building, which have a combined occupant load of up to 1400 people. With the stair blocked, the spaces share a single protected stairwell. This scenario showed that the movement time to evacuate the East wing could take as much as 1200 seconds. 
+
+## Design Robustness
+
+The fire engineering design of the building relies heavily on a number of systems, including the automatic drencher system within the atrium to maintain tenable conditions within the museum. 
+
+One such robustness check was to assess the impact of a failure of the flame detection and deluge systems in large atriums in the building. These systems provide automatic fire suppression for in the event of an atrium fire, where the conventional sprinklers at the top of the atrium 20m above are likely to be too slow to react. As required by the NZBC, tenability for this robustness was considered to fail if occupants were exposed to a FEDCO of greater than 0.3. 
+
+A single room zone model was identified as a cost effective means of assessing the failure of the entrance deluge system, monitoring tenability two meters above the highest occupied. The atrium stairs, balconies, and bridge links in the building would all serve to increase the entrainment on the smoke plume, lowering the concentration of species in the upper smoke layer, and prolonging the time until FEDco exceeds 0.3. Therefore ignoring these affects could be justified as conservative to the assessment. Similarly any disturbance of the smoke plume by makeup air, or smoke spread to other areas of the museum could also be neglected. Despite the conservative assumptions, a single room zone model, using B-Risk software [REF], was used to demonstrate that the time until FEDco exceeds 0.3 is greater than the time RSET. 
+
+Another robustness check scenario examined the impact of a failure of the smoke extract systems, which were considered integral to maintaining tenable conditions in the building. An initial zone model assessment of this scenario suggested the possibility of FEDCO exceeding 0.3 before the evacuation of the building was complete. Therefore further assessment was carried out using FDS to better simulate smoke movement and entrainment. 
+
+#Discussion
+
+Fundamentally, the fire engineering design of Te Papa museum was still capable of complying with the requirements to the NZBC, despite significant technology developments and changes to the Building Code. The extract systems which were sized based on Fire Simulator zone models have sufficient capacity to maintain tenable conditions in the building, and there are sufficient escape routes to evacuate. 
+
+Simulation results from the reassessment differ from the original design calculations. Where original simulations showed that the building could be evacuated in 520 seconds, the reassessment suggested some scenarios may take as long as 1200 seconds. Initial smoke modelling in Fire Simulator showed that tenability could be maintained indefinitely in the building, but FDS modelling identified a number of points where conditions could become untenable for occupants. However, unlike the initial design of the building which assessed the egress from the building and smoke filling separately, FDS and Pathfinder results could be compared and overlaid. Importing FDS slice file results into Pathfinder, it is possible to see that failure of visibility in one area may be okay because that area had already been evacuated. For example, the smoke modelling demonstrated that conditions failed first in the region around the atriums. Pathfinder was able to show that areas around the atriums were the first to be evacuated. Queues to enter escape routes were around the extremities of the atrium firecell, which, for Te Papa, were some of the last spaces to be effected by smoke.
+
+CFD fire and smoke modelling can capture far more detail than zone modelling. CFD packages simulate smoke and air movement around building features, as mentioned in the examples above. This coupled with the ability to visualise the results, enables a designer to better understand how a smoke flow around the building is influenced, and to optimise building performance. With both the shop and function space fires presented above, visualisation has helped to identify small alterations to the building which can significantly reduce the risks to be people and assets in the building in the event of a fire.  
+
+The ability to visualise the results, and watch smoke spread through the building, makes understanding the fire engineering design more accessible to other members of the design team, including the museum operators and architect. They are able to see the extent of smoke spread and understand the risks posed to people and exhibitions. 
+
+This greater understanding of fire effects and smoke movement around the museum will be used when the museum undergoes a significant refurbishment over the next few years. Some of the smoke extract systems will need to be replaced as part of this alteration. However rather than replace these systems like-for-like, this reassessment has shown the systems are generously sized with potential for safely reduce the size of the systems for a more economical solution.  Our improved understanding of smoke movement in the building will also enable the redevelopment to make numerous small alterations to improve other aspects of life safety and asset protection in the museum. 
+
+Whilst the PHOENICS Fire CFC software was available when Te Papa was designed, the costs were significant, and likely would have had significant run times with limited model resolution. Increases in computing power and the availability of FDS have made CFD fire more accessible, with significantly faster and more cost effective simulations. The reassessment of the museum used approximately twenty FDS simulations, including numerous CFD assessments to evacuate the impact of key system failures. Being able to run this number of models has provided an unsurpassed understanding of the behaviours of the museum during a fire, in a way that would not have been possible when the museum was built. 
+
+Whilst we have the ability to assess the museum in far more detail now that when it was designed. However there is a practical limit the extent of detail required. In assessing the museum, the effects of air injected into the building by escape route pressurisation systems was considered negligible and ignored. On review of the results, accounting for this air would likely have had little impact on the results of the shop fire simulation. 
+Despite big improvements in CFD assessment and computational power, there remains a for simpler, faster assessment techniques like zone models and hand calculations. These are a lot faster and therefore cheaper to build and run than CFD models, and remain a valid method of assessment when used appropriately. 
+#Conclusion
+The fire engineering design for Te Papa museum has been reassessed, 20 years after its construction. This re-assessment has identified a number of anomalies in the building which were not apparent using tools available at the time of the incident. Whilst there is still a use for zone modelling, CFD modelling using FDS has enabled engineers to identify building features impacting on the ability to maintain tenable conditions in the building, such as the location and velocity of makeup air. Combining Pathfinder evacuation simulations with FDS results, it’s has been possible to examine where tenability is failing, and if this places occupants at risk. Understanding these features has enabled small changes to be made to significantly improve conditions in the building. Modern fire engineering tools have provided a better understanding of this existing buildings, enabling them to make it safer for visitors and reduce the risks to the museum exhibitions, and to do so in a cost effective manner.  
+
+
+
+
+
+
+
+
+
+
+
+
+
+.
+
+
+
+
+
+.
+.
+.
+..
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+.
+
+.
+
+.
+
+
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+
+
+# GENERAL INSTRUCTIONS 
 You are encouraged to use the [Madoko.net Editor][editor] while using
 the [Madoko Reference Manual][reference-manual] to edit/commit your
 documents into the 'authoring' branch of the [femtc2016] GitHub repository. 
