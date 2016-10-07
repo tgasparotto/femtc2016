@@ -46,7 +46,14 @@ This paper outlines the investigation and fire assessment that was undertaken an
 
 One of the key architectural features of Te Papa museum is the openness of the public areas of the building, large atria connecting the public areas of the building in a single compartment or firecell.  
 
+![System]
+~ Figure { #System; caption:"Fire safety systems." (use the `.wide` class for wide figure)."}
+
+~
+
 A number of fire safety systems are provided in the building to maintain the safety of visitors. Automatic sprinkler systems are provided throughout the building, with smoke detection provided in most public spaces. Collection spaces, escape routes, and office areas are separated from the exhibition and function spaces by fire rated construction. The building is also equipped with a smoke control system. There are eight smoke extract systems in the museum. Each of these activates independently when smoke is detected in different areas of the building, each drawing between 100 m^3^s^-1^ and 15 m^3^s^-1^. Depending on which extract systems activate, a matrix of make-up air vents open to direct airflow as required. Escape route pressurization systems also provide a source of make-up air.
+
+[System]: images/System.JPG "System" { width:auto; max-width:90% }
 
 #Fire Engineering Methodology
 A number of tools were used in the development of the fire engineering design of the building, starting in the early 1990’s. 
@@ -63,12 +70,10 @@ In reassessing the fire engineering design of the building, Beca elected to use 
 
 The FDS model was made to include the whole museum exhibition and functions compartment, spanning six floors. All eight smoke extract systems were incorporated into the FDS model of the building, with beam detector devices used to trigger when each extract system started, and opening make-up air vents as per the building control matrix. 
 
-<!-- begin merge (remove this line to resolve the conflict) -->
-~ Begin Remote
 One feature which was not modeled in FDS was the escape route pressurization systems.  The five stairwell pressurization systems and three corridor pressurization systems account are capable of injecting between 20 m^3^s^-1^ and 60 m^3^s^-1^ of fresh air into the building. Some of this air leaks out of the escape routes into both the museum, with the remainder venting to outside. Estimating the portion of pressurization air leaking into the museum has not been possible, based on a large number of uncertainties. 
-~ End Remote
+
 One feature which was not modeled in FDS was the escape route pressurization systems.  The five stairwell pressurization systems and three corridor pressurization systems account are capable of injecting between 20 m^3^s^-1 and 60 m^3^s^-1 of fresh air into the building. Some of this air leaks out of the escape routes into both the museum, with the remainder venting to outside. Estimating the portion of pressurization air leaking into the museum has not been possible, based on a large number of uncertainties. 
-<!-- end merge -->
+
 
 ##Evacuation modeling
 The museum has a large number of escape routes, including protected stairwells and corridors, with numerous converging and diverging paths. Calculating the required safe egress time (RSET) for the building by hand would be challenging. 
@@ -105,7 +110,7 @@ To reduce the extent of disturbance of the spill plume, this FDS simulation was 
 
 ![Entrance vel comp1]
 [Entrance vel comp1]: images/Entrance-vel-comp1.JPG "Entrance vel comp1" { width:auto; max-width:100% }
-~ Figure { #fig-smokeview; caption:"Smokeview slicefile showing velocity profile in atrium with existing (left) and ammended (right) makeup air configurations. (use the `.wide` class for wide figure)."}
+~ Figure { #fig-smokeview; caption:"Smokeview slicefile showing velocity profile in atrium with existing (left) and ammended (right) makeup air configuration. (use the `.wide` class for wide figure)"}
 
 ~
 
