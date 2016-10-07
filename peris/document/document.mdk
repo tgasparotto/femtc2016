@@ -339,3 +339,7 @@ The failure in this case occurs because a high web-yielding appears on the conta
 This paper studies the factors that influence the maximum temperatures in the gas surrounding I-girder bridges and also
 applies a methodology to obtain their structural response. Results show that vertical clearance, type of fuel and position of
 the fire load are the most influential parameters for the flange temperatures. Web temperatures are also influenced by the bridge substructure configuration.
+This type of analysis is very relevant as it constitutes the basis for the development of parametric temperature curves specific for bridges.
+
+Also, it has been shown that even the maximum adiabatic temperatures are on the same range, the position of the fire load influence on the type and time of failure.
+Remark that this conclusion has to be taken into account in case of simplistic analysis of the structural behaviour of bridges against fire.
