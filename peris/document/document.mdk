@@ -30,14 +30,9 @@ critical parameter governing the response of the bridge. The structural behaviou
 carried out with numerical models to show that the position of the fire has also an influence on the times and type of failure.
 ~
 
-[editor]: https://www.madoko.net/editor.html "Madoko.net Editor"
-[reference-manual]: http://research.microsoft.com/en-us/um/people/daan/madoko/doc/reference.html "Madoko Reference Manual"
-[femtc2016]: https://github.com/thunderheadeng/femtc2016
-[emaillink]: mailto:conference@thunderheadeng.com "conference@thunderheadeng.com"
-
 # INTRODUCTION { #sec-intro }
 The structural response of bridges against fire is an under researched topic not covered in current design codes
-in spite of its frequency and consequences as it is shown in Peris-Sayol et Al [@PerisSayol2016] In this paper, 154 bridge
+in spite of its frequency and consequences as it is shown in Peris-Sayol et Al [@PerisSayol2016]. In this paper, 154 bridge
 fires have been collected between 1997 and 2015 and the bridge damage level and the main factors involved in
 bridge fire damage has been characterized. This analysis shows that the only scenarios likely to
 cause damage to concrete and steel bridges are a tanker fire close to the structure and a high calorific storage 
@@ -47,12 +42,11 @@ This paper uses Computational Fluid Dynamics simulations to study the parameters
 the gas surrounding I girder bridges during a fire, since this is a critical parameter governing the response of 
 the bridge. More specifically, the study considers four geometric parameters (vertical clearance, bridge
 substructure configuration, span length and bridge width) and two fire scenario parameters (position of the fire load
-and type of fuel). This study complements previous work (Peris-Sayol et al. 2016) since the parameters analyzed by CFD
+and type of fuel). This study complements previous work [@PerisSayol2016] since the parameters analyzed by CFD
 were impossible to characterize in real cases. Also, in this paper, the structural behavior of a simply supported
 steel-girder bridge against tanker through finite element models has been studied
 
 # CFD ANALYSIS { #sec-intro }
-This section explains the parameters analyzed, the methodology used and the CFD models design.
 This section explains the parameters analyzed, the methodology used and the CFD models design.
 ## Parameters Studied
 This study considers six parameters: four of them describe the geometry of the bridge (vertical clearance, bridge substructure configuration,
@@ -83,10 +77,10 @@ All the bridges also had a concrete slab 0.2 m thick on top of the I-girders.
 
 
 ## Computational Fluid Dynamics Models (CFDs)
-FDS Software 6.1.1 has been chosen to obtain the temperatures in the gas surrounding the bridge deck. FDS was developed
+FDS Software 6.1.1 [@FDS2016] has been chosen to obtain the temperatures in the gas surrounding the bridge deck. FDS was developed
 at the National Institute of Standards and Technology (NIST) and applies computational fluid dynamics (CFD) techniques 
-to fire engineering. FDS has been succesfully used to study real bridge fires (Wright et Al. 2013, Alós-Moya et Al. 2014, 
-Gond and Agrawal 2015). Building the FDS model requires defining: (1) a control volume with its boundary conditions
+to fire engineering. FDS has been succesfully used to study real bridge fires [@AlosMoya2014, @GongandAgrawal2015, @Wright2013]. 
+Building the FDS model requires defining: (1) a control volume with its boundary conditions
 representing the volume in which the entire analysis is carried out, (2) a geometry included in the control volume which
 represents the geometry of the case study, (3) a mesh or discretization of the control volume, (4) material properties, (5)
 fire sources, (6) a combustion model, and (7) sensors or elementsof the model where the outputs are recorded. 
@@ -95,7 +89,7 @@ fire sources, (6) a combustion model, and (7) sensors or elementsof the model wh
 The control volume used in this study includes the bridge as well as part of its approaches. The model varies according 
 to the scenario from 28 to 58 meters in the x-direction, 27 to 30 meters in the y-direction and 12 to 15 meters in the z-direction.
 The variations depend on the span length, vertical clearance, span width and abutment configuration considered. The total amount
-of cells in the model ranges from 1,134,000 to 3,262,500, having all cells dimensions of 0.20 m acoording to FDS Technical Reference
+of cells in the model ranges from 1,134,000 to 3,262,500, having all cells dimensions of 0.20 m accoording to FDS Technical Reference
 (McGrattan et Al. 2016) for coarse mesh. This mesh is fine enough for the purpose of the present study.
 
 
@@ -343,3 +337,6 @@ This type of analysis is very relevant as it constitutes the basis for the devel
 
 Also, it has been shown that even the maximum adiabatic temperatures are on the same range, the position of the fire load influence on the type and time of failure.
 Remark that this conclusion has to be taken into account in case of simplistic analysis of the structural behaviour of bridges against fire.
+
+#REFERENCES
+[BIB]
