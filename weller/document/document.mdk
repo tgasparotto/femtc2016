@@ -63,7 +63,12 @@ In reassessing the fire engineering design of the building, Beca elected to use 
 
 The FDS model was made to include the whole museum exhibition and functions compartment, spanning six floors. All eight smoke extract systems were incorporated into the FDS model of the building, with beam detector devices used to trigger when each extract system started, and opening make-up air vents as per the building control matrix. 
 
+<!-- begin merge (remove this line to resolve the conflict) -->
+~ Begin Remote
 One feature which was not modeled in FDS was the escape route pressurization systems.  The five stairwell pressurization systems and three corridor pressurization systems account are capable of injecting between 20 m^3^s^-1^ and 60 m^3^s^-1^ of fresh air into the building. Some of this air leaks out of the escape routes into both the museum, with the remainder venting to outside. Estimating the portion of pressurization air leaking into the museum has not been possible, based on a large number of uncertainties. 
+~ End Remote
+One feature which was not modeled in FDS was the escape route pressurization systems.  The five stairwell pressurization systems and three corridor pressurization systems account are capable of injecting between 20 m^3^s^-1 and 60 m^3^s^-1 of fresh air into the building. Some of this air leaks out of the escape routes into both the museum, with the remainder venting to outside. Estimating the portion of pressurization air leaking into the museum has not been possible, based on a large number of uncertainties. 
+<!-- end merge -->
 
 ##Evacuation modeling
 The museum has a large number of escape routes, including protected stairwells and corridors, with numerous converging and diverging paths. Calculating the required safe egress time (RSET) for the building by hand would be challenging. 
@@ -85,7 +90,11 @@ The current NZBC ‘Protection from Fire’ clauses are performance based, with 
 The fire engineering reassessment by Beca demonstrated that Te Papa Museum generally complies with the Building Code, despite changes in the Building Code requirements. A number of these changes can be attributed to alterations made to the museum after its construction, which are of little interest to this paper, while others can be attributed to changes fire engineering tools over the past twenty years. Other findings of the reassessment have identified potential improvements in property protection measures to safeguard museum exhibitions.  A number of examples have been presented below. 
 
 ##Atrium Fire
+
 The Entrance Atrium was designed with a 100 m^3^s^-1^ smoke extract system. Fire Simulator would have been used to model the atrium as a single room, with makeup air supply, accounting for a 4MW fire at the base of the atrium. This would have assumed and antisymmetric smoke plume, being extracted from the top of the atrium. 
+
+The Entrance Atrium was designed with a 100 m^3^s^-1 smoke extract system. Fire Simulator would have been used to model the atrium as a single room, with makeup air supply, accounting for a 4MW fire at the base of the atrium. This would have assumed and antisymmetric smoke plume, being extracted from the top of the atrium. 
+
 
 In the re-assessment of the building, it was elected to model a spill plume into the atrium, rather than a fire at the base of the atrium itself. A fire was modeled in the Level 1 shop, spilling up atrium. Visual interrogation of the FDS models in Smokeview showed spill plume from the shop fire became noticeable disturbed when the smoke extract system activated. Makeup air, drawn through the front entrance doors at approximately 5 ms^-1^, disturbed the spill plume, resulting in significant additional entrainment. The extent of the disturbance can be seen in the slice files below, showing the velocity and air movement before (left) and after (right) the extract system activates.  
 
