@@ -298,7 +298,7 @@ analysis is carried out by using the adiabatic surface temperature given in the 
 the heat transfer method provides the transient nodal temperatures with respect to time using the thermal properties
 of the material. In the second step (the structural analysis), the nodal temperatures are read from the thermal analysis
 and corresponding temperature dependent mechanical material properties are used to find the equilibrium of the structure.
-More information about the model building can be found in [@PerisSayol2015; ].
+More information about the model building can be found in [@PerisSayol2015;@PerisSayolASCE].
 
 Two different fire scenarios have been considered (See Fig. [#fig-firescenarios]) as it have been shown that even they have the same value of maximum adiabatic temperatures
 they have different types and times of failure.
