@@ -79,7 +79,7 @@ All the bridges also had a concrete slab 0.2 m thick on top of the I-girders.
 ## Computational Fluid Dynamics Models (CFDs)
 FDS Software 6.1.1 [@FDS2016] has been chosen to obtain the temperatures in the gas surrounding the bridge deck. FDS was developed
 at the National Institute of Standards and Technology (NIST) and applies computational fluid dynamics (CFD) techniques 
-to fire engineering. FDS has been succesfully used to study real bridge fires [@AlosMoya2014, @GongandAgrawal2015, @Wright2013]. 
+to fire engineering. FDS has been succesfully used to study real bridge fires [@AlosMoya2014; @GongandAgrawal2015; @Wright2013]. 
 Building the FDS model requires defining: (1) a control volume with its boundary conditions
 representing the volume in which the entire analysis is carried out, (2) a geometry included in the control volume which
 represents the geometry of the case study, (3) a mesh or discretization of the control volume, (4) material properties, (5)
@@ -89,19 +89,19 @@ fire sources, (6) a combustion model, and (7) sensors or elementsof the model wh
 The control volume used in this study includes the bridge as well as part of its approaches. The model varies according 
 to the scenario from 28 to 58 meters in the x-direction, 27 to 30 meters in the y-direction and 12 to 15 meters in the z-direction.
 The variations depend on the span length, vertical clearance, span width and abutment configuration considered. The total amount
-of cells in the model ranges from 1,134,000 to 3,262,500, having all cells dimensions of 0.20 m accoording to FDS Technical Reference
-(McGrattan et Al. 2016) for coarse mesh. This mesh is fine enough for the purpose of the present study.
+of cells in the model ranges from 1,134,000 to 3,262,500, having all cells dimensions of 0.20 m according to FDS Technical Reference
+[@FDSTechnical2016] for coarse mesh. This mesh is fine enough for the purpose of the present study.
 
 
 ### Fire Load and Combustion Model
 The FDS model includes the tanker of the tanker truck modeled as a horizontal surface of 12 x 2.5 meters at one meter
 above the road level. The CO and soot yields have been chosen according to the values showed in the table A.39 of the SFPE
-Handbook Manual (Morgan J. Hurley et Al. 2016) for hydrocarbon liquids and have values of 0.019 and 0.059 respectively.
+Handbook Manual [@SFPE2016] for hydrocarbon liquids and have values of 0.019 and 0.059 respectively.
 It has been assumed that diesel and gasoline have the same yields.
 
 ### Adiabatic Temperatures
-The adiabatic surface temperature developed by Wickström et Al. (2007) is used to transfer the information obtained by the fire 
-model to the thermal model. This adiabatic surface temperature is a fictituous temperature obtained by FDS assuming
+The adiabatic surface temperature developed by Wickström et Al. [@Wickstrom2007] is used to transfer the information obtained by the fire 
+model to the thermal model. This adiabatic surface temperature is a fictitious temperature obtained by FDS assuming
 that the structural element is a perfect insulator and is commonly used for calculating both convective and 
 radiative heat transfer. The use in this paper of adiabatic temperatures is justified because it is a value that 
 does not depend on the material of the bridge and can be used as an input in the thermo-mechanical models.
@@ -110,17 +110,17 @@ Adiabatic temperatures are measured in FDS with sensors defined by the user. Sen
 spaced 20 cm with three sensors each located in: bottom flange (sensor 0), the south face (sensor 1), and
 the north face (sensor 2). The total number of sensor varies according to the span length. Only the analysis of the temperatures
 of the most heated girder are studied here.
-The adiabatic surface temperature developed by Wickström et Al. (2007) is used to transfer the information obtained by the fire 
-model to the thermal model. This adiabatic surface temperature is a fictituous temperature obtained by FDS assuming
+The adiabatic surface temperature developed by Wickström et Al. [@Wickstrom2007] is used to transfer the information obtained by the fire 
+model to the thermal model. This adiabatic surface temperature is a fictitious temperature obtained by FDS assuming
 that the structural element is a perfect insulator and is commonly used for calculating both convective and 
 radiative heat transfer. The use in this paper of adiabatic temperatures is justified because it is a value that 
 does not depend on the material of the bridge and can be used as an input in the thermo-mechanical models.
 
 ## Design of Experiments
 A combination of all six parameters with two level each would have required 64 simulations, running those was undesirable
-due to the high computational cost. A Taguchi's method XXX has been carried out to select
-which fire scenarios should be modeled to extract the maximum information and to know
-which parameter interactions are important. The resulting scenarios that had to be run are shown in table II.
+due to the high computational cost. A Taguchi's method [@Taguchi2015] has been carried out to reduce the simulations to 32,
+which fire scenarios are modeled to extract the maximum information and to know
+which interactions are important. The resulting scenarios that had to be run are shown in table [#fig-cases].
 ~ TableFigure { #fig-cases; caption:"Experimental Design of the Simulations"}
 |--------------------------------------------------------------------------------------------------------------------------------------------|||||||
 |Parameters                                                                                                                                  |||||||
@@ -166,11 +166,11 @@ which parameter interactions are important. The resulting scenarios that had to 
 
 
 ## Results and Discussion
-Table III shows the maximum web and flange adiabatic temperatures reached on the structure. Web
+Table [#fig-results] shows the maximum web and flange adiabatic temperatures reached on the structure. Web
 temperatures are the average of the temperatures in the two web faces.
 
 
-~ Figure { #fig-results; caption:"Maximum temperatures reached over the structure."}
+~ TableFigure { #fig-results; caption:"Maximum temperatures reached over the structure."}
 |---------------------------------------------------|||------------------------------------------------------|||----------------------------------------------------|||
 |Maximum Temperatures                               |||Maximum Temperatures                                  |||Maximum Temperatures                                |||
 |               |                  |                  |                  |                  |                  |                 |                  |                 |
@@ -194,14 +194,13 @@ temperatures are the average of the temperatures in the two web faces.
 ~
 
 
-
 To asses the significance of the parameters in the maximum adiabatic temperatures reached 
-over the structure an analysis of variance (ANOVA) using the STATGRAPHICS software XXX was carried out. An 
+over the structure an analysis of variance (ANOVA) using the STATGRAPHICS software [@statgraphics] was carried out. An 
 ANOVA statistical test compares the means of three groups in response to one or several variables
 and is used to determine the impact of independent variables (e.g the parameters studied) on the
 dependent variables (temperatures reached by the structure) in a regression analysis. This impact
 is given by a coefficient known as the p-value. Low p-values indicate a significant influence (Values below of 0.05)
-Table IV and V show the ANOVA results. These results show that:
+Table [#fig-resultsflange] and [#fig-resultsweb] show the ANOVA results. These results show that:
 
 
 ~ TableFigure { #fig-resultsflange; caption:"Results of the Anova analysis for flange temperatures"}
@@ -272,10 +271,7 @@ Table IV and V show the ANOVA results. These results show that:
 {thead-tr-background-color:Gainsboro}
 ~
 
-
-
-A combination of all six parameters with two level each would have required 64 simulations, running those was undesirable
-due to the high computational time.
+The main conclusions of this analysis show:
 
 1) The bridge span and bridge width do not influence the maximum adiabatic temperatures of the bridge
 (p-values of 0.10 and 0.52 for the bottom flange temperatures and 0.35 and 0.77 for web temperatures respectively), although
@@ -302,7 +298,7 @@ analysis is carried out by using the adiabatic surface temperature given in the 
 the heat transfer method provides the transient nodal temperatures with respect to time using the thermal properties
 of the material. In the second step (the structural analysis), the nodal temperatures are read from the thermal analysis
 and corresponding temperature dependent mechanical material properties are used to find the equilibrium of the structure.
-More information about the model building can be found in XXXXXX Peris-Computers Peris ASCE.
+More information about the model building can be found in [@PerisSayol2015; ].
 
 Two different fire scenarios have been considered (See Fig. [#fig-firescenarios]) as it have been shown that even they have the same value of maximum adiabatic temperatures
 they have different types and times of failure.
