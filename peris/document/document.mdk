@@ -26,8 +26,8 @@ name-references : REFERENCES
 The structural response of bridges against fire is an under researched topic not covered in current design codes
 in spite of its frequency and consequences. This paper uses Computational Fluid Dynamics simulations to study the
 parameters influencing the temperatures in the gas surrounding I girder bridges during a fire, since this is a
-critical parameter governing the response of the bridge. For the most critical case a methodology that uses
-numerical models to analyze the damage caused by fires is shown.
+critical parameter governing the response of the bridge. The structural behaviour of a 21 meters span bridge has been
+carried out with numerical models to show that the position of the fire has also an influence on the times and type of failure.
 ~
 
 [editor]: https://www.madoko.net/editor.html "Madoko.net Editor"
@@ -37,7 +37,7 @@ numerical models to analyze the damage caused by fires is shown.
 
 # INTRODUCTION { #sec-intro }
 The structural response of bridges against fire is an under researched topic not covered in current design codes
-in spite of its frequency and consequences as it is shown in Peris-Sayol et Al (2016). In this paper, 154 bridge
+in spite of its frequency and consequences as it is shown in Peris-Sayol et Al # In this paper, 154 bridge
 fires have been collected between 1997 and 2015 and the bridge damage level and the main factors involved in
 bridge fire damage has been characterized. This analysis shows that the only scenarios likely to
 cause damage to concrete and steel bridges are a tanker fire close to the structure and a high calorific storage 
