@@ -190,7 +190,7 @@ temperatures are the average of the temperatures in the two web faces.
 ~
 
 
-To asses the significance of the parameters on the maximum adiabatic temperatures reached 
+To assess the significance of the parameters on the maximum adiabatic temperatures reached 
 over the structure, an analysis of variance (ANOVA) using the STATGRAPHICS software [@statgraphics] was carried out. An 
 ANOVA statistical test compares the means of three groups in response to one or several variables
 and is used to determine the impact of independent variables (e.g the parameters studied) on the
