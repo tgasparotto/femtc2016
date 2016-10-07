@@ -21,10 +21,7 @@ name-references : REFERENCES
 [TITLE]
 
 ~ Abstract
-Papers should follow standard technical paper format, an abstract
-followed by the more detailed presentation. The abstract should be typed
-on this area of the first page, with the presentation following after two
-lines of space.
+Today FDS calculations are often used to model fires in complex building designs. However, there are large risks in using FDS if there is a lack of user knowledge, since FDS is highly dependent on the input variables that are specified. Also, there is a risk in relying on results from previous validation studies of FDS performed on completely different geometries or setups than the intended or in situations where FDS is not yet valid. As part of a recent MSc thesis at Lund University, where the impact of horizontal projections on external fire spread was investigated using FDS, a validation study of FDS 6.2.0 on the area of external fire spread was conducted to avoid the above-mentioned risks. The validation study was performed using experimental data from a large-scale fire test on a SP FIRE 105 test rig in Borås, Sweden. A previous validation study for this setup has been conducted by SP using FDS 5.5.3, showing promising results. However, as FDS is updated it does not automatically mean that every area is improved, and possible changes is important to address. The study concluded that FDS 6.2.0 could reproduce the experimental results with a reasonable level of detail. However, to obtain credible results along the facade particularly close to the fire, a high mesh resolution was needed, namely a D*/δx of at least 30.
 ~
 
 [editor]: https://www.madoko.net/editor.html "Madoko.net Editor"
@@ -32,7 +29,7 @@ lines of space.
 [femtc2016]: https://github.com/thunderheadeng/femtc2016
 [emaillink]: mailto:conference@thunderheadeng.com "conference@thunderheadeng.com"
 
-# GENERAL INSTRUCTIONS { #sec-intro }
+# INTRODUCTION { #sec-intro }
 You are encouraged to use the [Madoko.net Editor][editor] while using
 the [Madoko Reference Manual][reference-manual] to edit/commit your
 documents into the 'authoring' branch of the [femtc2016] GitHub repository. 
@@ -56,12 +53,17 @@ pages.
 
 Please watch this short YouTube Video for a tutorial on how to use the system as intended.
 
-# MAIN HEADINGS LIKE THIS STYLE
+# METHODOLOGY
 Main Headings are all upper case letters and underlined. In Madoko, a
 Single '#' symbol at the start of the line, followed by a space and then
 the heading text.
 
-## Subheadings Like This Style
+# EXPERIMENTAL SETUP
+Main Headings are all upper case letters and underlined. In Madoko, a
+Single '#' symbol at the start of the line, followed by a space and then
+the heading text.
+
+## SP FIRE 105 test rig
 Subheadings within sections follow the same format as section titles, but
 with upper and lower case. In Madoko, a Double '#' symbol at the start of
 the line, followed by a space and then the heading text.
