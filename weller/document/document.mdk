@@ -33,40 +33,14 @@ This paper outlines the case study of a reassessment of the museum using computa
 [emaillink]: mailto:conference@thunderheadeng.com "conference@thunderheadeng.com"
 
 #Introduction
-Te Papa Museum is a landmark building and the national museum of New Zealand. Designed and built in the 1990’s, the building has numerous atriums connecting six floors and nearly four hectares of museum exhibitions, function centers and collection stores.
-
-Twenty years on, things have changed significantly in the field of fire engineering. Computation fluid dynamics (CFD) and agent-based evacuation simulations have become prevalent over zone modeling and nodal evacuation simulations for complex buildings. Vastly improved computational performance makes possible the opportunity to carry out fire engineering to a level not previously possible for a fraction of the cost. With a major upgrade planned, Beca were asked by Te Papa to retrospectively interrogate the building’s design,  primarily considering  the adequacy of  life safety of the building, protection of the exhibitions, invaluable artwork and historic treasures was also a key consideration. 
+Te Papa Museum is a landmark building and the national museum of New Zealand designed and built in the 1990’s. 
+Twenty years on, things have changed significantly in the field of fire engineering. Computation fluid dynamics (CFD) and agent-based evacuation simulations have become prevalent over zone modeling and nodal evacuation simulations for complex buildings. Vastly improved computational performance makes possible the opportunity to carry out fire engineering to a level not previously possible for a fraction of the cost. With a major upgrade planned, Beca were asked by Te Papa to retrospectively interrogate the building’s design,  primarily considering  the adequacy of life safety systems in the building. 
 
 This paper outlines the investigation and fire assessment that was undertaken and considers the benefits offered by modern tools. Do they give us a better understanding of the risks and impacts of fire and smoke in the building, or if they just add complication. 
 
 #Building features
 
-One of the key architectural features of Te Papa museum is the openness of the public areas of the building, large atria connecting the public areas of the building in a single compartment or firecell.  
-
-![Building layout]
-~ Figure
-Section of museum showing smoke control systems
-~
-[Building layout]: images/Building-layout.JPG "Building layout" { width:auto; max-width:100% }
-
-
-
-A number of fire safety systems are provided in the building to maintain the safety of visitors. Automatic sprinkler systems are provided throughout the building, with smoke detection provided in most public spaces. Collection spaces, escape routes, and office areas are separated from the exhibition and function spaces by fire rated construction. The building is also equipped with a smoke control system. There are eight smoke extract systems in the museum. Each of these activates independently when smoke is detected in different areas of the building, each drawing between 100 m^3^s^-1^ and 15 m^3^s^-1^. Depending on which extract systems activate, a matrix of make-up air vents open to direct airflow as required. Escape route pressurization systems also provide a source of make-up air.
-
-[System]: images/System.JPG "System" { width:auto; max-width:90% }
-
-#Fire Engineering Methodology
-A number of tools were used in the development of the fire engineering design of the building, starting in the early 1990’s. 
-
-##Smoke control
-
-The large, interconnecting atriums in the museum, with open bridge links and balconies represent a fire engineering challenge. The museum has a smoke control systems to protect occupants on the upper floors from the effects of fire and smoke long enough to evacuate the building. 
-
-When the design of the museum began in the early 1990’s, the designer recognized the complexities of the building architecture, and the impact this would have on the fire engineering design. Computational fluid dynamics (CFD) analysis of smoke movement was considered, using PHOENICS Fire program. At a cost of about £50,000 per run it was simply cost prohibitive. 
-
-Instead, the designer used FPEtool Fire Simulator, one of a suite of four packages in the FPEtool collection, developed by NIST, and was originally available on a 3 ½ inch floppy disk. Fire Simulator is a zone model program, limited to modeling a single room with an upper and lower layer.  It was able to be used to model individual spaces in the museum to calculate the smoke extract rates required to maintain desired smoke layer heights.  For makeup air, the a selection of the 12 makeup air vents were programed to open to provide a makeup air at a velocity of approximately 5 ms^-1^. Additional makeup air was provided by spill air from the escape route pressurization systems in the building. To support the smoke control system, suppression systems were provided to limit potential fire sizes. Sprinklers were installed throughout the building. Flame detection and deluge systems was installed in the large atriums where sprinkler response times would be slow, “to limit the maximum fire size to no more than 4.0 MW” [@Assessment]. 
-
-Fire Dynamics Simulator (FDS) [@FDSGuide] was used for the reassessment model fire-driven fluid ﬂow around the building. Visualization tools were used in developing and analyzing the FDS model. A 3D AutoDesk Revit  was imported into PyroSim, a graphic user interface (GUI), which was used to create the FDS input files. Smokeview was used to visualize FDS results. 
+Te Papa museum has numerous atriums connecting six floors and nearly four hectares of museum exhibitions, function centers and collection stores. all public areas of the building in a single compartment or firecell.  
 
 ~~ Center
 ![PrettyPyrosim]
@@ -77,6 +51,26 @@ Fire Dynamics Simulator (FDS) [@FDSGuide] was used for the reassessment model fi
 
 
 [PrettyPyrosim]: images/PrettyPyrosim.JPG "PrettyPyrosim" { width:auto; max-width:40% }
+
+A number of fire safety systems are provided in the building to maintain the safety of visitors. Automatic sprinkler systems are provided throughout the building, with smoke detection provided in most public spaces. Collection spaces, escape routes, and office areas are separated from the exhibition and function spaces by fire rated construction. The building is also equipped with a smoke control system. There are eight smoke extract systems in the museum. Each of these activates independently when smoke is detected in different areas of the building, each drawing between 100 m^3^s^-1^ and 15 m^3^s^-1^. Depending on which extract systems activate, a matrix of make-up air vents open to direct airflow as required. Escape route pressurization systems also provide a source of make-up air.
+
+![Building layout]
+~ Figure
+Section of museum showing smoke control systems
+~
+[Building layout]: images/Building-layout.JPG "Building layout" { width:auto; max-width:100% }
+
+
+
+#Fire Engineering Methodology
+
+The large, interconnecting atriums in the museum, with open bridge links and balconies represent a fire engineering challenge. The museum uses smoke control systems to protect occupants and numerous escape routes for occupants to evacuate. The complexity of the building is such that engineering software is required to assess it. The following section compares the tools used in the design of the building, and in the subsequent Beca assessment. 
+
+##Smoke control
+
+The fire designer of the building recognized the complexities of the building architecture, and their impact on the fire engineering design. Whilst computational fluid dynamics (CFD) analysis was available at the time using PHOENICS Fire, it was simply cost prohibitive a cost of about £50,000 per model run. Instead, FPEtool Fire Simulator was used. This was one of a suite of four packages in the FPEtool collection, developed by NIST, and was originally available on a 3½ inch floppy disk. Fire Simulator is a zone model program, capable of modeling just one single room at a time.  It was able to be used to model individual spaces in the museum to calculate the smoke extract rates required to maintain desired smoke layer heights.  For makeup air, the a selection of the 12 makeup air vents were programed to open to provide a makeup air at a velocity of approximately 5 ms^-1^. Additional makeup air was provided by spill air from the escape route pressurization systems in the building. To support the smoke control system, suppression systems were provided to limit potential fire sizes. Sprinklers were installed throughout the building. Flame detection and deluge systems was installed in the large atriums where sprinkler response times would be slow, “to limit the maximum fire size to no more than 4.0 MW” [@Assessment]. 
+
+Fire Dynamics Simulator (FDS) [@FDSGuide] was used for the reassessment model fire-driven fluid ﬂow around the building. Visualization tools were used in developing and analyzing the FDS model. A 3D AutoDesk Revit  was imported into PyroSim, a graphic user interface (GUI), which was used to create the FDS input files. Smokeview was used to visualize FDS results. 
 
 
 The FDS model was made to include the whole museum exhibition and functions compartment, spanning six floors. All eight smoke extract systems were incorporated into the FDS model of the building, with make-up air vents incorporated to open as per the building controls. The escape route pressurization systems were not modeled in FDS. These pump between 20 m^3^s^-1^ and 60 m^3^s^-1^ of fresh air into escape routes in the event of a fire, some of which leaks into the museum. The volume of makeup air provided by the pressurization system is highly variable. The worst case situation was that the majority of this smoke would vent to back of house spaces, with negligible quantities entering the atrium.  
