@@ -37,19 +37,21 @@ Te Papa Museum is a landmark building and the national museum of New Zealand des
 Twenty years on, things have changed significantly in the field of fire engineering. Computation fluid dynamics (CFD) and agent-based evacuation simulations have become prevalent over zone modeling and nodal evacuation simulations for complex buildings. Vastly improved computational performance makes possible the opportunity to carry out fire engineering to a level not previously possible for a fraction of the cost. With a major upgrade planned, Beca were asked by Te Papa to retrospectively interrogate the building’s design,  primarily considering  the adequacy of life safety systems in the building. 
 
 This paper outlines the investigation and fire assessment that was undertaken and considers the benefits offered by modern tools. Do they give us a better understanding of the risks and impacts of fire and smoke in the building, or if they just add complication. 
-
+&pagebreak;
 #Building features
 
 Te Papa museum has numerous atriums connecting six floors and nearly four hectares of museum exhibitions, function centers and collection stores. all public areas of the building in a single compartment or firecell.  
+ 
+
 
 ~~ Center
-![PrettyPyrosim]
+![PrettyPyrosim1]
 ~~
+
+[PrettyPyrosim1]: images/PrettyPyrosim1.JPG "PrettyPyrosim1" { width:auto; max-width:50% }
+
 ~ Figure {caption:"3D model of Te Papa Museum"}
-~
-
-
-[PrettyPyrosim]: images/PrettyPyrosim.JPG "PrettyPyrosim" { width:auto; max-width:40% }
+~ 
 
 A number of fire safety systems are provided in the building to maintain the safety of visitors. Automatic sprinkler systems are provided throughout the building, with smoke detection provided in most public spaces. Collection spaces, escape routes, and office areas are separated from the exhibition and function spaces by fire rated construction. The building is also equipped with a smoke control system. There are eight smoke extract systems in the museum. Each of these activates independently when smoke is detected in different areas of the building, each drawing between 100 m^3^s^-1^ and 15 m^3^s^-1^. Depending on which extract systems activate, a matrix of make-up air vents open to direct airflow as required. Escape route pressurization systems also provide a source of make-up air.
 
@@ -71,13 +73,14 @@ The fire designer of the building recognized the complexities of the building ar
 Fire Dynamics Simulator (FDS) [@FDSGuide] was used for the reassessment model fire-driven fluid ﬂow around the building. Visualization tools were used in developing and analyzing the FDS model. A 3D AutoDesk Revit  was imported into PyroSim, a graphic user interface (GUI), which was used to create the FDS input files. Smokeview was used to visualize FDS results. 
 
 ~~ Center
-![PrettyPyrosim]
+![prettypyrosim1]
 ~~
 ~ Figure {caption: "3D model of Te Papa Museum"}
 ~
 
 
-[PrettyPyrosim]: images/PrettyPyrosim.JPG "PrettyPyrosim" { width:auto; max-width:40% }
+
+[prettypyrosim1]: images/PrettyPyrosim1.JPG "PrettyPyrosim1" { width:auto; max-width:40% }
 
 
 The FDS model was made to include the whole museum exhibition and functions compartment, spanning six floors. All eight smoke extract systems and corresponding make-up air vents were all incorporated into the FDS model. The escape route pressurization systems were not modeled in FDS. These pump between 20 m^3^s^-1^ and 60 m^3^s^-1^ of fresh air into escape routes in the event of a fire, some of which leaks into the museum. The volume of makeup air provided by the pressurization system, and where this would be introduced to the public compartment is highly variable. Given that there are some scenarios were little or no pressurization air would enter the public compartment, it was decided to neglect the effects of the pressurization systems on the wider compartment.  
@@ -127,7 +130,7 @@ As mentioned above, the FDS model fails to take account of air introduced to the
 
 ![ShopFire]
 
-[ShopFire]: images/ShopFire.JPG "ShopFire" { width:auto; max-width:90% }
+[ShopFire]: images/ShopFire.JPG "ShopFire" { width:auto; max-width:100% }
 ~ Figure{caption: "Extent of smoke spread with 5ms^-1^ (left) compared to 1ms^-1^ (right) "}
 ~
 
@@ -140,11 +143,13 @@ For the purpose of the fire engineering design of the building, it would have be
 As part of the reassessment of the building, a fire was modeled in Icon function space. This fire was modeled to assess the impact of having a fire in a room on a makeup air path. A FDS simulation of the fire demonstrated that if the doors to the function space are held open, smoke is able to spill from the enclosure into the wider atrium firecell. Bridge links and the Entrance Atrium stairs guide the smoke spill up both the Entrance Atrium and Core Atrium, activating the extract systems in these areas. On activation of the smoke extract systems, makeup air passing through the function space draws smoke from the room of fire origin, spreading it around the museum, as shown in Figure ###. This results in a failure of visibility on the main entrance stairs, blocking this escape routes, and eventually leads to a failure of tenable conditions on Levels 5 and 6 of the building. 
 
 
-
+~~ Center
 ![ExtentOfSmokeSpread]
+~~
+
 ~ Figure {caption: "Smoke from a Level 2 function space fire may spread throughout the museum"}
 ~
-[ExtentOfSmokeSpread]: images/ExtentOfSmokeSpread.JPG "ExtentOfSmokeSpread" { width:auto; max-width:90% }
+[ExtentOfSmokeSpread]: images/ExtentOfSmokeSpread.JPG "ExtentOfSmokeSpread" { width:auto; max-width:80% }
 
 Whilst further assessment demonstrates that the ASET for occupants exceeds the RSET, thereby achieving compliance with the NZBC, a fire in the function center does represent a risk to of smoke damage to museum exhibitions and artifacts. Having identified the risk, numerous relatively easy options are being investigated to minimize it. These include creating a smoke separation between the Icon space and the atriums, and reprogramming the makeup air vent in the Icon space so that it does not open on activation of the smoke extract systems in the Entrance and Core atriums. 
 
@@ -182,5 +187,10 @@ Whilst the PHOENICS Fire CFC software was available when Te Papa was designed, t
 
 Whilst we have the ability to assess the museum in far more detail now that when it was designed. However there is a practical limit the extent of detail required. In assessing the museum, the effects of air injected into the building by escape route pressurization systems was considered negligible and ignored. On review of the results, accounting for this air would likely have had little impact on the results of the shop fire simulation. 
 Despite big improvements in CFD assessment and computational power, there remains a for simpler, faster assessment techniques like zone models and hand calculations. These are a lot faster and therefore cheaper to build and run than CFD models, and remain a valid method of assessment when used appropriately. 
+
 #Conclusion
 The fire engineering design for Te Papa museum has been reassessed, 20 years after its construction. This re-assessment has identified a number of anomalies in the building which were not apparent using tools available at the time of the incident. Whilst there is still a use for zone modeling, CFD modeling using FDS has enabled engineers to identify building features impacting on the ability to maintain tenable conditions in the building, such as the location and velocity of makeup air. Combining Pathfinder evacuation simulations with FDS results, it’s has been possible to examine where tenability is failing, and if this places occupants at risk. Understanding these features has enabled small changes to be made to significantly improve conditions in the building. Modern fire engineering tools have provided a better understanding of this existing buildings, enabling them to make it safer for visitors and reduce the risks to the museum exhibitions, and to do so in a cost effective manner.  
+
+
+[BIB]
+
