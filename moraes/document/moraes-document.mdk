@@ -85,20 +85,20 @@ camera (blue circle area view) records people near the door. The V3
 (orange cone area view) is positioned on a vehicle parked next to the exit 
 and facing that door.
 
-
-~ Figure { #fig-ginasio; caption:"Egress experiment scheme.@TCC"}
+~ Figure { #fig-ginasio; caption:"Egress experiment scheme.[^fn]"}
 ![esquemaExperimento_02]
 ~
 [esquemaExperimento_02]: images/esquemaExperimento_02.png "esquemaExperimento_02" { width:auto; max-width:90% }
+
+[^fn]: Adapted from [@tcc];
 
 During the experiments there were no visibility or fresh air restriction, 
 participants knew the path to be followed to the exit, there were no
 obstacles and the group was very homogeneous concerning mobility and
 decision-making skills. Figure [#3cam] shows a simultaneous snapshot of
 cameras V1, V2 and V3 during the experiment. Eight experiments were made,
-applying the following start populations: 35, 70, 105, 140, 175, 210 and 280. 
 
-~ Figure { #3CAM; caption:"Simultaneous snapshots taken during experiment."}
+~ Figure { #3CAM; caption:"Simultaneous snapshots taken during experiment.[^fn]"}
 ![snapshot3CAM]
 ~
 [snapshot3CAM]: images/snapshot3CAM.png "snapshot3CAM" { width:auto; max-width:90% }
@@ -125,7 +125,7 @@ and turbulence could raise. Figure [#turb] represents the path taken by six
 individuals (initial position on dot, final position crossing the door) 
 at 175 person egress experiment. 
 
-~ Figure { #turb; caption:"Scheme representing turbulence inside crowd near door."}
+~ Figure { #turb; caption:"Scheme representing crowd turbulence next to the exit."}
 ![turbulencia_04]
 ~
 [turbulencia_04]: images/turbulencia_04.png "turbulencia_04" { width:auto; max-width:90% }
