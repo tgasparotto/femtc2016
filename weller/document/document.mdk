@@ -78,10 +78,12 @@ One feature which was not modeled in FDS was the escape route pressurization sys
 ~ Column 
 
 ![PrettyPyrosim]
-[PrettyPyrosim]: images/PrettyPyrosim.JPG "PrettyPyrosim" { width:auto; max-width:50% }
+
 ~
 
 ~End Columns
+
+[PrettyPyrosim]: images/PrettyPyrosim.JPG "PrettyPyrosim" { width:auto; max-width:50% }
 
 One feature which was not modeled in FDS was the escape route pressurization systems.  The five stairwell pressurization systems and three corridor pressurization systems account are capable of injecting between 20 m^3^s^-1 and 60 m^3^s^-1 of fresh air into the building. Some of this air leaks out of the escape routes into both the museum, with the remainder venting to outside. Estimating the portion of pressurization air leaking into the museum has not been possible, based on a large number of uncertainties. 
 
