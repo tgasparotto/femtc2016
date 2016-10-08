@@ -3,7 +3,7 @@ Title         : UNCOORDINATED EGRESS: AN EXPERIMENT
 #Subtitle     : An optional subtitle.
 
 Author        : Wagner Alberto de Moraes
-Affiliation   : Corpo de Bombeiros Militar
+Affiliation   : Santa Catarina's Military Firefighter Corp
 Email         : wagnerm@cbm.sc.gov.br
 
 Bibliography  : references.bib
@@ -32,7 +32,7 @@ turbulence, characterized by random and involuntary movements of people within t
 
 # INTRODUCTION { #sec-intro }
 On 27th January 2013, a fire at the nightclub Kiss caused the death of 
-243 people in Santa Maria, Brazil. Investigators (RIO GRANDE DO SUL, 2013)
+243 people in Santa Maria, Brazil. Investigators [@crea2013]
 concluded that the fire was caused by use of flare stick which sparks
 burned the flammable sound insulation foam (polyurethane made). 
 In a few seconds, black and toxic smoke spread throughout the
@@ -41,7 +41,7 @@ the unique and undersized exit door. Kiss tragedy required improvements
 on fire safety code. As unit of Brazilian federation, each state, through
 its fire department, is responsible to define the fire safety code and
 assure its application. For example, one less than two years after Kiss, 
-Santa Catarina launched its new fire safety code banning the use of any
+Santa Catarina's Military Firefighter Corp launched its new fire safety code banning the use of any
 type of fireworks and flammable foam in closed rooms. However, defining 
 the size and number of emergency, being either safe and cost-effective is
 not simple as setting another statement in a code.
@@ -52,10 +52,10 @@ during an uncoordinated egress like one took place on Kiss. In this
 article some of the results will be discussed, like exit blockages, crowd
 turbulence and egress time and flow due to initial population. 
 
-## Discoordinated Egress
+## Uncoordinated Egress
 
 Based on literature review and empirical research, 
-Helbing, Farkas and Vicsek (2000) lists the events that can occur during
+Helbing, Farkas and Vicsek [@helbing2000simulating] lists the events that can occur during
 an emergency evacuation, right after the identification of the threat: 
 (1) people try to move faster than normal; 
 (2) individuals press to exit, causing physical interactions with those around; 
@@ -86,7 +86,7 @@ camera (blue circle area view) records people near the door. The V3
 and facing that door.
 
 
-~ Figure { #fig-ginasio; caption:"Egress experiment scheme."}
+~ Figure { #fig-ginasio; caption:"Egress experiment scheme.@TCC"}
 ![esquemaExperimento_02]
 ~
 [esquemaExperimento_02]: images/esquemaExperimento_02.png "esquemaExperimento_02" { width:auto; max-width:90% }
@@ -96,7 +96,7 @@ participants knew the path to be followed to the exit, there were no
 obstacles and the group was very homogeneous concerning mobility and
 decision-making skills. Figure [#3cam] shows a simultaneous snapshot of
 cameras V1, V2 and V3 during the experiment. Eight experiments were made,
-applying the following populations: 35, 70, 105, 140, 175, 210 and 280. 
+applying the following start populations: 35, 70, 105, 140, 175, 210 and 280. 
 
 ~ Figure { #3CAM; caption:"Simultaneous snapshots taken during experiment."}
 ![snapshot3CAM]
