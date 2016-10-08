@@ -34,7 +34,66 @@ turbulence, characterized by random and involuntary movements of people within t
 [femtc2016]: https://github.com/thunderheadeng/femtc2016
 [emaillink]: mailto:conference@thunderheadeng.com "conference@thunderheadeng.com"
 
-# GENERAL INSTRUCTIONS { #sec-intro }
+# INTRODUCTION { #sec-intro }
+On 27th January 2013, a fire at the nightclub Kiss caused the death of 
+243 people in Santa Maria, Brazil. Investigators (RIO GRANDE DO SUL, 2013)
+concluded that the fire was caused by use of flare stick which sparks
+burned the flammable sound insulation foam (polyurethane made). 
+In a few seconds, black and toxic smoke spread throughout the
+nightclub, causing many people to faint. Others did strive towards 
+the unique and undersized exit door. Kiss tragedy required improvements 
+on fire safety code. As unit of Brazilian federation, each state, through
+its fire department, is responsible to define the fire safety code and
+assure its application. For example, one less than two years after Kiss, 
+Santa Catarina launched its new fire safety code banning the use of any
+type of fireworks and flammable foam in closed rooms. However, defining 
+the size and number of emergency, being either safe and cost-effective is
+not simple as setting another statement in a code.
+
+Later on in 2013, Santa Catarina's Fire Department in 2013, focusing on
+crowded place like nightclubs, set an experiment to analyze what happens
+during an uncoordinated egress like one took place on Kiss. In this 
+article some of the results will be discussed, like exit blockages, crowd
+turbulence and egress time and flow due to initial population. 
+
+## Discoordinated Egress
+
+Based on literature review and empirical research, 
+Helbing, Farkas and Vicsek (2000) lists the events that can occur during
+an emergency evacuation, right after the identification of the threat: 
+(1) people try to move faster than normal; 
+(2) individuals press to exit, causing physical interactions with those around; 
+(3) movement becomes uncoordinated through the openings; 
+(4) arcing and locks are observed; 
+(5) jams form; 
+(6) pressure become dangerous; 
+(7) injured or fallen people act as obstacles; 
+(8) tendency to mass behavior increases; 
+(9) alternatives are neglected.
+
+# EGRESS EXPERIMENT
+The egress experiment aims to verify the influence of overcrowd on the 
+buildings occupants safety. Figure 1 shows a top view out of scale of
+the sports court detailing the experiment. In a controlled environment with
+only one 1.12m exit door, a group of 20-30 years old firefighter trainees 
+are distributed over 70m². A whistle sounds. Time counting starts. All 
+occupants are urged to leave immediately no matter how, as it would be
+the reaction observed by people realizing imminent risk to life itself. 
+The experimental results can be either quantitative, highlighting the
+egress time and flow or qualitative, by identifying by image analysis 
+the dynamics of crowds: blockages, arcs, waves and turbulence.
+
+The V1 camera (yellow cone area view), held by and operator 5m above the
+floor level, films the crowd from behind. Fixed above the output door, V2
+camera (blue circle area view) records people near the door. The V3 
+(orange cone area view) is positioned on a vehicle parked next to the exit 
+and facing that door.
+
+
+
+
+
+
 You are encouraged to use the [Madoko.net Editor][editor] while using
 the [Madoko Reference Manual][reference-manual] to edit/commit your
 documents into the 'authoring' branch of the [femtc2016] GitHub repository. 
