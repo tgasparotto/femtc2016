@@ -1,18 +1,14 @@
 [INCLUDE=style/lncs]
-Title         : TITLE OF YOUR PAPER, IN CAPITAL LETTERS CENTERED ON PAGE, USING ONE OR MORE LINES AS NECESSARY
-Subtitle      : An optional subtitle.
+Title         : UNCOORDINATED EGRESS: AN EXPERIMENT
+#Subtitle     : An optional subtitle.
 
-Author        : First Author Name
-Affiliation   : Research institute
-Email         : you@bar.com
+Author        : Wagner Alberto de Moraes
+Affiliation   : Corpo de Bombeiros Militar
+Email         : wagnerm@cbm.sc.gov.br
 
-Author        : My co-author 1
-Affiliation   : Other institute
-Email         : other1@bar.com
-
-Author        : My co-author 2
-Affiliation   : Other institute
-Email         : other2@bar.com
+Author        : Vanderlei Vanderlino Vidal
+Affiliation   : Corpo de Bombeiros Militar
+Email         : vanderlino@cbm.sc.gov.br
 
 Bibliography  : references.bib
 Logo          : False
@@ -23,11 +19,14 @@ name-references : REFERENCES
 [TITLE]
 
 ~ Abstract
-Papers should follow standard technical paper format, an abstract
-followed by the more detailed presentation. The abstract should be typed
-on this area of the first page, with the presentation following after two
-lines of space. The Abstract section should be indented from the main
-body of text.
+People fleeing from an overcrowded fire scene may delay their 
+own escape by obstructing the emergency exit by themselves. 
+In a controlled environment free of obstacle, evacuation experiments
+were performed where firefighters trainees had to escape through
+a single door with 1.12 meter span, varying the crowd density. 
+In the filming, besides the formation of supporting arches where
+people get stuck to each other and against the walls, it was observed
+turbulence, characterized by random and involuntary movements of people within the crowd. 
 ~
 
 [editor]: https://www.madoko.net/editor.html "Madoko.net Editor"
@@ -40,6 +39,9 @@ You are encouraged to use the [Madoko.net Editor][editor] while using
 the [Madoko Reference Manual][reference-manual] to edit/commit your
 documents into the 'authoring' branch of the [femtc2016] GitHub repository. 
 More information about this method of contribution will be covered below.
+
+
+
 
 Text styling, links, sub- and super-script, footnotes and other topics
 are covered in section [Syntax: Inline
