@@ -6,10 +6,6 @@ Author        : Wagner Alberto de Moraes
 Affiliation   : Corpo de Bombeiros Militar
 Email         : wagnerm@cbm.sc.gov.br
 
-Author        : Vanderlei Vanderlino Vidal
-Affiliation   : Corpo de Bombeiros Militar
-Email         : vanderlino@cbm.sc.gov.br
-
 Bibliography  : references.bib
 Logo          : False
 Tex Header    :
@@ -98,7 +94,7 @@ and facing that door.
 During the experiments there were no visibility or fresh air restriction, 
 participants knew the path to be followed to the exit, there were no
 obstacles and the group was very homogeneous concerning mobility and
-decision-making skills. Figure 2 shows a simultaneous snapshot of
+decision-making skills. Figure [#3cam] shows a simultaneous snapshot of
 cameras V1, V2 and V3 during the experiment. Eight experiments were made,
 applying the following populations: 35, 70, 105, 140, 175, 210 and 280. 
 
@@ -110,7 +106,7 @@ applying the following populations: 35, 70, 105, 140, 175, 210 and 280.
 #RESULTS
 
 ## Qualitative Results
-Figure 4 presents a snapshot (175 person egress experiment) highlighting
+Figure [#arch] presents a snapshot (175 person egress experiment) highlighting
 an arch that is force distribution representation along the crowd. 
 The charge given by people pushing from behind compacts the arch and, 
 as the crowd pressure raises, the force is transferred shoulder to 
@@ -125,11 +121,11 @@ One of the consequences of the arches is the imprisonment against the
 wall. It was observed in one of these experiments that an individual 
 stood 32 seconds, right aside the door, pressed against the wall without
 moving. As consequences of higher crowd pressures, trampling, crushes 
-and turbulence could raise. Figure 5 represents the path taken by six 
+and turbulence could raise. Figure [#turb] represents the path taken by six 
 individuals (initial position on dot, final position crossing the door) 
 at 175 person egress experiment. 
 
-~ Figure { #arch; caption:"Scheme representing turbulence inside crowd near door."}
+~ Figure { #turb; caption:"Scheme representing turbulence inside crowd near door."}
 ![turbulencia_04]
 ~
 [turbulencia_04]: images/turbulencia_04.png "turbulencia_04" { width:auto; max-width:90% }
