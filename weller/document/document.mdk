@@ -46,10 +46,12 @@ This paper outlines the investigation and fire assessment that was undertaken an
 
 One of the key architectural features of Te Papa museum is the openness of the public areas of the building, large atria connecting the public areas of the building in a single compartment or firecell.  
 
-![System]
-~ Figure { #System; caption:"Fire safety systems." (use the `.wide` class for wide figure)."}
-
+![Building layout]
+[Building layout]: images/Building-layout.JPG "Building layout" { width:auto; max-width:100% }
+~ Figure { caption:"Building cross-section." (use the `.wide` class for wide figure)}
 ~
+
+
 
 A number of fire safety systems are provided in the building to maintain the safety of visitors. Automatic sprinkler systems are provided throughout the building, with smoke detection provided in most public spaces. Collection spaces, escape routes, and office areas are separated from the exhibition and function spaces by fire rated construction. The building is also equipped with a smoke control system. There are eight smoke extract systems in the museum. Each of these activates independently when smoke is detected in different areas of the building, each drawing between 100 m^3^s^-1^ and 15 m^3^s^-1^. Depending on which extract systems activate, a matrix of make-up air vents open to direct airflow as required. Escape route pressurization systems also provide a source of make-up air.
 
@@ -66,11 +68,20 @@ When the design of the museum began in the early 1990’s, the designer recogniz
 
 Instead, the designer used FPEtool Fire Simulator, one of a suite of four packages in the FPEtool collection, developed by NIST, and was originally available on a 3 ½ inch floppy disk. Fire Simulator is a zone model program, limited to modeling a single room with an upper and lower layer.  It was able to be used to model individual spaces in the museum to calculate the smoke extract rates required to maintain desired smoke layer heights.  For makeup air, the a selection of the 12 makeup air vents were programed to open to provide a makeup air at a velocity of approximately 5 ms^-1^. Additional makeup air was provided by spill air from the escape route pressurization systems in the building. To support the smoke control system, suppression systems were provided to limit potential fire sizes. Sprinklers were installed throughout the building. Flame detection and deluge systems was installed in the large atriums where sprinkler response times would be slow, “to limit the maximum fire size to no more than 4.0 MW” [@Assessment]. 
 
-In reassessing the fire engineering design of the building, Beca elected to use Fire Dynamics Simulator (FDS). FDS is a CFD model of ﬁre-driven fluid ﬂow [@FDSGuide] developed by NIST, and was considered capable of modeling the smoke spread around the museum.  A number of tools were used to visualize the inputs and results for the FDS model. PyroSim, a graphic user interface (GUI) developed by Thunderhead Engineering, was used to create the FDS input files. Model geometry was imported from a 3D AutoDesk Revit model of the museum. Once the FDS simulation was complete, the results were viewed using the Smokeview visualization tool. 
+In reassessing the fire engineering design of the building, Beca elected to use Fire Dynamics Simulator (FDS). FDS is a CFD model of ﬁre-driven fluid ﬂow [@FDSGuide] developed by NIST, and was considered capable of modeling the smoke spread around the museum.  A number of tools were used to visualize the inputs and results for the FDS model. PyroSim, a graphic user interface (GUI) developed by Thunderhead Engineering, was used to create the FDS input files. Model geometry was imported from a 3D AutoDesk Revit model of the museum. Once the FDS simulation was complete, the results were viewed using the Smokeview visualization tool. The FDS model was made to include the whole museum exhibition and functions compartment, spanning six floors. All eight smoke extract systems were incorporated into the FDS model of the building, with make-up air vents incorporated to open as per the building controls. 
 
-The FDS model was made to include the whole museum exhibition and functions compartment, spanning six floors. All eight smoke extract systems were incorporated into the FDS model of the building, with beam detector devices used to trigger when each extract system started, and opening make-up air vents as per the building control matrix. 
+~Begin columns
 
-One feature which was not modeled in FDS was the escape route pressurization systems.  The five stairwell pressurization systems and three corridor pressurization systems account are capable of injecting between 20 m^3^s^-1^ and 60 m^3^s^-1^ of fresh air into the building. Some of this air leaks out of the escape routes into both the museum, with the remainder venting to outside. Estimating the portion of pressurization air leaking into the museum has not been possible, based on a large number of uncertainties. 
+~Column {width:50%}
+One feature which was not modeled in FDS was the escape route pressurization systems, which are capable of injecting between 20 m^3^s^-1^ and 60 m^3^s^-1^ of fresh air into the building. Some of this air leaks out of the escape routes into both the museum, with the remainder venting to outside. Estimating the portion of pressurization air leaking into the museum has not been possible, based on a large number of uncertainties. 
+~ 
+~ Column 
+
+![PrettyPyrosim]
+[PrettyPyrosim]: images/PrettyPyrosim.JPG "PrettyPyrosim" { width:auto; max-width:50% }
+~
+
+~End Columns
 
 One feature which was not modeled in FDS was the escape route pressurization systems.  The five stairwell pressurization systems and three corridor pressurization systems account are capable of injecting between 20 m^3^s^-1 and 60 m^3^s^-1 of fresh air into the building. Some of this air leaks out of the escape routes into both the museum, with the remainder venting to outside. Estimating the portion of pressurization air leaking into the museum has not been possible, based on a large number of uncertainties. 
 
