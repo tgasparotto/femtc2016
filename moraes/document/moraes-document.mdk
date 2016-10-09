@@ -178,7 +178,7 @@ blue curve, presents a sharp slope (at 8th and 29th individual, respectively)
 which is a graphical representation of a door blockage.   
 
 Another way to see the blockages is through the time void between two 
-egresses, which is presented in Figures [#graf-70 and ]
+egresses, which is presented in Figures [#graf-70] and [#graf-210].
 
 ~ Figure { #graf-70; caption: "Time void between egresses for 70 individuals experiment."}
 ![70_void]
@@ -189,6 +189,17 @@ egresses, which is presented in Figures [#graf-70 and ]
 ![210_void]
 ~
 [210_void]: images/210_void.png "210_void" { width:auto; max-width:90% }
+
+On Figure [#graf-210] the graphic shows eight one second intervals when
+none individual had gotten out. That means, people were right in front
+of the door, striving to egress but blocking one against other. Even less populated environment
+can develop blockages longer than one second, as it is seemed right before
+the escape of the 23th individual on Figure 
+[#graf-70].
+
+
+
+
 
 
 
