@@ -99,18 +99,18 @@ The Entrance Atrium was designed with a 100 m^3^s^-1^ smoke extract system. Fire
 The Entrance Atrium was designed with a 100 m^3^s^-1 smoke extract system. Fire Simulator would have been used to model the atrium as a single room, with makeup air supply, accounting for a 4MW fire at the base of the atrium. This would have assumed and antisymmetric smoke plume, being extracted from the top of the atrium. 
 
 
-In the re-assessment of the building, it was elected to model a spill plume into the atrium, rather than a fire at the base of the atrium itself. A fire was modeled in the Level 1 shop, spilling up atrium. Visual interrogation of the FDS models in Smokeview showed spill plume from the shop fire became noticeable disturbed when the smoke extract system activated. Makeup air, drawn through the front entrance doors at approximately 5 ms^-1^, disturbed the spill plume, resulting in significant additional entrainment. The extent of the disturbance can be seen in the slice files below, showing the velocity and air movement before (left) and after (right) the extract system activates.  
-
-
-FDS model results showed that given 1.5MW fire on Level 1, with a spill plume up the Entrance Atrium, visibility would fall below 10m for occupants on the upper floors of the building, a failure in tenable conditions. 
-To reduce the extent of disturbance of the spill plume, this FDS simulation was altered and re-run. In the second simulation, all of the existing makeup air vents in the building were set to open simultaneously on activation of the Entrance Atrium extract system. This was shown to significantly reduce makeup air velocities to in the order of 1 ms^-1^, and almost illuminating any disturbance of the spill plume. With less entrainment, the entrance atrium extract system could then maintain tenable conditions on the upper floors of the building indefinitely. 
-
+In the re-assessment of the building, it was elected to model a spill plume into the atrium, rather than a fire at the base of the atrium itself. A fire was modeled in the Level 1 shop, spilling up atrium. Visual interrogation of the FDS models in Smokeview showed spill plume from the shop fire became noticeable disturbed when the smoke extract system activated. Makeup air, drawn through the front entrance doors at approximately 5 ms^-1^, disturbed the spill plume, resulting in significant additional entrainment. The extent of the disturbance can be seen in the Figure [#fig-IMpact-of-extract], showing the velocity and air movement before and after the extract system activates.  
 
 ~ Figure {caption: "Velocity profile before (left) and after (right) the atrium extract system activates"}
 ![IMpact of extract]
 
 ~
 [IMpact of extract]: images/IMpact-of-extract.JPG "IMpact of extract" { width:auto; max-width:90% }
+
+
+FDS model results showed that given 1.5MW fire on Level 1, with a spill plume up the Entrance Atrium, visibility would fall below 10m for occupants on the upper floors of the building, a failure in tenable conditions. 
+To reduce the extent of disturbance of the spill plume, this FDS simulation was altered and re-run. In the second simulation, all of the existing makeup air vents in the building were set to open simultaneously on activation of the Entrance Atrium extract system. This was shown to significantly reduce makeup air velocities to in the order of 1 ms^-1^, and almost illuminating any disturbance of the spill plume. With less entrainment, the entrance atrium extract system could then maintain tenable conditions on the upper floors of the building indefinitely. 
+
 
 
 
@@ -120,25 +120,22 @@ As mentioned above, the FDS model fails to take account of air introduced to the
 ~ Figure{caption: "Extent of smoke spread with 5ms^-1^ (left) compared to 1ms^-1^ (right) "}
 ![ShopFire]
 ~
-[ShopFire]: images/ShopFire.JPG "ShopFire" { width:auto; max-width:100% }
+[ShopFire]: images/ShopFire.JPG "ShopFire" { width:auto; max-width:100%; page-align:bottom  }
 
 
 
 ##Function space fire
-The Icon Function center is located on Level 2 of the museum. The space is provided with two escape routes, and an automatic sprinkler system. Of interest is that there is an actuated door to outside, which provides makeup air for the Entrance Atrium smoke extract system. It is separated from the remainder of the atrium firecell by a glass partition and doors which are commonly held open.  
+The Icon function center is located on Level 2 of the museum. Of interest is that there is that the function center forms part of a makeup air path, with an actuated vent which opens on activation of the Entrance Atrium smoke extract system. It is separated from the remainder of the atrium firecell by a glass partition and doors which are commonly held open. 
 
-For the purpose of the fire engineering design of the building, it would have been designed to comply with the Acceptable Solution document C2/AS1. 
+For the purpose of the fire engineering design of the building, it would have been designed to comply with the Acceptable Solution document C2/AS1, with two escape routes and automatic sprinkler coverage. In the reassessment, the a fire was modeled in Icon function space to see what impact a fire on a makeup air path would have on the building. An FDS simulation showed that in the event of  fire in the function space, smoke would  into the entrance atrium and activates multiple extract systems. These will then then draw makeup air through the function space and room of fire origin, spreading smoke throughout the museum, as shown in Figure [#fig-extentofsmokespread]. Whilst this fire is unlikely to result in untenable conditions, it has the potential to cause smoke damage to large areas of the museum. Having identified the risk, relatively easy options are being investigated to isolate the effects of a fire in the function space, such as providing smoke sealed, self closing doors between the function space and atriums. 
 
-As part of the reassessment of the building, a fire was modeled in Icon function space. This fire was modeled to assess the impact of having a fire in a room on a makeup air path. A FDS simulation of the fire demonstrated that if the doors to the function space are held open, smoke is able to spill from the enclosure into the wider atrium firecell. Bridge links and the Entrance Atrium stairs guide the smoke spill up both the Entrance Atrium and Core Atrium, activating the extract systems in these areas. On activation of the smoke extract systems, makeup air passing through the function space draws smoke from the room of fire origin, spreading it around the museum, as shown in Figure ###. This results in a failure of visibility on the main entrance stairs, blocking this escape routes, and eventually leads to a failure of tenable conditions on Levels 5 and 6 of the building. 
-
-~ Figure {caption: "Smoke from a Level 2 function space fire may spread throughout the museum"}
+~ Figure { #fig-extentofsmokespread ; caption: "Smoke from a Level 2 function space fire may spread throughout the museum"}
 ~~ Center
 ![ExtentOfSmokeSpread]
 ~~
 ~
-[ExtentOfSmokeSpread]: images/ExtentOfSmokeSpread.JPG "ExtentOfSmokeSpread" { width:auto; max-width:80% }
+[ExtentOfSmokeSpread]: images/ExtentOfSmokeSpread.JPG "ExtentOfSmokeSpread" { width:auto; max-width:80%; page-align:bottom }
 
-Whilst further assessment demonstrates that the ASET for occupants exceeds the RSET, thereby achieving compliance with the NZBC, a fire in the function center does represent a risk to of smoke damage to museum exhibitions and artifacts. Having identified the risk, numerous relatively easy options are being investigated to minimize it. These include creating a smoke separation between the Icon space and the atriums, and reprogramming the makeup air vent in the Icon space so that it does not open on activation of the smoke extract systems in the Entrance and Core atriums. 
 
 
 ##Evacuation Modeling
