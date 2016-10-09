@@ -24,7 +24,7 @@ name-references : REFERENCES
 
 ~ Abstract
 Designed at a time when fire zone models and nodal evacuation simulations were on the forefront of fire engineering design, Te Papa Museum  stretched the boundaries of performance based fire engineering. The result was a heavily engineered approach to fire safety with a complex array of fire safety systems.
-This paper outlines the case study of a reassessment of the museum using computation fluid dynamics and agent based evacuation modeling. Coupled with a more comprehensive regulatory environment, these tools have enabled engineers to better understand the impacts of fire and smoke on the building, and how to improve life safety and asset protection in a cost effective manner. 
+This paper outlines the case study of a reassessment of the museum using computation fluid dynamics (CFD) and agent based evacuation modeling. Whilst these tools add a level of complexity to fire modeling which is always justifiable, the enable engineers to better understand the impacts of fire and smoke on the building. Coupled with a more comprehensive regulatory environment, these CFD modeling and agent based evacuation simulations have helped to improve life safety and asset protection in Te Papa museum in a cost effective manner. 
 ~
 
 [editor]: https://www.madoko.net/editor.html "Madoko.net Editor"
@@ -43,15 +43,15 @@ This paper outlines the investigation and fire assessment that was undertaken an
 
 Te Papa museum has numerous atriums connecting six floors and nearly four hectares of museum exhibitions, function centers and collection stores. all public areas of the building in a single compartment or firecell.  
 
-A number of fire safety systems are provided in the building to maintain the safety of visitors. Automatic sprinkler systems are provided throughout the building, with smoke detection provided in most public spaces. Collection spaces, escape routes, and office areas are separated from the exhibition and function spaces by fire rated construction. The building is also equipped with a smoke control system. There are eight smoke extract systems in the museum. Each of these activates independently when smoke is detected in different areas of the building, each drawing between 100 m^3^s^-1^ and 15 m^3^s^-1^. Depending on which extract systems activate, a matrix of make-up air vents open to direct airflow as required. Escape route pressurization systems also provide a source of make-up air.
+A number of fire safety systems are provided in the building to maintain the safety of visitors. Automatic sprinkler systems are provided throughout the building, with smoke detection provided in most public spaces. Collection spaces, escape routes, and office areas are separated from the exhibition and function spaces by fire rated construction. The building is also equipped with a smoke control system, as illustrated in Figure [#fig-buildinglayout]. There are eight smoke extract systems in the museum. Each of these activates independently when smoke is detected in different areas of the building, each drawing between 100 m^3^s^-1^ and 15 m^3^s^-1^. Depending on which extract systems activate, a matrix of make-up air vents open to direct airflow as required. Escape route pressurization systems also provide a source of make-up air.
 
 
-~ Figure {Caption:"Section of museum showing smoke control systems"}
+~ Figure {#fig-buildinglayout; Caption:"Section of museum showing smoke control systems"}
 ~~ Center
-![Building layout]
+![Buildinglayout]
 ~~
 ~
-[Building layout]: images/Building-layout.JPG "Building layout" { width:auto; max-width:80% }
+[Buildinglayout]: images/Building-layout.JPG "Building layout" { width:auto; max-width:80% }
 
 
 
@@ -64,11 +64,6 @@ The large, interconnecting atriums in the museum, with open bridge links and bal
 The fire designer of the building recognized the complexities of the building architecture, and their impact on the fire engineering design. Whilst computational fluid dynamics (CFD) analysis was available at the time using PHOENICS Fire, it was simply cost prohibitive a cost of about £50,000 per model run. Instead, FPEtool Fire Simulator was used. This was one of a suite of four packages in the FPEtool collection, developed by NIST, and was originally available on a 3½ inch floppy disk. Fire Simulator is a single room zone model program. It was  used to model individual smoke control zones in the museum, to calculate the smoke extract rates required to maintain desired smoke layer heights.  For makeup air, the a selection of the 12 makeup air vents were programed to open to provide a makeup air at a nominal velocity of approximately 5 ms^-1^, in addition to air makeup air from the escape route pressurization systems. Additional fire safety systems, including automatic sprinklers and deluge systems were provided to control potential fires, and prevent them from overcoming the extract extract systems [@Assessment]. 
 
 Fire Dynamics Simulator (FDS) [@FDSGuide] was used for the reassessment model fire-driven fluid ﬂow around the building. Visualization tools were used in developing and analyzing the FDS model. A 3D AutoDesk Revit  was imported into PyroSim, a graphic user interface (GUI), which was used to create the FDS input files. Smokeview was used to visualize FDS results. 
-
-
-
-[prettypyrosim1]: images/PrettyPyrosim1.JPG "PrettyPyrosim1" { width:auto; max-width:40% }
-
 
 The FDS model was made to include the whole museum exhibition and functions compartment, spanning six floors. All eight smoke extract systems and corresponding make-up air vents were all incorporated into the FDS model. The escape route pressurization systems were not modeled in FDS. These pump between 20 m^3^s^-1^ and 60 m^3^s^-1^ of fresh air into escape routes in the event of a fire, some of which leaks into the museum. The volume of makeup air provided by the pressurization system, and where this would be introduced to the public compartment is highly variable. Given that there are some scenarios were little or no pressurization air would enter the public compartment, it was decided to neglect the effects of the pressurization systems on the wider compartment.  
 
@@ -98,31 +93,24 @@ The Entrance Atrium was designed with a 100 m^3^s^-1^ smoke extract system. Fire
 
 The Entrance Atrium was designed with a 100 m^3^s^-1 smoke extract system. Fire Simulator would have been used to model the atrium as a single room, with makeup air supply, accounting for a 4MW fire at the base of the atrium. This would have assumed and antisymmetric smoke plume, being extracted from the top of the atrium. 
 
+In the re-assessment of the building, it was elected to model a spill plume into the atrium, rather than a fire at the base of the atrium itself. A fire was modeled in the Level 1 shop, spilling up atrium. Visual interrogation of the FDS models in Smokeview showed spill plume from the shop fire became noticeable disturbed when the smoke extract system activated. Makeup air, drawn through the front entrance doors at approximately 5 ms^-1^, disturbed the spill plume, resulting in significant additional entrainment. The extent of the disturbance can be seen in the Figure [#fig-Impact_of_extract], showing the velocity and air movement before and after the extract system activates.  
 
-In the re-assessment of the building, it was elected to model a spill plume into the atrium, rather than a fire at the base of the atrium itself. A fire was modeled in the Level 1 shop, spilling up atrium. Visual interrogation of the FDS models in Smokeview showed spill plume from the shop fire became noticeable disturbed when the smoke extract system activated. Makeup air, drawn through the front entrance doors at approximately 5 ms^-1^, disturbed the spill plume, resulting in significant additional entrainment. The extent of the disturbance can be seen in the Figure [#fig-IMpact-of-extract], showing the velocity and air movement before and after the extract system activates.  
-
-~ Figure {caption: "Velocity profile before (left) and after (right) the atrium extract system activates"}
-![IMpact of extract]
+~ Figure {#fig-impact_of_extract; caption: "Velocity profile before (left) and after (right) the atrium extract system activates"}
+![Impact_of_extract]
 
 ~
-[IMpact of extract]: images/IMpact-of-extract.JPG "IMpact of extract" { width:auto; max-width:90% }
+[Impact_of_extract]: images/IMpact-of-extract.JPG "IMpact of extract" { width:auto; max-width:90% }
 
 
 FDS model results showed that given 1.5MW fire on Level 1, with a spill plume up the Entrance Atrium, visibility would fall below 10m for occupants on the upper floors of the building, a failure in tenable conditions. 
-To reduce the extent of disturbance of the spill plume, this FDS simulation was altered and re-run. In the second simulation, all of the existing makeup air vents in the building were set to open simultaneously on activation of the Entrance Atrium extract system. This was shown to significantly reduce makeup air velocities to in the order of 1 ms^-1^, and almost illuminating any disturbance of the spill plume. With less entrainment, the entrance atrium extract system could then maintain tenable conditions on the upper floors of the building indefinitely. 
+To reduce the extent of disturbance of the spill plume, this FDS simulation was altered and re-run. In the second simulation, all of the existing makeup air vents in the building were set to open simultaneously on activation of the Entrance Atrium extract system. This was shown to significantly reduce makeup air velocities to in the order of 1 ms^-1^, and almost illuminating any disturbance of the spill plume. With less entrainment, the entrance atrium extract system is able to limit the extent of smoke spread as shown in Figure [#fig-shopfire] and maintain tenable conditions on the upper floors. 
 
-
-
-
-
-As mentioned above, the FDS model fails to take account of air introduced to the building by the escape route pressurization system. If for example half of the peak makeup air volume, 30 m^3^s^-1^, can be relied upon to discharge into the atrium firecell, this would reduce the required makeup air area from 100 m^3^s^-1^ to 70 m^3^s^-1^.  The corresponding 30% reduction makeup air velocity to about 3.5 ms^-1^ is could reduce the fire plume disturbance. Nevertheless, reconfiguring the makeup air system and reducing the makeup air velocity to approximately 1 ms^-1^ has been shown to improve the efficiency of the smoke control system, making the difference between passing and failing NZBC acceptance criteria. 
-
-~ Figure{caption: "Extent of smoke spread with 5ms^-1^ (left) compared to 1ms^-1^ (right) "}
+~ Figure{#fig-shopfire; caption: "Extent of smoke spread with 5ms^-1^ (left) compared to 1ms^-1^ (right) "}
 ![ShopFire]
 ~
 [ShopFire]: images/ShopFire.JPG "ShopFire" { width:auto; max-width:100%; page-align:bottom  }
 
-
+As mentioned above, the FDS model fails to take account of air introduced to the building by the escape route pressurization system. If for example half of the peak makeup air volume, 30 m^3^s^-1^, can be relied upon to discharge into the atrium firecell, this would reduce the required makeup air area from 100 m^3^s^-1^ to 70 m^3^s^-1^.  The corresponding 30% reduction makeup air velocity to about 3.5 ms^-1^ is could reduce the fire plume disturbance. Nevertheless, reconfiguring the makeup air system and reducing the makeup air velocity to approximately 1 ms^-1^ has been shown to improve the efficiency of the smoke control system, making the difference between passing and failing NZBC acceptance criteria. 
 
 ##Function space fire
 The Icon function center is located on Level 2 of the museum. Of interest is that there is that the function center forms part of a makeup air path, with an actuated vent which opens on activation of the Entrance Atrium smoke extract system. It is separated from the remainder of the atrium firecell by a glass partition and doors which are commonly held open. 
@@ -136,8 +124,6 @@ For the purpose of the fire engineering design of the building, it would have be
 ~
 [ExtentOfSmokeSpread]: images/ExtentOfSmokeSpread.JPG "ExtentOfSmokeSpread" { width:auto; max-width:80%; page-align:bottom }
 
-
-
 ##Evacuation Modeling
 
 The nodal model EVACNET+ was to demonstrate that the building could be evacuated in under 10 minutes when it was designed, to satisfy the building authority at the time. The calculated the evacuation movement time, excluding detection and pre-movement times, for 4200 occupants in the building was 520 seconds. This assessment assumed that all of the escape routes in the building were clear and available during the evacuation. 
@@ -147,17 +133,15 @@ Only one EVACNET+ simulation was documented, and whilst this accounted for a lar
 
 ## Design Robustness
 
-The fire engineering design of the building relies heavily on a number of systems, including the automatic drencher system within the atrium to maintain tenable conditions within the museum. 
+The fire engineering design of the building relies heavily on a number of systems to maintain tenable conditions in the event of a fire, including the automatic atrium drencher systems and the smoke extract systems. The NZBC required the building's reliance on these systems to be evaluated, to determine the risk if one of these systems failed. For these robustness checks, the NZBC regulates that the FED~CO~ may not exceed 0.3. 
 
-One such robustness check was to assess the impact of a failure of the flame detection and deluge systems in large atriums in the building. These systems provide automatic fire suppression for in the event of an atrium fire, where the conventional sprinklers at the top of the atrium 20m above are likely to be too slow to react. As required by the NZBC, tenability for this robustness was considered to fail if occupants were exposed to a FED~CO~ of greater than 0.3. 
+The fast response sprinkler deluge systems in the atriums of the building were provided because the sprinkler activation times in these areas would be significant, allowing a potentially large fire to develop. A single room zone model was developed using B-Risk software [@wade2013b] to assess the impact of a deluge system failure. This was a conservative approach for this assessment, as the zone model did not account for the effects of spill plumes or makeup air disturbances, which would otherwise result in increased entrainment and reduced FED~CO~.  This allowed a much faster and therefore much cheaper assessment than would have been possible using FDS.  
 
-A single room zone model was identified as a cost effective means of assessing the failure of the entrance deluge system, monitoring tenability two meters above the highest occupied. The atrium stairs, balconies, and bridge links in the building would all serve to increase the entrainment on the smoke plume, lowering the concentration of species in the upper smoke layer, and prolonging the time until FED~CO~ exceeds 0.3. Therefore ignoring these affects could be justified as conservative to the assessment. Similarly any disturbance of the smoke plume by makeup air, or smoke spread to other areas of the museum could also be neglected. Despite the conservative assumptions, a single room zone model, using B-Risk software [@wade2013b], was used to demonstrate that the time until FED~CO~ exceeds 0.3 is greater than the time RSET. 
-
-Another robustness check scenario examined the impact of a failure of the smoke extract systems, which were considered integral to maintaining tenable conditions in the building. An initial zone model assessment of this scenario suggested the possibility of FED~CO~ exceeding 0.3 before the evacuation of the building was complete. Therefore further assessment was carried out using FDS to better simulate smoke movement and entrainment. 
+A similar approach was attempted to examine the failure of the smoke extract systems. When An initial zone model results suggested the possibility of FED~CO~ exceeding 0.3, FDS was used to provide a more detailed assessment. It was possible to demonstrate that whilst visibility may be lost in the museum if the extract systems fail, people are unlikely to be exposed to higher levels of carbon monoxide than is acceptable in the NZBC. 
 
 #Discussion
 
-Fundamentally, the fire engineering design of Te Papa museum was still capable of complying with the requirements to the NZBC, despite significant technology developments and changes to the Building Code. The extract systems which were sized based on Fire Simulator zone models have sufficient capacity to maintain tenable conditions in the building, and there are sufficient escape routes to evacuate. 
+Fundamentally, the fire engineering design of Te Papa museum is still capable of complying with the requirements to the NZBC, despite significant technology developments and changes to the Building Code. The extract systems which were sized based on Fire Simulator zone models have sufficient capacity to maintain tenable conditions in the building, and there are sufficient escape routes to evacuate. 
 
 Simulation results from the reassessment differ from the original design calculations. Where original simulations showed that the building could be evacuated in 520 seconds, the reassessment suggested some scenarios may take as long as 1200 seconds. Initial smoke modeling in Fire Simulator showed that tenability could be maintained indefinitely in the building, but FDS modeling identified a number of points where conditions could become untenable for occupants. However, unlike the initial design of the building which assessed the egress from the building and smoke filling separately, FDS and Pathfinder results could be compared and overlaid. Importing FDS slice file results into Pathfinder, it is possible to see that failure of visibility in one area may be okay because that area had already been evacuated. For example, the smoke modeling demonstrated that conditions failed first in the region around the atriums. Pathfinder was able to show that areas around the atriums were the first to be evacuated. Queues to enter escape routes were around the extremities of the atrium firecell, which, for Te Papa, were some of the last spaces to be effected by smoke.
 
