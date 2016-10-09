@@ -3,7 +3,7 @@ Title         : UNCOORDINATED EGRESS: AN EXPERIMENT
 #Subtitle     : An optional subtitle.
 
 Author        : Wagner Alberto de Moraes
-Affiliation   : Santa Catarina's Military Firefighter Corp
+Affiliation   : Santa Catarina Military Fire Department
 Email         : wagnerm@cbm.sc.gov.br
 
 Bibliography  : references.bib
@@ -41,18 +41,15 @@ the unique and undersized exit door. Kiss tragedy required improvements
 on fire safety code. As unit of Brazilian federation, each state, through
 its fire department, is responsible to define the fire safety code and
 assure its application. For example, one less than two years after Kiss, 
-Santa Catarina's Military Firefighter Corp launched its new fire safety code banning the use of any
+Santa Catarina Military Fire Department (CBMSC) launched its new fire safety code banning the use of any
 type of fireworks and flammable foam in closed rooms. However, defining 
 the size and number of emergency, being either safe and cost-effective is
-not simple as setting another statement in a code.
-
-Later on in 2013, Santa Catarina's Fire Department in 2013, focusing on
-crowded place like nightclubs, set an experiment to analyze what happens
-during an uncoordinated egress like one took place on Kiss. In this 
-article some of the results will be discussed, like exit blockages, crowd
+not simple as setting another statement in a code. For this, an experiment was done
+in order to analyze what happens during an uncoordinated egress like one took place at Kiss. 
+This paper brings some of results, like exit blockages, crowd
 turbulence and egress time and flow due to initial population. 
 
-## Uncoordinated Egress
+## Uncoordinated Egress { #sec-egress}
 
 Based on literature review and empirical research, 
 Helbing, Farkas and Vicsek [@helbing2000simulating] lists the events that can occur during
@@ -67,7 +64,7 @@ an emergency evacuation, right after the identification of the threat:
 (8) tendency to mass behavior increases; 
 (9) alternatives are neglected.
 
-# EGRESS EXPERIMENT
+# EXPERIMENT { #sec-experiment}
 The egress experiment aims to verify the influence of overcrowd on the 
 buildings occupants safety. Figure [#fig-ginasio] shows a top view out of scale of
 the sports court detailing the experiment. In a controlled environment with
@@ -85,27 +82,29 @@ camera (blue circle area view) records people near the door. The V3
 (orange cone area view) is positioned on a vehicle parked next to the exit 
 and facing that door.
 
-~ Figure { #fig-ginasio; caption:"Egress experiment scheme.[^fn]"}
+
+~ Figure { #fig-ginasio; caption:"Egress experiment scheme."}
 ![esquemaExperimento_02]
 ~
 [esquemaExperimento_02]: images/esquemaExperimento_02.png "esquemaExperimento_02" { width:auto; max-width:90% }
-
-[^fn]: Adapted from [@tcc];
 
 During the experiments there were no visibility or fresh air restriction, 
 participants knew the path to be followed to the exit, there were no
 obstacles and the group was very homogeneous concerning mobility and
 decision-making skills. Figure [#3cam] shows a simultaneous snapshot of
 cameras V1, V2 and V3 during the experiment. Eight experiments were made,
+applying the following start populations: 35, 70, 105, 140, 175, 210 and 280. 
 
-~ Figure { #3CAM; caption:"Simultaneous snapshots taken during experiment.[^fn]"}
+~ Figure { #3CAM; caption:"Simultaneous snapshots taken during experiment."}
 ![snapshot3CAM]
 ~
 [snapshot3CAM]: images/snapshot3CAM.png "snapshot3CAM" { width:auto; max-width:90% }
 
-#RESULTS
+# RESULTS   { #sec-results}
+The results are divided in: qualitative, arches and turbulence observed in the
+crowd; quantitative, regarding to egress time and flow. 
 
-## Qualitative Results
+## Qualitative Results { #sec-quali}
 Figure [#arch] presents a snapshot (175 person egress experiment) highlighting
 an arch that is force distribution representation along the crowd. 
 The charge given by people pushing from behind compacts the arch and, 
@@ -131,49 +130,13 @@ at 175 person egress experiment.
 [turbulencia_04]: images/turbulencia_04.png "turbulencia_04" { width:auto; max-width:90% }
 
 
-.
-
-.
-
-.
-
-.
-
-.
-
-.
+## Quantitative Results { #sec-quanti}
 
 
 
 
 
 
-
-You are encouraged to use the [Madoko.net Editor][editor] while using
-the [Madoko Reference Manual][reference-manual] to edit/commit your
-documents into the 'authoring' branch of the [femtc2016] GitHub repository. 
-More information about this method of contribution will be covered below.
-
-
-
-
-Text styling, links, sub- and super-script, footnotes and other topics
-are covered in section [Syntax: Inline
-elements](http://research.microsoft.com/en-us/um/people/daan/madoko/doc/reference.html#sec-syntax--inline-elements)
-of the manual.
-
-Headings, Figures and Tables, Lists, Code Blocks, Mathematics, etc. are
-covered in section [Syntax: Block
-elements](http://research.microsoft.com/en-us/um/people/daan/madoko/doc/reference.html#sec-syntax--block-elements)
-of the manual.
-
-The target length for submitted and invited papers is about eight pages.
-This length includes all figures and tables. However, because the
-Proceedings will not be printed on paper, there is no maximum limit on
-the number of pages. You are free to exceed the target length of eight
-pages.
-
-Please watch this short YouTube Video for a tutorial on how to use the system as intended.
 
 # MAIN HEADINGS LIKE THIS STYLE
 Main Headings are all upper case letters and underlined. In Madoko, a
