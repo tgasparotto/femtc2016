@@ -32,15 +32,21 @@ carried out with numerical models to show that the position of the fire has also
 
 # INTRODUCTION { #sec-intro }
 The structural response of bridges against fire is an under researched topic not covered in current design codes
-in spite of its frequency and consequences as it is shown in Peris-Sayol et Al [@PerisSayol2016]. In this paper, 154 bridge
-fires have been collected between 1997 and 2015, and the bridge damage level and the main factors involved in
-bridge fire damage has been characterized. This analysis shows that the only scenarios likely to
-cause damage to concrete and steel bridges are a tanker fire close to the structure and a high calorific storage 
+in spite of its frequency and consequences as it is shown in Peris-Sayol et al [@PerisSayol2016]. In this paper, 154 bridge
+fires that happened between 1997 and 2015 were studied, and the bridge damage level and the main factors involved in
+bridge fire damage were characterized. This analysis showed that the scenarios likely to
+cause damage to concrete and steel bridges are a tanker fires close to the structure and a high calorific storage 
 fire under the bridge, being overpasses the most susceptible infrastructure.
 
+The temperature of the gas surrounding a specific bridge deck is a critical parameter governing the response of the
+bridge to a fire due to its influence on the mechanical properties of the bridge construction materials. High temperatures
+can cause the collapse of the bridge due to loss of resistance of the materials as it happened in the MacArthur Maze in Oakland
+in 2007 or in a bridge near Hazel Park in Detroit in 2009. In both cases a tanker truck carrying gasoline crashed under the
+bridge and caught fire, provoking temperatures higher than 900°C and decreasing the mechanical resistance of the bridge in a
+relatively short time. Both bridges collapsed around 20 minutes after the tanker caught fire.
+
 This paper uses Computational Fluid Dynamics simulation to study the parameters influencing the temperatures of
-the gas surrounding I girder bridges during a fire, since this is a critical parameter governing the response of 
-the bridge. More specifically, the study considers four geometric parameters (vertical clearance, bridge
+the gas surrounding I girder bridges during a fire. More specifically, the study considers four geometric parameters (vertical clearance, bridge
 substructure configuration, span length and bridge width) and two fire scenario parameters (position of the fire load
 and type of fuel). This study complements previous work [@PerisSayol2016] since the parameters analyzed by CFD
 were impossible to characterize in real cases. Also, in this paper, the structural behavior of a 21 meters span simply supported
@@ -69,11 +75,10 @@ All the bridges also had a concrete slab 0.2 m thick on top of the I-girders.
 ~
 
 
+![figura1]
 
-
-![Figura 1]
 ~ Figure { #fig-figure; caption:"Parameters studied in the analysis. 3D view of two CFD models."}
-  [Figura 1]: images/Figura-1.jpg "Figura 1" { width:auto; max-width:100% }
+[figura1]: images/figura1.png "figura1" { width:auto; max-width:100% }
 ~
 
 
@@ -345,6 +350,6 @@ the fire load are the most influential parameters for the flange temperatures. W
 This type of analysis is very relevant as it constitutes the basis for the development of parametric temperature curves specific for bridges.
 
 Also, it has been shown that the position of the fire load has an influence on the type and time of failure even if the maximum adiabatic temperatures are on the same range.
-This conclusion should be taken into account when performing a conventional analysis of the structural behaviour of bridges against fire, as those based on standards.
+This conclusion should be taken into account when performing a conventional analysis of the structural behaviour of bridges against fire.
 
 [BIB]
