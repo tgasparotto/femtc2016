@@ -172,12 +172,26 @@ different crowd initial density.
 ~
 [first35]: images/first35.png "first35" { width:auto; max-width:100% }
 
-The dark blue curve is almost the same slope, representing that at the 
+The dark blue curve is maintain a near constant slope, representing that at the 
 lowest crowd density there were no blockages. Either the purple or the light
 blue curve, presents a sharp slope (at 8th and 29th individual, respectively) 
 which is a graphical representation of a door blockage.   
-<!-- end merge -->
 
+
+Another way to see the blockages is through the time void between two 
+egresses, where each peak represents a time lapse. 
+
+
+![70_void]
+
+[70_void]: images/70_void.png "70_void" { width:auto; max-width:90% }
+
+
+
+
+![210_void]
+
+[210_void]: images/210_void.png "210_void" { width:auto; max-width:90% }
 
 
 
