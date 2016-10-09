@@ -124,10 +124,11 @@ and turbulence could raise. Figure [#turb] represents the path taken by six
 individuals (initial position on dot, final position crossing the door) 
 at 175 person egress experiment. 
 
-~ Figure { #turb; caption:"Scheme representing crowd turbulence next to the exit."}
-![turbulencia_04]
+~ Figure { #turb; caption: "Images overlayed showing how turbulence affects the path followed by a person (1 is the first position and 15 the egress)"}
+![turbulencia]
 ~
-[turbulencia_04]: images/turbulencia_04.png "turbulencia_04" { width:auto; max-width:90% }
+[turbulencia]: images/turbulencia.png "turbulencia" { width:auto; max-width:100% }
+
 
 
 ## Quantitative Results { #sec-quanti}
