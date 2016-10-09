@@ -163,11 +163,11 @@ However, the most crowded experiment presented a higher flow comparing
 to the previous experiment. Checking out the video camera aiming the 
 crowd's back (V1), it was verified that people had not pressed for 
 escape as they should. Participants perceived that the more they press 
-those ahead, longer will wait inside the building. Figure [#graf1] presents
+those ahead, longer will wait inside the building. Figure [#graf-35th] presents
 the required time for the first 35 individuals to cross the exit at 
 different crowd initial density.
 
-~ Figure { #graf1; caption: "Egress time for the first 35 individuals over several crowd initial density [person/m²]."}
+~ Figure { #graf-35th; caption: "Egress time for the first 35 individuals over several crowd initial density [person/m²]."}
 ![first35]
 ~
 [first35]: images/first35.png "first35" { width:auto; max-width:100% }
@@ -177,22 +177,18 @@ lowest crowd density there were no blockages. Either the purple or the light
 blue curve, presents a sharp slope (at 8th and 29th individual, respectively) 
 which is a graphical representation of a door blockage.   
 
-
 Another way to see the blockages is through the time void between two 
-egresses, where each peak represents a time lapse. 
+egresses, which is presented in Figures [#graf-70 and ]
 
-
+~ Figure { #graf-70; caption: "Time void between egresses for 70 individuals experiment."}
 ![70_void]
-
+~
 [70_void]: images/70_void.png "70_void" { width:auto; max-width:90% }
 
-
-
-
+~ Figure { #graf-210; caption: "Time void between egresses for 210 individuals experiment."}
 ![210_void]
-
+~
 [210_void]: images/210_void.png "210_void" { width:auto; max-width:90% }
-
 
 
 
