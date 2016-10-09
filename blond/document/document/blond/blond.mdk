@@ -151,7 +151,7 @@ These measurements can be defined like local measurements with the aim of obtain
 The following graphs show the comparison between the recorded temperatures in the simulations and the ones recorded during the tests.
 
 ## Validation of the model under real test in a real geometry
-
+Following the validation process 
 
 [editor]: https://www.madoko.net/editor.html "Madoko.net Editor"
 [reference-manual]: http://research.microsoft.com/en-us/um/people/daan/madoko/doc/reference.html "Madoko Reference Manual"
