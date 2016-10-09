@@ -151,7 +151,19 @@ These measurements can be defined like local measurements with the aim of obtain
 The following graphs show the comparison between the recorded temperatures in the simulations and the ones recorded during the tests.
 
 ## Validation of the model under real test in a real geometry
-Following the validation process 
+Following the validation process the model was compared with the results obtained from real tests with Izar in a big industrial hall.
+The aim of this validation was to confirm that the FDS model of Izar is capable of reproducing the behaviour of the system during a real smoke test. One of the main characteristics of Izar is capablility of validating FDS geometries.
+The tests too place in a big industrial hall with an aproximate area of 3.000 m2 and 9 m high. 
+Different test with different powers were carried out and the temperatures within the smoke layer were recorded at 5 m, 10 m, and 20 m, from the burner position. A depth of 2.75 m above the ceiling was controlled.
+The following graph show the temperature sensor distribution during the test.
+
+FIGURE with the sensors
+
+The geometry was reproduced in FDS and Izar was modeled using the previous described. The temperature was recorded in the FDS model at the same positions as in the real test.
+The graphs with the comparison between both temperatures fields are available in the Appendix.  
+
+Conclusion
+
 
 [editor]: https://www.madoko.net/editor.html "Madoko.net Editor"
 [reference-manual]: http://research.microsoft.com/en-us/um/people/daan/madoko/doc/reference.html "Madoko Reference Manual"
