@@ -110,209 +110,182 @@ We have benchmarked the full CFD models against the ArupFire Tunnel Fire Experim
 The results of the validation study has not been presented here.  
 
 # THE DARTFORD TUNNEL, UK
+The Dartford Tunnel is 1.5 km long with an effective area of 41 m^2^.  There are 14 jet fans 
+pairs in total where 7 is located at the South portal (100 m in) and 7 is located at the North
+portal (50 m in).  These jet fans pairs are spaced 50 m apart in series, and the individual
+fans is spaced at 1.2 m in parallel and are mounted at 5.5 m above the road.  Each fan has a diameter
+of 0.5 m^2^ and generates a volume of rate of 8.9 m^3^.  See Figure 1 and Figure 2.  
 
+~ Figure { #fig-figure; caption:"Dartford West Tunnel Long Section"}
+![dart2]
+
+[dart2]: images/dart2.png "dart2" { width:auto; max-width:90% }
+~
+
+~ Figure { #fig-figure; caption:"Dartford West Tunnel Cross Section"}
+![dart3]
+
+[dart3]: images/dart3.png "dart3" { width:auto; max-width:90% }
+~
 
 # MULTI-SCALE MODELLING METHOD
-## OVERVIEW OF THE MULTI-SCALE MODELLING METHOD 
-we have used FDS6.1 and the built-in HVAC feature to implement the multi-scale modelling method. 
-Briefly, multi-scale modelling method can be divided into two methods, namely the direct method and the 
-indirect method (cite my TUST).  
+## SUMMARY OF THE MULTI-SCALE MODELLING METHOD 
+We have used FDS6.1 (current at the time the work was carried out) and the built in HVAV
+feature to implelemt the multi-scale modelling method.  Briefly, multi-scale modelling can 
+be divided into two methods, namely the direct and indirect method (cite my TUST).  
+
+A key consideration for a multi-scale model is the length, L~3D~ of the CFD domain 
+(near field), i.e. regions where CFD is needed to resolve the flow's characteristic.  Once this is decided, the remaining areas are treated as far field regions 
+where these can be represented in 1D. 
+
+For a cold flow only scenario, the CFD domain is the region where the jet fans are located, 
+with the far field domain modelled in 1D. When a fire is introduced, the fire will 
+also be located in a CFD domain given its complex reaction. By modelling the 
+jet fans and the fires in CFD regions together with the regions in between 
+represented with 1D, this essentially couples together the jet fans and the fires, 
+allowing the effect of this coupling to be simulated.  
+
+See Figure 3 for the implementation of the multi-scale model. Note that L~P~
+ is 50 m, L~JF,DW~ is 130 m and L~JF,UP~ is 35 m.  We have derived these distances by calibrating 
+ the CFD models.  
+
+~ Figure { #fig-figure; caption:"Illustration of the Implementation of the FDS6.1 Multi-scale Model"}
+![fig_m14]
+[fig_m14]: images/fig_m14.png "fig_m14" { width:auto; max-width:90% }
+~
 
 ## COMPARISON OF NUMERICAL MODELLING TO FIELD DATA
+To compare the numerical model for cold flow multi-scale modelling against field data, we have
+carried out modelling for five scenarios including one with only background velocity (no jet fans active), 
+and models with one, four, seven and fourteen jet fans pairs activated.  
+
+Figure 4 shows the comparison of the on-site and both 1D and full CFD modelling average velocities at the
+centre of the tunnel. Although the velocities at 20 m to 60 m have weak correlations to the field data, 
+the velocity profiles furhter downstream of the jet fans correlate with the field data. This is
+within expectation as the numerical modelling of the jet fans are highly sensitive, particularly
+when considering the velocities profile near to the jet fans (highly turbulent and sensitive to the
+configuration of the jet fans).  As the results show, as the flow from the jet fans become
+fully developed, the velocity profiles are within the field measurements.  
+
+~ Figure { #fig-figure; caption:"Comparison of the Velocity Profiles Downstream of the Jet Fans"}
+![fig_120]
+![fig_100]
+![fig_80]
+![fig_60]
+![fig_40]
+![fig_20]
+[fig_120]: images/fig_120.png "fig_120" { width:auto; max-width:48% }
+
+[fig_100]: images/fig_100.png "fig_100" { width:auto; max-width:48% }
+
+[fig_80]: images/fig_80.png "fig_80" { width:auto; max-width:48% }
+
+[fig_60]: images/fig_60.png "fig_60" { width:auto; max-width:48% }
+
+[fig_40]: images/fig_40.png "fig_40" { width:auto; max-width:48% }
+
+[fig_20]: images/fig_20.png "fig_20" { width:auto; max-width:48% }
+~
+
+The results show for bulk flow in a tunnel, the multi-scale modelling method provides
+reasonably accurate predictions when compared to field measurements. Separately, the multi-scale
+modelling method also provides significant time saving compared to the full CFD method.  
+
+Figure 5 shows the computational time between the full CFD method and the multi-scale modelling
+method where depending on the length of the 1D zone, where the larger a proportion of the model
+is represented in 1D against 3D, the more significant is the time savings, i.e. up to 2.2 times.
+
+~ Figure { #fig-figure; caption:"Computational Time between Full CFD and the Multi-scale Modelling Method"}
+![fig1_time1]
+
+[fig1_time1]: images/fig1_time1.png "fig1_time1" { width:auto; max-width:90% }
+~
 
 ## FIRE MODELLING 
+Following the demonstration of the accuracy of the numerical predictions of the cold flow
+multi-scale model to field measurements, we have carried out additional multi-scale model
+by introducing a fire in the centre of the tunnel. The model includes three fire sizes, i.e.
+35 MW, 55 MW and 75 MW.  
 
-## COLD FLOW MODELLING
+Implementation of the multi-scale model is similar to that of the cold flow modelling with the
+exception the fire is located in the 3D section. See Figure 6.  Note that L~fire~is 170 m and this
+has been determined based on the calibration of the model to ensure the fire has enough length to
+be full developed when the smoke plume reaches the 1D section.  
+
+~ Figure { #fig-figure; caption:"Implementation of the Multi-scale Model"}
+![fig1_fire2]
+[fig1_fire2]: images/fig1_fire2.png "fig1_fire2" { width:auto; max-width:90% }
+~
+
+We have plotted the results from the full CFD and multi-scale models by considering the
+mass flow rates along the length of the tunnel at a specific time frame (50 and 250 seconds) and 
+the mass flow rates in and out of the tunnel.  As shown in FIgure 7, the results show the mass flow along the tunnel for the multi-scale
+model is either under or over-predicted.  Furthermore, the results show for the full CFD models,
+the mass flow reached a steady state whereas the mass flow for the multi-scale model
+continues to either increase or decrease overtime.  
+
+~ Figure { #fig-figure; caption:"Mass Flow Rates for 35 MW< 55 MW and 75 MW fire.  "}
+![fig1_75mw1]
+![fig1_75mw]
+![fig1_55mw1]
+![fig1_55mw]
+![fig1_35mw1]
+![fig1_35mw]
+[fig1_75mw1]: images/fig1_75mw1.png "fig1_75mw1" { width:auto; max-width:48% }
+
+[fig1_75mw]: images/fig1_75mw.png "fig1_75mw" { width:auto; max-width:48% }
+
+[fig1_55mw1]: images/fig1_55mw1.png "fig1_55mw1" { width:auto; max-width:48% }
+
+[fig1_55mw]: images/fig1_55mw.png "fig1_55mw" { width:auto; max-width:48% }
+
+[fig1_35mw1]: images/fig1_35mw1.png "fig1_35mw1" { width:auto; max-width:48% }
+
+[fig1_35mw]: images/fig1_35mw.png "fig1_35mw" { width:auto; max-width:48% }
+~
+
+In an attempt to investigate whether the mass flow reaches a steady state, we modelled 
+an additional two scenarios, i.e. 35 MW fire with 7 and 14 jet fans with extended run time.
+Figure 8 shows the results where even at 1,000 seconds, the mass flow continues to increase for the 
+7 jet fans pairs model.  Although the explanation for the inconsistent mass flow rates
+cannot be determined at this juncture, it is at least clear this phenomenon is unique to the multi-scale
+model given the full CFD models did not exhibit such a behaviour.  A plausible explanation for this is the relatively simplistic 
+implementation of the HVAC function in FDS6.1.
+
+~ Figure { #fig-figure; caption:"Mass Flow in Tunnel Over Time for a 35 MW Fire with 7 and 14 Jet Fans Pairs"}
+![fig1_fig2]
+![fig1_fig1]
+
+[fig1_fig2]: images/fig1_fig2.png "fig1_fig2" { width:auto; max-width:48% }
+
+[fig1_fig1]: images/fig1_fig1.png "fig1_fig1" { width:auto; max-width:48% }
+
+~
+
+
+Since the work carried out in this research, we understand there has been development and
+improvement made in the implementation of the HVAC models.  It is worth re-assessing the issue
+of the inconsistent mass flow rates in the tunnel. Because of this yet to be explained phenomenon, 
+we have not assessed the computational time of the multi-scale and full CFD methods.  
 
 # CONCLUSION AND RECOMMENDATIONS
+We have shown in this work for cold flow modelling, it is possible to implement a multi-scale
+model in FDS6.1.  Furthermore, the predictions obtained for cold flow modelling using 
+the multi-scale modelling method are comparable to the field measurements obtained.  In addition,
+depending on the ratio of the 1D against 3D sections, the savings in computational time for cold
+flow modelling implemented using the multi-scale modelling method can be up to 2.2. times. 
+
+Separately, we have shown for fire modelling using the multi-scale modelling method, there exists 
+a yet to be explained phenomenon whereby the mass flow rates in the tunnel are under or over predicted
+when compared to the full CFD method. For further work, we recommend re-assessing this using
+the more recent build of the FDS where the HVAC model has been improved.  
+
+At this juncture, until the phenomenon of the mass flow rate predictions can be adequate explained, we advised
+against using the multi-scale modelling methods for fire modelling. For cold flow modelling, 
+the work here shows the multi-scale modelling methods can be applied.  
 
 
-# MAIN HEADINGS LIKE THIS STYLE
-Main Headings are all upper case letters and underlined. In Madoko, a
-Single '#' symbol at the start of the line, followed by a space and then
-the heading text.
-
-## Subheadings Like This Style
-Subheadings within sections follow the same format as section titles, but
-with upper and lower case. In Madoko, a Double '#' symbol at the start of
-the line, followed by a space and then the heading text.
-
-### Subsubheadings like this style
-Subsubheadings have no underline, and only the first letter capitalized.
-In Madoko, a Triple '#' symbol at the start of the line, followed by a
-space and then the heading text.
-
-# FIGURES, TABLES, AND EQUATIONS
-Original drawings and photos may be included in your paper as figures.
-Diagrams may be in color.
-
-Figures and tables should immediately follow first mention of them in the
-text and can be placed in one column, or in the case of wider figures,
-can cover two columns (but only at the top or bottom of the page). The
-caption should start with either the word “figure” spelled out or
-abbreviated, followed by the figure number (i.e., Figure 1 or Fig. 1).
-The figure caption should be followed by a single line of space before
-the text resumes.
-
-## Figures
-Figure [#fig-smokeview] in Section [#sec-intro] shows an image from an
-older version of Smokeview. Note that you can drag&drop images into the
-editor pane to include them in the document, and similarly with bibtex
-files, latex style files, etc.
-
-~ Figure { #fig-smokeview; caption:"Illustration of placement of figure and caption. (use the `.wide` class for wide figure)."}
-![Ex1_0]
-~
-[Ex1_0]: images/Ex1_0.png "Ex1_0" { width:auto; max-width:90% }
-
-~ Note
-Images larger than about 1Mb in size will be rejected by the Madoko.net server.
-~
-
-## Tables
-Table [#table-sample] shows an example full width table figure.
-
-~ TableFigure { #table-sample; caption: "Modelle mit unterschiedlich geschätztem baseline hazard"; .wide }
-|                | $c(t)$                               ||||
-|                |---------|---------|---------|-----------|
-|                | (A0)    | (A1)    | (A2)    | (A3)      |
-|                | ohne    | Log     | Polynom | Stückweise|
-|                |         |         |         | konstant  |
-|:---------------|:-------:|:-------:|:-------:|:---------:|
-| Log likelihood | -6.798  | -6.733  | -6.715  | -6.686    |
-| Pseudeo $R^{2}$| 0,048   | 0,057   | 0,059   | -         |
-| AIC            | 13.615  | 13.489  | 13.456  | 13.483    |
-| BIC            | 13.711  | 13.594  | 13.580  | 14.009    |
-| N              | 105.484 | 105.484 | 105.484 | 105.484   |
-|----------------|---------|---------|---------|-----------|
-~
-
-## Equations
-Standard terminology should be used in equations. If possible, keep
-equations to one column. All equations should be numbered. A definition
-of $e$ is shown in Equation [#euler]:
-
-~ Equation { #euler }
-e = \lim_{n\to\infty} \left( 1 + \frac{1}{n} \right)^n
-~
-
-Or to use &logolatex; to align equations.
-
-~ Equation { #eq-alignment; caption:"Alignment example" }
-\begin{aligned} 
- f(x)  &= a x^2+b x +c   &   g(x)  &= d x^3 \\
- f'(x) &= 2 a x +b       &   g'(x) &= 3 d x^2
-\end{aligned}
-~
-
-# FUN CONTENT EXAMPLES
-Let's program some JavaScript:
-``` javascript
-function hello() {
-  return "hello world!"
-}
-```
-Here is a footnote[^fn] reference.
-[^fn]: This is the content of the example footnote. 
-    You can continue a footnote by indenting content.
-    And notice the back link.
-
-# BIBLIOGRAPHY AND REFERENCES
-When references are used in the text, tie them to an alphabetical (by
-principal author) list of references to be included as the last item of
-your paper. The format commonly used in scientific literature follows:
-
-Smith, J. S., Bloggs, R. T. and Jones, E. R. (1974), "Magnetic Anomalies
-in Geothermal Systems", Journal of Fluid Mechanics, 254, 73-79
-
-Leslie Lamport, LaTeX: A Document Preparation System (2nd Edition), Addison-Wesley, 1994
-
-When using Madoko, edit the content of the .bib file in the document
-folder, and use the reference methods as shown in the [Bibliography and
-Citations
-Section](http://research.microsoft.com/en-us/um/people/daan/madoko/doc/reference.html#sec-bib)
-of the Madoko Manual.
-
-A bibliography file consists of all your references in the BibTeX format, for example:
-
-    @BOOK{ Knuth:TeX,  
-        author   = "Knuth, Donald E.",  
-        title    = "The {\TeX} book",  
-        publisher= "Addison-Wesley",  
-        year     = 1984  
-    }
-
-Entries in the bibliography files can now be referenced using semi-colon
-separated references, for example:
-``` Markdown 
-Read about LaTeX and TeX [@Knuth:TeX; @Lamport:LaTeX].
-```
-Results in: Read about LaTeX and TeX [@Knuth:TeX; @Lamport:LaTeX].
-
-Please include full title of journal articles or other references,
-journal, volume, date, pages. There is a nice [table on
-Wikipedia](https://en.wikibooks.org/wiki/LaTeX/Bibliography_Management#BibTeX)
-that shows all of the different data fields for the BibTeX file.
-
-# PAPER DEADLINE
-Your paper, in final form, must be received by October 15th, 2016. The
-best way to edit and submit is to use the Madoko [editor] to edit your
-document in the 'authoring' branch of the GitHub [femtc2016] repository.
-If you choose to use some other document format and editing tool, PDF
-format is preferred, but ODT, DOC, or DOCX formats are acceptable. Please
-e-mail the files to [conference@thunderheadeng.com][emaillink].
-
-# PRESENTATION
-Each author must present his/her paper within the allotted time, allowing
-for some minutes of open discussion. The session chair is responsible for
-keeping authors within their time limit, in order to ensure that each
-author has enough time for their presentation. When preparing your
-presentation slides, make sure they are clear and large enough so that
-your audience can read them from as far as 80 feet away.
-
-All presentations will be made using the computer projector available in
-the conference room. We will not have overhead projectors or slide
-projectors in the meeting rooms.
-
-Your presentation, in final form, must be received by **October 15th,
-2016**. A final commit of the files to the GitHub repository is
-preferred. Once the final draft is complete and reviewed it will be
-merged into the master branch of the repository. If you decide to use
-some other tool for creating your presentation, PDF format is preferred,
-but ODP, PPT, or PPTX formats are acceptable. Please e-mail the files
-to [conference@thunderheadeng.com][emaillink].
-
-All presentations will be pre-loaded on the computers that are present.
-Please note that this approach will make it necessary for us to receive
-the presentation files prior to the conference. If you have a different
-software requirement, it should still be possible for you to attach your
-own computer to the projector if you bring it with you. This is not
-optimal, as it takes time and slows down the session.
-
-# CONFERENCE CONTENT DISTRIBUTION
-The papers and presentation materials will be made available online
-during and after the conference. In addition, the organizers are planning
-to may broadcast live presentations online during the event. The papers,
-presentations, and videos will be archived and made available on the web
-after the conference.
-
-Author(s) retain all rights to submitted material. The organizers are
-granted a non-exclusive right to copy and redistribute conference
-material submitted by the author(s).
 
 [BIB]
 
 &pagebreak;
-
-# An appendix { @h1:"A" }
-"All the same, I should like it all plain and clear," said he
-obstinately, putting on his business manner (usually reserved for people
-who tried to borrow money off him), and doing his best to appear wise and
-prudent and professional and live up to Gandalf's recommendation. "Also I
-should like to know about risks, out-of-pocket expenses, time required
-and remuneration, and so forth" -- by which he meant: "What am I going to
-get out of it? and am I going to come back alive?"
-
-# Conclusion
-If you have any questions concerning your paper and/or the Conference,
-please email us at [conference@thunderheadeng.com][emaillink].
