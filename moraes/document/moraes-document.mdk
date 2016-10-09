@@ -163,26 +163,15 @@ However, the most crowded experiment presented a higher flow comparing
 to the previous experiment. Checking out the video camera aiming the 
 crowd's back (V1), it was verified that people had not pressed for 
 escape as they should. Participants perceived that the more they press 
-those ahead, longer will wait inside the building.
-
-
-
-
-
-
-Figure [#graf1] presents the required
-time for the first 35 individuals to cross the exit at different crowd initial 
-density.
+those ahead, longer will wait inside the building. Figure [#graf1] presents
+the required time for the first 35 individuals to cross the exit at 
+different crowd initial density.
 
 ~ Figure { #graf1; caption: "Egress time for the first 35 individuals over several crowd initial density [person/m²]."}
 ![first35]
 ~
 [first35]: images/first35.png "first35" { width:auto; max-width:100% }
 
-<!-- begin merge (remove this line to resolve the conflict) -->
-~ Begin Remote
-F
-~ End Remote
 The dark blue curve is almost the same slope, representing that at the 
 lowest crowd density there were no blockages. Either the purple or the light
 blue curve, presents a sharp slope (at 8th and 29th individual, respectively) 
