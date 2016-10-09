@@ -132,10 +132,34 @@ at 175 person egress experiment.
 
 
 ## Quantitative Results { #sec-quanti}
+In a coordinated evacuation, time to egress is directly proportional to
+the initial population. For example, where there are 100 person, they 
+will take 40 seconds evacuate the place. By linearity, it would last 80
+seconds the egress of 200. However, in an uncoordinated egress, the 
+crowd dynamics blow with linearities. Figure [#graf1] presents the required
+time for the first 35 individuals to cross the exit at different crowd initial 
+density.
+
+~ Figure { #graf1; caption: "Egress time for the first 35 individuals over several crowd initial density [person/m²]."}
+![first35]
+~
+[first35]: images/first35.png "first35" { width:auto; max-width:100% }
+
+F
 
 
 
 
+
+PAREI AQUI
+
+PAREI AQUI
+
+OLHAR SÓ ATE AQUI, O RESTO EH DO SOFTWARE...
+
+PAREI AQUI
+
+PAREI AQUI
 
 
 
