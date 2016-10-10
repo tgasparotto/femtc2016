@@ -327,12 +327,13 @@ to the existence of a confinement caused by the diaphragms.
 Figure [#fig-yieldings] compares yielding extension and deformed shapes for both fire scenarios at collapse time.
 
 ~ Figure { #fig-yieldings; caption:"Comparation of yielding areas and deformations. a) fire under the bridge mid-span. b) fire close to the abutments."}
-
-![Yielding1]
-
+![Figura3_2]
 ~
 
-[Yielding1]: images/Yielding1.png "Yielding1" { width:auto; max-width:90% }
+
+[Figura3_2]: images/Figura3_2.png "Figura3_2" { width:auto; max-width:100% }
+
+
 
 As it is shown above, the failure of the structure is different depending on the position of the fire. When the fire is located under the mid-span,
 the failure occurs after 12 minutes because a high web yielding appears at mid-span in the central girders. If the fire source is located close to the abutments
