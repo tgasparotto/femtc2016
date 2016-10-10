@@ -117,7 +117,6 @@ in ascending order
 constituting the empirical distribution function as well as lower and upper
 bounds of each percentile confidence intervals.
 
-
 ~ Figure { #fig3_1; caption:"Empirical distribution function of the random variable, lower and upper bounds of the confidence interval and real distribution function";  page-align:forcehere}
 ![fig3_1]
 ~
@@ -154,18 +153,19 @@ of 50 cm x 50 cm interconnected. The connection model is the one of Moore as sho
 ~ Figure { #fig4_1; caption:"Nodes connectivity under BuildingExodus";  page-align:forcehere}
 ![fig4_1]
 ~
-[fig4_1]: images/fig4_1.PNG "fig4_1" { width:auto; max-width:20% }
+[fig4_1]: images/fig4_1.PNG "fig4_1" { width:auto; max-width:25% }
 
 The test case is a room, square with sides of 16 m and 4 exits distributed on
 each side (figure [#fig4_2]). An occupant occupies an area of 0.25 m² (0.5 m x 0.5 m)
 or a node. Two occupants can not coexist on the same node. The exits measure 3 m of width,
 and their flow rate is 2.0 occupant/m/s.
 
+&pagebreak;
 
 ~ Figure { #fig4_2; caption:"Test case geometry";  page-align:forcehere}
 ![fig4_2]
 ~
-[fig4_2]: images/fig4_2.PNG "fig4_2" { width:auto; max-width:90% }
+[fig4_2]: images/fig4_2.PNG "fig4_2" { width:auto; max-width:85% }
 
 
 Concerning population, some attributes are arbitrarily fixed and others are variable
@@ -219,19 +219,22 @@ document).
 ~ Figure { #fig5_1; caption:"Distribution function for 100 draws and lower and upper bounds of the confidence interval (reference test case)";  page-align:forcehere}
 ![fig5_1]
 ~
-[fig5_1]: images/fig5_1.PNG "fig5_1" { width:auto; max-width:90% }
+[fig5_1]: images/fig5_1.PNG "fig5_1" { width:auto; max-width:75% }
 
 ~ Figure { #fig5_2; caption:"Distribution function for 1,000 draws and lower and upper bounds of the confidence interval (reference test case)";  page-align:forcehere}
 ![fig5_2]
 ~
-[fig5_2]: images/fig5_2.PNG "fig5_2" { width:auto; max-width:90% }
+[fig5_2]: images/fig5_2.PNG "fig5_2" { width:auto; max-width:75% }
 
 Note that the number of draws is too low to reach the theoretical minimum
 RSET corresponding to a single occupant positioned in front of an exit. Indeed,
 we could expect a RSET close to 15 s in this case (RSET = response time + travel
 time).
 
+~ Justify
 In accordance with what has been announced above, it is observed that:
+~
+
 * the confidence interval decreases with increase of the draw number from 8.1 s on average for
 100 draws to 2.5s on average for 1,000 draws,
 * Extreme percentiles have a confidence
@@ -252,19 +255,16 @@ according to the desired accuracy on the RSET.
 
 
 ~ TableFigure { #table-1; caption: "Confidence intervals of the 95th percentile for 100, 200, 500, 1,000 and 5,000 draws"; .wide }
-|                  |-------------------------|------------------------------|
-|                  | confidence interval     | Width of confidence interval |
-|                  | of the 95th percentile  | of the 95th percentile       |
-|                  | (s)                     | (s)                          |
-|:-----------------|:-----------------------:|:----------------------------:|
-| 100&nbsp;draws   | [76.9&nbsp;;&nbsp;82.6] | 5.7                          |
-| 200&nbsp;draws   | [76.6&nbsp;;&nbsp;80.0] | 3.4                          |
-| 500&nbsp;draws   | [78.0&nbsp;;&nbsp;79.7] | 1.7                          |
-| 1,000&nbsp;draws | [78.4&nbsp;;&nbsp;79.3] | 0.9                          |
-| 5,000&nbsp;draws | [78.1&nbsp;;&nbsp;78.8] | 0.7                          |
+|                  |----------------------------|------------------------------|
+|                  | confidence interval        | Width of confidence interval |
+|                  | of the 95th percentile (s) | of the 95th percentile (s)   |
+|:-----------------|:--------------------------:|:----------------------------:|
+| 100&nbsp;draws   | [76.9&nbsp;;&nbsp;82.6]    | 5.7                          |
+| 200&nbsp;draws   | [76.6&nbsp;;&nbsp;80.0]    | 3.4                          |
+| 500&nbsp;draws   | [78.0&nbsp;;&nbsp;79.7]    | 1.7                          |
+| 1,000&nbsp;draws | [78.4&nbsp;;&nbsp;79.3]    | 0.9                          |
+| 5,000&nbsp;draws | [78.1&nbsp;;&nbsp;78.8]    | 0.7                          |
 ~
-
-
 
 
 
@@ -282,10 +282,13 @@ these reasons, 1,000 simulations seem to be sufficient in the case studied here.
 In conclusion, the application of statistical analysis method evaluates quantitatively
 the number of simulations that seems most relevant to carry out a study.
 
+
 ~ Figure { #fig5_3; caption:"Width of the confidence interval according to the number of simulations";  page-align:forcehere}
 ![fig5_3]
 ~
-[fig5_3]: images/fig5_3.PNG "fig5_3" { width:auto; max-width:90% }
+[fig5_3]: images/fig5_3.PNG "fig5_3" { width:auto; max-width:70% }
+
+&pagebreak;
 
 ~ TableFigure { #table-2; caption: "Decrease of the width of the confidence interval according to the number of simulations"; .wide }
 |                  |--------------------------------------------------|-----|
@@ -309,7 +312,7 @@ density ranges of people highlighting the influence of this one on the RSET.
 Indeed, the density of people influences on congestion time and average speed of
 the occupants which has a direct influence on the RSET.
 
-~ TableFigure { #table-3; caption: "Ranges of differents schemes for 100 draws"; .wide }
+~ TableFigure { #table-3; caption: "Ranges of differents schemes for 100 draws"; .wide ; page-align:forcehere}
 |                              |-------------------------|-------------------------|-------------------------|
 |                              | Scheme 1                | Scheme 2                | Scheme 3                |
 |                              |                         |                         |                         |
@@ -322,6 +325,7 @@ the occupants which has a direct influence on the RSET.
 |                              |                         |                         |                         |
 ~
 
+
 The figures [#fig5_4] and [#fig5_5] show the dispersion of the number of occupants
 according to RSET for 100 and 1,000 simulations. A greater dispersion is
 observed for the scheme n°1. This implies that for this scheme, it is not the
@@ -329,6 +333,7 @@ number of occupant who controls the RSET but the distance from the last occupant
 of the exist. This shows the interest of the approach developed in this
 document, which provides additional elements of understanding of evacuation
 behavior.
+&pagebreak;
 
 ~ Figure { #fig5_4; caption:"Dispersion of the number of occupants according to the RSET for 100 draws";  page-align:forcehere}
 ![fig5_4]
@@ -417,20 +422,16 @@ In a synthetic way the table [#table-6] presents for three simulations:
 These notations are used during the document.
 
 ~ TableFigure { #table-6; caption: "Synthesis of the results obtained"; .wide }
-|               |-----------|-------------------------|----------|-------------------------|------------|-------------------|
-|               | RSET      | I~p95%~                 | L~Ip95%~ | I~p5%-95%~              |L~Ip5%-95%~ |L~Ip5%-95%~/q~50%~ |
-|               |reference  | (s)                     | (s)      | (s)                     | (s)        | (%)               |
-|               | test case |                         |          |                         |            |                   |
-|               | (s)       |                         |          |                         |            |                   |
-|:--------------|:---------:|:-----------------------:|:--------:|:-----------------------:|:----------:|:-----------------:|
-| Scheme&nbsp;1 | 30.5      | [32.1&nbsp;;&nbsp;32.4] | 0.3      | [29.4&nbsp;;&nbsp;32.4] |3.0         |10.0               |
-| Scheme 2      | 55.8      | [58.8&nbsp;;&nbsp;59.1] | 0.3      | [55.8&nbsp;;&nbsp;59.1] |3.3         |5.8                |
-| Scheme 3      | 78.3      | [79.2&nbsp;;&nbsp;79.7] | 0.5      | [75.6&nbsp;;&nbsp;79.7] |4.1         |5.4                |
-|               |           |                         |          |                         |            |                   |
-|               |           |                         |          |                         |            |                   |
-|               |           |                         |          |                         |            |                   |
-|               |           |                         |          |                         |            |                   |
-
+|           |-----------|-------------------------|----------|-------------------------|------------|-------------------|
+|           | RSET      | I~p95%~                 | L~Ip95%~ | I~p5%-95%~              |L~Ip5%-95%~ |L~Ip5%-95%~/q~50%~ |
+|           |           |                         |          |                         |            |                   |
+|           |reference  | (s)                     | (s)      | (s)                     | (s)        | (%)               |
+|           | test case |                         |          |                         |            |                   |
+|           | (s)       |                         |          |                         |            |                   |
+|:----------|:---------:|:-----------------------:|:--------:|:-----------------------:|:----------:|:-----------------:|
+| S.&nbsp;1 | 30.5      | [32.1&nbsp;;&nbsp;32.4] | 0.3      | [29.4&nbsp;;&nbsp;32.4] |3.0         |10.0               |
+| S. 2      | 55.8      | [58.8&nbsp;;&nbsp;59.1] | 0.3      | [55.8&nbsp;;&nbsp;59.1] |3.3         |5.8                |
+| S. 3      | 78.3      | [79.2&nbsp;;&nbsp;79.7] | 0.5      | [75.6&nbsp;;&nbsp;79.7] |4.1         |5.4                |
 ~
 
 ~ Figure { #fig6_4; caption:"Width of the confidence intervals for the 3 Schemes of the test case n°1";  page-align:forcehere}
