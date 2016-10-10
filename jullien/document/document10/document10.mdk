@@ -468,7 +468,7 @@ logical given the low variability of this one.
 ~ TableFigure { #table-7; caption: "Synthesis of the results obtained for the test case n°2 and comparison with those from n°1"; .wide }
 |------|--------|-------------------------|----------|-------------------------|-------------|-------------------|
 |      |        |                         |          |                         |             |                   |
-| Test | Scheme |I~p95%~                  | L~Ip95%~ |I~p5%-95%~               | L~Ip5%-95%~ | L~Ip5%-95%~/q~50%~|
+| Test | S.     |I~p95%~                  | L~Ip95%~ |I~p5%-95%~               | L~Ip5%-95%~ | L~Ip5%-95%~/q~50%~|
 | case |        | (s)                     | (s)      | (s)                     | (s)         | (%)               |
 |      |        |                         |          |                         |             |                   |
 |:-----|:-------|:-----------------------:|:--------:|:-----------------------:|:-----------:|:-----------------:|
@@ -503,7 +503,7 @@ what is in accordance with what we could wait.
 ~ TableFigure { #table-8; caption: "Synthesis of the results obtained for the test case n°3 and comparison with those from n°1"; .wide }
 |------|--------|-------------------------|----------|-------------------------|-------------|-------------------|
 |      |        |                         |          |                         |             |                   |
-| Test | Scheme |I~p95%~                  | L~Ip95%~ |I~p5%-95%~               | L~Ip5%-95%~ | L~Ip5%-95%~/q~50%~|
+| Test | S.     |I~p95%~                  | L~Ip95%~ |I~p5%-95%~               | L~Ip5%-95%~ | L~Ip5%-95%~/q~50%~|
 | case |        | (s)                     | (s)      | (s)                     | (s)         | (%)               |
 |      |        |                         |          |                         |             |                   |
 |:-----|:-------|:-----------------------:|:--------:|:-----------------------:|:-----------:|:-----------------:|
@@ -539,7 +539,7 @@ were drawn.
 ~ TableFigure { #table-9; caption: "Synthesis of the results obtained for the test case n°4 and comparison with those from n°3"; .wide }
 |------|--------|-------------------------|----------|-------------------------|-------------|-------------------|
 |      |        |                         |          |                         |             |                   |
-| Test | Scheme |I~p95%~                  | L~Ip95%~ |I~p5%-95%~               | L~Ip5%-95%~ | L~Ip5%-95%~/q~50%~|
+| Test | S.     |I~p95%~                  | L~Ip95%~ |I~p5%-95%~               | L~Ip5%-95%~ | L~Ip5%-95%~/q~50%~|
 | case |        | (s)                     | (s)      | (s)                     | (s)         | (%)               |
 |      |        |                         |          |                         |             |                   |
 |:-----|:-------|:-----------------------:|:--------:|:-----------------------:|:-----------:|:-----------------:|
