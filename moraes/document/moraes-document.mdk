@@ -45,11 +45,11 @@ Santa Catarina Military Fire Department (CBMSC) launched its new fire safety cod
 type of fireworks and flammable foam in closed rooms. However, defining 
 the size and number of emergency, being either safe and cost-effective is
 not simple as setting another statement in a code. For this, an experiment was done
-in order to analyze what happens during an uncoordinated egress like one took place at Kiss. 
-This paper brings some of results, like exit blockages, crowd
+in order to analyze what happens during an uncoordinated egress like the one took place at Kiss. 
+This paper presents results like exit blockages, crowd
 turbulence and egress time and flow due to initial population. 
 
-## Uncoordinated Egress { #sec-egress}
+# UNCOORDINATED EGRESS { #sec-egress}
 
 Based on literature review and empirical research, 
 Helbing, Farkas and Vicsek [@helbing2000simulating] lists the events that can occur during
@@ -64,7 +64,105 @@ an emergency evacuation, right after the identification of the threat:
 (8) tendency to mass behavior increases; 
 (9) alternatives are neglected.
 
-# EXPERIMENT { #sec-experiment}
+## Simulation
+Helbing, Farkas and Vicsek [@ helbing2000simulating]
+with a brought with a egress simulation model. In an emergency, every individual should aim the exit, following a straight path in a desired speed. 
+If those ahead are not at the same speed, they will be underwent by those behind, raising the crowd pressure.
+
+
+
+
+ percebido um sinistro, todo indivíduo busca seguir a direção da
+  saída de emergência, fazendo-o a uma certa velocidade desejada. 
+  Caso as pessoas a frente não estejam na mesma velocidade, 
+  sofrerão a pressão dos indivíduos à retaguarda. Pelo modelo, agem 
+  sobre cada indivíduo forças físicas e sócio-psicológicas, 
+  sendo estas últimas relacionadas principalmente à aversão das pessoas 
+  por locais aglomerados. As forças físicas são as reações à compressão
+   e a fricção, tanto entre os indivíduos quanto entre indivíduo e parede. 
+   O objetivo da simulação é representar o mais fidedignamente possível
+    o ambiente experimental, buscando primeiro, validar seus resultados 
+    sob a ótica dos resultados obtidos experimentalmente.
+
+
+
+
+Os valores referentes às variáveis e outras configurações pertinentes `as simulações estão elencadas na Tabela 1.
+
+Tabela 1: Parâmetros de simulação
+
+descrição
+símbolo
+valor
+unidade
+massa 
+m
+80,0
+kg
+tempo de reação
+τi
+0,5
+s
+amplitude de fpsic
+Ai
+25
+N
+constante de espaço de fpsic
+Bi
+0,08
+m
+constante
+k
+1,2 105
+kg.s−2
+constante de fricção
+κ
+3,0 103
+kg.m−1s−1
+largura do indivíduo
+2 ri
+0,5
+m
+velocidade desejada
+v0i
+5,0
+m/s
+velocidade da fumaça
+VSmoke
+0,5
+m/s
+lotação
+N0
+variável
+
+largura da saída
+l
+variável
+m
+largura da parede
+lp
+0,15
+m
+
+Fonte: configuração das simulações de Helbing, Farkas e Vicsek (2000)
+
+
+
+
+
+The author de
+
+
+
+
+
+
+
+
+
+
+
+## EXPERIMENT { #sec-experiment}
 The egress experiment aims to verify the influence of overcrowd on the 
 buildings occupants safety. Figure [#fig-ginasio] shows a top view out of scale of
 the sports court detailing the experiment. In a controlled environment with
