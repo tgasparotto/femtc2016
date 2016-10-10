@@ -1,9 +1,9 @@
 [INCLUDE=presentation]
-Title         : Demo presentation in Madoko
-Sub Title     : In both HTML and PDF
-Author        : Daan Leijen
-Affiliation   : Microsoft Research
-Email         : daan@microsoft.com
+Title         : Uncordinated egress 
+Sub Title     : An experiment
+Author        : Wagner Alberto de Moraes
+Affiliation   : Santa Catarina Military Fire Department
+Email         : wagnerm@cbm.sc.gov.br
 Reveal Theme  : sky
 Beamer Theme  : singapore
 
