@@ -78,6 +78,26 @@ compression and friction, either among people or between individual and
 wall. Table xXXXX brings all set up applied on the simulations
 
 
+~ TableFigure { #tab-sim; caption: "Simulation parameters."; .wide }
+
+         
+
+
+| description       | simbol | value | unity  ||
+|                   |        |       |        ||
+|                   |        |       |        ||
+|:------------------|:------:|:-----:|:-------||
+|body mass          | m      | 80.0  | kg     ||
+|time to react      |&tau;~i~|0.5    |s       ||
+|psychological force| A~1~   |       |    |    |
+|                   |        |       |    |    |
+|                   |        |       |    |    |
+|                   |        |       |    |    |
+|                   |        |       |    |    |
+|-------------------|--------|-------|        ||
+~
+
+
 
 descrição
 símbolo
