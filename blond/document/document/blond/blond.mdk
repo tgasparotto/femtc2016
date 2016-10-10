@@ -144,7 +144,7 @@ The temperatures were recorded following a similar grid like the one programmed 
 In the simulations a measurement grid was implemented along the X and Y axis, with a measurement position each 20 cm and reproduced in the Z- direction each 19.5 cm equivalent to three cells. 
 
 ![FDS grid]
-
+ The validated FDS model for Izar eliminates also the uncertanties realted with the fuel and it combustions.
 ~ Figure  {caption:"FDS Model with the temperature measurement grid"}
 [FDS grid]: images/FDS-grid.JPG "FDS grid" { width:auto; max-width:90% }
 ~
@@ -171,7 +171,22 @@ The methodology presented along this paper is a eficient tool to model the plume
 The method takes advantage of properties of the premixed combustion process, which allow easily to define the combustions products, that are presented in the plume.
 Another important feature of this method is the characterisation of these produchts according to the adiabatic combustion temperature.
 The recorded temperatures during real test confirm the experimental results and allow the model validation.
-Thanks to these model it is posible to model the hot smoke testing system Izar with FDS and defined the plume temperatures for different powers and differents heights; it guarantees the 
+Thanks to these model it is possible to model the hot smoke testing system Izar with FDS and defined the plume temperatures for different powers and differents heights; it guarantees the 
+The current expereriences with the system have confirmed that it is possible to define the exact power necessary regarding the heigth of the 
+room where the smoke test and the limiting factor for the temperature such as sprinklers or other system installed under the ceiling.
+
+# Future work
+
+It will be deseirable to test the method under different geometries and with different combustions which release a different amounts of combustions products.
+If the necessary information is available, a equivalent equation to those available to calculate the plume temperatures from diffusions flames could be developed.
+These information will be very valuable in order to extend the use of systems with premixed flames, for example hot smoke testing systems, in open spaces.
+
+The disponiblity of a validated FDS model for Izar open a wide range of possibilities regarding the validation of FDS geometries.
+Izar helps to eliminate the uncertanty related with the geometry model. The validated FDS model for Izar eliminates also the uncertanties realted with the fuel and it combustions. Making use of its validated FDS model, real test can be carried out and the necessary measurements can be recorded 
+to calibrate the FDS geometry.  Therefore it offers the possibility of validating a FDS geometry with real data recorded during a real test with Izar in the studied room,
+and after this validation, carry out the necessary simulations with the proper design fires.
+These kind of "a priori" validated simulations offer a greater grade of confidance allowing reducing the safety factors and optimazing
+the smoke management systems. 
 
 
 [editor]: https://www.madoko.net/editor.html "Madoko.net Editor"
