@@ -181,6 +181,13 @@ A bibliography file consists of all your references in the BibTeX format, for ex
         year     = 1984  
     }
 
+@incollection{Xincollection,
+	author	= "",
+	title	= "",
+	booktitle= "",
+	publisher= "",
+	year	= "",
+
 Entries in the bibliography files can now be referenced using semi-colon
 separated references, for example:
 ``` Markdown 
