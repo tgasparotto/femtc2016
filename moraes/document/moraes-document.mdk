@@ -67,30 +67,17 @@ an emergency evacuation, right after the identification of the threat:
 ## Simulation
 Helbing, Farkas and Vicsek [@ helbing2000simulating] brought with an egress
 simulation model. In an emergency, every individual should aim the exit,
-following a straight path in a desired speed.
-If those ahead are not at the same speed, they will be underwent by those behind, raising the crowd pressure.
+following a straight path in a desired speed. If those ahead are not at 
+the same speed, they will be underwent by those behind, raising the crowd pressure.
+
+Each individual is represented by a circle which diameter varies from
+42.5cm to 52.5cm. The forces applied by and on objects are physical and
+socio-psychological. The latter is related to people aversion people's 
+cluster aversion to crowding. Physical forces are the reaction to
+compression and friction, either among people or between individual and 
+wall. Table xXXXX brings all set up applied on the simulations
 
 
-
-
- percebido um sinistro, todo indivíduo busca seguir a direção da
-  saída de emergência, fazendo-o a uma certa velocidade desejada. 
-  Caso as pessoas a frente não estejam na mesma velocidade, 
-  sofrerão a pressão dos indivíduos à retaguarda. Pelo modelo, agem 
-  sobre cada indivíduo forças físicas e sócio-psicológicas, 
-  sendo estas últimas relacionadas principalmente à aversão das pessoas 
-  por locais aglomerados. As forças físicas são as reações à compressão
-   e a fricção, tanto entre os indivíduos quanto entre indivíduo e parede. 
-   O objetivo da simulação é representar o mais fidedignamente possível
-    o ambiente experimental, buscando primeiro, validar seus resultados 
-    sob a ótica dos resultados obtidos experimentalmente.
-
-
-
-
-Os valores referentes às variáveis e outras configurações pertinentes `as simulações estão elencadas na Tabela 1.
-
-Tabela 1: Parâmetros de simulação
 
 descrição
 símbolo
