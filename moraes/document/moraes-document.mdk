@@ -65,8 +65,9 @@ an emergency evacuation, right after the identification of the threat:
 (9) alternatives are neglected.
 
 ## Simulation
-Helbing, Farkas and Vicsek [@ helbing2000simulating]
-with a brought with a egress simulation model. In an emergency, every individual should aim the exit, following a straight path in a desired speed. 
+Helbing, Farkas and Vicsek [@ helbing2000simulating] brought with an egress
+simulation model. In an emergency, every individual should aim the exit,
+following a straight path in a desired speed.
 If those ahead are not at the same speed, they will be underwent by those behind, raising the crowd pressure.
 
 
