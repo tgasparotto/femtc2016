@@ -17,10 +17,13 @@ name-references : REFERENCES
 [TITLE]
 
 ~ Abstract
+The use of premixed flames in hot smoke tests present valuable advantages in comparison with
+traditional methods. The definition and control of the necessary power, HHR, is a great challenge due to the lack of information
+about the plumes originated by premixed flames. This work presents a method to model the plume and calculate the temperature within it.
+
 Papers should follow standard technical paper format, an abstract
 followed by the more detailed presentation. The abstract should be typed
-on this area of the first page, with the presentation following after two
-lines of space.
+on this area of the first page, with the pre.
 ~
 
 # Introduction     { #sec-intro }
@@ -45,7 +48,7 @@ but the main challenge is to avoid damages due to the temperatures of the plume.
 During a smoke test the "most realistic" conditions must be created in order to proof the smoke management system under the "most realistic" conditions.
 Therefore, the system must generate the highest temperatures and guarantee that no damage will occur during the test. 
 The target of this work was to study the temperature field created by the system and guarantee that valuable conclusions can be drawn from the test
-guaranteeing the safe developed of them. Additionally this work must be done before the system was in use an no laboratory test was still at this point possible.
+guaranteeing the safe developed of them. Additionally this work must be done before the system was ready for it use an no laboratory test was still at this point possible.
 
 Different equations and models are available in the literature to calculate the plume temperatures
 for diffusion flames according to its geometry and flame configuration (jet flame, etc.).
@@ -163,6 +166,12 @@ The geometry was reproduced in FDS and Izar was modeled using the previous descr
 The graphs with the comparison between both temperatures fields are available in the Appendix.  
 
 Conclusion
+
+The methodology presented along this paper is a eficient tool to model the plumes originated by a premixed combustion. 
+The method takes advantage of properties of the premixed combustion process, which allow easily to define the combustions products, that are presented in the plume.
+Another important feature of this method is the characterisation of these produchts according to the adiabatic combustion temperature.
+The recorded temperatures during real test confirm the experimental results and allow the model validation.
+Thanks to these model it is posible to model the hot smoke testing system Izar with FDS and defined the plume temperatures for different powers and differents heights; it guarantees the 
 
 
 [editor]: https://www.madoko.net/editor.html "Madoko.net Editor"
