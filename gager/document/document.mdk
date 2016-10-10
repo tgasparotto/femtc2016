@@ -2,17 +2,17 @@
 Title         : TITLE OF YOUR PAPER, IN CAPITAL LETTERS CENTERED ON PAGE, USING ONE OR MORE LINES AS NECESSARY
 Subtitle      : An optional subtitle.
 
-Author        : First Author Name
-Affiliation   : Research institute
-Email         : you@bar.com
+Author        : Arthur H. Gager III, PE 
+Affiliation   : Jensen Hughes
+Email         : agager@jensenhughes.com
 
-Author        : My co-author 1
-Affiliation   : Other institute
-Email         : other1@bar.com
+Author        : Gary Dominguez  
+Affiliation   : Jensen Hughes
+Email         : gdominguez@jensehughes.com
 
-Author        : My co-author 2
-Affiliation   : Other institute
-Email         : other2@bar.com
+Author        : 
+Affiliation   : 
+Email         : 
 
 Bibliography  : references.bib
 Logo          : False
@@ -23,10 +23,18 @@ name-references : REFERENCES
 [TITLE]
 
 ~ Abstract
-Papers should follow standard technical paper format, an abstract
-followed by the more detailed presentation. The abstract should be typed
-on this area of the first page, with the presentation following after two
-lines of space.
+FDS is a tool that has been available to the public for over 15 years. It 
+has been used in many applications since its development, but is most commonly 
+used to evaluate tenability of interior building environments that occupants may 
+be exposed to during a fire scenario. Tenability criteria for visibility, 
+temperature and CO concentration in public buildings has become somewhat standard 
+in the fire protection industry. This presentation will look at tenability and 
+similar acceptance criteria in a wide range of buildings, including atriums, 
+prisons and enclosed amusement rides.  It will look at how increased exposure 
+times, due to code changes and unique building applications, have effected 
+applicable tenability criteria. The basis for the presentation includes case 
+studies and criteria that has been used in prisons throughout the United States 
+of America and amusement parks throughout the world. 
 ~
 
 [editor]: https://www.madoko.net/editor.html "Madoko.net Editor"
@@ -34,7 +42,7 @@ lines of space.
 [femtc2016]: https://github.com/thunderheadeng/femtc2016
 [emaillink]: mailto:conference@thunderheadeng.com "conference@thunderheadeng.com"
 
-# GENERAL INSTRUCTIONS { #sec-intro }
+# INTRODUCTION { #sec-intro }
 You are encouraged to use the [Madoko.net Editor][editor] while using
 the [Madoko Reference Manual][reference-manual] to edit/commit your
 documents into the 'authoring' branch of the [femtc2016] GitHub repository. 
