@@ -138,9 +138,9 @@ will take 40 seconds evacuate the place. By linearity, it would last 80
 seconds the egress of 200. However, in an uncoordinated egress, the 
 crowd dynamics blow with linearities. 
 
-Table [#tab-tempo] presents the egress time and mean flow results obtained in the experiments.
+Table [#tab-tempo] presents the egress time and mean flow from experiments analysis.
 
-~ TableFigure { #tab-tempo; caption: "Egress time against crowd initial density"; .wide }
+~ TableFigure { #tab-tempo; caption: "Egress time against population"; .wide }
 
          
 |                | egress  | egress     |
@@ -188,12 +188,11 @@ egresses, which is presented in Figures [#graf-70] and [#graf-210].
 ~
 [210_void]: images/210_void.png "210_void" { width:auto; max-width:90% }
 
-On Figure [#graf-210] the graphic shows eight one second intervals when
+On Figure [#graf-210] the graphic shows eight times the one second intervals when
 none individual had gotten out. That means, people were right in front
 of the door, striving to egress but blocking one against other. Even less populated environment
 can develop blockages longer than one second, as it is seemed right before
-the escape of the 23th individual on Figure 
-[#graf-70].
+the escape of the 23th individual on Figure [#graf-70].
 
 # CONCLUSION
 
