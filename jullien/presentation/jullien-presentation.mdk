@@ -170,15 +170,49 @@ Occupants are randomly positioned in the room and drawn between 1 and 1,000.
 ~
 ~ End Columns
 
+
+
 ## Obervations
 
 It is impossible to determine statistically a RSET maximum.
+~ Align-Left
+* Extreme percentile have a confidence interval with infinite bounds.
+~
 
-And a RSET max
+In any case, a RSET max is bound to a catastrophic scenario.
 
 &rarr; It seems preferable to retain the associated RSET 95th percentile.
 
+~ Align-Left
+* The value of 95th percentile is arbitrary.
+~
 
+## Observations (2)
+The confidence interval decreases with the increase of the number of draws.
+
+~ Center
+![fig5_3]
+[fig5_3]: images/fig5_3.PNG "fig5_3" { width:auto; max-width:80%}
+~
+
+## Observations (3)
+It exists at least 3 separate evacuation schemes according to the number of occupants.
+
+~ Begin Columns
+~ Column { width:50% }
+100 draws
+
+![fig5_2]
+[fig5_2]: images/fig5_2.PNG "fig5_2" { width:auto; max-width:100%}
+
+~
+~ Column
+1,000 draws
+
+![fig5_2]
+[fig5_2]: images/fig5_2.PNG "fig5_2" { width:auto; max-width:100%}
+~
+~ End Columns
 
 ~ End Vertical
 
