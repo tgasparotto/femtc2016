@@ -162,9 +162,7 @@ In a coordinated evacuation, time to egress is directly proportional to
 the initial population. For example, where there are 100 person, they 
 will take 40 seconds evacuate the place. By linearity, it would last 80
 seconds the egress of 200. However, in an uncoordinated egress, the 
-crowd dynamics blow with linearities. 
-
-Table [#tab-tempo] presents the egress time and mean flow from experiments analysis.
+crowd dynamics blow with linearities. Table [#tab-tempo] presents the egress time and mean flow from experiments analysis.
 
 ~ TableFigure { #tab-tempo; caption: "Egress time against population"; .wide }
 
