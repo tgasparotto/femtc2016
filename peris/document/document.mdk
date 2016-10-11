@@ -161,7 +161,7 @@ are modeled to extract the maximum information and to know which
 interactions are important. The resulting scenarios that had to be run
 are shown in table [#fig-cases].
 
-~ Table { #fig-cases; caption:"Experimental Design of the Simulations"}
+~ TableFigure { #fig-cases; caption:"Experimental Design of the Simulations"}
 |-------|-------------|------------|--------|-------------|----------|---------|
 |Nº Case|Clearance (m)|Substructure|Span (m)|HRR (kW/m^2^)|Position  |Width (m)|
 +:-----:|:-----------:|:----------:|:------:|:-----------:|:--------:|:-------:+
