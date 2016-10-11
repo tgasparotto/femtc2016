@@ -246,7 +246,7 @@ to obtain a max RSET. In addition, in the case where we determine a RSET
 max, we might question the relevance of such a value that would be drawn from a
 disaster scenario and so wold be very severe in a more realistic study case. It seems preferable
 to retain the associated RSET 95th percentile value of which we can estimate an
-relevant confidence interval with a limited number of draws. table [#table-1] shows
+relevant confidence interval with a limited number of draws. Table [#table-1] shows
 the confidence intervals associated with the 95th percentile for 100, 200, 500,
 1,000 and 5,000 draws. This choice implies that in 95% of cases all occupants have
 evacuated with a probability of 90%. It is also arbitrary. Indeed, it is quite
