@@ -105,11 +105,11 @@ This confidence interval is expressed as:
 
 with: 
 
-* F the empirical distribution function,
+* $\tilde{F}$ the empirical distribution function,
 * c the quantile ($1-\frac{p}{2}$) of the normal law distribution. c is equal to 1.645 for p = 90%.
 
 The distribution function is said empirical as opposed to the real distribution
-function. In fact, F is built on the achievements and is not the distribution function
+function. In fact, $\tilde{F}$ is built on the achievements and is not the distribution function
 whose equation is unknown in the case of the random variable is RSET.
 
 Figure [#fig3_1] shows the random variable realizations ranked
@@ -286,7 +286,7 @@ In conclusion, application of statistical analysis method evaluates quantitative
 ~ Figure { #fig5_3; caption:"Width of the confidence interval according to the number of simulations";  page-align:forcehere}
 ![fig5_3]
 ~
-[fig5_3]: images/fig5_3.PNG "fig5_3" { width:auto; max-width:65% }
+[fig5_3]: images/fig5_3.PNG "fig5_3" { width:auto; max-width:60% }
 
 &pagebreak;
 
