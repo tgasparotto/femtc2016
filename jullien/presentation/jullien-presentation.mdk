@@ -32,15 +32,14 @@ The use of egress simulation models in performance-based analysis relies on the 
 Propose a method to analyse the statistical aspects of an egress simulation model.
 
 * The method is based on statistical estimations of the distribution quantiles of the output parameters.
-The key result is RSET.
+The key result is Required Safe Egress Time (RSET).
 
 Benefits of the method :
 
 * Provide quantitative informations on the RSET.
 * Justify the number of simulations to obtain a relevant output precision level.
 
-## Basement Level 2
-blablabla
+
 
 ~ End Vertical
 
@@ -48,28 +47,83 @@ blablabla
 ~ Begin Vertical { data-background:Gainsbor }
 
 # Presentation of the method of statistical analysis {#vertical}
+
+Example : 
+
+* take a sample of n realizations of a random variable that follows a normal law distribution.
+* build a confidence interval Ip for each order quantile &alpha;
+* choose a level of confidence p: here 90%
+
+~ Equation { #eq-alignment; caption:"Alignment example" }
+\begin{aligned} 
+ Ip  &= \bigg[\tilde{F}^{-1} \bigg( \alpha -c\sqrt{\frac{\alpha(1-\alpha)}{n}} \bigg) ; \tilde{F}^{-1} \bigg( \alpha +c\sqrt{\frac{\alpha(1-\alpha)}{n}} \bigg) \bigg]
+\end{aligned}
+~
+
+c equals to 16.45 for p=90% 
+
 [![arrowdown]][down]
 
 
 [down]: # { .navigate-down }
 [arrowdown]: images/arrow.png "Down arrow" { width:178px; height:238px }
-## Basement Level 1
+## Build the empirical distribution function
+random realizations ranked in ascending order constitute the empirical distribution function
+
+
+
+Figure [#fig-monarch] shows how to put an image in a figure.
+
+~ Figure { #fig-monarch; caption: "A Monarch butterfly." }
+The ![monarch] image.
+~
+
+[monarch]: butterfly.png { width:100px; vertical-align:middle }
+
+
+
+
 
 ~ End Vertical
 
+~ Begin Vertical { data-background:Gainsbor }
 # Hypothesis of the model
 
+
+~ End Vertical
+
+~ Begin Vertical { data-background:Gainsbor }
 # Study
 
+
+~ End Vertical
+
+~ Begin Vertical { data-background:Gainsbor }
 ## Reference case study 
 
+~ End Vertical
+
+~ Begin Vertical { data-background:Gainsbor }
 ## Analysis of the statistical influence of the parameters
 
+~ End Vertical
+
+~ Begin Vertical { data-background:Gainsbor }
 # Synthesis of results
+
+~ End Vertical
 
 # Conclusion
 
-Using [Madoko] it is easy to create beautiful presentations.
+# Thank you for your attention
+
+
+
+
+
+
+
+## Reveal.js
 
 * [Html][slide]:
   Uses the `Reveal.js` library by [Hakim El Hattab](http://hakim.se).\
@@ -79,11 +133,7 @@ Using [Madoko] it is easy to create beautiful presentations.
 * [Source][slide-mdk]:
   Click to see the source of this presentation.
 
-
 [madoko]: http://madoko.codeplex.com
-
-## Reveal.js
-
 `reveal.js` is a framework for easily creating beautiful presentations using
 HTML. You'll need a browser with support for CSS 3D transforms to see it in
 its full glory. 
@@ -146,7 +196,7 @@ spends the winter in Mexico.
 ~
 ~ End Columns
 
-[butterfly]: images/butterfly.png "A Monarch butterfly" { width:280px; vertical-align:middle }
+[butterfly]: images/butterfly.png "A Monarch butterfly" { width:380px; vertical-align:middle }
 
 
 <!-- 
