@@ -237,7 +237,7 @@ In accordance with what has been announced above, it is observed that:
 
 * the confidence interval decreases with increase of the draw number from 8.1 s on average for
 100 draws to 2.5s on average for 1,000 draws,
-* Extreme percentiles have a confidence
+* extreme percentiles have a confidence
 interval of which one bound is infinite for 100 and 1,000 draws.
 
 Thus, it is not possible to statistically determine a RSET implying that
@@ -333,17 +333,19 @@ number of occupant who controls the RSET but the distance from the last occupant
 of the exist. This shows the interest of the approach developed in this
 document, which provides additional elements of understanding of evacuation
 behavior.
+
+
 &pagebreak;
 
 ~ Figure { #fig5_4; caption:"Dispersion of the number of occupants according to the RSET for 100 draws";  page-align:forcehere}
 ![fig5_4]
 ~
-[fig5_4]: images/fig5_4.PNG "fig5_4" { width:auto; max-width:90% }
+[fig5_4]: images/fig5_4.PNG "fig5_4" { width:auto; max-width:70% }
 
 ~ Figure { #fig5_5; caption:"Dispersion of the number of occupants according to the RSET for 1,000 draws";  page-align:forcehere}
 ![fig5_5]
 ~
-[fig5_5]: images/fig5_5.PNG "fig5_5" { width:auto; max-width:90% }
+[fig5_5]: images/fig5_5.PNG "fig5_5" { width:auto; max-width:70% }
 
 Applying the method to the reference test case shows that there is very little
 simulations with the same number of occupant. This implies that we can not
@@ -357,7 +359,9 @@ reference test case for the three schemes previously identified and at the quant
 of this impact using the statistical analysis method. Table [#table-4] shows the
 characteristics of each test case.
 
-~ TableFigure { #table-4; caption: "Synthesis of studied influences for the test cases n°1, 2, 3 and 4"; .wide }
+
+
+~ TableFigure { #table-4; caption: "Synthesis of studied influences for the test cases n°1, 2, 3 and 4"; .wide; page-align:forcehere}
 |                      | Parameters of the sensibility study                        |||                      |
 |                      |-----------------------|-----------------|--------------------|                      |
 |                      | Conflict              | Position of the | Response           | Number of              |
@@ -375,7 +379,7 @@ scheme identified above.
 
 Table [#table-5] shows the characteristics of these simulations.
 
-~ TableFigure { #table-5; caption: "Simulations selected for test cases n°1, 2, 3 and 4"; .wide }
+~ TableFigure { #table-5; caption: "Simulations selected for test cases n°1, 2, 3 and 4"; .wide ; page-align:forcehere}
 |                              |----------|----------|----------|
 |                              | Scheme 1 | Scheme 2 | Scheme 3 |
 |                              |          |          |          |
@@ -399,17 +403,21 @@ have an influence on the RSET.
 ~ Figure { #fig6_1; caption:"Distribution function for 1,000 draws and lower and upper bounds of the confidence interval under the scheme 1 (test case n°1)";  page-align:forcehere}
 ![fig6_1]
 ~
-[fig6_1]: images/fig6_1.PNG "fig6_1" { width:auto; max-width:90% }
+[fig6_1]: images/fig6_1.PNG "fig6_1" { width:auto; max-width:65% }
+
+
 
 ~ Figure { #fig6_2; caption:"Distribution function for 1,000 draws and lower and upper bounds of the confidence interval under the scheme 2 (test case n°1)";  page-align:forcehere}
 ![fig6_2]
 ~
-[fig6_2]: images/fig6_2.PNG "fig6_2" { width:auto; max-width:90% }
+[fig6_2]: images/fig6_2.PNG "fig6_2" { width:auto; max-width:65% }
+
+&pagebreak;
 
 ~ Figure { #fig6_3; caption:"Distribution function for 1,000 draws and lower and upper bounds of the confidence interval under the scheme 3 (test case n°1)";  page-align:forcehere}
 ![fig6_3]
 ~
-[fig6_3]: images/fig6_3.PNG "fig6_3" { width:auto; max-width:90% }
+[fig6_3]: images/fig6_3.PNG "fig6_3" { width:auto; max-width:80% }
 
 In a synthetic way the table [#table-6] presents for three simulations:
 
@@ -421,7 +429,7 @@ In a synthetic way the table [#table-6] presents for three simulations:
 
 These notations are used during the document.
 
-~ TableFigure { #table-6; caption: "Synthesis of the results obtained"; .wide }
+~ TableFigure { #table-6; caption: "Synthesis of the results obtained"; .wide ; page-align:forcehere}
 |           |-----------|-------------------------|----------|-------------------------|------------|-------------------|
 |           | RSET      | I~p95%~                 | L~Ip95%~ | I~p5%-95%~              |L~Ip5%-95%~ |L~Ip5%-95%~/q~50%~ |
 |           |           |                         |          |                         |            |                   |
@@ -465,7 +473,7 @@ time changes only little results. Thus, the vast majority of the variability com
 from the history effect and not from the value of conflict resolution time which seems
 logical given the low variability of this one.
 
-~ TableFigure { #table-7; caption: "Synthesis of the results obtained for the test case n°2 and comparison with those from n°1"; .wide }
+~ TableFigure { #table-7; caption: "Synthesis of the results obtained for the test case n°2 and comparison with those from n°1"; .wide ; page-align:forcehere}
 |------|--------|-------------------------|----------|-------------------------|-------------|-------------------|
 |      |        |                         |          |                         |             |                   |
 | Test | S.     |I~p95%~                  | L~Ip95%~ |I~p5%-95%~               | L~Ip5%-95%~ | L~Ip5%-95%~/q~50%~|
@@ -486,7 +494,7 @@ logical given the low variability of this one.
 ~ Figure { #fig6_5; caption:"Comparison of the width of the confidence interval for the 3 schemes between test cases n°1 and n°2";  page-align:forcehere}
 ![fig6_5]
 ~
-[fig6_5]: images/fig6_5.PNG "fig6_5" { width:auto; max-width:90% }
+[fig6_5]: images/fig6_5.PNG "fig6_5" { width:auto; max-width:80% }
 
 ## Test case n°3
 For this third test case we take again the values by default of the software
@@ -500,7 +508,7 @@ in figure [#fig6_6]. We deduct from it that the position has more influence on
 the low and the average densities of population than on a strong density
 what is in accordance with what we could wait.
 
-~ TableFigure { #table-8; caption: "Synthesis of the results obtained for the test case n°3 and comparison with those from n°1"; .wide }
+~ TableFigure { #table-8; caption: "Synthesis of the results obtained for the test case n°3 and comparison with those from n°1"; .wide ; page-align:forcehere}
 |------|--------|-------------------------|----------|-------------------------|-------------|-------------------|
 |      |        |                         |          |                         |             |                   |
 | Test | S.     |I~p95%~                  | L~Ip95%~ |I~p5%-95%~               | L~Ip5%-95%~ | L~Ip5%-95%~/q~50%~|
@@ -516,6 +524,8 @@ what is in accordance with what we could wait.
 |      | 3      | [79.8&nbsp;;&nbsp;80.2] | 0.4      | [75.2&nbsp;;&nbsp;80.2] | 5.0         |6.4                |
 |      |        |                         |          |                         |             |                   |
 ~
+
+&pagebreak;
 
 ~ Figure { #fig6_6; caption:"Comparison of the width of the confidence interval for the 3 schemes between test cases n°1 and n°3";  page-align:forcehere}
 ![fig6_6]
@@ -536,7 +546,9 @@ that the RSET min increases for scheme n°1 when the variability is added to the
 response time. It is possible that on the 1,000 achievements few extreme cases
 were drawn.
 
-~ TableFigure { #table-9; caption: "Synthesis of the results obtained for the test case n°4 and comparison with those from n°3"; .wide }
+&pagebreak;
+
+~ TableFigure { #table-9; caption: "Synthesis of the results obtained for the test case n°4 and comparison with those from n°3"; .wide ; page-align:forcehere}
 |------|--------|-------------------------|----------|-------------------------|-------------|-------------------|
 |      |        |                         |          |                         |             |                   |
 | Test | S.     |I~p95%~                  | L~Ip95%~ |I~p5%-95%~               | L~Ip5%-95%~ | L~Ip5%-95%~/q~50%~|
@@ -580,7 +592,7 @@ including the test campaigns.
 
 Table [#table-10] summarizes in a quantitative way the influences of different parameters tested.
 
-~ TableFigure { #table-10; caption: "Synthesis of the parameters statistical influence study"; .wide }
+~ TableFigure { #table-10; caption: "Synthesis of the parameters statistical influence study"; .wide ; page-align:forcehere}
 |-----------------------------------------|-------------------------------------------------|-----------------------|
 | Studied parameters                      | Range of variation                      b       | Qualitative influence |
 |                                         | of the input parameter                          |                       |
