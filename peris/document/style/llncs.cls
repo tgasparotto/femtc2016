@@ -212,9 +212,9 @@
 \widowpenalty=10000
 \clubpenalty=10000
 
-\setlength\oddsidemargin   {63\p@}
-\setlength\evensidemargin  {63\p@}
-\setlength\marginparwidth  {90\p@}
+% \setlength\oddsidemargin   {63\p@}
+% \setlength\evensidemargin  {63\p@}
+% \setlength\marginparwidth  {90\p@}
 
 \setlength\headsep   {16\p@}
 
