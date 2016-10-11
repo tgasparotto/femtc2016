@@ -89,7 +89,6 @@ and the girder depth as 0.8 m. All the bridges also had a concrete slab
 |6 m                 |Piers                              | 16 m         |1800 kW/m^2^       | Center-Span      | 13 m             |
 |9 m                 | Abutments                         | 24 m         | 2400 kW/m^2^        | Abutment         | 23.4 m           |
 |----------------------------------------------------------------------------------------------------------------------------||||||
-|                    |                                   |              |                   |                  |                  |
 {thead-tr-background-color:Gainsboro}
 ~
 
@@ -162,7 +161,7 @@ interactions are important. The resulting scenarios that had to be run
 are shown in table [#fig-cases].
 
 ~ TableFigure { #fig-cases; caption:"Experimental Design of the Simulations"}
-|-------|-------------|------------|--------|-------------|----------|---------|
+|------------------------------------------------------------------------|||||||
 |Nº Case|Clearance (m)|Substructure|Span (m)|HRR (kW/m^2^)|Position  |Width (m)|
 +:-----:|:-----------:|:----------:|:------:|:-----------:|:--------:|:-------:+
 | 1     | 9           | Piers      | 24     | 2400        | Abutment | 23.4    |
@@ -197,7 +196,7 @@ are shown in table [#fig-cases].
 | 30    | 6           | Piers      | 16     | 1600        | Center   | 23.4    |
 | 31    | 9           | Abutments  | 16     | 1600        | Center   | 23.4    |
 | 32    | 6           | Abutments  | 16     | 1600        | Center   | 13      |
-|-------|-------------|------------|--------|-------------|----------|---------|
+|------------------------------------------------------------------------|||||||
 {thead-tr-background-color:Gainsboro}
 ~
 
