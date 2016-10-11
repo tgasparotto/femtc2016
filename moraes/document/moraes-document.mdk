@@ -190,8 +190,8 @@ different crowd initial density.
 The dark blue curve is maintain a near constant slope, representing that at the 
 lowest crowd density there were no blockages. Either the purple or the light
 blue curve, presents a sharp slope (at 8th and 29th individual, respectively) 
-which is a graphical representation of a door blockage. Another way to see the blockages is through the time void between two 
-egresses, which is presented in Figures [#graf-210].
+which is a graphical representation of a door blockage. Another way to see the blockages 
+is through the time void between two egresses, which is presented in Figures [#graf-210].
 
 ~ Figure { #graf-210; caption: "Time void between egresses for 210 individuals experiment."}
 ![210_void]
@@ -200,10 +200,12 @@ egresses, which is presented in Figures [#graf-210].
 
 On Figure [#graf-210] the graphic shows eight times the one second intervals when
 none individual had gotten out. That means, people were right in front
-of the door, striving to egress but blocking one against other. By instance, right before the 37th 
-individual to exit, the egress flow stopped during more than 3.5 seconds.
+of the door, striving to egress but blocking one against other. By instance, right before
+the 37th individual to exit, the egress flow stopped during more than 3.5 seconds.
 
-
+fdfgsdfg
+sdfgsdfg
+sdfgsdfg
 
 ~ Begin Figure { #fig-expSim; caption:"Experimental against simulation results." }
 ~ Begin SubFigureRow { vertical-align: bottom }
@@ -217,31 +219,6 @@ individual to exit, the egress flow stopped during more than 3.5 seconds.
 ~
 
 ~ End SubFigureRow
-
-~ Begin SubFigureRow { vertical-align: bottom }
-
-~ SubFigure { #fig-expSim35; caption:"105 individuals" }
-![exp_sim_105]
-~
-
-~ SubFigure { #fig-expSim70; caption:"140 individuals" }
-![exp_sim_140]
-~
-
-~ End SubFigureRow
-
-~ Begin SubFigureRow { vertical-align: bottom }
-
-~ SubFigure { #fig-expSim35; caption:"175 individuals" }
-![exp_sim_175]
-~
-
-~ SubFigure { #fig-expSim70; caption:"210 individuals" }
-![exp_sim_210]
-~
-
-~ End SubFigureRow
-
 
 ~ End Figure
 [exp_sim_35]: images/exp_sim_35.png "exp_sim_35" { width:auto; max-width:100% }
