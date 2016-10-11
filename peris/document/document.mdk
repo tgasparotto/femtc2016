@@ -79,15 +79,17 @@ and the girder depth as 0.8 m. All the bridges also had a concrete slab
 0.2 m thick on top of the I-girders.
 
 ~ TableFigure { #fig-parameters; caption:"Parameters Studied"}
-|----------------------------------------------------------------------------------------------------------------------------||||||
-| Vertical Clearance | Bridge Substructure Configuration | Span         | Heat Release Rate | Position         | Width            |
-+:---{width:20%}----:|:---{width:20%}-------------------:|:-{width:11%}:|:---{width:20%}---:|:---{width:18%}--:|:--{width:13%}---:+
-|6 m                 |Piers                              | 16 m         |1800 kW/m^2^       | Center-Span      | 13 m             |
-|9 m                 | Abutments                         | 24 m         | 2400 kW/m^2^        | Abutment         | 23.4 m           |
-|----------------------------------------------------------------------------------------------------------------------------||||||
+|-------------------------------------------------------------||||||
+| Vertical  | Bridge        | Span | Heat     | Position   | Width |
+| Clearance | Substructure  |      | Release  |            |       |
+|           | Configuration |      | Rate     |            |       |
+|(m)        |               |(m)   |(kW/m^2^) |            |(m)    |
++:---------:|:-------------:|:----:|:--------:|:----------:|:-----:+
+|6          |Piers          |16    |1800      |Center-Span |13     |
+|9          |Abutments      |24    |2400      |Abutment    |23.4   |
+|-------------------------------------------------------------||||||
 {thead-tr-background-color:Gainsboro}
 ~
-
 
 ![figura1]
 
@@ -157,43 +159,44 @@ interactions are important. The resulting scenarios that had to be run
 are shown in table [#fig-cases].
 
 ~ TableFigure { #fig-cases; caption:"Experimental Design of the Simulations"}
-|------------------------------------------------------------------------|||||||
-|Nº Case|Clearance (m)|Substructure|Span (m)|HRR (kW/m^2^)|Position  |Width (m)|
-+:-----:|:-----------:|:----------:|:------:|:-----------:|:--------:|:-------:+
-| 1     | 9           | Piers      | 24     | 2400        | Abutment | 23.4    |
-| 2     | 6           | Piers      | 24     | 2400        | Abutment | 13      |
-| 3     | 9           | Abutments  | 24     | 2400        | Abutment | 13      |
-| 4     | 6           | Abutments  | 24     | 2400        | Abutment | 23.4    |
-| 5     | 9           | Piers      | 16     | 2400        | Abutment | 13      |
-| 6     | 6           | Piers      | 16     | 2400        | Abutment | 23.4    |
-| 7     | 9           | Abutments  | 16     | 2400        | Abutment | 23.4    |
-| 8     | 6           | Abutments  | 16     | 2400        | Abutment | 13      |
-| 9     | 9           | Piers      | 24     | 1600        | Abutment | 13      |
-| 10    | 6           | Piers      | 24     | 1600        | Abutment | 23.4    |
-| 11    | 9           | Abutments  | 24     | 1600        | Abutment | 23.4    |
-| 12    | 6           | Abutments  | 24     | 1600        | Abutment | 13      |
-| 13    | 9           | Piers      | 16     | 1600        | Abutment | 23.4    |
-| 14    | 6           | Piers      | 16     | 1600        | Abutment | 13      |
-| 15    | 9           | Abutments  | 16     | 1600        | Abutment | 13      |
-| 16    | 6           | Abutments  | 16     | 1600        | Abutment | 23.4    |
-| 17    | 9           | Piers      | 24     | 2400        | Center   | 13      |
-| 18    | 6           | Piers      | 24     | 2400        | Center   | 23.4    |
-| 19    | 9           | Abutments  | 24     | 2400        | Center   | 23.4    |
-| 20    | 6           | Abutments  | 24     | 2400        | Center   | 13      |
-| 21    | 9           | Piers      | 16     | 2400        | Center   | 23.4    |
-| 22    | 6           | Piers      | 16     | 2400        | Center   | 13      |
-| 23    | 9           | Abutments  | 16     | 2400        | Center   | 13      |
-| 24    | 6           | Abutments  | 16     | 2400        | Center   | 23.4    |
-| 25    | 9           | Piers      | 24     | 1600        | Center   | 23.4    |
-| 26    | 6           | Piers      | 24     | 1600        | Center   | 13      |
-| 27    | 9           | Abutments  | 24     | 1600        | Center   | 13      |
-| 28    | 6           | Abutments  | 24     | 1600        | Center   | 23.4    |
-| 29    | 9           | Piers      | 16     | 1600        | Center   | 13      |
-| 30    | 6           | Piers      | 16     | 1600        | Center   | 23.4    |
-| 31    | 9           | Abutments  | 16     | 1600        | Center   | 23.4    |
-| 32    | 6           | Abutments  | 16     | 1600        | Center   | 13      |
-|-------|-------------|------------|--------|-------------|----------|---------|
-{thead-tr-background-color:Gainsboro}
+|----------------------------------------------------------|||||||
+|Nº Case|Clearance|Substructure|Span |HRR      |Position  |Width |
+|       |(m)      |            |(m)  |(kW/m^2^)|          |(m)   |
++:-----:|:-------:|:----------:|:---:|:-------:|:--------:|:----:+
+| 1     | 9       | Piers      | 24  | 2400    | Abutment | 23.4 |
+| 2     | 6       | Piers      | 24  | 2400    | Abutment | 13   |
+| 3     | 9       | Abutments  | 24  | 2400    | Abutment | 13   |
+| 4     | 6       | Abutments  | 24  | 2400    | Abutment | 23.4 |
+| 5     | 9       | Piers      | 16  | 2400    | Abutment | 13   |
+| 6     | 6       | Piers      | 16  | 2400    | Abutment | 23.4 |
+| 7     | 9       | Abutments  | 16  | 2400    | Abutment | 23.4 |
+| 8     | 6       | Abutments  | 16  | 2400    | Abutment | 13   |
+| 9     | 9       | Piers      | 24  | 1600    | Abutment | 13   |
+| 10    | 6       | Piers      | 24  | 1600    | Abutment | 23.4 |
+| 11    | 9       | Abutments  | 24  | 1600    | Abutment | 23.4 |
+| 12    | 6       | Abutments  | 24  | 1600    | Abutment | 13   |
+| 13    | 9       | Piers      | 16  | 1600    | Abutment | 23.4 |
+| 14    | 6       | Piers      | 16  | 1600    | Abutment | 13   |
+| 15    | 9       | Abutments  | 16  | 1600    | Abutment | 13   |
+| 16    | 6       | Abutments  | 16  | 1600    | Abutment | 23.4 |
+| 17    | 9       | Piers      | 24  | 2400    | Center   | 13   |
+| 18    | 6       | Piers      | 24  | 2400    | Center   | 23.4 |
+| 19    | 9       | Abutments  | 24  | 2400    | Center   | 23.4 |
+| 20    | 6       | Abutments  | 24  | 2400    | Center   | 13   |
+| 21    | 9       | Piers      | 16  | 2400    | Center   | 23.4 |
+| 22    | 6       | Piers      | 16  | 2400    | Center   | 13   |
+| 23    | 9       | Abutments  | 16  | 2400    | Center   | 13   |
+| 24    | 6       | Abutments  | 16  | 2400    | Center   | 23.4 |
+| 25    | 9       | Piers      | 24  | 1600    | Center   | 23.4 |
+| 26    | 6       | Piers      | 24  | 1600    | Center   | 13   |
+| 27    | 9       | Abutments  | 24  | 1600    | Center   | 13   |
+| 28    | 6       | Abutments  | 24  | 1600    | Center   | 23.4 |
+| 29    | 9       | Piers      | 16  | 1600    | Center   | 13   |
+| 30    | 6       | Piers      | 16  | 1600    | Center   | 23.4 |
+| 31    | 9       | Abutments  | 16  | 1600    | Center   | 23.4 |
+| 32    | 6       | Abutments  | 16  | 1600    | Center   | 13   |
+|-------|---------|------------|-----|---------|----------|------|
+{thead-tr-background-color:Gainsboro; font-size:small}
 ~
 
 ## Results and Discussion
@@ -219,7 +222,7 @@ of the temperatures in the two web faces.
 | 10    | 1246  | 1173  | 21    | 704   | 646   | 32    | 973   | 1000  |
 | 11    | 1188  | 1216  | 22    | 1157  | 1204  |       |       |       |
 |-------|-------|-------|-------|-------|-------|-------|-------|-------|
-{thead-tr-background-color:Gainsboro}
+{thead-tr-background-color:Gainsboro; font-size:small}
 ~
 
 To assess the significance of the parameters on the maximum adiabatic
@@ -235,73 +238,73 @@ Table [#fig-resultsflange] and [#fig-resultsweb] show the ANOVA results.
 
 
 ~ TableFigure { #fig-resultsflange; caption:"Results of the Anova analysis for flange temperatures"}
-|-------------------------------------------------------------------------------------------------||||||
-|Flange Temperatures            | Sum of Squares | Degrees of Freedom | Mean Square| F-ratio|p-value   |
-+:------------------------------|:--------------:|:------------------:|:----------:|:------:|:--------:+
-|**Principal Effects**          |                |                    |            |        |          |
-| *A: Vertical Clearance*       | 294352         | 1                  | 294352     | 107.8  | **0.000**|
-| *B:Bridge Substructure*       | 782            | 1                  | 782        | 0.3    | 0.604    |
-| *C: Span Length*              | 8739           | 1                  | 8739       | 3.2    | 0.104    |
-| *D: Heat Release Rate*        | 81467          | 1                  | 81467      | 29.8   | **0.000**|
-| *E:Position of the Fire Load* | 511435         | 1                  | 511435     | 187.3  | **0.000**|
-| *F:Bridge Width*              | 1214           | 1                  | 1214       | 0.4    | 0.520    |
-|-------------------------------------------------------------------------------------------------||||||
-| **Interactions**              |                |                    |            |        |          |
-| *AB:Clearance-Bridge Sub.*    | 60498          | 1                  | 60498      | 22.2   | **0.001**|
-| *AC:*                         | 145            | 1                  | 145        | 0.1    | 0.822    |
-| *AD:*                         | 6628           | 1                  | 6628       | 2.4    | 0.150    |
-| *AE:Clearance-Position*       | 93894          | 1                  | 93894      | 34.4   | **0.000**|
-| *AF:*                         | 11044          | 1                  | 11044      | 4.0    | 0.072    |
-| *BC:*                         | 724            | 1                  | 724        | 0.3    | 0.618    |
-| *BD:*                         | 655            | 1                  | 655        | 0.2    | 0.635    |
-| *BE:*                         | 194            | 1                  | 194        | 0.1    | 0.795    |
-| *BF:*                         | 4866           | 1                  | 4866       | 1.8    | 0.212    |
-| *CD:*                         | 11940          | 1                  | 11940      | 4.4    | 0.063    |
-| *CE:*                         | 857            | 1                  | 857        | 0.3    | 0.588    |
-| *CF:*                         | 2484           | 1                  | 2484       | 0.9    | 0.363    |
-| *DE:*                         | 10029          | 1                  | 10029      | 3.7    | 0.084    |
-| *DF:*                         | 6705           | 1                  | 6705       | 2.5    | 0.148    |
-| *EF:*                         | 3588           | 1                  | 3588       | 1.3    | 0.278    |
-|-------------------------------------------------------------------------------------------------||||||
-| **Residuals**                 | 27313          | 10                 | 2731       |        |          |
-| **Total**                     | 1.14E+06       | 31                 |            |        |          |
-|-------------------------------------------------------------------------------------------------||||||
-{thead-tr-background-color:Gainsboro}
+|----------------------------------------------------------------------------------||||||
+|Flange Temperatures            | Sum of Squares | d.f.| Mean Square| F-ratio|p-value   |
++:------------------------------|:--------------:|:---:|:----------:|:------:|:--------:+
+|**Principal Effects**          |                |     |            |        |          |
+| *A: Vertical Clearance*       | 294352         | 1   | 294352     | 107.8  | **0.000**|
+| *B:Bridge Substructure*       | 782            | 1   | 782        | 0.3    | 0.604    |
+| *C: Span Length*              | 8739           | 1   | 8739       | 3.2    | 0.104    |
+| *D: Heat Release Rate*        | 81467          | 1   | 81467      | 29.8   | **0.000**|
+| *E:Position of the Fire Load* | 511435         | 1   | 511435     | 187.3  | **0.000**|
+| *F:Bridge Width*              | 1214           | 1   | 1214       | 0.4    | 0.520    |
+|----------------------------------------------------------------------------------||||||
+| **Interactions**              |                |     |            |        |          |
+| *AB:Clearance-Bridge Sub.*    | 60498          | 1   | 60498      | 22.2   | **0.001**|
+| *AC:*                         | 145            | 1   | 145        | 0.1    | 0.822    |
+| *AD:*                         | 6628           | 1   | 6628       | 2.4    | 0.150    |
+| *AE:Clearance-Position*       | 93894          | 1   | 93894      | 34.4   | **0.000**|
+| *AF:*                         | 11044          | 1   | 11044      | 4.0    | 0.072    |
+| *BC:*                         | 724            | 1   | 724        | 0.3    | 0.618    |
+| *BD:*                         | 655            | 1   | 655        | 0.2    | 0.635    |
+| *BE:*                         | 194            | 1   | 194        | 0.1    | 0.795    |
+| *BF:*                         | 4866           | 1   | 4866       | 1.8    | 0.212    |
+| *CD:*                         | 11940          | 1   | 11940      | 4.4    | 0.063    |
+| *CE:*                         | 857            | 1   | 857        | 0.3    | 0.588    |
+| *CF:*                         | 2484           | 1   | 2484       | 0.9    | 0.363    |
+| *DE:*                         | 10029          | 1   | 10029      | 3.7    | 0.084    |
+| *DF:*                         | 6705           | 1   | 6705       | 2.5    | 0.148    |
+| *EF:*                         | 3588           | 1   | 3588       | 1.3    | 0.278    |
+|----------------------------------------------------------------------------------||||||
+| **Residuals**                 | 27313          | 10  | 2731       |        |          |
+| **Total**                     | 1.14E+06       | 31  |            |        |          |
+|----------------------------------------------------------------------------------||||||
+{thead-tr-background-color:Gainsboro; font-size:small}
 ~
 
 ~ TableFigure { #fig-resultsweb; caption:"Results of the Anova analysis for web temperatures"}
-|-------------------------------------------------------------------------------------------------||||||
-| Web Temperatures              | Sum of Squares | Degrees of Freedom | Mean Square| F-ratio|p-value   |
-+:------------------------------|:--------------:|:------------------:|:----------:|:------:|:--------:+
-|**Principal Effects**          |                |                    |            |        |          |
-| *A: Vertical Clearance*       | 533413         | 1                  | 533413     | 93.8   | **0.000**|
-| *B:Bridge Substructure*       | 63858          | 1                  | 63858      | 11.2   | **0.007**|
-| *C: Span Length*              | 5517           | 1                  | 5517       | 1.0    | 0.348    |
-| *D: Heat Release Rate*        | 151161         | 1                  | 151161     | 26.6   | **0.000**|
-| *E:Position of the Fire Load* | 444768         | 1                  | 444768     | 78.2   | **0.000**|
-| *F:Bridge Width*              | 532            | 1                  | 532        | 0.1    | 0.766    |
-|-------------------------------------------------------------------------------------------------||||||
-| **Interactions**              |                |                    |            |        |          |
-| *AB:Clearance-Bridge Sub.*    | 83045          | 1                  | 83045      | 14.6   | **0.003**|
-| *AC:*                         | 510            | 1                  | 510        | 0.1    | 0.771    |
-| *AD:*                         | 4305           | 1                  | 4305       | 0.8    | 0.404    |
-| *AE:Clearance-Position*       | 121255         | 1                  | 121255     | 21.3   | **0.001**|
-| *AF:*                         | 17145          | 1                  | 17145      | 3.0    | 0.113    |
-| *BC:*                         | 33             | 1                  | 33         | 0.0    | 0.940    |
-| *BD:*                         | 3086           | 1                  | 3086       | 0.5    | 0.478    |
-| *BE:Bridge Sub.-Position*     | 38680          | 1                  | 38680      | 6.8    | **0.026**|
-| *BF:*                         | 6239           | 1                  | 6239       | 1.1    | 0.320    |
-| *CD:*                         | 12050          | 1                  | 12050      | 2.1    | 0.176    |
-| *CE:*                         | 523            | 1                  | 523        | 0.1    | 0.768    |
-| *CF:*                         | 2076           | 1                  | 2076       | 0.4    | 0.559    |
-| *DE:*                         | 10553          | 1                  | 10553      | 1.9    | 0.203    |
-| *DF:*                         | 6037           | 1                  | 6037       | 1.1    | 0.327    |
-| *EF:*                         | 5513           | 1                  | 5513       | 1.0    | 0.348    |
-|-------------------------------------------------------------------------------------------------||||||
-| **Residuals**                 | 56867          | 10                 | 5687       |        |          |
-| **Total**                     | 1.57E+06       | 31                 |            |        |          |
-|-------------------------------------------------------------------------------------------------||||||
-{thead-tr-background-color:Gainsboro}
+|-----------------------------------------------------------------------------------||||||
+| Web Temperatures              | Sum of Squares | d.f. | Mean Square| F-ratio|p-value   |
++:------------------------------|:--------------:|:----:|:----------:|:------:|:--------:+
+|**Principal Effects**          |                |      |            |        |          |
+| *A: Vertical Clearance*       | 533413         | 1    | 533413     | 93.8   | **0.000**|
+| *B:Bridge Substructure*       | 63858          | 1    | 63858      | 11.2   | **0.007**|
+| *C: Span Length*              | 5517           | 1    | 5517       | 1.0    | 0.348    |
+| *D: Heat Release Rate*        | 151161         | 1    | 151161     | 26.6   | **0.000**|
+| *E:Position of the Fire Load* | 444768         | 1    | 444768     | 78.2   | **0.000**|
+| *F:Bridge Width*              | 532            | 1    | 532        | 0.1    | 0.766    |
+|-----------------------------------------------------------------------------------||||||
+| **Interactions**              |                |      |            |        |          |
+| *AB:Clearance-Bridge Sub.*    | 83045          | 1    | 83045      | 14.6   | **0.003**|
+| *AC:*                         | 510            | 1    | 510        | 0.1    | 0.771    |
+| *AD:*                         | 4305           | 1    | 4305       | 0.8    | 0.404    |
+| *AE:Clearance-Position*       | 121255         | 1    | 121255     | 21.3   | **0.001**|
+| *AF:*                         | 17145          | 1    | 17145      | 3.0    | 0.113    |
+| *BC:*                         | 33             | 1    | 33         | 0.0    | 0.940    |
+| *BD:*                         | 3086           | 1    | 3086       | 0.5    | 0.478    |
+| *BE:Bridge Sub.-Position*     | 38680          | 1    | 38680      | 6.8    | **0.026**|
+| *BF:*                         | 6239           | 1    | 6239       | 1.1    | 0.320    |
+| *CD:*                         | 12050          | 1    | 12050      | 2.1    | 0.176    |
+| *CE:*                         | 523            | 1    | 523        | 0.1    | 0.768    |
+| *CF:*                         | 2076           | 1    | 2076       | 0.4    | 0.559    |
+| *DE:*                         | 10553          | 1    | 10553      | 1.9    | 0.203    |
+| *DF:*                         | 6037           | 1    | 6037       | 1.1    | 0.327    |
+| *EF:*                         | 5513           | 1    | 5513       | 1.0    | 0.348    |
+|-----------------------------------------------------------------------------------||||||
+| **Residuals**                 | 56867          | 10   | 5687       |        |          |
+| **Total**                     | 1.57E+06       | 31   |            |        |          |
+|-----------------------------------------------------------------------------------||||||
+{thead-tr-background-color:Gainsboro; font-size:small}
 ~
 
 The main conclusions of this analysis are:
