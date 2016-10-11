@@ -1,18 +1,18 @@
 [INCLUDE=style/lncs]
-Title         : TITLE OF YOUR PAPER, IN CAPITAL LETTERS CENTERED ON PAGE, USING ONE OR MORE LINES AS NECESSARY
-Subtitle      : An optional subtitle.
+Title         : A COMPARATIVE STUDY OF FIRE SAFETY PROVISIONS EFFECTING EVACUATION SAFETY IN A METRO TUNNEL
+Subtitle      : 
 
-Author        : First Author Name
-Affiliation   : Research institute
-Email         : you@bar.com
+Author        : Andrew Purchase
+Affiliation   : WSP Sweden AB
+Email         : andrew.purchase@wspgroup.se
 
-Author        : My co-author 1
-Affiliation   : Other institute
-Email         : other1@bar.com
+Author        : Daniel Rosberg
+Affiliation   : WSP Sweden AB
+Email         : daniel.rosberg@wspgroup.se
 
-Author        : My co-author 2
-Affiliation   : Other institute
-Email         : other2@bar.com
+Author        : Karl Fridolf
+Affiliation   : WSP Sweden AB
+Email         : karl.fridolf@wspgroup.se
 
 Bibliography  : references.bib
 Logo          : False
@@ -34,7 +34,7 @@ lines of space.
 [femtc2016]: https://github.com/thunderheadeng/femtc2016
 [emaillink]: mailto:conference@thunderheadeng.com "conference@thunderheadeng.com"
 
-# GENERAL INSTRUCTIONS { #sec-intro }
+# INTRODUCTION { #sec-intro }
 You are encouraged to use the [Madoko.net Editor][editor] while using
 the [Madoko Reference Manual][reference-manual] to edit/commit your
 documents into the 'authoring' branch of the [femtc2016] GitHub repository. 
