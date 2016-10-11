@@ -32,7 +32,7 @@ turbulence, characterized by random and involuntary movements of people within t
 
 # INTRODUCTION { #sec-intro }
 On 27th January 2013, a fire at the nightclub Kiss caused the death of 
-243 people in Santa Maria, Brazil. Investigators [@crea2013] concluded that 
+243 people in Santa Maria, Brazil. Investigators [@kissPC],[@crea2013] concluded that 
 the fire was caused by use of flare stick which sparks
 burned the flammable sound insulation foam (polyurethane made). 
 In a few seconds, black and toxic smoke spread throughout the
@@ -50,7 +50,10 @@ exit, being either safe and cost-effective is not simple as setting another
 article in a code. CBMSC launched an experiment in order to analyze what
 happens during an uncoordinated egress like the one took place at Kiss. 
 
-This paper presents results like exit blockages, turbulence inside crowd and egress time and flow due to initial population. At last, a computer model was validated by the experiment's results and used to evaluate the actual fire safety code applied in CBMSC, regarding to the final emergency exit width and distribution. 
+This paper presents results like exit blockages, turbulence inside crowd and egress
+ time and flow due to initial population. At last, a computer model was validated by 
+ the experiment's results and used to evaluate the actual fire safety code mandatory
+  in Santa Catarina state, regarding to the final emergency exit width and distribution. 
  
 
 # UNCOORDINATED EGRESS { #sec-egress}
@@ -211,9 +214,12 @@ Figure [#graf-210] presents the time lapse between each individual
 to pass across the door. There are eight peaks over one second, representing that, during the egress, there were eight moments when the door was blocked
 longer than a minute. The greater the peak, larger the valley after. During a peak, 
 crowd pressure raises until the arch breaks and several individuals are expelled through
-the door. That is the mathematical view of what is observed in video, people were right in front of the door, striving to egress but blocking one against other, those behind giving more pressure until the blockage is broken and a stream of individuals breaks trough the door. By instance, 
-right before the 37th individual to exit, the egress flow was stopped during more than 3.5 
-seconds. 
+the door. That is the mathematical view of what is observed in video, people
+were right in front of the door, striving to egress but blocking one against
+other, those behind giving more pressure until the blockage is broken and a
+stream of individuals breaks trough the door. By instance, 
+right before the 37th individual to exit, the egress flow was stopped during
+more than 3.5 seconds. 
 
 ## Verifying Simulation Model  
 
@@ -237,6 +243,28 @@ and simulation. The egress time is slightly lower at simulation, but the curve s
 ![exp_sim_210]
 ~
 [exp_sim_210]: images/exp_sim_210.png "exp_sim_210" { width:auto; max-width:100% }
+
+## Checking the CBMSC's fire safety code
+
+As stated before, CBMSC lauched its new fire safety code right after the Kiss tragedy.
+For nightclubs and similars, the allowable crowd is the double of room area. Specifically 
+to the terminal exit door, article 65, IV [@IN09], states: "a) areas bellow 100m² must have 
+at least two doors being one greater than 1.2m. That means, in a 100m² place, there will be
+200 individuals allowed. Considering that each 0.55m has the scape capacity of 100, the 1.2m
+is enough but another door is mandatory.   
+
+
+
+
+b) areas between 100m² and 400m² must have at least two doors being one greater than 2m, others 
+,  e  as  demais 
+portas complementares 
+conforme a necessidade do dimensionamento
+;
+c) com área total construída superior a 400m², deverão possuir no mínimo, duas portas 
+de  saída,  sendo  que  uma  delas  deverá  ter  a  largura  mínima  de  2m,  e  as  demais  portas 
+c
+omplementares com largura mínima de 1,20m 
 
 
 
