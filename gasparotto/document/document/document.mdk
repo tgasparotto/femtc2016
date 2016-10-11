@@ -54,10 +54,10 @@ First evacuation models were based on empiric relations between people density,
 walking speed and geometric characteristics of the building (Togawa [@togawa], Pauls [@pauls]). 
 Then, advancement of numerical simulation and progress in human behaviour modelling 
 led to finer analysis of pedestrian motion, particularly microscopic approaches. 
-For instance, Lagrangian-type models (Evac3, Simulex) consider people as particles, 
+For instance, Lagrangian-type models (Evac [@FDSEvac], Simulex) consider people as particles, 
 whose respective motion is governed by different attractive or repulsive forces and 
 characteristic velocities. Another kind of physical model, such as cellular 
-automata (Blue and Adler4, Klüpfel5, Tissera6), considers a space-and-time 
+automata (Blue and Adler [@blue], Klüpfel [@kluepfel], Tissera [@tissera]), considers a space-and-time 
 discretization with people who jump from cell to neighboring cell following given 
 transition laws. The main part of current evacuation computational tools are based on microscopic approaches. 
 However, these kinds of models provide output results which are 
@@ -153,7 +153,7 @@ For a 90 centimeter-wide door, we can estimate it at 1,1 person per second.\
 ## Numerical algorithm without fire constraint
 
 The implementation of our model and the algorithm used in order to solve it 
-numerically (which is similar to the one adopted by Roudneff-Chupin7) are presented 
+numerically (which is similar to the one adopted by Roudneff-Chupin [@roudneff]) are presented 
 in figure [#algo]. Two distinct parts are involved in a sequential process: subroutines PAULO 
 (Pathfinding Algorithm Using Length Optimization) and MARCOE (Macroscopic Analysis 
 of Rescue Configuration for Optimal Evacuation).
@@ -183,7 +183,7 @@ considered uniform and fairly distributed on free cells.
 The preliminary step for the resolution of the density balance equation is the 
 computation of the velocity field in which the people density is transported. This 
 calculation is based on a simple observation: people tend to minimize their travel 
-time to their goal8. So it is assumed in this study that people have a perfect 
+time to their goal [@moussaid]. So it is assumed in this study that people have a perfect 
 knowledge of their environment and of the configuration of the building. For each 
 free cell, the velocity is directed along the shortest path to the nearest exit cell. 
 The shortest path between a current cell and its nearest exit cell is computed thanks 
@@ -208,7 +208,7 @@ Rescue Configuration for Optimal Evacuation).
 
 The previous calculation step (transport at preferred velocity) can lead to 
 non-physical situations where the people density can locally exceed the critical 
-density $\rho_{c}$. So a corrective part extracted from literature9 is introduced 
+density $\rho_{c}$. So a corrective part extracted from literature [@maury] is introduced 
 in order to respect congestion constraint for each cell. This corrective part 
 consists in a stochastic projection of local excess density:\
 1)	The saturated cells are identified.\
@@ -255,7 +255,7 @@ their own evacuation. The critical value chosen for extinction coefficient corre
 to a visibility distance of 10 m according to Jin's correlation for a
 light-reflecting object.\
 3)	Extinction coefficient of the smoke locally reduces the walking speed of 
-humans according to the empirical formula given by Frantzich and Nilsson10:\
+humans according to the empirical formula given by Frantzich and Nilsson [@frantzich]:\
 
 ~ Equation { #frantzich-nilsson }
 v(\beta) = \max (0.1 V_{0}, (1-0.0807 \beta) V_{0})
@@ -352,7 +352,7 @@ scenarios.
 In this paragraph, we compare output results from our model with those obtained with
 other evacuation codes. The chosen scenario for this comparison is the one described
 in Test 9 extracted from the Guidelines for evacuation analysis for new and existing
-passenger ships, of International Maritime Organization. Characteristics of the test
+passenger ships, of International Maritime Organization [@IMO]. Characteristics of the test
 case are presented in Table [#characteristics].
 
 ~ TableFigure { #characteristics; caption: "Characteristics of the chosen scenario"}
@@ -401,7 +401,7 @@ used in the different codes makes interpretation of these deviations particularl
 
 ## Comparison case
 The geometry of our study case is the one adopted in Test 10 extracted from the 
-Guidelines of IMO11 (figure 5). It consists in a group of open boat cabins with 
+Guidelines of IMO [@IMO] (figure 5). It consists in a group of open boat cabins with 
 two exits. One of the cabins contains a fire source whose nominal heat release 
 rate is 1 MW. It is assumed that the heat release rate is governed by a medium 
 growth according to NFPA 204 standard. Fire-related data (extinction coefficient, 
@@ -413,7 +413,7 @@ time of 30 s).
 ## Numerical results
 Evacuation process is simulated with our macroscopic model, and exit rate over 
 time is compared with the one obtained by a statistical post-processing of 30 
-simulations conducted with FDS6+Evac (figure 6[#test10]). Table [#intermediate]] presents intermediate 
+simulations conducted with FDS6+Evac (figure [#test10]). Table [#intermediate] presents intermediate 
 evacuation times $t_{n}$calculated with both codes ($t_{n}$ is the time that n % of the 
 initial population is outside).
 
