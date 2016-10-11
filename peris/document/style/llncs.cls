@@ -50,7 +50,7 @@
 \LoadClass[twoside]{article}
 \RequirePackage{multicol} % needed for the list of participants, index
 
-\setlength{\textwidth}{12.2cm}
+\setlength{\textwidth}{15.24cm}
 \setlength{\textheight}{19.3cm}
 \renewcommand\@pnumwidth{2em}
 \renewcommand\@tocrmarg{3.5em}
