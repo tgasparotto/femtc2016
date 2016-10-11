@@ -343,16 +343,19 @@ reaction time identified in the previous step were introduced into the code as
 input parameters. Figure [#validation] represents mean experimental values (red), the solution 
 computed by our code which takes congestion constraint into consideration (green), 
 and the analytical solution which considers that people evacuate the room as if 
-they were alone (blue). These results provide two main insights:\
-1)	Congestion is correctly taken into account.\
-2)	Evacuation rates computed from a unique simulation with a mean scenario are 
-similar to those obtained by a statistical treatment of 20 particular random 
-scenarios.
+they were alone (blue). 
 
 ~ Figure { #validation; caption:"Validation with 10 persons"}
 ![validation]
 ~
 [validation]: images/validation.png "validation" { width:auto; max-width:70% }
+
+These results provide two main insights:\
+1)	Congestion is correctly taken into account.\
+2)	Evacuation rates computed from a unique simulation with a mean scenario are 
+similar to those obtained by a statistical treatment of 20 particular random 
+scenarios.
+
 
 ## Comparison with other codes
 
