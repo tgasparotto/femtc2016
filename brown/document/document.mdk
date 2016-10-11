@@ -48,10 +48,12 @@ With that in mind, a fire risk assessor recently inspected a 7 floor (i.e. groun
 The least onerous of the guides (BS 9999) recommends that the population of the upper floors should be no more than 427 for the widths of the staircases and the population of the upper floors was in fact 480.  This worked out at about 9 people per floor over-occupancy.  The building was multi-tenanted and the fire risk assessor was reluctant to tell all the various occupiers of the building that they should each lose a small number of people from their workforce, so he came seeking advice. 
 
 ~ Figure { #fig-1; caption:"A simple section of the building showing the two staircases and the populations on each floor"}
-![Bldg section 1]
+![Bldg1]
 ~
 
-[Bldg section 1]: images/Bldg-section-1.JPG "Bldg section 1" { width:auto; max-width:90% }
+[Bldg1]: images/Bldg1.JPG "Bldg1" { width:auto; max-width:90% }
+
+
 
 # THE OBSERVED EVACUATION DRILL
 With the population of the building only being about 10% over the recommended level we wanted more certainty that a problem did actually exist so it was decided to hold an evacuation drill and to time how long it took to evacuate each of the floors.
