@@ -1,15 +1,11 @@
 [INCLUDE=style/lncs]
 Title         : Study of the parameters that influence the I-girder bridges behaviour during fire events
-Subtitle      : 
-
 Author        : Peris-Sayol G.
 Affiliation   : Euroestudios, Ingenieros de Consulta. c/Ramón de Aguinaga 8, 28028, Madrid, Spain.
 Email         : guillem.peris@euroestudios.es
-
 Author        : Payá-Zaforteza I.
 Affiliation   : ICITECH, Departamento de Ingeniería de la Construcción. Universitat Politècnica de València. Camino de Vera S/N, 46071, Spain.
 Email         : igpaza@upv.es
-
 Bibliography  : references.bib
 Logo          : False
 Tex Header    :
@@ -196,7 +192,7 @@ are shown in table [#fig-cases].
 | 30    | 6           | Piers      | 16     | 1600        | Center   | 23.4    |
 | 31    | 9           | Abutments  | 16     | 1600        | Center   | 23.4    |
 | 32    | 6           | Abutments  | 16     | 1600        | Center   | 13      |
-|------------------------------------------------------------------------|||||||
+|-------|-------------|------------|--------|-------------|----------|---------|
 {thead-tr-background-color:Gainsboro}
 ~
 
