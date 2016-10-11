@@ -50,9 +50,9 @@ Benefits of the method :
 
 Example : 
 
-* take a sample of n realizations of a random variable that follows a normal law distribution.
-* build a confidence interval Ip for each order quantile &alpha;
-* choose a level of confidence p: here 90%
+* Take a sample of n realizations of a random variable that follows a normal law distribution.
+* Build a confidence interval Ip for each order quantile &alpha;.
+* Choose a level of confidence p: here 90%.
 
 ~ Equation { #eq-alignment; caption:"Alignment example" }
 \begin{aligned} 
@@ -60,7 +60,7 @@ Example :
 \end{aligned}
 ~
 
-c equals to 16.45 for p=90% 
+c equals to 16.45 for p=90%. 
 
 [![arrowdown]][down]
 
@@ -68,32 +68,116 @@ c equals to 16.45 for p=90%
 [down]: # { .navigate-down }
 [arrowdown]: images/arrow.png "Down arrow" { width:178px; height:238px }
 ## Build the empirical distribution function
-random realizations ranked in ascending order constitute the empirical distribution function
+Random realizations ranked in ascending order constitute the 
+empirical distribution function.
 
 
-
-Figure [#fig-monarch] shows how to put an image in a figure.
-
-~ Figure { #fig-monarch; caption: "A Monarch butterfly." }
-The ![monarch] image.
+~ Center
+![fig3_1]
+[fig3_1]: images/fig3_1.PNG "fig3_1" { width:auto; max-width:55%}
 ~
 
-[monarch]: butterfly.png { width:100px; vertical-align:middle }
 
+## Observations
 
+~ Align-Left
+* A random variable can not show a theorical maximum.
+* Even if the maximum value exists, the finite size of 
+the samples didn't allow to access to this maximum value.
 
+&rarr; Only percentiles are available.
 
+* Percentiles increase with the growth of the sample size.
+* Confidence interval decreases with the growth of the sample size.
+
+&rarr; So, the required number of draws is set by:
+
+* the desired precision,
+* the order of the desired quantile.
+~
 
 ~ End Vertical
 
 ~ Begin Vertical { data-background:Gainsbor }
 # Hypothesis of the model
 
+The numerical tool used in this study is BuildingExodus.
+
+But, statistical processing can be performed with any simulator.
+
+~ Begin Columns
+~ Column { width:60% ; vertical-align:top}
+Reminder :
+
+* BuildingExodus is based on a discretization of space in node of 50 cm x 50 cm.
+* The connection model is the one of Moore.
+~
+~ Column
+![fig4_1]
+[fig4_1]: images/fig4_1.PNG "fig4_1" { width:auto; max-width:60%}
+~
+~ End Columns
+
+## Test case geometry
+
+~ Center
+![fig4_2]
+[fig4_2]: images/fig4_2.PNG "fig4_2" { width:auto; max-width:70%}
+~
+
+## Behavioral hypothesis
+
+~ Align-Left
+Occupants:
+
+* are men,
+* have same leaderships,
+* have same patience,
+* are valid,
+* have a speed of 1.2 m/s
+* have a response time (RT) of 15 s or variable between 0 and 30 s,
+* act independently of each other.
+
+The identical leaderships imply a conflict resolution time include between 0.8 s and 1.5 s.
+ During this study the fixed value of 1.15 s will be use too.
+
+The draws are achieved with an uniform law.
+~
 
 ~ End Vertical
 
+
+
+
+
 ~ Begin Vertical { data-background:Gainsbor }
 # Study
+
+Occupants are randomly positioned in the room and drawn between 1 and 1,000.
+
+~ Begin Columns
+~ Column { width:50% }
+100 draws
+
+![fig5_1]
+[fig5_1]: images/fig5_1.PNG "fig5_1" { width:auto; max-width:100%}
+~
+~ Column
+1,000 draws
+
+![fig5_2]
+[fig5_2]: images/fig5_2.PNG "fig5_2" { width:auto; max-width:100%}
+~
+~ End Columns
+
+## Obervations
+
+It is impossible to determine statistically a RSET maximum.
+
+And a RSET max
+
+&rarr; It seems preferable to retain the associated RSET 95th percentile.
+
 
 
 ~ End Vertical
