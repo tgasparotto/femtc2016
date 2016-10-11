@@ -47,7 +47,7 @@ With that in mind, a fire risk assessor recently inspected a 7 floor (i.e. groun
 
 The least onerous of the guides (BS 9999) recommends that the population of the upper floors should be no more than 427 for the widths of the staircases and the population of the upper floors was in fact 480.  This worked out at about 9 people per floor over-occupancy.  The building was multi-tenanted and the fire risk assessor was reluctant to tell all the various occupiers of the building that they should each lose a small number of people from their workforce, so he came seeking advice. 
 
-~ Figure { #fig-xxx; caption:"A simple section of the building showing the two staircases and the populations on each floor"}
+~ Figure { #fig-1; caption:"A simple section of the building showing the two staircases and the populations on each floor"}
 ![Bldg section 1]
 ~
 
@@ -59,7 +59,7 @@ The drill was held on a day when the office was near full capacity.  We were int
 
 Pre-movement times are something that can be controlled through management processes and our first aim was to examine how the building performed on a physical basis.
 
-~ Figure { #fig-xxx; caption:"A time line of the evacuation process with pre-movement times reduced to virtually zero"}
+~ Figure { #fig-2; caption:"A time line of the evacuation process with pre-movement times reduced to virtually zero"}
 ![Times]
 ~
 
@@ -67,7 +67,7 @@ Pre-movement times are something that can be controlled through management proce
 
 As previously stated, there were two protected staircases but these staircases were not protected by lobbies.  That is, there was only a single door between the risk area on each floor and the staircase.  This is allowed in the UK if a building has no floors more than 18m above the ground.  Where staircases do not have lobby protection UK codes require that one of the staircases is discounted for means of escape purposes (assuming that it has been lost due to smoke or fire ingress).  More of this later.
 
-~ Figure { #fig-xxx; caption:"The methodolgy for unlobbied stairs assumes that a fire door may fail for some reason and smoke or fire may make a staircase unusable"}
+~ Figure { #fig-3; caption:"The methodolgy for unlobbied stairs assumes that a fire door may fail for some reason and smoke or fire may make a staircase unusable"}
 ![fire1]
 ~
 
@@ -118,7 +118,7 @@ This is where Pathfinder enters the story.  It would not have been reasonable to
 
 The observed evacuation of the office building was modeled using Pathfinder.  At first, in the model, it was found that the longest evacuation times were on the lower floors whereas in reality the longest evacuation times had been observed on the higher floors.  This was because the model, by default, gave a degree of priority to those people already in the staircase which made it more difficult for people to leave the lower floors.  The real evacuation had the longest wait times on the higher floors and this meant that real people gave more priority to those people entering the staircase rather than those already in the staircase.
 
-~ Figure { #fig-xxx; caption:"The Pathfinder model just prior to the commencement of the evacuation."}
+~ Figure { #fig-4; caption:"The Pathfinder model just prior to the commencement of the evacuation."}
 ![Model1]
 ~
 
@@ -127,6 +127,12 @@ The observed evacuation of the office building was modeled using Pathfinder.  At
 By increasing the priority of a number of individuals on the higher floors the outcomes of the model were made to replicate the observed evacuation times for each of the floors.  To give more robustness to the analysis, it was felt desirable to have a number of runs of the model with the populations on each floor redistributed around the space. 
 
 Moving the population around revealed that even small changes in the locations of a few individuals could have an apparently chaotic effect on the evacuation times for each floor.  But the chaos did have boundaries and a bounded distribution of results emerged.  The priorities of individuals and speeds in the staircase were adjusted so that the mean of the distribution of results was as close as possible to the observed drill.
+
+~ Figure { #fig-5; caption:"The Pathfinder model shows queues starting to form at the storey exits into the staircases.  The right hand staircase has been removed as this was assumed to be lost due to smoke or fire ingress"}
+![Model2]
+~
+
+[Model2]: images/Model2.JPG "Model2" { width:auto; max-width:90% }
 
 It is appreciated that the observed drill was one result that belongs to a distribution of results that could lie in either direction with a variance that is difficult to determine but this analysis could only be done on the basis of the information that was available and so matching the mean of the Pathfinder results to the observed results was felt to be reasonable.
 
@@ -159,24 +165,25 @@ The apparent conclusion from this is that if the fire was on the 6th floor peopl
 
 And yet, we do not have a trail of bodies from fires in offices.  In fact, no one dies in office fires in the UK.  Why do we have such an apparent and yet unrealised risk.
 
-# POSSIBLE ANSWERS
+## Possible answers
 
 There are a number of possible answers.  The two main ones are:
 
-## Suitability of the new code, BS 9999
+### Suitability of the new code, BS 9999
 
 The code that the design of the model used to determine the population of the upper floors was BS 9999 which is a new code and has only been adopted in the last few years.  All previous offices in the UK, virtually all the existing ones, were built to Approved Document B (ADB) code which would have recommended a maximum population of 350 people on the upper floors.
-When the population on the upper floors in the model conformed to ADB (350) the results for each floor were as follows.
 
-Table [#table-adbtimes] shows the modeled evacuation times for each floor when the building complies with the maximum ADB recommended number of people.
+When the population on the upper floors in the model conformed to ADB (350 people instead of 427) the results for each floor were as follows.
+
+Table [#table-adbtimes] shows the modeled evacuation times for each floor when the building complies with the ADB maximum recommended number of people.
 
 
-~ TableFigure { #table-adbtimes; caption: "Modelled evacuation times for each floor in the ADB compliant building"; .narrow }
+~ TableFigure { #table-adbtimes; caption: "Modeled evacuation times for each floor in the ADB compliant building"; .narrow }
 |Floor   |   |   |Time for the last    |
 |        |   |   |person to leave      |
 |:-------|:--|:--|:-------------------:|
 | First  |   |   |1 minute 00 seconds  |
-| Second |   |   |1 minute 50 seconds |
+| Second |   |   |1 minute 50 seconds  |
 | Third  |   |   |2 minutes 30 seconds |
 | Fourth |   |   |3 minutes 30 seconds |
 | Fifth  |   |   |4 minutes 00 seconds |
@@ -186,17 +193,21 @@ Table [#table-adbtimes] shows the modeled evacuation times for each floor when t
 ~
 
 These are more reasonable times though the 6th floor is still nearly 5 minutes.  As 5 minutes is too long to remain on a floor where there is a developing fire (and survive) this result, along with the lack of fire deaths in offices, tends to indicate that it is not simply the fact that the newer code is more lenient in its recommendations that fills the gap between the apparent risk and the realisation of the risk.
-Having said that, the rationale behind the staircase recommendations in BS 9999 has never been released for public scrutiny and without such a rationale it cannot be confirmed that the recommendations are indeed safe.
 
-## Guidance documents’ approach to staircases may be invalid
+Having said that, the rationale behind the staircase recommendations in BS 9999 has never been released for public scrutiny and without understanding the rationale it cannot be confirmed that the recommendations are indeed safe.
+
+### Guidance documents’ approach to staircases may be invalid
 
 As mentioned earlier, if stairs are un-lobbied then, in adopting the worst case scenario, it is assumed that fire and/or smoke may enter one of the staircases and render it unusable by the whole population of the building.  This might be a bit onerous.  But it is what was modeled using Pathfinder, the whole population of the upper floors had to go down just one of the two staircases due to it being assumed that the other one was not usable.
+
 Thinking back to the evacuation times of the building that started this investigation, if the fire had been on one of the lower floors then there is a chance that a door to a staircase might have been left open or failed in some other way and that smoke filled that staircase to make it unavailable for everyone during the evacuation.  But the lower floors had lower evacuation times and people on them would not have had to wait nearly 7 minutes to enter the staircase.  The people on the higher floors would have been subject to the long delays to enter the staircase but it would not have mattered because the fire was not on their floor.
+
 If the fire had been on one of the higher floors where there were long delays then it is unlikely that smoke entering the staircase at this level would have stopped people using the staircase further down the building.  This would have taken pressure off the single staircase and allowed people to enter it much more quickly.  This situation was modeled using Pathfinder and it was found that the longest it took to evacuate any of the floors was 1 minute 50 seconds on the top floor.
 
 # CONCLUSION
 
 There are many factors at play here and this very limited investigation, undertaken primarily out of curiosity, cannot give comprehensive answers as to why the test of time reveals that these buildings are generally safe whilst the known objectives of the guidance documents are shown to be unachievable in some cases.  
+
 It is hoped that this investigation highlights some of the anomalies in fire safety assumptions and methodologies and contributes to discussions of how best fire safety problems might be tackled in the safest and most cost effective manner.
 
 ## Summary of points:
@@ -207,179 +218,13 @@ It is hoped that this investigation highlights some of the anomalies in fire saf
 5.	We will not know the effect of the more lenient approach to means of escape adopted in BS 9999 for many years until we have had time to collect meaningful data.
 6.	The gap between the apparent risk and the realisation of that risk might be because of the poor expectations we have for stairs that only have a single line of fire resistance to protect them.  It seems possible that stairs perform better than we expect, either because smoke ingress does not make the whole staircase unusable or because smoke tends not to get into staircases, even when they do not have protected lobbies.  In fact, it is believed that both of these factors serve to make staircases perform better than anticipated.
 
-
-
-# FIGURES, TABLES, AND EQUATIONS
-Original drawings and photos may be included in your paper as figures.
-Diagrams may be in color.
-
-Figures and tables should immediately follow first mention of them in the
-text and can be placed in one column, or in the case of wider figures,
-can cover two columns (but only at the top or bottom of the page). The
-caption should start with either the word “figure” spelled out or
-abbreviated, followed by the figure number (i.e., Figure 1 or Fig. 1).
-The figure caption should be followed by a single line of space before
-the text resumes.
-
-## Figures
-Figure [#fig-smokeview] in Section [#sec-intro] shows an image from an
-older version of Smokeview. Note that you can drag&drop images into the
-editor pane to include them in the document, and similarly with bibtex
-files, latex style files, etc.
-
-~ Figure { #fig-smokeview; caption:"Illustration of placement of figure and caption. (use the `.wide` class for wide figure)."}
-![Ex1_0]
-~
-[Ex1_0]: images/Ex1_0.png "Ex1_0" { width:auto; max-width:90% }
-
-~ Note
-Images larger than about 1Mb in size will be rejected by the Madoko.net server.
-~
-
-## Tables
-Table [#table-sample] shows an example full width table figure.
-
-~ TableFigure { #table-sample; caption: "Modelle mit unterschiedlich geschätztem baseline hazard"; .wide }
-|                | $c(t)$                               ||||
-|                |---------|---------|---------|-----------|
-|                | (A0)    | (A1)    | (A2)    | (A3)      |
-|                | ohne    | Log     | Polynom | Stückweise|
-|                |         |         |         | konstant  |
-|:---------------|:-------:|:-------:|:-------:|:---------:|
-| Log likelihood | -6.798  | -6.733  | -6.715  | -6.686    |
-| Pseudeo $R^{2}$| 0,048   | 0,057   | 0,059   | -         |
-| AIC            | 13.615  | 13.489  | 13.456  | 13.483    |
-| BIC            | 13.711  | 13.594  | 13.580  | 14.009    |
-| N              | 105.484 | 105.484 | 105.484 | 105.484   |
-|----------------|---------|---------|---------|-----------|
-~
-
-## Equations
-Standard terminology should be used in equations. If possible, keep
-equations to one column. All equations should be numbered. A definition
-of $e$ is shown in Equation [#euler]:
-
-~ Equation { #euler }
-e = \lim_{n\to\infty} \left( 1 + \frac{1}{n} \right)^n
-~
-
-Or to use &logolatex; to align equations.
-
-~ Equation { #eq-alignment; caption:"Alignment example" }
-\begin{aligned} 
- f(x)  &= a x^2+b x +c   &   g(x)  &= d x^3 \\
- f'(x) &= 2 a x +b       &   g'(x) &= 3 d x^2
-\end{aligned}
-~
-
-# FUN CONTENT EXAMPLES
-Let's program some JavaScript:
-``` javascript
-function hello() {
-  return "hello world!"
-}
-```
-Here is a footnote[^fn] reference.
-[^fn]: This is the content of the example footnote. 
-    You can continue a footnote by indenting content.
-    And notice the back link.
-
-# BIBLIOGRAPHY AND REFERENCES
-When references are used in the text, tie them to an alphabetical (by
-principal author) list of references to be included as the last item of
-your paper. The format commonly used in scientific literature follows:
-
-Smith, J. S., Bloggs, R. T. and Jones, E. R. (1974), "Magnetic Anomalies
-in Geothermal Systems", Journal of Fluid Mechanics, 254, 73-79
-
-Leslie Lamport, LaTeX: A Document Preparation System (2nd Edition), Addison-Wesley, 1994
-
-When using Madoko, edit the content of the .bib file in the document
-folder, and use the reference methods as shown in the [Bibliography and
-Citations
-Section](http://research.microsoft.com/en-us/um/people/daan/madoko/doc/reference.html#sec-bib)
-of the Madoko Manual.
-
-A bibliography file consists of all your references in the BibTeX format, for example:
-
-    @BOOK{ Knuth:TeX,  
-        author   = "Knuth, Donald E.",  
-        title    = "The {\TeX} book",  
-        publisher= "Addison-Wesley",  
-        year     = 1984  
-    }
-
-Entries in the bibliography files can now be referenced using semi-colon
-separated references, for example:
-``` Markdown 
-Read about LaTeX and TeX [@Knuth:TeX; @Lamport:LaTeX].
-```
-Results in: Read about LaTeX and TeX [@Knuth:TeX; @Lamport:LaTeX].
-
-Please include full title of journal articles or other references,
-journal, volume, date, pages. There is a nice [table on
-Wikipedia](https://en.wikibooks.org/wiki/LaTeX/Bibliography_Management#BibTeX)
-that shows all of the different data fields for the BibTeX file.
-
-# PAPER DEADLINE
-Your paper, in final form, must be received by October 15th, 2016. The
-best way to edit and submit is to use the Madoko [editor] to edit your
-document in the 'authoring' branch of the GitHub [femtc2016] repository.
-If you choose to use some other document format and editing tool, PDF
-format is preferred, but ODT, DOC, or DOCX formats are acceptable. Please
-e-mail the files to [conference@thunderheadeng.com][emaillink].
-
-# PRESENTATION
-Each author must present his/her paper within the allotted time, allowing
-for some minutes of open discussion. The session chair is responsible for
-keeping authors within their time limit, in order to ensure that each
-author has enough time for their presentation. When preparing your
-presentation slides, make sure they are clear and large enough so that
-your audience can read them from as far as 80 feet away.
-
-All presentations will be made using the computer projector available in
-the conference room. We will not have overhead projectors or slide
-projectors in the meeting rooms.
-
-Your presentation, in final form, must be received by **October 15th,
-2016**. A final commit of the files to the GitHub repository is
-preferred. Once the final draft is complete and reviewed it will be
-merged into the master branch of the repository. If you decide to use
-some other tool for creating your presentation, PDF format is preferred,
-but ODP, PPT, or PPTX formats are acceptable. Please e-mail the files
-to [conference@thunderheadeng.com][emaillink].
-
-All presentations will be pre-loaded on the computers that are present.
-Please note that this approach will make it necessary for us to receive
-the presentation files prior to the conference. If you have a different
-software requirement, it should still be possible for you to attach your
-own computer to the projector if you bring it with you. This is not
-optimal, as it takes time and slows down the session.
-
-# CONFERENCE CONTENT DISTRIBUTION
-The papers and presentation materials will be made available online
-during and after the conference. In addition, the organizers are planning
-to may broadcast live presentations online during the event. The papers,
-presentations, and videos will be archived and made available on the web
-after the conference.
-
-Author(s) retain all rights to submitted material. The organizers are
-granted a non-exclusive right to copy and redistribute conference
-material submitted by the author(s).
-
-[BIB]
-
 &pagebreak;
 
-# An appendix { @h1:"A" }
-"All the same, I should like it all plain and clear," said he
-obstinately, putting on his business manner (usually reserved for people
-who tried to borrow money off him), and doing his best to appear wise and
-prudent and professional and live up to Gandalf's recommendation. "Also I
-should like to know about risks, out-of-pocket expenses, time required
-and remuneration, and so forth" -- by which he meant: "What am I going to
-get out of it? and am I going to come back alive?"
+# BIBLIOGRAPHY AND REFERENCES
 
-# Conclusion
-If you have any questions concerning your paper and/or the Conference,
-please email us at [conference@thunderheadeng.com][emaillink].
+Approved Document B - Volume 2 Buildings other than dwelling houses - 2006 Edition, incorporating 2007, 2010 and 2013 amendments, Published by NBS, part of RIBA Enterprises Ltd., ISBN 978 1 85946 489 2
+
+British Standard 9999:2008 "Code of Practice for fire safety in the design, management and use of buildings", Published by the British Standards Institute, ISBN 978 0 580 57920 2
+
+
+
