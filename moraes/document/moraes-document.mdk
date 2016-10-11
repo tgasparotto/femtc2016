@@ -32,28 +32,33 @@ turbulence, characterized by random and involuntary movements of people within t
 
 # INTRODUCTION { #sec-intro }
 On 27th January 2013, a fire at the nightclub Kiss caused the death of 
-243 people in Santa Maria, Brazil. Investigators [@crea2013]
-concluded that the fire was caused by use of flare stick which sparks
+243 people in Santa Maria, Brazil. Investigators [@crea2013] concluded that 
+the fire was caused by use of flare stick which sparks
 burned the flammable sound insulation foam (polyurethane made). 
 In a few seconds, black and toxic smoke spread throughout the
 nightclub, causing many people to faint. Others did strive towards 
 the unique and undersized exit door. Kiss tragedy required improvements 
-on fire safety code. As unit of Brazilian federation, each state, through
+on fire safety code. 
+
+As unit of Brazilian federation, each state, through
 its fire department, is responsible to define the fire safety code and
 assure its application. For example, one less than two years after Kiss, 
-Santa Catarina Military Fire Department (CBMSC) launched its new fire safety code banning the use of any
-type of fireworks and flammable foam in closed rooms. However, defining 
-the size and number of emergency, being either safe and cost-effective is
-not simple as setting another statement in a code. For this, an experiment was done
-in order to analyze what happens during an uncoordinated egress like the one took place at Kiss. 
-This paper presents results like exit blockages, crowd
-turbulence and egress time and flow due to initial population. 
+Santa Catarina Military Fire Department (CBMSC) launched its new fire 
+safety code banning the use of any type of fireworks and flammable foam
+in closed rooms. However, defining the size and number of terminal emergency 
+exit, being either safe and cost-effective is not simple as setting another
+article in a code. CBMSC launched an experiment in order to analyze what
+happens during an uncoordinated egress like the one took place at Kiss. 
+
+This paper presents results like exit blockages, turbulence inside crowd and egress time and flow due to initial population. At last, a computer model was validated by the experiment's results and used to evaluate the actual fire safety code applied in CBMSC, regarding to the final emergency exit width and distribution. 
+ 
 
 # UNCOORDINATED EGRESS { #sec-egress}
 
 Based on literature review and empirical research, 
-Helbing, Farkas and Vicsek [@helbing2000simulating] lists the events that can occur during
-an emergency evacuation, right after the identification of the threat: 
+Helbing, Farkas and Vicsek [@helbing2000simulating] lists the events that
+can occur during an emergency evacuation, right after the identification 
+of the threat: 
 (1) people try to move faster than normal; 
 (2) individuals press to exit, causing physical interactions with those around; 
 (3) movement becomes uncoordinated through the openings; 
@@ -64,22 +69,8 @@ an emergency evacuation, right after the identification of the threat:
 (8) tendency to mass behavior increases; 
 (9) alternatives are neglected.
 
-## Simulation
-Helbing, Farkas and Vicsek [@helbing2000simulating] brought with an egress
-simulation model. In an emergency, every individual should aim the exit,
-following a straight path in a desired speed. If those ahead are not at 
-the same speed, they will be underwent by those behind, raising the crowd pressure.
 
-All simulation parameters were default, except those now described. Size
-of door and room's area were configured to match the experiment. 
-Data taken whas smoke speed as 0.5m/s. Each individual is represented by a circle which diameter varies from
-42.5cm to 52.5cm. The forces applied by and on objects are physical and
-socio-psychological. The latter is related to people aversion people's 
-cluster aversion to crowding. Physical forces are the reaction to
-compression and friction, either among people or between individual and 
-wall. 
-
-## EXPERIMENT { #sec-experiment}
+## Experiment { #sec-experiment}
 The egress experiment aims to verify the influence of overcrowd on the 
 buildings occupants safety. Figure [#fig-ginasio] shows a top view out of scale of
 the sports court detailing the experiment. In a controlled environment with
@@ -115,9 +106,28 @@ applying the following start populations: 35, 70, 105, 140, 175, 210 and 280.
 ~
 [snapshot3CAM]: images/snapshot3CAM.png "snapshot3CAM" { width:auto; max-width:90% }
 
+
+## Simulation { #sec-sim}
+Helbing, Farkas and Vicsek [@helbing2000simulating] brought with an egress
+simulation model, here named "Panic Package". Authors considered that in an 
+emergency, every individual should aim the exit, following a straight path
+at a desired speed. If those ahead are not at the same speed, they will be 
+underwent by those behind, raising the crowd pressure. 
+
+All simulation parameters were set as default, except those now described: 
+a) door size, 1.12m; b) room's area, 70m²; c) smoke speed, 0.5m/s; d) 
+circle (representing an individual) diameter, 47.5&plusmn;5.0cm;
+According to this model, the forces applied by and on individuals are physical
+and socio-psychological. The latter is related to people aversion people's
+cluster aversion to crowding. Physical forces are the reaction to compression
+and friction, either among people or between individual and wall. 
+
 # RESULTS   { #sec-results}
-The results are: qualitative, by identifying arches and turbulence on videos 
-and; quantitative, regarding to egress time and flow analysis. 
+The experiment results are: qualitative, by identifying arches and turbulence on videos 
+and; quantitative, regarding to egress time and flow analysis. The experimental results
+are confronted to the "Panic Package" simulation results. So that the software would be
+used to  The simulation is calibrated
+
 
 ## Qualitative Results { #sec-quali}
 Figure [#arch] presents a snapshot (175 person egress experiment) highlighting
@@ -187,11 +197,12 @@ different crowd initial density.
 ~
 [first35]: images/first35.png "first35" { width:auto; max-width:100% }
 
-The dark blue curve is maintain a near constant slope, representing that at the 
-lowest crowd density there were no blockages. Either the purple or the light
-blue curve, presents a sharp slope (at 8th and 29th individual, respectively) 
-which is a graphical representation of a door blockage. Another way to see the blockages 
-is through the time void between two egresses, which is presented in Figures [#graf-210].
+The dark blue curve maintain a constant slope, representing that at the 
+lowest crowd density there were no blockages, almost a coordinated egress.
+Either the purple or the light blue curve, presents a sharp slope (at 8th 
+and 29th individual, respectively) which is a graphical representation of a
+door blockage. Another way to see the blockages is through the time void
+between two egresses, which is presented in Figures [#graf-210].
 
 ~ Figure { #graf-210; caption: "Time void between egresses for 210 individuals experiment."}
 ![210_void]
@@ -203,30 +214,27 @@ none individual had gotten out. That means, people were right in front
 of the door, striving to egress but blocking one against other. By instance, right before
 the 37th individual to exit, the egress flow stopped during more than 3.5 seconds.
 
-fdfgsdfg
-sdfgsdfg
-sdfgsdfg
+## Verifying Simulation Model  
 
-~ Begin Figure { #fig-expSim; caption:"Experimental against simulation results." }
-~ Begin SubFigureRow { vertical-align: bottom }
-
-~ SubFigure { #fig-expSim35; caption:"35 individuals" }
+~ Figure { #fig-expSim35; caption: "Experiment and Simulation results: 35 individuals."}
 ![exp_sim_35]
 ~
-
-~ SubFigure { #fig-expSim70; caption:"70 individuals" }
-![exp_sim_70]
-~
-
-~ End SubFigureRow
-
-~ End Figure
 [exp_sim_35]: images/exp_sim_35.png "exp_sim_35" { width:auto; max-width:100% }
-[exp_sim_70]: images/exp_sim_70.png "exp_sim_70" { width:auto; max-width:100% }
+
+
+~ Figure { #fig-expSim105; caption: "Experiment and Simulation results: 105 individuals."}
+![exp_sim_105]
+~
 [exp_sim_105]: images/exp_sim_105.png "exp_sim_105" { width:auto; max-width:100% }
-[exp_sim_140]: images/exp_sim_140.png "exp_sim_140" { width:auto; max-width:100% }
+
+
+~ Figure { #fig-expSim210; caption: "Experiment and Simulation results: 210 individuals."}
+![exp_sim_210]
+~
 [exp_sim_210]: images/exp_sim_210.png "exp_sim_210" { width:auto; max-width:100% }
-[exp_sim_175]: images/exp_sim_175.png "exp_sim_175" { width:auto; max-width:100% }
+
+
+
 
 # CONCLUSION
 
