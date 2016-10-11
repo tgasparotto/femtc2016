@@ -236,7 +236,7 @@ In accordance with what has been announced above, it is observed that:
 ~
 
 * the confidence interval decreases with increase of the draw number from 8.1 s on average for
-100 draws to 2.5s on average for 1,000 draws,
+100 draws to 2.5 s on average for 1,000 draws,
 * extreme percentiles have a confidence
 interval of which one bound is infinite for 100 and 1,000 draws.
 
