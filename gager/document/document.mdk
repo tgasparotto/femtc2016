@@ -42,6 +42,22 @@ of America and amusement parks throughout the world.
 [femtc2016]: https://github.com/thunderheadeng/femtc2016
 [emaillink]: mailto:conference@thunderheadeng.com "conference@thunderheadeng.com"
 
+# INTRODUCTION
+
+Providing an environment for occupants that is safe from the dangerous effects of a fire, and provides a tenable means of egress during a fire, has historically been a goal of building codes and standards. Research into smoke control has occurred as early as 1881, with the oldest successful use of a smoke control system dating back to 1911 [@Klote]. Smoke control has been a primary method to protect occupants in large open spaces such as atriums. Smoke control systems are used when required by prescriptive code or provided for a performance-based approach. Recently, as the complexity of buildings increase and codes and standards change, there has been a push for more performance based smoke control system designs through the use of computer computational fluid dynamics (CFD) programs. The Fire Dynamics Simulator (FDS) model was developed specifically for fire applications and is validated by decades of research in CFD modeling of fire and smoke transport conducted at the National Institute of Standards and Technology (NIST)[@NFPA92]. The performance based approaches are required by the IBC, NFPA 5000, NFPA 101 and other local codes and standards. They are also permitted as an alternative means to the prescriptive requirements of building codes and standards. 
+
+# TENABILITY GUIDELINES
+
+An objective of life safety design is to provide a tenable environment for occupants not intimate with the fire to egress through while providing building occupants with an acceptable level of safety from fire .  For example, should a fire occur in which occupants are exposed to fire effluent and/or heat, the objective of the fire safety engineering strategy is to ensure that such exposure does not significantly impede or prevent the safe escape (if required) of essentially all occupants, without them experiencing or developing serious health effects .  As codes and standards continue to develop, the criteria for this tenability is becoming typical for areas such as atriums and large open spaces.
+
+An engineered smoke control system is required to be provided in large atriums by the International Building Code and NFPA 101.  This requirement has begun to drive other codes and standards to determine appropriate tenability criteria.  For example, NFPA 92 is currently working on incorporating specific tenability critera values in order to standardize performance based analyses.  Another standard which already publishes specific tenability criteria in fixed guideway transit and passenger rails, is NFPA 130. NFPA 130, Standard for Fixed Guideway Transit and Passenger Rail Systems, has included tenability criteria in Appendix B since the 1980’s. Tenability criteria in NFPA 130 Appendix B has evolved throughout the years, but has generally become more prescriptive by including criteria for temperature, CO concentration and obscuration levels. These tenability limits are referenced towards occupants in fixed guideway transit and passenger rail systems, but can effectively be applied to different occupancies.
+
+## VISIBILITY
+
+Visibility is an indirect but fatal cause of death in fires.  While temperature and toxic gases are the final causes of death, many evacuees are trapped in an early stage of fire by relatively thin smoke.  The threshold of fire smoke density and visibility limits for safe evacuation has been examined by multiple institutions. This has occurred through investigations conducted by interviewing evacuees, analyzing questionnaires and performing experimental research by evaluating subjects under limited fire smoke conditions.
+
+Smoke presents many hazards affecting escape capabilities of occupants.  The presence of smoke in an occupied enclosure obscures illumination from windows and other light sources, so that escaping occupants can find themselves in dimly lit conditions.  Additionally, the smoke directly impairs the ability of the subject to see through it to surrounding objects and signage .  Tests of visibility of illuminated and reflecting signs through smoke were conducted at the Fire Research Institute (FRE) in Japan.  The test consisted of a chamber which was filled with smoke, and participants viewed signs in the chamber through a window .  Based on the FRI research, the relation between visibility and smoke obscuration can be written as:
+
 # INTRODUCTION { #sec-intro }
 You are encouraged to use the [Madoko.net Editor][editor] while using
 the [Madoko Reference Manual][reference-manual] to edit/commit your
@@ -181,19 +197,13 @@ A bibliography file consists of all your references in the BibTeX format, for ex
         year     = 1984  
     }
 
-@incollection{Xincollection,
-	author	= "",
-	title	= "",
-	booktitle= "",
-	publisher= "",
-	year	= "",
 
 Entries in the bibliography files can now be referenced using semi-colon
 separated references, for example:
 ``` Markdown 
-Read about LaTeX and TeX [@Knuth:TeX; @Lamport:LaTeX].
+Read about LaTeX and TeX [@Knuth:TeX; @Lamport:LaTeX; @Klote
 ```
-Results in: Read about LaTeX and TeX [@Knuth:TeX; @Lamport:LaTeX].
+Results in: Read about LaTeX and TeX [@Knuth:TeX; @Lamport:LaTeX; @Klote].
 
 Please include full title of journal articles or other references,
 journal, volume, date, pages. There is a nice [table on
