@@ -51,7 +51,7 @@ Assessment of fire safety performance of buildings requires an estimation of
 Required Safe Egress Time (RSET) in fire situation. Many egress models have 
 therefore been developed during the last decades, using various mechanisms. 
 First evacuation models were based on empiric relations between people density, 
-walking speed and geometric characteristics of the building (Togawa [@togawa], Pauls []). 
+walking speed and geometric characteristics of the building (Togawa [@togawa], Pauls [@pauls]). 
 Then, advancement of numerical simulation and progress in human behaviour modelling 
 led to finer analysis of pedestrian motion, particularly microscopic approaches. 
 For instance, Lagrangian-type models (Evac3, Simulex) consider people as particles, 
@@ -466,3 +466,5 @@ considering threshold values to assess tenability of egress conditions. In fact,
 effluents have a more complex influence and may have a strong impact on evacuation
 below a critical value. This further development will make our model more realistic,
 and more robust from a numerical point of view.
+
+[BIB]
