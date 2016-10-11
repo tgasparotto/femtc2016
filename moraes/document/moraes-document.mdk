@@ -65,110 +65,19 @@ an emergency evacuation, right after the identification of the threat:
 (9) alternatives are neglected.
 
 ## Simulation
-Helbing, Farkas and Vicsek [@ helbing2000simulating] brought with an egress
+Helbing, Farkas and Vicsek [@helbing2000simulating] brought with an egress
 simulation model. In an emergency, every individual should aim the exit,
 following a straight path in a desired speed. If those ahead are not at 
 the same speed, they will be underwent by those behind, raising the crowd pressure.
 
-Each individual is represented by a circle which diameter varies from
+All simulation parameters were default, except those now described. Size
+of door and room's area were configured to match the experiment. 
+Data taken whas smoke speed as 0.5m/s. Each individual is represented by a circle which diameter varies from
 42.5cm to 52.5cm. The forces applied by and on objects are physical and
 socio-psychological. The latter is related to people aversion people's 
 cluster aversion to crowding. Physical forces are the reaction to
 compression and friction, either among people or between individual and 
-wall. Table xXXXX brings all set up applied on the simulations
-
-
-~ TableFigure { #tab-sim; caption: "Simulation parameters."; .wide }
-
-         
-
-
-| description       | simbol | value | unity  ||
-|                   |        |       |        ||
-|                   |        |       |        ||
-|:------------------|:------:|:-----:|:-------||
-|body mass          | m      | 80.0  | kg     ||
-|time to react      |&tau;~i~|0.5    |s       ||
-|psychological force| A~1~   |       |    |    |
-|                   |        |       |    |    |
-|                   |        |       |    |    |
-|                   |        |       |    |    |
-|                   |        |       |    |    |
-|-------------------|--------|-------|        ||
-~
-
-
-
-descrição
-símbolo
-valor
-unidade
-massa 
-m
-80,0
-kg
-tempo de reação
-τi
-0,5
-s
-amplitude de fpsic
-Ai
-25
-N
-constante de espaço de fpsic
-Bi
-0,08
-m
-constante
-k
-1,2 105
-kg.s−2
-constante de fricção
-κ
-3,0 103
-kg.m−1s−1
-largura do indivíduo
-2 ri
-0,5
-m
-velocidade desejada
-v0i
-5,0
-m/s
-velocidade da fumaça
-VSmoke
-0,5
-m/s
-lotação
-N0
-variável
-
-largura da saída
-l
-variável
-m
-largura da parede
-lp
-0,15
-m
-
-Fonte: configuração das simulações de Helbing, Farkas e Vicsek (2000)
-
-
-
-
-
-The author de
-
-
-
-
-
-
-
-
-
-
+wall. 
 
 ## EXPERIMENT { #sec-experiment}
 The egress experiment aims to verify the influence of overcrowd on the 
@@ -264,9 +173,9 @@ Table [#tab-tempo] presents the egress time and mean flow from experiments analy
 |----------------|---------|------------|
 ~
 
-As the crowd initial density rises, the egress flow had diminishes. 
-However, the most crowded experiment presented a higher flow comparing
-to the previous experiment. Checking out the video camera aiming the 
+As the crowd initial density rises, the egress flow diminishes. 
+However, the most crowded experiment (280) presented a higher flow comparing
+to the previous experiment (210). Checking out the video camera aiming the 
 crowd's back (V1), it was verified that people had not pressed for 
 escape as they should. Participants perceived that the more they press 
 those ahead, longer will wait inside the building. Figure [#graf-35th] presents
@@ -282,12 +191,7 @@ The dark blue curve is maintain a near constant slope, representing that at the
 lowest crowd density there were no blockages. Either the purple or the light
 blue curve, presents a sharp slope (at 8th and 29th individual, respectively) 
 which is a graphical representation of a door blockage. Another way to see the blockages is through the time void between two 
-egresses, which is presented in Figures [#graf-70] and [#graf-210].
-
-~ Figure { #graf-70; caption: "Time void between egresses for 70 individuals experiment."}
-![70_void]
-~
-[70_void]: images/70_void.png "70_void" { width:auto; max-width:90% }
+egresses, which is presented in Figures [#graf-210].
 
 ~ Figure { #graf-210; caption: "Time void between egresses for 210 individuals experiment."}
 ![210_void]
@@ -296,9 +200,10 @@ egresses, which is presented in Figures [#graf-70] and [#graf-210].
 
 On Figure [#graf-210] the graphic shows eight times the one second intervals when
 none individual had gotten out. That means, people were right in front
-of the door, striving to egress but blocking one against other. Even less populated environment
-can develop blockages longer than one second, as it is seemed right before
-the escape of the 23th individual on Figure [#graf-70].
+of the door, striving to egress but blocking one against other. By instance, right before the 37th 
+individual to exit, the egress flow stopped during more than 3.5 seconds.
+
+
 
 # CONCLUSION
 
