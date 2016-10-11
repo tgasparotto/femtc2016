@@ -279,14 +279,14 @@ deduce that the time spent to perform the simulations is proportional
 to the number of simulations (simulations are achieved in a sequentially way). So for all
 these reasons, 1,000 simulations seem to be sufficient in the case studied here.
 
-In conclusion, the application of statistical analysis method evaluates quantitatively
-the number of simulations that seems most relevant to carry out a study.
+In conclusion, application of statistical analysis method evaluates quantitatively
+ number of simulations that seems most relevant to carry out a study.
 
 
 ~ Figure { #fig5_3; caption:"Width of the confidence interval according to the number of simulations";  page-align:forcehere}
 ![fig5_3]
 ~
-[fig5_3]: images/fig5_3.PNG "fig5_3" { width:auto; max-width:70% }
+[fig5_3]: images/fig5_3.PNG "fig5_3" { width:auto; max-width:60% }
 
 &pagebreak;
 
@@ -322,7 +322,6 @@ the occupants which has a direct influence on the RSET.
 | Population density person/m² | [0.1&nbsp;;&nbsp;1.2]   | [1.2&nbsp;;&nbsp;3.1]   | [3.1&nbsp;;&nbsp;3.8]   |
 | Average waiting time s       | 2.7                     | 13.5                    | 23.5                    |
 | Average speed m/s            | 0.8                     | 0.3                     | 0.2                     |
-|                              |                         |                         |                         |
 ~
 
 
@@ -403,14 +402,14 @@ have an influence on the RSET.
 ~ Figure { #fig6_1; caption:"Distribution function for 1,000 draws and lower and upper bounds of the confidence interval under the scheme 1 (test case n°1)";  page-align:forcehere}
 ![fig6_1]
 ~
-[fig6_1]: images/fig6_1.PNG "fig6_1" { width:auto; max-width:65% }
+[fig6_1]: images/fig6_1.PNG "fig6_1" { width:auto; max-width:75% }
 
 
 
 ~ Figure { #fig6_2; caption:"Distribution function for 1,000 draws and lower and upper bounds of the confidence interval under the scheme 2 (test case n°1)";  page-align:forcehere}
 ![fig6_2]
 ~
-[fig6_2]: images/fig6_2.PNG "fig6_2" { width:auto; max-width:65% }
+[fig6_2]: images/fig6_2.PNG "fig6_2" { width:auto; max-width:75% }
 
 &pagebreak;
 
@@ -487,14 +486,12 @@ logical given the low variability of this one.
 |      | 1      | [31.0&nbsp;;&nbsp;32.0] |1.0       | [29.2&nbsp;;&nbsp;32.0] | 2.8         |9.2                |
 |2     | 2      | [58.8&nbsp;;&nbsp;58.9] | 0.1      | [56.0&nbsp;;&nbsp;58.9] | 2.9         |5.1                |
 |      | 3      | [79.3&nbsp;;&nbsp;79.8] | 0.5      | [75.4&nbsp;;&nbsp;79.8] | 4.4         |5.6                |
-|      |        |                         |          |                         |             |                   |
-|      |        |                         |          |                         |             |                   |
 ~
 
 ~ Figure { #fig6_5; caption:"Comparison of the width of the confidence interval for the 3 schemes between test cases n°1 and n°2";  page-align:forcehere}
 ![fig6_5]
 ~
-[fig6_5]: images/fig6_5.PNG "fig6_5" { width:auto; max-width:80% }
+[fig6_5]: images/fig6_5.PNG "fig6_5" { width:auto; max-width:70% }
 
 ## Test case n°3
 For this third test case we take again the values by default of the software
@@ -504,8 +501,8 @@ the position of the people. We make 1,000 times each of these 3 simulations.
 In a synthetic way the table [#table-8] presents I~p95%~, L~Ip95%~, I~p5%-95%~, L~Ip5-95%~ and L~Ip5%-95%~/q~50%~
 for three simulations and compares them
 to those of the test case n°1. The widths of interval are included
-in figure [#fig6_6]. We deduct from it that the position has more influence on
-the low and the average densities of population than on a strong density
+in figure [#fig6_6]. We deduct from it that position has more influence on
+the low and average densities of population than on a strong density
 what is in accordance with what we could wait.
 
 ~ TableFigure { #table-8; caption: "Synthesis of the results obtained for the test case n°3 and comparison with those from n°1"; .wide ; page-align:forcehere}
@@ -522,7 +519,6 @@ what is in accordance with what we could wait.
 |      | 1      | [33.3&nbsp;;&nbsp;33.6] |0.3       | [29.6&nbsp;;&nbsp;33.6] | 4.0         |13.0               |
 |3     | 2      | [61.4&nbsp;;&nbsp;62.1] | 0.7      | [55.7&nbsp;;&nbsp;62.1] | 6.4         |11.0               |
 |      | 3      | [79.8&nbsp;;&nbsp;80.2] | 0.4      | [75.2&nbsp;;&nbsp;80.2] | 5.0         |6.4                |
-|      |        |                         |          |                         |             |                   |
 ~
 
 &pagebreak;
@@ -562,7 +558,6 @@ were drawn.
 |      | 1      | [36.9&nbsp;;&nbsp;37.8] |0.9       | [33.9&nbsp;;&nbsp;37.8] | 3.9         |11.0               |
 |4     | 2      | [61.4&nbsp;;&nbsp;62.4] | 1.0      | [50.9&nbsp;;&nbsp;62.4] | 11.5        |20.7               |
 |      | 3      | [82.3&nbsp;;&nbsp;83.1] | 0.8      | [74.3&nbsp;;&nbsp;83.1] | 8.8         |11.3               |
-|      |        |                         |          |                         |             |                   |
 ~
 
 ~ Figure { #fig6_7; caption:"Comparison of the width of the confidence interval for the 3 schemes between test cases n°3 and n°4";  page-align:forcehere}
@@ -602,13 +597,13 @@ Table [#table-10] summarizes in a quantitative way the influences of different p
 | Position&nbsp;of&nbsp;the&nbsp;occupant | Fixed or random                                 | Important             |
 | Conflict&nbsp;resolution&nbsp;time      | from 0.8 s to 1.5 s or 1.15 s                   | Negligeable           |
 | Response time                           | from 0 s to 30 s or 15 s                        | Important             |
-|                                         |                                                 |                       |
-|                                         |                                                 |                       |
 ~
 
 Of course, the results obtained in this study are preliminary results with vocation of illustration.
 They need to be extended to more complex geometries and most important parameters dispersions
 and non uniforms.
+
+&pagebreak;
 
 # CONCLUSION { #sec-conclusion }
 
