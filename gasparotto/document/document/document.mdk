@@ -89,10 +89,10 @@ considering a simple test case extracted from literature leads to promising resu
 
 The model presented here relies on a macroscopic approach, in which people are 
 assimiled to their people density. These types of models, based on partial differential 
-equations solved in a continuous medium, have been studied since the 1960's with the 
-emergence of first vehicular traffic models. The application of these models inspired 
+equations solved in a continuous medium, have been studied since the 1950's with the 
+emergence of first vehicular traffic models [@lighthill]. The application of these models inspired 
 from fluid mechanics to people motion modelling is more recent and was initiated 
-with Hughes. In these studies, motion of people is described with the mass 
+with Hughes [@hughes]. In these studies, motion of people is described with the mass 
 continuity equation, with some additional hypothesis in order to integrate human 
 specificities and simple features of human behavior. Hughes' model was the source of
 further developments and mathematical studies. We can notice that macroscopic models 
@@ -123,11 +123,11 @@ Mathematically, a balance is written for the time- and space-varying people dens
 in a pre-calculated velocity field:\
 
 ~ Equation {#eq1}
-\frac{\partial \rho}{\partial t}+\nabla (\rho \overrightarrow{v})  &= 0
+\frac{\partial \rho}{\partial t}+\nabla (\rho \overrightarrow{v})=0
 ~
 
 ~ Equation {#eq2}
-\overrightarrow{v} &= P \overrightarrow{V}
+\overrightarrow{v}=P \overrightarrow{V}
 ~
 
 where $\overrightarrow{v}$ is the effective transport velocity of people density 
@@ -310,14 +310,14 @@ and the start for evacuation is given by a sound signal.
 
 ### First step: identification of walking speed and reaction time
 The aim of this preliminary step is to determine, for this particular experimental 
-onfiguration, the average free walking speed and reaction time of the 10 members 
+configuration, the average free walking speed and reaction time of the 10 members 
 of the population. 100 evacuation tests were carried out with a single person to 
 obtain exit rate (percentage of the population who left the room) over time (figure [#identification]). 
 
 ~ Figure { #identification; caption:"Identification of free walking speed and reaction time"}
-![#identification]
+![identification]
 ~
-[identification]: images/identification.png "identification" { width:auto; max-width:20% }
+[identification]: images/identification.png "identification" { width:auto; max-width:70% }
 
 The analytical expression of this exit rate allowed the identification in a least 
 square sense ([#vitesse],[#reaction]) of mean preferred walking speed V0 and mean reaction 
@@ -374,9 +374,9 @@ case are presented in Table [#characteristics].
 +------------------------------|--------------------------+------------------------------------------------------------------+
 | Reaction time                | 0 s                      | 0 s                                                              |
 +------------------------------+--------------------------+------------------------------------------------------------------+
-| Critical flowrate            | 1.1 $Pers.s^{-1}.m^{-1}$ | undefined                                                        |
+| Critical flowrate            | 1.1 $s^{-1}.m^{-1}$      | undefined                                                        |
 +------------------------------+--------------------------+------------------------------------------------------------------+
-| Critical density             | 5.4 $Pers.m^{-2}$        | undefined                                                        |
+| Critical density             | 5.4 $m^{-2}$              | undefined                                                        |
 +------------------------------+--------------------------+------------------------------------------------------------------+
 | Number of simulations        | 1                        | variable                                                         |
 |------------------------------|--------------------------|------------------------------------------------------------------|
@@ -389,11 +389,11 @@ tools.
 +--------------------------------+---------------------+
 | Code/model                     | Evacuation time (s) |
 +:------------------------------:+:-------------------:+
-| Evac                           | 240.8               |
-| Pathfinder (Steering mode)     | 196.7 - 199         |
-| Pathfinder (SFPE mode)         | 264.7 - 275.6       |
-| Pathfinder (Steering+SFPE mode)| 273.2 - 283.2       |
-| Zhang's model                  | 251 - 252           |
+| Evac [@FDSEvac]                           | 240.8               |
+| Pathfinder (Steering mode) [@thunderhead]    | 196.7 - 199         |
+| Pathfinder (SFPE mode) [@thunderhead]        | 264.7 - 275.6       |
+| Pathfinder (Steering+SFPE mode) [@thunderhead] | 273.2 - 283.2       |
+| Zhang's model [@zhang]                 | 251 - 252           |
 | PedGo 2.5.0.7                  | 179                 |
 | MARCOE PAULO                   | 228                 |
 |--------------------------------|---------------------|
@@ -408,40 +408,41 @@ used in the different codes makes interpretation of these deviations particularl
 
 ## Comparison case
 The geometry of our study case is the one adopted in Test 10 extracted from the 
-Guidelines of IMO [@IMO] (figure 5). It consists in a group of open boat cabins with 
+Guidelines of IMO [@IMO] (figure [#test10]). It consists in a group of open boat cabins with 
 two exits. One of the cabins contains a fire source whose nominal heat release 
 rate is 1 MW. It is assumed that the heat release rate is governed by a medium 
 growth according to NFPA 204 standard. Fire-related data (extinction coefficient, 
 temperature, thermal flux) are extracted from FDS at 1.8 meter high and are updated 
 every 5 seconds. A population of 23 persons is considered with uniform 
-characteristics (preferred walking speed of 1.25 m.s-1 and reaction/pre-movement 
+characteristics (preferred walking speed of 1.25 $m.s^{-1}$ and reaction/pre-movement 
 time of 30 s).
 
 ## Numerical results
 Evacuation process is simulated with our macroscopic model, and exit rate over 
 time is compared with the one obtained by a statistical post-processing of 30 
-simulations conducted with FDS6+Evac (figure [#test10]). Table [#intermediate] presents intermediate 
-evacuation times $t_{n}$calculated with both codes ($t_{n}$ is the time that n % of the 
-initial population is outside).
+simulations conducted with FDS6+Evac (figure [#test10]). 
 
 ~ Figure { #test10; caption:"Comparison between our model and EVAC on a simple scenario"}
 ![test10]
 ~
 [test10]: images/test10.png "test10" { width:auto; max-width:90% }
 
+Table [#intermediate] presents intermediate 
+evacuation times $t_{n}$calculated with both codes ($t_{n}$ is the time that n % of the 
+initial population is outside).
 
 ~ TableFigure { #intermediate; caption: "intermediate egress times"}
-+------------+----------+---------------+
-|            | EVAC     | MARCOE PAULO  |
-+:----------:+:--------:+:-------------:+
-| $t_{50}$   | 40.1 s   | 38.4 s        |
-+------------|----------|---------------+
-| $t_{75}$   | 43.2 s   | 41.0 s        |
-+------------+----------+---------------+
-| $t_{90}$   | 45.7 s   | 43.1 s        |
-+------------|----------+---------------+
-| $t_{95}$   | 47.2 s   | 44.1 s        |
-|------------|----------|---------------|
++---------------+----------+---------------+
+|               | EVAC     | MARCOE PAULO  |
++:--------------+----------+:-------------:+
+| $t_{50}$      | 40.1 s   | 38.4 s        |
++---------------|----------|---------------+
+| $t_{75}$      | 43.2 s   | 41.0 s        |
++---------------+----------+---------------+
+| $t_{90}$      | 45.7 s   | 43.1 s        |
++---------------|----------+---------------+
+| $t_{95}$      | 47.2 s   | 44.1 s        |
+|---------------|----------|---------------|
 ~
 
 These numerical results show that evacuation rates over time have a similar 
