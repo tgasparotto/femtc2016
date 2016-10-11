@@ -1,7 +1,7 @@
 [INCLUDE=style/lncs]
 Title         : A UK EVACUATION CASE STUDY USING PATHFINDER QUESTIONS THE SUITABILITY OF FIRE SAFETY GUIDANCE
 
-Author        : Stewart Brown
+Author        : Stewart Brown BSc (Hons) Dip Stat FIFireE
 Affiliation   : University of South Wales
 Email         : stewart@smokeplume.co.uk
 
@@ -37,48 +37,55 @@ Pathfinder can give an answer to this apparent conundrum and can clearly depict 
 
 # STAIRCASE SIZING { #sec-intro }
 In the UK, staircases other than open ‘accommodation’ staircases are usually designed with the objective of allowing everyone on a floor above ground to evacuate to a place of relative safety within them in 2 and a half minutes of the alarm being raised.  
+
 Therefore, it is not just the flow rate down a staircase that is taken into account when considering the relationship between means of escape and the widths of the staircases but also the capacity of the staircase to accommodate people during their escape.
+
 As soon as the last person steps off the fire floor and into a protected staircase, shutting the door behind them, everyone from that floor has bought themselves at least 30 minutes in which to further their escape and the floor is deemed to have been evacuated.
-
-
-
-(You are encouraged to use the [Madoko.net Editor][editor] while using
-the [Madoko Reference Manual][reference-manual] to edit/commit your
-documents into the 'authoring' branch of the [femtc2016] GitHub repository. 
-More information about this method of contribution will be covered below.
-
-Text styling, links, sub- and super-script, footnotes and other topics
-are covered in section [Syntax: Inline
-elements](http://research.microsoft.com/en-us/um/people/daan/madoko/doc/reference.html#sec-syntax--inline-elements)
-of the manual.
-
-Headings, Figures and Tables, Lists, Code Blocks, Mathematics, etc. are
-covered in section [Syntax: Block
-elements](http://research.microsoft.com/en-us/um/people/daan/madoko/doc/reference.html#sec-syntax--block-elements)
-of the manual.
-
-The target length for submitted and invited papers is about eight pages.
-This length includes all figures and tables. However, because the
-Proceedings will not be printed on paper, there is no maximum limit on
-the number of pages. You are free to exceed the target length of eight
-pages.
-
-Please watch this short YouTube Video for a tutorial on how to use the system as intended.)
 
 # THE STARTING POINT
 With that in mind, a fire risk assessor recently inspected a 7 floor (i.e. ground floor and 6 upper floors) office block in London and was concerned about the number of people in the building.  He measured the two protected staircases, looked up their capacities in the two main UK guidance documents (Approved Document B and British Standard 9999) and found that, according to both guidance documents, the stairs were not wide enough for the population of the upper floors.  The building used a ‘simultaneous’ evacuation protocol where everyone in the building evacuated at the same time.
-The least onerous of the guides (BS 9999) said that the population of the upper floors should be no more than 427 for the widths of the staircases and the population of the upper floors was in fact 480.  This worked out at about 9 people per floor over-occupancy.  The building was multi-tenanted and the fire risk assessor was reluctant to tell all the various occupiers of the building that they should each lose a small number of people from their workforce, so he came seeking advice. 
+
+The least onerous of the guides (BS 9999) recommends that the population of the upper floors should be no more than 427 for the widths of the staircases and the population of the upper floors was in fact 480.  This worked out at about 9 people per floor over-occupancy.  The building was multi-tenanted and the fire risk assessor was reluctant to tell all the various occupiers of the building that they should each lose a small number of people from their workforce, so he came seeking advice. 
+
+~ Figure { #fig-xxx; caption:"A simple section of the building showing the two staircases and the populations on each floor"}
+![Bldg section 1]
+~
+
+[Bldg section 1]: images/Bldg-section-1.JPG "Bldg section 1" { width:auto; max-width:90% }
 
 # THE OBSERVED EVACUATION DRILL
 With the population of the building only being about 10% over the recommended level we wanted more certainty that a problem did actually exist so it was decided to hold an evacuation drill and to time how long it took to evacuate each of the floors.
-The drill was held on a day when the office was near full capacity.  We were interested in whether or not the staircases were large enough so we eliminated the variable of pre-movement time from the observations by telling everyone that there would be a drill at a certain time and by instructing them to drop whatever they were doing immediately and make their way out of the building in the usual orderly manner.  This they did.
-As previously stated, there were two protected staircases but these staircases were not protected by lobbies.  That is, there was only a single door between the risk area on each floor and the staircase.  This is allowed in the UK if a building has no floors more than 18m above the ground.  Where staircases do not have lobby protection UK codes require that one of the staircases is discounted for means of escape purposes (assuming that it has been lost due to smoke or fire ingress).  More of this later.
-The fire wardens on each floor were equipped with stop watches so that they could time how long it took from the raising of the alarm to the moment the last person left the floor into the relative safety of the protected staircase.
-Our hope was that everyone would be in a protected staircase within about 2 and a half minutes, maybe a few seconds more, and that we could conclude that, even though the building had a few more people in it than the guides recommended, it was safe.
-These are the times it took for each floor to fully evacuate.  Note, in the UK the floor at ground level is known as the ground floor, the floor above that is the first floor, the one above that is the second floor and so on up the building.
+The drill was held on a day when the office was near full capacity.  We were interested in whether or not the staircases were large enough so we made efforts to virtually eliminate the variable of pre-movement time from the observations by telling everyone that there would be a drill at a certain time and by giving them specific instructions that they should drop whatever they were doing immediately and make their way out of the building in the usual orderly manner.  This they did.  
 
+Pre-movement times are something that can be controlled through management processes and our first aim was to examine how the building performed on a physical basis.
+
+~ Figure { #fig-xxx; caption:"A time line of the evacuation process with pre-movement times reduced to virtually zero"}
+![Times]
+~
+
+[Times]: images/Times.JPG "Times" { width:auto; max-width:90% }
+
+As previously stated, there were two protected staircases but these staircases were not protected by lobbies.  That is, there was only a single door between the risk area on each floor and the staircase.  This is allowed in the UK if a building has no floors more than 18m above the ground.  Where staircases do not have lobby protection UK codes require that one of the staircases is discounted for means of escape purposes (assuming that it has been lost due to smoke or fire ingress).  More of this later.
+
+~ Figure { #fig-xxx; caption:"The methodolgy for unlobbied stairs assumes that a fire door may fail for some reason and smoke or fire may make a staircase unusable"}
+![fire1]
+~
+
+
+[fire1]: images/fire1.JPG "fire1" { width:auto; max-width:90% }
+
+To mimic the assumed worst case scenario, where a staircase is lost to the fire, one of the staircases was deemed to be inaccessible during the evacuation and no one was allowed to use it.
+
+The fire wardens on each floor were equipped with stop watches so that they could time how long it took from the raising of the alarm to the moment the last person left the floor into the relative safety of the protected staircase.
+
+
+Our hope was that everyone would be in a protected staircase within about 2 and a half minutes, maybe a few seconds more, and that we could conclude that, even though the building had a few more people in it than the guides recommended, it was safe.
 
 Table [#table-observedtimes] shows the observed evacuation times for each floor.
+
+~ Note
+In the UK the floor at ground level is known as the ground floor, the floor above that is the first floor, the one above that is the second floor and so on up the building.
+~
 
 ~ TableFigure { #table-observedtimes; caption: "Observed evacuation times for each floor"; .narrow }
 |Floor   |   |   |Time for the last                 |
@@ -96,19 +103,31 @@ Table [#table-observedtimes] shows the observed evacuation times for each floor.
 
 
 The people on the ground floor evacuated independently of the staircases and did not figure in this analysis.
+
 The third floor evacuated reasonably quickly because it had a low number of people on it compared to the other floors.  In the debrief it was reported that everyone evacuated as promptly as they physically could and that the delays were entirely due to the fact that the staircase was jammed full of people.
-The conclusion of the exercise was that the building was not safe and some remedial works were undertaken to lobby the staircases.
+
+The conclusion of the exercise was that the building was not safe and some remedial works were undertaken to lobby the staircases to make them more reliable and to obviate the need to discount one when analysing means of escape.
 
 # THE REMAINING QUESTION
 
 So the building was made safe but a question remained.  The time it took to evacuate some of the upper floors were so long that it seemed apparent that if a few people had been removed from each floor to make the building comply with BS 9999 there would have been little difference to the time it took to evacuate each floor.  This means that a code compliant building might miss by a long way the objectives that the code is meant to achieve.
+
 This is where Pathfinder enters the story.  It would not have been reasonable to undertake a large number of evacuation drills in a real building so Pathfinder gave a route by which evacuation outcomes could be explored.
 
 # REPRODUCING THE EVACUATION IN PATHFINDER
 
-The observed evacuation of the office building was modelled using Pathfinder.  At first, in the model, it was found that the longest evacuation times were on the lower floors whereas in reality the longest evacuation times should have been on the upper floors.  This was because the model, by default, gave a degree of priority to those people already in the staircase which made it more difficult for people to leave the lower floors.  The real evacuation had the longest wait times on the upper floors and this meant that people gave more priority to those people entering the staircase rather than those already in the staircase.
+The observed evacuation of the office building was modeled using Pathfinder.  At first, in the model, it was found that the longest evacuation times were on the lower floors whereas in reality the longest evacuation times had been observed on the higher floors.  This was because the model, by default, gave a degree of priority to those people already in the staircase which made it more difficult for people to leave the lower floors.  The real evacuation had the longest wait times on the higher floors and this meant that real people gave more priority to those people entering the staircase rather than those already in the staircase.
+
+~ Figure { #fig-xxx; caption:"The Pathfinder model just prior to the commencement of the evacuation."}
+![Model1]
+~
+
+[Model1]: images/Model1.JPG "Model1" { width:auto; max-width:90% }
+
 By increasing the priority of a number of individuals on the higher floors the outcomes of the model were made to replicate the observed evacuation times for each of the floors.  To give more robustness to the analysis, it was felt desirable to have a number of runs of the model with the populations on each floor redistributed around the space. 
+
 Moving the population around revealed that even small changes in the locations of a few individuals could have an apparently chaotic effect on the evacuation times for each floor.  But the chaos did have boundaries and a bounded distribution of results emerged.  The priorities of individuals and speeds in the staircase were adjusted so that the mean of the distribution of results was as close as possible to the observed drill.
+
 It is appreciated that the observed drill was one result that belongs to a distribution of results that could lie in either direction with a variance that is difficult to determine but this analysis could only be done on the basis of the information that was available and so matching the mean of the Pathfinder results to the observed results was felt to be reasonable.
 
 # ADJUSTING THE MODEL FOR CODE COMPLIANCE
@@ -117,7 +136,7 @@ The objective of this exercise was to investigate expected evacuation times in a
 So, the model was run again a number of times, with redistributed populations each time, to see how a code compliant building would perform.
 Remembering that the objective evacuation time for each floor is approximately 2 and a half minutes, these are the evacuation times for each floor.
 
-Table [#table-modelledtimes] shows the modelled evacuation times for each floor when the building complies with the maximum BS 9999 recommended number of people.
+Table [#table-modelledtimes] shows the modeled evacuation times for each floor when the building complies with the maximum BS 9999 recommended number of people.
 
 
 ~ TableFigure { #table-modelledtimes; caption: "Modelled evacuation times for each floor in the code compliant building"; .narrow }
@@ -149,7 +168,7 @@ There are a number of possible answers.  The two main ones are:
 The code that the design of the model used to determine the population of the upper floors was BS 9999 which is a new code and has only been adopted in the last few years.  All previous offices in the UK, virtually all the existing ones, were built to Approved Document B (ADB) code which would have recommended a maximum population of 350 people on the upper floors.
 When the population on the upper floors in the model conformed to ADB (350) the results for each floor were as follows.
 
-Table [#table-adbtimes] shows the modelled evacuation times for each floor when the building complies with the maximum ADB recommended number of people.
+Table [#table-adbtimes] shows the modeled evacuation times for each floor when the building complies with the maximum ADB recommended number of people.
 
 
 ~ TableFigure { #table-adbtimes; caption: "Modelled evacuation times for each floor in the ADB compliant building"; .narrow }
@@ -171,13 +190,13 @@ Having said that, the rationale behind the staircase recommendations in BS 9999 
 
 ## Guidance documents’ approach to staircases may be invalid
 
-As mentioned earlier, if stairs are un-lobbied then, in adopting the worst case scenario, it is assumed that fire and/or smoke may enter one of the staircases and render it unusable by the whole population of the building.  This might be a bit onerous.  But it is what was modelled using Pathfinder, the whole population of the upper floors had to go down just one of the two staircases due to it being assumed that the other one was not usable.
+As mentioned earlier, if stairs are un-lobbied then, in adopting the worst case scenario, it is assumed that fire and/or smoke may enter one of the staircases and render it unusable by the whole population of the building.  This might be a bit onerous.  But it is what was modeled using Pathfinder, the whole population of the upper floors had to go down just one of the two staircases due to it being assumed that the other one was not usable.
 Thinking back to the evacuation times of the building that started this investigation, if the fire had been on one of the lower floors then there is a chance that a door to a staircase might have been left open or failed in some other way and that smoke filled that staircase to make it unavailable for everyone during the evacuation.  But the lower floors had lower evacuation times and people on them would not have had to wait nearly 7 minutes to enter the staircase.  The people on the higher floors would have been subject to the long delays to enter the staircase but it would not have mattered because the fire was not on their floor.
-If the fire had been on one of the higher floors where there were long delays then it is unlikely that smoke entering the staircase at this level would have stopped people using the staircase further down the building.  This would have taken pressure off the single staircase and allowed people to enter it much more quickly.  This situation was modelled using Pathfinder and it was found that the longest it took to evacuate any of the floors was 1 minute 50 seconds on the top floor.
+If the fire had been on one of the higher floors where there were long delays then it is unlikely that smoke entering the staircase at this level would have stopped people using the staircase further down the building.  This would have taken pressure off the single staircase and allowed people to enter it much more quickly.  This situation was modeled using Pathfinder and it was found that the longest it took to evacuate any of the floors was 1 minute 50 seconds on the top floor.
 
 # CONCLUSION
 
-There are many factors at play here and this very limited investigation, undertaken merely out of curiosity, cannot give comprehensive answers as to why the test of time reveals that these buildings are generally safe whilst the known objectives of the guidance documents are shown to be unachievable in some cases.  
+There are many factors at play here and this very limited investigation, undertaken primarily out of curiosity, cannot give comprehensive answers as to why the test of time reveals that these buildings are generally safe whilst the known objectives of the guidance documents are shown to be unachievable in some cases.  
 It is hoped that this investigation highlights some of the anomalies in fire safety assumptions and methodologies and contributes to discussions of how best fire safety problems might be tackled in the safest and most cost effective manner.
 
 ## Summary of points:
