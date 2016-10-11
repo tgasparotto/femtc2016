@@ -246,29 +246,20 @@ and simulation. The egress time is slightly lower at simulation, but the curve s
 
 ## Checking the CBMSC's fire safety code
 
-As stated before, CBMSC lauched its new fire safety code right after the Kiss tragedy.
-For nightclubs and similars, the allowable public is the double of room area. That means, 
+As stated before, CBMSC launched its new fire safety code right after the Kiss tragedy.
+For nightclubs and similar, the allowable public is the double of room area. That means, 
 in a 100m² place, there will be 200 individuals allowed. Specifically to the terminal exit
 door, article 65, IV, c) [@IN09], states: "room above 400m² must have at least two
 doors being one greater than 2m and others greater than 1.2m". Considering that each 
 0.55m has the escape capacity of 100 individuals per minute [@IN09], in a nightclub like
-Kiss with 615m² [@crea], would be permited 1230 individuals and the total exit width must
-be at least 6.77m. For simplicity, it was considered two possibilities: a) doors of 3.38m and half of the individuals go to each door; b) 3 doors of 2.26m width and one third of the individuals go to each door.
+Kiss with 615m² [@crea2013], would be permitted 1230 individuals and the total exit width must
+be at least 6.77m. 
 
-
-
-
-b) areas between 100m² and 400m² must have at least two doors being one greater than 2m, others 
-,  e  as  demais 
-portas complementares 
-conforme a necessidade do dimensionamento
-;
-c) com área total construída superior a 400m², deverão possuir no mínimo, duas portas 
-de  saída,  sendo  que  uma  delas  deverá  ter  a  largura  mínima  de  2m,  e  as  demais  portas 
-c
-omplementares com largura mínima de 1,20m 
-
-
+To test how would be an evacuation emergency in a room wide as Kiss with no obstacles, 
+with no lack of visibility, no great physical variabilities among individuals under new
+CBMSC's fire safety code, two possibilities for doors were considered: a) 2 doors of 3.38m
+and half of the individuals go to each door; b) 3 doors of 2.26m width and one third of the
+individuals go to each door.
 
 
 # CONCLUSION
