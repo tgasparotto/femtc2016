@@ -205,6 +205,52 @@ individual to exit, the egress flow stopped during more than 3.5 seconds.
 
 
 
+~ Begin Figure { #fig-expSim; caption:"Experimental against simulation results." }
+~ Begin SubFigureRow { vertical-align: bottom }
+
+~ SubFigure { #fig-expSim35; caption:"35 individuals" }
+![exp_sim_35]
+~
+
+~ SubFigure { #fig-expSim70; caption:"70 individuals" }
+![exp_sim_70]
+~
+
+~ End SubFigureRow
+
+~ Begin SubFigureRow { vertical-align: bottom }
+
+~ SubFigure { #fig-expSim35; caption:"105 individuals" }
+![exp_sim_105]
+~
+
+~ SubFigure { #fig-expSim70; caption:"140 individuals" }
+![exp_sim_140]
+~
+
+~ End SubFigureRow
+
+~ Begin SubFigureRow { vertical-align: bottom }
+
+~ SubFigure { #fig-expSim35; caption:"175 individuals" }
+![exp_sim_175]
+~
+
+~ SubFigure { #fig-expSim70; caption:"210 individuals" }
+![exp_sim_210]
+~
+
+~ End SubFigureRow
+
+
+~ End Figure
+[exp_sim_35]: images/exp_sim_35.png "exp_sim_35" { width:auto; max-width:100% }
+[exp_sim_70]: images/exp_sim_70.png "exp_sim_70" { width:auto; max-width:100% }
+[exp_sim_105]: images/exp_sim_105.png "exp_sim_105" { width:auto; max-width:100% }
+[exp_sim_140]: images/exp_sim_140.png "exp_sim_140" { width:auto; max-width:100% }
+[exp_sim_210]: images/exp_sim_210.png "exp_sim_210" { width:auto; max-width:100% }
+[exp_sim_175]: images/exp_sim_175.png "exp_sim_175" { width:auto; max-width:100% }
+
 # CONCLUSION
 
 
