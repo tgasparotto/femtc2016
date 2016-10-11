@@ -224,7 +224,7 @@ document).
 ~ Figure { #fig5_2; caption:"Distribution function for 1,000 draws and lower and upper bounds of the confidence interval (reference test case)";  page-align:forcehere}
 ![fig5_2]
 ~
-[fig5_2]: images/fig5_2.PNG "fig5_2" { width:auto; max-width:75% }
+[fig5_2]: images/fig5_2.PNG "fig5_2" { width:auto; max-width:70% }
 
 Note that the number of draws is too low to reach the theoretical minimum
 RSET corresponding to a single occupant positioned in front of an exit. Indeed,
@@ -286,7 +286,7 @@ In conclusion, application of statistical analysis method evaluates quantitative
 ~ Figure { #fig5_3; caption:"Width of the confidence interval according to the number of simulations";  page-align:forcehere}
 ![fig5_3]
 ~
-[fig5_3]: images/fig5_3.PNG "fig5_3" { width:auto; max-width:60% }
+[fig5_3]: images/fig5_3.PNG "fig5_3" { width:auto; max-width:65% }
 
 &pagebreak;
 
