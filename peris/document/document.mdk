@@ -26,7 +26,7 @@ that the position of the fire has also an influence on the times and type
 of failure.
 ~
 
-# INTRODUCTION { #sec-intro }
+# INTRODUCTION
 The structural response of bridges against fire is an under researched
 topic not covered in current design codes in spite of its frequency and
 consequences as it is shown in Peris-Sayol et al [@PerisSayol2016]. In
@@ -61,7 +61,7 @@ steel-girder bridge against tanker with finite element models has been
 studied to see if the position of the fire influence on the times and
 type of failure.
 
-# CFD ANALYSIS { #sec-intro }
+# CFD ANALYSIS
 This section explains the parameters analyzed, the methodology used and
 the CFD model building.
 
