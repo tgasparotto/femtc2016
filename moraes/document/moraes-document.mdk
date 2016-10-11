@@ -123,11 +123,11 @@ cluster aversion to crowding. Physical forces are the reaction to compression
 and friction, either among people or between individual and wall. 
 
 # RESULTS   { #sec-results}
-The experiment results are: qualitative, by identifying arches and turbulence on videos 
-and; quantitative, regarding to egress time and flow analysis. The experimental results
-are confronted to the "Panic Package" simulation results. So that the software would be
-used to  The simulation is calibrated
-
+The experiment results are divided in: qualitative, by identifying arches and turbulence on videos 
+and representing by images; quantitative, regarding to egress time and flow analysis. Then, "Panic Package" 
+simulation is compared to those results and, once validated, the model is used to check
+how effective is the CBMSC's fire safety code regarding to the emergency exit's width and
+distribution.
 
 ## Qualitative Results { #sec-quali}
 Figure [#arch] presents a snapshot (175 person egress experiment) highlighting
@@ -153,8 +153,6 @@ at 175 person egress experiment.
 ![turbulencia]
 ~
 [turbulencia]: images/turbulencia.png "turbulencia" { width:auto; max-width:100% }
-
-
 
 ## Quantitative Results { #sec-quanti}
 In a coordinated evacuation, time to egress is directly proportional to
@@ -209,26 +207,33 @@ between two egresses, which is presented in Figures [#graf-210].
 ~
 [210_void]: images/210_void.png "210_void" { width:auto; max-width:90% }
 
-On Figure [#graf-210] the graphic shows eight times the one second intervals when
-none individual had gotten out. That means, people were right in front
-of the door, striving to egress but blocking one against other. By instance, right before
-the 37th individual to exit, the egress flow stopped during more than 3.5 seconds.
+Figure [#graf-210] presents the time lapse between each individual 
+to pass across the door. There are eight peaks over one second, representing that, during the egress, there were eight moments when the door was blocked
+longer than a minute. The greater the peak, larger the valley after. During a peak, 
+crowd pressure raises until the arch breaks and several individuals are expelled through
+the door. That is the mathematical view of what is observed in video, people were right in front of the door, striving to egress but blocking one against other, those behind giving more pressure until the blockage is broken and a stream of individuals breaks trough the door. By instance, 
+right before the 37th individual to exit, the egress flow was stopped during more than 3.5 
+seconds. 
 
 ## Verifying Simulation Model  
 
-~ Figure { #fig-expSim35; caption: "Experiment and Simulation results: 35 individuals."}
+Figure [#fig-expsim35], [#fig-expsim105] and [#fig-expsim210] presents the comparison between experiment
+and simulation. The egress time is slightly lower at simulation, but the curve slope is quite the same.
+
+
+~ Figure { #fig-expSim35; caption: "Experimental against Simulation results: 35 individuals."}
 ![exp_sim_35]
 ~
 [exp_sim_35]: images/exp_sim_35.png "exp_sim_35" { width:auto; max-width:100% }
 
 
-~ Figure { #fig-expSim105; caption: "Experiment and Simulation results: 105 individuals."}
+~ Figure { #fig-expSim105; caption: "Experimental against Simulation results: 105 individuals."}
 ![exp_sim_105]
 ~
 [exp_sim_105]: images/exp_sim_105.png "exp_sim_105" { width:auto; max-width:100% }
 
 
-~ Figure { #fig-expSim210; caption: "Experiment and Simulation results: 210 individuals."}
+~ Figure { #fig-expSim210; caption: "Experimental against Simulation: 210 individuals."}
 ![exp_sim_210]
 ~
 [exp_sim_210]: images/exp_sim_210.png "exp_sim_210" { width:auto; max-width:100% }
