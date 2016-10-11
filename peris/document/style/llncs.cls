@@ -217,7 +217,7 @@
 % \setlength\marginparwidth  {90\p@}
 \setlength{\textwidth}{433pt}
 \setlength{\oddsidemargin}{0pt}
-\setlength{\marginparwidth}{72pt) 
+\setlength{\marginparwidth}{72pt}
 
 \setlength\headsep   {16\p@}
 
