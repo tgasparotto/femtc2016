@@ -37,7 +37,7 @@ such as carrying rolling luggage or group movement, have been identified
 and researched. These scenarios provide novel uses for existing egress
 models as well as present unique challenges.
 
-This presentation will review the current capabilities of people movement
+This paper reviews the current capabilities of people movement
 models, new uses for egress models not related to fire egress, and the
 adaptations of models necessary to enable broader more robust
 simulations. [Topics will include security and ingress, dynamic signage
@@ -86,32 +86,45 @@ of all existing models nor to describe in detail all the features of
 existing models, but rather to provide an understanding of how the models
 are traditionally oriented and utilized. Detailed model-specific reviews
 may be found in the literature [find
-reference]{ background-color=yellow }
+reference]{ background-color=yellow }.
+
+in particular, the focus on exiting as the primary end goal of the analysis and each occupant
+often, some level of omniscience is presumed. (a subset of exits may be known, but open/closed conditions, potential paths and directions, etc are known)
 
 # NEW USES
 
-The target length for submitted and invited papers is about eight pages.
-This length includes all figures and tables. However, because the
-Proceedings will not be printed on paper, there is no maximum limit on
-the number of pages. You are free to exceed the target length of eight
-pages.
+## Ingress and Security
+elevator/ingress study by haavard (non-emergency elevators that discharge on more than one floor)
+steve's security stuff
+how long to get INTO a building. backups, peak times, etc
+importance of good data, not average or mfg provided (ref steve)
+image from steve report?
+end goal is not an exit!
 
-Please watch this short YouTube Video for a tutorial on how to use the system as intended.
+## Dynamic Signage and Wayfinding
 
-# MAIN HEADINGS LIKE THIS STYLE
-Main Headings are all upper case letters and underlined. In Madoko, a
-Single '#' symbol at the start of the line, followed by a space and then
-the heading text.
+background: exit signs are visual clutter "studies have shown..." show
+still/results of mike's train station example 
+is exodus sign model only used to draw attention to neglected doors?
+modeling: ideally, need a
+way for targets/paths to change dynamically in response to inputs (e.g.,
+dynamic signage, police redirection)
+modeling: is there a way to make occupants not omniscient (i.e., know of an exit but not that it's closed)
+modeling; interior exit knowledge/familiarity (i.e. GoTo interior doors)
 
-## Subheadings Like This Style
-Subheadings within sections follow the same format as section titles, but
-with upper and lower case. In Madoko, a Double '#' symbol at the start of
-the line, followed by a space and then the heading text.
+E. R. Galea, H. Xie, and P. J. Lawrence, P.J., “Experimental and Survey
+Studies on the Effectiveness of Dynamic Signage Systems,” Fire Safety
+Science 11(2014): 1129–1143, doi:10.3801/IAFSS.FSS.11-1129.
 
-### Subsubheadings like this style
-Subsubheadings have no underline, and only the first letter capitalized.
-In Madoko, a Triple '#' symbol at the start of the line, followed by a
-space and then the heading text.
+## Complex Tasks and Carrying
+
+hospital, wheelchair, families, luggage
+adds complexity, creates potential cross flow
+increases size, affects speed
+w/Thunderhead permission - show demo video
+
+# SUMMARY
+
 
 # FIGURES, TABLES, AND EQUATIONS
 Original drawings and photos may be included in your paper as figures.
@@ -158,31 +171,6 @@ Table [#table-sample] shows an example full width table figure.
 |----------------|---------|---------|---------|-----------|
 ~
 
-## Equations
-Standard terminology should be used in equations. If possible, keep
-equations to one column. All equations should be numbered. A definition
-of $e$ is shown in Equation [#euler]:
-
-~ Equation { #euler }
-e = \lim_{n\to\infty} \left( 1 + \frac{1}{n} \right)^n
-~
-
-Or to use &logolatex; to align equations.
-
-~ Equation { #eq-alignment; caption:"Alignment example" }
-\begin{aligned} 
- f(x)  &= a x^2+b x +c   &   g(x)  &= d x^3 \\
- f'(x) &= 2 a x +b       &   g'(x) &= 3 d x^2
-\end{aligned}
-~
-
-# FUN CONTENT EXAMPLES
-Let's program some JavaScript:
-``` javascript
-function hello() {
-  return "hello world!"
-}
-```
 Here is a footnote[^fn] reference.
 [^fn]: This is the content of the example footnote. 
     You can continue a footnote by indenting content.
@@ -225,65 +213,8 @@ journal, volume, date, pages. There is a nice [table on
 Wikipedia](https://en.wikibooks.org/wiki/LaTeX/Bibliography_Management#BibTeX)
 that shows all of the different data fields for the BibTeX file.
 
-# PAPER DEADLINE
-Your paper, in final form, must be received by October 15th, 2016. The
-best way to edit and submit is to use the Madoko [editor] to edit your
-document in the 'authoring' branch of the GitHub [femtc2016] repository.
-If you choose to use some other document format and editing tool, PDF
-format is preferred, but ODT, DOC, or DOCX formats are acceptable. Please
-e-mail the files to [conference@thunderheadeng.com][emaillink].
 
-# PRESENTATION
-Each author must present his/her paper within the allotted time, allowing
-for some minutes of open discussion. The session chair is responsible for
-keeping authors within their time limit, in order to ensure that each
-author has enough time for their presentation. When preparing your
-presentation slides, make sure they are clear and large enough so that
-your audience can read them from as far as 80 feet away.
-
-All presentations will be made using the computer projector available in
-the conference room. We will not have overhead projectors or slide
-projectors in the meeting rooms.
-
-Your presentation, in final form, must be received by **October 15th,
-2016**. A final commit of the files to the GitHub repository is
-preferred. Once the final draft is complete and reviewed it will be
-merged into the master branch of the repository. If you decide to use
-some other tool for creating your presentation, PDF format is preferred,
-but ODP, PPT, or PPTX formats are acceptable. Please e-mail the files
-to [conference@thunderheadeng.com][emaillink].
-
-All presentations will be pre-loaded on the computers that are present.
-Please note that this approach will make it necessary for us to receive
-the presentation files prior to the conference. If you have a different
-software requirement, it should still be possible for you to attach your
-own computer to the projector if you bring it with you. This is not
-optimal, as it takes time and slows down the session.
-
-# CONFERENCE CONTENT DISTRIBUTION
-The papers and presentation materials will be made available online
-during and after the conference. In addition, the organizers are planning
-to may broadcast live presentations online during the event. The papers,
-presentations, and videos will be archived and made available on the web
-after the conference.
-
-Author(s) retain all rights to submitted material. The organizers are
-granted a non-exclusive right to copy and redistribute conference
-material submitted by the author(s).
 
 [BIB]
 
 &pagebreak;
-
-# An appendix { @h1:"A" }
-"All the same, I should like it all plain and clear," said he
-obstinately, putting on his business manner (usually reserved for people
-who tried to borrow money off him), and doing his best to appear wise and
-prudent and professional and live up to Gandalf's recommendation. "Also I
-should like to know about risks, out-of-pocket expenses, time required
-and remuneration, and so forth" -- by which he meant: "What am I going to
-get out of it? and am I going to come back alive?"
-
-# Conclusion
-If you have any questions concerning your paper and/or the Conference,
-please email us at [conference@thunderheadeng.com][emaillink].
