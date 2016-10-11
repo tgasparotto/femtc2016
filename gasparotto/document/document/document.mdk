@@ -122,11 +122,12 @@ a critical density.\
 Mathematically, a balance is written for the time- and space-varying people density 
 in a pre-calculated velocity field:\
 
-~ Equation { caption:"Alignment example" }
-\begin{aligned} 
- \frac{\partial \rho}{\partial t}+\nabla (\rho \overrightarrow{v})  &= 0 \\
- \overrightarrow{v} &= P \overrightarrow{V}
-\end{aligned}
+~ Equation {#eq1}
+\frac{\partial \rho}{\partial t}+\nabla (\rho \overrightarrow{v})  &= 0
+~
+
+~ Equation {#eq2}
+\overrightarrow{v} &= P \overrightarrow{V}
 ~
 
 where $\overrightarrow{v}$ is the effective transport velocity of people density 
@@ -194,7 +195,7 @@ velocity is the preferred walking speed $V_{0}$.
 
 ### Transport at preferred speed
 The space- and time-varying evolution of people density in the pre-calculated 
-velocity field is governed by the equation (1). The equation is solved numerically 
+velocity field is governed by the equation [#eq1]. The equation is solved numerically 
 using a finite volume method with an explicit temporal scheme. The advective part 
 of the equation is treated thanks to a QUICK scheme, which consists in a second 
 order interpolation in space and represents a good compromise between accuracy and 
@@ -218,7 +219,7 @@ chosen to receive as much density as it can to respect critical density.\
 3)	The random walk continues until the excess density is fully redistributed.\
 
 It should be noticed that this corrective part is mathematically equivalent to 
-Equation (2) and consists in its algorithmic implementation. This step is the 
+Equation [#eq2] and consists in its algorithmic implementation. This step is the 
 second part of the MARCOE algorithm.
 
 ## Integration of fire effects
@@ -311,9 +312,15 @@ and the start for evacuation is given by a sound signal.
 The aim of this preliminary step is to determine, for this particular experimental 
 onfiguration, the average free walking speed and reaction time of the 10 members 
 of the population. 100 evacuation tests were carried out with a single person to 
-obtain exit rate (percentage of the population who left the room) over time. The 
-analytical expression of this exit rate allowed the identification in a least 
-square sense (relations [#vitesse],[#reaction]) of mean preferred walking speed V0 and mean reaction 
+obtain exit rate (percentage of the population who left the room) over time (figure [#identification]). 
+
+~ Figure { #identification; caption:"Identification of free walking speed and reaction time"}
+![#identification]
+~
+[identification]: images/identification.png "identification" { width:auto; max-width:20% }
+
+The analytical expression of this exit rate allowed the identification in a least 
+square sense ([#vitesse],[#reaction]) of mean preferred walking speed V0 and mean reaction 
 time of the population:
 
 ~ Equation { #vitesse }
@@ -342,10 +349,10 @@ they were alone (blue). These results provide two main insights:\
 similar to those obtained by a statistical treatment of 20 particular random 
 scenarios.
 
-~ Figure { #validation; caption:"Identification of free walking speed and reaction time (left) and validation with 10 persons (right)"}
+~ Figure { #validation; caption:"Validation with 10 persons"}
 ![validation]
 ~
-[validation]: images/validation.png "validation" { width:auto; max-width:90% }
+[validation]: images/validation.png "validation" { width:auto; max-width:70% }
 
 ## Comparison with other codes
 
