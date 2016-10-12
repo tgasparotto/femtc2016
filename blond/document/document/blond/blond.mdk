@@ -85,7 +85,6 @@ environment conditions. By a simple chemical balance its is easy to determine th
 C_{3}H_{8}+5 O_{2}+5\cdot3.76N_{2}=3CO_{2}+4H_{2}O+5\cdot3.76N_{2}
 ~
 
-
 ~ Tablefigure {#Malecular-weight; caption:"Molecular weight, and mass ratio between propane and combustion products"}
 
 |----------|------------------|--------------------|----------------------|
@@ -130,12 +129,13 @@ The definition of the initial temperature by means of the adiabatic temperatures
 ~ Begin Figure { #fig-flame-temp; caption:"Comparison between two simulations with different powers. On the left the a model with a HRR of 100 kW and on the rigth the model with a HRR of 1.200 kW. It can be appreciated the different length of the hot region, which represents the equivalent flame length"}
 
 ~ Begin SubFigureRow { vertical-align: bottom }
-~ SubFigure { #fig-subfig2; caption:"100 kW"; }
+~ SubFigure { #fig-subfig2; caption:"100 kW"}
+
 ![Temperature 0.1 MW]
+~
+~ SubFigure { #fig-subfig2; caption:"1.200 kW"}
 
 [Temperature 0.1 MW]: images/Temperature-0.1-MW.JPG "Temperature 0.1 MW" { width:auto; max-width:90% }
-~
-~ SubFigure { #fig-subfig2; caption:"1.200 kW"; }
 
 ![Temperature 1.2 MW]
 ~
@@ -144,7 +144,6 @@ The definition of the initial temperature by means of the adiabatic temperatures
 ~ End Figure
 
 [Temperature 1.2 MW]: images/Temperature-1.2-MW.JPG "Temperature 1.2 MW" { width:auto; max-width:90% }
-
 
 # Model validation
 
