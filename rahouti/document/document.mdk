@@ -1,18 +1,18 @@
 [INCLUDE=style/lncs]
-Title         : TITLE OF YOUR PAPER, IN CAPITAL LETTERS CENTERED ON PAGE, USING ONE OR MORE LINES AS NECESSARY
-Subtitle      : An optional subtitle.
+Title         : A SENSITIVITY ANALYSIS OF A HOSPITAL IN CASE OF FIRE
+Subtitle      : The impact of the percentage of people with reduced mobility and the staff to occupant's ratio
 
-Author        : First Author Name
-Affiliation   : Research institute
-Email         : you@bar.com
+Author        : Anass Rahouti
+Affiliation   : Department of Civil Engineering and Structural Mechanics, Faculty of Engineering, University of Mons
+Email         : anass.rahouti@umons.ac.be
 
-Author        : My co-author 1
-Affiliation   : Other institute
-Email         : other1@bar.com
+Author        : Selim Datoussaïd
+Affiliation   : Department of Civil Engineering and Structural Mechanics, Faculty of Engineering, University of Mons
 
-Author        : My co-author 2
-Affiliation   : Other institute
-Email         : other2@bar.com
+Author        : Ruggiero Lovreglio
+Affiliation   : Department of Civil and Environmental Engineering, University of Auckland
+
+Keywords      : Evacuation Modeling, Assisted Evacuation, Fire Safety, Hospital, FRAME.
 
 Bibliography  : references.bib
 Logo          : False
@@ -23,227 +23,502 @@ name-references : REFERENCES
 [TITLE]
 
 ~ Abstract
-Papers should follow standard technical paper format, an abstract
-followed by the more detailed presentation. The abstract should be typed
-on this area of the first page, with the presentation following after two
-lines of space.
+One of the primary objectives of fire safety is to guarantee the
+evacuation of all the occupants from a building safely. Although fire
+safety rules and regulations exist, they remain insufficient to guarantee
+the safety of all building occupants and do not prevent the dramatic
+events to be repeated. Especially in healthcare facilities, e.g.
+hospitals, care homes, etc., the evacuation procedure is more complex
+than in an ordinary building. This is due to multiple reasons such as the
+large number of patients requiring assistance to evacuate or the time
+required to prepare patients for assisted evacuation. Traditionally,
+hospitals focused on horizontal evacuation. Patients should initially be
+moved from areas of risk to safe areas. Furthermore, staff to occupant
+ratio may be low, especially at night, limiting the ability to instigate
+a rapid staff response and evacuation of occupants.
+
+Considering the limited number of studies on assisted evacuations, this
+work aims to provide a deeper insight on the modeling issues to simulate
+such an event. Based upon a preliminary risk analysis using the Fire Risk
+Assessment Method for Engineering (FRAME), the most critical floor will
+be selected and modeled using Pathfinder, an agent based evacuation
+model. Furthermore, the impact of different percentage of People with
+Reduced Mobility will be investigated. Moreover, since the number of
+staff may significantly vary in the same scenarios (e.g. during the
+night), different ratios of staff to occupant's will be studied to show
+the impact of this parameter on the evacuation process of patients.
+
+*Keywords*: Evacuation Modeling, Assisted Evacuation, Fire Safety, Hospital, FRAME
 ~
 
-[editor]: https://www.madoko.net/editor.html "Madoko.net Editor"
-[reference-manual]: http://research.microsoft.com/en-us/um/people/daan/madoko/doc/reference.html "Madoko Reference Manual"
-[femtc2016]: https://github.com/thunderheadeng/femtc2016
-[emaillink]: mailto:conference@thunderheadeng.com "conference@thunderheadeng.com"
+# INTRODUCTION
 
-# GENERAL INSTRUCTIONS { #sec-intro }
-You are encouraged to use the [Madoko.net Editor][editor] while using
-the [Madoko Reference Manual][reference-manual] to edit/commit your
-documents into the 'authoring' branch of the [femtc2016] GitHub repository. 
-More information about this method of contribution will be covered below.
+Each year, in Belgium, fire kills and costs money. In fact, in 2013,
+Belgian fire and rescue services attended over 22.733 fires including 236
+in care homes and 79 in hospitals [@1]. These fires killed 51
+people and injured over 1189 [@1]. In health care facilities,
+patients may start fires, either accidentally or deliberately,
+particularly by those who are elderly, have learning difficulties, or are
+young people with disabilities. Those who suffer from mental illness may
+be particularly prone to starting fires. In these particular buildings,
+the occupants will be a mixture of patients, staff and visitors. Staff
+can reasonably be expected to have an understanding of the layout of the
+premises (or of the part in which they work), while visitors are unlikely
+to have knowledge of alternative escape routes. Patients may have limited
+knowledge, but will generally be guided or assisted to a place of safety
+by staff or visitors. Further to this, health care facilities present a
+set of challenges from the perspective of fire safety. This is due to
+multiple reasons such as the large number of patients requiring
+assistance to evacuate or the time required to prepare patients for
+assisted evacuation. Furthermore, staff to occupant's ratio may be low,
+especially at night, limiting the ability to instigate a rapid staff
+response and evacuation of occupants.
 
-Text styling, links, sub- and super-script, footnotes and other topics
-are covered in section [Syntax: Inline
-elements](http://research.microsoft.com/en-us/um/people/daan/madoko/doc/reference.html#sec-syntax--inline-elements)
-of the manual.
+How quickly people can evacuate will depend on their level of reliance on
+staff and it will therefore be helpful to consider the various categories
+of patient dependencies: **Independent** (ambulant), the mobility of
+patients is not impaired in any way and they are able to physically leave
+the premises without the assistance of staff or, if they experience some
+mobility impairment, they are able to leave with minimal assistance from
+another person; **Dependent** (non-ambulant), all patients except those
+defined as independent or very high dependency. This category also
+includes children and mental health patients regardless of their
+independent mobility; **Very high dependency** (non-ambulant), those
+patients whose clinical treatment and/or condition create a high
+dependency on staff. This includes those in intensive care/intensive
+therapy units and operating rooms and those where evacuation would prove
+potentially life threatening. Patients being cared for in healthcare
+premises will vary considerably in terms of mobility and levels of
+awareness during a fire situation. There may be patients who exhibit
+severe mobility restriction but will have a good awareness of the
+situation, being able to co-operate with staff. Others may exhibit normal
+mobility, but their level of awareness may be such that they present
+unpredictable behaviour (including violent behaviour), which may impede
+staff in an emergency.
 
-Headings, Figures and Tables, Lists, Code Blocks, Mathematics, etc. are
-covered in section [Syntax: Block
-elements](http://research.microsoft.com/en-us/um/people/daan/madoko/doc/reference.html#sec-syntax--block-elements)
-of the manual.
+Conducting real experiments in health care environments is prohibited
+since such experiments will be really hazardous in presence of vulnerable
+people. Another alternative consists on using simulation tools. In fact,
+it is well known that evacuation models are powerful tools to study the
+evacuation process in different scenarios and
+applications [@2;@3;@4;@5;@6]. We can find several reviews [@2;@3] that
+show the capabilities and limitations of these types of models. These
+reviews show that, apart from their possibilities, it is difficult to
+apply directly the current evacuation models to the scenarios that
+involve assisted evacuations, due to the presence of vulnerable people
+who cannot evacuate by themselves (healthcare facilities, kindergartens
+and schools). However, few of them are able to simulate assisted
+evacuations. For example, the EXITT [@7] model includes two types of
+occupants, the able-bodied people and the people with reduced mobility
+(PRM) in need of assistance to evacuate the building. Decision rules
+apply only to the first type, and the latter type follows the decisions
+and movements of their attendants. The BUMMPEE [@8] model can simulate the
+evacuation of people with disabilities, and their interaction with the
+built environment. However, it is not clear whether this model can
+simulate assisted evacuations. The buildingEXODUS [@9] model includes a
+theoretical model comprising algorithms derived to represent the use of
+patient transportation devices during the evacuation process [@10]. In
+addition, there are two models that specialise in the evacuation of
+hospitals: The G-HES (Glasgow Hospital Evacuation Simulator) [@11] and the
+Assisted Evacuation Simulation System [@12]. Both models have been
+developed to consider assisted evacuations. However, they are not
+publicly available [@13].
 
-The target length for submitted and invited papers is about eight pages.
-This length includes all figures and tables. However, because the
-Proceedings will not be printed on paper, there is no maximum limit on
-the number of pages. You are free to exceed the target length of eight
-pages.
+Another alternative is the use of other existing evacuation (or general)
+models that are not explicitly designed to simulate assisted evacuations
+but they can be flexible enough to archive this goal (e.g.
+Pathfinder [@14], FDS+Evac [@15], STEPS [@16], etc.). In fact, some of them
+allow the simulation of additional behaviours, such as travel itineraries
+assigned to occupants, delays, etc. This could be used to simulate
+prescript assisted evacuation procedures.
 
-Please watch this short YouTube Video for a tutorial on how to use the system as intended.
+Only a limited number of studies have examined the assisted evacuations
+using the general models. One of the studies to do so was completed by
+Golmohammadi and Shimshak [@17] showed an analytical approximation to
+analyse the horizontal and the vertical evacuation times, considering
+three types of patients. This analytical model permits the user to
+consider the number and the category of patients and the number of the
+staff members and the availability of the elevators. Alonso [@18]
+performed an interesting study using STEPS model. She simulated the
+impact of staff to occupant's ratio on the relocation process of patients
+on a sleeping room floor in a health care facility. She highlighted the
+lack of empirical data and the limitations of using a general model for
+this kind of scenarios, and suggested future development for addressing
+the problem of simulating assisted evacuations. Ursetta et al. [@19]
+simulated the evacuation process of an Italian hospital ward in case of
+fire using Pathfinder.
 
-# MAIN HEADINGS LIKE THIS STYLE
-Main Headings are all upper case letters and underlined. In Madoko, a
-Single '#' symbol at the start of the line, followed by a space and then
-the heading text.
+Despite that the modeling of assisted evacuations is restricted, it is
+commonly agreed that it is needed to differentiate between self-reliant
+(ambulant) and incapacitated (non-ambulant) patients. Moreover, all the
+incapacitated patients have a preparation time that may depend on the
+type of their disability. For some patients, this preparation time will
+include the processes to stabilise the patient's condition (e.g.
+operating room), to disconnect the patients from equipment, to move a
+patient from the bed to a transportation device (e.g. Evac+Chair,
+stretcher, etc.), to just help them to get dressed or to gather their
+belongings. Currently, there is a lack of data related to these
+preparation times and transportation speeds. The values of these
+parameters are limited. For example, Adams and Galea [@20] present an
+experimental study to evaluate the performance of the movement devices
+used to assist PRM in high-rise building evacuations. Based on this
+experimental study, Hunt, Galea and Lawrence [@21] conducted a numerical
+study to analyse the performance of trained hospital staff using movement
+assist devices to evacuate PRM. Other studies [@22;@23] show some possible
+ranges and values for preparation times considering different types of
+patients for the sleeping areas.
 
-## Subheadings Like This Style
-Subheadings within sections follow the same format as section titles, but
-with upper and lower case. In Madoko, a Double '#' symbol at the start of
-the line, followed by a space and then the heading text.
+The study undertaken here aimed (1) to simulate prescript assisted
+evacuation using Pathfinder; (2) to evaluate the impact of different
+percentages of people with reduced mobility on the evacuation process,
+especially on the Required Safe Egress Time (RSET) – the time required by
+the occupants to leave the floor and escape to a place of reasonable
+safety; and, since the number of staff may significantly vary in the same
+scenarios (e.g. during the night), to study the effect of staff to
+patient's ratio on the evacuation process.
 
-### Subsubheadings like this style
-Subsubheadings have no underline, and only the first letter capitalized.
-In Madoko, a Triple '#' symbol at the start of the line, followed by a
-space and then the heading text.
+# METHODS
 
-# FIGURES, TABLES, AND EQUATIONS
-Original drawings and photos may be included in your paper as figures.
-Diagrams may be in color.
+The methods employed in this study were a combination of risk assessment
+and evacuation modeling techniques. The initial phase of the study was
+therefore the use of the Fire Risk Assessment Method for Engineering [@25]
+to identify the most critical floor. The layout of this floor is modeled
+within Pathfinder using a third-party (PyroSim). And finally, a number of
+patients with different individual characteristics were created and
+distributed throughout the model.
 
-Figures and tables should immediately follow first mention of them in the
-text and can be placed in one column, or in the case of wider figures,
-can cover two columns (but only at the top or bottom of the page). The
-caption should start with either the word “figure” spelled out or
-abbreviated, followed by the figure number (i.e., Figure 1 or Fig. 1).
-The figure caption should be followed by a single line of space before
-the text resumes.
+When possible, the input of the evacuation model was calibrated using
+experimental data rather than the default settings of the model. This had
+the effect of making the evacuation scenarios as realistic as possible.
 
-## Figures
-Figure [#fig-smokeview] in Section [#sec-intro] shows an image from an
-older version of Smokeview. Note that you can drag&drop images into the
-editor pane to include them in the document, and similarly with bibtex
-files, latex style files, etc.
+## FIRE RISK ASSESSMENT METHOD FOR ENGINEERING
 
-~ Figure { #fig-smokeview; caption:"Illustration of placement of figure and caption. (use the `.wide` class for wide figure)."}
-![Ex1_0]
+The Fire Risk Assessment Method for Engineering developed by De
+Smet [@25], is a comprehensive, transparent and practical calculation
+method for fire risks in buildings. It is a tool to help a fire
+protection engineer to define a sufficient and cost effective fire safety
+concept for new or existing buildings. The FRAME method calculates the
+fire risk in buildings for the property and the content, for the
+occupants and for the activities in it. The method is not suitable for
+open-air environment.
+
+Apart from its use in airports [@26], industry [@27] and cultural
+heritage buildings [@28;@29] this method has been employed mainly for
+healthcare facilities [@30;@31].
+
+## PATHFINDER
+
+Pathfinder is an agent based egress and human movement simulator. It is
+developed by Thunderhead Engineering. Its purpose is to provide an
+analytical evacuation tool that could be coupled with an external fire
+model such as FDS (Fire Dynamics Simulator) [@32] to form portion of
+hazard analysis. The occupants are represented as circles moving in a
+continuous space. It uses two different ways to model the evacuation
+process (1) and agent-based model (steering) or (2) based on the method
+of Mowrer ad Nelson (flow model) [@33]. The model considers individual
+profiles (walking speed and pre-movement times) implemented through
+distribution laws.
+
+# MODEL CASE STUDY
+
+## FLOOR LAYOUT
+
+The layout of the modeled floor is shown in Figure [#fig-layout]. As shown in this
+Figure, this floor contains 42 rooms: 14 single rooms (from 13 to 26) and
+28 double rooms (the others). This floor had three exits associated to
+the emergency staircases, two nurses' stations and some technical rooms.
+The lifts are not used during the evacuation process. The fire is
+supposed located in room 13. Therefore, the East Exit is supposed
+non-functional during the evacuation processes simulated.
+
+~ Figure {#fig-layout, caption:Layout of the 6th floor of the G bloc of the "Clinique Sainte Elisabeth"}
+![FIG_1]
 ~
-[Ex1_0]: images/Ex1_0.png "Ex1_0" { width:auto; max-width:90% }
+[FIG_1]: images/FIG_1.png "FIG_1" { width:auto; max-width:90% }
 
-~ Note
-Images larger than about 1Mb in size will be rejected by the Madoko.net server.
+## PROFILE OF THE OCCUPANTS
+
+For the simulations, we considered two types of patients: ambulant
+patients and non-ambulant patients.
+
+For ambulant patients, the movement and behaviour of each individual is
+described by several parameters such as the pre-evacuation time and the
+horizontal walking speed.
+
+For non-ambulant patients, the movement and behaviour of each patient is
+described by several parameters such as the pre-movement time, which is
+divided into two components: the waiting time – the time undertaken by
+the member(s) of staff to reach the room of the patient – and the
+preparation time – the time undertaken by the member(s) of the staff to
+move the patient to a wheelchair or to another transportation device.
+Another parameter is the transportation walking speed – the walking speed
+of the member(s) of the staff while transporting the patient to another
+place of safety or while walking with the patients.
+
+The values used for the simulations are shown in the
+Tables [#tab-pre-evac] and [#tab-prep-trans]. The waiting times are
+dependent on the scenario simulated. So, they are not explicitly
+described here.
+
+~ TableFigure {#tab-pre-evac, caption:"Pre-evacuation time [@34;@35] and horizontal walking speed [@36] for ambulant patients."}
+|--------------------------------|------|------|-------------|
+|                                | Mean |    | Range       |
++:-------------------------------+:----:+:----:+:-----------:+
+| Pre-evacuation time (s)        | 50.8 | -    | 30 – 66     |
+|--------------------------------|------|------|-------------|
+| Horizontal walking speed (m/s) | 1.00 | 0.42 | 0.10 – 1.77 |
+|--------------------------------|------|------|-------------|
+{  }
 ~
 
-## Tables
-Table [#table-sample] shows an example full width table figure.
-
-~ TableFigure { #table-sample; caption: "Modelle mit unterschiedlich geschätztem baseline hazard"; .wide }
-|                | $c(t)$                               ||||
-|                |---------|---------|---------|-----------|
-|                | (A0)    | (A1)    | (A2)    | (A3)      |
-|                | ohne    | Log     | Polynom | Stückweise|
-|                |         |         |         | konstant  |
-|:---------------|:-------:|:-------:|:-------:|:---------:|
-| Log likelihood | -6.798  | -6.733  | -6.715  | -6.686    |
-| Pseudeo $R^{2}$| 0,048   | 0,057   | 0,059   | -         |
-| AIC            | 13.615  | 13.489  | 13.456  | 13.483    |
-| BIC            | 13.711  | 13.594  | 13.580  | 14.009    |
-| N              | 105.484 | 105.484 | 105.484 | 105.484   |
-|----------------|---------|---------|---------|-----------|
+~ TableFigure {#tab-prep-trans, caption:"Preparation time and transportation walking speed for non-ambulant patients."}
+|                                                                               |||------|-----|---------|
+|                                                                               ||| Mean |   | Range   |
++:-------------------------+:-----------------+:----------------------------------+:----:+:---:+:-------:+
+| Dependent patients [@10] | Evacuation Chair | Preparation time (s)              | 32.7 | 5.3 | -       |
+|                          |                  |-----------------------------------|------|-----|---------|
+|                          |                  | Transportation walking speed (m/s)| 1.46 | 0.09| -       |
+|                          |------------------|-----------------------------------|------|-----|---------|
+|                          | Carry chair      | Preparation time (s)              | 41.5 | 7.9 |         |
+|                          |                  |-----------------------------------|------|-----|---------|
+|                          |                  | Transportation walking speed (m/s)| 1.50 | 0.10| -       |
+|                          |------------------|-----------------------------------|------|-----|---------|
+|                          | Stretcher        | Preparation time (s)              | 77.7 | 19.2| -       |
+|                          |                  |-----------------------------------|------|-----|---------|
+|                          |                  | Transportation walking speed (m/s)| 1.04 | 0.09| -       |
+|                          |------------------|-----------------------------------|------|-----|---------|
+|                          | Rescue Sheet     | Preparation time (s)              | 65.2 | 14.1| -       |
+|                          |                  |-----------------------------------|------|-----|---------|
+|                          |                  | Transportation walking speed (m/s)| 0.89 | 0.24| -       |
+|--------------------------|------------------|-----------------------------------|------|-----|---------|
+| Highly dependent patients [@11]            || Preparation time (s)              | -    | -   | 180-900 |
+|                                            ||-----------------------------------|------|-----|---------|
+|                                            || Transportation walking speed (m/s)| 0.40 | 0.04| -       |
+| -------------------------------------------||-----------------------------------|------|-----|---------|
+{  }
 ~
 
-## Equations
-Standard terminology should be used in equations. If possible, keep
-equations to one column. All equations should be numbered. A definition
-of $e$ is shown in Equation [#euler]:
+There is a lack of data regarding the number of attendants needed to
+evacuate non-ambulant patients. Table [#tab-operators-roles] shows some values found on the
+available literature for dependent patients. As it is shown in this
+table, the type of the transportation device used defines the number of
+required attendants to prepare the patient and to assist on the
+evacuation process. Comparing the different devices, we can conclude that
+evacuation chair and the rescue sheet require the minimum number of
+attendants (two).
 
-~ Equation { #euler }
-e = \lim_{n\to\infty} \left( 1 + \frac{1}{n} \right)^n
+For highly dependent patients, the number of attendants needed is
+unknown. Therefore, we suppose that two attendants are enough.
+
+~ TableFigure {#tab-operators-roles, caption:"The number of operators and their roles for each device [@10]"}
+|----------------------------------------------------------------------------------------------------------------------------|||||||
+| Experiment Phase | Role      | Stretcher | Evacuation Chair | Carry Chair (Male team) | Carry Chair (Female team) | Rescue sheet |
++:-----------------+:----------+:---------:+:----------------:+:-----------------------:+:-------------------------:+:------------:+
+| Preparation      | Essential | 2         | 2                | 2                       | 2                         | 2            |
+|                  |-----------|-----------|------------------|-------------------------|---------------------------|--------------|
+|                  | Major     | 1         | 0                | 1                       | 1                         | 0            |
+|                  |-----------|-----------|------------------|-------------------------|---------------------------|--------------|
+|                  | Minor     | 1         | 0                | 0                       | 1                         | 0            |
+|------------------|-----------|-----------|------------------|-------------------------|---------------------------|--------------|
+| Corridor         | Essential | 4         | 1                | 1                       | 1                         | 2            |
+|                  |-----------|-----------|------------------|-------------------------|---------------------------|--------------|
+|                  | Major     | 0         | 1                | 1                       | 1                         | 0            |
+|                  |-----------|-----------|------------------|-------------------------|---------------------------|--------------|
+|                  | Minor     | 0         | 0                | 1                       | 2                         | 0            |
+|------------------|-----------|-----------|------------------|-------------------------|---------------------------|--------------|
+| Total number of attendants  || 4         | 2                | 3                       | 4                         | 2            |
+|-----------------------------||-----------|------------------|-------------------------|---------------------------|--------------|
 ~
 
-Or to use &logolatex; to align equations.
+## EVACUATION STRATEGY
 
-~ Equation { #eq-alignment; caption:"Alignment example" }
-\begin{aligned} 
- f(x)  &= a x^2+b x +c   &   g(x)  &= d x^3 \\
- f'(x) &= 2 a x +b       &   g'(x) &= 3 d x^2
-\end{aligned}
+Traditionally, hospitals focused on horizontal evacuation [@37]. Patients
+should initially be moved from areas of risk to areas where a
+"shelter-in-place" posture can be maintained; usually in
+separate smoke compartments. As long as it is safe to remain in the
+"shelter-in-place" position, it is the preferred choice to
+attempting vertical evacuation. Therefore, in this study, we are only
+considering horizontal evacuation.
+
+## EVACUATION PROCEDURE
+
+In healthcare facilities, in case of fire, the objective of the staff is
+to evacuate as many patients as possible [@10;@18]. So, in this study,
+people in immediate danger are evacuated first, followed by ambulant
+patients and then non-ambulant patients. For non-ambulant patients, those
+requiring some transport assistance are evacuated first (wheelchair,
+evacuation chair), followed by those requiring transport assistance
+(rescue sheet) and then patients who are being treated and/or would be
+difficult to evacuate (i.e. Operating Room, ICU, obese, dangerous).
+
+Furthermore, we considered that attendants use the nearest exit and that
+only two exits were available.
+
+## SCENARIOS MODELLED
+
+Typically, hospital rooms are single or double occupancy but for the
+hypothetical scenarios simulated, all the rooms are considered as single
+occupancy. Furthermore, the 42 rooms are considered as fully occupied
+(see Figure [#path-geom]).
+
+~ Figure {#path-geom, caption:"Pathfinder geometry shown with sample occupancy"}
+![FIG_2]
 ~
 
-# FUN CONTENT EXAMPLES
-Let's program some JavaScript:
-``` javascript
-function hello() {
-  return "hello world!"
-}
-```
-Here is a footnote[^fn] reference.
-[^fn]: This is the content of the example footnote. 
-    You can continue a footnote by indenting content.
-    And notice the back link.
+[FIG_2]: images/FIG_2.png "FIG_2" { width:auto; max-width:100% }
 
-# BIBLIOGRAPHY AND REFERENCES
-When references are used in the text, tie them to an alphabetical (by
-principal author) list of references to be included as the last item of
-your paper. The format commonly used in scientific literature follows:
 
-Smith, J. S., Bloggs, R. T. and Jones, E. R. (1974), "Magnetic Anomalies
-in Geothermal Systems", Journal of Fluid Mechanics, 254, 73-79
+### Scenario 1
 
-Leslie Lamport, LaTeX: A Document Preparation System (2nd Edition), Addison-Wesley, 1994
+All the patients are considered as ambulant. The other scenarios will be
+compared to this basis scenario.
 
-When using Madoko, edit the content of the .bib file in the document
-folder, and use the reference methods as shown in the [Bibliography and
-Citations
-Section](http://research.microsoft.com/en-us/um/people/daan/madoko/doc/reference.html#sec-bib)
-of the Madoko Manual.
+### Scenario 2
 
-A bibliography file consists of all your references in the BibTeX format, for example:
+A mix of ambulant and non-ambulant patients was considered with different
+percentages of independent, dependent and highly dependent patients. We
+considered 6 attendants present to assist on the evacuation of
+non-ambulant patients. Therefore, three emergency groups were formed by
+two attendants for assisting each patient. The Table [#tab-scenario2] shows the
+sub-scenarios simulated.
 
-    @BOOK{ Knuth:TeX,  
-        author   = "Knuth, Donald E.",  
-        title    = "The {\TeX} book",  
-        publisher= "Addison-Wesley",  
-        year     = 1984  
-    }
+~ TableFigure {#tab-scenario2, caption:"Sub-scenarios simulated for Scenario 2"}
+|-----------------------------------------------------------------------------------------------------------------||||
+| Sub-scenario | Number of independent patients | Number of dependent patients | Number of highly dependent patients |
++:------------:+:------------------------------:+:----------------------------:+:-----------------------------------:+
+| 2.1          | 28                             | 14                           | 0                                   |
+| 2.2          | 28                             | 7                            | 7                                   |
+|-----------------------------------------------------------------------------------------------------------------||||
+~
 
-Entries in the bibliography files can now be referenced using semi-colon
-separated references, for example:
-``` Markdown 
-Read about LaTeX and TeX [@Knuth:TeX; @Lamport:LaTeX].
-```
-Results in: Read about LaTeX and TeX [@Knuth:TeX; @Lamport:LaTeX].
+### Scenario 3
 
-Please include full title of journal articles or other references,
-journal, volume, date, pages. There is a nice [table on
-Wikipedia](https://en.wikibooks.org/wiki/LaTeX/Bibliography_Management#BibTeX)
-that shows all of the different data fields for the BibTeX file.
+Like Scenario 2, a mix of ambulant and non-ambulant patients is
+considered but here the percentage of the patients is constant (1/3
+independent, 1/3 dependent and 1/3 highly dependent). In order to
+evaluate the effect of different staff to patient's ratios on the
+evacuation process, we considered different numbers of attendants
+(nurses): 4, 8 and 12. The Table [#tab-scenario3] shows the emergency groups formed for
+the different sub-scenarios.
 
-# PAPER DEADLINE
-Your paper, in final form, must be received by October 15th, 2016. The
-best way to edit and submit is to use the Madoko [editor] to edit your
-document in the 'authoring' branch of the GitHub [femtc2016] repository.
-If you choose to use some other document format and editing tool, PDF
-format is preferred, but ODT, DOC, or DOCX formats are acceptable. Please
-e-mail the files to [conference@thunderheadeng.com][emaillink].
+~ TableFigure {#tab-scenario3, caption:"Sub-scenarios simulated for Scenario 3"}
+|------------------------------------------------------|||
+| Sub-scenario | Number of attendants | Emergency groups |
++:------------:+:--------------------:+:----------------:+
+| 3.1          | 4                    | 2                |
+| 3.2          | 8                    | 4                |
+| 3.3          | 12                   | 6                |
+|------------------------------------------------------|||
+~
 
-# PRESENTATION
-Each author must present his/her paper within the allotted time, allowing
-for some minutes of open discussion. The session chair is responsible for
-keeping authors within their time limit, in order to ensure that each
-author has enough time for their presentation. When preparing your
-presentation slides, make sure they are clear and large enough so that
-your audience can read them from as far as 80 feet away.
 
-All presentations will be made using the computer projector available in
-the conference room. We will not have overhead projectors or slide
-projectors in the meeting rooms.
+# RESULTS AND DISCUSSION
 
-Your presentation, in final form, must be received by **October 15th,
-2016**. A final commit of the files to the GitHub repository is
-preferred. Once the final draft is complete and reviewed it will be
-merged into the master branch of the repository. If you decide to use
-some other tool for creating your presentation, PDF format is preferred,
-but ODP, PPT, or PPTX formats are acceptable. Please e-mail the files
-to [conference@thunderheadeng.com][emaillink].
+## FRAME METHOD RESULTS
 
-All presentations will be pre-loaded on the computers that are present.
-Please note that this approach will make it necessary for us to receive
-the presentation files prior to the conference. If you have a different
-software requirement, it should still be possible for you to attach your
-own computer to the projector if you bring it with you. This is not
-optimal, as it takes time and slows down the session.
+The Table [#tab-frame] presents the results of the Fire Risk Assessment Method for
+Engineering performed on the G Bloc of the "Clinique Sainte Elisabeth",
+located at Namur (Belgium). The calculation of the potential risk is
+carried on each floor of this building but only for the characteristic
+premises of the floor in question. The method gives the following
+results: the calculated risk for the property & content (R), the
+calculated risk for the occupants (R1) and the calculated risk for the
+activities (R2). For a well-protected compartment, the three values shell
+be below one.
 
-# CONFERENCE CONTENT DISTRIBUTION
-The papers and presentation materials will be made available online
-during and after the conference. In addition, the organizers are planning
-to may broadcast live presentations online during the event. The papers,
-presentations, and videos will be archived and made available on the web
-after the conference.
+In general, the results of this analysis demonstrate that the building is
+well protected (R<1) against fire excluding the technical premise of
+the 7th floor in which the potential risk for the occupants is greater
+than one. That conclusion is, in fact, expected since the recent
+conception of the G Bloc strictly follows the Belgian Prescriptive Codes
+(AR 6/11/1997).
 
-Author(s) retain all rights to submitted material. The organizers are
-granted a non-exclusive right to copy and redistribute conference
-material submitted by the author(s).
+For the upper floor, the risk for the occupants is important due to the
+presence of the machinery of the ventilation and heating. In addition,
+its height makes it difficult to access for firefighters. However, this
+floor is only accessible for the staff members who are trained to fight
+the fire.
+
+~ TableFigure {#tab-frame, caption:"FRAME method results for the G Bloc of the Clinique Sainte Elisabeth"}
+![TAB_FRAME]
+~
+
+[TAB_FRAME]: images/TAB_FRAME.png "TAB_FRAME" { width:auto; max-width:100% }
+
+Since the 7th floor is not accessible to the public and the patients, the
+most critical floor is the 6th floor in which people could be found
+during the day and at night.
+
+## PATHFINDER RESULTS
+
+The Pathfinder results have been categorized according to the different
+scenarios simulated.
+
+### Scenario 1 {#path-s1}
+
+The evacuation curve for the scenario 1 is shown in Figure [#fig-evac-curve-s1]. The mean
+total evacuation time of ambulant patients is about 383 seconds, with a
+range of value between 163 seconds and 622 seconds.
+
+~ Figure {#fig-evac-curve-s1, caption:"Evacuation curve for scenario 1 (m is the mean evacuation curve, max is the maximum evacuation curve and min is the minimum evacuation curve)"}
+![evac-curve-scenario1]
+~
+
+[evac-curve-scenario1]: images/evac-curve-scenario1.png "evac-curve-scenario1" { width:auto; max-width:100% }
+
+
+### Scenario 2 {#path-s2}
+
+A comparison between the mean evacuation curves of scenario 1 and
+scenario 2 is shown in Figure [#mean-evac-curve_s1-s2]. The results demonstrate that there is an
+increase in total evacuation time when assisted evacuation is performed
+involving dependent and highly-dependent patients. In fact, for
+sub-scenario 2.1, in presence of 6 attendants to assist on the evacuation
+of dependent patients, the evacuation of all the patients takes in
+average about 483 seconds. For sub-scenario 2.2, in presence of 6
+attendants to assist on the evacuation of dependent and highly-dependent
+patients, the total evacuation takes in average about 2124 seconds.
+
+Comparing the mean total evacuation times of scenarios 1 and 2, one can
+say that conducting an evacuation in presence of non-ambulant patients
+takes a higher time than a "normal" evacuation. This is due to the fact
+that the evacuation of dependent and highly-dependent patients is delayed
+due to the preparation times required and the waiting for someone (or
+some people) to assist them before starting to evacuate.
+
+~ Figure {#mean-evac-curve_s1-s2, caption:"Comparison of the mean evacuation curves for scenario 1 and 2"}
+![mean-evac-curve-s1_s2]
+~
+
+[mean-evac-curve-s1_s2]: images/mean-evac-curve-s1_s2.png "mean-evac-curve-s1_s2" { width:auto; max-width:100% } 
+
+### Scenario 3 {#path-s3}
+
+
+Figure 5: comparison of evacuation curves for scenarios 1 and 3 
+
+# CONCLUSION
+
+# FUTURE WORK
+
+This research highlighted a lack of data about preparation times, the
+number of attendants needed to assist the non-ambulant patients during
+the evacuation process and the walking speeds. Future data collection
+efforts are required to collect and analyze these variables.
+
+Further to this, more research is required to evaluate the effect of
+stress and fatigue perceived by the attendants during the patient's
+collection.
+
+In addition, future works could investigate the impact of training of the
+attendants on the evacuation time. Virtual Reality gaming could be used
+in the future to provide valuable insight into a real life simulation and
+highlight areas of risk.
+
+Finally, future research could focus on the coupling of this analysis
+with the study of the possible effect of the fire itself. In fact, the
+fire has a direct effect on the evacuating population, e.g., the presence
+of the fire and smoke affects the people behaviour, and there would be
+the need to simulate this impact on the evacuation process.
 
 [BIB]
-
-&pagebreak;
-
-# An appendix { @h1:"A" }
-"All the same, I should like it all plain and clear," said he
-obstinately, putting on his business manner (usually reserved for people
-who tried to borrow money off him), and doing his best to appear wise and
-prudent and professional and live up to Gandalf's recommendation. "Also I
-should like to know about risks, out-of-pocket expenses, time required
-and remuneration, and so forth" -- by which he meant: "What am I going to
-get out of it? and am I going to come back alive?"
-
-# Conclusion
-If you have any questions concerning your paper and/or the Conference,
-please email us at [conference@thunderheadeng.com][emaillink].
