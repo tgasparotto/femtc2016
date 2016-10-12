@@ -105,6 +105,11 @@ Therefore, in order to use Pathfinder as a simulation tool, it is required to ca
 As such, in this paper, we present two case studies, where real times were compared with
 the Pathfinder.
 
+In both examples presented, the model was put up by using a two dimensional 
+emergency plan image imported into Pathfinder. After having the scale calibrated, 
+defined the areas where the people is placed, the location of the exits and the
+exit paths. When there are seats, each one was plotted and put in place.    
+
 
 # CASE STUDY: CASA DA MÚSICA
 
@@ -114,7 +119,12 @@ as an homage to Guillermina Suggia, Porto’s native world class cellist, having
 top capacity of 1244 places. The other Auditorium, “Sala 2” can receive up to 250 
 persons seated or 650 standing.
 
+~ Figure { #figCdM_ext; caption:"Casa da Música: external view"}
+![800px-Casa-da-musica%28exterior%29_1000]
+~
 ## Casa da Música: Sala Suggia
+
+[800px-Casa-da-musica%28exterior%29_1000]: images/800px-Casa-da-musica%28exterior%29_1000.jpg "800px-Casa-da-musica%28exterior%29_1000" { width:auto; max-width:60% }
 
 The main Auditorium of Casa da Música, "Sala Suggia", has a full capacity of 1244 people, 
 but can vary according the layout used. Without the choir places, 
@@ -146,7 +156,27 @@ table can be used as benchmark for calibrating the model.
 | 17.04.2016 | Choirs - Voice      |    638  |     04:10  |   01:34    |
 |------------|---------------------|---------|------------|------------|
 ~
+The pathfinder model is shown in figure [#figcdm_sala1pf1]. Each seat row was 
+plotted and put in location, having people assigned up to the maximum number of seats.
+The only way out for each seat row is at each end. This way is it not possible to
+have agents going over seats or surpassing other pedestrians. 
 
+~ Figure { #figCdM_sala1PF1; caption:"Sala Suggia Pathfinder model"}
+![CdM_Sala1PF1]
+~
+
+[CdM_Sala1PF1]: images/CdM_Sala1PF1.png "CdM_Sala1PF1" { width:auto; max-width:90% }
+
+
+~ Figure { #figCdM_sala1PF2; caption:"Sala Suggia Pathfinder model during simulation process"}
+![CdM_Sala1PF2]
+~
+
+Figure [#figcdm_sala1pf2] shows a snapshot of the simulation process, having only the 
+usual 4 exits, left and right, and the rear emergency exits closed (red rectangule).
+This represents the layout used to collect data shown at table [#table1].
+
+[CdM_Sala1PF2]: images/CdM_Sala1PF2.png "CdM_Sala1PF2" { width:auto; max-width:90% }
 
 ## Casa da Música: Sala 2
 
@@ -164,6 +194,8 @@ Total area is around 320 square meters.
 ~
 
 [Sala2-a]: images/Sala2-a.jpg "Sala2-a" { width:auto; max-width:60% }
+
+
 
 Table [#table2] presents two concerts held in April, one with 211 people seated 
 and the other, a rock concert with 638 spectators standing.
@@ -212,15 +244,6 @@ and 2.955 seated when we count the 1st and 2nd stalls, the dress circle,
 the boxes, upper circle and the reserved and general gallery.
 
 
-### Subsubheadings like this style
-Subsubheadings have no underline, and only the first letter capitalized.
-In Madoko, a Triple '#' symbol at the start of the line, followed by a
-space and then the heading text.
-
-# FIGURES, TABLES, AND EQUATIONS { #sec-FTE }
-Original drawings and photos may be included in your paper as figures.
-Diagrams may be in color.
-
 Figures and tables should immediately follow first mention of them in the
 text and can be placed in one column, or in the case of wider figures,
 can cover two columns (but only at the top or bottom of the page). The
@@ -229,28 +252,12 @@ abbreviated, followed by the figure number (i.e., Figure 1 or Fig. 1).
 The figure caption should be followed by a single line of space before
 the text resumes.
 
-## Figures { #sec-FTE-figures }
-Figure [#fig-smokeview] in Section [#sec-FTE-figures] shows an image from an
-older version of Smokeview. Note that you can drag&drop images into the
-editor pane to include them in the document, and similarly with bibtex
-files, latex style files, etc.
-
-~ Figure { #fig-smokeview; caption:"Illustration of placement of figure and caption. (use the `.wide` class for wide figure)."}
-![Ex1_0]
-~
-[Ex1_0]: images/Ex1_0.png "Ex1_0" { width:auto; max-width:90% }
-
-~ Note
-Images larger than about 1Mb in size will be rejected by the Madoko.net server.
-~
 
 
+# CONCLUSIONS AND FUTURE WORK
 
-```
-Here is a footnote[^fn] reference.
-[^fn]: This is the content of the example footnote. 
-    You can continue a footnote by indenting content.
-    And notice the back link.
+# Acknowlegments
+
 
 # BIBLIOGRAPHY AND REFERENCES
 When references are used in the text, tie them to an alphabetical (by
@@ -289,28 +296,10 @@ journal, volume, date, pages. There is a nice [table on
 Wikipedia](https://en.wikibooks.org/wiki/LaTeX/Bibliography_Management#BibTeX)
 that shows all of the different data fields for the BibTeX file.
 
-# PAPER DEADLINE
-Your paper, in final form, must be received by October 15th, 2016. The
-best way to edit and submit is to use the Madoko [editor] to edit your
-document in the 'authoring' branch of the GitHub [femtc2016] repository.
-If you choose to use some other document format and editing tool, PDF
-format is preferred, but ODT, DOC, or DOCX formats are acceptable. Please
-e-mail the files to [conference@thunderheadeng.com][emaillink].
 
 
 [BIB]
 
 &pagebreak;
 
-# An appendix { @h1:"A" }
-"All the same, I should like it all plain and clear," said he
-obstinately, putting on his business manner (usually reserved for people
-who tried to borrow money off him), and doing his best to appear wise and
-prudent and professional and live up to Gandalf's recommendation. "Also I
-should like to know about risks, out-of-pocket expenses, time required
-and remuneration, and so forth" -- by which he meant: "What am I going to
-get out of it? and am I going to come back alive?"
 
-# Conclusion
-If you have any questions concerning your paper and/or the Conference,
-please email us at [conference@thunderheadeng.com][emaillink].
