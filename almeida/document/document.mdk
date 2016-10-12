@@ -50,6 +50,10 @@ different scenarios, estimate egress times in a set of combinations with all
  camera footage. Therefore, it was possible to assess the simulation tool, 
  evaluating the results and calibrating with the real data in a 
  variety of situations and occupations.
+ 
+ 
+ Keywords: Pathfinder; Emergency Evacuation Planning; Egress Times; Fire Drills; Simulations; Concert Halls.
+
 ~
 
 [editor]: https://www.madoko.net/editor.html "Madoko.net Editor"
@@ -216,26 +220,19 @@ located at the left (when looking towards the stage) is close. This is represent
 the model with a red line. This scenario is compliant with the layout of the
 concerts shown at table [#table2].
 
-~ Figure { #figCdM_sala2PF2; caption:"2D Pathfinder snapshot showing 
-  egress with the emergency exit near the stage closed (red line) "}
+~ Figure { #figCdM_sala2PF2; caption:"2D Pathfinder snapshot showing egress with the emergency exit closed (red line) "}
 ![Cdm_Sala2PF2]
 ~ 
 [Cdm_Sala2PF2]: images/Cdm_Sala2PF2.png "Cdm_Sala2PF2" { width:auto; max-width:90% }
 
 The Pathfinder tool can be used to estimate the improvement that opening an emergency
-exit might have in the total evacuation time. Figure X shows the same situation 
-presented before in figure Y, this time having the emergency exit, near the stage, open. 
+exit might have in the total evacuation time. Figure [#figcdm_sala2PF3] shows the same situation 
+presented before in figure [#figcdm_sala2PF2], this time having the emergency exit, near the stage, open. 
 
-
-
-~ Figure { #figCdM_sala2PF3; caption:"3D Pathfinder simulation 
-  snapshot showing egress with the emergency exit near the stage open"}
+~ Figure { #figCdM_sala2PF3; caption:"3D Pathfinder simulation snapshot showing the emergency exit near the stage open"}
 ![Cdm_Sala2PF3]
 ~ 
-
 [Cdm_Sala2PF3]: images/Cdm_Sala2PF3.png "Cdm_Sala2PF3" { width:auto; max-width:90% }
-
-
 
 
 
@@ -269,21 +266,41 @@ The main auditorium of Coliseu do Porto has a capacity for 3,500 people standing
 and 2.955 seated when we count the 1st and 2nd stalls, the dress circle, 
 the boxes, upper circle and the reserved and general gallery.
 
-
-Figures and tables should immediately follow first mention of them in the
-text and can be placed in one column, or in the case of wider figures,
-can cover two columns (but only at the top or bottom of the page). The
-caption should start with either the word “figure” spelled out or
-abbreviated, followed by the figure number (i.e., Figure 1 or Fig. 1).
-The figure caption should be followed by a single line of space before
-the text resumes.
-
+TEXT MISSING: PICTURES OF THE PATHFINDER SIMULATION OF COLISEU; RESULTS; DISCUSSION.
 
 
 # CONCLUSIONS AND FUTURE WORK
 
+As shown in both examples, Pathfinder can be a useful tool to estimate egress
+times, even if they might be optimistic, and to evaluate other options, such as
+opening an extra emergency exit.
+
+The two case studies presented were developed using a test version of Pathfinder, 
+without having much detail and optimization. The experiments made were only mere
+preliminary tests to evaluate the tool and prove its utility as a valuable aid
+for the emergency planner and the safety manager. Pathfinder simulations 
+can be expanded to increase the number of possibilities and scenarios. For instance, 
+to test a blocked exit, by fire or another event, such as a terrorist attack or
+simply a riot among spectators (meaning, people fitghing each other, is it "riot" ok?
+ In Portuguese we refer to this as "alteração da ordem pública").
+
+ 
+The aforementioned examples are among the ways to extend the work
+presented and stem other research, exploring the Pathfinder possibilities to its limit.
+    
+
 # Acknowlegments
 
+The authors which to express their gratitude to the Management of Casa da Música, 
+Eng. Paulo Sarmento e Cunha and Eng. Gilberto Gomes, for giving access to the data,
+plans needed to this research work. Similarly, we wish to thank Prof.Eduardo Paz 
+Barroso, President of Coliseu Porto and Dr.Fernando Pinheiro from the board of directors,
+for all the encouragement and access to Coliseu site.
+Thanks to Thunderhead Enginneering, particurlarly to Bryan Klein, for supplying a
+test version of Pathfinder that was used for the case studies.
+At last, to University do Porto, and LIACC, Laboratório de Inteligência Artificial
+e Ciências dos Computadores, that funded the presence at this Conference.
+ 
 
 # BIBLIOGRAPHY AND REFERENCES
 When references are used in the text, tie them to an alphabetical (by
