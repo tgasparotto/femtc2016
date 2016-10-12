@@ -126,24 +126,24 @@ Another significant factor in the model is the temperature. The adiabatic combus
 
 The definition of the initial temperature by means of the adiabatic temperatures guarantees that the initial energy represents the correct energy system and the subsequent energy balance in the model are based on proper initial values.
 
-~ Begin Figure { #fig-flame-temp; caption:"Comparison between two simulations with different powers. On the left the a model with a HRR of 100 kW and on the rigth the model with a HRR of 1.200 kW. It can be appreciated the different length of the hot region, which represents the equivalent flame length"}
+~ begin Figure {#plume-comparison; caption:"Comparison between two models with different powers. It can be observed the different heigths of the hot region which represents the flames, according to the power of the simulation "}
+~ begin SubFigureRow
+~ SubFigure {caption:"100 kW"}
+![Temperature 0_1 MW]
 
-~ Begin SubFigureRow { vertical-align: bottom }
-~ SubFigure { #fig-subfig2; caption:"100 kW"}
+[Temperature 0_1 MW]: images/Temperature-0_1-MW.jpg "Temperature 0_1 MW" { width:auto; max-width:90% }
 
-![Temperature 0.1 MW]
 ~
-~ SubFigure { #fig-subfig2; caption:"1.200 kW"}
+~ SubFigure {caption:"1.200 kW"}
+![Temperature 1_2 MW]
 
-[Temperature 0.1 MW]: images/Temperature-0.1-MW.JPG "Temperature 0.1 MW" { width:auto; max-width:90% }
+[Temperature 1_2 MW]: images/Temperature-1_2-MW.jpg "Temperature 1_2 MW" { width:auto; max-width:100% }
 
-![Temperature 1.2 MW]
 ~
 
 ~ End SubFigureRow
-~ End Figure
 
-[Temperature 1.2 MW]: images/Temperature-1.2-MW.JPG "Temperature 1.2 MW" { width:auto; max-width:90% }
+~ End Figure
 
 # Model validation
 
@@ -167,7 +167,7 @@ During the test not all the points could be controlled. Only the central positio
 These measurements can be defined like local measurements with the aim of obtaining data to compare with simulations.
 The following graphs show the comparison between the recorded temperatures in the simulations and the ones recorded during the full scale test and their comparison with the FDS model with the system working at 1.200 kW (maximum power).
 
-~ figure {caption:"Temperature comparison between the measured temperatures  during the real scale test (blue) and the measured temepratures in FDS (green). The indicated heigths are referred to the burning surface"}
+~ figure {caption:"Temperature comparison between the measured temperatures during the real scale test (blue) and the measured temepratures in FDS (green). The indicated heigths are referred to the burning surface"}
 
 ![Temperatures plume]
 ~ 
@@ -201,9 +201,9 @@ The figure [#temp-sensor-manegg] shows thee example with the comparison between 
 ~ SubFigure { #sensor 2; caption: "10 m distance, 75 cm under the ceiling"}
 
 ![sensor2]
-[Sensor 1]: images/Sensor-1.jpg "Sensor 1" { width:auto; max-width:90% }
+[Sensor 1]: images/Sensor-1.jpg "Sensor 1" { width:auto; max-width:100% }
 
-[sensor2]: images/sensor2.jpg "sensor2" { width:auto; max-width:90% }
+[sensor2]: images/sensor2.jpg "sensor2" { width:auto; max-width:100% }
 
 ~
 
@@ -214,7 +214,7 @@ The figure [#temp-sensor-manegg] shows thee example with the comparison between 
 ~ End SubFigureRow
 ~ End Figure
 
-[sensor3]: images/sensor3.png "sensor3" { width:auto; max-width:90% }
+[sensor3]: images/sensor3.png "sensor3" { width:auto; max-width:100% }
 
 
 # Conclusion
