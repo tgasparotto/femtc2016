@@ -15,20 +15,16 @@ Toc Depth     : 1
 [TOC]
 
 
-~ Begin Vertical { data-background:Gainsbor }
+~ Begin Vertical 
 
 # Context {#vertical}
 The use of egress simulation models in performance-based analysis relies on the confidence in the input data and the output data.
 
 * But data strongly depend on a large number of parameters.
 * So the results are prone to be scattered.
-
 [![arrowdown]][down]
-
-
 [down]: # { .navigate-down }
 [arrowdown]: images/arrow.png "Down arrow" { width:178px; height:238px }
-
 ## Aim of the study
 Propose a method to analyse the statistical aspects of an egress simulation model.
 
@@ -264,18 +260,46 @@ The empirical distribution function is not linear.
 
 
 
-## Test case 1 (notations)
-In 
+## Notations
+Notations used to make quantitative comparisons:
+
+~ Align-Left
+
+* I~p95%~ the confidence interval of the 95th percentile.
+* L~Ip95%~ the witdh of the confidence interval of the 95th percentile.
+* I~p5%-95%~ the interval between the lower bound of the 5th percentile and the upper bound of the 95th percentile.
+* L~Ip5%-95%~ the width of the last one.
+* L~Ip5%-95%~/q~50%~ the ratio between the last interval and the 50th percentile.
+~
+
+
 
 ## Test case 2
 
+~ Center
+![fig6_5]
+[fig6_5]: images/fig6_5.PNG "fig6_5" { width:auto; max-width:55%}
+~
+
+
+
 
 ## Test case 3
+~ Center
+![fig6_6]
+[fig6_6]: images/fig6_6.PNG "fig6_6" { width:auto; max-width:55%}
+~
+
+
+
 
 
 ## Test case 4
 
-
+~ Center
+![fig6_7]
+[fig6_7]: images/fig6_7.PNG "fig6_7" { width:auto; max-width:55%}
+~
 ~ End Vertical
 
 
