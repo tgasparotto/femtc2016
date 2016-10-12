@@ -145,60 +145,68 @@ wall. The more people push towards the arch, the more it compacts itself.
 ~
 [arch]: images/blockage02.png "blockage02" { width:auto; max-width:90% }
 
-One of the consequences of the arches is the imprisonment against the 
-wall. It was observed in one of these experiments that an individual 
-stood 32 seconds, right aside the door, pressed against the wall without
-moving. As consequences of higher crowd pressures, trampling, crushes 
-and turbulence could raise. Figure [#turb] represents the path taken by six 
-individuals (initial position on dot, final position crossing the door) 
-at 175 person egress experiment. 
-
+One of the consequences of the arches is that the individual closest to the wall
+can be impresioned there. It was observed that an individual 
+stood 32 seconds, next the door looking outside, pressed against the wall without
+moving itself regardless his efforts. The consequences of higher crowd pressures 
+could be turbulent flow, trampling and crushes. From those 3, just the first was
+observed at the experiments. Figure [#turb] represents the path taken by six 
+individuals (first V2 filmed position as a dot and final crossing the door)
 ~ Figure { #turb; caption: "Snapshots overlayed showing how turbulence affects the path followed by a person (1 is the first position and 15 the egress)"}
 ![turbulencia]
 ~
 [turbulencia]: images/turbulencia.png "turbulencia" { width:auto; max-width:100% }
 
 ## Quantitative Results { #sec-quanti}
-In a coordinated evacuation, time to egress is directly proportional to
-the initial population. For example, where there are 100 person, they 
-will take 40 seconds evacuate the place. By linearity, it would last 80
-seconds the egress of 200. However, in an uncoordinated egress, the 
-crowd dynamics blow with linearities. Table [#tab-tempo] presents the egress time and mean flow from experiments analysis.
+In a coordinated egress, that means people walking in an ordered queue flow, through each
+0.55m of the door's width will pass 100 individuals per minute [@NBR9077],[@in09]. That means, 
+egress flow is controlled by door's size. For example, where there are 100, they
+will take around 30 seconds to cross a 1.10m sized door. By linearity, the egress 
+of 200 would last a minute. However, in an uncoordinated egress, the crowd 's dynamics
+blow with linearities. Table [#tab-tempo] presents the egress time and mean egress flow
+from experiments analysis and as it would be expected for a coordinated egress by the Santa
+Catarina's fire safety code [@IN09].
 
 ~ TableFigure { #tab-tempo; caption: "Egress time against population"; .wide }
 
-         
-|                | egress  | egress     |
-|                | time    | flow       |
-| population     | [s]     | [1/s]      |
-|                |         |            |
-|:---------------|:-------:|:----------:|
-|35             |    6.5  |  5.38      |
-|70           |   17.4  |  4.03      |
-|105           |   27.0  |  3.88      |
-|140           |   36.8  |  3.80      |
-|175           |   47.1  |  3.72      |
-|210           |   65.7  |  3.20      |
-|280           |   84.9  |  3.30      |
-|----------------|---------|------------|
+
+
+|            |uncoordinated egress | coordinated egress  |||
+|            |                     |       |       |       |
+|            |                     |       |              ||
+|            |                     |       |       |       |
+|            |                     |       |       |       |
+|            |                     |                     |||
+| initial    | time                | mean flow           |||
+| population | [s]                 | [s^-1^]             |||
+|:-----------|:-------------------:|:-------------------:|||
+|35          | 6.5                 | 5.38                |||
+|70          | 17.4                | 4.03                |||
+|105         | 27.0                | 3.88                |||
+|140         | 36.8                | 3.80                |||
+|175         | 47.1                | 3.72                |||
+|210         | 65.7                | 3.20                |||
+|280         | 84.9                | 3.30                |||
+|------------|---------------------|---------------------|||
+|            |                     |                     |||
 ~
 
-As the crowd initial density rises, the egress flow diminishes. 
-However, the most crowded experiment (280) presented a higher flow comparing
-to the previous experiment (210). Checking out the video camera aiming the 
-crowd's back (V1), it was verified that people had not pressed for 
-escape as they should. Participants perceived that the more they press 
-those ahead, longer will wait inside the building. Figure [#graf-35th] presents
-the required time for the first 35 individuals to cross the exit at 
-different crowd initial density.
-
-~ Figure { #graf-35th; caption: "Egress time for the first 35 individuals over several crowd initial density [person/m²]."}
-![first35]
+As the initial population was increased in experiments, the egress flow diminishes. 
+However, the most crowded experiment (280) presented a flow higher than expected. 
+Checking out the videos viewing the crowd from its back (V1), it was verified that
+people had not pressed for escape as they should. As a lesson learned from the experiments,
+by themselves participants perceived that the more they press the longer will be the wait. 
+In a way to compare graphically all the experiments, Figure [#graf-all_Exp] presents
+the egress time against the nth individual for all initial crowd density, excepting the
+last one
+~ Figure { #graf-all_Exp; caption: "Egress time for the first 35 individuals over several crowd initial density [person/m²]."}
+![all_Exp]
 ~
-[first35]: images/first35.png "first35" { width:auto; max-width:100% }
+[all_Exp]: images/all_Exp.png "all_Exp" { width:auto; max-width:90% }
 
-The dark blue curve maintain a constant slope, representing that at the 
-lowest crowd density there were no blockages, almost a coordinated egress.
+The dark blue (density of 0.5, or 35 occupants) curve maintain a constant slope, 
+representing that at the lowest crowd density there were no blockages, almost a
+coordinated egress.
 Either the purple or the light blue curve, presents a sharp slope (at 8th 
 and 29th individual, respectively) which is a graphical representation of a
 door blockage. Another way to see the blockages is through the time void
