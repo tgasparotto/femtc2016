@@ -53,12 +53,8 @@ The test rig consists of a 150 mm thick lightweight concrete wall, 4 000 mm (W) 
 
 The mentioned test rig setup was slightly altered in the tests used as reference in the validation study of FDS 6.2.0. The reason for the alternation was to evaluate fire growth on external combustible ship surfaces with FRP instead of a regular building facade system. In the alternated setup non-combustible calcium silica boards (Promatect®) with 10 mm thickness of the test specimen was fastened along the facade, covering the two fictitious windows as illustrated in the drawing in Figure 1. The total dimensions of the boards were 3 750 mm (W) by 6 000 mm (H). This test was referred to as the reference test and retrieved data from this test laid the foundation for the validation study. In the lower pictures of Figure 1 the fire development during the reference test are seen.
 
-![Test]
-
-[Test]: images/Test.png "Test" { width:auto; max-width:98% }
-
 ## Arrangement, instrumentation and measurements in the reference test
-The thermal exposure was estimated at the panel surface with six Incoel steel plates with wire thermocouples spot-welded on their backside, fastened flush with the surface. The steel plates were nominally 0.7 mm thick, measured 150 mm by 150 mm and covered a hole (Ø100 mm) drilled through the panels for the thermocouple wires. Further, six sheathed type K thermocouples (Ø0.50 mm) were placed along the centerline of the panels in order to quantify the gas temperature in the buoyancy plume along the centerline of the panels. The thermocouples were placed 50 mm from the front surface of the panels and, as seen in Figure 1, positioned 50 mm offset the plate thermometers. In conclusion, the measurements took place at 0.5 m (C21/C27), 1.6 m (C22/C28), 2.7 m (C23/C29), 3.8 m (C24/C30), 4.8 m (C25/C31) and 5.9 m (C26/C32) above the opening.
+The thermal exposure was estimated at the panel surface with six Inconel steel plates with wire thermocouples spot-welded on their backside, fastened flush with the surface. The steel plates were nominally 0.7 mm thick, measured 150 mm by 150 mm and covered a hole (Ø100 mm) drilled through the panels for the thermocouple wires. Further, six sheathed type K thermocouples (Ø0.50 mm) were placed along the centerline of the panels in order to quantify the gas temperature in the buoyancy plume along the centerline of the panels. The thermocouples were placed 50 mm from the front surface of the panels and, as seen in Figure 1, positioned 50 mm offset the plate thermometers. In conclusion, the measurements took place at 0.5 m (C21/C27), 1.6 m (C22/C28), 2.7 m (C23/C29), 3.8 m (C24/C30), 4.8 m (C25/C31) and 5.9 m (C26/C32) above the opening.
 Moreover, gas temperature, velocity and generation of gaseous species such as CO, CO2 and depletion of O2 was measured during the test by a large Industrial Calorimeter, meaning both the convective and the total heat release rate could be estimated during the test. Information about the HRR history of the reference test is found in Figure 3.
 
 ## Incident radiation using a plate thermometer
@@ -85,19 +81,22 @@ The plate thermometer measures approximately the temperature of a surface which 
 # ARRANGEMENT IN FDS
 The model in FDS were built up using building materials corresponding to the test rig as far as possible. The geometry of the reference test in FDS can be seen in Figure 2.
 
-FIGURE 2
+~ Figure { #Figure2; caption:"Figure2"}
+![Bild2]
+~
+[Bild2]: images/Bild2.png "Bild2" { width:auto; max-width:100% }
 
 The different grid sizes used in FDS are presented in Table [#Table1]. The main model were built up by a single mesh in order to avoid high speed flow at mesh alignments, which in turn can affect the results of the simulation. A sensitivity analysis were later conducted covering the potential influence on results of different mesh alignments, presented in the sensitivity analysis chapter.
 
 ~ TableFigure { #Table1; caption: "Various measurements of the computational domain in FDS [1]"; .wide }
 
-|----------------|------------------------------------|-----------------------|-----------------|
-|   Grid size    |  Domain size                       | Total number of cells | Mesh resolution |       
-|:---------------|:----------------------------------:|:---------------------:|:---------------:|
-| 5              | 4 m (W) * 3.6 m (D) * 7.2 m (H)    | 829 440               |         30      |
-| 10             | 4 m (W) * 3.6 m (D) * 7.2 m (H)    | 103 68                |         15      |
-| 20             | 3.8 m (W) * 3.8 m (D) * 7.4 m (H)  | 13357                 |         8       |
-|----------------|------------------------------------|-----------------------|-----------------|
+|----------------|---------------------------------|-----------------------|-----------------|
+|   Grid size    |  Domain size                    | Total number of cells | Mesh resolution |       
+|:---------------|:-------------------------------:|:---------------------:|:---------------:|
+| 5              | 4 m (W)·3.6 m (D)·7.2 m (H)     | 829 440               |         30      |
+| 10             | 4 m (W)·3.6 m (D)·7.2 m (H)     | 103 68                |         15      |
+| 20             | 3.8 m (W)·3.8 m (D)·7.4 m (H)   | 13357                 |         8       |
+|----------------|---------------------------------|-----------------------|-----------------|
 ~
 
 The ratio D^*/δx for the conducted simulations are approximately 8, 15 and 30 for the coarse, medium and fine grid respectively. These values can be compared with the values (D^*/δx of 4-16) that historically has been used as reference in FDS applications. The values of 8, 15 and 30 can also be put in relation to the values represented in Table 3.11 of the FDS validation guide, where the mean value of the lower range limits is of around 8 and the mean value of the upper range is of around 16.
@@ -123,7 +122,10 @@ To be able to simulate the plate thermometers in FDS, six obstacles were defined
 
 In addition, measurements of adiabatic surface temperature (T_AST), incident heat flux (q ̇_IHF^'') and convective heat flux (q ̇_conv^'') took place at the same positions as for the wall temperature devices. The former was done in order to compare the retrieved temperatures from the plate thermometers during the reference test with the illustrative temperature T_AST in FDS. The measurements of incident heat flux and convective heat flux took place in order to produce comparable incident heat flux results to the reference test. The procedure for doing this described further down.
 
-FIGURE 4
+~ Figure { #Figure4; caption:"Figure4"}
+![Figure4]
+~
+[Figure4]: images/Figure4.png "Figure4" { width:auto; max-width:100% }
 
 ##Extract incident radiative heat flux results in FDS
 Since there are no device that directly produce the same form of heat flux in FDS as computed from the reference test described above (q ̇_IRHF^''), the information given in was used. In FDS, the quantity incident heat flux q ̇_INC^'' (W/m2) is the sum of the incoming radiation and convection, not including the outgoing radiation. The quantity incident heat flux is described in the following equation, Eq. 4:  
@@ -212,9 +214,19 @@ The overall difference between the coarse grid size and the other grid sizes are
 
 The effect of dividing the computational domain into differently aligned meshes was studied. This was conducted mainly on the 5 cm grid however one simulation was divided into two meshes with different grid sizes (10 cm cells in the fire room and 5 cm cells outside). The different mesh intersections of the computational domain that were studied are shown as purple lines in Figure 13.
 
-FIGURE 13
+~ Figure { #Figure13; caption:"Figure13"}
+![Figure13]
+~
+[Figure13]: images/Figure13.png "Figure13" { width:auto; max-width:100% }
 
-Minor discrepancies were found for the 3 meshes and 2 meshes-configurations compared with the single mesh simulation in regards to temperature and radiation outputs. The 3 meshes configuration results in slightly higher output data compared with the single mesh simulation. Larger discrepancies were found for the 2 meshes 5 cm and 10 cm configuration with considerable lower output data in general, especially in regards to incident radiation. An important finding from this part was the computational time that could be saved when dividing the domain into several meshes, still resulting in comparable result to the single mesh simulation. Note that this was even if the mesh intersections were horizontally. However, this was based on the precondition that a uniform fine grid size (5 cm) was used in the simulation on all meshes. Using a coarser grid size inside (10 cm) the fire compartment and a fine grid size outside was seen to underestimate the output, as described above. 
+Minor discrepancies were found for the 3 meshes and 2 meshes-configurations compared with the single mesh 
+simulation in regards to temperature and radiation outputs. The 3 meshes configuration results in slightly
+higher output data compared with the single mesh simulation. Larger discrepancies were found for the 2 meshes 5 cm and 10 cm 
+configuration with considerable lower output data in general, especially in regards to incident radiation. An important finding 
+from this part was the computational time that could be saved when dividing the domain into several meshes, still resulting in 
+comparable result to the single mesh simulation. Note that this was even if the mesh intersections were horizontally. However, 
+this was based on the precondition that a uniform fine grid size (5 cm) was used in the simulation on all meshes. Using a coarser 
+grid size inside (10 cm) the fire compartment and a fine grid size outside was seen to underestimate the output, as described above. 
 
 ## Influence of the choice of thermocouple position
 
@@ -222,13 +234,13 @@ As seen in Figure 4, thermocouples were placed every 10 cm offset the symmetry l
 
 ## Influence of increased radiation angles and increased HRRPUA
 
-The standard number of angles in FDS is 100, which is considered reasonable in most situations bearing in mind the 20 % of the CPU time of a calculation is required for this setting [2]. However, given the geometry and properties of fire scenarios in some cases, the default value of 100 can be insufficient. The default value of 100 angles was changed to 500 angles to study potential differences in the results [1]. However, the increase in radiation angles resulted in minor differences in temperature and radiation outputs. Note that the change in radiation angles resulted in an increase of 73 h in computational time or some 30 %.
+The standard number of angles in FDS is 100, which is considered reasonable in most situations bearing in mind the 20 % of the CPU time of a calculation is required for this setting. However, given the geometry and properties of fire scenarios in some cases, the default value of 100 can be insufficient. The default value of 100 angles was changed to 500 angles to study potential differences in the results [1]. However, the increase in radiation angles resulted in minor differences in temperature and radiation outputs. Note that the change in radiation angles resulted in an increase of 73 h in computational time or some 30 %.
 
 Also, the effect of an increase in HRRPUA was studied by doubling the HRRPUA. Instead of specifying 3100 kW/m2 on a 1 m2 burner, 6200 kW/m2 was used on a 0.5 m2 burner (2 000 mm (W) by 250 mm (D)). Note that the modelled HRR remained unchanged and the tray still was modelled at the same width to prevent any potential differences in the output concerning the flame spread along the facade. However, the increase from 3100 kW/m2 to 6200 kW/m2 gave minor changes in temperature and radiation outputs.
 
 ## Influence of increased soot yield
 
-In the main simulations a soot yield of 0.037 was specified based on the results of a validation study of smoke and toxic gas concentrations in a test compartment. The soot yield was increased to 0.1 to observe any differences in the output data [1]. Regarding gas temperatures, the change in soot yield had minor effects. However, temperatures from the modelled plate temperatures were seen to increase especially on the positions closest to the fire nearly reaching the actual temperature during the second peak of the HRR history. The increase in soot yield also increased the q ̇_IRHF^''-output with some 20 % at position 1 closest to the fire source, now reaching the same level as the computed incident radiation during the test.
+In the main simulations a soot yield of 0.037 was specified based on the results of a validation study of smoke and toxic gas concentrations in a test compartment. The soot yield was increased to 0.1 to observe any differences in the output data. Regarding gas temperatures, the change in soot yield had minor effects. However, temperatures from the modelled plate temperatures were seen to increase especially on the positions closest to the fire nearly reaching the actual temperature during the second peak of the HRR history. The increase in soot yield also increased the q ̇_IRHF^''-output with some 20 % at position 1 closest to the fire source, now reaching the same level as the computed incident radiation during the test.
 
 # A COMPARISON WITH FDS VERSION 5.5.3
 Below comparisons are made to the results from the previous validation study on FDS 5.5.3 for the same test. Note that the output data from FDS are slightly offset each other, which is due to different start times of the HRR history. In general, FDS 6.2.0 are producing higher values than FDS 5.5.3 for the given configuration, especially regarding the modelled plate thermometer temperatures and close to the opening. The similar is seen for incident radiation. Regarding temperatures retrieved from the thermocouples, only small discrepancies are found between the program versions at position C27 and C28 with slightly higher values in FDS 6.2.0. At position C29 however, considerable higher values are represented in FDS 6.2.0.
@@ -387,8 +399,3 @@ that shows all of the different data fields for the BibTeX file.
 [BIB]
 
 &pagebreak;
-
-
-# Conclusion
-If you have any questions concerning your paper and/or the Conference,
-please email us at [conference@thunderheadeng.com][emaillink].
