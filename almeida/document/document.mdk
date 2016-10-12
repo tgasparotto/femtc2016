@@ -195,8 +195,6 @@ Total area is around 320 square meters.
 
 [Sala2-a]: images/Sala2-a.jpg "Sala2-a" { width:auto; max-width:60% }
 
-
-
 Table [#table2] presents two concerts held in April, one with 211 people seated 
 and the other, a rock concert with 638 spectators standing.
 Similarly to the table [#table1], real time was computed by visioning CCTV footage.
@@ -211,7 +209,35 @@ during an emergency.
 | 14.04.2016 | Legendary Tiger Man |   638   |     07:47  |   03:44    |
 |------------|---------------------|---------|------------|------------|
 ~
- 
+
+Figure [#figcdm_sala2PF2] shows a snapshot of the simulation process, having only the 
+usual 2 exits, left and right, at the bottom of the auditorium. The emergency exit 
+located at the left (when looking towards the stage) is close. This is represented in 
+the model with a red line. This scenario is compliant with the layout of the
+concerts shown at table [#table2].
+
+~ Figure { #figCdM_sala2PF2; caption:"2D Pathfinder snapshot showing 
+  egress with the emergency exit near the stage closed (red line) "}
+![Cdm_Sala2PF2]
+~ 
+[Cdm_Sala2PF2]: images/Cdm_Sala2PF2.png "Cdm_Sala2PF2" { width:auto; max-width:90% }
+
+The Pathfinder tool can be used to estimate the improvement that opening an emergency
+exit might have in the total evacuation time. Figure X shows the same situation 
+presented before in figure Y, this time having the emergency exit, near the stage, open. 
+
+
+
+~ Figure { #figCdM_sala2PF3; caption:"3D Pathfinder simulation 
+  snapshot showing egress with the emergency exit near the stage open"}
+![Cdm_Sala2PF3]
+~ 
+
+[Cdm_Sala2PF3]: images/Cdm_Sala2PF3.png "Cdm_Sala2PF3" { width:auto; max-width:90% }
+
+
+
+
 
 # CASE STUDY: COLISEU DO PORTO
 
