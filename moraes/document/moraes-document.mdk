@@ -22,7 +22,10 @@ were performed where firefighters trainees had to escape through
 a single door with 1.12 meter span, varying the crowd density. 
 In the filming, besides the formation of supporting arches where
 people get stuck to each other and against the walls, it was observed
-turbulence, characterized by random and involuntary movements of people within the crowd. 
+turbulence, characterized by random and involuntary movements of people within the crowd.
+A simulation model is validated against experiment's results and used to check if the 
+fire safety code mandatory for night clubs in Santa Catarina-Brazil is also effective 
+for uncoordinated egress.
 ~
 
 [editor]: https://www.madoko.net/editor.html "Madoko.net Editor"
@@ -42,21 +45,32 @@ on fire safety code.
 
 As unit of Brazilian federation, each state, through
 its fire department, is responsible to define the fire safety code and
-assure its application. For example, one less than two years after Kiss, 
+assure its application. For example, less than a year after Kiss, 
 Santa Catarina Military Fire Department (CBMSC) launched its new fire 
 safety code banning the use of any type of fireworks and flammable foam
 in closed rooms. However, defining the size and number of terminal emergency 
 exit, being either safe and cost-effective is not simple as setting another
-article in a code. CBMSC launched an experiment in order to analyze what
-happens during an uncoordinated egress like the one took place at Kiss. 
+article in a code. 
 
-This paper presents results like exit blockages, turbulence inside crowd and egress
- time and flow due to initial population. At last, a computer model was validated by 
- the experiment's results and used to evaluate the actual fire safety code mandatory
-  in Santa Catarina state, regarding to the final emergency exit width and distribution. 
- 
+As part of a monograph of CBMSC's Military Academy, an experiment
+was done to analyse what happens inside the crowd during an uncoordinated egress like
+the one took place at Kiss. This paper presents some of those results like exit blockages, 
+crowd's turbulence, egress time and egress flow. The variable was the crowd's density, 
+varying it from 0.5 to 4.0 individuals per square meter. At last, a computer model was
+validated against the experiment's results and used to evaluate the actual fire safety
+code mandatory in Santa Catarina state, specifically the evacuation capability regarded to
+the finals door at the ground floor 
+
 
 # UNCOORDINATED EGRESS { #sec-egress}
+Acoording @code2009nfpa, the evacuation capability is the ability of occupants, residents, 
+and staff as a group either to evacuate a building or to relocate from the point of
+occupancy to a point of safety.
+
+
+ ability of occupants, residents, and staff as a group either to evacuate a building or to
+relocate from the point of occupancy to a point of safety.
+A coordinated egress
 
 Based on literature review and empirical research, 
 Helbing, Farkas and Vicsek [@helbing2000simulating] lists the events that
@@ -162,7 +176,8 @@ In a coordinated evacuation, time to egress is directly proportional to
 the initial population. For example, where there are 100 person, they 
 will take 40 seconds evacuate the place. By linearity, it would last 80
 seconds the egress of 200. However, in an uncoordinated egress, the 
-crowd dynamics blow with linearities. Table [#tab-tempo] presents the egress time and mean flow from experiments analysis.
+crowd dynamics blow with linearities. Table [#tab-tempo] presents the egress 
+time and mean flow from experiments analysis.
 
 ~ TableFigure { #tab-tempo; caption: "Egress time against population"; .wide }
 
@@ -247,7 +262,7 @@ and simulation. The egress time is slightly lower at simulation, but the curve s
 As stated before, CBMSC launched its new fire safety code right after the Kiss tragedy.
 For nightclubs and similar, the allowable public is the double of room area. That means, 
 in a 100m² place, there will be 200 individuals allowed. Specifically to the terminal exit
-door, article 65, IV, c) [@IN09], states: "room above 400m² must have at least two
+door, article 65, IV, c) [@IN09], states: "room above 400m² shall have at least two
 doors being one greater than 2m and others greater than 1.2m". Considering that each 
 0.55m has the escape capacity of 100 individuals per minute [@IN09], in a nightclub like
 Kiss with 615m² [@crea2013], would be permitted 1230 individuals and the total exit width must
