@@ -55,16 +55,18 @@ The mentioned test rig setup was slightly altered in the tests used as reference
 
 ![Test]
 
-[Test]: images/Test.png "Test" { width:auto; max-width:100% }
+[Test]: images/Test.png "Test" { width:auto; max-width:98% }
 
 ## Arrangement, instrumentation and measurements in the reference test
 The thermal exposure was estimated at the panel surface with six Incoel steel plates with wire thermocouples spot-welded on their backside, fastened flush with the surface. The steel plates were nominally 0.7 mm thick, measured 150 mm by 150 mm and covered a hole (Ø100 mm) drilled through the panels for the thermocouple wires. Further, six sheathed type K thermocouples (Ø0.50 mm) were placed along the centerline of the panels in order to quantify the gas temperature in the buoyancy plume along the centerline of the panels. The thermocouples were placed 50 mm from the front surface of the panels and, as seen in Figure 1, positioned 50 mm offset the plate thermometers. In conclusion, the measurements took place at 0.5 m (C21/C27), 1.6 m (C22/C28), 2.7 m (C23/C29), 3.8 m (C24/C30), 4.8 m (C25/C31) and 5.9 m (C26/C32) above the opening.
 Moreover, gas temperature, velocity and generation of gaseous species such as CO, CO2 and depletion of O2 was measured during the test by a large Industrial Calorimeter, meaning both the convective and the total heat release rate could be estimated during the test [3]. Information about the HRR history of the reference test is found in Figure 3.
 
 ## Incident radiation using a plate thermometer
-The incident radiation was studied using the retrieved temperatures from the thermometers and the thermocouples. The incident radiation q ̇_(INC_E)^'' (W/m2) was then derived from the following equation, Eq. 1 [3]:
+The incident radiation was studied using the retrieved temperatures from the thermometers and the thermocouples. The incident radiation q ̇_(INC_E)^'' (W/m2) was then derived from the following equation, Equation [#equation1]:
 
-q ̇_(INC_E)^''  = σT_s^4-(h_c (T_g-T_s ))/ε+dcρ/ε∙dT/dt									(1)
+~ Equation { #equation1 }
+e = \lim_{n\to\infty} \left( 1 + \frac{1}{n} \right)^n
+~
 
 where σ is the Stefan Boltzmann constant (5.67·10-8 W/[m2·K4]), d is the plate thickness (0.7 mm), c is the specific heat of steel (7 850 J/[kg·K]), ρ is the density of the steel plate (480 kg/m3) and ε is the emissivity assumed to be of 0.9 [-] [3]. The variable T_s is defined as the surface temperature of the plate thermometer and T_g is defined as the temperature of the free air flow (gas temperature). From the following equation, Eq. 2 [3], the forced convective heat transfer h_c (W/[m2·K]) was estimated:
 
@@ -85,9 +87,7 @@ The model in FDS were built up using building materials corresponding to the tes
 
 FIGURE 2
 
-The different grid sizes used in FDS are presented in Table 1. The main model were built up by a single mesh in order to avoid high speed flow at mesh alignments, which in turn can affect the results of the simulation. A sensitivity analysis were later conducted covering the potential influence on results of different mesh alignments, presented in the sensitivity analysis chapter.
-
-TABLE 1
+The different grid sizes used in FDS are presented in Table [#Table1]. The main model were built up by a single mesh in order to avoid high speed flow at mesh alignments, which in turn can affect the results of the simulation. A sensitivity analysis were later conducted covering the potential influence on results of different mesh alignments, presented in the sensitivity analysis chapter.
 
 ~ TableFigure { #Table1; caption: "Various measurements of the computational domain in FDS [1]"; .wide }
 
@@ -100,7 +100,6 @@ TABLE 1
 |----------------|------------------------------------|-----------------------|-----------------|
 ~
 
-Pseudeo $R^{2}$
 The ratio D^*/δx for the conducted simulations are approximately 8, 15 and 30 for the coarse, medium and fine grid respectively. These values can be compared with the values (D^*/δx of 4-16) that historically has been used as reference in FDS applications. The values of 8, 15 and 30 can also be put in relation to the values represented in Table 3.11 of the FDS validation guide [13], where the mean value of the lower range limits is of around 8 and the mean value of the upper range is of around 16.
 
 The finest grid size used in the validation study corresponds to a higher value than 16, which means it is considered to give better results from the accuracy perspective but on the negative side enhance the simulation time drastically. For the current single mesh simulations, computational times of 1.5, 18 and 232 h were exhibited for the 20, 10 and 5 cm cells. Even though the simulation with 5 cm grid size gave simulation times that were multiple times as long as for the 10 cm and 20 cm case, it was considered important to study a grid size this small as it is known that the choice of grid size gives the single most influence on the solution in FDS [14]. 
@@ -270,7 +269,6 @@ The increase in radiation angles in the sensitivity study from 100 angles to 500
 
 Studying the difference in output for various positions of thermocouples are important in order to get an understanding for the consequences in the choice of where measurements are taking place in the simulations. As seen from the sensitivity study, depending on the position of a thermocouple, significant variations in output are found. This outcome has to be considered when modelling facade fires in FDS. Also, the influence of mesh alignments was examined. The results showed minor differences in the outputs as long as a uniform mesh resolution was used. The simulation with coarser grid size within the fire compartment and finer grid size outside produced different outputs most likely because the 10 cm grid was not able to resolve all of the turbulence as a 5 cm grid would and those errors were passed on out to the finer grid outside the fire room. Because the 2 meshes configuration had a horizontal mesh intersection at the facade above the fire, it was expected to influence on the results. However, it is assumed that this critical mesh division was not close enough to the more turbulent regions around the fire to affect the calculations. Hence, the result suggests that the computational domain can be divided into several meshes in FDS applications of external fire spread without having to affect the result to a great extent, given that a uniform cell size is used throughout.      
 
-
 # INTRODUCTION { #sec-intro }
 You are encouraged to use the [Madoko.net Editor][editor] while using
 the [Madoko Reference Manual][reference-manual] to edit/commit your
@@ -294,36 +292,6 @@ the number of pages. You are free to exceed the target length of eight
 pages.
 
 Please watch this short YouTube Video for a tutorial on how to use the system as intended.
-
-# METHODOLOGY
-Main Headings are all upper case letters and underlined. In Madoko, a
-Single '#' symbol at the start of the line, followed by a space and then
-the heading text.
-
-# EXPERIMENTAL SETUP
-Main Headings are all upper case letters and underlined. In Madoko, a
-Single '#' symbol at the start of the line, followed by a space and then
-the heading text.
-
-## SP FIRE 105 test rig
-Subheadings within sections follow the same format as section titles, but
-with upper and lower case. In Madoko, a Double '#' symbol at the start of
-the line, followed by a space and then the heading text.
-
-## Arrangement, instrumentation and measurements in the reference test
-Subheadings within sections follow the same format as section titles, but
-with upper and lower case. In Madoko, a Double '#' symbol at the start of
-the line, followed by a space and then the heading text.
-
-## Incident radiation using a plate thermometer
-Subheadings within sections follow the same format as section titles, but
-with upper and lower case. In Madoko, a Double '#' symbol at the start of
-the line, followed by a space and then the heading text.
-
-### Subsubheadings like this style
-Subsubheadings have no underline, and only the first letter capitalized.
-In Madoko, a Triple '#' symbol at the start of the line, followed by a
-space and then the heading text.
 
 # FIGURES, TABLES, AND EQUATIONS
 Original drawings and photos may be included in your paper as figures.
@@ -379,18 +347,6 @@ Or to use &logolatex; to align equations.
 \end{aligned}
 ~
 
-# FUN CONTENT EXAMPLES
-Let's program some JavaScript:
-``` javascript
-function hello() {
-  return "hello world!"
-}
-```
-Here is a footnote[^fn] reference.
-[^fn]: This is the content of the example footnote. 
-    You can continue a footnote by indenting content.
-    And notice the back link.
-
 # BIBLIOGRAPHY AND REFERENCES
 When references are used in the text, tie them to an alphabetical (by
 principal author) list of references to be included as the last item of
@@ -428,64 +384,10 @@ journal, volume, date, pages. There is a nice [table on
 Wikipedia](https://en.wikibooks.org/wiki/LaTeX/Bibliography_Management#BibTeX)
 that shows all of the different data fields for the BibTeX file.
 
-# PAPER DEADLINE
-Your paper, in final form, must be received by October 15th, 2016. The
-best way to edit and submit is to use the Madoko [editor] to edit your
-document in the 'authoring' branch of the GitHub [femtc2016] repository.
-If you choose to use some other document format and editing tool, PDF
-format is preferred, but ODT, DOC, or DOCX formats are acceptable. Please
-e-mail the files to [conference@thunderheadeng.com][emaillink].
-
-# PRESENTATION
-Each author must present his/her paper within the allotted time, allowing
-for some minutes of open discussion. The session chair is responsible for
-keeping authors within their time limit, in order to ensure that each
-author has enough time for their presentation. When preparing your
-presentation slides, make sure they are clear and large enough so that
-your audience can read them from as far as 80 feet away.
-
-All presentations will be made using the computer projector available in
-the conference room. We will not have overhead projectors or slide
-projectors in the meeting rooms.
-
-Your presentation, in final form, must be received by **October 15th,
-2016**. A final commit of the files to the GitHub repository is
-preferred. Once the final draft is complete and reviewed it will be
-merged into the master branch of the repository. If you decide to use
-some other tool for creating your presentation, PDF format is preferred,
-but ODP, PPT, or PPTX formats are acceptable. Please e-mail the files
-to [conference@thunderheadeng.com][emaillink].
-
-All presentations will be pre-loaded on the computers that are present.
-Please note that this approach will make it necessary for us to receive
-the presentation files prior to the conference. If you have a different
-software requirement, it should still be possible for you to attach your
-own computer to the projector if you bring it with you. This is not
-optimal, as it takes time and slows down the session.
-
-# CONFERENCE CONTENT DISTRIBUTION
-The papers and presentation materials will be made available online
-during and after the conference. In addition, the organizers are planning
-to may broadcast live presentations online during the event. The papers,
-presentations, and videos will be archived and made available on the web
-after the conference.
-
-Author(s) retain all rights to submitted material. The organizers are
-granted a non-exclusive right to copy and redistribute conference
-material submitted by the author(s).
-
 [BIB]
 
 &pagebreak;
 
-# An appendix { @h1:"A" }
-"All the same, I should like it all plain and clear," said he
-obstinately, putting on his business manner (usually reserved for people
-who tried to borrow money off him), and doing his best to appear wise and
-prudent and professional and live up to Gandalf's recommendation. "Also I
-should like to know about risks, out-of-pocket expenses, time required
-and remuneration, and so forth" -- by which he meant: "What am I going to
-get out of it? and am I going to come back alive?"
 
 # Conclusion
 If you have any questions concerning your paper and/or the Conference,
