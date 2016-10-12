@@ -121,9 +121,21 @@ but can vary according the layout used. Without the choir places,
 located at the back of the stage, the audience is limited to 1069 seats.
 Total area is around 1100 square meters.   
 
-Table [#table-sample] shows an example full width table figure.
+~ Figure { #figCdM_sala1view; caption:"Casa da Música: Sala Suggia parcial view"}
+![CdM_sala1view]
+~
 
-~ TableFigure { #table-sample; caption: "Comparison between real times and Pathfinder"; .wide }
+[CdM_sala1view]: images/CdM_sala1view.png "CdM_sala1view" { width:auto; }
+
+Table [#table1] shows a comparison between real times of 
+the public leaving the audience towards the outside and those 
+obtained using Pathfinder. The real time was obtained by visioning the internal 
+video surveillance footage (CCTV). It should be noticed that many of spectators leave
+the room slowly, talking and greeting some acquaintances, thus taking a lot longer
+than expected in a real emergency situation. Nevertheless, the values in the
+table can be used as benchmark for calibrating the model. 
+
+~ TableFigure { #table1; caption: "Comparison between real times and Pathfinder"; .wide }
 |------------|---------------------|---------|------------|------------|
 |    Date    | Event               | Audience|  real time | Pathfinder |
 |:-----------|:-------------------:|:-------:|:----------:|:----------:|
@@ -135,6 +147,7 @@ Table [#table-sample] shows an example full width table figure.
 |------------|---------------------|---------|------------|------------|
 ~
 
+
 ## Casa da Música: Sala 2
 
 Sala 2 is the second largest auditorium of Cams da Música. Designed as a multipurpose space, 
@@ -143,9 +156,29 @@ integrated into the partition panels of the foyer. These ports slide,
 assisted by a lower engine, and have a safety opening system from the inside. 
 The chairs, in purple tone, are an elegant tribute to the Portuguese designer 
 Daciano da Costa, author of this model in the70’s. Has capacity for 250 people seated or
-650 standing, although in the former, including the foyer.
+650 standing, although in the former, including the foyer. 
+Total area is around 320 square meters.
 
+~ Figure { #figCdM_sala2-a; caption:"Casa da Música: Sala 2 parcial view with seats"}
+![Sala2-a]
+~
 
+[Sala2-a]: images/Sala2-a.jpg "Sala2-a" { width:auto; max-width:60% }
+
+Table [#table2] presents two concerts held in April, one with 211 people seated 
+and the other, a rock concert with 638 spectators standing.
+Similarly to the table [#table1], real time was computed by visioning CCTV footage.
+It was noticed that many of spectators leave slowly, taking longer they probably would
+during an emergency.
+
+~ TableFigure { #table2; caption: "Comparison between real times and Pathfinder"; .wide }
+|------------|---------------------|---------|------------|------------|
+|    Date    | Event               | Audience|  real time | Pathfinder |
+|:-----------|:-------------------:|:-------:|:----------:|:----------:|
+| 11.04.2016 | Passaro e Fogo      |   211   |     04:00  |   02:42    |
+| 14.04.2016 | Legendary Tiger Man |   638   |     07:47  |   03:44    |
+|------------|---------------------|---------|------------|------------|
+~
  
 
 # CASE STUDY: COLISEU DO PORTO
@@ -168,8 +201,9 @@ limitations and the venue suffered new interventions in 1997 and 1998. It was
 offcially reopened in November 1998, about two years after the fire, and has since 
 then regained its role as one of Porto’s most dynamic cultural spots.
 
-
+~ Figure { #figColiseu1; caption:"Coliseu Porto: view of the concert hall from the stage"}
 ![coliseu]
+~
 
 [coliseu]: images/coliseu.jpg "coliseu" { width:auto; max-width:90% }
 
@@ -210,23 +244,6 @@ files, latex style files, etc.
 Images larger than about 1Mb in size will be rejected by the Madoko.net server.
 ~
 
-## Tables
-Table [#table-sample] shows an example full width table figure.
-
-~ TableFigure { #table-sample; caption: "Modelle mit unterschiedlich geschätztem baseline hazard"; .wide }
-|                | $c(t)$                               ||||
-|                |---------|---------|---------|-----------|
-|                | (A0)    | (A1)    | (A2)    | (A3)      |
-|                | ohne    | Log     | Polynom | Stückweise|
-|                |         |         |         | konstant  |
-|:---------------|:-------:|:-------:|:-------:|:---------:|
-| Log likelihood | -6.798  | -6.733  | -6.715  | -6.686    |
-| Pseudeo $R^{2}$| 0,048   | 0,057   | 0,059   | -         |
-| AIC            | 13.615  | 13.489  | 13.456  | 13.483    |
-| BIC            | 13.711  | 13.594  | 13.580  | 14.009    |
-| N              | 105.484 | 105.484 | 105.484 | 105.484   |
-|----------------|---------|---------|---------|-----------|
-~
 
 
 ```
