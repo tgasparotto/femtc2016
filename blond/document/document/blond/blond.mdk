@@ -139,7 +139,7 @@ The definition of the initial temperature by means of the adiabatic temperatures
 
 [Temperature 0.1 MW]: images/Temperature-0.1-MW.JPG "Temperature 0.1 MW" { width:auto; max-width:90% }
 ~
-~ SubFigure
+~ SubFigure { #fig-subfig2; caption:"1.200 kW"; }
 
 ![Temperature 1.2 MW]
 ~
@@ -183,7 +183,9 @@ The following graph show the temperature sensor distribution during the test.
 
 ~ Figure {caption: "Distribution of the temperature sensor during the full scale test with Izar" }
 ![Manegg measure sensor ]
+
 [Manegg measure sensor ]: images/Manegg-measure-sensor-.jpg "Manegg measure sensor " { width:auto; max-width:90% }
+
 ~
 
 
@@ -377,7 +379,7 @@ best way to edit and submit is to use the Madoko [editor] to edit your
 document in the 'authoring' branch of the GitHub [femtc2016] repository.
 If you choose to use some other document format and editing tool, PDF
 format is preferred, but ODT, DOC, or DOCX formats are acceptable. Please
-e-mail the files to [conference@thunderheadeng.com][emaillink].
+e-mail the files to
 
 # PRESENTATION
 Each author must present his/her paper within the allotted time, allowing
