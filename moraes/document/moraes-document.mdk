@@ -22,10 +22,7 @@ were performed where firefighters trainees had to escape through
 a single door with 1.12 meter span, varying the crowd density. 
 In the filming, besides the formation of supporting arches where
 people get stuck to each other and against the walls, it was observed
-turbulence, characterized by random and involuntary movements of people within the crowd.
-A simulation model is validated against experiment's results and used to check if the 
-fire safety code mandatory for night clubs in Santa Catarina-Brazil is also effective 
-for uncoordinated egress.
+turbulence, characterized by random and involuntary movements of people within the crowd. 
 ~
 
 [editor]: https://www.madoko.net/editor.html "Madoko.net Editor"
@@ -45,37 +42,32 @@ on fire safety code.
 
 As unit of Brazilian federation, each state, through
 its fire department, is responsible to define the fire safety code and
-assure its application. For example, less than a year after Kiss, 
+assure its application. For example, one less than two years after Kiss, 
 Santa Catarina Military Fire Department (CBMSC) launched its new fire 
 safety code banning the use of any type of fireworks and flammable foam
 in closed rooms. However, defining the size and number of terminal emergency 
 exit, being either safe and cost-effective is not simple as setting another
-article in a code. 
+article in a code. CBMSC launched an experiment in order to analyze what
+happens during an uncoordinated egress like the one took place at Kiss. 
 
 As part of a monograph of CBMSC's Military Academy, an experiment
-was done to analyse what happens inside the crowd during an uncoordinated egress like
+was done to analyze what happens inside the crowd during an uncoordinated egress like
 the one took place at Kiss. This paper presents some of those results like exit blockages, 
 crowd's turbulence, egress time and egress flow. The variable was the crowd's density, 
 varying it from 0.5 to 4.0 individuals per square meter. At last, a computer model was
-validated against the experiment's results and used to evaluate the actual fire safety
-code mandatory in Santa Catarina state, specifically the evacuation capability regarded to
-the finals door at the ground floor 
-
+validated against the experiment's results and used to evaluate the Santa Catarina's fire
+safety code, specifically the regarding to evacuation capability through doors at the ground
+floor of nightclubs and similar.
 
 # UNCOORDINATED EGRESS { #sec-egress}
-Acoording @code2009nfpa, the evacuation capability is the ability of occupants, residents, 
-and staff as a group either to evacuate a building or to relocate from the point of
-occupancy to a point of safety.
-
-
- ability of occupants, residents, and staff as a group either to evacuate a building or to
-relocate from the point of occupancy to a point of safety.
-A coordinated egress
-
-Based on literature review and empirical research, 
-Helbing, Farkas and Vicsek [@helbing2000simulating] lists the events that
-can occur during an emergency evacuation, right after the identification 
-of the threat: 
+Evacuation capability is the ability of occupants, residents, and staff as a group either 
+to evacuate a building or to relocate from the point of occupancy to a point of safety
+@code2009nfpa. An evacuation process would be: a) coordinated, when
+people leaves the place in an ordered queue, coordinated flow without rush; b) uncoordinated, 
+when everyone rush for the exit, pressing others ahead, the flow become nonlinear with stops
+and goes, either with or without mass panic. Based on literature review and empirical
+research, Helbing, Farkas and Vicsek @helbing2000simulating lists the events that
+can occur during an emergency evacuation, right after the identification of the threat: 
 (1) people try to move faster than normal; 
 (2) individuals press to exit, causing physical interactions with those around; 
 (3) movement becomes uncoordinated through the openings; 
@@ -86,37 +78,32 @@ of the threat:
 (8) tendency to mass behavior increases; 
 (9) alternatives are neglected.
 
-
 ## Experiment { #sec-experiment}
-The egress experiment aims to verify the influence of overcrowd on the 
-buildings occupants safety. Figure [#fig-ginasio] shows a top view out of scale of
-the sports court detailing the experiment. In a controlled environment with
-only one 1.12m exit door, a group of 20-30 years old firefighter trainees 
-are distributed over 70m². A whistle sounds. Time counting starts. All 
-occupants are urged to leave immediately no matter how, as it would be
-the reaction observed by people realizing imminent risk to life itself. 
-The experimental results can be either quantitative, highlighting the
-egress time and flow or qualitative, by identifying by image analysis 
-the dynamics of crowds: blockages, arcs, waves and turbulence.
+The uncoordinated egress experiment aims to verify some of those events above described. 
+Otherwise, several crowd density were applied to assert how it influences on the egress
+time and egress flux. Figure [#fig-ginasio] shows a top view, out of scale, of part of
+the CBMSC Military Academy's Sport Hall, detailing the experiment. In a controlled 
+environment, with only a 1.12m exit door, a group of 20 to 30 years old, firefighting 
+students, were distributed over 70m² emulating a night club environment. A whistle sounds.
+All occupants are urged to leave the area immediately, as it would be the reaction observed
+by people perceiving imminent risk to their lives. 
 
-The V1 camera (yellow cone area view), held by and operator 5m above the
-floor level, films the crowd from behind. Fixed above the output door, V2
-camera (blue circle area view) records people near the door. The V3 
-(orange cone area view) is positioned on a vehicle parked next to the exit 
-and facing that door.
-
+The V1 camera films the crowd from behind. Fixed above the door, V2 camera records people
+near the door. The V3 is positioned over a vehicle parked next to the exit and facing the
+door from outside. The angle of view of those cameras are represented by a dashed blue
+semicircle and a red and yellow lines.
 
 ~ Figure { #fig-ginasio; caption:"Egress experiment scheme."}
 ![esquemaExperimento_02]
 ~
 [esquemaExperimento_02]: images/esquemaExperimento_02.png "esquemaExperimento_02" { width:auto; max-width:90% }
 
-During the experiments there were no visibility or fresh air restriction, 
-participants knew the path to be followed to the exit, there were no
-obstacles and the group was very homogeneous concerning mobility and
-decision-making skills. Figure [#3cam] shows a simultaneous snapshot of
-cameras V1, V2 and V3 during the experiment. Eight experiments were made,
-applying the following start populations: 35, 70, 105, 140, 175, 210 and 280. 
+During the experiments there were no visibility restriction or lack of fresh air, 
+participants were quite homogeneous concerning mobility and decision-making skills, 
+they saw and knew which direction to take to egress and there were no obstacles. 
+Seven trials were performed, varying the inital population as follows: 35, 70, 105, 
+140, 175, 210 and 280. Figure [#3cam] shows a  snapshot of cameras V1, V2 and V3
+during the experiment.
 
 ~ Figure { #3CAM; caption:"Simultaneous snapshots taken during experiment."}
 ![snapshot3CAM]
@@ -125,34 +112,34 @@ applying the following start populations: 35, 70, 105, 140, 175, 210 and 280.
 
 
 ## Simulation { #sec-sim}
-Helbing, Farkas and Vicsek [@helbing2000simulating] brought with an egress
-simulation model, here named "Panic Package". Authors considered that in an 
-emergency, every individual should aim the exit, following a straight path
-at a desired speed. If those ahead are not at the same speed, they will be 
-underwent by those behind, raising the crowd pressure. 
+Helbing, Farkas and Vicsek [@helbing2000simulating] presented an egress
+simulation model, here named as "Panic Package". Authors considered that in an 
+emergency, every individual should aim the exit, following a straight path at a desired
+speed. If those ahead are not at the same speed, they will be underwent by those behind, 
+raising the crowd pressure. According to this model, the forces inside a crowd in an
+uncoordinated egress are: a) physical, reaction to compression and friction either among
+individuals or against walls; b) socio-psychological, related to aversion of crowding.
 
-All simulation parameters were set as default, except those now described: 
-a) door size, 1.12m; b) room's area, 70m²; c) smoke speed, 0.5m/s; d) 
-circle (representing an individual) diameter, 47.5&plusmn;5.0cm;
-According to this model, the forces applied by and on individuals are physical
-and socio-psychological. The latter is related to people aversion people's
-cluster aversion to crowding. Physical forces are the reaction to compression
-and friction, either among people or between individual and wall. 
+Panic Package is part of the article publicized on Nature
+on 2000 @helbing2000simulating. Simulation parameters were maintained as default, except 
+those now described: a) door size, 1.12m; b) room's area, 70m²; c) circle
+(representing an individual) diameter, 47.5&plusmn;5.0cm and; d) initial number of
+particles, set according to the number of individuals.
+ 
+ 
 
 # RESULTS   { #sec-results}
-The experiment results are divided in: qualitative, by identifying arches and turbulence on videos 
-and representing by images; quantitative, regarding to egress time and flow analysis. Then, "Panic Package" 
-simulation is compared to those results and, once validated, the model is used to check
-how effective is the CBMSC's fire safety code regarding to the emergency exit's width and
-distribution.
+The experiment results are here divided in: qualitative, where is presented the blockages
+and crowd's turbulence on videos and; quantitative, regarding to egress time and flow 
+analysis. Then, "Panic Package" simulation results are compared against the experimental. 
+That validated simulation model is used to check effectiveness of some aspects of CBMSC's
+fire safety code regarding to nightclub's emergency egress. 
 
 ## Qualitative Results { #sec-quali}
-Figure [#arch] presents a snapshot (175 person egress experiment) highlighting
-an arch that is force distribution representation along the crowd. 
-The charge given by people pushing from behind compacts the arch and, 
-as the crowd pressure raises, the force is transferred shoulder to 
-shoulder until the ones close to the walls. 
-
+Figure [#arch] presents a snapshot, at a point of the 175 crowd experiment, highlighting 
+two semicircles of individuals reminding an arch format. Those individuals composing the
+arches withstand a huge compressive force and transmit that shoulder to shoulder to the
+wall. The more people push towards the arch, the more it compacts itself. 
 ~ Figure { #arch; caption:"Snapshot highlighting the arch."}
 ![arch]
 ~
@@ -176,8 +163,7 @@ In a coordinated evacuation, time to egress is directly proportional to
 the initial population. For example, where there are 100 person, they 
 will take 40 seconds evacuate the place. By linearity, it would last 80
 seconds the egress of 200. However, in an uncoordinated egress, the 
-crowd dynamics blow with linearities. Table [#tab-tempo] presents the egress 
-time and mean flow from experiments analysis.
+crowd dynamics blow with linearities. Table [#tab-tempo] presents the egress time and mean flow from experiments analysis.
 
 ~ TableFigure { #tab-tempo; caption: "Egress time against population"; .wide }
 
@@ -262,7 +248,7 @@ and simulation. The egress time is slightly lower at simulation, but the curve s
 As stated before, CBMSC launched its new fire safety code right after the Kiss tragedy.
 For nightclubs and similar, the allowable public is the double of room area. That means, 
 in a 100m² place, there will be 200 individuals allowed. Specifically to the terminal exit
-door, article 65, IV, c) [@IN09], states: "room above 400m² shall have at least two
+door, article 65, IV, c) [@IN09], states: "room above 400m² must have at least two
 doors being one greater than 2m and others greater than 1.2m". Considering that each 
 0.55m has the escape capacity of 100 individuals per minute [@IN09], in a nightclub like
 Kiss with 615m² [@crea2013], would be permitted 1230 individuals and the total exit width must
