@@ -92,15 +92,32 @@ elements](http://research.microsoft.com/en-us/um/people/daan/madoko/doc/referenc
 of the manual.
 
 
-# MAIN HEADINGS LIKE THIS STYLE
-Main Headings are all upper case letters and underlined. In Madoko, a
-Single '#' symbol at the start of the line, followed by a space and then
-the heading text.
+# USING PATHFINDER AS AN EVACUATION PLANNING TOOL
 
-## Subheadings Like This Style
-Subheadings within sections follow the same format as section titles, but
-with upper and lower case. In Madoko, a Double '#' symbol at the start of
-the line, followed by a space and then the heading text.
+Pathfinder can be used 
+
+# CASE STUDY: CASA DA MÚSICA
+
+Casa da Música is a modern concert hall designed by architect Rem Koolhaas, 
+opened in 2005. There are two Auditoriums, the main one is named “Sala Suggia”, 
+as an homage to Guillermina Suggia, Porto’s native world class cellist, having a 
+top capacity of 1244 places. The other Auditorium, “Sala 2” can receive up to 250 
+persons seated or 650 standing.
+
+## Casa da Música: Sala Suggia
+
+The main Auditorium of Casa da Música, "Sala Suggia", has a full capacity of 1244 people, 
+but can vary according the layout used.    
+
+## Casa da Música: Sala 2
+
+Sala 2 is the second largest auditorium of Casa da Música. Designed as a multipurpose space, 
+it is ideal for any type of event. The access is made through two glass and aluminum doors, 
+integrated into the partition panels of the foyer. These ports slide, 
+assisted by a lower engine, and have a safety opening system from the inside. 
+The chairs, in purple tone, are an elegant tribute to the Portuguese designer 
+Daciano da Costa, author of this model in the70’s. Has capacity for 250 people seated or
+650 standing, although in the former, including the foyer.
 
 ### Subsubheadings like this style
 Subsubheadings have no underline, and only the first letter capitalized.
