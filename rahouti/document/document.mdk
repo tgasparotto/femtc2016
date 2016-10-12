@@ -255,9 +255,10 @@ Another parameter is the transportation walking speed – the walking speed
 of the member(s) of the staff while transporting the patient to another
 place of safety or while walking with the patients.
 
-The values used for the simulations are shown in the Tables [#tab-pre-evac] and [#tab-prep-trans]. The
-waiting times are dependent on the scenario simulated. So, they are not
-explicitly described here.
+The values used for the simulations are shown in the
+Tables [#tab-pre-evac] and [#tab-prep-trans]. The waiting times are
+dependent on the scenario simulated. So, they are not explicitly
+described here.
 
 ~ TableFigure {#tab-pre-evac, caption:"Pre-evacuation time [@34;@35] and horizontal walking speed [@36] for ambulant patients."}
 |--------------------------------|------|------|-------------|
@@ -364,7 +365,7 @@ occupancy. Furthermore, the 42 rooms are considered as fully occupied
 ![FIG_2]
 ~
 
-[FIG_2]: images/FIG_2.png "FIG_2" { width:auto; max-width:90% }
+[FIG_2]: images/FIG_2.png "FIG_2" { width:auto; max-width:100% }
 
 
 ### Scenario 1
