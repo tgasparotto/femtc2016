@@ -223,13 +223,13 @@ distribution laws.
 
 ## FLOOR LAYOUT
 
-The layout of the modeled floor is shown in Figure [#fig-layout]. As shown in this
-Figure, this floor contains 42 rooms: 14 single rooms (from 13 to 26) and
-28 double rooms (the others). This floor had three exits associated to
-the emergency staircases, two nurses' stations and some technical rooms.
-The lifts are not used during the evacuation process. The fire is
-supposed located in room 13. Therefore, the East Exit is supposed
-non-functional during the evacuation processes simulated.
+The layout of the modeled floor is shown in Figure [#fig-layout]. As
+shown in this Figure, this floor contains 42 rooms: 14 single rooms (from
+13 to 26) and 28 double rooms (the others). This floor had three exits
+associated to the emergency staircases, two nurses' stations and some
+technical rooms. The lifts are not used during the evacuation process.
+The fire is supposed located in room 13. Therefore, the East Exit is
+supposed non-functional during the evacuation processes simulated.
 
 ~ Figure {#fig-layout, caption:Layout of the 6th floor of the G bloc of the "Clinique Sainte Elisabeth"}
 ![FIG_1]
@@ -272,39 +272,39 @@ described here.
 ~
 
 ~ TableFigure {#tab-prep-trans, caption:"Preparation time and transportation walking speed for non-ambulant patients."}
-|                                                                               |||------|-----|---------|
-|                                                                               ||| Mean |   | Range   |
-+:-------------------------+:-----------------+:----------------------------------+:----:+:---:+:-------:+
-| Dependent patients [@10] | Evacuation Chair | Preparation time (s)              | 32.7 | 5.3 | -       |
-|                          |                  |-----------------------------------|------|-----|---------|
-|                          |                  | Transportation walking speed (m/s)| 1.46 | 0.09| -       |
-|                          |------------------|-----------------------------------|------|-----|---------|
-|                          | Carry chair      | Preparation time (s)              | 41.5 | 7.9 |         |
-|                          |                  |-----------------------------------|------|-----|---------|
-|                          |                  | Transportation walking speed (m/s)| 1.50 | 0.10| -       |
-|                          |------------------|-----------------------------------|------|-----|---------|
-|                          | Stretcher        | Preparation time (s)              | 77.7 | 19.2| -       |
-|                          |                  |-----------------------------------|------|-----|---------|
-|                          |                  | Transportation walking speed (m/s)| 1.04 | 0.09| -       |
-|                          |------------------|-----------------------------------|------|-----|---------|
-|                          | Rescue Sheet     | Preparation time (s)              | 65.2 | 14.1| -       |
-|                          |                  |-----------------------------------|------|-----|---------|
-|                          |                  | Transportation walking speed (m/s)| 0.89 | 0.24| -       |
-|--------------------------|------------------|-----------------------------------|------|-----|---------|
-| Highly dependent patients [@11]            || Preparation time (s)              | -    | -   | 180-900 |
-|                                            ||-----------------------------------|------|-----|---------|
-|                                            || Transportation walking speed (m/s)| 0.40 | 0.04| -       |
-| -------------------------------------------||-----------------------------------|------|-----|---------|
+|                                                                         |||------|-----|---------|
+|                                                                         ||| Mean |   | Range   |
++:-------------------------+:-----------+:----------------------------------+:----:+:---:+:-------:+
+| Dependent patients [@10] | Evacuation | Preparation time (s)              | 32.7 | 5.3 | -       |
+|                          | Chair      |-----------------------------------|------|-----|---------|
+|                          |            | Transportation walking speed (m/s)| 1.46 | 0.09| -       |
+|                          |------------|-----------------------------------|------|-----|---------|
+|                          | Carry      | Preparation time (s)              | 41.5 | 7.9 |         |
+|                          | Chair      |-----------------------------------|------|-----|---------|
+|                          |            | Transportation walking speed (m/s)| 1.50 | 0.10| -       |
+|                          |------------|-----------------------------------|------|-----|---------|
+|                          | Stretcher  | Preparation time (s)              | 77.7 | 19.2| -       |
+|                          |            |-----------------------------------|------|-----|---------|
+|                          |            | Transportation walking speed (m/s)| 1.04 | 0.09| -       |
+|                          |------------|-----------------------------------|------|-----|---------|
+|                          | Rescue     | Preparation time (s)              | 65.2 | 14.1| -       |
+|                          | Sheet      |-----------------------------------|------|-----|---------|
+|                          |            | Transportation walking speed (m/s)| 0.89 | 0.24| -       |
+|--------------------------|------------|-----------------------------------|------|-----|---------|
+| Highly dependent patients [@11]      || Preparation time (s)              | -    | -   | 180-900 |
+|                                      ||-----------------------------------|------|-----|---------|
+|                                      || Transportation walking speed (m/s)| 0.40 | 0.04| -       |
+| -------------------------------------||-----------------------------------|------|-----|---------|
 {  }
 ~
 
 There is a lack of data regarding the number of attendants needed to
-evacuate non-ambulant patients. Table [#tab-operators-roles] shows some values found on the
-available literature for dependent patients. As it is shown in this
-table, the type of the transportation device used defines the number of
-required attendants to prepare the patient and to assist on the
-evacuation process. Comparing the different devices, we can conclude that
-evacuation chair and the rescue sheet require the minimum number of
+evacuate non-ambulant patients. Table [#tab-operators-roles] shows some
+values found on the available literature for dependent patients. As it is
+shown in this table, the type of the transportation device used defines
+the number of required attendants to prepare the patient and to assist on
+the evacuation process. Comparing the different devices, we can conclude
+that evacuation chair and the rescue sheet require the minimum number of
 attendants (two).
 
 For highly dependent patients, the number of attendants needed is
