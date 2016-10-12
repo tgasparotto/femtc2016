@@ -81,36 +81,60 @@ an very high temperatures.
 Above the combustion region, the plume temperature can be calculated using the fluid mechanic equations available in FDS.
 
 The plume generated during the combustion contents the combustion products generated during the combustion. 
-In the diffusion flames the efficiency of the combustion process determinates what is commonly call smoke.
+In the diffusion flames the efficiency of the combustion process defines what is commonly called smoke.
 However in a premixed combustion these combustion products are well known and do not change under different 
 environment conditions. By a simple chemical balance its is easy to determine these combustion products and the amount of them:
 
-~ Center
-C~3~H~4~ + 5 O~2~ + 5 3.76 N~2~ = 3 CO~2~ + 4 H~2~O + 5  3.76 N~2~
-
-|-----------|--------------------|----------------------|
-| Specie    | Molecular weight   | Ratio in the balance |
-+-----------|:------------------:+----------------------+
-| C~3~H~4~  | 40                 | 1                    |
-|           |                    |                      |
-|           |                    |                      |
-| CO~2~     | 44                 | 3.3                  |
-| H~2~O     | 18                 |1.8                   |
-| N~2~      | 28                 | 13.16                |
-|-----------|--------------------|----------------------|
-
+~ Equation {#Propan-combustion; caption:"Propan chemical balance"}
+C_{3}H_{8}+5 O_{2}+5\cdot3.76N_{2}=3CO_{2}+4H_{2}O+5\cdot3.76N_{2}
 ~
 
-The molecular weight of these species is well known and making use of the propane heat of combustion, 46.35 KJ/g, 
-it is straightforward to calculate the necessary kilograms of propane required to achieve a certain power. 
-The chemical equation can be after adjusted to determinate the kg of products produced.
 
-Making use of the preprocessor Pyrosim to create the FDS the values of the products must be introduced per m^2^, 
-therefore the geometry of the burner must be also considered. The geometry play also an important roll to define the size of mesh.
-In the studied case the burning chamber is open and has a V-Shape; it is 122 cm long and 17 cm wide. 
-After a sensitivity analysis a 6.5 cm mesh was chosen.
+~ Tablefigure {#Malecular-weight; caption:"Molecular weight, and mass ratio between propane and combustion products"}
 
-The last factor is the temperature. Defining the adiabatic combustion temperature like the initial gas temperature we can represent the premixed combustion with FDS
+|----------|------------------|--------------------|----------------------|
+| Specie   | Molecular weight | Amount of products | Mass ratio |
+|          |               (g)   |        (g)           |                      |
++:--------:+:----------------:+:------------------:+:--------------------:+
+| C~3~H~4~ | 40               | -                  |-                     |
+| CO~2~    | 44               | 132                |3.3                   |
+| H~2~O    | 18               |72                  |1.8                   |
+| N~2~     | 28               | 526.40             |13.16                 |
+|----------|------------------|--------------------|----------------------|
+~
+
+The molecular weight of these species is well known and making use of the propane heat of combustion, 46.35 kJ/g, it is straightforward to calculate the necessary kilograms of propane required to achieve a certain power.The chemical equation can be after adjusted to determinate the kg of products produced.
+
+For example, in order to generate a power of 500 kW, 10.78 g/s are needed. Using the mass ratio available in the Table [#malecular-weight], the generated amount of products can be calculated:
+
+~ Tablefigure {#Malecular-weight; caption:"Calculation example to determine the amount of product released from a 500 kW fire"}
+
+|----------|----------------|-----------|--------------------|
+| Specie   | Amount of fuel | Mass ratio| Amount of products |
+|          |       (g/s)          |           |               (g/s) |
+|          |           |           |                    |
++:--------:+:--------------:+:---------:+:------------------:+
+| C~3~H~4~ | 10.78          | -         |-                   |
+| CO~2~    | -              | 3.3       |       35.57         |
+| H~2~O    | -              | 1.8       |            19.40    |
+| N~2~     | -              | 13.16     |          141.86   |
+|----------|----------------|-----------|--------------------|
+~
+
+These calculation guarantees that the proper mass is being introduced in the system, and the subsequents mass balance in the system will be based on the correct initial mass values.
+
+These values must be in the FDS code introduced with the unit (kg/m&sdot;s). 
+therefore the combustion area must be also considered. In the studied case the burning chamber is open and has a V-Shape; it is 122 cm long and 17 cm wide. The geometry plays also an important roll to define the size of mesh. The mesh must represent the combustion area as accurate as possible. The initial geometry is related with the moment balance in the system, because it defines the initial velocities in the system. 
+After a sensitivity analysis a 6.5 cm mesh was chosen for this case. 
+
+Another significant factor in the model is the temperature. The adiabatic combustion temperature from propane was chosen. Per definition the mixture fuel-air is predefined and known in a premixed combustion. Stoichiometric mixtures can be defined in order to achieve the highest flame temperatures. These temperatures are the adiabatic combustion temperatures.
+
+The definition of the initial temperature by means of the adiabatic temperatures guarantees that the initial energy represents correctly the system energy and the subsequent energy balance in the model are based in the proper initial values.
+
+
+
+
+Defining the adiabatic combustion temperature as the initial gas temperature we can represent the premixed combustion with FDS. 
 The following figures show the temperatures profile obtained with the model for two different power, 100 kW and 1.200 kW. 
 
 ~ Begin Figure {caption:"Comparison between two simulations with different powers. On the left the a model with 100 kW and on the rigth the model with 1.200 kW"}
@@ -142,50 +166,59 @@ The temperatures of the plume with the system working at four different powers w
 The temperatures were recorded following a similar grid like the one programmed in the simulations. 
 
 In the simulations a measurement grid was implemented along the X and Y axis, with a measurement position each 20 cm and reproduced in the Z- direction each 19.5 cm equivalent to three cells. 
+The validated FDS model for Izar eliminates also the uncertainties related with the fuel and it combustions.
 
 ![FDS grid]
- The validated FDS model for Izar eliminates also the uncertanties realted with the fuel and it combustions.
+
+
 ~ Figure  {caption:"FDS Model with the temperature measurement grid"}
 [FDS grid]: images/FDS-grid.JPG "FDS grid" { width:auto; max-width:90% }
 ~
+
 During the test not all the points could be controlled. Only the central position and two position along the X and Y axis were recorded. These positions were controlled at three different heights above the burner surface: 3 m, 4 m and 6 m. 
 
 These measurements can be defined like local measurements with the aim of obtaining data to compare with simulations.
 The following graphs show the comparison between the recorded temperatures in the simulations and the ones recorded during the tests.
 
-## Validation of the model under real test in a real geometry
-Following the validation process the model was compared with the results obtained from real tests with Izar in a big industrial hall.
-The aim of this validation was to confirm that the FDS model of Izar is capable of reproducing the behaviour of the system during a real smoke test. One of the main characteristics of Izar is capablility of validating FDS geometries.
-The tests too place in a big industrial hall with an aproximate area of 3.000 m2 and 9 m high. 
-Different test with different powers were carried out and the temperatures within the smoke layer were recorded at 5 m, 10 m, and 20 m, from the burner position. A depth of 2.75 m above the ceiling was controlled.
+## Validation of the model during full scale tests
+Following the validation process the model was compared with the real data obtained from fuel scales tests with Izar in a big industrial hall.
+The aim of this validation was to confirm that the FDS model of Izar is capable of reproducing the behavior of the system during a real smoke test, and consequently the created smoke layer.
+
+The tests took place in a big industrial hall with an approximate area of 3.000 m^2^ and 9 m high. 
+Different test with different powers were carried out and the temperatures within the smoke layer were recorded at 5 m, 10 m, and 20 m, from the burner position. A depth of 2.25 m under the ceiling was controlled.
 The following graph show the temperature sensor distribution during the test.
 
-FIGURE with the sensors
+![Manegg measure sensor ]
+~ Figure {caption: "Distribution of the temperature sensor during the full scale test with Izar" }
+[Manegg measure sensor ]: images/Manegg-measure-sensor-.jpg "Manegg measure sensor " { width:auto; max-width:90% }
+~
+
+
 
 The geometry was reproduced in FDS and Izar was modeled using the previous described. The temperature was recorded in the FDS model at the same positions as in the real test.
 The graphs with the comparison between both temperatures fields are available in the Appendix.  
 
-Conclusion
+# Conclusion
 
-The methodology presented along this paper is a eficient tool to model the plumes originated by a premixed combustion. 
+The methodology presented along this paper is a efficient tool to model the plumes originated by a premixed combustion. 
 The method takes advantage of properties of the premixed combustion process, which allow easily to define the combustions products, that are presented in the plume.
-Another important feature of this method is the characterisation of these produchts according to the adiabatic combustion temperature.
+Another important feature of this method is the characterization of these products according to the adiabatic combustion temperature.
 The recorded temperatures during real test confirm the experimental results and allow the model validation.
-Thanks to these model it is possible to model the hot smoke testing system Izar with FDS and defined the plume temperatures for different powers and differents heights; it guarantees the 
-The current expereriences with the system have confirmed that it is possible to define the exact power necessary regarding the heigth of the 
+Thanks to these model it is possible to model the hot smoke testing system Izar with FDS and defined the plume temperatures for different powers and different heights; it guarantees the 
+The current experiences with the system have confirmed that it is possible to define the exact power necessary regarding the height of the 
 room where the smoke test and the limiting factor for the temperature such as sprinklers or other system installed under the ceiling.
 
 # Future work
 
-It will be deseirable to test the method under different geometries and with different combustions which release a different amounts of combustions products.
+It will be desirable to test the method under different geometries and with different combustions which release a different amounts of combustions products.
 If the necessary information is available, a equivalent equation to those available to calculate the plume temperatures from diffusions flames could be developed.
 These information will be very valuable in order to extend the use of systems with premixed flames, for example hot smoke testing systems, in open spaces.
 
-The disponiblity of a validated FDS model for Izar open a wide range of possibilities regarding the validation of FDS geometries.
-Izar helps to eliminate the uncertanty related with the geometry model. The validated FDS model for Izar eliminates also the uncertanties realted with the fuel and it combustions. Making use of its validated FDS model, real test can be carried out and the necessary measurements can be recorded 
+The  of a validated FDS model for Izar open a wide range of possibilities regarding the validation of FDS geometries.
+Izar helps to eliminate the uncertainty related with the geometry model. The validated FDS model for Izar eliminates also the uncertainties realted with the fuel and it combustions. Making use of its validated FDS model, real test can be carried out and the necessary measurements can be recorded 
 to calibrate the FDS geometry.  Therefore it offers the possibility of validating a FDS geometry with real data recorded during a real test with Izar in the studied room,
 and after this validation, carry out the necessary simulations with the proper design fires.
-These kind of "a priori" validated simulations offer a greater grade of confidance allowing reducing the safety factors and optimazing
+These kind of "a priori" validated simulations offer a greater grade of confidence allowing reducing the safety factors and optimizing
 the smoke management systems. 
 
 
