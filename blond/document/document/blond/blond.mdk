@@ -129,22 +129,16 @@ After a sensitivity analysis a 6.5 cm mesh was chosen for this case.
 
 Another significant factor in the model is the temperature. The adiabatic combustion temperature from propane was chosen. Per definition the mixture fuel-air is predefined and known in a premixed combustion. Stoichiometric mixtures can be defined in order to achieve the highest flame temperatures. These temperatures are the adiabatic combustion temperatures.
 
-The definition of the initial temperature by means of the adiabatic temperatures guarantees that the initial energy represents correctly the system energy and the subsequent energy balance in the model are based in the proper initial values.
+The definition of the initial temperature by means of the adiabatic temperatures guarantees that the initial energy represents the correct energy system and the subsequent energy balance in the model are based on proper initial values.
 
+~ Begin Figure {caption:"Comparison between two simulations with different powers. On the left the a model with a HRR of 100 kW and on the rigth the model with a HRR of 1.200 kW. It can be appreciated the different length of the hot region, which represents the equivalent flame lenght"}
 
-
-
-Defining the adiabatic combustion temperature as the initial gas temperature we can represent the premixed combustion with FDS. 
-The following figures show the temperatures profile obtained with the model for two different power, 100 kW and 1.200 kW. 
-
-~ Begin Figure {caption:"Comparison between two simulations with different powers. On the left the a model with 100 kW and on the rigth the model with 1.200 kW"}
-  ~begin SubFigureRow
-    
+~Begin SubFigureRow
 ~ SubFigure
+
 ![Temperature 0.1 MW]
 
 [Temperature 0.1 MW]: images/Temperature-0.1-MW.JPG "Temperature 0.1 MW" { width:auto; max-width:90% }
-
 ~
 ~ SubFigure
 ![Temperature 1.2 MW]
