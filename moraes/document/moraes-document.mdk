@@ -43,7 +43,7 @@ on fire safety code.
 As unit of Brazilian federation, each state, through
 its fire department, is responsible to define the fire safety code and
 assure its application. For example, one less than two years after Kiss, 
-Santa Catarina's Military Fire Department (CBMSC), launched a new fire safety
+Santa Catarina Military Fire Department (CBMSC), launched a new fire safety
 code (known as Normative Instructions or INs) banning the use of any type of fireworks
 and flammable foam in closed rooms. However, defining the size and 
 number of terminal emergency 
@@ -56,7 +56,7 @@ was done to analyze what happens inside the crowd during an uncoordinated egress
 the one took place at Kiss. This paper presents some of those results like exit blockages, 
 crowd's turbulence, egress time and egress flow. The variable was the crowd's density, 
 varying it from 0.5 to 4.0 individuals per square meter. At last, a computer model was
-validated against the experiment's results and used to evaluate the Normative Instructions,
+validated against the experiment's results and used to evaluate the Normative Instructions 09,
 specifically the regarding to evacuation capability through doors at the ground
 floor of nightclubs and similar.
 
@@ -102,7 +102,7 @@ semicircle and a red and yellow lines.
 During the experiments there were no visibility restriction or lack of fresh air, 
 participants were quite homogeneous concerning mobility and decision-making skills, 
 they saw and knew which direction to take to egress and there were no obstacles. 
-Seven trials were performed, varying the inital population as follows: 35, 70, 105, 
+Seven trials were performed, varying the initial population as follows: 35, 70, 105, 
 140, 175, 210 and 280. Figure [#3cam] shows a  snapshot of cameras V1, V2 and V3
 during the experiment.
 
@@ -133,8 +133,8 @@ particles, set according to the number of individuals.
 The experiment results are here divided in: qualitative, where is presented the blockages
 and crowd's turbulence on videos and; quantitative, regarding to egress time and flow 
 analysis. Then, "Panic Package" simulation results are compared against the experimental. 
-That validated simulation model is used to check effectiveness of some aspects of CBMSC's
-fire safety code regarding to nightclub's emergency egress. 
+That validated simulation model is used to check effectiveness of some aspects of IN 09
+regarding to nightclub's emergency egress. 
 
 ## Qualitative Results { #sec-quali}
 Figure [#arch] presents a snapshot, at a point of the 175 crowd experiment, highlighting 
@@ -170,7 +170,7 @@ following the Normative Instruction 09 [@IN09].
 
 ~ TableFigure { #tab-tempo; caption: "Egress time against population"; .wide }
 
-|            |experimental uncoordinated egress || coordinated egress following fire safety code [@in09] ||
+|            |experimental uncoordinated egress || coordinated egress following IN 09 [@in09] ||
 |:----------:|:---------------:|:---------------:|:-----------:|:-----------:|
 | initial    | time            | mean flow       | time        | mean flow   |
 | population | [s]             | [s^-1^]         |[s]          | [s^-1^]     |
@@ -246,13 +246,13 @@ and simulation. The egress time is slightly lower at simulation, but the curve s
 ~
 [exp_sim_210]: images/exp_sim_210.png "exp_sim_210" { width:auto; max-width:100% }
 
-## Checking the Normative Instruction 09
-According to Santa Catarina's fire safety code, for nightclubs similar to Kiss, the
+## Checking the safety of IN 09
+According to IN 09, for nightclubs similar to Kiss, the
 allowable public is the double of room area. That means, 
 in a 100m² place, there will be 200 individuals allowed. Specifically to the terminal exit
 door, article 65, IV, c) [@IN09], states: "room above 400m² must have at least two
 doors being one greater than 2m and others greater than 1.2m". 
-Kiss had 615m² [@crea2013], under Santa Catarina's fire safety code, such similar night
+Kiss had 615m² [@crea2013], under IN 09, such similar night
 club would have at most a public of 1230 and the doors should sum a width of at least 6.77m. 
 
 As the "Panic Package" does not  permit more than one door, it was assumed that the public
@@ -276,7 +276,7 @@ quite safe. Furthermore, adding a third door reduced the egress time in 28% in s
 
 # CONCLUSION
 
-
+HELP ME HERE!
 
 
 [BIB]
