@@ -22,9 +22,11 @@ The use of egress simulation models in performance-based analysis relies on the 
 
 * But data strongly depend on a large number of parameters.
 * So the results are prone to be scattered.
+
 [![arrowdown]][down]
 [down]: # { .navigate-down }
 [arrowdown]: images/arrow.png "Down arrow" { width:178px; height:238px }
+
 ## Aim of the study
 Propose a method to analyse the statistical aspects of an egress simulation model.
 
@@ -191,7 +193,7 @@ The confidence interval decreases with the increase of the number of draws.
 ~
 
 ## Observations (3)
-It exists at least 3 separate evacuation schemes according to the number of occupants.
+There are at least 3 separate evacuation schemes according to the number of occupants.
 
 ~ Center
 ![fig_tab3]
@@ -223,7 +225,7 @@ It exists at least 3 separate evacuation schemes according to the number of occu
 ~ Begin Vertical { data-background:Gainsbor }
 # Analysis of the statistical influence of the parameters
 
-Parameters tested : conflict resolution time, position of the occupants and response time.
+Parameters tested : conflict resolution time, position of the occupants and response time (RT).
 
 ~ Center
 ![fig_tab4]
@@ -266,7 +268,7 @@ Notations used to make quantitative comparisons:
 ~ Align-Left
 
 * I~p95%~ the confidence interval of the 95th percentile.
-* L~Ip95%~ the witdh of the confidence interval of the 95th percentile.
+* L~Ip95%~ the width of the confidence interval of the 95th percentile.
 * I~p5%-95%~ the interval between the lower bound of the 5th percentile and the upper bound of the 95th percentile.
 * L~Ip5%-95%~ the width of the last one.
 * L~Ip5%-95%~/q~50%~ the ratio between the last interval and the 50th percentile.
@@ -275,31 +277,60 @@ Notations used to make quantitative comparisons:
 
 
 ## Test case 2
+Reminder :
+Conflict resolution time, position, RT fixed. 
 
-~ Center
+~ Begin Columns
+~ Column { width:50% }
 ![fig6_5]
-[fig6_5]: images/fig6_5.PNG "fig6_5" { width:auto; max-width:55%}
+[fig6_5]: images/fig6_5.PNG "fig6_5" { width:auto; max-width:100%}
 ~
+~ Column
+![fig_tab7]
+[fig_tab7]: images/fig_tab7.PNG "fig_tab7" { width:auto; max-width:100%}
+~
+~ End Columns
 
 
+~ left-align
+&rarr; Most of the variability comes from the effect of history.
 
+&rarr; Width of confidence intervals can increase or decrease whereas the parameters are less variable.
+~
 
 ## Test case 3
-~ Center
+Reminder : 
+Conflict resolution time and position vary, RT is fixed.
+~ Begin Columns
+~ Column { width:50% }
 ![fig6_6]
-[fig6_6]: images/fig6_6.PNG "fig6_6" { width:auto; max-width:55%}
+[fig6_6]: images/fig6_6.PNG "fig6_6" { width:auto; max-width:100%}
 ~
-
-
+~ Column
+![fig_tab8]
+[fig_tab8]: images/fig_tab8.PNG "fig_tab8" { width:auto; max-width:100%}
+~
+~ End Columns
+&rarr; Position has more influence on low and average densities.
 
 
 
 ## Test case 4
-
-~ Center
+Reminder :
+Resolution conflict time, position and RT vary.
+~ Begin Columns
+~ Column { width:50% }
 ![fig6_7]
-[fig6_7]: images/fig6_7.PNG "fig6_7" { width:auto; max-width:55%}
+[fig6_7]: images/fig6_7.PNG "fig6_7" { width:auto; max-width:100%}
 ~
+~ Column
+![fig_tab9]
+[fig_tab9]: images/fig_tab9.PNG "fig_tab9" { width:auto; max-width:100%}
+~
+~ End Columns
+
+&rarr; the variability of output parameters increases with the one of the input parameters &bcheckmark;
+
 ~ End Vertical
 
 
@@ -310,16 +341,45 @@ Notations used to make quantitative comparisons:
 # Synthesis of results
 
 
-## Synthesis of results (2)
+~ center
+![fig_tab10]
+[fig_tab10]: images/fig_tab10.PNG "fig_tab10" { width:auto; max-width:90%}
+~
 
+Advantage of the method:
+
+~ Align-Left
+* Assess the number of simulations to perform to get an appropriate confidence interval width.
+* Better understand some phenomena occuring during the evacuation.
+* Show non-linear effects of input parameters on the RSET.
+* Estimate quantitatively the influence on the RSET of the input parameters dispersion.
+~
 
 ~ End Vertical
 
 
 
-
-
 # Conclusion
+
+Aim:
+
+~ Align-Left
+* Interpret the influence of variability of an input parameter to an output parameter &bcheckmark;
+* Quantify the number of simulations required to make to have a short confidence interval &bcheckmark;
+~
+
+There is still a lot of work.
+
+Prospects:
+
+~ Align-Left
+* Test more complex geometry.
+* Test cross interactions thoroughly (experiment plans).
+* Compare to some evacuation trials.
+* Need for a bibliography work.
+* Industrialize the method on tools dedicated to stochastic analysis.
+* Compare different simulations tools.
+~
 
 
 
