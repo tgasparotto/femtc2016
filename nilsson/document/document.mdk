@@ -53,6 +53,11 @@ The test rig consists of a 150 mm thick lightweight concrete wall, 4 000 mm (W) 
 
 The mentioned test rig setup was slightly altered in the tests used as reference in the validation study of FDS 6.2.0. The reason for the alternation was to evaluate fire growth on external combustible ship surfaces with FRP instead of a regular building facade system. In the alternated setup non-combustible calcium silica boards (Promatect®) with 10 mm thickness of the test specimen was fastened along the facade, covering the two fictitious windows as illustrated in the drawing in Figure 1. The total dimensions of the boards were 3 750 mm (W) by 6 000 mm (H). This test was referred to as the reference test and retrieved data from this test laid the foundation for the validation study. In the lower pictures of Figure 1 the fire development during the reference test are seen.
 
+~ Figure { #Figure1; caption:"Figure1"}
+![Figure1]
+~
+[Figure1]: images/Figure1.png "Figure1" { width:auto; max-width:100% }
+
 ## Arrangement, instrumentation and measurements in the reference test
 The thermal exposure was estimated at the panel surface with six Inconel steel plates with wire thermocouples spot-welded on their backside, fastened flush with the surface. The steel plates were nominally 0.7 mm thick, measured 150 mm by 150 mm and covered a hole (Ø100 mm) drilled through the panels for the thermocouple wires. Further, six sheathed type K thermocouples (Ø0.50 mm) were placed along the centerline of the panels in order to quantify the gas temperature in the buoyancy plume along the centerline of the panels. The thermocouples were placed 50 mm from the front surface of the panels and, as seen in Figure 1, positioned 50 mm offset the plate thermometers. In conclusion, the measurements took place at 0.5 m (C21/C27), 1.6 m (C22/C28), 2.7 m (C23/C29), 3.8 m (C24/C30), 4.8 m (C25/C31) and 5.9 m (C26/C32) above the opening.
 Moreover, gas temperature, velocity and generation of gaseous species such as CO, CO2 and depletion of O2 was measured during the test by a large Industrial Calorimeter, meaning both the convective and the total heat release rate could be estimated during the test. Information about the HRR history of the reference test is found in Figure 3.
