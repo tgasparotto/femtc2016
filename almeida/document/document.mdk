@@ -94,7 +94,22 @@ of the manual.
 
 # USING PATHFINDER AS AN EVACUATION PLANNING TOOL
 
-Pathfinder can be used 
+Pathfinder can be used as an evacuation planning tool, to assist emergency planners 
+on assessing the evacuation time in different scenarios, without having to test them
+by means of fire drills. Using the Pathfinder, after having the scenario setup made,
+it is easily possible to change the exits, for instance to simulate a blocked exit, 
+in order to see the impact on the egress. 
+
+Another aspect is related to the capacity. Although typically the worse scenario is 
+used, that is, with full capacity, it is possible to try different layouts and 
+uses, to evaluate predict the people behaviour in such conditions. This is of great 
+importance for all involved in planning specially regarding auditoriums that can hold a 
+great number of persons.
+
+Therefore, in order to use Pathfinder as a simulation tool, it is required to calibrate the model.
+As such, in this paper, we present two case studies, where real times were compared with
+the Pathfinder.
+ 
 
 # CASE STUDY: CASA DA MÚSICA
 
@@ -118,6 +133,35 @@ assisted by a lower engine, and have a safety opening system from the inside.
 The chairs, in purple tone, are an elegant tribute to the Portuguese designer 
 Daciano da Costa, author of this model in the70’s. Has capacity for 250 people seated or
 650 standing, although in the former, including the foyer.
+
+
+ 
+
+# CASE STUDY: COLISEU DO PORTO
+
+The Coliseu do Porto is a theatre in Porto, Portugal. A local landmark, 
+it is a leading venue for music and cultural events. The building was finished in 1941 
+having the architect Cassiano Branco, among others prior to him, 
+to complete the whole project.
+
+In the 1990s two important events marked the history of the venue. In 1995 the building 
+was nearly sold to a Brazilian Church (Universal Church of the Kingdom of God). 
+However, a mass demonstration of the people of Porto, promoted by several prominent 
+members of the Portuguese and, especially, the city’s cultural milieu sparked an 
+intervention that prevented the deal to take place. The venue was handed over to 
+a group of citizens that, still today, manages the Coliseu as a cultural venue. 
+
+In 1996 a fire destroyed part of the venue, including the stage, the back-stage 
+and part of the auditorium. Rebuilt over a very short period, it showed some 
+limitations and the venue suffered new interventions in 1997 and 1998. It was 
+offcially reopened in November 1998, about two years after the fire, and has since 
+then regained its role as one of Porto’s most dynamic cultural spots.
+
+The main auditorium of Coliseu do Porto has a capacity for 3,500 people standing 
+and 2.955 seated when we count the 1st and 2nd stalls, the dress circle, 
+the boxes, upper circle and the reserved and general gallery.
+
+
 
 ### Subsubheadings like this style
 Subsubheadings have no underline, and only the first letter capitalized.
