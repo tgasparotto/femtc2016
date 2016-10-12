@@ -1,6 +1,5 @@
 [INCLUDE=style/lncs]
 Title         : Simulation of premixed flames with FDS. Application to the hot smoke testing system Izar
-Subtitle      : An optional subtitle.
 
 Author        : Blond Hernandez, Juan Jose
 Affiliation   : Basler & Hofmann AG, Zürich, Switzerland
@@ -20,10 +19,7 @@ name-references : REFERENCES
 The use of premixed flames in hot smoke tests present valuable advantages in comparison with
 traditional methods. The definition and control of the necessary power, HHR, is a great challenge due to the lack of information
 about the plumes originated by premixed flames. This work presents a method to model the plume and calculate the temperature within it.
-
-Papers should follow standard technical paper format, an abstract
-followed by the more detailed presentation. The abstract should be typed
-on this area of the first page, with the pre.
+The hot smoke testing system Izar makes use of the model presented along this paper
 ~
 
 # Introduction     { #sec-intro }
