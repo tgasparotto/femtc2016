@@ -34,33 +34,24 @@ convective part released by the common natural fires with diffusion flames.
 The system may produce till 1'20 MW convective heat equivalent to a natural fire of 1'80 MW. 
 This project was included in a master thesis work within the international master in fire safety engineering.
 
-# A brief description of the work context and targets and the system 
+# A brief description of the work context and targets of the system 
 
-The system Izar works in buildings or tunnels in use or just before the commissioning. 
-The system must guarantee that no damage in the premises will occur. The main advantages of 
-using premixed flames regarding for example the avoidance of cleaning activities, 
-but the main challenge is to avoid damages due to the temperatures of the plume.
+The testing system Izar works in buildings or tunnels in use or just before the commissioning. The system must guarantee that no damage in the premises will occur. The main advantages of using premixed flames regarding for example the avoidance of cleaning activities, but the main challenge is to avoid damages due to the temperatures of the plume.
 
 During a smoke test the "most realistic" conditions must be created in order to proof the smoke management system under the "most realistic" conditions.
 Therefore, the system must generate the highest temperatures and guarantee that no damage will occur during the test. 
 The target of this work was to study the temperature field created by the system and guarantee that valuable conclusions can be drawn from the test
 guaranteeing the safe developed of them. Additionally this work must be done before the system was ready for it use an no laboratory test was still at this point possible.
 
-Different equations and models are available in the literature to calculate the plume temperatures
-for diffusion flames according to its geometry and flame configuration (jet flame, etc.).
- For the common hot smoke test based on pool fires there is a vast literature and experience which make it 
-possible to adjust the size of the pools according to the building geometry but no model 
-was found to calculate these parameters for plumes generated during the combustion process occurred 
-in premixed flames.
+Different equations and models are available in the literature to calculate the plume temperatures for diffusion flames according to its geometry and flame configuration (jet flame, etc.). For the common hot smoke test based on pool fires there is a vast literature and experience which make it 
+possible to adjust the size of the pools according to the building geometry but no model was found to calculate these parameters for plumes generated during the combustion process occurred in premixed flames.
 
 The processes with premixed flames are used normally in closed environments such as 
 industrial ovens, in which the combustion efficiency is the main factor instead of the plumes produced by this combustion process are not enough documented. 
 
-The geometry of the burning chamber, a rectangle, made also impossible to consider these traditional 
-model mainly based on experiments with circular fire sources.
+The geometry of the burning chamber, a rectangle, made also impossible to consider these traditional model mainly based on experiments with circular fire sources.
 
-Therefore a new frame work had to be developed to study the temperature field in the plume created 
-by the premixed flames. The decision was to study the temperature field in the plume modeling the system with FDS. 
+Therefore a new frame work had to be developed to study the temperature field in the plume created by the premixed flames. The decision was to study the temperature field in the plume modeling the system with FDS. 
 
 # Modeling the hot smoke testing system Izar with FDS
 
