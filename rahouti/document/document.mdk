@@ -363,14 +363,16 @@ occupancy. Furthermore, the 42 rooms are considered as fully occupied
 ~ Figure {#path-geom, caption:"Pathfinder geometry shown with sample occupancy"}
 ![FIG_2]
 ~
+
 [FIG_2]: images/FIG_2.png "FIG_2" { width:auto; max-width:90% }
 
-**Scenario 1**
+
+### Scenario 1
 
 All the patients are considered as ambulant. The other scenarios will be
 compared to this basis scenario.
 
-**Scenario 2**
+### Scenario 2
 
 A mix of ambulant and non-ambulant patients was considered with different
 percentages of independent, dependent and highly dependent patients. We
@@ -388,7 +390,7 @@ sub-scenarios simulated.
 |-----------------------------------------------------------------------------------------------------------------||||
 ~
 
-**Scenario 3**
+### Scenario 3
 
 Like Scenario 2, a mix of ambulant and non-ambulant patients is
 considered but here the percentage of the patients is constant (1/3
