@@ -57,29 +57,40 @@ different scenarios, estimate egress times in a set of combinations with all
 [femtc2016]: https://github.com/thunderheadeng/femtc2016
 [emaillink]: mailto:conference@thunderheadeng.com "conference@thunderheadeng.com"
 
-# GENERAL INSTRUCTIONS { #sec-intro }
-You are encouraged to use the [Madoko.net Editor][editor] while using
-the [Madoko Reference Manual][reference-manual] to edit/commit your
-documents into the 'authoring' branch of the [femtc2016] GitHub repository. 
-More information about this method of contribution will be covered below.
+# INTRODUCTION { #sec-intro }
 
-Text styling, links, sub- and super-script, footnotes and other topics
-are covered in section [Syntax: Inline
-elements](http://research.microsoft.com/en-us/um/people/daan/madoko/doc/reference.html#sec-syntax--inline-elements)
-of the manual.
+As part of any adequate fire safety management for existing buildings, 
+the assessment of the means of escape, which includes the time the occupants will
+take to reach a place of relative safety, is paramount. With this assessment, 
+emergency evacuation plans are developed. For this, fire drills are undertaken. 
+However, carrying out fire drills often can demand certain amount of time in 
+organizing and conducting them, which can have negative impact both on the 
+business continuity and wellbeing. In addition to that, fire drills might 
+not be realistic for the worst case scenarios, such as having one or more exits 
+blocked due to fires. Indeed, the challenge increases when other types of 
+emergency situations are considered, either natural or non-natural, such as 
+earthquakes or even terrorist attacks. For these reasons, a robust and 
+validated People Movement (PM) model, such as Pathfinder, when appropriately used 
+can be a very useful tool for emergency evacuation planning. For instance, with 
+Pathfinder, it is possible to evaluate many combinations in a short time, 
+simulating various situations. In this paper, the two major concert hall 
+theatres in Porto, Portugal, are used as case studies: Casa da Música 
+(by renown Pritzker winner architect Rem Koolhaas, 2005) and Coliseu Porto 
+(a classic building from 1940). Both can hold many hundred spectators: 
+Casa da Música near 1250 and Coliseu Porto around 3500 people. 
+Using Pathfinder it was possible to represent different scenarios, 
+estimate egress times in a set of combinations with all or part of the exits available. 
+This allowed the emergency management team to prepare and train the evacuation personnel. 
+This paper presents some simulations using Pathfinder and compares their results 
+with the times of real egress video camera footage. Therefore, it was possible to 
+assess the simulation tool, evaluating the results and calibrating with the real data 
+in a variety of situations and occupations.
 
 Headings, Figures and Tables, Lists, Code Blocks, Mathematics, etc. are
 covered in section [Syntax: Block
 elements](http://research.microsoft.com/en-us/um/people/daan/madoko/doc/reference.html#sec-syntax--block-elements)
 of the manual.
 
-The target length for submitted and invited papers is about eight pages.
-This length includes all figures and tables. However, because the
-Proceedings will not be printed on paper, there is no maximum limit on
-the number of pages. You are free to exceed the target length of eight
-pages.
-
-Please watch this short YouTube Video for a tutorial on how to use the system as intended.
 
 # MAIN HEADINGS LIKE THIS STYLE
 Main Headings are all upper case letters and underlined. In Madoko, a
