@@ -86,11 +86,6 @@ with the times of real egress video camera footage. Therefore, it was possible t
 assess the simulation tool, evaluating the results and calibrating with the real data 
 in a variety of situations and occupations.
 
-Headings, Figures and Tables, Lists, Code Blocks, Mathematics, etc. are
-covered in section [Syntax: Block
-elements](http://research.microsoft.com/en-us/um/people/daan/madoko/doc/reference.html#sec-syntax--block-elements)
-of the manual.
-
 
 # USING PATHFINDER AS AN EVACUATION PLANNING TOOL
 
@@ -109,7 +104,7 @@ great number of persons.
 Therefore, in order to use Pathfinder as a simulation tool, it is required to calibrate the model.
 As such, in this paper, we present two case studies, where real times were compared with
 the Pathfinder.
- 
+
 
 # CASE STUDY: CASA DA MÚSICA
 
@@ -122,11 +117,27 @@ persons seated or 650 standing.
 ## Casa da Música: Sala Suggia
 
 The main Auditorium of Casa da Música, "Sala Suggia", has a full capacity of 1244 people, 
-but can vary according the layout used.    
+but can vary according the layout used. Without the choir places, 
+located at the back of the stage, the audience is limited to 1069 seats.
+Total area is around 1100 square meters.   
+
+Table [#table-sample] shows an example full width table figure.
+
+~ TableFigure { #table-sample; caption: "Comparison between real times and Pathfinder"; .wide }
+|------------|---------------------|---------|------------|------------|
+|    Date    | Event               | Audience|  real time | Pathfinder |
+|:-----------|:-------------------:|:-------:|:----------:|:----------:|
+| 10.04.2016 | NOS Club            |   1000  |     04:33  |   02:42    |
+| 12.04.2016 | Piano concert       |    738  |     04:05  |   01:50    |
+| 17.04.2016 | Classic Orchestra   |    900  |     05:55  |   02:42    |
+| 16.04.2016 | Vozes da radio      |   1000  |     07:07  |   02:21    |
+| 17.04.2016 | Choirs - Voice      |    638  |     04:10  |   01:34    |
+|------------|---------------------|---------|------------|------------|
+~
 
 ## Casa da Música: Sala 2
 
-Sala 2 is the second largest auditorium of Casa da Música. Designed as a multipurpose space, 
+Sala 2 is the second largest auditorium of Cams da Música. Designed as a multipurpose space, 
 it is ideal for any type of event. The access is made through two glass and aluminum doors, 
 integrated into the partition panels of the foyer. These ports slide, 
 assisted by a lower engine, and have a safety opening system from the inside. 
