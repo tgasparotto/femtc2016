@@ -432,46 +432,29 @@ its height makes it difficult to access for firefighters. However, this
 floor is only accessible for the staff members who are trained to fight
 the fire.
 
-Table 6: FRAME method results for the G Bloc of the "Clinique Sainte Elisabeth"
 
-|   |   | **CALCULATION of the POTENTIAL RISKS** | **CALCULATION of the ACCEPTANCE LEVELS** | **CALCULATION of the PROTECTION LEVELS** | **RISK for** |
-| --- | --- | --- | --- | --- | --- |
-|   |   | **Property & content** | **Occupants** | **Activities** | **Property & content** | **Occupants** | **Activities** | **Property & content** | **Occupants** | **Activities** | **Property & content** | **Occupants** | **Activities** |
-| **Floor Number** | **Compartment** | **P** | **P1** | **P2** | **A** | **A1** | **A2** | **D** | **D1** | **D2** | **R** | **R1** | **R2** |
-| R+7 | Technical Room | 1,59 | 3,51 | 1,01 | 1,39 | 1,29 | 1,35 | 1,53 | 2,53 | 0,96 | 0,74 | 1,07 | 0,78 |
-| Technical Room + Small Room | 0,42 | 3,19 | 0,27 | 1,50 | 1,40 | 1,45 | 2,02 | 3,39 | 1,29 | 0,14 | 0,67 | 0,14 |
-| R+6 | Double Bedroom | 0,34 | 2,85 | 0,26 | 1,47 | 1,37 | 1,45 | 1,64 | 2,16 | 1,05 | 0,14 | 0,96 | 0,17 |
-| Single Bedroom | 0,34 | 2,87 | 0,26 | 1,48 | 1,38 | 1,45 | 1,64 | 2,16 | 1,05 | 0,14 | 0,96 | 0,17 |
-| Waste Room | 0,17 | 2,79 | 0,11 | 1,50 | 1,40 | 1,45 | 1,82 | 2,39 | 1,16 | 0,06 | 0,83 | 0,06 |
-| R+5 | Middle care | 0,33 | 2,59 | 0,25 | 1,47 | 1,37 | 1,45 | 1,64 | 2,16 | 1,05 | 0,14 | 0,87 | 0,17 |
-| R+4 | Medical Office | 0,29 | 2,42 | 0,17 | 1,60 | 1,50 | 1,55 | 1,82 | 2,39 | 1,16 | 0,10 | 0,67 | 0,10 |
-| R+3 | Dirt Laboratory | 0,29 | 2,42 | 0,17 | 1,60 | 1,50 | 1,55 | 1,82 | 2,39 | 1,16 | 0,10 | 0,67 | 0,10 |
-| Clean Laboratory | 0,37 | 2,29 | 0,23 | 1,60 | 1,50 | 1,55 | 1,82 | 2,39 | 1,16 | 0,13 | 0,64 | 0,13 |
-| R+2 | Head nurse room | 0,68 | 4,78 | 0,43 | 1,50 | 1,40 | 1,45 | 1,92 | 3,72 | 1,23 | 0,24 | 0,92 | 0,24 |
-| Operating Room | 0,30 | 1,56 | 0,19 | 1,60 | 1,50 | 1,55 | 1,82 | 3,54 | 1,16 | 0,10 | 0,29 | 0,11 |
-| R+1 | Dirty Laundry Unit | 0,25 | 2,33 | 0,15 | 1,50 | 1,40 | 1,45 | 1,82 | 2,39 | 1,16 | 0,09 | 0,70 | 0,09 |
-| Clean Laundry Unit | 0,14 | 1,65 | 0,09 | 1,50 | 1,40 | 1,45 | 1,82 | 3,54 | 1,16 | 0,05 | 0,33 | 0,05 |
-| R0 | Radiologie-Osseaux4 | 0,18 | 1,07 | 0,11 | 1,30 | 1,30 | 1,25 | 2,02 | 3,23 | 1,29 | 0,07 | 0,26 | 0,07 |
-| R-1 | Pharmacy + Cold Storage | 0,23 | 2,00 | 0,17 | 1,60 | 1,50 | 1,55 | 1,92 | 2,52 | 1,23 | 0,07 | 0,53 | 0,09 |
-| Pharmacy + Archives | 0,30 | 2,84 | 0,19 | 1,50 | 1,40 | 1,45 | 1,92 | 2,52 | 1,23 | 0,10 | 0,81 | 0,11 |
-| Legend |   | Slight risk |   | Medium risk |   | High risk |
+~ TableFigure {caption:"FRAME method results for the G Bloc of the Clinique Sainte Elisabeth"}
 
-Since the 7
+~
 
-# th
- floor is not accessible to the public and the patients, the most critical floor is the 6
-# th
- floor in which people could be found during the day and at night.
-1.
-  1. **4.2.**** PATHFINDER RESULTS**
 
-The Pathfinder results have been categorized according to the different scenarios simulated.
+
+Since the 7th floor is not accessible to the public and the patients, the
+most critical floor is the 6th floor in which people could be found
+during the day and at night.
+
+## PATHFINDER RESULTS
+
+The Pathfinder results have been categorized according to the different
+scenarios simulated.
 
 Scenario 1
 
-The evacuation curve for the scenario 1 is shown in Fig. 3. The mean total evacuation time of ambulant patients is about 383 seconds, with a range of value between 163 seconds and 622 seconds.
+The evacuation curve for the scenario 1 is shown in Fig. 3. The mean
+total evacuation time of ambulant patients is about 383 seconds, with a
+range of value between 163 seconds and 622 seconds.
 
-|
+
  LibreOffice/5.0.2.2$Linux\_X86\_64 LibreOffice\_project/37b43f919e4de5eeaca9b9755ed688758a8251fe ; ; ; Evacuees [n]Time '(s)
 
 |   |
