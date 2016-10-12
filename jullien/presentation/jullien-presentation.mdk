@@ -40,8 +40,6 @@ Benefits of the method :
 * Provide quantitative informations on the RSET.
 * Justify the number of simulations to obtain a relevant output precision level.
 
-
-
 ~ End Vertical
 
 
@@ -229,11 +227,45 @@ It exists at least 3 separate evacuation schemes according to the number of occu
 ~ Begin Vertical { data-background:Gainsbor }
 # Analysis of the statistical influence of the parameters
 
+Parameters tested : conflict resolution time, position of the occupants and response time.
+
+~ Center
+![fig_tab4]
+[fig_tab4]: images/fig_tab4.PNG "fig_tab4" { width:auto; max-width:55%}
+~
+3 schemes to free from the influence of the occupant density.
+~ Center
+![fig_tab5]
+[fig_tab5]: images/fig_tab5.PNG "fig_tab5" { width:auto; max-width:55%}
+~
+
 
 ## Test case 1
 
-## Test case 1 (2)
+The empirical distribution function is not linear.
 
+&rarr; linked to the variability of the conflict resolution time and to the effect of history.
+
+~ Center
+![fig6_3]
+[fig6_3]: images/fig6_3.PNG "fig6_3" { width:auto; max-width:55%}
+~
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## Test case 1 (notations)
+In 
 
 ## Test case 2
 
