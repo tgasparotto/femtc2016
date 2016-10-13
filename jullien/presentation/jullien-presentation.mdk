@@ -32,7 +32,7 @@ The use of egress simulation models in performance-based analysis relies on the 
 
 
 ## Aim of the study
-Propose a method to analyse the statistical aspects of an egress simulation model.
+Propose a method to analyze the statistical aspects of an egress simulation model.
 
 * The method is based on statistical estimations of the distribution quantiles of the output parameters.
 The key result is Required Safe Egress Time (RSET).
@@ -61,11 +61,11 @@ Example :
 \end{aligned}
 ~
 
-c equals to 16.45 for p=90%. 
+c equals to 1.645 for p=90%. 
 
 
 ## Build the empirical distribution function
-Random realizations ranked in ascending order constitute the 
+&rarr; Random realizations ranked in ascending order constitute the 
 empirical distribution function.
 
 
@@ -78,13 +78,13 @@ empirical distribution function.
 ## Observations
 
 ~ Align-Left
-* A random variable can not show a theorical maximum.
-* Even if the maximum value exists, the finite size of 
+* A random variable can not show a theoretical maximum.
+* Even if there is a maximum value, the finite size of 
 the samples didn't allow to access to this maximum value.
 
 &rarr; Only percentiles are available.
 
-* Percentiles increase with the growth of the sample size.
+* Percentiles increases with the growth of the sample size.
 * Confidence interval decreases with the growth of the sample size.
 
 &rarr; So, the required number of draws is set by:
@@ -131,11 +131,11 @@ Occupants:
 * have same leaderships,
 * have same patience,
 * are valid,
-* have a speed of 1.2 m/s
+* have a speed of 1.2 m/s,
 * have a response time (RT) of 15 s or variable between 0 and 30 s,
 * act independently of each other.
 
-The identical leaderships imply a conflict resolution time include between 0.8 s and 1.5 s.
+The identical leaderships imply a conflict resolution time included between 0.8 s and 1.5 s.
  During this study the fixed value of 1.15 s will be use too.
 
 The draws are achieved with an uniform law.
@@ -169,11 +169,11 @@ Occupants are randomly positioned in the room and drawn between 1 and 1,000.
 
 
 
-## Obervations
+## Observations
 
 It is impossible to determine statistically a RSET maximum.
 ~ Align-Left
-* Extreme percentile have a confidence interval with infinite bounds.
+* Extreme percentiles have a confidence interval with infinite bounds.
 ~
 
 In any case, a RSET max is bound to a catastrophic scenario.
