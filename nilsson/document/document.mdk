@@ -196,7 +196,7 @@ $(480 kg/m^{3})$ is the density of the steel plate and ε is the
 emissivity assumed to be of 0.9 (-) [@Evegren]. The variable $T_{s}$ is
 defined as the surface temperature of the plate thermometer and $T_{g}$
 is defined as the temperature of the free air flow (gas temperature).
-From the following equation, Equation  [#equation2], the forced
+From the following equation, Equation  [#equation2], [@Evegren], the forced
 convective heat transfer $h_{c}$ $(W/(m^{2} \cdot K)$ was estimated:
 
 ~ Equation  {#Equation2; caption:"Equation2" }
@@ -209,7 +209,7 @@ air velocity was estimated to 6 m/s and the characteristic length was set
 to 0.2 m (the side measurement of the square plate). The film temperature
 $T_{f}$ is the average of the $T_{s}$ and $T_{g}$ [@Evegren]. The forced
 convective heat transfer coefficient $h_{c}$ varied between 22 and 24
-during the test using Equation [#equation2].
+during the test using Equation [#equation2], [@Evegren].
 
 Note that Equation [#equation1] is based on the following simplified heat balance equation, Equation 289 in [@Wickstrom1], in this paper entitled Equation [#equation3]:
 
@@ -322,15 +322,16 @@ well-ventilated heptane fires as found in [@SFPE].
 
 ## Measurement devices
 The devices used in the FDS simulations along with their positions are
-seen in Figure [#figure4], [@NilssonM]. The default thermocouples in FDS were used as
-a basis, which is a nickel-based thermocouple with specific heat of 0.44
-kJ/KgK, density of 8908 kg/m3 and emissivity of 0.85. However, to match
-the sheathed type K thermocouples in the actual fire test (C27-C32), the
-bead diameter was changed from 1 mm to 0.5 mm. In addition to these six
-thermocouples, additional ten thermocouples were placed every 10 cm
-offset the symmetry line along the facade, as seen at position 4 in
-Figure [#figure4]. Further, six velocity devices were positioned just
-outside the facade at each height as seen at position 5.
+seen in Figure [#figure4], [@NilssonM]. The default thermocouples in FDS
+were used as a basis, which is a nickel-based thermocouple with specific
+heat of 0.44 $(kJ/kG \cdot K)$, density of 8908 $(kg/m^{3})$ and
+emissivity of 0.85. However, to match the sheathed type K thermocouples
+in the actual fire test (C27-C32), the bead diameter was changed from 1
+mm to 0.5 mm. In addition to these six thermocouples, additional ten
+thermocouples were placed every 10 cm offset the symmetry line along the
+facade, as seen at position 4 in Figure [#figure4]. Further, six velocity
+devices were positioned just outside the facade at each height as seen at
+position 5.
 
 To be able to simulate the plate thermometers in FDS, six obstacles were
 defined and placed along the symmetry line of the facade (C21-C26). Two
@@ -363,15 +364,15 @@ was used. In FDS, the quantity incident heat flux
 $\dot{q}^{\prime\prime}_{INC} (W/m^{2})$ is the sum of the incoming
 radiation and convection, not including the outgoing
 radiation [@Overholt]. The quantity incident heat flux is described in
-the following equation, Equation [#equation4] from [@FDSUser]:
+the following equation, Equation [#equation4], [@FDSUser]:
 
 ~ Equation  {#Equation4; caption:"Equation4" }
   \dot{q}^{\prime\prime}_{INC} = \dfrac{\dot{q}^{\prime\prime}_{rad}}{\epsilon} + \sigma T_{w}^{4} + \dot{q}^{\prime\prime}_{conv}
 ~
 
-Further, there is also a quantity called $\textit{radiative heat flux}$,
-described as the sum of the incoming and reflecting radiation as seen in
-the following equation, Equation [#equation5] from [@Overholt]:
+Further, there is also a quantity called radiative heat flux, described
+as the sum of the incoming and reflecting radiation as seen in the
+following equation, Equation [#equation5], [@Overholt]:
 
 ~ Equation  {#Equation5; caption:"Equation5" }
   \dot{q}^{\prime\prime}_{rad} = \dot{q}^{\prime\prime}_{rad, in} - \dot{q}^{\prime\prime}_{rad, out} = \dot{q}^{\prime\prime}_{rad, in} - \epsilon \sigma T_{w}^{4}
@@ -626,7 +627,7 @@ versions at position C27 and C28 with slightly higher values in FDS
 6.2.0. At position C29 however, considerable higher values are
 represented in FDS 6.2.0.
 
-~ Figure { #Figure14; caption:"FDS 5 cm cells, comparison of output data between FDS 6.2.0 and FDS 5.5.3. Upper left - Temperatures retrieved from the thermocouples at the three positions closest to the opening. Upper right - Temperatures retrieved from the plate thermometers at the three positions closest to the opening. Lower - FDS 5 cm cells, calculated incident radiative heat fluxes at the three positions closest to the opening."}
+~ Figure { #Figure14; caption:"FDS 5 cm cells, comparison of output data between FDS 6.2.0 and FDS 5.5.3. Upper left - Temperatures retrieved from the thermocouples at the three positions closest to the opening. Upper right - Temperatures retrieved from the plate thermometers at the three positions closest to the opening. Lower - Calculated incident radiative heat fluxes at the three positions closest to the opening."}
 ![Figure14ny2]
 ~
 [Figure14ny2]: images/Figure14ny2.png "Figure14ny2" { width:auto; max-width:102% }
