@@ -22,14 +22,14 @@ traditional methods. The definition and control of the necessary power, HHR, is 
 
 # Introduction     { #sec-intro }
 In 2013 regarding the new needs of the fire safety mark in Switzerland, the swiss company  Basler & Hofmann decided to develop an innovative hot smoke testing system. 
-The result is currently known with the commercial  name of Izar.
+The result is currently known under the commercial  name of Izar.
 
-Izar is the a hot smoke testing system composed by a gas burner, a gas supply system, and additional 
+Izar is the a smoke testing system composed of a gas burner, a gas supply system, and additional 
 fog generators to visualize the smoke layer.
 
 The main characteristic of the system is the use of premixed flames as heat source. 
 The main advantage is the reduction, almost elimination, of the flame radiation and the elimination of the residues, soot yield, originated by the common diffusions flames.
-The use of premixed flames made of Izar an pure convective heat source capable of reproducing the equivalent 
+The use of premixed flames made of Izar a pure convective heat source capable of reproducing the equivalent 
 convective part released by the common natural fires with diffusion flames. 
 
 The system can release a total power of 1'20 MW, which considered as a pure convective heat source, is equivalent to a natural fire of 1'80 MW. This equivalence considers the standard ratio 2/3 of the total heat released as convective heat and 1/3 as radiation heat. This ratio could be adjusted for each fuel if needed.
@@ -38,29 +38,29 @@ The system can release a total power of 1'20 MW, which considered as a pure conv
 
 The presented method belongs to the development process of the hot smoke testing Izar, and must be understood in this context. 
 
-The testing system Izar works in buildings or tunnels in use or just before the commissioning. During a smoke test the "most realistic" conditions must be created in order to proof the smoke management system under the "most realistic" conditions. Therefore, the system must generate the highest temperatures and guarantee that no damage will occur during the test. 
+The testing system Izar works in buildings or tunnels already in use or just before the commissioning. During a smoke test the "most realistic" conditions must be created in order to proof the smoke management system under the "most realistic" conditions. Therefore, the system must generate the highest temperatures and at the same time guarantee that no damage will occur during the test. 
 
-This was one of the challenges faced on this work: to study the temperature field created by the system and to draw valuable conclusions from the tests guaranteeing the safe developed of them. Additionally this work must be done before the system was ready for it use an no laboratory test was still at this point possible.
+This was one of the challenges faced on this work: to study the temperature field created by the system and to draw valuable conclusions and guaranteeing the safe developed of the tests. Additionally this work had to be done before the system was ready for the use an no laboratory test was possible at this point.
 
-Different equations and models are available in the literature to calculate the plume temperatures for diffusion flames according to its geometry and flame configuration (jet flame, etc.). For the common hot smoke test based on pool fires there is a vast literature and experience which make it possible to adjust the size of the pools according to the room geometry, but no model was found to calculate these parameters for plumes generated during the combustion process occurred in premixed flames.
+Different equations and models are available in literature to calculate the plume temperatures for diffusion flames according to its geometry and flame configuration (jet flame, etc.). For the common hot smoke test based on pool fires there is a vast literature and experience which make it possible to adjust the size of the pools according to the room geometry. But no model was found to calculate these parameters for plumes generated during the combustion process occurred in premixed flames.
 
-The processes with premixed flames are used normally in closed environments such as industrial ovens, in which the combustion efficiency is the main factor instead of the plumes produced by this combustion process are not enough documented. 
+The processes with premixed flames are used normally in closed environments such as industrial ovens, in which the combustion efficiency is the main factor instead of the plumes produced by this combustion process. Therefore these plumes are not enough documented. 
 
-The geometry of the burning chamber, a rectangle, made also impossible to consider these traditional model mainly based on experiments with circular fire sources and extrapolate their results.
+The geometry of the burning chamber, a rectangle, made also impossible to consider these traditional models mainly based on experiments with circular fire sources and extrapolate their results.
 
 Therefore a new frame work had to be developed to study the temperature field in the plume created by the premixed flames. The decision was to study the temperature field in the plume modeling the system with FDS. 
 
 # Modeling the hot smoke testing system Izar with FDS
 
-The approach of modeling the system with FDS was not so straightforward because the combustion models of these software are not capable of simulating a premixed combustion. 
+The approach of modeling the system with FDS was not so straightforward because the combustion models of this software are not capable of simulating a premixed combustion. 
 
-The solution to simulate premixed flames consists of modeling the combustion like a source of combustion products released at the adiabatic combustion temperature. 
+The solution to simulate premixed flames consists of modeling the combustion like a source of combustion products released at the flame temperature. 
 
 Izar uses propane gas as source of energy. The physical properties of the combustible are well documented in the literature. 
-The adiabatic flame temperature is one these and it is the main model parameter. The combustion in Izar occurs under stoichiometric conditions achieving very high combustion efficiencies, 
-an very high temperatures. Above the combustion region, the plume temperature can be calculated using the fluid mechanic equations available in FDS.
-
-The plume contents the combustion products generated during the combustion. In the diffusion flames the efficiency of the combustion process defines the amount of products and particles which are commonly called smoke.
+The flame temperature is one of these and it is the main model parameter. The combustion in Izar occurs under stoichiometric conditions achieving very high combustion efficiencies, 
+an very high temperatures.   rThe right flae an very high tan very high temperatures.   rThe right flame an very high tempes.   rThe right flame an very high tan very high temperatures.   rThe right fly high tempes.   rThe right flame an very high tan very high temperatures.   rThe right flamy high tempes.   r. The right flame temperatan vh an very high temperatures. The right flame an very high tempratures. The right flame temperatan vh an very high temperatures. The right flame aan very high tempratures. The right flame temperatan vh an very high temperatures. The right flame aan very high tempratures. The right flame temperatan vh an very high temperatures. The right flame aan very high tempratures. The right flame temperatan vh an very high temperatures. The right flame aan very high tempratures.  right flame temperatan vh an very high temperatures. The right flame y high tempratures.  right flame temperatan vh an very high temperatures. The right flame aan flame y high tempratures.  right flame temperatan vh an very high temperatures. The right flame high tempratures.  right flame temperatan vh an very high temperatures. The right flame aan  high tempratures.  right flame temperatan vh an very high tempeh temperatures. The right flame aan  high tempratures.  right flame temperatan vh ah tempeh temperatures. The right flame aan  high tempratures.  right flame temperatan vh an veryh tempeh temperatures. The right flame aan  high temprempratures.  right flame temperatan vh an veryh tempeh temperatures. The right flam temprempratures.  right flame temperatan vh an veryh tempeh temperatures. The right  temprempratures.  right flame temperatan vh an veryh tn vh an veryh tempeh temperatures. The right  temprempratures.  rightperatan vh an veryh tn vveryh tn vh an veryh tempeh es. The right  temprempratur The chosen flame temperature is the adiabatic temperature with dissociation. For the propane this temperature is 1995 °C (ref Drysdale !!!!)   Above the combustion region, the plume temperature can be calculated using the fluid mechanic equations available in FDS.
+ď
+The plume contains the combustion products generated during the combustion. In the diffusion flames the efficiency of the combustion process defines the amount of products and particles which are commonly called smoke.
 However in a premixed combustion these combustion products are well known and do not change under different environment conditions. By a simple chemical balance its is easy to calculate these combustion products and the amount of them:
 
 ~ Equation {#Propan-combustion; caption:"Propan chemical balance"}
