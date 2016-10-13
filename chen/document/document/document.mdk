@@ -23,6 +23,7 @@ Email         : cx19191919@qq.com
 
 Bibliography  : references.bib
 Logo          : False
+Csl Style     : madoko-numeric-nosort
 Tex Header    :
   \def\refname{&name-references;}
 name-references : REFERENCES
