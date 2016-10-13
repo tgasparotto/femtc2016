@@ -246,7 +246,7 @@ and simulation. The egress time is slightly lower at simulation, but the curve s
 ~
 [exp_sim_210]: images/exp_sim_210.png "exp_sim_210" { width:auto; max-width:100% }
 
-## Checking the safety of IN 09
+## Are IN 09's Requirements Enough?
 According to IN 09, for nightclubs similar to Kiss, the
 allowable public is the double of room area. That means, 
 in a 100m² place, there will be 200 individuals allowed. Specifically to the terminal exit
