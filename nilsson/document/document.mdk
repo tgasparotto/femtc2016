@@ -114,11 +114,10 @@ derived from the following equation, Equation [#equation1] from [@Evegren]:
   \dot{q}^{\prime\prime}_{INC} = \sigma T_{S}^{4} - \dfrac{h_{c}(T_{g}-T_{s})}{\epsilon} + \dfrac{dc\rho}{\epsilon} \times \dfrac{dT}{dt}
 ~
 
-where $\sigma$ is the Stefan Boltzmann constant $(5.67 \times 10^{-8} W/(m^{2}K^{4}))$, $d$ is the plate thickness (0.7 mm), $c$ is the specific heat of steel $(7 850 J/(kg \times K))$, $\rho$ is the density 
-of the steel plate $(480 kg/m^{3})$ and ε is the emissivity assumed to be of 0.9 (-) [@Evegren]. The variable $T_{s}$ is defined as the surface temperature of the plate thermometer and 
+where $\sigma (5.67 \times 10^{-8} W/(m^{2}K^{4}))$ is the Stefan Boltzmann constant, $d (0.7 mm)$ is the plate thickness , $c (7 850 J/(kg \times K))$ is the specific heat of steel, 
+$\rho (480 kg/m^{3})$ is the density of the steel plate and ε is the emissivity assumed to be of 0.9 (-) [@Evegren]. The variable $T_{s}$ is defined as the surface temperature of the plate thermometer and 
 $T_{g}$ is defined as the temperature of the free air flow (gas temperature). From the following equation, Equation [#equation2], the forced convective heat transfer $h_{c}$ 
-$(W/(m^{2} \times K)$ was 
-estimated:
+$(W/(m^{2} \times K)$ was estimated:
 
 ~ Equation  {#Equation2; caption:"Equation2" }
   h_{c} = 2.4 T_{f}^{0.085} \times u_{\infty}^{1/2} \times x^{-1/2}
@@ -134,12 +133,12 @@ Note that Equation [#equation1] is based on the following simplified heat balanc
   \epsilon_{PT} \dot{q}^{\prime\prime}_{inc} - \epsilon_{PT} \sigma T_{PT}^{4} + h_{PT} (T_{g} - T_{PT}) + K(T_{g} - T_{PT})=C \dfrac{dT_{PT}}{dT}
 ~
 
-where the suffix $PT$ refers to Plate Thermometer. The equation describes the heat balance on the exposed plate surface of a plate thermometer. From Equation 3 the 
-term qINC is extracted from the heat balance equation and conduction is neglected, forming Equation 1. However, in Equation 1, the convective term is subtracted, 
+where the suffix $PT$ refers to Plate Thermometer. The equation describes the heat balance on the exposed plate surface of a plate thermometer. From Equation [#equation3] the 
+term $\dot{q}^{\prime\prime}_{INC}$ is extracted from the heat balance equation and conduction is neglected, forming Equation [#equation1]. However, in Equation [#equation1], the convective term is subtracted, 
 which means in other words that the expression $\dot{q}^{\prime\prime}_{INC}$ is the incident radiative part of the total heat transfer. Hence, the latter term is referred to as incident 
 radiative heat flux, $\dot{q}^{\prime\prime}_{IRHF} (W/m^{2})$ in this paper.
 
-The plate thermometer measures approximately the temperature of a surface which cannot absorb any heat, also called the adiabatic surface temperature $(T_{AST})$. The $T_{AST}$ 
+The plate thermometer measures approximately the temperature of a surface which cannot absorb any heat, also called the $\textit{adiabatic surface temperature}$ $(T_{AST})$. The $T_{AST}$ 
 is an illustrative temperature measure both taking into account the influence from incident radiation and the convective heating from the surrounding gas [@Wickstrom2]. 
 For example, if an exposed body is far away from the fire source, radiation is the dominating part and hence the $T_{AST}$ will be closer to an effective radiation 
 temperature $T_{r}$. If, however, the body is exposed by mainly convection from the hot gases, $T_{AST}$ will be closer to the gas temperature $T_{g}$. Since this measure is 
@@ -213,9 +212,9 @@ To be able to simulate the plate thermometers in FDS, six obstacles were defined
 built up by 0.7 mm thin layer of metal together with a 1 cm thick layer of insulation which then were applied on the obstacles depending on the direction of heat 
 transfer. Wall temperature devices were then placed at the backside of these plates to measure the surface temperature. 
 
-In addition, measurements of adiabatic surface temperature (T_AST), incident heat flux (q ̇_IHF^'') and convective heat flux (q ̇_conv^'') took place at the same 
+In addition, measurements of adiabatic surface temperature ($T_{AST}$), incident heat flux ($\dot{q}^{\prime\prime}_{INC}$) and convective heat flux ($\dot{q}^{\prime\prime}_{conv}$) took place at the same 
 positions as for the wall temperature devices. The former was done in order to compare the retrieved temperatures from the plate thermometers during the reference 
-test with the illustrative temperature T_AST in FDS. The measurements of incident heat flux and convective heat flux took place in order to produce comparable 
+test with the illustrative temperature $T_{AST}$ in FDS. The measurements of incident heat flux and convective heat flux took place in order to produce comparable 
 incident heat flux results to the reference test. The procedure for doing this is described further down.
 
 ~ Figure { #Figure4; caption:"Picture illustrating the device positions in FDS. Left - The front of the test rig along with the six plate thermometers. Middle - Close-up of each thermometer position and other devices used. Right - Same as the middle picture but in 3D."}
@@ -245,15 +244,15 @@ Substituting Equation [#equation5] in Equation [#equation4] results in the follo
   \dot{q}^{\prime\prime}_{INC} = \dfrac{\dot{q}^{\prime\prime}_{rad, in}}{\epsilon} + \dot{q}^{\prime\prime}_{conv}
 ~
 
-At this stage, to be able to compare the quantity q ̇_INC^'' in FDS with the computed q ̇_IRHF^''-values from the reference test, the convective term was subtracted 
-from Eq. 6. This means that the q ̇_IRHF^''-output data in FDS were produced by subtracting the q ̇_INC^''-values with the q ̇_conv^''-values from FDS, resulting in 
-the following equation, Equation [#equation7]:
+At this stage, to be able to compare the quantity $\dot{q}^{\prime\prime}_{INC}$ in FDS with the computed $\dot{q}^{\prime\prime}_{IRHF}$-values from the reference test, 
+the convective term was subtracted from Equation [#equation6]. This means that the $\dot{q}^{\prime\prime}_{IRHF}$-output data in FDS were produced by subtracting the 
+$\dot{q}^{\prime\prime}_{INC}$-values with the $\dot{q}^{\prime\prime}_{conv}$-values from FDS, resulting in the following equation, Equation [#equation7]:
 
 ~ Equation  {#Equation7; caption:"Equation7" }
   \dot{q}^{\prime\prime}_{IRHF} = \dot{q}^{\prime\prime}_{INC} - \dot{q}^{\prime\prime}_{conv} = \dfrac{\dot{q}^{\prime\prime}_{rad, in}}{\epsilon} 
 ~
 
-Again, this was done since in FDS there are no device that directly produce the same form of heat flux computed in the given large-scale fire test. 
+Again, this was done since in FDS there are no device that directly produce the same form of heat flux computed in the given large-scale fire test.
 
 #RESULTS
 In this section the key results from the main simulations performed on a single mesh and 5 cm grid are presented. Data values named EXP are values retrieved from 
@@ -281,8 +280,8 @@ to reproduce the transient temperatures in the early stage of the fire and in th
 [Figure6]: images/Figure6.png "Figure6" { width:auto; max-width:100% }
 
 ## Adiabatic surface temperature
-A comparison of T_AST in FDS and the retrieved temperatures from the plate thermometers during the reference test are shown in Figure [#figure7]. Unlike the already discussed 
-modelled thermometers in Figure [#figure1], the T_AST-values are slightly overestimating the temperatures retrieved from the thermometers at position C22-C26. At position C21, 
+A comparison of $T_{AST}$ in FDS and the retrieved temperatures from the plate thermometers during the reference test are shown in Figure [#figure7]. Unlike the already discussed 
+modelled thermometers in Figure [#figure1], the $T_{AST}$-values are slightly overestimating the temperatures retrieved from the thermometers at position C22-C26. At position C21, 
 the transient representation in the early stage of the temperature rise is better represented and just underestimating the retrieved temperatures at the second peak.
 
 ~ Figure { #Figure7; caption:"FDS 5 cm cells, comparison of temperatures from the plate thermometers during the reference test and adiabatic surface temperature data calculated in FDS. Left - The three positions closest to the opening. Right - The three positions further up along the facade."}
@@ -291,10 +290,10 @@ the transient representation in the early stage of the temperature rise is bette
 [Figure7]: images/Figure7.png "Figure7" { width:auto; max-width:100% }
 
 ## Incident radiation
-The computed q ̇_IRHF^''-values at the facade during the reference test and the corresponding measurements in FDS are shown in Figure [#figure8]. A good agreement is found 
-between the measurements at position 2 and 5. At position 3 and 4 however the q ̇_IRHF^''-values are twice the actual in FDS. A similar behaviour is seen at position 6. 
+The computed $\dot{q}^{\prime\prime}_{IRHF}$-values at the facade during the reference test and the corresponding measurements in FDS are shown in Figure [#figure8]. A good agreement is found 
+between the measurements at position 2 and 5. At position 3 and 4 however the $\dot{q}^{\prime\prime}_{IRHF}$-values are twice the actual in FDS. A similar behaviour is seen at position 6. 
 At position 1 closest to the fire, FDS is having trouble to match the computed heat flux in the transient approach. However, later on at the second peak of the HRR 
-story the calculated q ̇_IRHF^''-values in FDS underestimates the computed q ̇_IRHF^''-values with some 15 %.
+story the calculated $\dot{q}^{\prime\prime}_{IRHF}$-values in FDS underestimates the computed $\dot{q}^{\prime\prime}_{IRHF}$-values with some 15 %.
 
 ~ Figure { #Figure8; caption:"FDS 5 cm cells, comparisons of calculated incident radiative heat fluxes and those computed by FDS. Left - The three positions closest to the opening. Right - The three positions further up along the facade."}
 ![Figure8]
@@ -313,7 +312,7 @@ single mesh simulations, computational times of 1.5, 18 and 232 h were exhibited
 As seen in Figure [#figure9]-[#figure11], the overall difference between the coarse grid size and the other grid sizes is considerable. The coarse 20 cm grid size consequently underestimates 
 the actual temperatures close to the fire and higher up along the facade. The 10 cm grid performs well at positions further up along the facade in general, however close to 
 the fire source large discrepancies are found. The fine grid size of 5 cm performs generally well close to the fire source but overestimates the temperatures further up, 
-especially for the temperatures retrieved from the thermocouples and the T_AST.
+especially for the temperatures retrieved from the thermocouples and the $T_{AST}$.
 
 ~ Figure { #Figure9; caption:"Grid sensitivity, comparison of temperatures from the thermocouples during the reference test and those calculated in FDS. Left - The three positions closest to the opening. Right - The three positions further up along the facade."}
 ![Figure9]
@@ -328,12 +327,12 @@ especially for the temperatures retrieved from the thermocouples and the T_AST.
 ~
 [Figure11]: images/Figure11.png "Figure11" { width:auto; max-width:100% }
 
-The overall difference between the coarse grid size and the other grid sizes are also large in regards to q ̇_IRHF^'' as seen in Figure [#figure12]. The 20 cm grid consequently underestimates the 
-radiation outputs on all positions. At position four, five and six, negative q ̇_IRHF^'' are shown for the 20 cm simulation. The latter since larger convective heat 
-fluxes were calculated in FDS compared to the radiative heat fluxes. The 10 cm grid show promising results higher up but demonstrates only a small increase in heat 
-flux close to the fire source at position 1 compared with the 20 cm grid. For the 5 cm grid, q ̇_IRHF^''-values twice the computed ones are shown at position 3 and 4. 
-The 5 cm grid performs well higher up and the calculated q ̇_IRHF^'' in FDS underestimate the computed q ̇_IRHF^'' with some 15 %. However, the biggest problem is 
-still the agreement during the transient phase for position 1.
+The overall difference between the coarse grid size and the other grid sizes are also large in regards to $\dot{q}^{\prime\prime}_{IRHF}$ as seen in Figure [#figure12]. The 20 cm grid consequently underestimates the 
+radiation outputs on all positions. At position four, five and six, negative $\dot{q}^{\prime\prime}_{IRHF}$ are shown for the 20 cm simulation. The latter since larger 
+convective heat fluxes were calculated in FDS compared to the radiative heat fluxes. The 10 cm grid show promising results higher up but demonstrates only a small increase 
+in heat flux close to the fire source at position 1 compared with the 20 cm grid. For the 5 cm grid, $\dot{q}^{\prime\prime}_{IRHF}$-values twice the computed ones are shown
+at position 3 and 4. The 5 cm grid performs well higher up and the calculated $\dot{q}^{\prime\prime}_{IRHF}$ in FDS underestimate the computed $\dot{q}^{\prime\prime}_{IRHF}$ 
+with some 15 %. However, the biggest problem is still the agreement during the transient phase for position 1.
 
 ~ Figure { #Figure12; caption:"Grid sensitivity, comparisons of calculated incident radiative heat fluxes and those computed by FDS. Left - The three positions closest to the opening. Right - The three positions further up along the facade."}
 ![Figure12]
@@ -379,7 +378,7 @@ in the output concerning the flame spread along the facade. However, the increas
 In the main simulations a soot yield of 0.037 was specified based on the results of a validation study of smoke and toxic gas concentrations in a test compartment [@Rinne]. 
 The soot yield was increased to 0.1 to observe any differences in the output data. Regarding gas temperatures, the change in soot yield had minor effects. However, 
 temperatures from the modelled plate temperatures were seen to increase especially on the positions closest to the fire nearly reaching the actual temperature during 
-the second peak of the HRR history. The increase in soot yield also increased the q ̇_IRHF^''-output with some 20 % at position 1 closest to the fire source, now 
+the second peak of the HRR history. The increase in soot yield also increased the $\dot{q}^{\prime\prime}_{IRHF}$-output with some 20 % at position 1 closest to the fire source, now 
 reaching the same level as the measured incident radiation during the test.
 
 # A COMPARISON WITH FDS VERSION 5.5.3
@@ -429,8 +428,8 @@ steadily during the whole fire scenario differently compared with the other posi
 radiation. In this case after 600 s there is a gap between the measured heat flux and the computed heat flux of more than 50 kW/m2, which is not seen at the remaining 
 positions. At the same time these tendencies are not seen for the temperature retrieved from the thermocouple at the same position in Figure [#figure5].
 
-An uncertainty analysis was performed due to the above observations [@NilssonM]. The uncertainty analysis showed that the uncertainty in the computation of q ̇_IRHF^'' in the 
-reference test from Eq. 1 lies in the temperature measurements retrieved from the steel plate thermometers. In the video footages it can be seen that the lower part 
+An uncertainty analysis was performed due to the above observations [@NilssonM]. The uncertainty analysis showed that the uncertainty in the computation of $\dot{q}^{\prime\prime}_{IRHF}$
+in the reference test from Eq. 1 lies in the temperature measurements retrieved from the steel plate thermometers. In the video footages it can be seen that the lower part 
 of the facade is hardly damaged after the test and the Promatect cladding is hanging loose [@Evegren], signalling on a high stress during the test. The latter caused two of 
 the thermocouples close to the opening to fail later during the test as described in Figure [#figure5]. Also, gaps between the Promatect cladding and the thermometer were visible. 
 This may have caused changes around the flow field that affected the measurement in the test, which then affects the calculation of the incident radiative heat fluxes. 
@@ -444,12 +443,12 @@ the Calorimeter has been changed during the test, which would affect the calcula
 
 The above-mentioned could be the explanation to why the modelled plate thermometer temperature in FDS is seen to underestimate the temperature retrieved from the plate 
 thermometer at position C21 for the 5 cm grid and single mesh simulation; although otherwise the temperatures are well resolved by FDS along the facade. Comparing the 
-modelled plate thermometer temperatures in FDS with the T_AST in FDS, it is seen that the modeled plate thermometer temperatures are lower than the T_AST. However, 
-temperatures that are retrieved from plate thermometers cannot fully be equated with T_AST. The thermal inertia of the plate thermometer and heat loss through the 
-insulation material behind are factors that explains why retrieved temperatures from the thermometers are lower than the T_AST during the heating process. Thus, it 
-is reasonable that T_AST values from FDS in Figure [#figure7] are not just higher than the modeled plate thermometer temperatures in FDS in Figure [#figure6], but also higher than the 
+modelled plate thermometer temperatures in FDS with the $T_{AST}$ in FDS, it is seen that the modeled plate thermometer temperatures are lower than the $T_{AST}$. However, 
+temperatures that are retrieved from plate thermometers cannot fully be equated with $T_{AST}$. The thermal inertia of the plate thermometer and heat loss through the 
+insulation material behind are factors that explains why retrieved temperatures from the thermometers are lower than the $T_{AST}$ during the heating process. Thus, it 
+is reasonable that $T_{AST}$ values from FDS in Figure [#figure7] are not just higher than the modeled plate thermometer temperatures in FDS in Figure [#figure6], but also higher than the 
 retrieved temperatures from the thermometer in the actual test. Another factor that separates these measurements is the response time of the plate thermometer, which 
-is necessary to include in transient scenarios if a direct comparison to the thermometers is desired [@Jansson]. Since the T_AST values from FDS in Figure [#figure7] are based on 
+is necessary to include in transient scenarios if a direct comparison to the thermometers is desired [@Jansson]. Since the $T_{AST}$ values from FDS in Figure [#figure7] are based on 
 direct calculations the response time are not included, which would be the reason for the generally much higher values during the heating phase compared to the cooling 
 phase, most evident in the first 300 s at position C21.
 
