@@ -23,7 +23,7 @@ Toc Depth     : 1
 
 ~ Begin Vertical 
 
-# Context {#vertical}
+# Context 
 The use of egress simulation models in performance-based analysis relies on the confidence in the input data and the output data.
 
 * But data strongly depend on a large number of parameters.
@@ -63,11 +63,7 @@ Example :
 
 c equals to 16.45 for p=90%. 
 
-[![arrowdown]][down]
 
-
-[down]: # { .navigate-down }
-[arrowdown]: images/arrow.png "Down arrow" { width:178px; height:238px }
 ## Build the empirical distribution function
 Random realizations ranked in ascending order constitute the 
 empirical distribution function.
