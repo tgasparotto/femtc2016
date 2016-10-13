@@ -106,20 +106,20 @@ meaning both the convective and the total heat release rate could be estimated d
 Figure [#figure3].
 
 ## Incident radiation using a plate thermometer
-The incident radiation was studied using the retrieved temperatures from the thermometers and the thermocouples. The incident radiation $\dot{q}^{\prime\prime}_{INC} (W/m^{2})$ was then 
+The incident radiation was studied using the retrieved temperatures from the thermometers and the thermocouples. The incident radiation $\dot{q}^{\prime\prime}_{INC}$ $(W/m^{2})$ was then 
 derived from the following equation, Equation [#equation1] from [@Evegren]:
 
 ~ Equation  {#Equation1; caption:"Equation1" }
-  \dot{q}^{\prime\prime}_{INC} = \sigma T_{S}^{4} - \dfrac{h_{c}(T_{g}-T_{s})}{\epsilon} + \dfrac{dc\rho}{\epsilon} \times \dfrac{dT}{dt}
+  \dot{q}^{\prime\prime}_{INC} = \sigma T_{S}^{4} - \dfrac{h_{c}(T_{g}-T_{s})}{\epsilon} + \dfrac{dc\rho}{\epsilon} \cdot \dfrac{dT}{dt}
 ~
 
-where $\sigma (5.67 \times 10^{-8} W/(m^{2}K^{4}))$ is the Stefan Boltzmann constant, $d (0.7 mm)$ is the plate thickness , $c (7 850 J/(kg \times K))$ is the specific heat of steel, 
-$\rho (480 kg/m^{3})$ is the density of the steel plate and ε is the emissivity assumed to be of 0.9 (-) [@Evegren]. The variable $T_{s}$ is defined as the surface temperature of the plate thermometer and 
-$T_{g}$ is defined as the temperature of the free air flow (gas temperature). From the following equation, Equation [#equation2], the forced convective heat transfer $h_{c}$ 
-$(W/(m^{2} \times K)$ was estimated:
+where $\sigma$ $(5.67 \times 10^{-8} W/(m^{2} \cdot K^{4}))$ is the Stefan Boltzmann constant, $d$ $(0.7 mm)$ is the plate thickness , $c$ $(7 850 J/(kg \cdot K))$ is the specific 
+heat of steel, $\rho$ $(480 kg/m^{3})$ is the density of the steel plate and ε is the emissivity assumed to be of 0.9 (-) [@Evegren]. The variable $T_{s}$ is defined as the 
+surface temperature of the plate thermometer and $T_{g}$ is defined as the temperature of the free air flow (gas temperature). From the following equation, Equation 
+[#equation2], the forced convective heat transfer $h_{c}$ $(W/(m^{2} \cdot K)$ was estimated:
 
 ~ Equation  {#Equation2; caption:"Equation2" }
-  h_{c} = 2.4 T_{f}^{0.085} \times u_{\infty}^{1/2} \times x^{-1/2}
+  h_{c} = 2.4 T_{f}^{0.085} \cdot u_{\infty}^{1/2} \cdot x^{-1/2}
 ~
 
 where $u$ is the velocity of the vertical air flow and $x$ is a characteristic length. Based on video recordings from the experiment the air velocity was estimated to 
@@ -135,7 +135,7 @@ Note that Equation [#equation1] is based on the following simplified heat balanc
 where the suffix $PT$ refers to Plate Thermometer. The equation describes the heat balance on the exposed plate surface of a plate thermometer. From Equation [#equation3] the 
 term $\dot{q}^{\prime\prime}_{INC}$ is extracted from the heat balance equation and conduction is neglected, forming Equation [#equation1]. However, in Equation [#equation1], the convective term is subtracted, 
 which means in other words that the expression $\dot{q}^{\prime\prime}_{INC}$ is the incident radiative part of the total heat transfer. Hence, the latter term is referred to as incident 
-radiative heat flux, $\dot{q}^{\prime\prime}_{IRHF} (W/m^{2})$ in this paper.
+radiative heat flux, $\dot{q}^{\prime\prime}_{IRHF}$ $(W/m^{2})$ in this paper.
 
 The plate thermometer measures approximately the temperature of a surface which cannot absorb any heat, also called the $\textit{adiabatic surface temperature}$ $(T_{AST})$. The $T_{AST}$ 
 is an illustrative temperature measure both taking into account the influence from incident radiation and the convective heating from the surrounding gas [@Wickstrom2]. 
@@ -158,7 +158,6 @@ which in turn can affect the results of the simulation. A sensitivity analysis w
 alignments, presented in the sensitivity analysis chapter.
 
 ~ TableFigure { #Table1; caption: "Various measurements of the computational domain in FDS" }
-
 |----------------|---------------------------------|-----------------------|-----------------|
 |   Grid size    |  Domain size                    | Total number of cells | Mesh resolution |       
 |:---------------|:-------------------------------:|:---------------------:|:---------------:|
@@ -256,7 +255,7 @@ Again, this was done since in FDS there are no device that directly produce the 
 #RESULTS
 In this section the key results from the main simulations performed on a single mesh and 5 cm grid are presented. Data values named EXP are values retrieved from 
 the reference test and the data values named FDS are those retrieved from the FDS-simulations. In the following sensitivity analysis, results from the simulations 
-performed on the 10 cm and 20 cm grid size are shown. For all results the reader is referred to [@NilssonM.
+performed on the 10 cm and 20 cm grid size are shown. For all results the reader is referred to [@NilssonM].
 
 ## Temperature
 A comparison of temperature data retrieved from the thermocouples in the reference test and FDS are presented in Figure [#figure5]. As seen in Figure [#figure5], a good correspondence 
