@@ -20,15 +20,27 @@ name-references : REFERENCES
 [TITLE]
 
 ~ Abstract
- In an MSc thesis conducted at Lund University, Sweden, a validation study of FDS version 6.2.0 on the area of external fire spread was conducted.
- The validation study was performed using experimental data from a large-scale fire test on a SP FIRE 105 test rig in Borås, Sweden. The SP FIRE 105 test rig is a test method
- for facade systems simulating the impact on the overhead facade of a fire on ground floor of a three-storey apartment building. For this particular test, non-combustible 
- calcium silica boards were attached to the facade and temperature measurements took place at six different heights. A previous validation study for this setup has been conducted by SP
- using FDS version 5.5.3, showing promising results. However, as FDS is updated it does not automatically mean that every area is improved, and possible changes are important
- to address. Also, in the revision of the model from version 5 to version 6 changes were made in the basic turbulence model, meaning that a different result than the SP study
- was to be expected. The study concluded that FDS version 6.2.0 could reproduce the experimental results with a reasonable level of detail. Moreover, the studied output data
- produced in FDS 6.2.0 were generally higher than its precursor. However, to obtain credible results along the facade particularly close to the fire, a high mesh resolution
- was needed, namely a $D^{*}/\delta x$ of at least 30.
+ In an MSc thesis conducted at Lund University, Sweden, a validation
+ study of FDS version 6.2.0 on the area of external fire spread was
+ conducted. The validation study was performed using experimental data
+ from a large-scale fire test on a SP FIRE 105 test rig in Borås, Sweden.
+ The SP FIRE 105 test rig is a test method for facade systems simulating
+ the impact on the overhead facade of a fire on ground floor of a
+ three-storey apartment building. For this particular test,
+ non-combustible calcium silica boards were attached to the facade and
+ temperature measurements took place at six different heights. A previous
+ validation study for this setup has been conducted by SP using FDS
+ version 5.5.3, showing promising results. However, as FDS is updated it
+ does not automatically mean that every area is improved, and possible
+ changes are important to address. Also, in the revision of the model
+ from version 5 to version 6 changes were made in the basic turbulence
+ model, meaning that a different result than the SP study was to be
+ expected. The study concluded that FDS version 6.2.0 could reproduce the
+ experimental results with a reasonable level of detail. Moreover, the
+ studied output data produced in FDS 6.2.0 were generally higher than its
+ precursor. However, to obtain credible results along the facade
+ particularly close to the fire, a high mesh resolution was needed,
+ namely a $D^{*}/\delta x$ of at least 30.
 ~
 
 [editor]: https://www.madoko.net/editor.html "Madoko.net Editor"
@@ -37,94 +49,168 @@ name-references : REFERENCES
 [emaillink]: mailto:conference@thunderheadeng.com "conference@thunderheadeng.com"
 
 # INTRODUCTION { #sec-intro }
-Today FDS calculations are often used to model fires in complex building designs. However, there are large risks in using FDS if there is a lack of user knowledge, 
-since FDS is highly dependent on the input variables that are specified. Also, there is a risk in relying on results from previous validation studies of FDS performed 
-on completely different geometries or setups than the intended or in situations where FDS is not yet valid. In addition to this, changes in the model might affect the 
+Today FDS calculations are often used to model fires in complex building
+designs. However, there are large risks in using FDS if there is a lack
+of user knowledge, since FDS is highly dependent on the input variables
+that are specified. Also, there is a risk in relying on results from
+previous validation studies of FDS performed on completely different
+geometries or setups than the intended or in situations where FDS is not
+yet valid. In addition to this, changes in the model might affect the
 results and can render previous validation studies invalid.
 
-The background to this work lies in the results of an MSc thesis [@NilssonM] conducted at Lund University, Sweden, investigating the impact of horizontal projections on external
-fire spread using the numerical tool FDS 6.2.0 [@FDSUser]. As part of the thesis and to avoid the above-mentioned risks, a validation study was performed on FDS as calculation tool 
-or modelling external fire spread. In the validation study, experimental data from a large-scale fire test [@Evegren] on a SP FIRE 105 test rig [@SpFire105] in Borås, Sweden were used. 
-This particular setup were chosen since the geometry is closely linked to the setup used in the following part of the thesis as well since previous numerical work on this 
-particular test has been carried out on FDS 5.5.3 [@Anderson:1; @Anderson:2]. 
+The background to this work lies in the results of an MSc
+thesis [@NilssonM] conducted at Lund University, Sweden, investigating
+the impact of horizontal projections on external fire spread using the
+numerical tool FDS 6.2.0 [@FDSUser]. As part of the thesis and to avoid
+the above-mentioned risks, a validation study was performed on FDS as
+calculation tool or modelling external fire spread. In the validation
+study, experimental data from a large-scale fire test [@Evegren] on a SP
+FIRE 105 test rig [@SpFire105] in Borås, Sweden were used. This
+particular setup were chosen since the geometry is closely linked to the
+setup used in the following part of the thesis as well since previous
+numerical work on this particular test has been carried out on FDS
+5.5.3 [@Anderson:1; @Anderson:2].
 
-The previous validation study showed promising result, but as FDS progresses and new versions are released, updated validation studies are necessary. 
-It is crucial to frequently validate and highlight changes done in the FDS code. Relying on old, or in worst case none, validation studies could result in irreparable damages. 
-Hence validation of changes made in FDS is essential, especially in areas where previous validation studies are scarce as in the case of external fire spread.
+The previous validation study showed promising result, but as FDS
+progresses and new versions are released, updated validation studies are
+necessary. It is crucial to frequently validate and highlight changes
+done in the FDS code. Relying on old, or in worst case none, validation
+studies could result in irreparable damages. Hence validation of changes
+made in FDS is essential, especially in areas where previous validation
+studies are scarce as in the case of external fire spread.
 
-Two major changes in FDS 6.2.0 compared to FDS 5.5.3 is that the former version use constant Smagorinsky model to model turbulence viscosity while the latter use Deardorff’s 
-model as well as a new scalar transport scheme are implemented in FDS 6.2.0. A major downside with the constant Smagorinsky model in FDS 5.5.3 is that it is too dissipative, 
-meaning a fine grid size is needed in order to attain accurate results. The Deardorff model on the other hand are said to perform at both coarse and fine grid resolutions [@FDSGoogle]. 
-The changes in the turbulence viscosity model and the scalar transport scheme is closely linked to the dynamics of the fire, which of course are important even when studying 
-external fire spread, and therefore an embryo to a new validation study was born.
+Two major changes in FDS 6.2.0 compared to FDS 5.5.3 is that the former
+version use constant Smagorinsky model to model turbulence viscosity
+while the latter use Deardorff’s model as well as a new scalar transport
+scheme are implemented in FDS 6.2.0. A major downside with the constant
+Smagorinsky model in FDS 5.5.3 is that it is too dissipative, meaning a
+fine grid size is needed in order to attain accurate results. The
+Deardorff model on the other hand are said to perform at both coarse and
+fine grid resolutions [@FDSGoogle]. The changes in the turbulence
+viscosity model and the scalar transport scheme is closely linked to the
+dynamics of the fire, which of course are important even when studying
+external fire spread, and therefore an embryo to a new validation study
+was born.
 
 # METHODOLOGY
-In this paper the aim is to describe the validation study done in the MSc thesis mentioned above [@NilssonM] and its results. The approach of the validation study was first to
-determine and extract essential experimental data from the selected large-scale fire test on the SP FIRE 105 test rig in Borås, Sweden. The large-scale fire test was
-thereafter simulated in FDS 6.2.0 in order to validate the new version of the CFD-software against the setup. 
+In this paper the aim is to describe the validation study done in the MSc
+thesis mentioned above [@NilssonM] and its results. The approach of the
+validation study was first to determine and extract essential
+experimental data from the selected large-scale fire test on the SP FIRE
+105 test rig in Borås, Sweden. The large-scale fire test was thereafter
+simulated in FDS 6.2.0 in order to validate the new version of the
+CFD-software against the setup.
 
-Several simulations was performed in FDS including sensitivity analysis covering the influence of different grid sizes, different mesh alignments, alternate positions 
-of thermocouple devices, the choice of radiation angles, Heat Release Rate Per Unit Area (HRRPUA) as well as the choice of soot yield. The results obtained were then 
-compared to those from the experimental test rig. Further, the key results were compared against the results from the previous validation study on FDS 5.5.3 [@Anderson:1]. 
+Several simulations was performed in FDS including sensitivity analysis
+covering the influence of different grid sizes, different mesh
+alignments, alternate positions of thermocouple devices, the choice of
+radiation angles, Heat Release Rate Per Unit Area (HRRPUA) as well as the
+choice of soot yield. The results obtained were then compared to those
+from the experimental test rig. Further, the key results were compared
+against the results from the previous validation study on FDS
+5.5.3 [@Anderson:1].
 
 # EXPERIMENTAL SETUP
 ## SP FIRE 105 test rig
-The SP FIRE 105 test is a large-scale test method for analyzing reaction to fire properties of facade systems. The method specifies a procedure to determine reaction 
-to fire properties of different assemblies of materials, insulation, and claddings when exposed to fire from a simulated apartment fire where flames emerge through a 
-large window opening, i.e. the fire spread on combustible external walls.
+The SP FIRE 105 test is a large-scale test method for analyzing reaction
+to fire properties of facade systems. The method specifies a procedure to
+determine reaction to fire properties of different assemblies of
+materials, insulation, and claddings when exposed to fire from a
+simulated apartment fire where flames emerge through a large window
+opening, i.e. the fire spread on combustible external walls.
 
-The SP FIRE 105 test was developed in Sweden in 1985 [@SpFire105], based on a broad experimental study of external fire spread [@Ondrus]. In the eighties new building materials was 
-introduced and hence more intense fires was anticipated, and a recognized test method for external fire spread was therefore needed. External fire spread on combustible
-walls has been studied for decades and the SP Fire 105 test is one among other test methods that has been proposed throughout the years [@Hildebrand]. The initial Swedish test 
-method was introduced in 1958 [@Johannesson] and the amended SP Fire 105 test is nowadays a standardized test in Sweden, Denmark, and Norway.
+The SP FIRE 105 test was developed in Sweden in 1985 [@SpFire105], based
+on a broad experimental study of external fire spread [@Ondrus]. In the
+eighties new building materials was introduced and hence more intense
+fires was anticipated, and a recognized test method for external fire
+spread was therefore needed. External fire spread on combustible walls
+has been studied for decades and the SP Fire 105 test is one among other
+test methods that has been proposed throughout the years [@Hildebrand].
+The initial Swedish test method was introduced in 1958 [@Johannesson] and
+the amended SP Fire 105 test is nowadays a standardized test in Sweden,
+Denmark, and Norway.
 
-The test rig consists of a 150 mm thick lightweight concrete wall, 4 000 mm (W) by 6 000 mm (H), above a fire compartment with a 3 000 mm (W) by 710 mm (H) front opening. 
-For air intake the compartment has a horizontal opening in the floor, close to its back wall, measuring 3 140 mm (W) by 300 mm (D). The fire source consists of two trays 
-each filled with 30 liters of heptane positioned next to each other, each measuring 1 000 mm (W) by 100 mm (H) by 500 mm (D). Above the tray edges a flame suppressing 
-lattice is installed. Further, after each tray has been filled with 30 liters of heptane, water is added such that the fuel level is touching the underside of the lattice. 
-The upper drawing of Figure [#figure1] illustrates the setup.
+The test rig consists of a 150 mm thick lightweight concrete wall, 4 000
+mm (W) by 6 000 mm (H), above a fire compartment with a 3 000 mm (W) by
+710 mm (H) front opening. For air intake the compartment has a horizontal
+opening in the floor, close to its back wall, measuring 3 140 mm (W) by
+300 mm (D). The fire source consists of two trays each filled with 30
+liters of heptane positioned next to each other, each measuring 1 000 mm
+(W) by 100 mm (H) by 500 mm (D). Above the tray edges a flame suppressing
+lattice is installed. Further, after each tray has been filled with 30
+liters of heptane, water is added such that the fuel level is touching
+the underside of the lattice. The upper drawing of Figure [#figure1]
+illustrates the setup.
 
-The mentioned test rig setup was slightly altered in the tests used as reference in the validation study of FDS 6.2.0. The reason for the alternation was to evaluate fire 
-growth on external combustible ship surfaces with FRP instead of a regular building facade system [@Evegren]. In the alternated setup non-combustible calcium silica boards 
-(Promatect®) with 10 mm thickness of the test specimen was fastened along the facade, covering the two fictitious windows as illustrated in the drawing in Figure [#figure1]. 
-The total dimensions of the boards were 3 750 mm (W) by 6 000 mm (H). This test was referred to as the reference test and retrieved data from this test laid the 
-foundation for the validation study. In the lower pictures of Figure [#figure1] the fire development during the reference test are seen.
+The mentioned test rig setup was slightly altered in the tests used as
+reference in the validation study of FDS 6.2.0. The reason for the
+alternation was to evaluate fire growth on external combustible ship
+surfaces with FRP instead of a regular building facade system [@Evegren].
+In the alternated setup non-combustible calcium silica boards
+(Promatect®) with 10 mm thickness of the test specimen was fastened along
+the facade, covering the two fictitious windows as illustrated in the
+drawing in Figure [#figure1]. The total dimensions of the boards were 3
+750 mm (W) by 6 000 mm (H). This test was referred to as the reference
+test and retrieved data from this test laid the foundation for the
+validation study. In the lower pictures of Figure [#figure1] the fire
+development during the reference test are seen.
 
 ~ Figure { #Figure1; caption:"Upper - Illustration of the dimensions of the modified SP FIRE 105 facade test rig and the instrumentation consisting of six Inconel steel plate thermometers (C21-C26) and six sheathed type K thermocouples (C27-C32). Lower - Pictures showing the fire development during the reference test at different split times."}
 ![Figure1]
 ~
-[Figure1]: images/Figure1.jpg "Figure1" { width:auto; max-width:99% }
+[Figure1]: images/Figure1.jpg "Figure1" { width:auto; max-width:100% }
 
 ## Arrangement, instrumentation and measurements in the reference test
-The thermal exposure was estimated at the panel surface with six Inconel steel plates with wire thermocouples spot-welded on their backside, fastened flush with the surface. 
-The steel plates were nominally 0.7 mm thick, measured 150 mm by 150 mm and covered a hole (Ø100 mm) drilled through the panels for the thermocouple wires. Further, 
-six sheathed type K thermocouples (Ø0.50 mm) were placed along the centerline of the panels in order to quantify the gas temperature in the buoyancy plume along the 
-centerline of the panels. The thermocouples were placed 50 mm from the front surface of the panels and, as seen in Figure [#figure1], positioned 50 mm offset the plate thermometers. 
-In conclusion, the measurements took place at 0.5 m (C21/C27), 1.6 m (C22/C28), 2.7 m (C23/C29), 3.8 m (C24/C30), 4.8 m (C25/C31) and 5.9 m (C26/C32) above the opening.
-Moreover, gas temperature, velocity and generation of gaseous species such as CO, CO2 and depletion of O2 was measured during the test by a large Industrial Calorimeter, 
-meaning both the convective and the total heat release rate could be estimated during the test [@Evegren]. Information about the HRR history of the reference test is found in 
+The thermal exposure was estimated at the panel surface with six Inconel
+steel plates with wire thermocouples spot-welded on their backside,
+fastened flush with the surface. The steel plates were nominally 0.7 mm
+thick, measured 150 mm by 150 mm and covered a hole (Ø100 mm) drilled
+through the panels for the thermocouple wires. Further, six sheathed type
+K thermocouples (Ø0.50 mm) were placed along the centerline of the panels
+in order to quantify the gas temperature in the buoyancy plume along the
+centerline of the panels. The thermocouples were placed 50 mm from the
+front surface of the panels and, as seen in Figure [#figure1], positioned
+50 mm offset the plate thermometers. In conclusion, the measurements took
+place at 0.5 m (C21/C27), 1.6 m (C22/C28), 2.7 m (C23/C29), 3.8 m
+(C24/C30), 4.8 m (C25/C31) and 5.9 m (C26/C32) above the opening.
+Moreover, gas temperature, velocity and generation of gaseous species
+such as CO, CO2 and depletion of O2 was measured during the test by a
+large Industrial Calorimeter, meaning both the convective and the total
+heat release rate could be estimated during the test [@Evegren].
+Information about the HRR history of the reference test is found in
 Figure [#figure3].
 
 ## Incident radiation using a plate thermometer
-The incident radiation was studied using the retrieved temperatures from the thermometers and the thermocouples. The incident radiation $\dot{q}^{\prime\prime}_{INC}$
-$(W/m^{2})$ was then derived from the following equation, Equation [#equation1] from [@Evegren]:
+The incident radiation was studied using the retrieved temperatures from
+the thermometers and the thermocouples. The incident radiation
+$\dot{q}^{\prime\prime}_{INC}$ $(W/m^{2})$ was then derived from the
+following equation, Equation [#equation1] from [@Evegren]:
 
 ~ Equation  {#Equation1; caption:"Equation1" }
   \dot{q}^{\prime\prime}_{INC} = \sigma T_{S}^{4} - \dfrac{h_{c}(T_{g}-T_{s})}{\epsilon} + \dfrac{dc\rho}{\epsilon} \cdot \dfrac{dT}{dt}
 ~
 
-where $\sigma$ $(5.67 \times 10^{-8} W/(m^{2} \cdot K^{4}))$ is the Stefan Boltzmann constant, $d$ $(0.7 mm)$ is the plate thickness , $c$ $(7 850 J/(kg \cdot K))$ is the specific 
-heat of steel, $\rho$ $(480 kg/m^{3})$ is the density of the steel plate and ε is the emissivity assumed to be of 0.9 (-) [@Evegren]. The variable $T_{s}$ is defined as the 
-surface temperature of the plate thermometer and $T_{g}$ is defined as the temperature of the free air flow (gas temperature). From the following equation, Equation 
-[#equation2], the forced convective heat transfer $h_{c}$ $(W/(m^{2} \cdot K)$ was estimated:
+where $\sigma$ $(5.67 \times 10^{-8} W/(m^{2} \cdot K^{4}))$ is the
+Stefan Boltzmann constant, $d$ $(0.7 mm)$ is the plate thickness , $c$
+$(7 850 J/(kg \cdot K))$ is the specific heat of steel, $\rho$
+$(480 kg/m^{3})$ is the density of the steel plate and ε is the
+emissivity assumed to be of 0.9 (-) [@Evegren]. The variable $T_{s}$ is
+defined as the surface temperature of the plate thermometer and $T_{g}$
+is defined as the temperature of the free air flow (gas temperature).
+From the following equation, Equation  [#equation2], the forced
+convective heat transfer $h_{c}$ $(W/(m^{2} \cdot K)$ was estimated:
 
 ~ Equation  {#Equation2; caption:"Equation2" }
   h_{c} = 2.4 T_{f}^{0.085} \cdot u_{\infty}^{1/2} \cdot x^{-1/2}
 ~
 
-where $u$ is the velocity of the vertical air flow and $x$ is a characteristic length. Based on video recordings from the experiment the air velocity was estimated to 
-6 m/s and the characteristic length was set to 0.2 m (the side measurement of the square plate). The film temperature $T_{f}$ is the average of the $T_{s}$ and $T_{g}$ [@Evegren]. 
-The forced convective heat transfer coefficient $h_{c}$ varied between 22 and 24 during the test using Equation [#equation2].
+where $u$ is the velocity of the vertical air flow and $x$ is a
+characteristic length. Based on video recordings from the experiment the
+air velocity was estimated to 6 m/s and the characteristic length was set
+to 0.2 m (the side measurement of the square plate). The film temperature
+$T_{f}$ is the average of the $T_{s}$ and $T_{g}$ [@Evegren]. The forced
+convective heat transfer coefficient $h_{c}$ varied between 22 and 24
+during the test using Equation [#equation2].
 
 Note that Equation [#equation1] is based on the following simplified heat balance equation, Equation 289 in [@Wickstrom1], in this paper entitled Equation [#equation3]:
 
@@ -132,32 +218,49 @@ Note that Equation [#equation1] is based on the following simplified heat balanc
   \epsilon_{PT} \dot{q}^{\prime\prime}_{inc} - \epsilon_{PT} \sigma T_{PT}^{4} + h_{PT} (T_{g} - T_{PT}) + K(T_{g} - T_{PT})=C \dfrac{dT_{PT}}{dT}
 ~
 
-where the suffix $PT$ refers to Plate Thermometer. The equation describes the heat balance on the exposed plate surface of a plate thermometer. From Equation [#equation3] the 
-term $\dot{q}^{\prime\prime}_{INC}$ is extracted from the heat balance equation and conduction is neglected, forming Equation [#equation1]. However, in Equation [#equation1], the convective term is subtracted, 
-which means in other words that the expression $\dot{q}^{\prime\prime}_{INC}$ is the incident radiative part of the total heat transfer. Hence, the latter term is referred to as incident 
-radiative heat flux, $\dot{q}^{\prime\prime}_{IRHF}$ $(W/m^{2})$ in this paper.
+where the suffix $PT$ refers to Plate Thermometer. The equation describes
+the heat balance on the exposed plate surface of a plate thermometer.
+From Equation [#equation3] the term $\dot{q}^{\prime\prime}_{INC}$ is
+extracted from the heat balance equation and conduction is neglected,
+forming Equation [#equation1]. However, in Equation [#equation1], the
+convective term is subtracted, which means in other words that the
+expression $\dot{q}^{\prime\prime}_{INC}$ is the incident radiative part
+of the total heat transfer. Hence, the latter term is referred to as
+incident radiative heat flux, $\dot{q}^{\prime\prime}_{IRHF}$ $(W/m^{2})$
+in this paper.
 
-The plate thermometer measures approximately the temperature of a surface which cannot absorb any heat, also called the $\textit{adiabatic surface temperature}$ $(T_{AST})$. The $T_{AST}$ 
-is an illustrative temperature measure both taking into account the influence from incident radiation and the convective heating from the surrounding gas [@Wickstrom2]. 
-For example, if an exposed body is far away from the fire source, radiation is the dominating part and hence the $T_{AST}$ will be closer to an effective radiation 
-temperature $T_{r}$. If, however, the body is exposed by mainly convection from the hot gases, $T_{AST}$ will be closer to the gas temperature $T_{g}$. Since this measure is 
-implemented in FDS, it can then be used as an alternative means of expressing the thermal exposure to a surface without taking into account the energy gain or loss 
-through conduction from the exposed body.
+The plate thermometer measures approximately the temperature of a surface
+which cannot absorb any heat, also called the
+$\textit{adiabatic surface temperature}$ $(T_{AST})$. The $T_{AST}$ is an
+illustrative temperature measure both taking into account the influence
+from incident radiation and the convective heating from the surrounding
+gas [@Wickstrom2]. For example, if an exposed body is far away from the
+fire source, radiation is the dominating part and hence the $T_{AST}$
+will be closer to an effective radiation temperature $T_{r}$. If,
+however, the body is exposed by mainly convection from the hot gases,
+$T_{AST}$ will be closer to the gas temperature $T_{g}$. Since this
+measure is implemented in FDS, it can then be used as an alternative
+means of expressing the thermal exposure to a surface without taking into
+account the energy gain or loss through conduction from the exposed body.
 
 # ARRANGEMENT IN FDS
-The model in FDS was built up using building materials corresponding to the test rig as far as possible. The geometry of the reference test in FDS can be seen in 
-Figure [#figure2].
+The model in FDS was built up using building materials corresponding to
+the test rig as far as possible. The geometry of the reference test in
+FDS can be seen in Figure [#figure2].
 
 ~ Figure { #Figure2; caption:"Pictures illustrating the geometry used in FDS from different angles."}
 ![Figure2]
 ~
 [Figure2]: images/Figure2.jpg "Figure2" { width:auto; max-width:100% }
 
-The different grid sizes used in FDS are presented in Table [#table1]. The main model was built up by a single mesh in order to avoid high speed flow at mesh alignments, 
-which in turn can affect the results of the simulation. A sensitivity analysis was later conducted covering the potential influence on results of different mesh 
-alignments, presented in the sensitivity analysis chapter.
+The different grid sizes used in FDS are presented in Table [#table1].
+The main model was built up by a single mesh in order to avoid high speed
+flow at mesh alignments, which in turn can affect the results of the
+simulation. A sensitivity analysis was later conducted covering the
+potential influence on results of different mesh alignments, presented in
+the sensitivity analysis chapter.
 
-~ TableFigure { #Table1; caption: "Various measurements of the computational domain in FDS."; .wide}
+~ TableFigure { #Table1; caption: "Various measurements of the computational domain in FDS."; .narrow }
 |----------------|---------------------------------|-----------------------|-----------------|
 |   Grid size    |  Domain size                    | Total number of cells | Mesh resolution |       
 |:---------------|:-------------------------------:|:---------------------:|:---------------:|
@@ -167,30 +270,49 @@ alignments, presented in the sensitivity analysis chapter.
 |----------------|---------------------------------|-----------------------|-----------------|
 ~
 
-The ratio $D^{*}/\delta x$ for the conducted simulations are approximately 8, 15 and 30 for the coarse, medium and fine grid respectively. These values can be compared with 
-the values ($D^{*}/\delta x$ of 4-16) that historically has been used as reference in FDS applications. The values of 8, 15 and 30 can also be put in relation to the values 
-represented in Table 3.11 in the FDS validation guide [@FDSValidation], where the mean value of the lower range limits is of around 8 and the mean value of the upper range is 
-of around 16.
+The ratio $D^{*}/\delta x$ for the conducted simulations are
+approximately 8, 15 and 30 for the coarse, medium and fine grid
+respectively. These values can be compared with the values
+($D^{*}/\delta x$ of 4-16) that historically has been used as reference
+in FDS applications. The values of 8, 15 and 30 can also be put in
+relation to the values represented in Table 3.11 in the FDS validation
+guide [@FDSValidation], where the mean value of the lower range limits is
+of around 8 and the mean value of the upper range is of around 16.
 
-The finest grid size used in the validation study corresponds to a higher value than 16, which means it is considered to give better results from the accuracy 
-perspective but on the negative side enhance the simulation time drastically. For the current single mesh simulations, computational times of 1.5, 18 and 232 h 
-were exhibited for the 20, 10 and 5 cm cells. Even though the simulation with 5 cm grid size gave simulation times that were multiple times as long as for the 
-10 cm and 20 cm case, it was considered important to study a grid size this small as it is known that the choice of grid size gives the single most influence on 
-the solution in FDS [@Rubini].
+The finest grid size used in the validation study corresponds to a higher
+value than 16, which means it is considered to give better results from
+the accuracy perspective but on the negative side enhance the simulation
+time drastically. For the current single mesh simulations, computational
+times of 1.5, 18 and 232 h were exhibited for the 20, 10 and 5 cm cells.
+Even though the simulation with 5 cm grid size gave simulation times that
+were multiple times as long as for the 10 cm and 20 cm case, it was
+considered important to study a grid size this small as it is known that
+the choice of grid size gives the single most influence on the solution
+in FDS [@Rubini].
 
 ##Design fire
-Because of the use of a flame suppressing lattice in the reference test, the design fire in FDS could not be based on a simple heptane pool fire. This is because the 
-HRR in the latter case would be significantly higher without the flame suppressing lattice. Therefore the HRR used in the simulations were modeled using the HRR 
-measurements from the reference test. The Ramp functions in FDS in combination with a surface with a specified HRRPUA gave the final HRR-curve. In Figure [#figure3] both 
-the actual HRR history during the large-scale fire test and the HRR used in one of the FDS setups are seen. 
+Because of the use of a flame suppressing lattice in the reference test,
+the design fire in FDS could not be based on a simple heptane pool fire.
+This is because the HRR in the latter case would be significantly higher
+without the flame suppressing lattice. Therefore the HRR used in the
+simulations were modeled using the HRR measurements from the reference
+test. The Ramp functions in FDS in combination with a surface with a
+specified HRRPUA gave the final HRR-curve. In Figure [#figure3] both the
+actual HRR history during the large-scale fire test and the HRR used in
+one of the FDS setups are seen.
 
-As seen in the left picture in Figure [#figure3], the HRR peaked at 1 800 kW after around 400 s then declined to around 
-1 500 kW the following minutes. After 600 s the fire developed rapidly creating a second peak at approximately 3 100 kW, which lasted for about 120 s before it 
-gradually declined as the level of heptane in the trays decreased.
+As seen in the left picture in Figure [#figure3], the HRR peaked at 1 800
+kW after around 400 s then declined to around 1 500 kW the following
+minutes. After 600 s the fire developed rapidly creating a second peak at
+approximately 3 100 kW, which lasted for about 120 s before it gradually
+declined as the level of heptane in the trays decreased.
 
-The fire properties in FDS were set to match the chemical properties of heptane. The soot yield of heptane was set to 0.037, which was collected from a validation 
-study of smoke and toxic gas concentrations in a test compartment [@Rinne]. The radiative fraction was the default value of 0.35 for FDS 6.2.0, which can be compared 
-with the value of 0.33 for well-ventilated heptane fires as found in [@SFPE].
+The fire properties in FDS were set to match the chemical properties of
+heptane. The soot yield of heptane was set to 0.037, which was collected
+from a validation study of smoke and toxic gas concentrations in a test
+compartment [@Rinne]. The radiative fraction was the default value of
+0.35 for FDS 6.2.0, which can be compared with the value of 0.33 for
+well-ventilated heptane fires as found in [@SFPE].
 
 ~ Figure { #Figure3; caption:"Left - Actual HRR story of the reference test. Right - HRR in FDS for the 5 cm grid simulation."}
 ![Figure3]
@@ -198,20 +320,34 @@ with the value of 0.33 for well-ventilated heptane fires as found in [@SFPE].
 [Figure3]: images/Figure3.png "Figure3" { width:auto; max-width:90% }
 
 ## Measurement devices
-The devices used in the FDS simulations along with their positions are seen in Figure [#figure4]. The default thermocouples in FDS were used as a basis, which is a nickel-based 
-thermocouple with specific heat of 0.44 kJ/KgK, density of 8908 kg/m3 and emissivity of 0.85. However, to match the sheathed type K thermocouples in the actual fire 
-test (C27-C32), the bead diameter was changed from 1 mm to 0.5 mm. In addition to these six thermocouples, additional ten thermocouples were placed every 10 cm offset 
-the symmetry line along the facade, as seen at position 4 in Figure [#figure4]. Further, six velocity devices were positioned just outside the facade at each height as seen at 
-position 5.
+The devices used in the FDS simulations along with their positions are
+seen in Figure [#figure4]. The default thermocouples in FDS were used as
+a basis, which is a nickel-based thermocouple with specific heat of 0.44
+kJ/KgK, density of 8908 kg/m3 and emissivity of 0.85. However, to match
+the sheathed type K thermocouples in the actual fire test (C27-C32), the
+bead diameter was changed from 1 mm to 0.5 mm. In addition to these six
+thermocouples, additional ten thermocouples were placed every 10 cm
+offset the symmetry line along the facade, as seen at position 4 in
+Figure [#figure4]. Further, six velocity devices were positioned just
+outside the facade at each height as seen at position 5.
 
-To be able to simulate the plate thermometers in FDS, six obstacles were defined and placed along the symmetry line of the facade (C21-C26). Two surfaces were created 
-built up by 0.7 mm thin layer of metal together with a 1 cm thick layer of insulation which then were applied on the obstacles depending on the direction of heat 
-transfer. Wall temperature devices were then placed at the backside of these plates to measure the surface temperature. 
+To be able to simulate the plate thermometers in FDS, six obstacles were
+defined and placed along the symmetry line of the facade (C21-C26). Two
+surfaces were created built up by 0.7 mm thin layer of metal together
+with a 1 cm thick layer of insulation which then were applied on the
+obstacles depending on the direction of heat transfer. Wall temperature
+devices were then placed at the backside of these plates to measure the
+surface temperature.
 
-In addition, measurements of adiabatic surface temperature ($T_{AST}$), incident heat flux ($\dot{q}^{\prime\prime}_{INC}$) and convective heat flux ($\dot{q}^{\prime\prime}_{conv}$) took place at the same 
-positions as for the wall temperature devices. The former was done in order to compare the retrieved temperatures from the plate thermometers during the reference 
-test with the illustrative temperature $T_{AST}$ in FDS. The measurements of incident heat flux and convective heat flux took place in order to produce comparable 
-incident heat flux results to the reference test. The procedure for doing this is described further down.
+In addition, measurements of adiabatic surface temperature ($T_{AST}$),
+incident heat flux ($\dot{q}^{\prime\prime}_{INC}$) and convective heat
+flux ($\dot{q}^{\prime\prime}_{conv}$) took place at the same positions
+as for the wall temperature devices. The former was done in order to
+compare the retrieved temperatures from the plate thermometers during the
+reference test with the illustrative temperature $T_{AST}$ in FDS. The
+measurements of incident heat flux and convective heat flux took place in
+order to produce comparable incident heat flux results to the reference
+test. The procedure for doing this is described further down.
 
 ~ Figure { #Figure4; caption:"Picture illustrating the device positions in FDS. Left - The front of the test rig along with the six plate thermometers. Middle - Close-up of each thermometer position and other devices used. Right - Same as the middle picture but in 3D."}
 ![Figure4]
@@ -219,45 +355,66 @@ incident heat flux results to the reference test. The procedure for doing this i
 [Figure4]: images/Figure4.jpg "Figure4" { width:auto; max-width:100% }
 
 ##Extracting incident radiative heat flux results in FDS
-Since there are no device that directly produce the same form of heat flux in FDS as computed from the reference test described above ($\dot{q}^{\prime\prime}_{IRHF}$), 
-the information given in [@Overholt] was used. In FDS, the quantity incident heat flux $\dot{q}^{\prime\prime}_{INC} (W/m^{2})$ is the sum of the incoming radiation and 
-convection, not including the outgoing radiation [@Overholt]. The quantity incident heat flux is described in the following equation, Equation [#equation4] from [@FDSUser]:
+Since there are no device that directly produce the same form of heat
+flux in FDS as computed from the reference test described above
+($\dot{q}^{\prime\prime}_{IRHF}$), the information given in [@Overholt]
+was used. In FDS, the quantity incident heat flux
+$\dot{q}^{\prime\prime}_{INC} (W/m^{2})$ is the sum of the incoming
+radiation and convection, not including the outgoing
+radiation [@Overholt]. The quantity incident heat flux is described in
+the following equation, Equation [#equation4] from [@FDSUser]:
 
 ~ Equation  {#Equation4; caption:"Equation4" }
   \dot{q}^{\prime\prime}_{INC} = \dfrac{\dot{q}^{\prime\prime}_{rad}}{\epsilon} + \sigma T_{w}^{4} + \dot{q}^{\prime\prime}_{conv}
 ~
 
-Further, there is also a quantity called $\textit{radiative heat flux}$, described as the sum of the incoming and reflecting radiation as seen in the following equation, 
-Equation [#equation5] from [@Overholt]:
+Further, there is also a quantity called $\textit{radiative heat flux}$,
+described as the sum of the incoming and reflecting radiation as seen in
+the following equation, Equation [#equation5] from [@Overholt]:
 
 ~ Equation  {#Equation5; caption:"Equation5" }
   \dot{q}^{\prime\prime}_{rad} = \dot{q}^{\prime\prime}_{rad, in} - \dot{q}^{\prime\prime}_{rad, out} = \dot{q}^{\prime\prime}_{rad, in} - \epsilon \sigma T_{w}^{4}
 ~
 
-Substituting Equation [#equation5] in Equation [#equation4] results in the following equation, Equation [#equation6]:
+Substituting Equation [#equation5] in Equation [#equation4] results in
+the following equation, Equation [#equation6]:
 
 ~ Equation  {#Equation6; caption:"Equation6" }
   \dot{q}^{\prime\prime}_{INC} = \dfrac{\dot{q}^{\prime\prime}_{rad, in}}{\epsilon} + \dot{q}^{\prime\prime}_{conv}
 ~
 
-At this stage, to be able to compare the quantity $\dot{q}^{\prime\prime}_{INC}$ in FDS with the computed $\dot{q}^{\prime\prime}_{IRHF}$-values from the reference test, 
-the convective term was subtracted from Equation [#equation6]. This means that the $\dot{q}^{\prime\prime}_{IRHF}$-output data in FDS were produced by subtracting the 
-$\dot{q}^{\prime\prime}_{INC}$-values with the $\dot{q}^{\prime\prime}_{conv}$-values from FDS, resulting in the following equation, Equation [#equation7]:
+At this stage, to be able to compare the quantity
+$\dot{q}^{\prime\prime}_{INC}$ in FDS with the computed
+$\dot{q}^{\prime\prime}_{IRHF}$-values from the reference test, the
+convective term was subtracted from Equation [#equation6]. This means
+that the $\dot{q}^{\prime\prime}_{IRHF}$-output data in FDS were produced
+by subtracting the $\dot{q}^{\prime\prime}_{INC}$-values with the
+$\dot{q}^{\prime\prime}_{conv}$-values from FDS, resulting in the
+following equation, Equation [#equation7]:
 
 ~ Equation  {#Equation7; caption:"Equation7" }
   \dot{q}^{\prime\prime}_{IRHF} = \dot{q}^{\prime\prime}_{INC} - \dot{q}^{\prime\prime}_{conv} = \dfrac{\dot{q}^{\prime\prime}_{rad, in}}{\epsilon} 
 ~
 
-Again, this was done since in FDS there are no device that directly produce the same form of heat flux computed in the given large-scale fire test.
+Again, this was done since in FDS there are no device that directly
+produce the same form of heat flux computed in the given large-scale fire
+test.
 
 #RESULTS
-In this section the key results from the main simulations performed on a single mesh and 5 cm grid are presented. Data values named EXP are values retrieved from 
-the reference test and the data values named FDS are those retrieved from the FDS-simulations. In the following sensitivity analysis, results from the simulations 
-performed on the 10 cm and 20 cm grid size are shown. For all results the reader is referred to [@NilssonM].
+In this section the key results from the main simulations performed on a
+single mesh and 5 cm grid are presented. Data values named EXP are values
+retrieved from the reference test and the data values named FDS are those
+retrieved from the FDS-simulations. In the following sensitivity
+analysis, results from the simulations performed on the 10 cm and 20 cm
+grid size are shown. For all results the reader is referred
+to [@NilssonM].
 
 ## Temperature
-A comparison of temperature data retrieved from the thermocouples in the reference test and FDS are presented in Figure [#figure5]. As seen in Figure [#figure5], a good correspondence 
-is found close to the fire source but FDS slightly overestimates the temperatures further up, particularly at position C29 and C30. This behaviour is fairly consistent 
+A comparison of temperature data retrieved from the thermocouples in the
+reference test and FDS are presented in Figure [#figure5]. As seen in
+Figure [#figure5], a good correspondence is found close to the fire
+source but FDS slightly overestimates the temperatures further up,
+particularly at position C29 and C30. This behaviour is fairly consistent
 during both peaks in the HRR history.
 
 ~ Figure { #Figure5; caption:"FDS 5 cm cells, comparison of temperatures from the thermocouples during the reference test and those calculated in FDS. Left - The three positions closest to the opening. Right - The three positions further up along the facade. As indicated by the vertical lines, two of the thermocouples (C27 and C28) failed during the test."}
@@ -265,10 +422,16 @@ during both peaks in the HRR history.
 ~
 [Figure5]: images/Figure5.png "Figure5" { width:auto; max-width:100% }
 
-A comparison of the temperature data retrieved from the plate thermometers in the reference test and the simulated thermometers in FDS are presented in Figure [#figure6]. 
-A good agreement is seen at position C23-C26 except for a slight underestimation at position C25 and C26 as well as for a slight overestimation at position C23 and C24. 
-An underestimation of some 100 °C is seen at position C22 closer to the fire. However, closest to the fire at position C21 the modelled plate thermometer has problems 
-to reproduce the transient temperatures in the early stage of the fire and in the second peak it underestimates the temperature with some 100 °C. 
+A comparison of the temperature data retrieved from the plate
+thermometers in the reference test and the simulated thermometers in FDS
+are presented in Figure [#figure6]. A good agreement is seen at position
+C23-C26 except for a slight underestimation at position C25 and C26 as
+well as for a slight overestimation at position C23 and C24. An
+underestimation of some 100 °C is seen at position C22 closer to the
+fire. However, closest to the fire at position C21 the modelled plate
+thermometer has problems to reproduce the transient temperatures in the
+early stage of the fire and in the second peak it underestimates the
+temperature with some 100 °C.
 
 ~ Figure { #Figure6; caption:"FDS 5 cm cells, comparison of temperatures from the plate thermometers during the reference test and those calculated in FDS. Left - The three positions closest to the opening. Right - The three positions further up along the facade."}
 ![Figure6]
@@ -276,9 +439,14 @@ to reproduce the transient temperatures in the early stage of the fire and in th
 [Figure6]: images/Figure6.png "Figure6" { width:auto; max-width:100% }
 
 ## Adiabatic surface temperature
-A comparison of $T_{AST}$ in FDS and the retrieved temperatures from the plate thermometers during the reference test are shown in Figure [#figure7]. Unlike the already discussed 
-modelled thermometers in Figure [#figure1], the $T_{AST}$-values are slightly overestimating the temperatures retrieved from the thermometers at position C22-C26. At position C21, 
-the transient representation in the early stage of the temperature rise is better represented and just underestimating the retrieved temperatures at the second peak.
+A comparison of $T_{AST}$ in FDS and the retrieved temperatures from the
+plate thermometers during the reference test are shown in
+Figure [#figure7]. Unlike the already discussed modelled thermometers in
+Figure [#figure1], the $T_{AST}$-values are slightly overestimating the
+temperatures retrieved from the thermometers at position C22-C26. At
+position C21, the transient representation in the early stage of the
+temperature rise is better represented and just underestimating the
+retrieved temperatures at the second peak.
 
 ~ Figure { #Figure7; caption:"FDS 5 cm cells, comparison of temperatures from the plate thermometers during the reference test and adiabatic surface temperature data calculated in FDS. Left - The three positions closest to the opening. Right - The three positions further up along the facade."}
 ![Figure7]
@@ -286,10 +454,17 @@ the transient representation in the early stage of the temperature rise is bette
 [Figure7]: images/Figure7.png "Figure7" { width:auto; max-width:100% }
 
 ## Incident radiation
-The computed $\dot{q}^{\prime\prime}_{IRHF}$-values at the facade during the reference test and the corresponding measurements in FDS are shown in Figure [#figure8]. A good agreement is found 
-between the measurements at position 2 and 5. At position 3 and 4 however the $\dot{q}^{\prime\prime}_{IRHF}$-values are twice the actual in FDS. A similar behaviour is seen at position 6. 
-At position 1 closest to the fire, FDS is having trouble to match the computed heat flux in the transient approach. However, later on at the second peak of the HRR 
-story the calculated $\dot{q}^{\prime\prime}_{IRHF}$-values in FDS underestimates the computed $\dot{q}^{\prime\prime}_{IRHF}$-values with some 15 %.
+The computed $\dot{q}^{\prime\prime}_{IRHF}$-values at the facade during
+the reference test and the corresponding measurements in FDS are shown in
+Figure [#figure8]. A good agreement is found between the measurements at
+position 2 and 5. At position 3 and 4 however the
+$\dot{q}^{\prime\prime}_{IRHF}$-values are twice the actual in FDS. A
+similar behaviour is seen at position 6. At position 1 closest to the
+fire, FDS is having trouble to match the computed heat flux in the
+transient approach. However, later on at the second peak of the HRR story
+the calculated $\dot{q}^{\prime\prime}_{IRHF}$-values in FDS
+underestimates the computed $\dot{q}^{\prime\prime}_{IRHF}$-values with
+some 15 %.
 
 ~ Figure { #Figure8; caption:"FDS 5 cm cells, comparisons of calculated incident radiative heat fluxes and those computed by FDS. Left - The three positions closest to the opening. Right - The three positions further up along the facade."}
 ![Figure8]
@@ -297,18 +472,31 @@ story the calculated $\dot{q}^{\prime\prime}_{IRHF}$-values in FDS underestimate
 [Figure8]: images/Figure8.png "Figure8" { width:auto; max-width:100% }
 
 # SENSITIVITY ANALYSIS
-The key results from the sensitivity study are presented in this section, for complementary results the reader is referred to [@NilssonM]. Either the results are presented 
-directly in the text or references are made to the results in [@NilssonM].
-## Grid sensitivity
-The grid sizes of 20 cm, 10 cm and 5 cm in the simulations result in mesh resolutions of around 8, 15 and 30 at maximum HRR 3.1 MW. These values can be put in relation 
-to the values represented in Table 3.11 of the FDS validation guide [@FDSValidation], where the mean value of the lower range limits is of around 8 and the mean value of the upper
-range is of around 16. A fine grid resolution results in higher computational cost, which also has to be considered when setting up FDS-simulations. For the current 
-single mesh simulations, computational times of 1.5, 18 and 232 h were exhibited for the 20, 10 and 5 cm cells.
+The key results from the sensitivity study are presented in this section,
+for complementary results the reader is referred to [@NilssonM]. Either
+the results are presented directly in the text or references are made to
+the results in [@NilssonM].
 
-As seen in Figure [#figure9]-[#figure11], the overall difference between the coarse grid size and the other grid sizes is considerable. The coarse 20 cm grid size consequently underestimates 
-the actual temperatures close to the fire and higher up along the facade. The 10 cm grid performs well at positions further up along the facade in general, however close to 
-the fire source large discrepancies are found. The fine grid size of 5 cm performs generally well close to the fire source but overestimates the temperatures further up, 
-especially for the temperatures retrieved from the thermocouples and the $T_{AST}$.
+## Grid sensitivity
+The grid sizes of 20 cm, 10 cm and 5 cm in the simulations result in mesh
+resolutions of around 8, 15 and 30 at maximum HRR 3.1 MW. These values
+can be put in relation to the values represented in Table 3.11 of the FDS
+validation guide [@FDSValidation], where the mean value of the lower
+range limits is of around 8 and the mean value of the upper range is of
+around 16. A fine grid resolution results in higher computational cost,
+which also has to be considered when setting up FDS-simulations. For the
+current single mesh simulations, computational times of 1.5, 18 and 232 h
+were exhibited for the 20, 10 and 5 cm cells.
+
+As seen in Figure [#figure9]-[#figure11], the overall difference between
+the coarse grid size and the other grid sizes is considerable. The coarse
+20 cm grid size consequently underestimates the actual temperatures close
+to the fire and higher up along the facade. The 10 cm grid performs well
+at positions further up along the facade in general, however close to the
+fire source large discrepancies are found. The fine grid size of 5 cm
+performs generally well close to the fire source but overestimates the
+temperatures further up, especially for the temperatures retrieved from
+the thermocouples and the $T_{AST}$.
 
 ~ Figure { #Figure9; caption:"Grid sensitivity, comparison of temperatures from the thermocouples during the reference test and those calculated in FDS. Left - The three positions closest to the opening. Right - The three positions further up along the facade."}
 ![Figure9]
@@ -323,12 +511,21 @@ especially for the temperatures retrieved from the thermocouples and the $T_{AST
 ~
 [Figure11]: images/Figure11.png "Figure11" { width:auto; max-width:100% }
 
-The overall difference between the coarse grid size and the other grid sizes are also large in regards to $\dot{q}^{\prime\prime}_{IRHF}$ as seen in Figure [#figure12]. The 20 cm grid consequently underestimates the 
-radiation outputs on all positions. At position four, five and six, negative $\dot{q}^{\prime\prime}_{IRHF}$ are shown for the 20 cm simulation. The latter since larger 
-convective heat fluxes were calculated in FDS compared to the radiative heat fluxes. The 10 cm grid show promising results higher up but demonstrates only a small increase 
-in heat flux close to the fire source at position 1 compared with the 20 cm grid. For the 5 cm grid, $\dot{q}^{\prime\prime}_{IRHF}$-values twice the computed ones are shown
-at position 3 and 4. The 5 cm grid performs well higher up and the calculated $\dot{q}^{\prime\prime}_{IRHF}$ in FDS underestimate the computed $\dot{q}^{\prime\prime}_{IRHF}$ 
-with some 15 %. However, the biggest problem is still the agreement during the transient phase for position 1.
+The overall difference between the coarse grid size and the other grid
+sizes are also large in regards to $\dot{q}^{\prime\prime}_{IRHF}$ as
+seen in Figure [#figure12]. The 20 cm grid consequently underestimates
+the radiation outputs on all positions. At position four, five and six,
+negative $\dot{q}^{\prime\prime}_{IRHF}$ are shown for the 20 cm
+simulation. The latter since larger convective heat fluxes were
+calculated in FDS compared to the radiative heat fluxes. The 10 cm grid
+show promising results higher up but demonstrates only a small increase
+in heat flux close to the fire source at position 1 compared with the 20
+cm grid. For the 5 cm grid, $\dot{q}^{\prime\prime}_{IRHF}$-values twice
+the computed ones are shown at position 3 and 4. The 5 cm grid performs
+well higher up and the calculated $\dot{q}^{\prime\prime}_{IRHF}$ in FDS
+underestimate the computed $\dot{q}^{\prime\prime}_{IRHF}$ with some 15
+%. However, the biggest problem is still the agreement during the
+transient phase for position 1.
 
 ~ Figure { #Figure12; caption:"Grid sensitivity, comparisons of calculated incident radiative heat fluxes and those computed by FDS. Left - The three positions closest to the opening. Right - The three positions further up along the facade."}
 ![Figure12]
@@ -336,152 +533,295 @@ with some 15 %. However, the biggest problem is still the agreement during the t
 [Figure12]: images/Figure12.png "Figure12" { width:auto; max-width:100% }
 
 ## Influence of mesh alignments
-The effect of dividing the computational domain into differently aligned meshes was studied [@NilssonM]. This was conducted mainly on the 5 cm grid however one simulation was 
-divided into two meshes with different grid sizes (10 cm cells in the fire room and 5 cm cells outside). The different mesh intersections of the computational domain 
-that were studied are shown as purple lines in Figure [#figure13].
+The effect of dividing the computational domain into differently aligned
+meshes was studied [@NilssonM]. This was conducted mainly on the 5 cm
+grid however one simulation was divided into two meshes with different
+grid sizes (10 cm cells in the fire room and 5 cm cells outside). The
+different mesh intersections of the computational domain that were
+studied are shown as purple lines in Figure [#figure13].
 
 ~ Figure { #Figure13; caption:"Pictures from Smokeview illustrating the different mesh intersections of the computational domain used in the sensitivity analysis. Note that none of the mesh intersections goes through the burner."}
 ![Figure13]
 ~
 [Figure13]: images/Figure13.JPG "Figure13" { width:auto; max-width:100% }
 
-Minor discrepancies were found for the 3 meshes and 2 meshes-configurations compared with the single mesh simulation in regards to temperature and radiation outputs. 
-The 3 meshes configuration results in slightly higher values of all output data compared with the single mesh simulation. Larger discrepancies were found for the 
-2 meshes 5 cm and 10 cm configuration with considerable lower output data in general, especially in regards to incident radiation. An important finding from this part was 
-the computational time that could be saved when dividing the domain into several meshes, still resulting in comparable result to the single mesh simulation. Note that 
-this was even if the mesh intersections were horizontally. However, this was based on the precondition that a uniform fine grid size (5 cm) was used in the simulation 
-on all meshes. Using a coarser grid size inside (10 cm) the fire compartment and a fine grid size outside was seen to underestimate the output, as described above.
+Minor discrepancies were found for the 3 meshes and 2
+meshes-configurations compared with the single mesh simulation in regards
+to temperature and radiation outputs. The 3 meshes configuration results
+in slightly higher values of all output data compared with the single
+mesh simulation. Larger discrepancies were found for the 2 meshes 5 cm
+and 10 cm configuration with considerable lower output data in general,
+especially in regards to incident radiation. An important finding from
+this part was the computational time that could be saved when dividing
+the domain into several meshes, still resulting in comparable result to
+the single mesh simulation. Note that this was even if the mesh
+intersections were horizontally. However, this was based on the
+precondition that a uniform fine grid size (5 cm) was used in the
+simulation on all meshes. Using a coarser grid size inside (10 cm) the
+fire compartment and a fine grid size outside was seen to underestimate
+the output, as described above.
 
 ## Influence of the choice of thermocouple position
-As seen in Figure [#figure4], thermocouples were placed every 10 cm offset the symmetry line. By doing this, the sensitivity in the choice of a device position was studied for a 
-facade test rig. This was done in both the 5 cm grid and 10 cm grid for the single mesh simulations. From the results [@NilssonM] it was seen that the thermocouple generating 
-the highest temperatures was generally the thermocouple with the preferred position as per the drawing in Figure [#figure1]. However, in the 10 cm grid simulation close to the 
-fire this thermocouple represents the lowest temperature. As a general rule for both grid sizes, large differences in temperatures between the far most left and the far 
-most right device are seen along the surface of the facade, at some positions almost 400 °C. However, the further up temperature the measurements were retrieved, the 
-more the temperature differences between the far most left device and far most right were evened out.
+As seen in Figure [#figure4], thermocouples were placed every 10 cm
+offset the symmetry line. By doing this, the sensitivity in the choice of
+a device position was studied for a facade test rig. This was done in
+both the 5 cm grid and 10 cm grid for the single mesh simulations. From
+the results [@NilssonM] it was seen that the thermocouple generating the
+highest temperatures was generally the thermocouple with the preferred
+position as per the drawing in Figure [#figure1]. However, in the 10 cm
+grid simulation close to the fire this thermocouple represents the lowest
+temperature. As a general rule for both grid sizes, large differences in
+temperatures between the far most left and the far most right device are
+seen along the surface of the facade, at some positions almost 400 °C.
+However, the further up temperature the measurements were retrieved, the
+more the temperature differences between the far most left device and far
+most right were evened out.
 
 ## Influence of increased radiation angles and increased HRRPUA
-The standard number of radiation angles in FDS is 100, which is considered reasonable in most situations bearing in mind the 20 % of the CPU time of a calculation that 
-is required for this setting [@FDSUser]. However, given the geometry and properties of fire scenarios in some cases, the default value of 100 can be insufficient. The default 
-value of 100 angles was changed to 500 angles to study potential differences in the results [@NilssonM]. However, the increase in radiation angles resulted in minor differences 
-in temperature and radiation outputs. Note that the change in radiation angles resulted in an increase of 73 h in computational time or some 30 %.
+The standard number of radiation angles in FDS is 100, which is
+considered reasonable in most situations bearing in mind the 20 % of the
+CPU time of a calculation that is required for this setting [@FDSUser].
+However, given the geometry and properties of fire scenarios in some
+cases, the default value of 100 can be insufficient. The default value of
+100 angles was changed to 500 angles to study potential differences in
+the results [@NilssonM]. However, the increase in radiation angles
+resulted in minor differences in temperature and radiation outputs. Note
+that the change in radiation angles resulted in an increase of 73 h in
+computational time or some 30 %.
 
-Also, the effect of an increase in HRRPUA was studied by doubling the HRRPUA [@NilssonM]. Instead of specifying 3100 kW/m2 on a 1 m2 burner, 6200 kW/m2 was used on a 0.5 m2 
-burner (2 000 mm (W) by 250 mm (D)). Note that the modelled HRR remained unchanged and the tray still was modelled at the same width to prevent any potential differences 
-in the output concerning the flame spread along the facade. However, the increase from 3100 kW/m2 to 6200 kW/m2 gave minor changes in temperature and radiation outputs.
+Also, the effect of an increase in HRRPUA was studied by doubling the
+HRRPUA [@NilssonM]. Instead of specifying 3100 kW/m2 on a 1 m2 burner,
+6200 kW/m2 was used on a 0.5 m2 burner (2 000 mm (W) by 250 mm (D)). Note
+that the modelled HRR remained unchanged and the tray still was modelled
+at the same width to prevent any potential differences in the output
+concerning the flame spread along the facade. However, the increase from
+3100 kW/m2 to 6200 kW/m2 gave minor changes in temperature and radiation
+outputs.
 
 ## Influence of increased soot yield
-In the main simulations a soot yield of 0.037 was specified based on the results of a validation study of smoke and toxic gas concentrations in a test compartment [@Rinne]. 
-The soot yield was increased to 0.1 to observe any differences in the output data. Regarding gas temperatures, the change in soot yield had minor effects. However, 
-temperatures from the modelled plate temperatures were seen to increase especially on the positions closest to the fire nearly reaching the actual temperature during 
-the second peak of the HRR history. The increase in soot yield also increased the $\dot{q}^{\prime\prime}_{IRHF}$-output with some 20 % at position 1 closest to the fire source, now 
-reaching the same level as the measured incident radiation during the test.
+In the main simulations a soot yield of 0.037 was specified based on the
+results of a validation study of smoke and toxic gas concentrations in a
+test compartment [@Rinne]. The soot yield was increased to 0.1 to observe
+any differences in the output data. Regarding gas temperatures, the
+change in soot yield had minor effects. However, temperatures from the
+modelled plate temperatures were seen to increase especially on the
+positions closest to the fire nearly reaching the actual temperature
+during the second peak of the HRR history. The increase in soot yield
+also increased the $\dot{q}^{\prime\prime}_{IRHF}$-output with some 20 %
+at position 1 closest to the fire source, now reaching the same level as
+the measured incident radiation during the test.
 
 # A COMPARISON WITH FDS VERSION 5.5.3
-Below comparisons are made to the results from the previous validation study on FDS 5.5.3 for the same test [@Anderson:1]. Note that the output data from FDS are slightly offset each 
-other, which is due to different start times of the HRR history. In general, FDS 6.2.0 are producing higher values than FDS 5.5.3 for the given configuration, especially 
-regarding the modelled plate thermometer temperatures and on positions close to the opening. The similar is seen for incident radiation. Regarding temperatures retrieved 
-from the thermocouples, only small discrepancies are found between the program versions at position C27 and C28 with slightly higher values in FDS 6.2.0. At position C29 
+In Figure [#figure14] comparisons are made to the results from the
+previous validation study on FDS 5.5.3 for the same test [@Anderson:1].
+Note that the output data from FDS are slightly offset each other, which
+is due to different start times of the HRR history. In general, FDS 6.2.0
+are producing higher values than FDS 5.5.3 for the given configuration,
+especially regarding the modelled plate thermometer temperatures and on
+positions close to the opening. The similar is seen for incident
+radiation. Regarding temperatures retrieved from the thermocouples, only
+small discrepancies are found between the program versions at position
+C27 and C28 with slightly higher values in FDS 6.2.0. At position C29
 however, considerable higher values are represented in FDS 6.2.0.
 
-~ Figure { #Figure14; caption:"FDS 5 cm cells, comparison of temperatures between FDS 6.2.0 and FDS 5.5.3. Left - Temperatures retrieved from the thermocouples at the three positions closest to the opening. Right - Temperatures retrieved from the plate thermometers at the three positions closest to the opening."}
-![Figure14]
+~ Figure { #Figure14; caption:"FDS 5 cm cells, comparison of temperatures between FDS 6.2.0 and FDS 5.5.3. Upper left - Temperatures retrieved from the thermocouples at the three positions closest to the opening. Upper right - Temperatures retrieved from the plate thermometers at the three positions closest to the opening. Lower - FDS 5 cm cells, comparison of calculated incident radiative heat fluxes between FDS 6.2.0 and FDS 5.5.3 at the three positions closest to the opening."}
+![Figure14ny2]
 ~
-[Figure14]: images/Figure14.png "Figure14" { width:auto; max-width:100% }
-~ Figure { #Figure15; caption:"FDS 5 cm cells, comparison of calculated incident radiative heat fluxes between FDS 6.2.0 and FDS 5.5.3 at the three positions closest to the opening."}
-![Figure15]
-~
-[Figure15]: images/Figure15.png "Figure15" { width:auto; max-width:55% }
+[Figure14ny2]: images/Figure14ny2.png "Figure14ny2" { width:auto; max-width:103% }
 
 # DISCUSSION AND CONCLUSIONS
-As mentioned above, there is a risk in relying on results from previous validation studies of FDS performed in a different geometry, setup or version than the intended or 
-in situations where FDS is not yet valid, since uncertainties are being introduced into the calculations. Also, as FDS is updated to improve the predictions of fire 
-scenarios in some areas it does not automatically mean that every area is improved. The validation study of FDS 6.2.0 on the modified SP FIRE 105 test rig was conducted 
-to avoid the above-mentioned risks. Further, it was considered important to first evaluate the intended calculation tool for modelling external fire spread before using 
-it in the following comparative analysis in the thesis. In addition, the scenario had previously only been validated against FDS 5.5.3 and possible changes between the 
-program versions are important to address. 
+As mentioned above, there is a risk in relying on results from previous
+validation studies of FDS performed in a different geometry, setup or
+version than the intended or in situations where FDS is not yet valid,
+since uncertainties are being introduced into the calculations. Also, as
+FDS is updated to improve the predictions of fire scenarios in some areas
+it does not automatically mean that every area is improved. The
+validation study of FDS 6.2.0 on the modified SP FIRE 105 test rig was
+conducted to avoid the above-mentioned risks. Further, it was considered
+important to first evaluate the intended calculation tool for modelling
+external fire spread before using it in the following comparative
+analysis in the thesis. In addition, the scenario had previously only
+been validated against FDS 5.5.3 and possible changes between the program
+versions are important to address.
 
-The comparison of output data between FDS 6.2.0 and FDS 5.5.3 showed that FDS 6.2.0 generally produce higher temperatures and incident radiative heat fluxes for the 
-given setup. The study also shows that FDS 6.2.0 produce results that are more in line with the output data from the test compared to FDS version 5.5.3. The greatest 
-difference in results was seen for the modelled thermometers and especially at position C21 closest to the fire. One of the biggest changes between the program versions 
-is the implementation of a new model for turbulent viscosity. In FDS 5.5.3 the Smagorinsky model is used to model turbulence while FDS 6.2.0 use Deardorff’s model. 
-The models determine the behaviour of the velocity field and hence to a large extent the dynamics of the fire [@FDSGoogle].
+The comparison of output data between FDS 6.2.0 and FDS 5.5.3 showed that
+FDS 6.2.0 generally produce higher temperatures and incident radiative
+heat fluxes for the given setup. The study also shows that FDS 6.2.0
+produce results that are more in line with the output data from the test
+compared to FDS version 5.5.3. The greatest difference in results was
+seen for the modelled thermometers and especially at position C21 closest
+to the fire. One of the biggest changes between the program versions is
+the implementation of a new model for turbulent viscosity. In FDS 5.5.3
+the Smagorinsky model is used to model turbulence while FDS 6.2.0 use
+Deardorff’s model. The models determine the behaviour of the velocity
+field and hence to a large extent the dynamics of the fire [@FDSGoogle].
 
-The results from a similar validation study from Stord/Haugesund University College in Norway [@Gamlemshaug] highlight a difference between FDS 5 and FDS 6, involving the change 
-of the turbulent viscosity model. In the latter study the main goal was to look at the thermal impact on external vertical steel structures from an ejecting fire plume. 
-The fire room in the chosen large-scale fire test had the dimensions 4.0 m (W) by 2.2 m (D) by 2.6 m (H). The fire plume was ejecting out from a 3 m wide and 1.2 m 
-high opening positioned 20 cm under the ceiling. It turned out that FDS 5.5.3 was not able to simulate the gas velocities through the window correctly and the fire 
-plume was seen to eject further away from the room compared to the fire plume in the actual test. After activating the beta version of FDS 6, the fire plume was seen 
-to eject closer to the facade corresponding better to the measurements in the actual test. The use of Deardorff’s turbulent viscosity model and the change in calculation 
-method for time steps given by the velocity vectors in the beta-version of FDS6 were stated as some of the likely reasons to the changes in the results. Given this, 
-the higher temperatures from FDS 6.2.0 in Figure [#figure14]-[#figure15] may be due to the change of model for turbulent viscosity, which affects the velocity fields through the opening 
-and hence the appearance and impact of the ejecting plume in FDS. 
+The results from a similar validation study from Stord/Haugesund
+University College in Norway [@Gamlemshaug] highlight a difference
+between FDS 5 and FDS 6, involving the change of the turbulent viscosity
+model. In the latter study the main goal was to look at the thermal
+impact on external vertical steel structures from an ejecting fire plume.
+The fire room in the chosen large-scale fire test had the dimensions 4.0
+m (W) by 2.2 m (D) by 2.6 m (H). The fire plume was ejecting out from a 3
+m wide and 1.2 m high opening positioned 20 cm under the ceiling. It
+turned out that FDS 5.5.3 was not able to simulate the gas velocities
+through the window correctly and the fire plume was seen to eject further
+away from the room compared to the fire plume in the actual test. After
+activating the beta version of FDS 6, the fire plume was seen to eject
+closer to the facade corresponding better to the measurements in the
+actual test. The use of Deardorff’s turbulent viscosity model and the
+change in calculation method for time steps given by the velocity vectors
+in the beta-version of FDS6 were stated as some of the likely reasons to
+the changes in the results. Given this, the higher temperatures from FDS
+6.2.0 in Figure [#figure14] may be due to the change of model for
+turbulent viscosity, which affects the velocity fields through the
+opening and hence the appearance and impact of the ejecting plume in FDS.
 
-The incident radiative heat fluxes from the reference test presented in this paper are calculated values based on measured temperatures from the plate thermometers 
-from the actual test. These temperatures can be observed in e.g. Figure [#figure6]. As seen in Figure [#figure1], generally there is a trend with drastically increasing temperatures 
-after 600 s at the start of the second peak. At position C21 closest to the fire however, this trend is not as prominent, and the temperature curve is seen to increase 
-steadily during the whole fire scenario differently compared with the other positions. The similar appearance is seen in Figure [#figure8] at the same position regarding incident 
-radiation. In this case after 600 s there is a gap between the measured heat flux and the computed heat flux of more than 50 kW/m2, which is not seen at the remaining 
-positions. At the same time these tendencies are not seen for the temperature retrieved from the thermocouple at the same position in Figure [#figure5].
+The incident radiative heat fluxes from the reference test presented in
+this paper are calculated values based on measured temperatures from the
+plate thermometers from the actual test. These temperatures can be
+observed in e.g. Figure [#figure6]. As seen in Figure [#figure1],
+generally there is a trend with drastically increasing temperatures after
+600 s at the start of the second peak. At position C21 closest to the
+fire however, this trend is not as prominent, and the temperature curve
+is seen to increase steadily during the whole fire scenario differently
+compared with the other positions. The similar appearance is seen in
+Figure [#figure8] at the same position regarding incident radiation. In
+this case after 600 s there is a gap between the measured heat flux and
+the computed heat flux of more than 50 kW/m2, which is not seen at the
+remaining positions. At the same time these tendencies are not seen for
+the temperature retrieved from the thermocouple at the same position in
+Figure [#figure5].
 
-An uncertainty analysis was performed due to the above observations [@NilssonM]. The uncertainty analysis showed that the uncertainty in the computation of $\dot{q}^{\prime\prime}_{IRHF}$
-in the reference test from Eq. 1 lies in the temperature measurements retrieved from the steel plate thermometers. In the video footages it can be seen that the lower part 
-of the facade is hardly damaged after the test and the Promatect cladding is hanging loose [@Evegren], signalling on a high stress during the test. The latter caused two of 
-the thermocouples close to the opening to fail later during the test as described in Figure [#figure5]. Also, gaps between the Promatect cladding and the thermometer were visible. 
-This may have caused changes around the flow field that affected the measurement in the test, which then affects the calculation of the incident radiative heat fluxes. 
+An uncertainty analysis was performed due to the above
+observations [@NilssonM]. The uncertainty analysis showed that the
+uncertainty in the computation of $\dot{q}^{\prime\prime}_{IRHF}$ in the
+reference test from Eq. 1 lies in the temperature measurements retrieved
+from the steel plate thermometers. In the video footages it can be seen
+that the lower part of the facade is hardly damaged after the test and
+the Promatect cladding is hanging loose [@Evegren], signalling on a high
+stress during the test. The latter caused two of the thermocouples close
+to the opening to fail later during the test as described in
+Figure [#figure5]. Also, gaps between the Promatect cladding and the
+thermometer were visible. This may have caused changes around the flow
+field that affected the measurement in the test, which then affects the
+calculation of the incident radiative heat fluxes.
 
-Other possible reasons for this temperature rise tendency could be the way the HRR is measured. A possible explanation for the rapid development between the two phases 
-in the HRR history could be that the heptane starts to boil as the heat in the fire room reaches a significant level [@Evegren]. The reason for the rapid increase in HRR rate 
-could then be this combined effect causing an intense pyrolysis and combustion of heptane. However, since the HRR is based on measurements using a large Industrial 
-Calorimeter and not on actual mass loss measurements in the fire room, there is a risk that some of the details in the rapid phase of the HRR story were lost, because 
-it takes time for the hot gases to travel from the burn room up to the hood before it can be analysed. Another source of error could be that the suction flow rate of 
-the Calorimeter has been changed during the test, which would affect the calculation of HRR over time from which the FDS is ramped by.
+Other possible reasons for this temperature rise tendency could be the
+way the HRR is measured. A possible explanation for the rapid development
+between the two phases in the HRR history could be that the heptane
+starts to boil as the heat in the fire room reaches a significant
+level [@Evegren]. The reason for the rapid increase in HRR rate could
+then be this combined effect causing an intense pyrolysis and combustion
+of heptane. However, since the HRR is based on measurements using a large
+Industrial Calorimeter and not on actual mass loss measurements in the
+fire room, there is a risk that some of the details in the rapid phase of
+the HRR story were lost, because it takes time for the hot gases to
+travel from the burn room up to the hood before it can be analysed.
+Another source of error could be that the suction flow rate of the
+Calorimeter has been changed during the test, which would affect the
+calculation of HRR over time from which the FDS is ramped by.
 
-The above-mentioned could be the explanation to why the modelled plate thermometer temperature in FDS is seen to underestimate the temperature retrieved from the plate 
-thermometer at position C21 for the 5 cm grid and single mesh simulation; although otherwise the temperatures are well resolved by FDS along the facade. Comparing the 
-modelled plate thermometer temperatures in FDS with the $T_{AST}$ in FDS, it is seen that the modeled plate thermometer temperatures are lower than the $T_{AST}$. However, 
-temperatures that are retrieved from plate thermometers cannot fully be equated with $T_{AST}$. The thermal inertia of the plate thermometer and heat loss through the 
-insulation material behind are factors that explains why retrieved temperatures from the thermometers are lower than the $T_{AST}$ during the heating process. Thus, it 
-is reasonable that $T_{AST}$ values from FDS in Figure [#figure7] are not just higher than the modeled plate thermometer temperatures in FDS in Figure [#figure6], but also higher than the 
-retrieved temperatures from the thermometer in the actual test. Another factor that separates these measurements is the response time of the plate thermometer, which 
-is necessary to include in transient scenarios if a direct comparison to the thermometers is desired [@Jansson]. Since the $T_{AST}$ values from FDS in Figure [#figure7] are based on 
-direct calculations the response time are not included, which would be the reason for the generally much higher values during the heating phase compared to the cooling 
-phase, most evident in the first 300 s at position C21.
+The above-mentioned could be the explanation to why the modelled plate
+thermometer temperature in FDS is seen to underestimate the temperature
+retrieved from the plate thermometer at position C21 for the 5 cm grid
+and single mesh simulation; although otherwise the temperatures are well
+resolved by FDS along the facade. Comparing the modelled plate
+thermometer temperatures in FDS with the $T_{AST}$ in FDS, it is seen
+that the modeled plate thermometer temperatures are lower than the
+$T_{AST}$. However, temperatures that are retrieved from plate
+thermometers cannot fully be equated with $T_{AST}$. The thermal inertia
+of the plate thermometer and heat loss through the insulation material
+behind are factors that explains why retrieved temperatures from the
+thermometers are lower than the $T_{AST}$ during the heating process.
+Thus, it is reasonable that $T_{AST}$ values from FDS in
+Figure [#figure7] are not just higher than the modeled plate thermometer
+temperatures in FDS in Figure [#figure6], but also higher than the
+retrieved temperatures from the thermometer in the actual test. Another
+factor that separates these measurements is the response time of the
+plate thermometer, which is necessary to include in transient scenarios
+if a direct comparison to the thermometers is desired [@Jansson]. Since
+the $T_{AST}$ values from FDS in Figure [#figure7] are based on direct
+calculations the response time are not included, which would be the
+reason for the generally much higher values during the heating phase
+compared to the cooling phase, most evident in the first 300 s at
+position C21.
 
-A conclusion based on the results in this paper is the importance of a high mesh resolution in order to obtain credible result in these kinds of calculations. However, 
-the refinement in grid size causes problems regarding the computational time needed for the simulation, which was seen to rise significantly from 18 to 232 h in the 
-performed simulations in the validation study. Even if the computational domain is divided into several meshes, that was shown to not greatly affect the results in the 
-sensitivity analysis, the difference in computational time between a $D^{*}/\delta x$ ratio of 15 and 30 is still substantial.
+A conclusion based on the results in this paper is the importance of a
+high mesh resolution in order to obtain credible result in these kinds of
+calculations. However, the refinement in grid size causes problems
+regarding the computational time needed for the simulation, which was
+seen to rise significantly from 18 to 232 h in the performed simulations
+in the validation study. Even if the computational domain is divided into
+several meshes, that was shown to not greatly affect the results in the
+sensitivity analysis, the difference in computational time between a
+$D^{*}/\delta x$ ratio of 15 and 30 is still substantial.
 
-One reason for the difference in output between the fine grid size and the coarser grid sizes is probably the finer grid´s ability to resolve more of the turbulence of 
-the fire plume. The smaller the grid, the more of the large eddies are resolved in FDS contributing to a plume with better air entrainment. Because a finer grid captures 
-more of the motion in a fire the difference in results will be more prominent close to the fire source, since the turbulence is more dominant in this region. Especially 
-for this geometry a finer grid will resolve more of the turbulence around the opening, which may create a more realistic plume ejecting out from the fire room. Considering 
-this it is likely to assume that the plume in a finer grid will adapt more and appear more realistic.     
+One reason for the difference in output between the fine grid size and
+the coarser grid sizes is probably the finer grid´s ability to resolve
+more of the turbulence of the fire plume. The smaller the grid, the more
+of the large eddies are resolved in FDS contributing to a plume with
+better air entrainment. Because a finer grid captures more of the motion
+in a fire the difference in results will be more prominent close to the
+fire source, since the turbulence is more dominant in this region.
+Especially for this geometry a finer grid will resolve more of the
+turbulence around the opening, which may create a more realistic plume
+ejecting out from the fire room. Considering
+this it is likely to assume that the plume in a finer grid will adapt more 
+and appear more realistic.     
 
-Apart from the grid sensitivity study, another input variable that was shown to be important in the sensitivity analysis was the soot yield parameter. The increase in 
-soot yield from 0.037 to 0.1 had a great effect on the radiation outputs especially close to the opening. A possible reason for this increase could be that in the reference 
-test the amount of soot produced by the fire varied with the HRR story. The higher the heat release became the more soot was produced since the burning rate was increased. 
-Also, a fire that is on the verge of becoming an under-ventilated fire produces more soot. This would be the case for the SP FIRE 105 test rig since it simulates external 
-fire spread from a burning apartment which is due to the fire becoming under-ventilated. In FDS, however, a soot yield is defined in the input file, which is static, which 
-means the same amount of soot is produced every second during the fire scenario. Hence, the choice of soot yield is of great importance for this particular case and a soot 
-yield of 0.1 for this setup are therefore considered to be more valid.
+Apart from the grid sensitivity study, another input variable that was
+shown to be important in the sensitivity analysis was the soot yield
+parameter. The increase in soot yield from 0.037 to 0.1 had a great
+effect on the radiation outputs especially close to the opening. A
+possible reason for this increase could be that in the reference test the
+amount of soot produced by the fire varied with the HRR story. The higher
+the heat release became the more soot was produced since the burning rate
+was increased. Also, a fire that is on the verge of becoming an
+under-ventilated fire produces more soot. This would be the case for the
+SP FIRE 105 test rig since it simulates external fire spread from a
+burning apartment which is due to the fire becoming under-ventilated. In
+FDS, however, a soot yield is defined in the input file, which is static,
+which means the same amount of soot is produced every second during the
+fire scenario. Hence, the choice of soot yield is of great importance for
+this particular case and a soot yield of 0.1 for this setup are therefore
+considered to be more valid.
 
-The increase in radiation angles in the sensitivity study from 100 angles to 500 angles had minor effects on the end results. This is due to the location of the fire plume 
-relative to the facade. If the fire plume is close to the facade, the impact of an increase in radiation angles on the radiation picture is minimal compared to if the plume
- would be far away from the facade. The further away the fire source is from its target, the less detailed the radiation picture becomes due to the limited amount of rays 
- that are emitted from each cell. In the latter case an increase in radiation angles would have been more beneficial. Since the fire plume was seen to eject close to the 
- facade in Smokeview and since minor differences were seen in the radiation pattern at the facade after increasing the radiation angles, it emerged that the fire plume was 
- close enough to the facade so that the default value of 100 radiation angles was sufficient for this geometry.
+The increase in radiation angles in the sensitivity study from 100 angles
+to 500 angles had minor effects on the end results. This is due to the
+location of the fire plume relative to the facade. If the fire plume is
+close to the facade, the impact of an increase in radiation angles on the
+radiation picture is minimal compared to if the plume would be far away
+from the facade. The further away the fire source is from its target, the
+less detailed the radiation picture becomes due to the limited amount of
+rays that are emitted from each cell. In the latter case an increase in
+radiation angles would have been more beneficial. Since the fire plume
+was seen to eject close to the facade in Smokeview and since minor
+differences were seen in the radiation pattern at the facade after
+increasing the radiation angles, it emerged that the fire plume was close
+enough to the facade so that the default value of 100 radiation angles
+was sufficient for this geometry.
 
-Studying the difference in output for various positions of thermocouples are important in order to get an understanding for the consequences in the choice of where 
-measurements are taking place in the simulations. As seen from the sensitivity study, depending on the position of a thermocouple, significant variations in output are 
-found. This outcome has to be considered when modelling facade fires in FDS. Also, the influence of mesh alignments was examined. The results showed minor differences in 
-the outputs as long as a uniform mesh resolution was used. The simulation with coarser grid size within the fire compartment and finer grid size outside produced different 
-outputs most likely because the 10 cm grid was not able to resolve all of the turbulence as a 5 cm grid would and those errors were passed on out to the finer grid outside
-the fire room. Because the 2 meshes configuration had a horizontal mesh intersection at the facade above the fire, it was expected to influence on the results. However, it 
-is assumed that this critical mesh division was not close enough to the more turbulent regions around the fire to affect the calculations. Hence, the result suggests that 
-the computational domain can be divided into several meshes in FDS applications of external fire spread without having to affect the result to a great extent, given that 
+Studying the difference in output for various positions of thermocouples
+are important in order to get an understanding for the consequences in
+the choice of where measurements are taking place in the simulations. As
+seen from the sensitivity study, depending on the position of a
+thermocouple, significant variations in output are found. This outcome
+has to be considered when modelling facade fires in FDS. Also, the
+influence of mesh alignments was examined. The results showed minor
+differences in the outputs as long as a uniform mesh resolution was used.
+The simulation with coarser grid size within the fire compartment and
+finer grid size outside produced different outputs most likely because
+the 10 cm grid was not able to resolve all of the turbulence as a 5 cm
+grid would and those errors were passed on out to the finer grid outside
+the fire room. Because the 2 meshes configuration had a horizontal mesh
+intersection at the facade above the fire, it was expected to influence
+on the results. However, it is assumed that this critical mesh division
+was not close enough to the more turbulent regions around the fire to
+affect the calculations. Hence, the result suggests that the
+computational domain can be divided into several meshes in FDS
+applications of external fire spread without having to affect the result
+to a great extent, given that
 a uniform cell size is used throughout.      
 
 [BIB]
