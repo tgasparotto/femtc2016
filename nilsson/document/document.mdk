@@ -388,7 +388,6 @@ however, considerable higher values are represented in FDS 6.2.0.
 ~
 [Figure14]: images/Figure14.png "Figure14" { width:auto; max-width:100% }
 
-
 ~ Figure { #Figure15; caption:"FDS 5 cm cells, comparison of calculated incident radiative heat fluxes between FDS 6.2.0 and FDS 5.5.3 at the three positions closest to the opening."}
 ![Figure15]
 ~
