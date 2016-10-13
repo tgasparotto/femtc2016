@@ -22,65 +22,66 @@ name-references : REFERENCES
 The use of egress simulation models in performance-based analysis relies on the confidence in the input and output data.
 These data strongly depend on a large number of parameters. 
 The undertaking study presented here focuses on the statistical aspects of these data, 
-especially the population behavioural parameters which are the most likely to be scattered. 
-The study proposes a method to analyse the statistical aspects of an egress simulation model. 
+especially the population behavioral parameters which are the most likely to be scattered. 
+The study proposes a method to analyze the statistical aspects of an egress simulation model. 
 The method is based on statistical estimations of the distribution quantiles of the output parameters 
 and can be applied to stochastic simulations results, in order to provide quantitative informations 
-on the key parameters dispersion, such as RSET. It also gives a justification to the required number 
+on the key parameters dispersion, such as Required Safe Egress Time (RSET). It also gives a justification to the required number 
 of simulations and input parameters precision to ensure a relevant output precision level. 
 It gives access to quantitative criteria to compare experimental and numerical data. 
-This method will be applied to analyse case studies simulated with BuildingExodus.
+This method will be applied to analyze case studies simulated with BuildingExodus.
 ~
 
 # INTRODUCTION { #sec-intro }
 
-The practice of the egress engineering leans on digital modelings. Their purpose
-is to determine the time put by last occupant to evacuate a building in accidental
+The practice of the egress engineering leans on numerical modelings. Their purpose
+is to determine the time put by last occupant to evacuate a building in an accidental
 situation or not. This time is called Required Safe Egress Time (RSET) during
-the present document. The diverse phenomena bounded to the human behavior
+the present document. The diverse phenomena related to human behavior
 occurring during an evacuation highlight they are not determinist. Indeed, the
-intrinsic behavior of a person, for example its response time before putting in
-movement, can be scattered from a situation to an other one.
+intrinsic behavior of a person, for example its response time before moving,
+can be scattered from a situation to an other one.
 
-Furthermore, from a point of view modelling, we do not know in a explicit way
-the distribution of population and we create a panel which we consider
+Furthermore, from a modeling point of view, we do not know in an explicit way
+the distribution of population and thus we create a panel which we consider
 representative and envelope of the situation who can be scattered too. So, the fact that
 the input data of the simulation are subjected to a statistical
-spread implies a statistical spread on the out and particularly on the
-RSET. But, what we wish at first sight of a egress simulation is
-it supplies a RSET which insures compatible
-tenability conditions with the evacuation and for 100 % of the cases. So, it seems
+spread implies a statistical spread on the output data and particularly on the
+RSET. However, the main goal of an egress simulation is
+to calculate a RSET which insures compatible
+tenability conditions with the evacuation and for 100 % of the cases. Hence, it seems
 necessary to use a statistical approach to explore the field of possibilities
 for the RSET and do an adequate number of simulation. The numerical tool is
 suited to it and allows to determine a representative RSET in which we can
 trust.
 
-The numerical tool used within the framework of this document is BuildingExodus
-v6.2. It allows by means of sophisticated sub-models to take into
-account interactions type like occupant-occupant, occupant-fire and occupant-building.
-So, it is possible to do egress simulations by taking into
-account in a individual way the occupants. That is to say, that each occupant
+The numerical tool used in this research study is BuildingExodus
+v6.2. It allows by sophisticated sub-models means to take into
+account interactions like occupant-occupant, occupant-fire and occupant-building.
+So, This multiple interactions permit to take into account 
+the occupants individually in the egress simulations. which means in other words, that each occupant
 is identifiable and has its own characteristics. This is essential to the study
-presented here. BuildingExodus is also able to generate and process a large number of
+presented here. BuildingExodus is also able to generate and process the large number of
 simulations needed to conduct this study.
 
 The statistical analysis method set up here requires some precautions.
 First, it is essential to know the parameters (response time, walking speed, interactions
 between people), which the dispersion may affect the desired results. The
 knowledge of their quantitative statistical distribution is essential. However,
-when we observe that exists in the literature, the results are not often presented
+when we observe what exists in the literature, the results are not often presented
 in form of statistical distribution. Usually there is a range with a minimum
 value, a maximum value and a mean value. Thus, in this paper, we use only occupants
-whose parameters are fixed or variable between two bounds and coming from
+whose parameters are fixed or varies between two bounds and provided by
 a uniform law to determine the influence of a particular parameter.
 
-The statistical analysis method setting up is based on statistical estimation
+The statistical analysis method established is based on statistical estimation
 of the output parameters quantile distribution (RSET in this document).
-The aim of this method is to provide quantitative elements
-in particular the statistical distribution of RSET and also validate the number
+The aim of this method is to provide quantitative elements,
+the statistical distribution of RSET particularly and also validate the number
 of simulations done for its determination. We will take an interest in particular in the confidence
-interval for the 95th percentile. Thus, this paper presents the implementation off the statistical analysis method,
-its application on simple test cases and results of its
+interval for the 95th percentile. Thus, this paper presents the implementation of
+ the statistical analysis method,
+its application on simple test cases and results of these
 application.
 
 # STATISTICAL ANALYSIS METHOD : IMPLEMENTATION AND STATISTICAL ELEMENTS { #sec-statistical }
@@ -97,7 +98,7 @@ this quantile is in this interval associated with a confidence level of 90% here
 This confidence interval is expressed as:
 
 
-~ Equation { #eq-alignment; caption:"Alignment example" }
+~ Math { #eq-alignment; caption:"Alignment example" }
 \begin{aligned} 
  Ip  &= \bigg[\tilde{F}^{-1} \bigg( \alpha -c\sqrt{\frac{\alpha(1-\alpha)}{n}} \bigg) ; \tilde{F}^{-1} \bigg( \alpha +c\sqrt{\frac{\alpha(1-\alpha)}{n}} \bigg) \bigg]
 \end{aligned}
@@ -423,7 +424,7 @@ In a synthetic way the table [#table-6] presents for three simulations:
 * the confidence interval of the 95th percentile called I~p95%~ afterward,
 * the width of this one called L~Ip95%~ (see figure [#fig6_4]),
 * the interval between the lower bound of the 5th percentile and the upper bound of the 95th percentile called I~p5-95%~,
-* the width of this one called L~yIp5-95%~ (see figure [#fig6_4]),
+* the width of this one called L~Ip5%-95%~ (see figure [#fig6_4]),
 * the ratio between the interval described above and the 50th percentile called L~Ip5-95%~/q~50%~.
 
 These notations are used during the document.
@@ -595,7 +596,7 @@ Table [#table-10] summarizes in a quantitative way the influences of different p
 | Number of occupant                      | from 1 to 1,000 persons                         | Very important        |
 |                                         | or&nbsp;187,&nbsp;610&nbsp;and&nbsp;927 persons |                       |
 | Position&nbsp;of&nbsp;the&nbsp;occupant | Fixed or random                                 | Important             |
-| Conflict&nbsp;resolution&nbsp;time      | from 0.8 s to 1.5 s or 1.15 s                   | Negligeable           |
+| Conflict&nbsp;resolution&nbsp;time      | from 0.8 s to 1.5 s or 1.15 s                   | Negligible           |
 | Response time                           | from 0 s to 30 s or 15 s                        | Important             |
 ~
 
