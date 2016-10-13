@@ -42,7 +42,6 @@ since FDS is highly dependent on the input variables that are specified. Also, t
 on completely different geometries or setups than the intended or in situations where FDS is not yet valid. In addition to this, changes in the model might affect the 
 results and can render previous validation studies invalid.
 
-
 The background to this work lies in the results of an MSc thesis [@NilssonM] conducted at Lund University, Sweden, investigating the impact of horizontal projections on external
 fire spread using the numerical tool FDS 6.2.0 [@FDSUser]. As part of the thesis and to avoid the above-mentioned risks, a validation study was performed on FDS as calculation tool 
 or modelling external fire spread. In the validation study, experimental data from a large-scale fire test [@Evegren] on a SP FIRE 105 test rig [@SpFire105] in Borås, Sweden were used. 
@@ -487,23 +486,6 @@ the fire room. Because the 2 meshes configuration had a horizontal mesh intersec
 is assumed that this critical mesh division was not close enough to the more turbulent regions around the fire to affect the calculations. Hence, the result suggests that 
 the computational domain can be divided into several meshes in FDS applications of external fire spread without having to affect the result to a great extent, given that 
 a uniform cell size is used throughout.      
-
-
-Figures and tables should immediately follow first mention of them in the
-text and can be placed in one column, or in the case of wider figures,
-can cover two columns (but only at the top or bottom of the page). The
-caption should start with either the word “figure” spelled out or
-abbreviated, followed by the figure number (i.e., Figure 1 or Fig. 1).
-The figure caption should be followed by a single line of space before
-the text resumes.
-
-# BIBLIOGRAPHY AND REFERENCES
-When references are used in the text, tie them to an alphabetical (by
-principal author) list of references to be included as the last item of
-your paper. The format commonly used in scientific literature follows:
-
-Smith, J. S., Bloggs, R. T. and Jones, E. R. (1974), "Magnetic Anomalies
-in Geothermal Systems", Journal of Fluid Mechanics, 254, 73-79
 
 [BIB]
 
