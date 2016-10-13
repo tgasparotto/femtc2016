@@ -37,12 +37,12 @@ such as carrying rolling luggage or group movement, have been identified
 and researched. These scenarios provide novel uses for existing egress
 models as well as present unique challenges.
 
-This paper reviews the current capabilities of people movement
-models, new uses for egress models not related to fire egress, and the
+This paper reviews the current capabilities of people movement models,
+new uses for egress models not related to fire egress, and the
 adaptations of models necessary to enable broader more robust
-simulations. [Topics will include security and ingress, dynamic signage
-and wayfinding, and interior tasks (carrying or pushing objects, group
-movement, etc.)]{ background-color=yellow }
+simulations, including security and ingress, dynamic signage and active
+wayfinding, and interior tasks (carrying or pushing objects, occupant
+assistance etc.)
 ~
 
 [editor]: https://www.madoko.net/editor.html "Madoko.net Editor"
@@ -119,122 +119,29 @@ While the above example represents a relatively simple ingress arrangement, deta
 Many of the features and the underlying theory needed to model ingress have already been incorporated into existing people movement models designed primarily for egress. The flow and potential queuing around a door or other checkpoint is not significantly altered by the direction of movement (exceptions of door swing, etc., aside). Some models currently incorporate features such as turnstiles or ticket gates that allow the modeler to specify a flow-rate or a fixed delay time for each person to pass through. However, even in those models that do not, it is generally possible to use the existing features to simulate such behavior. Similarly, some models provide a way to directly specify a source term for occupants entering the simulation, while in others the desired flow rate must be achieved using metered doors and "holding rooms". Lastly, in some cases, the end goal of reaching an exit that is a basic tenet of models originally built for egress may provide some unique challenges when occupant flow is reversed to model ingress. Depending upon the desired final location or task of an ingressing occupant, it may be possible to create artificial exits in order to achieve the desired movement within the building.
 
 
-## Dynamic Signage and Wayfinding
+## Dynamic Signage and Active Wayfinding
 
-background: exit signs are visual clutter "studies have shown..." show
-still/results of mike's train station example 
-is exodus sign model only used to draw attention to neglected doors?
-modeling: ideally, need a
-way for targets/paths to change dynamically in response to inputs (e.g.,
-dynamic signage, police redirection)
-modeling: is there a way to make occupants not omniscient (i.e., know of an exit but not that it's closed)
-modeling; interior exit knowledge/familiarity (i.e. GoTo interior doors)
-useful as a tool to help guide which exits the system should have people use
+Exit signs are ubiquitous in public buildings today; however, their ubiquity often means that they become visual clutter easily overlooked when they are most needed. The typical exit signs also have the limitation of being static markers and unable to adapt to indicate a changing situation. There have been cases, such as the Station Night Club fire, the Dusseldorf Airport fire, and the King's Cross Underground fire where signs that were installed properly in accordance with the code were not seen by occupants and/or were not able to redirect people away from unsafe exit routes, with tragic consequences. In response, the need for exit signs to be more noticeable in an emergency and to redirect occupants away from nonviable or dangerous exit routes has led to the development of adaptive dynamic signage systems. These systems, such as that developed as part of the European Union's GETAWAY project led by the Fire Safety Engineering Group of the University of Greenwich [ref]{ background-color=yellow }, use signs that blink to attract attention and can intelligently and actively indicate available egress routes and negate unavailable routes. An example of the modified signs is shown in __.
 
-E. R. Galea, H. Xie, and P. J. Lawrence, P.J., “Experimental and Survey
-Studies on the Effectiveness of Dynamic Signage Systems,” Fire Safety
-Science 11(2014): 1129–1143, doi:10.3801/IAFSS.FSS.11-1129.
+fig
 
-## Complex Tasks and Carrying
+People movement models are an important tool in the development and use of adaptive dynamic signage systems. The buildingEXODUS model was used as a critical component of the GETAWAY project allowing intelligent faster-than-real-time analysis of the scenario to provide input to the signage system. Future uses may provide similar feedback or to provide input into the design of scenarios for non-intelligent or manually-controlled systems. Typically, this would take the form of a series of scenarios in which various exiting schemes are simulated and analyzed, resulting in a recommendation of the best exit strategy for a given event. In order to be fully-implemented into an intelligent adaptive signage system, the egress model used must be capable of running faster than real time, receiving and using information on the active scenario (e.g., environmental sensors), and outputting results in a way that can be read and interpreted by the system to implement the findings.
 
-replace with internal relocation/assembly areas? see capacity of relocation sites, cross-flow, etc
-could be incorporated with circulation/daily use? 
+In some cases, it may be desired to perform a related analysis in which occupants initially move towards an exit before receiving information (through adaptive signage, other building notification systems, other building occupants or security, or perception of a hazard) and redirecting to an alternate exit. Such delays due to unavailable exits, redirection, and additional wayfinding lead to more complex behavior, can create or increase the likelihood of counterflow, and lead to longer total exiting times. Of the existing people movement models, signage is incorporated in a very limited way, if at all. In order to realistically model redirection scenarios, a method of providing dynamic redirection or re-tasking within the model is needed. In current models, this is achievable through manual (often labor-intensive) means. In more advanced scenarios, occupants that have already been redirected could transfer that information to approaching occupants, thereby redirecting those targets at an earlier point to represent information sharing that occurs in real-world events.
 
-hospital, wheelchair, families, luggage
-adds complexity, creates potential cross flow
-increases size, affects speed
-w/Thunderhead permission - show demo video
+## Assisted Evacuation and Carrying Behavior
+
+Traditional uses of people movement models for evacuation consider the effects of occupants of a building moving individually toward an exit, using the available corridors, stairs, doors, etc. Often, the presence of mobility impaired occupants is accounted for by the use of slower speeds and limitations on the use of stairs. Occupants using mobility assistive devices such as wheelchairs or walkers or occupants carrying or pushing large items such as rolling luggage or hospital beds are accounted for by either increasing the size of occupants or not at all. In practices, these limitations may oversimplify the complex dynamics that occur during an assisted evacuation or when a significant number of people are carrying luggage (e.g., airports and other transit stations). Assisted evacuation results in complex movement behavior from staff, including potential changes in walking speed depending on whether they are actively assisting an occupant to egress or returning to help the next occupant. The back-and-forth nature of such an evacuation also leads to increased potential for counterflow. Additionally, people pushing beds or wheelchairs or carrying large items have a different shape profile and movement pattern compared to unencumbered occupants. This effects both the ability to navigate through the building geometry as well as having an effect on queuing and the throughput of doors. For example, a recent study of people movement in a large international airport found that the flow through doorways was reduced by __ when occupants pulling rolling luggage were present [ref]{ background-color=yellow }. This decrease was attributed to the increased effective length of an occupant pulling rolling luggage.
+
+Existing egress models can simulate assistance and carrying behaviors to varying degrees. In those models that have group evacuation features, the act of staff going to the occupant in need of assistance and escorting them out of the building or to a safe location may be simulated using a number of groups. However, this may not be practical in the case where a staff member makes many trips back and forth to provide assistance. Furthermore, in scenarios where there are occupants are using wheelchairs or other mobility assistive devices, the evacuation strategy involves horizontal exiting or internal relocation, rather than simple building egress. In this scenario, a means whereby occupants may be given a final goal of relocating to a given room or area rather than exiting the simulation is needed. As with the previously discussed new uses of egress models, this behavior can often be mimicked in existing egress models but cannot be specified directly.
+
+Thunderhead Engineering is currently developing an assisted evacuation capability into its Pathfinder model through the use of vehicles that can be customized in terms of their geometry and attachment points for assistants [@Thunderhead:assist]. While still in the development stage, this additional feature has the potential to greatly improve the capacity to model assisted evacuation and the evacuation of occupants in wheelchairs or with other mobility assistive devices. 
+
+fig
 
 # SUMMARY
 
-
-# FIGURES, TABLES, AND EQUATIONS
-Original drawings and photos may be included in your paper as figures.
-Diagrams may be in color.
-
-Figures and tables should immediately follow first mention of them in the
-text and can be placed in one column, or in the case of wider figures,
-can cover two columns (but only at the top or bottom of the page). The
-caption should start with either the word “figure” spelled out or
-abbreviated, followed by the figure number (i.e., Figure 1 or Fig. 1).
-The figure caption should be followed by a single line of space before
-the text resumes.
-
-## Figures
-Figure [#fig-smokeview] in Section [#sec-intro] shows an image from an
-older version of Smokeview. Note that you can drag&drop images into the
-editor pane to include them in the document, and similarly with bibtex
-files, latex style files, etc.
-
-~ Figure { #fig-smokeview; caption:"Illustration of placement of figure and caption. (use the `.wide` class for wide figure)."}
-![Ex1_0]
-~
-[Ex1_0]: images/Ex1_0.png "Ex1_0" { width:auto; max-width:90% }
-
-~ Note
-Images larger than about 1Mb in size will be rejected by the Madoko.net server.
-~
-
-## Tables
-Table [#table-sample] shows an example full width table figure.
-
-~ TableFigure { #table-sample; caption: "Modelle mit unterschiedlich geschätztem baseline hazard"; .wide }
-|                | $c(t)$                               ||||
-|                |---------|---------|---------|-----------|
-|                | (A0)    | (A1)    | (A2)    | (A3)      |
-|                | ohne    | Log     | Polynom | Stückweise|
-|                |         |         |         | konstant  |
-|:---------------|:-------:|:-------:|:-------:|:---------:|
-| Log likelihood | -6.798  | -6.733  | -6.715  | -6.686    |
-| Pseudeo $R^{2}$| 0,048   | 0,057   | 0,059   | -         |
-| AIC            | 13.615  | 13.489  | 13.456  | 13.483    |
-| BIC            | 13.711  | 13.594  | 13.580  | 14.009    |
-| N              | 105.484 | 105.484 | 105.484 | 105.484   |
-|----------------|---------|---------|---------|-----------|
-~
-
-Here is a footnote[^fn] reference.
-[^fn]: This is the content of the example footnote. 
-    You can continue a footnote by indenting content.
-    And notice the back link.
-
-# BIBLIOGRAPHY AND REFERENCES
-When references are used in the text, tie them to an alphabetical (by
-principal author) list of references to be included as the last item of
-your paper. The format commonly used in scientific literature follows:
-
-Smith, J. S., Bloggs, R. T. and Jones, E. R. (1974), "Magnetic Anomalies
-in Geothermal Systems", Journal of Fluid Mechanics, 254, 73-79
-
-Leslie Lamport, LaTeX: A Document Preparation System (2nd Edition), Addison-Wesley, 1994
-
-When using Madoko, edit the content of the .bib file in the document
-folder, and use the reference methods as shown in the [Bibliography and
-Citations
-Section](http://research.microsoft.com/en-us/um/people/daan/madoko/doc/reference.html#sec-bib)
-of the Madoko Manual.
-
-A bibliography file consists of all your references in the BibTeX format, for example:
-
-    @BOOK{ Knuth:TeX,  
-        author   = "Knuth, Donald E.",  
-        title    = "The {\TeX} book",  
-        publisher= "Addison-Wesley",  
-        year     = 1984  
-    }
-
-Entries in the bibliography files can now be referenced using semi-colon
-separated references, for example:
-``` Markdown 
-Read about LaTeX and TeX [@Knuth:TeX; @Lamport:LaTeX].
-```
-Results in: Read about LaTeX and TeX [@Knuth:TeX; @Lamport:LaTeX].
-
-Please include full title of journal articles or other references,
-journal, volume, date, pages. There is a nice [table on
-Wikipedia](https://en.wikibooks.org/wiki/LaTeX/Bibliography_Management#BibTeX)
-that shows all of the different data fields for the BibTeX file.
-
+The people movement models currently available are generally designed and well-suited for simulating evacuation in the event of a fire emergency. However, often these models are capable of simulating a wider array of uses. The range of potential applications of existing people movement models are expanding to meet the demand for more complex emergency evacuation scenarios as well as analyses outside the fire and emergency management fields. Existing models may often be configured to simulate these new scenarios and behaviors, though implementation of model changes of various levels of complexity would improve the ability of modelers to reflect new and commplex behaviors more organically. In either case, the end result is a more robust model capable of handling a wide range of applications.
 
 
 [BIB]
