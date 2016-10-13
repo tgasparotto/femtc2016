@@ -85,8 +85,7 @@ people movement models. It is not intended to provide an extensive review
 of all existing models nor to describe in detail all the features of
 existing models, but rather to provide an understanding of how the models
 are traditionally oriented and utilized. Detailed model-specific reviews
-may be found in the literature [find
-reference]{ background-color=yellow }.
+may be found in the literature[@Kuligowski:egress]
 
 Traditionally, people movement models are used to perform evacuation studies in the event of a fire or other emergency. Typically, such an analysis would include building the geometry of the building or area in question, populating the model with occupants that are given a set of characteristics (e.g., speed, delay time), and running the model to determine the time required to evacuate the building or space in question. Upon running the model, occupants wait a specified pre-evacuation time, and then move from their initial positions towards the nearest or their assigned exit, potentially going to pre-assigned locations along the way. Though the implementation and level of detail varies from model to model, the end goal of the analysis, and the occupants themselves in agent-based models, is to exit. 
 
@@ -109,10 +108,10 @@ Depending on the scope and objectives of the analysis, ingress/security studies 
 
 One such study involved an assessment of ingress in the elevator lobby of a high rise building. After entering the lobby, occupants pass through turnstiles that require a badge scan, and then proceed to wait for the nearby elevators. A Pathfinder model was built of the lobby to assess the level of congestion in the lobby. The primary variables studied were arrival rate of persons at the exterior door to the building, throughput rate of the turnstiles, and capacity and speed of the elevators. Figure [#fig-ElevIngress] shows an example of a typical result, in which queuing for the elevator has caused congestion to back up into the turnstiles. Ultimately, the study determined that with the existing anticipated building occupancy and arrival rates that the ingress design was adequate, but would be improved by a relocation of the turnstiles to allow more room near the elevators.
 
-~ Figure { #fig-ElevIngress; caption:"Pathfinder simulation of crowding near elevator and into turnstiles"}
-![elev]
+~ Figure { #fig-ElevIngress; caption:"Pathfinder simulation of crowding near elevator and into turnstiles: occupant locations (left) and accumulated density (right)"}
+![elev2]
 ~
-[elev]: images/elev.png "elev" { width:auto; max-width:90% }
+[elev2]: images/elev2.png "elev2" { width:auto; max-width:90% }
 
 While the above example represents a relatively simple ingress arrangement, detailed studies of factors affecting ingress, and their application to ingress modeling have been performed. One such study [@Strege:PED2014] examined more closely the effects of security screening and variations in arrival rate on congestion in an ingress scenario. The manufacturer of the security equipment, which consisted of revolving doors with a card scanner, had specified a throughput rate that was found through field testing to be achievable only in ideal conditions. In practice, a percentage of users would have their cards misread or have the revolving doors "kickback" to prevent piggy-backing behavior, resulting in a lower effective flow rate. Additionally, capturing "bursts" and "lulls" in arrival rates was found to be critical for predicting occupant congestion. Assuming a constant, average occupant ingress rate resulted in overly optimistic results and did not predict periods of occupant congestion that were observed in the field during population bursts. The findings of this study demonstrate that in real-world applications the dynamics of building entry can be complicated and using an over-simplified approach may result in grossly under predicting congestion levels and wait times.
 
@@ -121,9 +120,12 @@ Many of the features and the underlying theory needed to model ingress have alre
 
 ## Dynamic Signage and Active Wayfinding
 
-Exit signs are ubiquitous in public buildings today; however, their ubiquity often means that they become visual clutter easily overlooked when they are most needed. The typical exit signs also have the limitation of being static markers and unable to adapt to indicate a changing situation. There have been cases, such as the Station Night Club fire, the Dusseldorf Airport fire, and the King's Cross Underground fire where signs that were installed properly in accordance with the code were not seen by occupants and/or were not able to redirect people away from unsafe exit routes, with tragic consequences. In response, the need for exit signs to be more noticeable in an emergency and to redirect occupants away from nonviable or dangerous exit routes has led to the development of adaptive dynamic signage systems. These systems, such as that developed as part of the European Union's GETAWAY project led by the Fire Safety Engineering Group of the University of Greenwich [ref]{ background-color=yellow }, use signs that blink to attract attention and can intelligently and actively indicate available egress routes and negate unavailable routes. An example of the modified signs is shown in __.
+Exit signs are ubiquitous in public buildings today; however, their ubiquity often means that they become visual clutter easily overlooked when they are most needed. The typical exit signs also have the limitation of being static markers and unable to adapt to indicate a changing situation. There have been cases, such as the Station Night Club fire, the Dusseldorf Airport fire, and the King's Cross Underground fire where signs that were installed properly in accordance with the code were not seen by occupants and/or were not able to redirect people away from unsafe exit routes, with tragic consequences. In response, the need for exit signs to be more noticeable in an emergency and to redirect occupants away from nonviable or dangerous exit routes has led to the development of adaptive dynamic signage systems. These systems, such as that developed and tested as part of the European Union's GETAWAY project led by the Fire Safety Engineering Group of the University of Greenwich[@Galea:GETAWAY], use signs that blink to attract attention and can intelligently and actively indicate available egress routes and negate unavailable routes. An example of the modified signs used in the evacuation trial [@Galea:GETAWAY] is shown in Figure [#fig-signs].
 
-fig
+~ Figure { #fig-signs; caption:"Example of flashing exit signage design (left) and negated no entrance sign design (right) used in the GETAWAY Project evacuation trials"}
+![signs]
+~
+[signs]: images/signs.PNG "signs" { width:auto; max-width:90% }
 
 People movement models are an important tool in the development and use of adaptive dynamic signage systems. The buildingEXODUS model was used as a critical component of the GETAWAY project allowing intelligent faster-than-real-time analysis of the scenario to provide input to the signage system. Future uses may provide similar feedback or to provide input into the design of scenarios for non-intelligent or manually-controlled systems. Typically, this would take the form of a series of scenarios in which various exiting schemes are simulated and analyzed, resulting in a recommendation of the best exit strategy for a given event. In order to be fully-implemented into an intelligent adaptive signage system, the egress model used must be capable of running faster than real time, receiving and using information on the active scenario (e.g., environmental sensors), and outputting results in a way that can be read and interpreted by the system to implement the findings.
 
@@ -131,17 +133,44 @@ In some cases, it may be desired to perform a related analysis in which occupant
 
 ## Assisted Evacuation and Carrying Behavior
 
-Traditional uses of people movement models for evacuation consider the effects of occupants of a building moving individually toward an exit, using the available corridors, stairs, doors, etc. Often, the presence of mobility impaired occupants is accounted for by the use of slower speeds and limitations on the use of stairs. Occupants using mobility assistive devices such as wheelchairs or walkers or occupants carrying or pushing large items such as rolling luggage or hospital beds are accounted for by either increasing the size of occupants or not at all. In practices, these limitations may oversimplify the complex dynamics that occur during an assisted evacuation or when a significant number of people are carrying luggage (e.g., airports and other transit stations). Assisted evacuation results in complex movement behavior from staff, including potential changes in walking speed depending on whether they are actively assisting an occupant to egress or returning to help the next occupant. The back-and-forth nature of such an evacuation also leads to increased potential for counterflow. Additionally, people pushing beds or wheelchairs or carrying large items have a different shape profile and movement pattern compared to unencumbered occupants. This effects both the ability to navigate through the building geometry as well as having an effect on queuing and the throughput of doors. For example, a recent study of people movement in a large international airport found that the flow through doorways was reduced by __ when occupants pulling rolling luggage were present [ref]{ background-color=yellow }. This decrease was attributed to the increased effective length of an occupant pulling rolling luggage.
+Traditional uses of people movement models for evacuation consider the
+effects of occupants of a building moving individually toward an exit,
+using the available corridors, stairs, doors, etc. Often, the presence of
+mobility impaired occupants is accounted for by the use of slower speeds
+and limitations on the use of stairs. Occupants using mobility assistive
+devices such as wheelchairs or walkers or occupants carrying or pushing
+large items such as rolling luggage or hospital beds are accounted for by
+either increasing the size of occupants or not at all. In practices,
+these limitations may oversimplify the complex dynamics that occur during
+an assisted evacuation or when a significant number of people are
+carrying luggage (e.g., airports and other transit stations). Assisted
+evacuation results in complex movement behavior from staff, including
+potential changes in walking speed depending on whether they are actively
+assisting an occupant to egress or returning to help the next occupant.
+The back-and-forth nature of such an evacuation also leads to increased
+potential for counterflow. Additionally, people pushing beds or
+wheelchairs or carrying large items have a different shape profile and
+movement pattern compared to unencumbered occupants. This effects both
+the ability to navigate through the building geometry as well as having
+an effect on queuing and the throughput of doors. For example, a recent
+study of people movement in a large international airport found that the
+time to transit through doorways for occupants with roller bags was 150%
+greater than transit time for occupants without roller
+bags[@Goodhead:airport]. This decrease was attributed to the increased
+effective length of an occupant pulling rolling luggage.
 
 Existing egress models can simulate assistance and carrying behaviors to varying degrees. In those models that have group evacuation features, the act of staff going to the occupant in need of assistance and escorting them out of the building or to a safe location may be simulated using a number of groups. However, this may not be practical in the case where a staff member makes many trips back and forth to provide assistance. Furthermore, in scenarios where there are occupants are using wheelchairs or other mobility assistive devices, the evacuation strategy involves horizontal exiting or internal relocation, rather than simple building egress. In this scenario, a means whereby occupants may be given a final goal of relocating to a given room or area rather than exiting the simulation is needed. As with the previously discussed new uses of egress models, this behavior can often be mimicked in existing egress models but cannot be specified directly.
 
-Thunderhead Engineering is currently developing an assisted evacuation capability into its Pathfinder model through the use of vehicles that can be customized in terms of their geometry and attachment points for assistants [@Thunderhead:assist]. While still in the development stage, this additional feature has the potential to greatly improve the capacity to model assisted evacuation and the evacuation of occupants in wheelchairs or with other mobility assistive devices. 
+Thunderhead Engineering is currently developing an assisted evacuation capability into its Pathfinder model through the use of vehicles that can be customized in terms of their geometry and attachment points for assistants[@Thunderhead:assist]. While still in the development stage, this additional feature has the potential to greatly improve the capacity to model assisted evacuation and the evacuation of occupants in wheelchairs or with other mobility assistive devices. Figure [#fig-assistedevac] shows an example of what this new capability might look like[@Thunderhead:assist]
 
-fig
+~ Figure { #fig-AssistedEvac; caption:"Demonstration of assisted evacuation capability in the Pathfinder model (under development)"}
+![assisted_evac]
+~
+[assisted_evac]: images/assisted_evac.PNG "assisted_evac" { width:auto; max-width:90% }
 
 # SUMMARY
 
-The people movement models currently available are generally designed and well-suited for simulating evacuation in the event of a fire emergency. However, often these models are capable of simulating a wider array of uses. The range of potential applications of existing people movement models are expanding to meet the demand for more complex emergency evacuation scenarios as well as analyses outside the fire and emergency management fields. Existing models may often be configured to simulate these new scenarios and behaviors, though implementation of model changes of various levels of complexity would improve the ability of modelers to reflect new and commplex behaviors more organically. In either case, the end result is a more robust model capable of handling a wide range of applications.
+The people movement models currently available are generally designed and well-suited for simulating evacuation in the event of a fire emergency. However, often these models are capable of simulating a wider array of uses. The range of potential applications of existing people movement models are expanding to meet the demand for more complex emergency evacuation scenarios as well as analyses outside the fire and emergency management fields. Existing models may often be configured to simulate these new scenarios and behaviors, though implementation of model changes of various levels of complexity would improve the ability of modelers to reflect new and complex behaviors more organically. In either case, the end result is a more robust model capable of handling a wide range of applications.
 
 
 [BIB]
