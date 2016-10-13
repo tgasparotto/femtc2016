@@ -28,7 +28,7 @@ name-references : REFERENCES
  to address. Also, in the revision of the model from version 5 to version 6 changes were made in the basic turbulence model, meaning that a different result than the SP study
  was to be expected. The study concluded that FDS version 6.2.0 could reproduce the experimental results with a reasonable level of detail. Moreover, the studied output data
  produced in FDS 6.2.0 were generally higher than its precursor. However, to obtain credible results along the facade particularly close to the fire, a high mesh resolution
- was needed, namely a D*/δx of at least 30.
+ was needed, namely a $D^{*}/\delta x$ of at least 30.
 ~
 
 [editor]: https://www.madoko.net/editor.html "Madoko.net Editor"
@@ -107,43 +107,42 @@ meaning both the convective and the total heat release rate could be estimated d
 Figure [#figure3].
 
 ## Incident radiation using a plate thermometer
-The incident radiation was studied using the retrieved temperatures from the thermometers and the thermocouples. The incident radiation q ̇_(INC_E)^'' (W/m2) was then 
+The incident radiation was studied using the retrieved temperatures from the thermometers and the thermocouples. The incident radiation $\dot{q}^{\prime\prime}_{INC} (W/m^{2})$ was then 
 derived from the following equation, Equation [#equation1] from [@Evegren]:
 
-~ Equation  {#Equation1; caption:"x" }
-  \epsilon_{PT} \dot{q}^{\prime\prime}_{inc} - \epsilon_{PT} \sigma T_{PT}^{4} + h_{PT} (T_{g} - T_{PT}) + K(T_{g} - T_{PT})=C \dfrac{dT_{PT}}{dT}
+~ Equation  {#Equation1; caption:"Equation1" }
+  \dot{q}^{\prime\prime}_{INC} = \sigma T_{S}^{4} - \dfrac{h_{c}(T_{g}-T_{s})}{\epsilon} + \dfrac{dc\rho}{\epsilon} \times \dfrac{dT}{dt}
 ~
 
-where $\sigma$ is the Stefan Boltzmann constant (5.67·10-8 W/(m2·K4)), $d$ is the plate thickness (0.7 mm), $c$ is the specific heat of steel (7 850 J/(kg·K)), $\rho$ is the density 
-of the steel plate (480 kg/m3) and ε is the emissivity assumed to be of 0.9 (-) [@Evegren]. The variable T_s is defined as the surface temperature of the plate thermometer and 
-T_g is defined as the temperature of the free air flow (gas temperature). From the following equation, Equation [#equation2], the forced convective heat transfer h_c (W/(m2·K) was 
+where $\sigma$ is the Stefan Boltzmann constant $(5.67 \times 10^{-8} W/(m^{2}K^{4}))$, $d$ is the plate thickness (0.7 mm), $c$ is the specific heat of steel $(7 850 J/(kg \times K))$, $\rho$ is the density 
+of the steel plate $(480 kg/m^{3})$ and ε is the emissivity assumed to be of 0.9 (-) [@Evegren]. The variable $T_{s}$ is defined as the surface temperature of the plate thermometer and 
+$T_{g}$ is defined as the temperature of the free air flow (gas temperature). From the following equation, Equation [#equation2], the forced convective heat transfer $h_{c}$ 
+$(W/(m^{2} \times K)$ was 
 estimated:
 
-~ Equation  {#Equation2; caption:"x" }
+~ Equation  {#Equation2; caption:"Equation2" }
   h_{c} = 2.4 T_{f}^{0.085} \times u_{\infty}^{1/2} \times x^{-1/2}
 ~
 
-where u is the velocity of the vertical air flow and x is a characteristic length. Based on video recordings from the experiment the air velocity was estimated to 
-6 m/s and the characteristic length was set to 0.2 m (the side measurement of the square plate). The film temperature T_f is the average of the T_s and T_g [@Evegren]. 
-The forced convective heat transfer coefficient h_c varied between 22 and 24 during the test using Eq. 2.
+where $u$ is the velocity of the vertical air flow and $x$ is a characteristic length. Based on video recordings from the experiment the air velocity was estimated to 
+6 m/s and the characteristic length was set to 0.2 m (the side measurement of the square plate). The film temperature $T_{f}$ is the average of the $T_{s}$ and $T_{g}$ [@Evegren]. 
+The forced convective heat transfer coefficient $h_{c}$ varied between 22 and 24 during the test using Equation [#equation2].
 
 Note that Equation [#equation1] is based on the following simplified heat balance equation, Equation 289 in [@Wickstrom1], in this paper entitled Equation [#equation3]:
 
-~ Equation  {#Equation3; caption:"x" }
+~ Equation  {#Equation3; caption:"Equation3" }
   \epsilon_{PT} \dot{q}^{\prime\prime}_{inc} - \epsilon_{PT} \sigma T_{PT}^{4} + h_{PT} (T_{g} - T_{PT}) + K(T_{g} - T_{PT})=C \dfrac{dT_{PT}}{dT}
 ~
 
-where the suffix PT refers to Plate Thermometer. The equation describes the heat balance on the exposed plate surface of a plate thermometer. From Equation 3 the 
+where the suffix $PT$ refers to Plate Thermometer. The equation describes the heat balance on the exposed plate surface of a plate thermometer. From Equation 3 the 
 term qINC is extracted from the heat balance equation and conduction is neglected, forming Equation 1. However, in Equation 1, the convective term is subtracted, 
-which means in other words that the expression q ̇_(INC_E)^'' is the incident radiative part of the total heat transfer. Hence, the latter term is referred to as incident 
-radiative heat flux, q ̇_IRHF^'' (W/m2) in this paper.
+which means in other words that the expression $\dot{q}^{\prime\prime}_{INC}$ is the incident radiative part of the total heat transfer. Hence, the latter term is referred to as incident 
+radiative heat flux, $\dot{q}^{\prime\prime}_{IRHF} (W/m^{2})$ in this paper.
 
-$E = mc^2$
-
-The plate thermometer measures approximately the temperature of a surface which cannot absorb any heat, also called the adiabatic surface temperature (T_AST). The T_AST 
+The plate thermometer measures approximately the temperature of a surface which cannot absorb any heat, also called the adiabatic surface temperature $(T_{AST})$. The $T_{AST}$ 
 is an illustrative temperature measure both taking into account the influence from incident radiation and the convective heating from the surrounding gas [@Wickstrom2]. 
-For example, if an exposed body is far away from the fire source, radiation is the dominating part and hence the T_AST will be closer to an effective radiation 
-temperature T_r. If, however, the body is exposed by mainly convection from the hot gases, T_AmT will be closer to the gas temperature T_g. Since this measure is 
+For example, if an exposed body is far away from the fire source, radiation is the dominating part and hence the $T_{AST}$ will be closer to an effective radiation 
+temperature $T_{r}$. If, however, the body is exposed by mainly convection from the hot gases, $T_{AST}$ will be closer to the gas temperature $T_{g}$. Since this measure is 
 implemented in FDS, it can then be used as an alternative means of expressing the thermal exposure to a surface without taking into account the energy gain or loss 
 through conduction from the exposed body.
 
@@ -171,8 +170,8 @@ alignments, presented in the sensitivity analysis chapter.
 |----------------|---------------------------------|-----------------------|-----------------|
 ~
 
-The ratio D for the conducted simulations are approximately 8, 15 and 30 for the coarse, medium and fine grid respectively. These values can be compared with 
-the values (D^*/δx of 4-16) that historically has been used as reference in FDS applications. The values of 8, 15 and 30 can also be put in relation to the values 
+The ratio $D^{*}/\delta x$ for the conducted simulations are approximately 8, 15 and 30 for the coarse, medium and fine grid respectively. These values can be compared with 
+the values ($D^{*}/\delta x$ of 4-16) that historically has been used as reference in FDS applications. The values of 8, 15 and 30 can also be put in relation to the values 
 represented in Table 3.11 in the FDS validation guide [@FDSValidation], where the mean value of the lower range limits is of around 8 and the mean value of the upper range is 
 of around 16.
 
@@ -225,25 +224,34 @@ incident heat flux results to the reference test. The procedure for doing this i
 [Figure4]: images/Figure4.png "Figure4" { width:auto; max-width:100% } 
 
 ##Extracting incident radiative heat flux results in FDS
-Since there are no device that directly produce the same form of heat flux in FDS as computed from the reference test described above (q ̇_IRHF^''), the information 
-given in [@Overholt] was used. In FDS, the quantity incident heat flux q ̇_INC^'' (W/m2) is the sum of the incoming radiation and convection, not including the outgoing 
-radiation [@Overholt]. The quantity incident heat flux is described in the following equation, Equation 4 from [@FDSUser]:
+Since there are no device that directly produce the same form of heat flux in FDS as computed from the reference test described above ($\dot{q}^{\prime\prime}_{IRHF}$), 
+the information given in [@Overholt] was used. In FDS, the quantity incident heat flux $\dot{q}^{\prime\prime}_{INC} (W/m^{2})$ is the sum of the incoming radiation and 
+convection, not including the outgoing radiation [@Overholt]. The quantity incident heat flux is described in the following equation, Equation [#equation4] from [@FDSUser]:
 
-q ̇_INC^''=(q ̇_rad^'')/ε+〖σT〗_w^4+q ̇_conv^''										(4) 
+~ Equation  {#Equation4; caption:"Equation4" }
+  \dot{q}^{\prime\prime}_{INC} = \dfrac{\dot{q}^{\prime\prime}_{rad}}{\epsilon} + \sigma T_{w}^{4} + \dot{q}^{\prime\prime}_{conv}
+~
 
-Further, there is also a quantity called radiative heat flux, described as the sum of the incoming and reflecting radiation as seen in the following equation, Equation 5 from [@Overholt]:
+Further, there is also a quantity called $\textit{radiative heat flux}$, described as the sum of the incoming and reflecting radiation as seen in the following equation, 
+Equation [#equation5] from [@Overholt]:
 
-q ̇_rad^''= q ̇_(rad,in)^''-q ̇_(rad,out)^''=q ̇_(rad,in)^''-ε〖σT〗_w^4  								(5)  
+~ Equation  {#Equation5; caption:"Equation5" }
+  \dot{q}^{\prime\prime}_{rad} = \dot{q}^{\prime\prime}_{rad, in} - \dot{q}^{\prime\prime}_{rad, out} = \dot{q}^{\prime\prime}_{rad, in} - \epsilon \sigma T_{w}^{4}
+~
 
-Substituting Eq. 5 in Eq. 4 results in the following equation, Eq. 6:
+Substituting Equation [#equation5] in Equation [#equation4] results in the following equation, Equation [#equation6]:
 
-q ̇_INC^''=(q ̇_(rad,in)^''  )/ε+q ̇_conv^''										(6)  
+~ Equation  {#Equation6; caption:"Equation6" }
+  \dot{q}^{\prime\prime}_{INC} = \dfrac{\dot{q}^{\prime\prime}_{rad, in}}{\epsilon} + \dot{q}^{\prime\prime}_{conv}
+~
 
 At this stage, to be able to compare the quantity q ̇_INC^'' in FDS with the computed q ̇_IRHF^''-values from the reference test, the convective term was subtracted 
 from Eq. 6. This means that the q ̇_IRHF^''-output data in FDS were produced by subtracting the q ̇_INC^''-values with the q ̇_conv^''-values from FDS, resulting in 
-the following equation, Equation 7:
+the following equation, Equation [#equation7]:
 
-q ̇_IRHF^''=q ̇_INC^''-q ̇_conv^''=(q ̇_(rad,in)^''  )/ε									(7)  
+~ Equation  {#Equation7; caption:"Equation7" }
+  \dot{q}^{\prime\prime}_{IRHF} = \dot{q}^{\prime\prime}_{INC} - \dot{q}^{\prime\prime}_{conv} = \dfrac{\dot{q}^{\prime\prime}_{rad, in}}{\epsilon} 
+~
 
 Again, this was done since in FDS there are no device that directly produce the same form of heat flux computed in the given large-scale fire test. 
 
@@ -448,7 +456,7 @@ phase, most evident in the first 300 s at position C21.
 A conclusion based on the results in this paper is the importance of a high mesh resolution in order to obtain credible result in these kinds of calculations. However, 
 the refinement in grid size causes problems regarding the computational time needed for the simulation, which was seen to rise significantly from 18 to 232 h in the 
 performed simulations in the validation study. Even if the computational domain is divided into several meshes, that was shown to not greatly affect the results in the 
-sensitivity analysis, the difference in computational time between a D^*/δx ratio of 15 and 30 is still substantial.
+sensitivity analysis, the difference in computational time between a $D^{*}/\delta x$ ratio of 15 and 30 is still substantial.
 
 One reason for the difference in output between the fine grid size and the coarser grid sizes is probably the finer grid´s ability to resolve more of the turbulence of 
 the fire plume. The smaller the grid, the more of the large eddies are resolved in FDS contributing to a plume with better air entrainment. Because a finer grid captures 
@@ -489,42 +497,6 @@ caption should start with either the word “figure” spelled out or
 abbreviated, followed by the figure number (i.e., Figure 1 or Fig. 1).
 The figure caption should be followed by a single line of space before
 the text resumes.
-
-## Tables
-Table [#table-sample] shows an example full width table figure.
-
-~ TableFigure { #table-sample; caption: "Modelle mit unterschiedlich geschätztem baseline hazard"; .wide }
-|                | $c(t)$                               ||||
-|                |---------|---------|---------|-----------|
-|                | (A0)    | (A1)    | (A2)    | (A3)      |
-|                | ohne    | Log     | Polynom | Stückweise|
-|                |         |         |         | konstant  |
-|:---------------|:-------:|:-------:|:-------:|:---------:|
-| Log likelihood | -6.798  | -6.733  | -6.715  | -6.686    |
-| Pseudeo $R^{2}$| 0,048   | 0,057   | 0,059   | -         |
-| AIC            | 13.615  | 13.489  | 13.456  | 13.483    |
-| BIC            | 13.711  | 13.594  | 13.580  | 14.009    |
-| N              | 105.484 | 105.484 | 105.484 | 105.484   |
-|----------------|---------|---------|---------|-----------|
-~
-
-## Equations
-Standard terminology should be used in equations. If possible, keep
-equations to one column. All equations should be numbered. A definition
-of $e$ is shown in Equation [#euler]:
-
-~ Equation { #euler }
-e = \lim_{n\to\infty} \left( 1 + \frac{1}{n} \right)^n
-~
-
-Or to use &logolatex; to align equations.
-
-~ Equation { #eq-alignment; caption:"Alignment example" }
-\begin{aligned} 
- f(x)  &= a x^2+b x +c   &   g(x)  &= d x^3 \\
- f'(x) &= 2 a x +b       &   g'(x) &= 3 d x^2
-\end{aligned}
-~
 
 # BIBLIOGRAPHY AND REFERENCES
 When references are used in the text, tie them to an alphabetical (by
