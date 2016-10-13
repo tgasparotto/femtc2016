@@ -179,7 +179,7 @@ have agents going over seats or surpassing other pedestrians.
 [CdM_Sala1PF2]: images/CdM_Sala1PF2.png "CdM_Sala1PF2" { width:auto; max-width:90% }
 
 Figure [#figCcdM_sala1PF2] shows a snapshot of the simulation process, having only the 
-usual 4 exits, left and right, and the rear emergency exits closed (red rectangule).
+usual 4 exits, left and right, and the rear emergency exits closed (red rectangle).
 This represents the layout used to collect data shown at table [#table1].
 
 
