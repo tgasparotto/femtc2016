@@ -40,7 +40,7 @@ name-references : REFERENCES
 Today FDS calculations are often used to model fires in complex building designs. However, there are large risks in using FDS if there is a lack of user knowledge, 
 since FDS is highly dependent on the input variables that are specified. Also, there is a risk in relying on results from previous validation studies of FDS performed 
 on completely different geometries or setups than the intended or in situations where FDS is not yet valid. In addition to this, changes in the model might affect the 
-results and can render previous validation studies invalid. 
+results and can render previous validation studies invalid.
 
 The background to this work lies in the results of an MSc thesis conducted at Lund University, Sweden, investigating the impact of horizontal projections on external
 fire spread using the numerical tool FDS 6.2.0. As part of the thesis and to avoid the above-mentioned risks, a validation study was performed on FDS as calculation tool 
@@ -67,9 +67,7 @@ Several simulations was performed in FDS including sensitivity analysis covering
 of thermocouple devices, the choice of radiation angles, Heat Release Rate Per Unit Area (HRRPUA) as well as the choice of soot yield. The results obtained were then 
 compared to those from the experimental test rig. Further, the key results were compared against the results from the previous validation study on FDS 5.5.3. 
 
-
 # EXPERIMENTAL SETUP
-
 ## SP FIRE 105 test rig
 The SP FIRE 105 test is a large-scale test method for analyzing reaction to fire properties of facade systems. The method specifies a procedure to determine reaction 
 to fire properties of different assemblies of materials, insulation, and claddings when exposed to fire from a simulated apartment fire where flames emerge through a 
@@ -155,7 +153,7 @@ The different grid sizes used in FDS are presented in Table 1. The main model wa
 which in turn can affect the results of the simulation. A sensitivity analysis was later conducted covering the potential influence on results of different mesh 
 alignments, presented in the sensitivity analysis chapter.
 
-~ TableFigure { #Table1; caption: "Various measurements of the computational domain in FDS [1]"; .wide }
+~ TableFigure { #Table1; caption: "Various measurements of the computational domain in FDS" }
 
 |----------------|---------------------------------|-----------------------|-----------------|
 |   Grid size    |  Domain size                    | Total number of cells | Mesh resolution |       
@@ -217,7 +215,7 @@ incident heat flux results to the reference test. The procedure for doing this i
 ~ Figure { #Figure4; caption:"Picture illustrating the device positions in FDS. Left - The front of the test rig along with the six plate thermometers. Middle - Close-up of each thermometer position and other devices used. Right - Same as the middle picture but in 3D."}
 ![Figure4]
 ~
-[Figure4]: images/Figure4.png "Figure4" { width:auto; max-width:100% }
+[Figure4]: images/Figure4.png "Figure4" { width:auto; max-width:100% } 
 
 ##Extracting incident radiative heat flux results in FDS
 Since there are no device that directly produce the same form of heat flux in FDS as computed from the reference test described above (q ̇_IRHF^''), the information 
@@ -291,7 +289,6 @@ story the calculated q ̇_IRHF^''-values in FDS underestimates the computed q ̇
 # SENSITIVITY ANALYSIS
 The key results from the sensitivity study are presented in this section, for complementary results the reader is referred to. Either the results are presented 
 directly in the text or references are made to the results in.
-
 ## Grid sensitivity
 The grid sizes of 20 cm, 10 cm and 5 cm in the simulations result in mesh resolutions of around 8, 15 and 30 at maximum HRR 3.1 MW. These values can be put in relation 
 to the values represented in Table 3.11 of the FDS validation guide, where the mean value of the lower range limits is of around 8 and the mean value of the upper
@@ -307,12 +304,10 @@ especially for the temperatures retrieved from the thermocouples and the T_AST.
 ![Figure9]
 ~
 [Figure9]: images/Figure9.png "Figure9" { width:auto; max-width:100% }
-
 ~ Figure { #Figure10; caption:"Grid sensitivity, comparison of temperatures from the plate thermometers during the reference test and those calculated in FDS. Left - The three positions closest to the opening. Right - The three positions further up along the facade."}
 ![Figure10]
 ~
 [Figure10]: images/Figure10.png "Figure10" { width:auto; max-width:100% }
-
 ~ Figure { #Figure11; caption:"Grid sensitivity, comparisons of temperatures from the plate thermometers during the reference test and adiabatic surface temperature data calculated in FDS. Left - The three positions closest to the opening. Right - The three positions further up along the facade."}
 ![Figure11]
 ~
@@ -331,7 +326,6 @@ still the agreement during the transient phase for position 1.
 [Figure12]: images/Figure12.png "Figure12" { width:auto; max-width:100% }
 
 ## Influence of mesh alignments
-
 The effect of dividing the computational domain into differently aligned meshes was studied. This was conducted mainly on the 5 cm grid however one simulation was 
 divided into two meshes with different grid sizes (10 cm cells in the fire room and 5 cm cells outside). The different mesh intersections of the computational domain 
 that were studied are shown as purple lines in Figure 13.
@@ -349,7 +343,6 @@ this was even if the mesh intersections were horizontally. However, this was bas
 on all meshes. Using a coarser grid size inside (10 cm) the fire compartment and a fine grid size outside was seen to underestimate the output, as described above.
 
 ## Influence of the choice of thermocouple position
-
 As seen in Figure 4, thermocouples were placed every 10 cm offset the symmetry line. By doing this, the sensitivity in the choice of a device position was studied for a 
 facade test rig. This was done in both the 5 cm grid and 10 cm grid for the single mesh simulations. From the results it was seen that the thermocouple generating 
 the highest temperatures was generally the thermocouple with the preferred position as per the drawing in Figure 1. However, in the 10 cm grid simulation close to the 
@@ -358,7 +351,6 @@ most right device are seen along the surface of the facade, at some positions al
 more the temperature differences between the far most left device and far most right were evened out.
 
 ## Influence of increased radiation angles and increased HRRPUA
-
 The standard number of radiation angles in FDS is 100, which is considered reasonable in most situations bearing in mind the 20 % of the CPU time of a calculation that 
 is required for this setting. However, given the geometry and properties of fire scenarios in some cases, the default value of 100 can be insufficient. The default 
 value of 100 angles was changed to 500 angles to study potential differences in the results. However, the increase in radiation angles resulted in minor differences 
@@ -369,7 +361,6 @@ burner (2 000 mm (W) by 250 mm (D)). Note that the modelled HRR remained unchang
 in the output concerning the flame spread along the facade. However, the increase from 3100 kW/m2 to 6200 kW/m2 gave minor changes in temperature and radiation outputs.
 
 ## Influence of increased soot yield
-
 In the main simulations a soot yield of 0.037 was specified based on the results of a validation study of smoke and toxic gas concentrations in a test compartment. 
 The soot yield was increased to 0.1 to observe any differences in the output data. Regarding gas temperatures, the change in soot yield had minor effects. However, 
 temperatures from the modelled plate temperatures were seen to increase especially on the positions closest to the fire nearly reaching the actual temperature during 
@@ -387,7 +378,6 @@ however, considerable higher values are represented in FDS 6.2.0.
 ![Figure14]
 ~
 [Figure14]: images/Figure14.png "Figure14" { width:auto; max-width:100% }
-
 ~ Figure { #Figure15; caption:"FDS 5 cm cells, comparison of calculated incident radiative heat fluxes between FDS 6.2.0 and FDS 5.5.3 at the three positions closest to the opening."}
 ![Figure15]
 ~
@@ -484,33 +474,6 @@ is assumed that this critical mesh division was not close enough to the more tur
 the computational domain can be divided into several meshes in FDS applications of external fire spread without having to affect the result to a great extent, given that 
 a uniform cell size is used throughout.      
 
-# INTRODUCTION { #sec-intro }
-You are encouraged to use the [Madoko.net Editor][editor] while using
-the [Madoko Reference Manual][reference-manual] to edit/commit your
-documents into the 'authoring' branch of the [femtc2016] GitHub repository. 
-More information about this method of contribution will be covered below.
-
-Text styling, links, sub- and super-script, footnotes and other topics
-are covered in section [Syntax: Inline
-elements](http://research.microsoft.com/en-us/um/people/daan/madoko/doc/reference.html#sec-syntax--inline-elements)
-of the manual.
-
-Headings, Figures and Tables, Lists, Code Blocks, Mathematics, etc. are
-covered in section [Syntax: Block
-elements](http://research.microsoft.com/en-us/um/people/daan/madoko/doc/reference.html#sec-syntax--block-elements)
-of the manual.
-
-The target length for submitted and invited papers is about eight pages.
-This length includes all figures and tables. However, because the
-Proceedings will not be printed on paper, there is no maximum limit on
-the number of pages. You are free to exceed the target length of eight
-pages.
-
-Please watch this short YouTube Video for a tutorial on how to use the system as intended.
-
-# FIGURES, TABLES, AND EQUATIONS
-Original drawings and photos may be included in your paper as figures.
-Diagrams may be in color.
 
 Figures and tables should immediately follow first mention of them in the
 text and can be placed in one column, or in the case of wider figures,
@@ -519,12 +482,6 @@ caption should start with either the word “figure” spelled out or
 abbreviated, followed by the figure number (i.e., Figure 1 or Fig. 1).
 The figure caption should be followed by a single line of space before
 the text resumes.
-
-## Figures
-Figure [#Figure5] Figure [#Figure6] Figure [#Figure7] Figure [#Figure8] Figure [#Figure9] Figure [#Figure10] Figure [#Figure11] Figure [#Figure12] Figure [#Figure14] Figure [#Figure15] Figure [#Figure3] in Section [#sec-intro] shows an image from an
-older version of Smokeview. Note that you can drag&drop images into the
-editor pane to include them in the document, and similarly with bibtex
-files, latex style files, etc.
 
 ## Tables
 Table [#table-sample] shows an example full width table figure.
@@ -569,35 +526,6 @@ your paper. The format commonly used in scientific literature follows:
 
 Smith, J. S., Bloggs, R. T. and Jones, E. R. (1974), "Magnetic Anomalies
 in Geothermal Systems", Journal of Fluid Mechanics, 254, 73-79
-
-Leslie Lamport, LaTeX: A Document Preparation System (2nd Edition), Addison-Wesley, 1994
-
-When using Madoko, edit the content of the .bib file in the document
-folder, and use the reference methods as shown in the [Bibliography and
-Citations
-Section](http://research.microsoft.com/en-us/um/people/daan/madoko/doc/reference.html#sec-bib)
-of the Madoko Manual.
-
-A bibliography file consists of all your references in the BibTeX format, for example:
-
-    @BOOK{ Knuth:TeX,  
-        author   = "Knuth, Donald E.",  
-        title    = "The {\TeX} book",  
-        publisher= "Addison-Wesley",  
-        year     = 1984  
-    }
-
-Entries in the bibliography files can now be referenced using semi-colon
-separated references, for example:
-``` Markdown 
-Read about LaTeX and TeX [@Knuth:TeX; @Lamport:LaTeX].
-```
-Results in: Read about LaTeX and TeX.
-
-Please include full title of journal articles or other references,
-journal, volume, date, pages. There is a nice [table on
-Wikipedia](https://en.wikibooks.org/wiki/LaTeX/Bibliography_Management#BibTeX)
-that shows all of the different data fields for the BibTeX file.
 
 [BIB]
 
