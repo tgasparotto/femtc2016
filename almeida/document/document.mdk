@@ -229,6 +229,7 @@ The Pathfinder tool can be used to estimate the improvement that opening an emer
 exit might have in the total evacuation time. Figure [#figcdm_sala2PF3] shows the same situation 
 presented before in figure [#figcdm_sala2PF2], this time having the emergency exit, near the stage, open. 
 
+
 ~ Figure { #figCdM_sala2PF3; caption:"3D Pathfinder simulation snapshot showing the emergency exit near the stage open"}
 ![Cdm_Sala2PF3]
 ~ 
