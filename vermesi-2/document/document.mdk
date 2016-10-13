@@ -106,7 +106,7 @@ model in this research has been based on the Dartford West Tunnel and the onsite
  multi-scale models to consider the feasibility of modelling a tunnel fire using the multi-scale modelling method. 
 
 For the full CFD models, a grid sensitivity study and a non-dimensionalised validation study have also been considered. 
-We have benchmarked the full CFD models against the ArupFire Tunnel Fire Experiments documented in the FDS VAlidation Guide (ref). 
+We have benchmarked the full CFD models against the ArupFire Tunnel Fire Experiments documented in the FDS Validation Guide (ref). 
 The results of the validation study has not been presented here.  
 
 # THE DARTFORD TUNNEL, UK
@@ -114,7 +114,7 @@ The Dartford Tunnel is 1.5 km long with an effective area of 41 m^2^.  There are
 pairs in total where 7 is located at the South portal (100 m in) and 7 is located at the North
 portal (50 m in).  These jet fans pairs are spaced 50 m apart in series, and the individual
 fans is spaced at 1.2 m in parallel and are mounted at 5.5 m above the road.  Each fan has a diameter
-of 0.5 m^2^ and generates a volume of rate of 8.9 m^3^.  See Figure 1 and Figure 2.  
+of 0.5 m^2^ and generates a volume of rate of 8.9 m^3^.  See Figure 1.  
 
 ~ Figure { #fig-figure; caption:"Dartford West Tunnel Long Section"}
 ![dart2]
@@ -122,16 +122,12 @@ of 0.5 m^2^ and generates a volume of rate of 8.9 m^3^.  See Figure 1 and Figure
 [dart2]: images/dart2.png "dart2" { width:auto; max-width:90% }
 ~
 
-~ Figure { #fig-figure; caption:"Dartford West Tunnel Cross Section"}
-![dart3]
 
-[dart3]: images/dart3.png "dart3" { width:auto; max-width:90% }
-~
 
 # MULTI-SCALE MODELLING METHOD
 ## SUMMARY OF THE MULTI-SCALE MODELLING METHOD 
-We have used FDS6.1 (current at the time the work was carried out) and the built in HVAV
-feature to implelemt the multi-scale modelling method.  Briefly, multi-scale modelling can 
+We have used FDS6.1 (current at the time the work was carried out) and the built in HVAC
+feature to implement the multi-scale modelling method.  Briefly, multi-scale modelling can 
 be divided into two methods, namely the direct and indirect method (cite my TUST).  
 
 A key consideration for a multi-scale model is the length, L~3D~ of the CFD domain 
@@ -145,7 +141,7 @@ jet fans and the fires in CFD regions together with the regions in between
 represented with 1D, this essentially couples together the jet fans and the fires, 
 allowing the effect of this coupling to be simulated.  
 
-See Figure 3 for the implementation of the multi-scale model. Note that L~P~
+See Figure 2 for the implementation of the multi-scale model. Note that L~P~
  is 50 m, L~JF,DW~ is 130 m and L~JF,UP~ is 35 m.  We have derived these distances by calibrating 
  the CFD models.  
 
@@ -159,7 +155,7 @@ To compare the numerical model for cold flow multi-scale modelling against field
 carried out modelling for five scenarios including one with only background velocity (no jet fans active), 
 and models with one, four, seven and fourteen jet fans pairs activated.  
 
-Figure 4 shows the comparison of the on-site and both 1D and full CFD modelling average velocities at the
+Figure 3 shows the comparison of the on-site and both 1D and full CFD modelling average velocities at the
 centre of the tunnel. Although the velocities at 20 m to 60 m have weak correlations to the field data, 
 the velocity profiles furhter downstream of the jet fans correlate with the field data. This is
 within expectation as the numerical modelling of the jet fans are highly sensitive, particularly
@@ -191,14 +187,14 @@ The results show for bulk flow in a tunnel, the multi-scale modelling method pro
 reasonably accurate predictions when compared to field measurements. Separately, the multi-scale
 modelling method also provides significant time saving compared to the full CFD method.  
 
-Figure 5 shows the computational time between the full CFD method and the multi-scale modelling
+Figure 4 shows the computational time between the full CFD method and the multi-scale modelling
 method where depending on the length of the 1D zone, where the larger a proportion of the model
 is represented in 1D against 3D, the more significant is the time savings, i.e. up to 2.2 times.
 
 ~ Figure { #fig-figure; caption:"Computational Time between Full CFD and the Multi-scale Modelling Method"}
 ![fig1_time1]
 
-[fig1_time1]: images/fig1_time1.png "fig1_time1" { width:auto; max-width:90% }
+[fig1_time1]: images/fig1_time1.png "fig1_time1" { width:auto; max-width:60% }
 ~
 
 ## FIRE MODELLING 
@@ -208,9 +204,9 @@ by introducing a fire in the centre of the tunnel. The model includes three fire
 35 MW, 55 MW and 75 MW.  
 
 Implementation of the multi-scale model is similar to that of the cold flow modelling with the
-exception the fire is located in the 3D section. See Figure 6.  Note that L~fire~is 170 m and this
+exception the fire is located in the 3D section. See Figure 5.  Note that L~fire~is 170 m and this
 has been determined based on the calibration of the model to ensure the fire has enough length to
-be full developed when the smoke plume reaches the 1D section.  
+be fully developed when the smoke plume reaches the 1D section.  
 
 ~ Figure { #fig-figure; caption:"Implementation of the Multi-scale Model"}
 ![fig1_fire2]
@@ -219,12 +215,12 @@ be full developed when the smoke plume reaches the 1D section.
 
 We have plotted the results from the full CFD and multi-scale models by considering the
 mass flow rates along the length of the tunnel at a specific time frame (50 and 250 seconds) and 
-the mass flow rates in and out of the tunnel.  As shown in FIgure 7, the results show the mass flow along the tunnel for the multi-scale
+the mass flow rates in and out of the tunnel.  As shown in Figure 6, the results show the mass flow along the tunnel for the multi-scale
 model is either under or over-predicted.  Furthermore, the results show for the full CFD models,
 the mass flow reached a steady state whereas the mass flow for the multi-scale model
 continues to either increase or decrease overtime.  
 
-~ Figure { #fig-figure; caption:"Mass Flow Rates for 35 MW< 55 MW and 75 MW fire.  "}
+~ Figure { #fig-figure; caption:"Mass Flow Rates for 35 MW, 55 MW and 75 MW fire.  "}
 ![fig1_75mw1]
 ![fig1_75mw]
 ![fig1_55mw1]
@@ -243,30 +239,15 @@ continues to either increase or decrease overtime.
 
 [fig1_35mw]: images/fig1_35mw.png "fig1_35mw" { width:auto; max-width:48% }
 ~
-
-In an attempt to investigate whether the mass flow reaches a steady state, we modelled 
-an additional two scenarios, i.e. 35 MW fire with 7 and 14 jet fans with extended run time.
-Figure 8 shows the results where even at 1,000 seconds, the mass flow continues to increase for the 
-7 jet fans pairs model.  Although the explanation for the inconsistent mass flow rates
-cannot be determined at this juncture, it is at least clear this phenomenon is unique to the multi-scale
-model given the full CFD models did not exhibit such a behaviour.  A plausible explanation for this is the relatively simplistic 
-implementation of the HVAC function in FDS6.1.
-
-~ Figure { #fig-figure; caption:"Mass Flow in Tunnel Over Time for a 35 MW Fire with 7 and 14 Jet Fans Pairs"}
-![fig1_fig2]
-![fig1_fig1]
-
-[fig1_fig2]: images/fig1_fig2.png "fig1_fig2" { width:auto; max-width:48% }
-
-[fig1_fig1]: images/fig1_fig1.png "fig1_fig1" { width:auto; max-width:48% }
-
-~
-
-
 Since the work carried out in this research, we understand there has been development and
 improvement made in the implementation of the HVAC models.  It is worth re-assessing the issue
 of the inconsistent mass flow rates in the tunnel. Because of this yet to be explained phenomenon, 
-we have not assessed the computational time of the multi-scale and full CFD methods.  
+we have not assessed the computational time of the multi-scale and full CFD methods. 
+
+Separately, we observed as per Figure 7 the mass flow rates over time fluctuate with a consistent 
+wavelength and freqneucy. A similar observation has also been made separately by Vermesi et al. The 
+question on whether this fluctuation is a numerical or physical phenomenon is currently unanswered
+and requires further work.  
 
 # CONCLUSION AND RECOMMENDATIONS
 We have shown in this work for cold flow modelling, it is possible to implement a multi-scale
