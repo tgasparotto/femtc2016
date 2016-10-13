@@ -88,27 +88,36 @@ are traditionally oriented and utilized. Detailed model-specific reviews
 may be found in the literature [find
 reference]{ background-color=yellow }.
 
-in particular, the focus on exiting as the primary end goal of the analysis and each occupant
-often, some level of omniscience is presumed. (a subset of exits may be known, but open/closed conditions, potential paths and directions, etc are known)
+Traditionally, people movement models are used to perform evacuation studies in the event of a fire or other emergency. Typically, such an analysis would include building the geometry of the building or area in question, populating the model with occupants that are given a set of characteristics (e.g., speed, delay time), and running the model to determine the time required to evacuate the building or space in question. Upon running the model, occupants wait a specified pre-evacuation time, and then move from their initial positions towards the nearest or their assigned exit, potentially going to pre-assigned locations along the way. Though the implementation and level of detail varies from model to model, the end goal of the analysis, and the occupants themselves in agent-based models, is to exit. 
+
+Generally, the constraints placed on movement of occupants reflect the objective to egress. For example, a model may include the ability to specify a subset of exits that are available or known to an occupant or group of occupants but not interior doors. Generally, the limitations of the models are such that occupants are presumed to have some level of omniscience as to the paths that are available to them, the total distance of each potential path, and the state of key elements throughout the building (e.g., whether a door is open or closed). While knowledge of the paths and relative distances involved will vary with the occupants' familiarity with the building, in a real-world scenario, occupants will not be aware that an exit path is blocked or closed unless notified. It is possible to show the effects of redirecting occupants by assigning occupants to go to "dead end" locations before going to an available exit, but this process can be somewhat labor-intensive.
 
 # NEW USES
+As the state of the art in people movement modeling continues to evolve, many new uses of the models will be developed and identified. This may be driven by the developers in an effort to improve their models or by the modeling community and their clients as new areas of interest are identified. This section focuses on several new and developing uses for traditional egress models, but is by no means intended to be exhaustive.
 
 ## Ingress and Security
 Models that have been developed for traditional egress evaluations are
-increasingly being used to analyze ingress into a building or facility. In particular, buildings with security or other entrance procedures (e.g., ticketing) may incur significant delays, especially at peak times, if the building and entrance procedures are inefficiently designed. People movement models can be used to model the ingress of a building in order to provide insights into how to optimize ingress or to evaluate proposed changes to the entrance equipment or procedures.
+increasingly being used to analyze ingress into a building or facility. In particular, buildings with security or other entrance procedures (e.g., ticketing) may incur significant delays, especially at peak times, if the building and entrance procedures are inefficiently designed. People movement models can be used to model the ingress of a building in order to provide insights into how to optimize ingress or to evaluate proposed changes to the entrance equipment or procedures. 
 
-Many of the features and the underlying theory needed to model ingress have already been incorporated into existing people movement models designed primarily for egress. The flow and potential queuing around a door or other checkpoint is not significantly altered by the direction of movement (exceptions of door swing, etc., aside). Some models currently incorporate features such as turnstiles or ticket gates that allow the engineer to specify a flow-rate or a fixed delay time for each person to pass through. However, even in those models that do not, it is generally possible to use the existing features to simulate such behavior.
+Depending on the scope and objectives of the analysis, ingress/security studies may be structured to provide valuable information on the performance of the ingress or security. Some examples of outcomes of past studies include:
+  
 
-direction of movement works; security - slows down; optimize building operations
-mfg data will tell you that there is basically no slowdown of turnstiles
-result: max rate of arrival, identify limiting factors, assess changes
+* Determination of the maximum rate of arrival that may be sustained
+  without significant congestion
+* Identification of limiting factors affect ingress (e.g., screening equipment throughput, elevator capacity, arrival rates)
+* Assessment of alternate approaches or arrangements
 
-elevator/ingress study by haavard (non-emergency elevators that discharge on more than one floor)
-steve's security stuff
-how long to get INTO a building. backups, peak times, etc
-importance of good data, not average or mfg provided (ref steve)
-image from steve report?
-end goal is not an exit!
+One such study involved an assessment of ingress in the elevator lobby of a high rise building. After entering the lobby, occupants pass through turnstiles that require a badge scan, and then proceed to wait for the nearby elevators. A Pathfinder model was built of the lobby to assess the level of congestion in the lobby. The primary variables studied were arrival rate of persons at the exterior door to the building, throughput rate of the turnstiles, and capacity and speed of the elevators. Figure [#fig-ElevIngress] shows an example of a typical result, in which queuing for the elevator has caused congestion to back up into the turnstiles. Ultimately, the study determined that with the existing anticipated building occupancy and arrival rates that the ingress design was adequate, but would be improved by a relocation of the turnstiles to allow more room near the elevators.
+
+~ Figure { #fig-ElevIngress; caption:"Pathfinder simulation of crowding near elevator and into turnstiles"}
+![elev]
+~
+[elev]: images/elev.png "elev" { width:auto; max-width:90% }
+
+While the above example represents a relatively simple ingress arrangement, detailed studies of factors affecting ingress, and their application to ingress modeling have been performed. One such study [@Strege:PED2014] examined more closely the effects of security screening and variations in arrival rate on congestion in an ingress scenario. The manufacturer of the security equipment, which consisted of revolving doors with a card scanner, had specified a throughput rate that was found through field testing to be achievable only in ideal conditions. In practice, a percentage of users would have their cards misread or have the revolving doors "kickback" to prevent piggy-backing behavior, resulting in a lower effective flow rate. Additionally, capturing "bursts" and "lulls" in arrival rates was found to be critical for predicting occupant congestion. Assuming a constant, average occupant ingress rate resulted in overly optimistic results and did not predict periods of occupant congestion that were observed in the field during population bursts. The findings of this study demonstrate that in real-world applications the dynamics of building entry can be complicated and using an over-simplified approach may result in grossly under predicting congestion levels and wait times.
+
+Many of the features and the underlying theory needed to model ingress have already been incorporated into existing people movement models designed primarily for egress. The flow and potential queuing around a door or other checkpoint is not significantly altered by the direction of movement (exceptions of door swing, etc., aside). Some models currently incorporate features such as turnstiles or ticket gates that allow the modeler to specify a flow-rate or a fixed delay time for each person to pass through. However, even in those models that do not, it is generally possible to use the existing features to simulate such behavior. Similarly, some models provide a way to directly specify a source term for occupants entering the simulation, while in others the desired flow rate must be achieved using metered doors and "holding rooms". Lastly, in some cases, the end goal of reaching an exit that is a basic tenet of models originally built for egress may provide some unique challenges when occupant flow is reversed to model ingress. Depending upon the desired final location or task of an ingressing occupant, it may be possible to create artificial exits in order to achieve the desired movement within the building.
+
 
 ## Dynamic Signage and Wayfinding
 
@@ -127,6 +136,9 @@ Studies on the Effectiveness of Dynamic Signage Systems,” Fire Safety
 Science 11(2014): 1129–1143, doi:10.3801/IAFSS.FSS.11-1129.
 
 ## Complex Tasks and Carrying
+
+replace with internal relocation/assembly areas? see capacity of relocation sites, cross-flow, etc
+could be incorporated with circulation/daily use? 
 
 hospital, wheelchair, families, luggage
 adds complexity, creates potential cross flow
