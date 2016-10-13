@@ -71,7 +71,7 @@ empirical distribution function.
 
 ~ Center
 ![fig3_1]
-[fig3_1]: images/fig3_1.PNG "fig3_1" { width:auto; max-width:55%}
+[fig3_1]: images/fig3_1.PNG "fig3_1" { width:auto; max-width:55%; border:solid 1px black}
 ~
 
 
@@ -111,7 +111,7 @@ Reminder :
 ~
 ~ Column
 ![fig4_1]
-[fig4_1]: images/fig4_1.PNG "fig4_1" { width:auto; max-width:60%}
+[fig4_1]: images/fig4_1.PNG "fig4_1" { width:auto; max-width:60%; border:solid 1px black}
 ~
 ~ End Columns
 
@@ -119,7 +119,7 @@ Reminder :
 
 ~ Center
 ![fig4_2]
-[fig4_2]: images/fig4_2.PNG "fig4_2" { width:auto; max-width:70%}
+[fig4_2]: images/fig4_2.PNG "fig4_2" { width:auto; max-width:70%; border:solid 1px black}
 ~
 
 ## Behavioral hypothesis
@@ -157,13 +157,13 @@ Occupants are randomly positioned in the room and drawn between 1 and 1,000.
 100 draws
 
 ![fig5_1]
-[fig5_1]: images/fig5_1.PNG "fig5_1" { width:auto; max-width:90%}
+[fig5_1]: images/fig5_1.PNG "fig5_1" { width:auto; max-width:80%; border:solid 1px black}
 ~
 ~ Column
 1,000 draws
 
 ![fig5_2]
-[fig5_2]: images/fig5_2.PNG "fig5_2" { width:auto; max-width:101%}
+[fig5_2]: images/fig5_2.PNG "fig5_2" { width:auto; max-width:80%; border:solid 1px black}
 ~
 ~ End Columns
 
@@ -189,7 +189,7 @@ The confidence interval decreases with the increase of the number of draws.
 
 ~ Center
 ![fig5_3]
-[fig5_3]: images/fig5_3.PNG "fig5_3" { width:auto; max-width:60%}
+[fig5_3]: images/fig5_3.PNG "fig5_3" { width:auto; max-width:60%; border:solid 1px black}
 ~
 
 ## Observations (3)
@@ -197,16 +197,16 @@ There are at least 3 separate evacuation schemes according to the number of occu
 
 ~ Center
 ![fig_tab3]
-[fig_tab3]: images/fig_tab3.PNG "fig_tab3" { width:auto; max-width:50%}
+[fig_tab3]: images/fig_tab3.PNG "fig_tab3" { width:auto; max-width:50%; border:solid 1px black}
 ~
 ~ Begin Columns
 ~ Column { width:50% }
 ![fig5_2]
-[fig5_2]: images/fig5_2.PNG "fig5_2" { width:auto; max-width:80%}
+[fig5_2]: images/fig5_2.PNG "fig5_2" { width:auto; max-width:80%; border:solid 1px black}
 ~
 ~ Column
 ![fig5_4]
-[fig5_4]: images/fig5_4.PNG "fig5_4" { width:auto; max-width:85%}
+[fig5_4]: images/fig5_4.PNG "fig5_4" { width:auto; max-width:85%; border:solid 1px black}
 
 ~
 ~ End Columns
@@ -229,12 +229,12 @@ Parameters tested : conflict resolution time, position of the occupants and resp
 
 ~ Center
 ![fig_tab4]
-[fig_tab4]: images/fig_tab4.PNG "fig_tab4" { width:auto; max-width:55%}
+[fig_tab4]: images/fig_tab4.PNG "fig_tab4" { width:auto; max-width:55%; border:solid 1px black}
 ~
 3 schemes to free from influence of occupant density.
 ~ Center
 ![fig_tab5]
-[fig_tab5]: images/fig_tab5.PNG "fig_tab5" { width:auto; max-width:55%}
+[fig_tab5]: images/fig_tab5.PNG "fig_tab5" { width:auto; max-width:55%; border:solid 1px black}
 ~
 
 
@@ -246,7 +246,7 @@ The empirical distribution function is not linear.
 
 ~ Center
 ![fig6_3]
-[fig6_3]: images/fig6_3.PNG "fig6_3" { width:auto; max-width:50%}
+[fig6_3]: images/fig6_3.PNG "fig6_3" { width:auto; max-width:50%; border:solid 1px black}
 ~
 
 
@@ -281,13 +281,13 @@ Reminder :
 Conflict resolution time, position, RT fixed. 
 
 ~ Begin Columns
-~ Column { width:50% }
+~ Column { width:55% }
 ![fig6_5]
-[fig6_5]: images/fig6_5.PNG "fig6_5" { width:auto; max-width:85%}
+[fig6_5]: images/fig6_5.PNG "fig6_5" { width:auto; max-width:85%; border:solid 1px black}
 ~
 ~ Column
 ![fig_tab7]
-[fig_tab7]: images/fig_tab7.PNG "fig_tab7" { width:auto; max-width:100%}
+[fig_tab7]: images/fig_tab7.PNG "fig_tab7" { width:auto; max-width:100%; border:solid 1px black}
 ~
 ~ End Columns
 
@@ -302,13 +302,13 @@ Conflict resolution time, position, RT fixed.
 Reminder : 
 Conflict resolution time and position vary, RT is fixed.
 ~ Begin Columns
-~ Column { width:50% }
+~ Column { width:55% }
 ![fig6_6]
-[fig6_6]: images/fig6_6.PNG "fig6_6" { width:auto; max-width:85%}
+[fig6_6]: images/fig6_6.PNG "fig6_6" { width:auto; max-width:85%; border:solid 1px black}
 ~
 ~ Column
 ![fig_tab8]
-[fig_tab8]: images/fig_tab8.PNG "fig_tab8" { width:auto; max-width:100%}
+[fig_tab8]: images/fig_tab8.PNG "fig_tab8" { width:auto; max-width:100%; border:solid 1px black}
 ~
 ~ End Columns
 &rarr; Position has more influence on low and average densities.
@@ -321,11 +321,11 @@ Resolution conflict time, position and RT vary.
 ~ Begin Columns
 ~ Column { width:50% }
 ![fig6_7]
-[fig6_7]: images/fig6_7.PNG "fig6_7" { width:auto; max-width:100%}
+[fig6_7]: images/fig6_7.PNG "fig6_7" { width:auto; max-width:100%; border:solid 1px black}
 ~
 ~ Column
 ![fig_tab9]
-[fig_tab9]: images/fig_tab9.PNG "fig_tab9" { width:auto; max-width:100%}
+[fig_tab9]: images/fig_tab9.PNG "fig_tab9" { width:auto; max-width:100%; border:solid 1px black}
 ~
 ~ End Columns
 
@@ -343,7 +343,7 @@ Resolution conflict time, position and RT vary.
 
 ~ center
 ![fig_tab10]
-[fig_tab10]: images/fig_tab10.PNG "fig_tab10" { width:auto; max-width:75%}
+[fig_tab10]: images/fig_tab10.PNG "fig_tab10" { width:auto; max-width:70%; border:solid 1px black}
 ~
 
 Advantage of the method:
