@@ -171,16 +171,17 @@ have agents going over seats or surpassing other pedestrians.
 
 [CdM_Sala1PF1]: images/CdM_Sala1PF1.png "CdM_Sala1PF1" { width:auto; max-width:90% }
 
-
 ~ Figure { #figCdM_sala1PF2; caption:"Sala Suggia Pathfinder model during simulation process"}
 ![CdM_Sala1PF2]
 ~
 
-Figure [#figcdm_sala1pf2] shows a snapshot of the simulation process, having only the 
+
+[CdM_Sala1PF2]: images/CdM_Sala1PF2.png "CdM_Sala1PF2" { width:auto; max-width:90% }
+
+Figure [#figCcdM_sala1PF2] shows a snapshot of the simulation process, having only the 
 usual 4 exits, left and right, and the rear emergency exits closed (red rectangule).
 This represents the layout used to collect data shown at table [#table1].
 
-[CdM_Sala1PF2]: images/CdM_Sala1PF2.png "CdM_Sala1PF2" { width:auto; max-width:90% }
 
 ## Casa da Música: Sala 2
 
