@@ -94,6 +94,15 @@ often, some level of omniscience is presumed. (a subset of exits may be known, b
 # NEW USES
 
 ## Ingress and Security
+Models that have been developed for traditional egress evaluations are
+increasingly being used to analyze ingress into a building or facility. In particular, buildings with security or other entrance procedures (e.g., ticketing) may incur significant delays, especially at peak times, if the building and entrance procedures are inefficiently designed. People movement models can be used to model the ingress of a building in order to provide insights into how to optimize ingress or to evaluate proposed changes to the entrance equipment or procedures.
+
+Many of the features and the underlying theory needed to model ingress have already been incorporated into existing people movement models designed primarily for egress. The flow and potential queuing around a door or other checkpoint is not significantly altered by the direction of movement (exceptions of door swing, etc., aside). Some models currently incorporate features such as turnstiles or ticket gates that allow the engineer to specify a flow-rate or a fixed delay time for each person to pass through. However, even in those models that do not, it is generally possible to use the existing features to simulate such behavior.
+
+direction of movement works; security - slows down; optimize building operations
+mfg data will tell you that there is basically no slowdown of turnstiles
+result: max rate of arrival, identify limiting factors, assess changes
+
 elevator/ingress study by haavard (non-emergency elevators that discharge on more than one floor)
 steve's security stuff
 how long to get INTO a building. backups, peak times, etc
@@ -111,6 +120,7 @@ way for targets/paths to change dynamically in response to inputs (e.g.,
 dynamic signage, police redirection)
 modeling: is there a way to make occupants not omniscient (i.e., know of an exit but not that it's closed)
 modeling; interior exit knowledge/familiarity (i.e. GoTo interior doors)
+useful as a tool to help guide which exits the system should have people use
 
 E. R. Galea, H. Xie, and P. J. Lawrence, P.J., “Experimental and Survey
 Studies on the Effectiveness of Dynamic Signage Systems,” Fire Safety
