@@ -128,6 +128,18 @@ The definition of the initial temperature by means of the adiabatic temperatures
 
 ~ End Figure
 
+To model needs a previously mention factor, the radiation. The higher the combustion efficiency, the lower the flame radiation fraction, since less soot is produced and the flame becomes transparent. However a small heat fraction is still as radiation released. 
+The fraction of heat released as convective heat, can be calculated using the partial pressures of CO~2~ and water vapour in the products. Using the chemical balance, see above Equation [#propan-combustion], the molar quantities are calculated and these values correspond to the partial pressures (surrounding pressure, ambient pressure, 1 atm):
+
+
+* CO~2~: _p ~C02~_  --> 3 / (3 + 4 + 18.8 ) --> 0.116 atm
+* Water vapour: _p ~H20~_  --> 4 / (3 + 4 + 18.8 ) --> 0.155 atm
+
+~ Equation {#Radiation; caption:"Radiation calculation"}
+R = 1.7 \cdot 10^{-6} (p_{CO_{2}}+p_{H_{2}0}) \cdot T^{2} = 0.978
+~
+The remaining fraction, around 2%, is the radiative fraction. This result is important both for the computer models implemented to study the system and to estimate the equivalent natural fire that the burner represents.
+
 # Model validation
 
 Two validation process were carried out: the validation of the plume model and the validation of the geometry for full scale test.
