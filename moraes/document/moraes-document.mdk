@@ -97,7 +97,7 @@ semicircle and a red and yellow lines.
 ~ Figure { #fig-ginasio; caption:"Egress experiment scheme."}
 ![esquemaExperimento_02]
 ~
-[esquemaExperimento_02]: images/esquemaExperimento_02.png "esquemaExperimento_02" { width:auto; max-width:90% }
+[esquemaExperimento_02]: images/esquemaExperimento_02.png "esquemaExperimento_02" { width:auto; max-width:100% }
 
 During the experiments there were no visibility restriction or lack of fresh air, 
 participants were quite homogeneous concerning mobility and decision-making skills, 
@@ -109,7 +109,7 @@ during the experiment.
 ~ Figure { #3CAM; caption:"Simultaneous snapshots taken during experiment."}
 ![snapshot3CAM]
 ~
-[snapshot3CAM]: images/snapshot3CAM.png "snapshot3CAM" { width:auto; max-width:90% }
+[snapshot3CAM]: images/snapshot3CAM.png "snapshot3CAM" { width:auto; max-width:100% }
 
 
 ## Simulation { #sec-sim}
@@ -144,7 +144,7 @@ wall. The more people push towards the arch, the more it compacts itself.
 ~ Figure { #arch; caption:"Snapshot highlighting the arch."}
 ![arch]
 ~
-[arch]: images/blockage02.png "blockage02" { width:auto; max-width:90% }
+[arch]: images/blockage02.png "blockage02" { width:auto; max-width:100% }
 
 One of the consequences of the arches is that the individual closest to the wall
 can be impresioned there. It was observed that an individual 
@@ -159,6 +159,7 @@ individuals (first V2 filmed position as a dot and final crossing the door)
 [turbulencia]: images/turbulencia.png "turbulencia" { width:auto; max-width:100% }
 
 ## Quantitative Results { #sec-quanti}
+
 In a coordinated egress, that means people walking in an ordered queue flow, through each
 0.55m of the door's width will pass 100 individuals per minute [@NBR9077],[@in09]. That means, 
 egress flow is controlled by door's size. For example, where there are 100, they
@@ -168,21 +169,21 @@ blow with linearities. Table [#tab-tempo] presents the egress time and mean egre
 two condition: a) uncoordinated egress experiments and; b) coordinated egress as expected
 following the Normative Instruction 09 [@IN09].
 
-~ TableFigure { #tab-tempo; caption: "Egress time against population"; .wide }
+~ TableFigure { #tab-tempo; caption: "Egress time and average flow from experiments and IN 09's estimative"; .wide }
 
-|            |experiment            || IN 09               |||
-|            | uncoordinated egress || coordinated egress  |||
-|:----------:|:---------:|:---------:|:-----:|:------------:||
-| initial    | time      | mean flow | time  | mean flow    ||
-| population | s         | s^-1^     |s      | s^-1^        ||
-|------------|-----------|-----------|-------|--------------||
-|35          | 6.5       | 5.38      | 10.50 | 3,33         ||
-|70          | 17.4      | 4.03      | 21.00 | 3,33         ||
-|105         | 27.0      | 3.88      | 31.50 | 3,33         ||
-|140         | 36.8      | 3.80      |42.00  | 3,33         ||
-|175         | 47.1      | 3.72      |52.50  | 3,33         ||
-|210         | 65.7      | 3.20      |63.00  | 3,33         ||
-|280         | 84.9      | 3.30      |84.00  | 3,33         ||
+|            |experiment            || IN 09               ||
+|            | uncoordinated egress || coordinated egress  ||
+|:----------:|:---------:|:---------:|:-----:|:------------:|
+| initial    | time      | mean flow | time  | mean flow    |
+| population | s         | s^-1^     |s      | s^-1^        |
+|------------|-----------|-----------|-------|--------------|
+|35          | 6.5       | 5.38      | 10.50 | 3,33         |
+|70          | 17.4      | 4.03      | 21.00 | 3,33         |
+|105         | 27.0      | 3.88      | 31.50 | 3,33         |
+|140         | 36.8      | 3.80      |42.00  | 3,33         |
+|175         | 47.1      | 3.72      |52.50  | 3,33         |
+|210         | 65.7      | 3.20      |63.00  | 3,33         |
+|280         | 84.9      | 3.30      |84.00  | 3,33         |
 |------------|-----------|--------------------------------||||
 ~
 
@@ -197,22 +198,21 @@ egress for the experiments up to crowd's density of 2.5 (175 individuals).
 To compare graphically all the experiments, Figure [#graf-all_Exp] presents
 the egress time against the nth individual for all initial crowd's density, excepting 
 4.0 (280 individuals).
-
-~ Figure { #graf-all_Exp; caption: "Egress time for the first 35 individuals over several crowd initial density [person/m²]."}
+~ Figure { #graf-all_Exp; caption: "Egress time for the first 35 over several crowd initial density [individuals/m²]."}
 ![all_Exp]
 ~
-[all_Exp]: images/all_Exp.png "all_Exp" { width:auto; max-width:90% }
+[all_Exp]: images/all_Exp.png "all_Exp" { width:auto; max-width:100% }
 
 The dark blue curve (crowd's density of 0.5, or 35 individuals) has a quite constant slope, 
 meaning no no blockages, almost a coordinated egress. The light blue curve, presents a sharp 
 slope at the 29th individual escape, which is the mathematical representation of a door
 blockage. Another way to see the blockages is through the time's void between two
 individual's exit, which is presented in Figure [#graf-210].
-
 ~ Figure { #graf-210; caption: "Time void between egresses for 210 individuals experiment."}
 ![210_void]
 ~
 [210_void]: images/210_void.png "210_void" { width:auto; max-width:100% }
+
 
 
 There are eight peaks over one second in Figure [#graf-210], that means, during the
@@ -226,23 +226,15 @@ more than 3.5 seconds.
 
 ## Verifying Simulation Model  
 
-Figure [#fig-expsim35], [#fig-expsim105] and [#fig-expsim210] presents the comparison between experiment
+Figures [#fig-expsim35] and [#fig-expsim210] presents the comparison between experiment
 and simulation. The egress time is slightly lower at simulation, but the curve slope is quite the same.
 
-
-~ Figure { #fig-expSim35; caption: "Experimental against Simulation results: 35 individuals."}
+~ Figure { #fig-expSim35; caption: "Experiment against simulation: 35 individuals egressed."}
 ![exp_sim_35]
 ~
 [exp_sim_35]: images/exp_sim_35.png "exp_sim_35" { width:auto; max-width:100% }
 
-
-~ Figure { #fig-expSim105; caption: "Experimental against Simulation results: 105 individuals."}
-![exp_sim_105]
-~
-[exp_sim_105]: images/exp_sim_105.png "exp_sim_105" { width:auto; max-width:100% }
-
-
-~ Figure { #fig-expSim210; caption: "Experimental against Simulation: 210 individuals."}
+~ Figure { #fig-expSim210; caption: "Experiment against simulation: 210 individuals egressed."}
 ![exp_sim_210]
 ~
 [exp_sim_210]: images/exp_sim_210.png "exp_sim_210" { width:auto; max-width:100% }
@@ -266,7 +258,7 @@ Figure [#fig-all_sim] presents the simulation's results for a nightclub with 123
 individuals. The egress time for a simulation of a nightclub like Kiss with 2 doors
 is double faster than the expected by IN 09, showing that its recommendations are 
 quite safe. Furthermore, adding a third door reduced the egress time in 28% in simulations.
-~ Figure { #fig-all_sim; caption: "Experimental against Simulation: 210 individuals."}
+~ Figure { #fig-all_sim; caption: "Experiment against simulation: 210 individuals egressed."}
 ![all_sim]
 ~
 [all_sim]: images/all_sim.png "all_sim" { width:auto; max-width:100% }
