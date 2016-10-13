@@ -178,10 +178,10 @@ It is impossible to determine statistically a RSET maximum.
 
 In any case, a RSET max is bound to a catastrophic scenario.
 
-&rarr; It seems preferable to retain the associated RSET 95th percentile.
+&rarr; It seems preferable to retain the associated RSET 95^th^ percentile.
 
 ~ Align-Left
-* The value of 95th percentile is arbitrary.
+* The value of 95^th^ percentile is arbitrary.
 ~
 
 ## Observations (2)
@@ -267,11 +267,11 @@ Notations used to make quantitative comparisons:
 
 ~ Align-Left
 
-* I~p95%~ the confidence interval of the 95th percentile.
-* L~Ip95%~ the width of the confidence interval of the 95th percentile.
-* I~p5%-95%~ the interval between the lower bound of the 5th percentile and the upper bound of the 95th percentile.
+* I~p95%~ the confidence interval of the 95^th^ percentile.
+* L~Ip95%~ the width of the confidence interval of the 95^th^ percentile.
+* I~p5%-95%~ the interval between the lower bound of the 5th percentile and the upper bound of the 95^th^ percentile.
 * L~Ip5%-95%~ the width of the last one.
-* L~Ip5%-95%~/q~50%~ the ratio between the last interval and the 50th percentile.
+* L~Ip5%-95%~/q~50%~ the ratio between the last interval and the 50^th^ percentile.
 ~
 
 
