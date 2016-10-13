@@ -196,6 +196,8 @@ with the value of 0.33 for well-ventilated heptane fires as found in.
 ~
 [Figure3]: images/Figure3.png "Figure3" { width:auto; max-width:96% }
 
+[Figure3]: images/Figure3.png "Figure3" { width:auto; max-width:90% }
+
 ## Measurement devices
 The devices used in the FDS simulations along with their positions are seen in Figure 4. The default thermocouples in FDS were used as a basis, which is a nickel-based 
 thermocouple with specific heat of 0.44 kJ/KgK, density of 8908 kg/m3 and emissivity of 0.85. However, to match the sheathed type K thermocouples in the actual fire 
@@ -591,7 +593,7 @@ separated references, for example:
 ``` Markdown 
 Read about LaTeX and TeX [@Knuth:TeX; @Lamport:LaTeX].
 ```
-Results in: Read about LaTeX and TeX [@Knuth:TeX; @Lamport:LaTeX].
+Results in: Read about LaTeX and TeX.
 
 Please include full title of journal articles or other references,
 journal, volume, date, pages. There is a nice [table on
