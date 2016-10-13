@@ -93,7 +93,7 @@ foundation for the validation study. In the lower pictures of Figure [#figure1] 
 ~ Figure { #Figure1; caption:"Upper - Illustration of the dimensions of the modified SP FIRE 105 facade test rig and the instrumentation consisting of six Inconel steel plate thermometers (C21-C26) and six sheathed type K thermocouples (C27-C32). Lower - Pictures showing the fire development during the reference test at different split times."}
 ![Figure1]
 ~
-[Figure1]: images/Figure1.png "Figure1" { width:auto; max-width:99% }
+[Figure1]: images/Figure1.jpg "Figure1" { width:auto; max-width:99% }
 
 ## Arrangement, instrumentation and measurements in the reference test
 The thermal exposure was estimated at the panel surface with six Inconel steel plates with wire thermocouples spot-welded on their backside, fastened flush with the surface. 
@@ -149,9 +149,9 @@ The model in FDS was built up using building materials corresponding to the test
 Figure [#figure2].
 
 ~ Figure { #Figure2; caption:"Pictures illustrating the geometry used in FDS from different angles."}
-![Bild2]
+![Figure2]
 ~
-[Bild2]: images/Bild2.png "Bild2" { width:auto; max-width:100% }
+[Figure2]: images/Figure2.jpg "Figure2" { width:auto; max-width:100% }
 
 The different grid sizes used in FDS are presented in Table [#table1]. The main model was built up by a single mesh in order to avoid high speed flow at mesh alignments, 
 which in turn can affect the results of the simulation. A sensitivity analysis was later conducted covering the potential influence on results of different mesh 
@@ -218,7 +218,7 @@ incident heat flux results to the reference test. The procedure for doing this i
 ~ Figure { #Figure4; caption:"Picture illustrating the device positions in FDS. Left - The front of the test rig along with the six plate thermometers. Middle - Close-up of each thermometer position and other devices used. Right - Same as the middle picture but in 3D."}
 ![Figure4]
 ~
-[Figure4]: images/Figure4.png "Figure4" { width:auto; max-width:100% } 
+[Figure4]: images/Figure4.jpg "Figure4" { width:auto; max-width:100% }
 
 ##Extracting incident radiative heat flux results in FDS
 Since there are no device that directly produce the same form of heat flux in FDS as computed from the reference test described above ($\dot{q}^{\prime\prime}_{IRHF}$), 
@@ -345,7 +345,7 @@ that were studied are shown as purple lines in Figure [#figure13].
 ~ Figure { #Figure13; caption:"Pictures from Smokeview illustrating the different mesh intersections of the computational domain used in the sensitivity analysis. Note that none of the mesh intersections goes through the burner."}
 ![Figure13]
 ~
-[Figure13]: images/Figure13.png "Figure13" { width:auto; max-width:100% }
+[Figure13]: images/Figure13.jpg "Figure13" { width:auto; max-width:100% }
 
 Minor discrepancies were found for the 3 meshes and 2 meshes-configurations compared with the single mesh simulation in regards to temperature and radiation outputs. 
 The 3 meshes configuration results in slightly higher values of all output data compared with the single mesh simulation. Larger discrepancies were found for the 
