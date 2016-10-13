@@ -46,7 +46,7 @@ The background to this work lies in the results of an MSc thesis [@NilssonM] con
 fire spread using the numerical tool FDS 6.2.0 [@FDSUser]. As part of the thesis and to avoid the above-mentioned risks, a validation study was performed on FDS as calculation tool 
 or modelling external fire spread. In the validation study, experimental data from a large-scale fire test [@Evegren] on a SP FIRE 105 test rig [@SpFire105] in Borås, Sweden were used. 
 This particular setup were chosen since the geometry is closely linked to the setup used in the following part of the thesis as well since previous numerical work on this 
-particular test has been carried out on FDS 5.5.3 [@Anderson:1; @Anderson:2]. 
+particular test has been carried out on FDS 5.5.3 [@Anderson:1; @Anderson:2].
 
 The previous validation study showed promising result, but as FDS progresses and new versions are released, updated validation studies are necessary. 
 It is crucial to frequently validate and highlight changes done in the FDS code. Relying on old, or in worst case none, validation studies could result in irreparable damages. 
@@ -195,8 +195,6 @@ with the value of 0.33 for well-ventilated heptane fires as found in [@SFPE].
 ~ Figure { #Figure3; caption:"Left - Actual HRR story of the reference test. Right - HRR in FDS for the 5 cm grid simulation."}
 ![Figure3]
 ~
-[Figure3]: images/Figure3.png "Figure3" { width:auto; max-width:96% }
-
 [Figure3]: images/Figure3.png "Figure3" { width:auto; max-width:90% }
 
 ## Measurement devices
@@ -345,7 +343,7 @@ that were studied are shown as purple lines in Figure [#figure13].
 ~ Figure { #Figure13; caption:"Pictures from Smokeview illustrating the different mesh intersections of the computational domain used in the sensitivity analysis. Note that none of the mesh intersections goes through the burner."}
 ![Figure13]
 ~
-[Figure13]: images/Figure13.jpg "Figure13" { width:auto; max-width:100% }
+[Figure13]: images/Figure13.JPG "Figure13" { width:auto; max-width:100% }
 
 Minor discrepancies were found for the 3 meshes and 2 meshes-configurations compared with the single mesh simulation in regards to temperature and radiation outputs. 
 The 3 meshes configuration results in slightly higher values of all output data compared with the single mesh simulation. Larger discrepancies were found for the 
