@@ -43,7 +43,7 @@ on completely different geometries or setups than the intended or in situations 
 results and can render previous validation studies invalid.
 
 The background to this work lies in the results of an MSc thesis [@NilssonM] conducted at Lund University, Sweden, investigating the impact of horizontal projections on external
-fire spread using the numerical tool FDS 6.2.0. As part of the thesis and to avoid the above-mentioned risks, a validation study was performed on FDS as calculation tool 
+fire spread using the numerical tool FDS 6.2.0 [@FDSUser]. As part of the thesis and to avoid the above-mentioned risks, a validation study was performed on FDS as calculation tool 
 or modelling external fire spread. In the validation study, experimental data from a large-scale fire test [@Evegren] on a SP FIRE 105 test rig [@SpFire105] in Borås, Sweden were used. 
 This particular setup were chosen since the geometry is closely linked to the setup used in the following part of the thesis as well since previous numerical work on this 
 particular test has been carried out on FDS 5.5.3 [@Anderson:1; @Anderson:2]. 
@@ -54,18 +54,18 @@ Hence validation of changes made in FDS is essential, especially in areas where 
 
 Two major changes in FDS 6.2.0 compared to FDS 5.5.3 is that the former version use constant Smagorinsky model to model turbulence viscosity while the latter use Deardorff’s 
 model as well as a new scalar transport scheme are implemented in FDS 6.2.0. A major downside with the constant Smagorinsky model in FDS 5.5.3 is that it is too dissipative, 
-meaning a fine grid size is needed in order to attain accurate results. The Deardorff model on the other hand are said to perform at both coarse and fine grid resolutions. 
+meaning a fine grid size is needed in order to attain accurate results. The Deardorff model on the other hand are said to perform at both coarse and fine grid resolutions [@FDSGoogle]. 
 The changes in the turbulence viscosity model and the scalar transport scheme is closely linked to the dynamics of the fire, which of course are important even when studying 
 external fire spread, and therefore an embryo to a new validation study was born.
 
 # METHODOLOGY
-In this paper the aim is to describe the validation study done in the MSc thesis mentioned above and its results. The approach of the validation study was first to
+In this paper the aim is to describe the validation study done in the MSc thesis mentioned above [@NilssonM] and its results. The approach of the validation study was first to
 determine and extract essential experimental data from the selected large-scale fire test on the SP FIRE 105 test rig in Borås, Sweden. The large-scale fire test was
 thereafter simulated in FDS 6.2.0 in order to validate the new version of the CFD-software against the setup. 
 
 Several simulations was performed in FDS including sensitivity analysis covering the influence of different grid sizes, different mesh alignments, alternate positions 
 of thermocouple devices, the choice of radiation angles, Heat Release Rate Per Unit Area (HRRPUA) as well as the choice of soot yield. The results obtained were then 
-compared to those from the experimental test rig. Further, the key results were compared against the results from the previous validation study on FDS 5.5.3. 
+compared to those from the experimental test rig. Further, the key results were compared against the results from the previous validation study on FDS 5.5.3 [@Anderson:1]. 
 
 # EXPERIMENTAL SETUP
 ## SP FIRE 105 test rig
@@ -73,24 +73,24 @@ The SP FIRE 105 test is a large-scale test method for analyzing reaction to fire
 to fire properties of different assemblies of materials, insulation, and claddings when exposed to fire from a simulated apartment fire where flames emerge through a 
 large window opening, i.e. the fire spread on combustible external walls.
 
-The SP FIRE 105 test was developed in Sweden in 1985, based on a broad experimental study of external fire spread. In the eighties new building materials was 
+The SP FIRE 105 test was developed in Sweden in 1985 [@SpFire105], based on a broad experimental study of external fire spread [@Ondrus]. In the eighties new building materials was 
 introduced and hence more intense fires was anticipated, and a recognized test method for external fire spread was therefore needed. External fire spread on combustible
-walls has been studied for decades and the SP Fire 105 test is one among other test methods that has been proposed throughout the years. The initial Swedish test 
-method was introduced in 1958 [10] and the amended SP Fire 105 test is nowadays a standardized test in Sweden, Denmark, and Norway.
+walls has been studied for decades and the SP Fire 105 test is one among other test methods that has been proposed throughout the years [@Hildebrand]. The initial Swedish test 
+method was introduced in 1958 [@Johannesson] and the amended SP Fire 105 test is nowadays a standardized test in Sweden, Denmark, and Norway.
 
 The test rig consists of a 150 mm thick lightweight concrete wall, 4 000 mm (W) by 6 000 mm (H), above a fire compartment with a 3 000 mm (W) by 710 mm (H) front opening. 
 For air intake the compartment has a horizontal opening in the floor, close to its back wall, measuring 3 140 mm (W) by 300 mm (D). The fire source consists of two trays 
 each filled with 30 liters of heptane positioned next to each other, each measuring 1 000 mm (W) by 100 mm (H) by 500 mm (D). Above the tray edges a flame suppressing 
 lattice is installed. Further, after each tray has been filled with 30 liters of heptane, water is added such that the fuel level is touching the underside of the lattice. 
-The upper drawing of Figure 1 illustrates the setup.
+The upper drawing of Figure 1 [@Evegren] illustrates the setup.
 
 The mentioned test rig setup was slightly altered in the tests used as reference in the validation study of FDS 6.2.0. The reason for the alternation was to evaluate fire 
-growth on external combustible ship surfaces with FRP instead of a regular building facade system. In the alternated setup non-combustible calcium silica boards 
+growth on external combustible ship surfaces with FRP instead of a regular building facade system [@Evegren]. In the alternated setup non-combustible calcium silica boards 
 (Promatect®) with 10 mm thickness of the test specimen was fastened along the facade, covering the two fictitious windows as illustrated in the drawing in Figure 1. 
 The total dimensions of the boards were 3 750 mm (W) by 6 000 mm (H). This test was referred to as the reference test and retrieved data from this test laid the 
 foundation for the validation study. In the lower pictures of Figure 1 the fire development during the reference test are seen.
 
-~ Figure { #Figure1; caption:"Upper - Illustration of the dimensions of the modified SP FIRE 105 facade test rig and the instrumentation consisting of six Inconel steel plate thermometers (C21-C26) and six sheathed type K thermocouples (C27-C32). Lower - Pictures showing the fire development during the reference test at different split times"}
+~ Figure { #Figure1; caption:"Upper - Illustration of the dimensions of the modified SP FIRE 105 facade test rig and the instrumentation consisting of six Inconel steel plate thermometers (C21-C26) and six sheathed type K thermocouples (C27-C32). Lower - Pictures showing the fire development during the reference test at different split times."}
 ![Figure1]
 ~
 [Figure1]: images/Figure1.png "Figure1" { width:auto; max-width:99% }
@@ -107,7 +107,7 @@ Figure 3.
 
 ## Incident radiation using a plate thermometer
 The incident radiation was studied using the retrieved temperatures from the thermometers and the thermocouples. The incident radiation q ̇_(INC_E)^'' (W/m2) was then 
-derived from the following equation, Eq. 1 [#equation1]:
+derived from the following equation, Equation [#equation1] from [@Evegren]:
 
 ~ Equation { #equation1 }
 e = \lim_{n\to\infty} \left( 1 + \frac{1}{n} \right)^n
@@ -115,13 +115,13 @@ e = \lim_{n\to\infty} \left( 1 + \frac{1}{n} \right)^n
 
 where σ is the Stefan Boltzmann constant (5.67·10-8 W/(m2·K4)), d is the plate thickness (0.7 mm), c is the specific heat of steel (7 850 J/(kg·K)), ρ is the density 
 of the steel plate (480 kg/m3) and ε is the emissivity assumed to be of 0.9 (-). The variable T_s is defined as the surface temperature of the plate thermometer and 
-T_g is defined as the temperature of the free air flow (gas temperature). From the following equation, Eq. 2, the forced convective heat transfer h_c (W/(m2·K) was 
+T_g is defined as the temperature of the free air flow (gas temperature). From the following equation, Equation 2, the forced convective heat transfer h_c (W/(m2·K) was 
 estimated:
 
 h_c=2.4T_f^0.085∙u_∞^(1/2)∙x^(-1/2)										(2)
 
 where u is the velocity of the vertical air flow and x is a characteristic length. Based on video recordings from the experiment the air velocity was estimated to 
-6 m/s and the characteristic length was set to 0.2 m (the side measurement of the square plate). The film temperature T_f is the average of the T_s and T_g. 
+6 m/s and the characteristic length was set to 0.2 m (the side measurement of the square plate). The film temperature T_f is the average of the T_s and T_g [@Evegren]. 
 The forced convective heat transfer coefficient h_c varied between 22 and 24 during the test using Eq. 2.
 
 Note that equation 1 is based on the following simplified heat balance equation, Equation 289 in, in this paper entitled Eq. 3:
