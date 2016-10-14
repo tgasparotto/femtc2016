@@ -16,9 +16,13 @@ Email         : other2@bar.com
 
 Bibliography  : references.bib
 Logo          : False
+Title Footer  : ![TECi_250_Square]
+
 Tex Header    :
   \def\refname{&name-references;}
 name-references : REFERENCES
+
+[TECi_250_Square]: images/TECi_250_Square.png "TECi_250_Square" { width:auto; max-width:20% }
 
 [TITLE]
 
@@ -61,7 +65,7 @@ Please watch this short YouTube Video for a tutorial on how to use the system as
 
 # MAIN HEADINGS LIKE THIS STYLE
 Main Headings are all upper case letters and underlined. In Madoko, a
-Single '#' symbol at the start of the line, followed by a space and then
+Single \# symbol at the start of the line, followed by a space and then
 the heading text.
 
 ## Subheadings Like This Style
