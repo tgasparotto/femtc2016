@@ -139,7 +139,8 @@ liters of heptane positioned next to each other, each measuring 1 000 mm
 (W) by 100 mm (H) by 500 mm (D). Above the tray edges a flame suppressing
 lattice is installed. Further, after each tray has been filled with 30
 liters of heptane, water is added such that the fuel level is touching
-the underside of the lattice. The upper drawing of Figure [#figure1], [@NilssonM], illustrates the setup.
+the underside of the lattice. The upper drawing of
+Figure [#figure1], [@Evegren], illustrates the setup.
 
 The mentioned test rig setup was slightly altered in the tests used as
 reference in the validation study of FDS 6.2.0. The reason for the
@@ -152,7 +153,7 @@ drawing in Figure [#figure1]. The total dimensions of the boards were 3
 750 mm (W) by 6 000 mm (H). This test was referred to as the reference
 test and retrieved data from this test laid the foundation for the
 validation study. In the lower pictures of Figure [#figure1] the fire
-development during the reference test are seen.
+development during the reference test is seen.
 
 ~ Figure { #Figure1; caption:"Upper - Illustration of the dimensions of the modified SP FIRE 105 facade test rig and the instrumentation consisting of six Inconel steel plate thermometers (C21-C26) and six sheathed type K thermocouples (C27-C32). Lower - Pictures showing the fire development during the reference test at different split times."}
 ![Figure1]
@@ -192,12 +193,13 @@ following equation, Equation [#equation1], [@Evegren]:
 where $\sigma$ $(5.67 \times 10^{-8} W/(m^{2} \cdot K^{4}))$ is the
 Stefan Boltzmann constant, $d$ $(0.7 mm)$ is the plate thickness , $c$
 $(7 850 J/(kg \cdot K))$ is the specific heat of steel, $\rho$
-$(480 kg/m^{3})$ is the density of the steel plate and ε is the
+$(480 kg/m^{3})$ is the density of the steel plate and $\epsilon$ is the
 emissivity assumed to be of 0.9 (-) [@Evegren]. The variable $T_{s}$ is
 defined as the surface temperature of the plate thermometer and $T_{g}$
 is defined as the temperature of the free air flow (gas temperature).
-From the following equation, Equation  [#equation2], [@Evegren], the forced
-convective heat transfer $h_{c}$ $(W/(m^{2} \cdot K)$ was estimated:
+From the following equation, Equation  [#equation2], [@Evegren], the
+forced convective heat transfer $h_{c}$ $(W/(m^{2} \cdot K)$ was
+estimated:
 
 ~ Equation  {#Equation2; caption:"Equation2" }
   h_{c} = 2.4 T_{f}^{0.085} \cdot u_{\infty}^{1/2} \cdot x^{-1/2}
@@ -324,7 +326,7 @@ well-ventilated heptane fires as found in [@SFPE].
 The devices used in the FDS simulations along with their positions are
 seen in Figure [#figure4], [@NilssonM]. The default thermocouples in FDS
 were used as a basis, which is a nickel-based thermocouple with specific
-heat of 0.44 $(kJ/kG \cdot K)$, density of 8908 $(kg/m^{3})$ and
+heat of 0.44 $(kJ/kg \cdot K)$, density of 8908 $(kg/m^{3})$ and
 emissivity of 0.85. However, to match the sheathed type K thermocouples
 in the actual fire test (C27-C32), the bead diameter was changed from 1
 mm to 0.5 mm. In addition to these six thermocouples, additional ten
@@ -336,7 +338,7 @@ position 5.
 To be able to simulate the plate thermometers in FDS, six obstacles were
 defined and placed along the symmetry line of the facade (C21-C26). Two
 surfaces were created built up by 0.7 mm thin layer of metal together
-with a 1 cm thick layer of insulation which then were applied on the
+with a 1 cm thick layer of insulation, which then were applied on the
 obstacles depending on the direction of heat transfer. Wall temperature
 devices were then placed at the backside of these plates to measure the
 surface temperature.
@@ -592,13 +594,13 @@ that the change in radiation angles resulted in an increase of 73 h in
 computational time or some 30 %.
 
 Also, the effect of an increase in HRRPUA was studied by doubling the
-HRRPUA [@NilssonM]. Instead of specifying 3100 kW/m2 on a 1 m2 burner,
-6200 kW/m2 was used on a 0.5 m2 burner (2 000 mm (W) by 250 mm (D)). Note
-that the modelled HRR remained unchanged and the tray still was modelled
-at the same width to prevent any potential differences in the output
-concerning the flame spread along the facade. However, the increase from
-3100 kW/m2 to 6200 kW/m2 gave minor changes in temperature and radiation
-outputs.
+HRRPUA [@NilssonM]. Instead of specifying 3100 $kW/m^{2}$ on a 1 $m^{2}$
+burner, 6200 $kW/m^{2}$ was used on a 0.5 $m^{2}$ burner (2 000 mm (W) by
+250 mm (D)). Note that the modelled HRR remained unchanged and the tray
+still was modelled at the same width to prevent any potential differences
+in the output concerning the flame spread along the facade. However, the
+increase from 3100 $kW/m^{2}$ to 6200 $kW/m^{2}$ gave minor changes in
+temperature and radiation outputs.
 
 ## Influence of increased soot yield
 In the main simulations a soot yield of 0.037 was specified based on the
@@ -691,10 +693,10 @@ is seen to increase steadily during the whole fire scenario differently
 compared with the other positions. The similar appearance is seen in
 Figure [#figure8] at the same position regarding incident radiation. In
 this case after 600 s there is a gap between the measured heat flux and
-the computed heat flux of more than 50 kW/m2, which is not seen at the
-remaining positions. At the same time these tendencies are not seen for
-the temperature retrieved from the thermocouple at the same position in
-Figure [#figure5].
+the computed heat flux of more than 50 $kW/m^{2}$, which is not seen at
+the remaining positions. At the same time these tendencies are not seen
+for the temperature retrieved from the thermocouple at the same position
+in Figure [#figure5].
 
 An uncertainty analysis was performed due to the above
 observations [@NilssonM]. The uncertainty analysis showed that the
