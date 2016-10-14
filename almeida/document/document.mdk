@@ -7,8 +7,8 @@ Affiliation   : LIACC - Universidade do Porto
 Email         : joao.emilio.almeida@fe.up.pt
 
 Author        : Rodrigo M. Tavares
-Affiliation   : Other institute
-Email         : other1@bar.com
+Affiliation   : MAC Fire Safety Specialists
+Email         : rodrigotmj@gmail.com 
 
 Author        : Sérgio B. Araújo
 Affiliation   : SYGMA-SMS
@@ -19,7 +19,7 @@ Affiliation   : LNEC
 Email         : alcoelho@lnec.pt
 
 Author        : Elisabete Cordeiro
-Affiliation   : Other institute
+Affiliation   : UBI
 Email         : eccordeiro@gmail.com
 
 Bibliography  : references.bib
@@ -68,7 +68,7 @@ the assessment of the means of escape, which includes the time the occupants wil
 take to reach a place of relative safety, is paramount. With this assessment, 
 emergency evacuation plans are developed. For this, fire drills are undertaken. 
 However, carrying out fire drills often can demand certain amount of time in 
-organizing and conducting them, which can have negative impact both on the 
+organizing and conducting them, which can have negative impact in both aspects: on the 
 business continuity and wellbeing. In addition to that, fire drills might 
 not be realistic for the worst case scenarios, such as having one or more exits 
 blocked due to fires. Indeed, the challenge increases when other types of 
@@ -77,47 +77,52 @@ earthquakes or even terrorist attacks. For these reasons, a robust and
 validated People Movement (PM) model, such as Pathfinder, when appropriately used 
 can be a very useful tool for emergency evacuation planning. For instance, with 
 Pathfinder, it is possible to evaluate many combinations in a short time, 
-simulating various situations. In this paper, the two major concert hall 
-theatres in Porto, Portugal, are used as case studies: Casa da Música 
+simulating various situations (i.e, fire risk scenarios). In this paper, the two major concert hall 
+theatres in Porto, Portugal, are used as case studies, namely: Casa da Música 
 (by renown Pritzker winner architect Rem Koolhaas, 2005) and Coliseu Porto 
-(a classic building from 1940). Both can hold many hundred spectators: 
-Casa da Música near 1250 and Coliseu Porto around 3500 people. 
-Using Pathfinder it was possible to represent different scenarios, 
-estimate egress times in a set of combinations with all or part of the exits available. 
+(a classic building from 1940). Both can hold many hundred spectators. For instance, 
+Casa da Música can accomodate near 1250 perons, while Coliseu Porto around 3500 people. 
+By using Pathfinder it was possible to represent different (fire risk) scenarios, 
+for estimating egress times in a set of combinations with all or part of the exits available. 
 This allowed the emergency management team to prepare and train the evacuation personnel. 
 This paper presents some simulations using Pathfinder and compares their results 
-with the times of real egress video camera footage. Therefore, it was possible to 
+with the times of real egress video camera footage. Therefore, with tihs, it was possible to 
 assess the simulation tool, evaluating the results and calibrating with the real data 
 in a variety of situations and occupations.
 
 
 # USING PATHFINDER AS AN EVACUATION PLANNING TOOL
 
-Pathfinder can be used as an evacuation planning tool, to assist emergency planners 
-on assessing the evacuation time in different scenarios, without having to test them
-by means of fire drills. Using the Pathfinder, after having the scenario setup made,
-it is easily possible to change the exits, for instance to simulate a blocked exit, 
-in order to see the impact on the egress. 
+Pathfinder can be used as an evacuation planning tool for assisting emergency planners 
+on assessing the egress time(s) in different scenarios, without the need of conducting 
+real scale evacuation fire drills. Using the Pathfinder, after having the scenario 
+built up within the model
+it was easily possible to change the exits' availability during the simulations.
+For instance, to consider a blocked exit in order to see the impact on the egress. 
 
-Another aspect is related to the capacity. Although typically the worse scenario is 
+Another aspect which is relevant to be mentioned is related to the population density
+within the built environment. 
+Although typically the worse scenario is 
 used, that is, with full capacity, it is possible to try different layouts and 
-uses, to evaluate predict the people behaviour in such conditions. This is of great 
-importance for all involved in planning specially regarding auditoriums that can hold a 
+sapce usage, to evaluate/predict the building occupants' behaviour in such conditions. 
+This is of great 
+importance for all involved in planning, specially regarding auditoriums that can hold a 
 great number of persons.
 
 Therefore, in order to use Pathfinder as a simulation tool, it is required to calibrate the model.
 As such, in this paper, we present two case studies, where real times were compared with
-the Pathfinder.
+the Pathfinder estimated egress times.
 
 In both examples presented, the model was put up by using a two dimensional 
 emergency plan image imported into Pathfinder. After having the scale calibrated, 
-defined the areas where the people is placed, the location of the exits and the
+some core-parameters were established, such as: the areas where the building occupants 
+were considered to be placed, the location of the exits and the
 exit paths. When there are seats, each one was plotted and put in place.    
 
 
 # CASE STUDY: CASA DA MÚSICA
 
-Casa da Música is a modern concert hall designed by architect Rem Koolhaas, 
+Casa da Música is a modern concert hall designed by architect Rem Koolhaas and 
 opened in 2005. There are two Auditoriums, the main one is named “Sala Suggia”, 
 as an homage to Guillermina Suggia, Porto’s native world class cellist, having a 
 top capacity of 1244 places. The other Auditorium, “Sala 2” can receive up to 250 
@@ -130,10 +135,11 @@ persons seated or 650 standing.
 
 [800px-CDM_ext]: images/800px-CDM_ext.jpg "800px-CDM_ext" { width:auto; max-width:60% }
 
-The main Auditorium of Casa da Música, "Sala Suggia", has a full capacity of 1244 people, 
-but can vary according the layout used. Without the choir places, 
-located at the back of the stage, the audience is limited to 1069 seats.
-Total area is around 1100 square meters.   
+As mentioned previously, the main Auditorium of Casa da Música, "Sala Suggia", 
+has a full capacity of 1,244 people, 
+but it can vary according the layout used. For example, without the choir places, 
+located at the back of the stage, the audience is limited to 1,069 seats.
+Total area is around 1,100 square meters.   
 
 ~ Figure { #figCdM_sala1view; caption:"Casa da Música: Sala Suggia parcial view"}
 ![CdM_sala1view]
@@ -141,11 +147,13 @@ Total area is around 1100 square meters.
 
 [CdM_sala1view]: images/CdM_sala1view.png "CdM_sala1view" { width:auto; }
 
-Table [#table1] shows a comparison between real times of 
-the public leaving the audience towards the outside and those 
-obtained using Pathfinder. The real time was obtained by visioning the internal 
-video surveillance footage (CCTV). It should be noticed that many of spectators leave
-the room slowly, talking and greeting some acquaintances, thus taking a lot longer
+Table [#table1] shows a comparison between real egress times of 
+the public leaving the audience towards the outside and those egress times 
+obtained using Pathfinder. The real egress time was obtained by visioning the internal 
+video surveillance footage (i.e., Closed-Circuit Television: CCTV). 
+It should be noticed that many of the spectators left
+the room slowly as they were chatting with some colleagues. Furthermore, this
+condition, is very likely to have increased substancially the overall egress time 
 than expected in a real emergency situation. Nevertheless, the values in the
 table can be used as benchmark for calibrating the model. 
 
@@ -160,10 +168,11 @@ table can be used as benchmark for calibrating the model.
 | 17.04.2016 | Choirs - Voice      |    638  |     04:10  |   01:34    |
 |------------|---------------------|---------|------------|------------|
 ~
-The pathfinder model is shown in figure [#figcdm_sala1pf1]. Each seat row was 
+The Pathfinder model is shown in figure [#figcdm_sala1pf1]. Each seat row was 
 plotted and put in location, having people assigned up to the maximum number of seats.
-The only way out for each seat row is at each end. This way is it not possible to
-have agents going over seats or surpassing other pedestrians. 
+The only way out for each seat row is at each end. Whith this, it was not possible to
+have agents (i.e., the representation of the building occupants) going over 
+seats or surpassing other agents. 
 
 ~ Figure { #figCdM_sala1PF1; caption:"Sala Suggia Pathfinder model"}
 ![CdM_Sala1PF1]
@@ -185,12 +194,13 @@ This represents the layout used to collect data shown at table [#table1].
 
 ## Casa da Música: Sala 2
 
-Sala 2 is the second largest auditorium of Cams da Música. Designed as a multipurpose space, 
+Sala 2 is the second largest auditorium of Casa da Música. It was designed 
+as a multipurpose space and, therefore, 
 it is ideal for any type of event. The access is made through two glass and aluminum doors, 
 integrated into the partition panels of the foyer. These ports slide, 
 assisted by a lower engine, and have a safety opening system from the inside. 
 The chairs, in purple tone, are an elegant tribute to the Portuguese designer 
-Daciano da Costa, author of this model in the70’s. Has capacity for 250 people seated or
+Daciano da Costa, author of this model in the70’s. It has capacity for 250 people seated or
 650 standing, although in the former, including the foyer. 
 Total area is around 320 square meters.
 
@@ -203,8 +213,8 @@ Total area is around 320 square meters.
 Table [#table2] presents two concerts held in April, one with 211 people seated 
 and the other, a rock concert with 638 spectators standing.
 Similarly to the table [#table1], real time was computed by visioning CCTV footage.
-It was noticed that many of spectators leave slowly, taking longer they probably would
-during an emergency.
+It was noticed that many of spectators left slowly, taking longer than what they 
+would probably take during a real emergency situation.
 
 ~ TableFigure { #table2; caption: "Comparison between real times and Pathfinder"; .wide }
 |------------|---------------------|---------|------------|------------|
