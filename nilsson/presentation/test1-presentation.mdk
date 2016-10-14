@@ -5,7 +5,7 @@ Affiliation   : Brandskyddslaget AB
 Email         : markus.nilsson@brandskyddslaget.se
 Author        : Johan Nilsen
 Author        : Axel Mossberg
-Reveal Theme  : sky
+Reveal Theme  : simple
 Beamer Theme  : singapore
 
 [TITLE]
@@ -34,174 +34,81 @@ where:
 
 # Results
 
-## Vertical Slides {#vertical}
-Slides can be nested inside of other slides,
-try pressing [down].
-
-[![arrowdown]][down]
-
-[down]: # { .navigate-down }
-[arrowdown]: images/arrow.png "Down arrow" { width:178px; height:238px }
-
 ![Figure5]
 
-[Figure5]: images/Figure5.png "Figure5" { width:auto; max-width:90% }
+[Figure5]: images/Figure5.png "Figure5" { width:auto; max-width:100% }
 
-# Conclusion
+![Figure6]
 
-~~ Notes
-Oh hey, these are some notes. They'll be hidden in your presentation, but you
-can see them if you open the speaker notes window (hit 's' on your keyboard).
-~~
+[Figure6]: images/Figure6.png "Figure6" { width:auto; max-width:100% }
 
-## Code
+![Figure7]
 
-<!-- Example of nested vertical slides -->
+[Figure7]: images/Figure7.png "Figure7" { width:auto; max-width:100% }
+
+~ Begin Vertical
+# Sensitivity analysis {#vertical}
+
+## Temperature 0
+
+![Figure8]
+
+[Figure8]: images/Figure8.png "Figure8" { width:auto; max-width:100% }
+
+## Temperature 1
+
+![Figure9]
+
+[Figure9]: images/Figure9.png "Figure9" { width:auto; max-width:100% }
+
+## Temperature 2
+
+![Figure10]
+
+[Figure10]: images/Figure10.png "Figure10" { width:auto; max-width:100% }
+
+## Temperature 3
+
+![Figure11]
+
+[Figure11]: images/Figure11.png "Figure11" { width:auto; max-width:100% }
+
+## Temperature 4
+
+![Figure12]
+
+[Figure12]: images/Figure12.png "Figure12" { width:auto; max-width:100% }
+
+~ End Vertical
+
+# A comparison with FDS version 5.5.3
+
+![Figure14ny2]
+
+[Figure14ny2]: images/Figure14ny2.png "Figure14ny2" { width:auto; max-width:100% }
+
+~ Slide
+A slide with no header
+~
+
 ~ Begin Vertical { data-background:Gainsboro }
 
 ## Vertical Slides {#vertical}
 Slides can be nested inside of other slides,
 try pressing [down].
 
-[![arrowdown]][down]
-
-
 [down]: # { .navigate-down }
-[arrowdown]: images/arrow.png "Down arrow" { width:178px; height:238px }
-
-## Basement Level 1
-Press down or up to navigate.
-
-## Basement Level 2
-
-Use `columns` to put blocks next to each other:
-
-~ Begin Columns
-~ Column { width:50% }
-A monarch butterfly (shown to the right)
-spends the winter in Mexico.
-~
-~ Column
-![butterfly]
-~
-~ End Columns
-
-[butterfly]: images/butterfly.png "A Monarch butterfly" { width:280px; vertical-align:middle }
 
 
-<!-- 
-For local background images, we need to have a reference to the image
-such that it's data gets embedded into the HTML page. We define
-it using "display=none" so it is hidden in the presentation. 
-We can then refer to the image in "data-background-image". 
--->
-
-![bfly]
-[bfly]: images/butterfly.png "Butterfly" { display:none }
-
-## Basement Level 3 { data-background-image:images/butterfly.png }
+## Basement Level 3
 That's it, time to go back up.
-
-[![arrowup]][back2]
-
-[arrowup]:  images/arrow.png "Up arrow" { width:178px; height:238px; transform:rotate(180deg) }
-[back2]:    #vertical { .image }
 
 ~ End Vertical
 
 
-## Themes {#themes}
-
-Reveal.js comes with a few themes built in:
-
-* [Default](?#/themes)
-* [Sky](?theme=sky#/themes)
-* [Beige](?theme=beige#/themes)
-* [Serif](?theme=serif#/themes)
-* [Simple](?theme=simple#/themes)
-* [Night](?theme=night#/themes)
-* [Moon](?theme=moon#/themes)
-* [Solarized](?theme=solarized#/themes)
-
-Theme demos are loaded after the presentation which leads to flicker. In
-production you should load your theme in the `<head>` using a
-`<link>`.
-
-## Transitions { #transitions }
-
-You can select from different transitions, like:\
-[Cube](?transition=cube#/transitions) -
-[Page](?transition=page#/transitions) -
-[Concave](?transition=concave#/transitions) -
-[Zoom](?transition=zoom#/transitions) -
-[Linear](?transition=linear#/transitions) -
-[Fade](?transition=fade#/transitions) -
-[None](?transition=none#/transitions) -
-[Default](?#/transitions)
-
-
-
-## Pauses?
-
-Some pauses.
-
-* {.fragment} One
-* {.fragment} Two
-* {.fragment} Three
-
-And more:
-
-- Test 1
-- Test 2
-- Test 3
-{.fragmented}
-
-Cool!.
-
-~ Slide
-A slide with no header
-~
-
-
-## Point of View
-
-In Reveal.js Press **ESC** to enter the slide overview.
-
-Hold down alt and click on any element to zoom in on it using 
- [zoom.js]. Alt + click anywhere to zoom back out.
-
-
-[zoom.js]: http://lab.hakim.se/zoom-js
-
-
-## Works in Mobile Safari
-
-Try it out! You can swipe through the slides and pinch your way to the
-overview.
-
-
-## Printing
-
-You can print a `revealjs` presentation nicely from the browser.
-
-First give the `?print-pdf` or `?print-paper` query on your final
-presentation (in the browser address bar) and then print from the Chrome
-browser selecting `Save to PDF`.
-
-Read more about it at the [revealjs documentation](https://github.com/hakimel/reveal.js#pdf-export)
-
-## RevealJS library
-
-Normally, the `revealjs` library is loaded from a CDN but you can specify your
-own url using metadata:
-
-    Reveal Url: <my url>
-
-This can be useful when using a [server to run revealjs](https://github.com/hakimel/reveal.js#full-setup)
-where you may use something like:
-
-    @nopreview Reveal Url: http://localhost:8000/reveal.js
 
 [slide]: http://research.microsoft.com/en-us/um/people/daan/madoko/samples/slidedemo/out/slidedemo.html
 [slide-mdk]: https://www.madoko.net/editor.html?#url=http://research.microsoft.com/en-us/um/people/daan/madoko/samples/slidedemo/slidedemo.mdk&options={"delayedUpdate":"true"}
 [slide-pdf]: http://research.microsoft.com/en-us/um/people/daan/madoko/samples/slidedemo/out/slidedemo.pdf
+
+
