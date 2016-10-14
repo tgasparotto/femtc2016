@@ -102,7 +102,7 @@ an actual metro system. Even so, combining all of these inputs in a parametric s
 in over 100,000 separate scenarios. To limit the number of scenarios the values in bold were selected. 
 This resulted in 12 separate CFD scenarios and 144 evacuation scenarios. 
 
-~ TableFigure { #ScenarioTable; caption: "Example Parameters For Scenario Selection"; .wide }
+~ TableFigure { #ScenarioTable; caption: "Example Parameters For Scenario Selection"; .wide .booktable}
 
 |:-----------------------|:---------:|:-----------:|:----------------:|:-----------------:|
 | [CFD Scenario Parameters]{font-weight:bold}                         ||             |                  |                   |
@@ -111,7 +111,7 @@ This resulted in 12 separate CFD scenarios and 144 evacuation scenarios.
 | Fire growth rate       | t-squared | [Slow]{color:grey}        | [Medium]{font-weight:bold}           | [Fast]{color:grey}              |
 | Tunnel grade           | %         | [-4]{color:grey}          | [0]{font-weight:bold}                | [4]{font-weight:bold}                 |
 | Tunnel velocity        | -         | [No velocity]{font-weight:bold} | [2m/s portal wind]{font-weight:bold} | [Critical velocity]{font-weight:bold} |
-| Tunnel area            | m2        | [23]{font-weight:bold}          | [29]{font-weight:bold}               | [Double track]{color:grey}      |
+| Tunnel area            | m^2^        | [23]{font-weight:bold}          | [29]{font-weight:bold}               | [Double track]{color:grey}      |
 |------------------------|-----------|-------------|------------------|-------------------|
 |[Evacuation Scenario Paramters]{font-weight:bold}          |||                  |                   |
 | Walkway width          | m         | [<0.8]{color:grey}        | [0.8]{font-weight:bold}              | [1.2]{font-weight:bold}               |
@@ -260,7 +260,7 @@ compromised tenability (ISO 13571).
 
 # RESULTS
 
-## Visibilty and Other Tenability
+## Visibility and Other Tenability
 Visibility results from the CFD simulations are shown in Figure X and Figure X. Results are only 
 shown for the 23m2 tunnel. Results for the 29m2 tunnel are very similar, albeit visibility is 
 slightly improved due to the larger cross-section. However, the variation in visibility is better 
@@ -269,18 +269,20 @@ quantified with the results presented with the evacuation assessment.
 The visibility results are displayed as a function of distance from the fire (X) and increasing 
 time (T). XT figures provide a convenient way of representing a large amount of transient data 
 without having to display numerous contours. These figures were produced with the FDS device 
-output for visibility and post-processed in GNU Octave [REF]. 
+output for visibility and post-processed in GNU Octave REF. 
 
 Exit 1 is the exit closest to the fire and the multiple exit options are also indicated as 
 vertical lines. The XT contours have been clipped such that visibility greater than 10m is 
-shown as white space. Visibility is based on a light emitting surface (C = 8 [FDS]). The 
+shown as white space. Visibility is based on a light emitting surface (C = 8 REF). The 
 contours are produced for a track-level walkway (2m above track) and elevated walkway 
 (3.2m above track). The figures have been produced for a period of 30 minutes as outcomes 
 are obvious after this period. The simulations were run for 60 minutes. 
 
 XT figures were used to check all components of tenability (i.e. temperature, CO, CO2, and O2). 
-For reasons of space these are not presented, but are part of the FID assessment. Temperatures 
-at tenability heights were less than 40˚C away from the immediate vicinity of the fire site. 
+For reasons of space these are not presented, but are part of the FID assessment. For all scenarios, temperatures 
+at tenability heights were less than 60 &deg;C away from the immediate vicinity of the fire site, and less
+than 40 &deg;C beyond the ends of the train. 
+
 For the still air conditions on 0% grade there is a somewhat symmetrical spread of smoke which 
 is biased one way due to the asymmetry in the fire location relative to the train length. When 
 the still air conditions are modelled on 4% grade the smoke buoyancy induces a significant 
@@ -320,19 +322,18 @@ full tunnel cross section. This effect is more noticeable for the track-level
 walkway than for the elevated walkway which suggests that even with tunnel 
 ventilation applied a degree of smoke layering is still present.
 
-~ Figure { #fig-Vis-0-23; caption:"Visibility [m] for 0% grade and 23m2 tunnel section."; .wide}
-
+~ Figure { #fig-Vis-0-23; caption:"Visibility [m] for 0% grade and 23m^2^ tunnel section."; .wide }
 |:----------------------------:|:-----------------------------------:|:
 | [Track-level walkway]{font-weight:bold}            | [Elevated walkway]{font-weight:bold}               |
-| Visibility at 2m above track                       | Visibility at 3.2m above track                     |
-|----------------------------------------------------|----------------------------------------------------|
+| Visibility at 2m above track                       | Visibility at 3.2m above track                    |
+|                       \                             |                    \                                |
 | ![cropped-FT-M-05-M-0-V0-23-xt-WalkVIS-pathWalk23] | ![cropped-FT-M-05-M-0-V0-23-xt-ElevVIS-pathElev23] |
 | (a) Still conditions (open boundaries at each end)                                                     ||
 | ![cropped-FT-M-05-M-0-V1-23-xt-WalkVIS-pathWalk23] | ![cropped-FT-M-05-M-0-V1-23-xt-ElevVIS-pathElev23] |
 | (b) Still conditions (open boundaries at each end)                                                     ||
 | ![cropped-FT-M-05-M-0-V2-23-xt-WalkVIS-pathWalk23] | ![cropped-FT-M-05-M-0-V2-23-xt-ElevVIS-pathElev23] |
 | (c) Critical velocity                                                                                  ||
-|                                                    |                                                    |
+| \                                                  |                                                    |
 | ![cbar]                                                                                                ||
 ~
 
@@ -351,19 +352,19 @@ ventilation applied a degree of smoke layering is still present.
 [cropped-FT-M-05-M-0-V1-23-xt-ElevVIS-pathElev23]: images/cropped-FT-M-05-M-0-V1-23-xt-ElevVIS-pathElev23.png "cropped-FT-M-05-M-0-V1-23-xt-ElevVIS-pathElev23" { width:auto; max-width:100% }
 
 
-~ Figure { #fig-Vis-4-23; caption:"Visibility [m] for 4% grade and 23m2 tunnel section."; .wide}
+~ Figure { #fig-Vis-4-23; caption:"Visibility [m] for 4% grade and 23m^2^ tunnel section."; .wide }
 
 |:----------------------------:|:-----------------------------------:|:
 | [Track-level walkway]{font-weight:bold}            | [Elevated walkway]{font-weight:bold}               |
-| Visibility at 2m above track                       | Visibility at 3.2m above track                     |
-|----------------------------------------------------|----------------------------------------------------|
+| Visibility at 2m above track                       | Visibility at 3.2m above track                    |
+|                       \                             |                    \                                |
 | ![cropped-FT-M-05-M-4-V0-23-xt-WalkVIS-pathWalk23] | ![cropped-FT-M-05-M-4-V0-23-xt-ElevVIS-pathElev23] |
 | (a) Still conditions (open boundaries at each end)                                                     ||
 | ![cropped-FT-M-05-M-4-V1-23-xt-WalkVIS-pathWalk23] | ![cropped-FT-M-05-M-4-V1-23-xt-ElevVIS-pathElev23] |
 | (b) Still conditions (open boundaries at each end)                                                     ||
 | ![cropped-FT-M-05-M-4-V2-23-xt-WalkVIS-pathWalk23] | ![cropped-FT-M-05-M-4-V2-23-xt-ElevVIS-pathElev23] |
 | (c) Critical velocity                                                                                  ||
-|                                                    |                                                    |
+|       \                                        |                                                     |
 | ![cbar]                                                                                                ||
 ~
 
@@ -418,13 +419,46 @@ tunnel ventilation solution and walkway width and exit spacing may be less criti
 However, a middle train or incorrect mode operation is still a valid scenario with 
 tunnel ventilation, albeit less likely.
 
-Figure XX – Maximum agent FID. 
+~ Figure { #fig-Max-FID; caption:"Maximum agent FID."; .wide}
 
-Figure X – Number of agents exposed to FED ≥ 0.3. Values normalized by 600 (number of agents moving towards furthest exit).
+|:----------------------------:|:
+|Add figure |
+|Add figure |
+|Add figure |
+|Add figure |
+|Add figure | 
+~
 
-Figure X – Number of agents exposed to less than 5m visibility for greater than 10 minutes. Values normalized by 600 (number of agents moving towards furthest exit).
+~ Figure { #fig-No-FID; caption:"Number of agents exposed to FED ≥ 0.3. Values normalized by 600 (number of agents moving towards furthest exit)."; .wide}
 
-Figure X – Maximum exit time. Values shown in hours because the maximum evacuation time across all simulations is approximately 1 hour. 
+|:----------------------------:|:
+|Add figure |
+|Add figure |
+|Add figure |
+|Add figure |
+|Add figure | 
+~
+
+~ Figure { #fig-No-FID; caption:"Number of agents exposed to less than 5m visibility for greater than 10 minutes. Values normalized by 600 (number of agents moving towards furthest exit)."; .wide}
+
+|:----------------------------:|:
+|Add figure |
+|Add figure |
+|Add figure |
+|Add figure |
+|Add figure | 
+~
+
+~ Figure { #fig-No-FID; caption:"Maximum exit time. Values shown in hours because the maximum evacuation time across all simulations is approximately 1 hour."; .wide}
+
+|:----------------------------:|:
+|Add figure |
+|Add figure |
+|Add figure |
+|Add figure |
+|Add figure | 
+~
+
 
 # CONCLUSION
 This paper has provided a comparative study to develop a benchmark set of considerations for 
@@ -459,40 +493,6 @@ required to produce an optimised solution that accounts for project-specific con
 and other practicalities. A constrained tunnel cross-section with an 800mm elevated 
 walkway and 500m exits may be acceptable if a suitable operating strategy for the 
 tunnel ventilation can be adopted.
-
-
-Figure [#fig-smokeview] in Section [#sec-intro] shows an image from an
-older version of Smokeview. Note that you can drag&drop images into the
-editor pane to include them in the document, and similarly with bibtex
-files, latex style files, etc.
-
-~ Figure { #fig-smokeview; caption:"Illustration of placement of figure and caption. (use the `.wide` class for wide figure)."}
-![Ex1_0]
-~
-[Ex1_0]: images/Ex1_0.png "Ex1_0" { width:auto; max-width:90% }
-
-
-A bibliography file consists of all your references in the BibTeX format, for example:
-
-    @BOOK{ Knuth:TeX,  
-        author   = "Knuth, Donald E.",  
-        title    = "The {\TeX} book",  
-        publisher= "Addison-Wesley",  
-        year     = 1984  
-    }
-
-Entries in the bibliography files can now be referenced using semi-colon
-separated references, for example:
-``` Markdown 
-Read about LaTeX and TeX [@Knuth:TeX; @Lamport:LaTeX].
-```
-Results in: Read about LaTeX and TeX [@Knuth:TeX; @Lamport:LaTeX].
-
-Please include full title of journal articles or other references,
-journal, volume, date, pages. There is a nice [table on
-Wikipedia](https://en.wikibooks.org/wiki/LaTeX/Bibliography_Management#BibTeX)
-that shows all of the different data fields for the BibTeX file.
-
 
 [BIB]
 
