@@ -92,7 +92,8 @@ inputs have been kept constant that might vary in reality. This is discussed in 
 
 ## Scenario Selection
 CFD modeling and evacuation calculations where coupled in order to calculate agent tenability 
-during a fire event. Table [#ScenarioTable] shows parameters that were considered for the CFD and evacuation modeling. It is acknowledged that this is a simplification compared to
+during a fire event. Table [#ScenarioTable] shows parameters that were considered for the CFD and evacuation modeling. 
+It is acknowledged that this is a simplification compared to
 an actual metro system. Even so, combining all of these inputs in a parametric study would result
 in over 100,000 separate scenarios. To limit the number of scenarios the values in bold were selected. 
 This resulted in 12 separate CFD scenarios and 144 evacuation scenarios. 
@@ -333,7 +334,7 @@ ventilation applied a degree of smoke layering is still present.
 | [Track-level walkway]{font-weight:bold}            | [Elevated walkway]{font-weight:bold}               |
 | Visibility at 2m above track                       | Visibility at 3.2m above track                    |
 |                       \                             |                    \                                |
-| ![cropped-FT-M-05-M-0-V0-23-xt-WalkVIS-pathWalk23] | ![cropped-FT-M-05-M-0-V0-23-xt-ElevVIS-pathElev23] |
+| ![cropped-FT-M-05-M-0-V0-23-xt-WalkVIS-pathWalk23] | ![cropped-FT-M-05-M-0-V0-23-xt-ElevVIS-pathElev23]|
 | (a) Still conditions (open boundaries at each end)                                                     ||
 | ![cropped-FT-M-05-M-0-V1-23-xt-WalkVIS-pathWalk23] | ![cropped-FT-M-05-M-0-V1-23-xt-ElevVIS-pathElev23] |
 | (b) Still conditions (open boundaries at each end)                                                     ||
@@ -343,19 +344,19 @@ ventilation applied a degree of smoke layering is still present.
 | ![cbar]                                                                                                ||
 ~
 
+[cbar]: images/cbar.png "cbar" { width:auto; max-width:90% }
+
 [cropped-FT-M-05-M-0-V0-23-xt-WalkVIS-pathWalk23]: images/cropped-FT-M-05-M-0-V0-23-xt-WalkVIS-pathWalk23.png "cropped-FT-M-05-M-0-V0-23-xt-WalkVIS-pathWalk23" { width:auto; max-width:100% }
 
 [cropped-FT-M-05-M-0-V0-23-xt-ElevVIS-pathElev23]: images/cropped-FT-M-05-M-0-V0-23-xt-ElevVIS-pathElev23.png "cropped-FT-M-05-M-0-V0-23-xt-ElevVIS-pathElev23" { width:auto; max-width:100% }
 
-[cbar]: images/cbar.png "cbar" { width:auto; max-width:90% }
-
-[cropped-FT-M-05-M-0-V2-23-xt-ElevVIS-pathElev23]: images/cropped-FT-M-05-M-0-V2-23-xt-ElevVIS-pathElev23.png "cropped-FT-M-05-M-0-V2-23-xt-ElevVIS-pathElev23" { width:auto; max-width:100% }
-
 [cropped-FT-M-05-M-0-V1-23-xt-WalkVIS-pathWalk23]: images/cropped-FT-M-05-M-0-V1-23-xt-WalkVIS-pathWalk23.png "cropped-FT-M-05-M-0-V1-23-xt-WalkVIS-pathWalk23" { width:auto; max-width:100% }
+
+[cropped-FT-M-05-M-0-V1-23-xt-ElevVIS-pathElev23]: images/cropped-FT-M-05-M-0-V1-23-xt-ElevVIS-pathElev23.png "cropped-FT-M-05-M-0-V1-23-xt-ElevVIS-pathElev23" { width:auto; max-width:100% }
 
 [cropped-FT-M-05-M-0-V2-23-xt-WalkVIS-pathWalk23]: images/cropped-FT-M-05-M-0-V2-23-xt-WalkVIS-pathWalk23.png "cropped-FT-M-05-M-0-V2-23-xt-WalkVIS-pathWalk23" { width:auto; max-width:100% }
 
-[cropped-FT-M-05-M-0-V1-23-xt-ElevVIS-pathElev23]: images/cropped-FT-M-05-M-0-V1-23-xt-ElevVIS-pathElev23.png "cropped-FT-M-05-M-0-V1-23-xt-ElevVIS-pathElev23" { width:auto; max-width:100% }
+[cropped-FT-M-05-M-0-V2-23-xt-ElevVIS-pathElev23]: images/cropped-FT-M-05-M-0-V2-23-xt-ElevVIS-pathElev23.png "cropped-FT-M-05-M-0-V2-23-xt-ElevVIS-pathElev23" { width:auto; max-width:100% }
 
 
 ~ Figure { #fig-Vis-4-23; caption:"Visibility [m] for 4% grade and 23m^2^ tunnel section."; .wide }
