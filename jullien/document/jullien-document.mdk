@@ -283,15 +283,15 @@ evaluates the number of simulations that seems most relevant to carry out a stud
 &pagebreak;
 
 ~ TableFigure { #table-2; caption: "Decrease of the width of the confidence interval according to the number of simulations"; .wide }
-|                  |------------------------------------------|-----|
-|                  | Decrease of the confidence interval width|     |
-|                  | (%)                                      |     |
-|:-----------------|:----------------------------------------:|:---:|
-| 100&nbsp;draws   | Reference                                |     |
-| 200&nbsp;draws   | 40                                       |     |
-| 500&nbsp;draws   | 70                                       |     |
-| 1,000&nbsp;draws | 84                                       |     |
-| 5,000&nbsp;draws | 88                                       |     |
+|                        |------------------------------------------|
+|                        | Decrease of the confidence interval width|
+|                        | (%)                                      |
+|:-----------------------|:----------------------------------------:|
+| 100&nbsp;simulations   | Reference                                |
+| 200&nbsp;simulations   | 40                                       |
+| 500&nbsp;simulations   | 70                                       |
+| 1,000&nbsp;simulations | 84                                       |
+| 5,000&nbsp;simulations | 88                                       |
 ~
 
 ## Complementary analysis
@@ -305,7 +305,7 @@ the occupants which has a direct influence on the RSET.
 
 ~ TableFigure { #table-3; caption: "Ranges of differents patterns for 100 simulations"; .wide ; page-align:forcehere}
 |                                |-------------------------|-------------------------|-------------------------|
-|                                | Pattern 1               | pattern 2               | pattern 3               |
+|                                | Pattern 1               | Pattern 2               | Pattern 3               |
 |:-------------------------------|:-----------------------:|:-----------------------:|:-----------------------:|
 | RSET&nbsp;(s)                  | [22.4&nbsp;;&nbsp;37.4] | [37.4&nbsp;;&nbsp;72.2] | [72.2&nbsp;;&nbsp;82.6] |
 | Occupants number               | [34&nbsp;;&nbsp;297]    | [297&nbsp;;&nbsp;806]   | [806&nbsp;;&nbsp;982]   |
@@ -463,7 +463,7 @@ time on the results, at least in this simple case.
 ~ TableFigure { #table-7; caption: "N°2 test case results synthesis and comparison with test case n°1"; .wide ; page-align:forcehere}
 |------|--------|-------------------------|----------|-------------------------|-------------|-------------------|
 |      |        |                         |          |                         |             |                   |
-| Test | S.     |I~p95%~                  | L~Ip95%~ |I~p5%-95%~               | L~Ip5%-95%~ | L~Ip5%-95%~/q~50%~|
+| Test | P.     |I~p95%~                  | L~Ip95%~ |I~p5%-95%~               | L~Ip5%-95%~ | L~Ip5%-95%~/q~50%~|
 | case |        | (s)                     | (s)      | (s)                     | (s)         | (%)               |
 |      |        |                         |          |                         |             |                   |
 |:-----|:-------|:-----------------------:|:--------:|:-----------------------:|:-----------:|:-----------------:|
@@ -495,7 +495,7 @@ the low and average densities of population than on a strong density.
 ~ TableFigure { #table-8; caption: "N°3 test case results synthesis and comparison with n°1"; .wide ; page-align:forcehere}
 |------|--------|-------------------------|----------|-------------------------|-------------|-------------------|
 |      |        |                         |          |                         |             |                   |
-| Test | S.     |I~p95%~                  | L~Ip95%~ |I~p5%-95%~               | L~Ip5%-95%~ | L~Ip5%-95%~/q~50%~|
+| Test | P.     |I~p95%~                  | L~Ip95%~ |I~p5%-95%~               | L~Ip5%-95%~ | L~Ip5%-95%~/q~50%~|
 | case |        | (s)                     | (s)      | (s)                     | (s)         | (%)               |
 |      |        |                         |          |                         |             |                   |
 |:-----|:-------|:-----------------------:|:--------:|:-----------------------:|:-----------:|:-----------------:|
