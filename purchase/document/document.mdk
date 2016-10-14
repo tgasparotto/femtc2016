@@ -97,34 +97,29 @@ inputs have been kept constant that might vary in reality. This is discussed in 
 
 ## Scenario Selection
 CFD modelling and evacuation calculations where coupled in order to calculate agent tenability 
-during a fire event. [#ExampleASETParameters] and [#ExampleRSETParameters]  show parameters that 
-were considered for the CFD and evacuation modelling respectively. It is acknowledged that this is 
-a simplification compared to 
-an actual metro system. Even so, combining all of these inputs in a parametric study would result 
+during a fire event. Table [#ScenarioTable] show parameters that were considered for the CFD and evacuation modelling (RSET) respectively. It is acknowledged that this is a simplification compared to
+an actual metro system. Even so, combining all of these inputs in a parametric study would result
 in over 100,000 separate scenarios. To limit the number of scenarios the values in bold were selected. 
 This resulted in 12 separate CFD scenarios and 144 evacuation scenarios. 
 
-~ TableFigure { #ExampleASETParameters; caption: "Example ASET Parameters"; .wide }
+~ TableFigure { #ScenarioTable; caption: "Example Parameters For Scenario Selection"; .wide }
 
 |:-----------------------|:---------:|:-----------:|:----------------:|:-----------------:|
-| Fire location in train | -         | Front car   | Middle car       | Back car          |
-| Fire size              | MW        | 2           | 5                | >=10              |
-| Fire growth rate       | t-squared | Slow        | Medium           | Fast              |
-| Tunnel grade           | %         | -4          | 0                | 4                 |
-| Tunnel velocity        | -         | No velocity | 2m/s portal wind | Critical velocity |
-| Tunnel area            | m2        | 23          | 29               | Double track      |
+| [CFD Scenario Parameters]{font-weight:bold}                         ||             |                  |                   |
+| Fire location in train | -         | [Front car]{color:grey}   | [Middle car]{font-weight:bold}       | [Back car]{color:grey}          |
+| Fire size              | MW        | [2]{color:grey}           | [5]{font-weight:bold}                | [>=10]{color:grey}              |
+| Fire growth rate       | t-squared | [Slow]{color:grey}        | [Medium]{font-weight:bold}           | [Fast]{color:grey}              |
+| Tunnel grade           | %         | [-4]{color:grey}          | [0]{font-weight:bold}                | [4]{font-weight:bold}                 |
+| Tunnel velocity        | -         | [No velocity]{font-weight:bold} | [2m/s portal wind]{font-weight:bold} | [Critical velocity]{font-weight:bold} |
+| Tunnel area            | m2        | [23]{font-weight:bold}          | [29]{font-weight:bold}               | [Double track]{color:grey}      |
 |------------------------|-----------|-------------|------------------|-------------------|
-~
-
-~ TableFigure { #ExampleRSETParameters; caption: "Example RSET Parameters"; .wide }
-
-|:----------------|:-------:|:-----------:|:-------------:|:--------:|
-| Walkway width   | m       | <0.8        | 0.8           | 1.2      |
-| Pre-movement    | seconds | 120         | 240           | 360      |
-| Occupant load   | people  | 600         | 900           | 1200     |
-| Exit separation | m       | 240         | 300           | 500      |
-| Walkway height  | -       | Track level | Semi-elevated | Elevated |
-|-----------------|---------|-------------|---------------|----------|
+|[Evacuation Scenario Paramters]{font-weight:bold}          |||                  |                   |
+| Walkway width          | m         | [<0.8]{color:grey}        | [0.8]{font-weight:bold}              | [1.2]{font-weight:bold}               |
+| Pre-movement           | seconds   | [120]{color:grey}         | [240]{font-weight:bold}              | [360]{color:grey}               |
+| Occupant load          | people    | [600]{color:grey}         | [900]{font-weight:bold}              | [1200]{color:grey}              |
+| Exit separation        | m         | [240]{font-weight:bold}         | [300]{font-weight:bold}              | [500]{font-weight:bold}               |
+| Walkway height         | -         | [Track level]{font-weight:bold} | [Semi-elevated]{color:grey}    | [Elevated]{font-weight:bold}          |
+|------------------------|-----------|-------------|------------------|-------------------|
 ~
 
 The front of the train is assumed to come to a stop at a tunnel exit. For a tunnel without 
@@ -265,7 +260,7 @@ compromised tenability (ISO 13571).
 
 # RESULTS
 
-## Visibility Results
+## Visibilty and Other Tenability
 Visibility results from the CFD simulations are shown in Figure X and Figure X. Results are only 
 shown for the 23m2 tunnel. Results for the 29m2 tunnel are very similar, albeit visibility is 
 slightly improved due to the larger cross-section. However, the variation in visibility is better 
@@ -330,8 +325,7 @@ Figure X Visibility [m] for 0% grade and 23m2 tunnel section
 Figure X Visibility [m] for 4% grade and 29m2 tunnel section
 
 
-
-## Evacuation Results
+## Agent Evacuation and FID
 The evacuation assessment was undertaken using the 1-D evacuation model discussed above. 
 Four sets of results are presented that compare the different parameters shown in Table [#exampleasetparameters]. 
 FID results have been truncated at unity. Other results have been normalised to present values between zero and 
