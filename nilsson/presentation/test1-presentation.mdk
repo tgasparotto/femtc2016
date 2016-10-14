@@ -10,15 +10,29 @@ Beamer Theme  : singapore
 
 [TITLE]
 
-# Content
-
-[TOC]
-
 # Introduction
 
-# Experimental setup
+Text
 
-# Comparing the same output data
+~ Begin Vertical
+# Experimental setup
+![Namnlös1]
+
+[Namnlös1]: images/Namnl-s1.png "Namnlös1" { width:auto; max-width:100% }
+
+# Setup
+![Figure4]
+
+[Figure4]: images/Figure4.jpg "Figure4" { width:auto; max-width:90% }
+
+# Setup
+![Figure1-2ny]
+
+[Figure1-2ny]: images/Figure1-2ny.png "Figure1-2ny" { width:auto; max-width:90% }
+
+~ End Vertical
+
+# Comparing the same form of output data
 
 ~ Begin Framed { padding:1ex; margin-top:1ex }
 Incident radiation $\dot{q}^{\prime\prime}_{INC}$ $(W/m^{2})$ from Equation [#equation1]
@@ -32,79 +46,76 @@ where:
 ~
 ~ End Framed
 
+~ Begin Vertical
 # Results
 
+## Thermocouples 5 cm grid
 ![Figure5]
 
 [Figure5]: images/Figure5.png "Figure5" { width:auto; max-width:100% }
 
+## Thermometers 5 cm grid
 ![Figure6]
 
 [Figure6]: images/Figure6.png "Figure6" { width:auto; max-width:100% }
 
+## $T_{AST}$ 5 cm grid
 ![Figure7]
 
 [Figure7]: images/Figure7.png "Figure7" { width:auto; max-width:100% }
 
-~ Begin Vertical
-# Sensitivity analysis {#vertical}
-
-## Temperature 0
-
+## $\dot{q}^{\prime\prime}_{IRHF}$ 5 cm grid
 ![Figure8]
 
 [Figure8]: images/Figure8.png "Figure8" { width:auto; max-width:100% }
 
-## Temperature 1
+~ End Vertical
 
+~ Begin Vertical
+# Sensitivity analysis
+
+## Grid sensitivity, thermocouples
 ![Figure9]
 
 [Figure9]: images/Figure9.png "Figure9" { width:auto; max-width:100% }
 
-## Temperature 2
-
+## Grid sensitivity, thermometers
 ![Figure10]
 
 [Figure10]: images/Figure10.png "Figure10" { width:auto; max-width:100% }
 
-## Temperature 3
-
+## Grid sensitivity, $T_{AST}$
 ![Figure11]
 
 [Figure11]: images/Figure11.png "Figure11" { width:auto; max-width:100% }
 
-## Temperature 4
-
+## Grid sensitivity, $\dot{q}^{\prime\prime}_{IRHF}$
 ![Figure12]
 
 [Figure12]: images/Figure12.png "Figure12" { width:auto; max-width:100% }
 
 ~ End Vertical
 
+~ Begin Vertical
 # A comparison with FDS version 5.5.3
 
-![Figure14ny2]
+## FDS 6.2.0 vs FDS 5.5.3, temperature
+![Figure14]
 
-[Figure14ny2]: images/Figure14ny2.png "Figure14ny2" { width:auto; max-width:100% }
+[Figure14]: images/Figure14.png "Figure14" { width:auto; max-width:100% }
+
+## FDS 6.2.0 vs FDS 5.5.3, $\dot{q}^{\prime\prime}_{IRHF}$
+![Figure15]
+
+[Figure15]: images/Figure15.png "Figure15" { width:auto; max-width:50% }
+
+~ End Vertical
 
 ~ Slide
 A slide with no header
 ~
 
-~ Begin Vertical { data-background:Gainsboro }
-
-## Vertical Slides {#vertical}
-Slides can be nested inside of other slides,
-try pressing [down].
-
-[down]: # { .navigate-down }
-
-
-## Basement Level 3
-That's it, time to go back up.
-
-~ End Vertical
-
+# Conclusion
 
 
 [slide]: http://research.microsoft.com/en-us/um/people/daan/madoko/samples/slidedemo/out/slidedemo.html
