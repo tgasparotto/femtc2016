@@ -64,7 +64,7 @@ capability through doors at the ground floor of nightclubs and similar.
 Evacuation capability is the ability of occupants, residents, and staff as a group either 
 to evacuate a building or to relocate from the point of occupancy to a point of safety
 [@code2009nfpa]. An evacuation process could be: a) coordinated, when
-people leaves the place in an ordered queue, coordinated flow without rush or; b) uncoordinated, 
+people leaves the place in an ordered queue, coordinated flow without rush; or b) uncoordinated, 
 when everyone rush for the exit, pressing others ahead, the flow become nonlinear with stops
 and goes, either with or without mass panic. Based on literature review and empirical
 research, Helbing, Farkas and Vicsek @helbing2000simulating lists the events that
@@ -122,24 +122,24 @@ raises. According to this model, the forces inside a crowd in an
 uncoordinated egress are: a) physical, reaction to compression and friction either among
 individuals or against walls; and b) socio-psychological, related to aversion of crowding.
 
-Panic Package is part of the article publicized on Nature
+Panic Package is part of the article publicized in Nature
 on 2000 @helbing2000simulating. Simulation parameters were maintained as default, except 
 those now described: a) door size, 1.12m; b) room's area, 70m²; c) circle
-(representing an individual) diameter, 47.5&plusmn;5.0cm and; d) initial number of
+(representing an individual) diameter, 47.5&plusmn;5.0cm; and d) initial number of
 particles, set according to the number of individuals.
  
  
 
 # RESULTS   { #sec-results}
 The experiment results are here divided in: qualitative, where is presented the blockages
-and crowd's turbulence on videos; and quantitative, regarding to egress time and flow 
-analysis. Then, "Panic Package" simulation results are compared against the experimental. 
+and crowd turbulence on videos; and quantitative, regarding to egress time and flow 
+analysis. Then, "Panic Package" simulation results are compared with the experimental ones. 
 That validated simulation model is used to check effectiveness of some aspects of IN 09
-regarding to nightclub's emergency egress. 
+regarding nightclub's emergency egress. 
 
 ## Qualitative Results { #sec-quali}
 Figure [#arch] presents a snapshot, at a point of the 175 crowd experiment, highlighting 
-two semicircles of individuals reminding an arch format. Those individuals composing the
+two semicircles of individuals, shoulder to shoulder, forming an arch format. Those individuals composing the
 arches withstand a huge compressive force and transmit that shoulder to shoulder to the
 wall. The more people push towards the arch, the more it compacts itself. 
 ~ Figure { #arch; caption:"Snapshot highlighting the arch."}
@@ -148,13 +148,13 @@ wall. The more people push towards the arch, the more it compacts itself.
 [arch]: images/blockage02.png "blockage02" { width:auto; max-width:100% }
 
 One of the consequences of the arches is that the individual closest to the wall
-can be impresioned there. It was observed that an individual 
+can be imprisoned there. It was observed that an individual 
 stood 32 seconds, next the door looking outside, pressed against the wall without
 moving itself regardless his efforts. The consequences of higher crowd pressures 
 could be turbulent flow, trampling and crushes. From those 3, just the first was
 observed at the experiments. Figure [#turb] represents the path taken by six 
 individuals (first V2 filmed position as a dot and final crossing the door)
-~ Figure { #turb; caption: "Snapshots overlayed showing how turbulence affects the path followed by a person (1 is the first position and 15 the egress)"}
+~ Figure { #turb; caption: "Snapshots overlaid showing how turbulence affects the path followed by a person (1 is the first position and 15 the egress)"}
 ![turbulencia]
 ~
 [turbulencia]: images/turbulencia.png "turbulencia" { width:auto; max-width:100% }
@@ -162,8 +162,8 @@ individuals (first V2 filmed position as a dot and final crossing the door)
 ## Quantitative Results { #sec-quanti}
 
 In a coordinated egress, that means people walking in an ordered queue flow, through each
-0.55m of the door's width will pass 100 individuals per minute [@NBR9077],[@in09]. That means, 
-egress flow is controlled by door's size. For example, where there are 100, they
+0.55m of the door's width will pass 100 individuals per minute [@NBR9077],[@in09]. That means 
+egress flow is controlled by the size of the door. For example, where there are 100, they
 will take around 30 seconds to cross a 1.10m sized door. By linearity, the egress 
 of 200 would last a minute. However, in an uncoordinated egress, the crowd 's dynamics
 blow with linearities. Table [#tab-tempo] presents the egress time and mean egress flow in 
