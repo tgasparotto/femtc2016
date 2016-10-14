@@ -21,12 +21,12 @@ name-references : REFERENCES
 ~ Abstract
 The use of egress simulation models in performance-based analysis relies on the confidence in the input and output data.
 These data strongly depend on a large number of parameters. 
-The undertaking study presented here focuses on the statistical aspects of these data, 
+The study presented here focuses on the statistical aspects of these data, 
 especially the population behavioral parameters which are the most likely to be scattered. 
 The study proposes a method to analyze the statistical aspects of an egress simulation model. 
 The method is based on statistical estimations of the distribution quantiles of the output parameters 
-and can be applied to stochastic simulations results, in order to provide quantitative informations 
-on the key parameters dispersion, such as Required Safe Egress Time (RSET). It also gives a justification to the required number 
+and can be applied to stochastic simulations results. It provides quantitative informations 
+on the key output parameters dispersion, such as Required Safe Egress Time (RSET). It also gives a justification to the required number 
 of simulations and input parameters precision to ensure a relevant output precision level. 
 It gives access to quantitative criteria to compare experimental and numerical data. 
 This method will be applied to analyze case studies simulated with BuildingExodus.
@@ -34,68 +34,60 @@ This method will be applied to analyze case studies simulated with BuildingExodu
 
 # INTRODUCTION { #sec-intro }
 
-The practice of the egress engineering leans on numerical modelings. Their purpose
-is to determine the time put by last occupant to evacuate a building in an accidental
-situation or not. This time is called Required Safe Egress Time (RSET) during
-the present document. The diverse phenomena related to human behavior
-occurring during an evacuation highlight they are not determinist. Indeed, the
-intrinsic behavior of a person, for example its response time before moving,
-can be scattered from a situation to an other one.
+The practice of the egress engineering relies on numerical models. Their purpose
+is to determine the time put by last occupant to evacuate a building either in normal or accidental
+situation. This time is called Required Safe Egress Time (RSET) all along
+the present document. The various human behavior phenomena
+occurring during an evacuation are not deterministic. Indeed, the
+intrinsic behavior of a person, for example its response time before movement,
+can be scattered from case to case.
 
-Furthermore, from a modeling point of view, we do not know in an explicit way
-the distribution of population and thus we create a panel which we consider
-representative and envelope of the situation who can be scattered too. So, the fact that
+Furthermore, from a modeling point of view,
+the population distribution is not explicitly known. 
+The model takes into account a population panel supposed to be typical of the real situation.The fact that
 the input data of the simulation are subjected to a statistical
-spread implies a statistical spread on the output data and particularly on the
+spread implies a statistical spread on the outputs and particularly on the
 RSET. However, the main goal of an egress simulation is
 to calculate a RSET which insures compatible
-tenability conditions with the evacuation and for 100% of the cases. Hence, it seems
-necessary to use a statistical approach to explore the field of possibilities
-for the RSET and do an adequate number of simulation. The numerical tool is
-suited to it and allows to determine a representative RSET in which we can
-trust.
+tenability conditions with the evacuation and for 100% of the cases. Hence, 
+a statistical approach is relevant to explore the possible range
+for the RSET value. The numerical tool is
+appropriate as it allows to perform a large number of RSET evaluations,
+in order to determine a representative RSET value.
 
 The numerical tool used in this research study is BuildingExodus
-v6.2. It allows by sophisticated sub-models means to take into
+v6.2. It uses sophisticated sub-models means to take into
 account interactions like occupant-occupant, occupant-fire and occupant-building.
-So, This multiple interactions permit to take into account 
-the occupants individually in the egress simulations. which means in other words, that each occupant
-is identifiable and has its own characteristics. This is essential to the study
-presented here. BuildingExodus is also able to generate and process the large number of
+Each occupant is individually modeled and has its own characteristics. This is essential to the study
+presented here. BuildingExodus is also able to process the large number of
 simulations needed to conduct this study.
 
 The statistical analysis method set up here requires some precautions.
-First, it is essential to know the parameters (response time, walking speed, interactions
-between people), which the dispersion may affect the desired results. The
-knowledge of their quantitative statistical distribution is essential. However,
-when we observe what exists in the literature, the results are not often presented
-in form of statistical distribution. Usually there is a range with a minimum
-value, a maximum value and a mean value. Thus, in this paper, we use only occupants
-whose parameters are fixed or varies between two bounds and provided by
-a uniform law to determine the influence of a particular parameter.
+First, it is essential to identify the parameters (response time, walking speed, interactions
+between people), which may impact the outputs. 
+The statistical distribution of their value is needed in order to produce relevant results.
+However, very few statistical informations are available from literature. Usually only a minimum,
+maximum and a mean values are available. Thus, only uniform distribution laws are used in this study. 
+This first order hypothesis does not impact the mathematical method, but needs further improvement.
 
-The statistical analysis method established is based on statistical estimation
+The statistical analysis method is based on statistical estimation
 of the output parameters quantile distribution (RSET in this document).
-The aim of this method is to provide quantitative elements,
-the statistical distribution of RSET particularly and also validate the number
-of simulations done for its determination. We will take an interest in particular in the confidence
-interval for the 95^th^ percentile. Thus, this paper presents the implementation of
- the statistical analysis method,
-its application on simple test cases and results of these
-application.
+The aim of this method is to provide quantitative elements on
+statistical distribution of RSET. It gives quantitative arguments to validate the number of simulations performed,
+compared to the expected precision. A particular focus will be done on the RSET 95^th^ percentile. 
 
-# STATISTICAL ANALYSIS METHOD : IMPLEMENTATION AND STATISTICAL ELEMENTS { #sec-statistical }
 
-To introduce the statistical analysis method we consider a sample of n realizations
-of a random variable that follows a normal law distribution. We draw a
-sample of 60&nbsp;achievements. In the following chapters, the variable considered
-will be the RSET.
+# STATISTICAL ANALYSIS METHOD: IMPLEMENTATION AND STATISTICAL ELEMENTS { #sec-statistical }
 
-Then, we build a confidence interval I~p~ for each order quantile &alpha; from the sample of size
+As an example, the statistical analysis method is applied to a sample of n realizations
+of a random variable which distribution is normal. 
+In the following chapters the variable considered will be the RSET.
+60&nbsp;samples are randomly drawn.
+
+Then, we build a confidence interval I~p~ for each quantile &alpha; from the sample of size
 n = 60 by choosing a level of confidence p equal to 90%. The confidence interval
-of quantile reflects the fact that the real value of the distribution function for
-this quantile is in this interval associated with a confidence level of 90% here.
-This confidence interval is expressed as:
+is the interval which includes the real value of the estimated quantiles with a 90% probability.
+This confidence interval is calculated as follows:
 
 
 ~ Math { #eq-alignment; caption:"Alignment example" }
@@ -110,12 +102,11 @@ with:
 * c the quantile ($1-\frac{p}{2}$) of the normal law distribution. c is equal to 1.645 for p = 90%.
 
 The distribution function is said empirical as opposed to the real distribution
-function. In fact, $\tilde{F}$ is built on the achievements and is not the distribution function
-whose equation is unknown in the case of the random variable is RSET.
+function, which is generally unknown.
 
 Figure [#fig3_1] shows the random variable realizations ranked
 in ascending order
-constituting the empirical distribution function as well as lower and upper
+generating the empirical distribution function as well as lower and upper
 bounds of each percentile confidence intervals.
 
 ~ Figure { #fig3_1; caption:"Empirical distribution function of the random variable, lower and upper bounds of the confidence interval and real distribution function";  page-align:forcehere}
@@ -124,42 +115,41 @@ bounds of each percentile confidence intervals.
 [fig3_1]: images/fig3_1.PNG "fig3_1" { width:auto; max-width:90%}
 
 This example highlights the problems related to extreme values of a random
-variable.
+variable: in some cases, the random variable will have no maximum upper value. 
+This is the case in this simple example, but can also happen for some RSET evaluations.
 
-On the one hand, a random variable can, not show a theoretical maximum. This is the case
-of this simplistic example. It is also true in the general case of an egress engineering study,
-where the random variable of interest is the RSET.
+In most of the cases, a maximum value exists, 
+but the finite samples number do not allow to access to this maximum value.
+A statistical analysis can indeed only give percentiles, 
+which get closer to 100% when the number of sample grows.
+Furthermore, a maximum RSET value can reflect very extreme
+scenarios where all worst case situations happen simultaneously.
+The value of this kind of extreme cases is questionable.
 
-On the other hand, even in the case where the maximum value exists, the
-finite size of the samples did not allow to access to this maximum value. Only are
-available percentiles even greater than the sample size grows.
+Furthermore, the width of the confidence interval decreases when the samples number increases.
 
-Furthermore, the width of the confidence interval decreases when the size of
-the sample increases.
+Consequently, the required number of draws required by a stochastic analysis is set by:
 
-Consequently, during a stochastic study, the required number of draws is set
-by:
-
-* the desired precision, which requires a gap width of confidence,
-* the order of the desired quantile, which imposes a number of prints.
+* the order of the desired percentile,
+* the required precision, which imposes the size of the confidence interval,
 
 # HYPOTHESIS OF THE MODEL { #sec-hypothesis }
 
-The numerical tool used in this study is BuildingExodus. However, statistical processing
-can be performed with any simulator.
+The numerical tool used in this study is BuildingExodus. 
+However, any kind of egress simulation could be processed by the mean of the proposed method.
 
-We remember that BuildingExodus is based on a discretization of space in nodes
-of 50&nbsp;cm&nbsp;x&nbsp;50&nbsp;cm interconnected.
-The connection model is the one of Moore as shown on figure [#fig4_1].
+BuildingExodus is based on a discretization of space by interconnected nodes
+of 50&nbsp;cm&nbsp;x&nbsp;50&nbsp;cm.
+The connection model is the Moore's model as shown on figure [#fig4_1].
 
 ~ Figure { #fig4_1; caption:"Nodes connectivity under BuildingExodus";  page-align:forcehere}
 ![fig4_1]
 ~
 [fig4_1]: images/fig4_1.PNG "fig4_1" { width:auto; max-width:25% }
 
-The test case is a room, square with sides of 16&nbsp;m and 4&nbsp;exits distributed on
-each side (figure [#fig4_2]). An occupant occupies an area of 0.25&nbsp;m² (0.5&nbsp;m&nbsp;x&nbsp;0.5&nbsp;m)
-or a node. Two occupants can not coexist on the same node. The exits measure 3&nbsp;m of width,
+The test case is a 16&nbsp;square room with 4&nbsp;exits distributed on
+each side (figure [#fig4_2]). Each occupant occupies one complete node.
+Two occupants can-not coexist on the same node. The exits are 3&nbsp;m of wide,
 and their flow rate is 2.0&nbsp;occupant/m/s.
 
 &pagebreak;
@@ -176,27 +166,26 @@ depending on test cases:
 * occupants are all men,
 * occupants have identical leaderships (in this case 10). This parameter affects how conflicts are resolved
 when two occupants want to occupy the same node which is impossible.
-BuildingExodus applies by default to the occupants a conflict resolution time of 0.8&nbsp;s
- and 1.5&nbsp;s before one of them occupies the node point of contention. According
-to the test cases, conflict resolution time can be set at the average value of the
+BuildingExodus applies by default to the occupants a conflict resolution time between 0.8&nbsp;s
+ and 1.5&nbsp;s before one of them occupies the node point of contention.
+For some test cases, the conflict resolution time is set at the average value of the
 interval, that is to say 1.15&nbsp;s.
-* occupant's patience is fixed to 10&nbsp;s. This implies that the occupants
+* occupant's patience is imposed to 10&nbsp;s. This implies that the occupants
 are willing to remain static in a queue for 10 seconds before attempting
 to change direction.
 * occupants are all valid,
 * their speed is 1.2&nbsp;m/s,
 * the response time is set at 15&nbsp;s or variable between 0 and 30&nbsp;s depending on the
-test case. The response time in this study is the delay for
+test case. The response time in this study is the delay before
 the occupants begin to move toward the exit.
 * occupants act independently of each other, that is to say that if an occupant begins
 to move toward the exit it will not make another occupant in movement before its response time is elapsed.
 
 This document do not present the attributes specifically related to fire such as incapacitating
 concentrations of toxic gases (HCl, HBr, HF, SO~2~, NO~2~, CH~2~CHO,…) because
-they have no influence on the cases treated.
+they have no influence on the treated cases.
 
-Regarding the choice of varying parameter values between two bounds,
-it is carried out with a draw on a uniform law in the context of this study.
+Varying parameters are randomly drawn according to a uniform law between two extreme values.
 
 The most advanced behavioral options are left at their default values (e.g:
 occupants are aware of all exits). The objective of the occupants is to reach
@@ -207,15 +196,20 @@ test cases are performed, they are not used again from one case to another. That
 100 and 1,000 achievements are performed, the first 100 are not part of the following
 1,000. The draw is completely redone every time.
 
+These choices are made for simplification purposes. 
+They are meaningless regarding to the proposed analysis method.
+
 # STUDY { #sec-study }
 
 ## Use of the statistical analysis method
 
-In this reference test case we draw 100 times then 1,000 times between 1 and
-1,000 people that were randomly positioned in the room. Figures [#fig5_1] and [#fig5_2]
-show the distribution functions as well as the lower and upper bounds
+In this reference test case, two random simulations sets are carried out. Each simulation takes 
+into models a random occupant number between 1 and 1,000, randomly located in the room. 
+The first set contains 100 simulations, the second one contains 1,000 simulations.
+Figures [#fig5_1] and [#fig5_2] show the calculated RSET distribution functions as well as
+ the lower and upper bounds
 of the confidence intervals for 100 draws, respectively 1,000 draws. The selected
-level of confidence is 90% (we keep this level of confidence in the rest of the
+level of confidence is 90% (the same level of confidence is used in the rest of the
 document).
 
 ~ Figure { #fig5_1; caption:"Distribution function for 100 draws and lower and upper bounds of the confidence interval (reference test case)";  page-align:forcehere}
@@ -230,30 +224,31 @@ document).
 
 Note that the number of draws is too low to reach the theoretical minimum
 RSET corresponding to a single occupant positioned in front of an exit. Indeed,
-we could expect a RSET close to 15&nbsp;s in this case (RSET = response time + travel
-time).
+one could expect a RSET close to 15&nbsp;s in this case (RSET = response time + traveling
+time, minimum traveling time being 0&nbsp;s).
 
 
 In accordance with what has been announced above, it is observed that:
 
 
-* the confidence interval decreases with increase of the draw number from 8.1&nbsp;s on average for
+* the confidence interval width decreases when simulation number increase from 8.1&nbsp;s on average for
 100&nbsp;draws to 2.5&nbsp;s on average for 1,000&nbsp;draws,
-* extreme percentiles have a confidence
-interval of which one bound is infinite for 100 and 1,000&nbsp;draws.
+* extreme percentiles have unbound confidence
+intervals for 100 and 1,000&nbsp;simulations.
 
-Thus, it is not possible to statistically determine a RSET implying that
-all occupants have evacuated in 100% of cases. This equals to the impossibility
-to obtain a max RSET. In addition, in the case where we determine a RSET
+Thus, it is not possible to statistically determine a maximum RSET value.
+In addition, in the case where we determine a RSET
 max, we might question the relevance of such a value that would be drawn from a
 disaster scenario and so wold be very severe in a more realistic study case. It seems preferable
 to retain the associated RSET 95^th^ percentile value of which we can estimate an
 relevant confidence interval with a limited number of draws. Table [#table-1] shows
 the confidence intervals associated with the 95^th^ percentile for 100, 200, 500,
 1,000 and 5,000&nbsp;draws. This choice implies that in 95% of cases all occupants have
-evacuated with a probability of 90%. It is also arbitrary. Indeed, it is quite
-possible to select another percentile associated with another level of confidence 
-according to the desired accuracy on the RSET.
+evacuated with a probability of 90%. 
+The choice of the studied percentile order should be discussed in further studies,
+as it is the key parameter associated to the building safety level.
+The confidence level impacts the confidence interval width,
+and must be chosen according to the required precision (see XXX).
 
 
 ~ TableFigure { #table-1; caption: "Confidence intervals of the 95^th^ percentile for 100, 200, 500, 1,000 and 5,000 draws"; .wide }
@@ -269,20 +264,19 @@ according to the desired accuracy on the RSET.
 ~
 
 
-
-Figure [#fig5_3] shows the width of the confidence interval of the 95^th^ percentile
-according to the number of simulation. There are a number of simulations for
+Figure [#fig5_3] shows the confidence interval width for the 95^th^ percentile
+according to the number of simulations. There are a number of simulations for
 which the width of the confidence interval is sufficiently low to be acceptable.
 Moreover, beyond this number an increase of the number of simulation does not provide
-significant accuracy (see table [#table-2]) while it increases the computing time
-considerably. Indeed, the simulations are all performed in very short times,
+significant accuracy (see table [#table-2]) while it considerably increases the computing time.
+Indeed, the simulations are all performed in very short times,
 despite the fact that the population can vary from 1 to 1,000&nbsp;occupants. So we
 deduce that the time spent to perform the simulations is proportional
 to the number of simulations (simulations are achieved in a sequentially way). So for all
 these reasons, 1,000&nbsp;simulations seem to be sufficient in the case studied here.
 
-In conclusion, application of statistical analysis method evaluates quantitatively
- number of simulations that seems most relevant to carry out a study.
+In conclusion, the proposed statistical analysis method quantitatively
+evaluates the number of simulations that seems most relevant to carry out a study.
 
 
 ~ Figure { #fig5_3; caption:"Width of the confidence interval according to the number of simulations";  page-align:forcehere}
@@ -295,7 +289,7 @@ In conclusion, application of statistical analysis method evaluates quantitative
 ~ TableFigure { #table-2; caption: "Decrease of the width of the confidence interval according to the number of simulations"; .wide }
 |                  |--------------------------------------------------|-----|
 |                  | Decrease of the width of the confidence interval |     |
-|                  | (%)                                                |     |
+|                  | (%)                                              |     |
 |                  |                                                  |     |
 |:-----------------|:------------------------------------------------:|:---:|
 | 100&nbsp;draws   | Reference                                        |     |
@@ -307,7 +301,7 @@ In conclusion, application of statistical analysis method evaluates quantitative
 
 ## Complementary analysis
 
-It is observed that at least three separate evacuation schemes exist according to the
+It is observed that at least three separate evacuation patterns exist according to the
 number of occupants (see figures [#fig5_1] and [#fig5_2]) the table [#table-3] gives the
 correspondence with the RSET obtained. These three schemes correspond to three
 density ranges of people highlighting the influence of this one on the RSET.
@@ -319,7 +313,7 @@ the occupants which has a direct influence on the RSET.
 |                                | Scheme 1                | Scheme 2                | Scheme 3                |
 |                                |                         |                         |                         |
 |:-------------------------------|:-----------------------:|:-----------------------:|:-----------------------:|
-| RSET&nbsp;(s)                    | [22.4&nbsp;;&nbsp;37.4] | [37.4&nbsp;;&nbsp;72.2] | [72.2&nbsp;;&nbsp;82.6] |
+| RSET&nbsp;(s)                  | [22.4&nbsp;;&nbsp;37.4] | [37.4&nbsp;;&nbsp;72.2] | [72.2&nbsp;;&nbsp;82.6] |
 | Number&nbsp;of&nbsp;occupants  | [34&nbsp;;&nbsp;297]    | [297&nbsp;;&nbsp;806]   | [806&nbsp;;&nbsp;982]   |
 | Population density (person/m²) | [0.1&nbsp;;&nbsp;1.2]   | [1.2&nbsp;;&nbsp;3.1]   | [3.1&nbsp;;&nbsp;3.8]   |
 | Average waiting time (s)       | 2.7                     | 13.5                    | 23.5                    |
@@ -331,9 +325,9 @@ The figures [#fig5_4] and [#fig5_5] show the dispersion of the number of occupan
 according to RSET for 100 and 1,000&nbsp;simulations. A greater dispersion is
 observed for the scheme n°1. This implies that for this scheme, it is not the
 number of occupant who controls the RSET but the distance from the last occupant
-of the exist. This shows the interest of the approach developed in this
-document, which provides additional elements of understanding of evacuation
-behavior.
+to the exit. This shows the interest of the approach developed in this
+document, which provides additional elements to understand evacuation
+behaviors.
 
 
 &pagebreak;
@@ -349,7 +343,7 @@ behavior.
 [fig5_5]: images/fig5_5.PNG "fig5_5" { width:auto; max-width:70% }
 
 Applying the method to the reference test case shows that there is very little
-simulations with the same number of occupant. This implies that we can not
+simulations with the same number of occupant. This implies that we can-not
 quantify the influence of position and conflict resolution time on the RSET at
 this stage of the study. This is the topic of the next chapter.
 
@@ -428,7 +422,7 @@ In a synthetic way the table [#table-6] presents for three simulations:
 * the width of this one called L~Ip5%-95%~ (see figure [#fig6_4]),
 * the ratio between the interval described above and the 50^th^ percentile called L~Ip5%-95%~/q~50%~.
 
-These notations are used during the document.
+These notations are used all along the document.
 
 ~ TableFigure { #table-6; caption: "Synthesis of the results obtained"; .wide ; page-align:forcehere}
 |           |-----------|-------------------------|----------|-------------------------|------------|-------------------|
@@ -574,7 +568,7 @@ The application of this statistical analysis method based on the quantile distri
 confidence interval width in line with the desired accuracy or 1,000&nbsp;simulations
 in this document,
 * to better understand the phenomena occurring during
-an evacuation such as the existence of different evacuation schemes during this
+an evacuation such as the existence of different evacuation schemes all along this
 study,
 * to show the nonlinear nature of the effects of the input parameters on the
 RSET which are in this case: conflict resolution time, the position of occupants,
