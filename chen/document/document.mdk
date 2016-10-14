@@ -348,14 +348,14 @@ It can be seen that males’ and females’ cumulative average speeds were gradu
 and not changed with the floor in Condition 3 and Condition 4.
 
 ~ Center
-![Figure11.(a)]![Firgue11 b]
-[Figure11.(a)]: images/Figure11.(a).png "Figure11.(a)" { width:45%; max-width:90% }
-[Firgue11 b]: images/Firgue11-b.png "Firgue11 b" { width:45%; max-width:90% }
+![Figure11(a)]![Figure11(b)]
+[Figure11(a)]: images/Figure11(a).png "Figure11(a)" { width:45%; max-width:90% }
+[Figure11(b)]: images/Figure11(b).png "Figure11(b)" { width:45%; max-width:90% }
 Figure11. The cumulative average velocity on each floor in Condition 1 (The error bar illustrates the uncertainty of the mean ascent velocity): a Male; b Female.
 
-![Firgue12 a]![Firgue12 b]
-[Firgue12 a]: images/Firgue12-a.png "Firgue12 a" { width:45%; max-width:90% }
-[Firgue12 b]: images/Firgue12-b.png "Firgue12 b" { width:45%; max-width:90% }
+![Figure12(a)]![Figure12(b)]
+[Figure12(a)]: images/Figure12(b).png "Figure12(b)" { width:45%; max-width:90% }
+[Figure12(b)]: images/Figure12(a).png "Figure12(a)" { width:45%; max-width:90% }
 Figure12. The cumulative average velocity on each floor in Condition 2 (The error bar illustrates the uncertainty of the mean ascent velocity): a Male; b Female.
 ~
 In normal condition, for the males, the fastest cumulative average speed was 1.28m/s which took place on the first flight of stairs, 
