@@ -25,7 +25,7 @@ Flow rate and capacity to hold people taken into account when sizing staircases
 ~ Column
 ![Stair1]
 
-[Stair1]: images/Stair1.JPG "Stair1" { width:auto; max-width:90% }
+[Stair1]: images/Stair1.JPG "Stair1" { width:auto; max-width:100% }
 ~
 ~ End Columns
 
@@ -87,105 +87,27 @@ BS 9999 says maximum of
 ~ End Columns
 
 
+# The observed evacuation drill
+
+
+![Times]
+
+[Times]: images/Times.JPG "Times" { width:100% }
+
+
+## One staircase discounted
+
+![fire1]
+
+[fire1]: images/fire1.JPG "fire1" { width:100% }
+
+## Model
+
+
+![Model2]
+
+[Model2]: images/Model2.JPG "Model2" { width:auto; max-width:90% }
+
+
 ## 
 
-Use `columns` to put blocks next to each other:
-
-~ Begin Columns
-~ Column { width:50% }
-A monarch butterfly (shown to the right)
-spends the winter in Mexico.
-~
-~ Column
-![butterfly]
-~
-~ End Columns
-
-[butterfly]: images/butterfly.png "A Monarch butterfly" { width:280px; vertical-align:middle }
-
-
-<!-- 
-For local background images, we need to have a reference to the image
-such that it's data gets embedded into the HTML page. We define
-it using "display=none" so it is hidden in the presentation. 
-We can then refer to the image in "data-background-image". 
--->
-
-![bfly]
-[bfly]: images/butterfly.png "Butterfly" { display:none }
-
-## Basement Level 3 { data-background-image:images/butterfly.png }
-That's it, time to go back up.
-
-[![arrowup]][back2]
-
-[arrowup]:  images/arrow.png "Up arrow" { width:178px; height:238px; transform:rotate(180deg) }
-[back2]:    #vertical { .image }
-
-
-## Themes {#themes}
-
-Reveal.js comes with a few themes built in:
-
-* [Simple](?theme=simple#/themes)
-
-
-Theme demos are loaded after the presentation which leads to flicker. In
-production you should load your theme in the `<head>` using a
-`<link>`.
-
-## Transitions { #transitions }
-
-You can select from different transitions, like:\
-[Cube](?transition=cube#/transitions) -
-[Page](?transition=page#/transitions) -
-[Concave](?transition=concave#/transitions) -
-[Zoom](?transition=zoom#/transitions) -
-[Linear](?transition=linear#/transitions) -
-[Fade](?transition=fade#/transitions) -
-[None](?transition=none#/transitions) -
-[Default](?#/transitions)
-
-
-
-## Pauses?
-
-Some pauses.
-
-
-## Point of View
-
-In Reveal.js Press **ESC** to enter the slide overview.
-
-Hold down alt and click on any element to zoom in on it using 
- [zoom.js]. Alt + click anywhere to zoom back out.
-
-
-[zoom.js]: http://lab.hakim.se/zoom-js
-
-
-## Works in Mobile Safari
-
-
-
-## Printing
-
-You can print a `revealjs` presentation nicely from the browser.
-
-First give the `?print-pdf` or `?print-paper` query on your final
-presentation (in the browser address bar) and then print from the Chrome
-browser selecting `Save to PDF`.
-
-Read more about it at the [revealjs documentation](https://github.com/hakimel/reveal.js#pdf-export)
-
-## RevealJS library
-
-N
-~ Begin Framed { padding:1ex; margin-top:1ex }
-~ End Framed
-
-## Thanks for looking :-)
-
-[slide]: http://research.microsoft.com/en-us/um/people/daan/madoko/samples/slidedemo/out/slidedemo.html
-[slide-mdk]: https://www.madoko.net/editor.html?#url=http://research.microsoft.com/en-us/um/people/daan/madoko/samples/slidedemo/slidedemo.mdk&options={"delayedUpdate":"true"}
-[slide-pdf]: http://research.microsoft.com/en-us/um/people/daan/madoko/samples/slidedemo/out/slidedemo.pdf
