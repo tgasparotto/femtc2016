@@ -38,11 +38,12 @@ Modified SP Fire 105 test rig
 ~ Begin Vertical
 # Incident radiation
 # $\dot{q}^{\prime\prime}_{IRHF}$ from the test
-~ Center
-$\dot{q}^{\prime\prime}_{INC} = \sigma T_{S}^{4} - \dfrac{h_{c}(T_{g}-T_{s})}{\epsilon} + \dfrac{dc\rho}{\epsilon} \cdot \dfrac{dT}{dt}$
+
+~ Equation  {#Equation4; caption:"Equation4" }
+  \dot{q}^{\prime\prime}_{INC} = \sigma T_{S}^{4} - \dfrac{h_{c}(T_{g}-T_{s})}{\epsilon} + \dfrac{dc\rho}{\epsilon} \cdot \dfrac{dT}{dt}
 ~
-~ Center
-$h_{c} = 2.4 T_{f}^{0.085} \cdot u_{\infty}^{1/2} \cdot x^{-1/2}$
+~ Equation  {#Equation4; caption:"Equation4" }
+  h_{c} = 2.4 T_{f}^{0.085} \cdot u_{\infty}^{1/2} \cdot x^{-1/2}
 ~
 ~ Center
 $\epsilon_{PT} \dot{q}^{\prime\prime}_{inc} - \epsilon_{PT} \sigma T_{PT}^{4} + h_{PT} (T_{g} - T_{PT}) + K(T_{g} - T_{PT})$
@@ -52,6 +53,18 @@ $= C \dfrac{dT_{PT}}{dT}$
 ~
 # $\dot{q}^{\prime\prime}_{IRHF}$ in FDS
 
+~ Equation  {#Equation4; caption:"Equation4" }
+  \dot{q}^{\prime\prime}_{INC} = \dfrac{\dot{q}^{\prime\prime}_{rad}}{\epsilon} + \sigma T_{w}^{4} + \dot{q}^{\prime\prime}_{conv}
+~
+~ Equation  {#Equation5; caption:"Equation5" }
+  \dot{q}^{\prime\prime}_{rad} = \dot{q}^{\prime\prime}_{rad, in} - \dot{q}^{\prime\prime}_{rad, out} = \dot{q}^{\prime\prime}_{rad, in} - \epsilon \sigma T_{w}^{4}
+~
+~ Equation  {#Equation6; caption:"Equation6" }
+  \dot{q}^{\prime\prime}_{INC} = \dfrac{\dot{q}^{\prime\prime}_{rad, in}}{\epsilon} + \dot{q}^{\prime\prime}_{conv}
+~
+~ Equation  {#Equation7; caption:"Equation7" }
+  \dot{q}^{\prime\prime}_{IRHF} = \dot{q}^{\prime\prime}_{INC} - \dot{q}^{\prime\prime}_{conv} = \dfrac{\dot{q}^{\prime\prime}_{rad, in}}{\epsilon} 
+~
 
 ~ End Vertical
 
