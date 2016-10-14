@@ -44,12 +44,13 @@ can be scattered from case to case.
 
 Furthermore, from a modeling point of view,
 the population distribution is not explicitly known. 
-The model takes into account a population panel supposed to be typical of the real situation.The fact that
+The model takes into account a population panel supposed to be typical of the real situation. The fact that
 the input data of the simulation are subjected to a statistical
 spread implies a statistical spread on the outputs and particularly on the
 RSET. However, the main goal of an egress simulation is
 to calculate a RSET which insures compatible
-tenability conditions with the evacuation and for 100% of the cases. Hence, 
+tenability conditions with the evacuation and for 100% of the cases. 
+Hence, 
 a statistical approach is relevant to explore the possible range
 for the RSET value. The numerical tool is
 appropriate as it allows to perform a large number of RSET evaluations,
@@ -68,7 +69,7 @@ between people), which may impact the outputs.
 The statistical distribution of their value is needed in order to produce relevant results.
 However, very few statistical informations are available from literature. Usually only a minimum,
 maximum and a mean values are available. Thus, only uniform distribution laws are used in this study. 
-This first order hypothesis does not impact the mathematical method, but needs further improvement.
+This first order hypothesis does not impact the mathematical method, but needs further improvements.
 
 The statistical analysis method is based on statistical estimation
 of the output parameters quantile distribution (RSET in this document).
@@ -147,7 +148,7 @@ The connection model is the Moore's model as shown on figure [#fig4_1].
 ~
 [fig4_1]: images/fig4_1.PNG "fig4_1" { width:auto; max-width:25% }
 
-The test case is a 16&nbsp;square room with 4&nbsp;exits distributed on
+The test case is a 16&nbsp;m square room with 4&nbsp;exits distributed on
 each side (figure [#fig4_2]). Each occupant occupies one complete node.
 Two occupants can-not coexist on the same node. The exits are 3&nbsp;m of wide,
 and their flow rate is 2.0&nbsp;occupant/m/s.
