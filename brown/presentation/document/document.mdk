@@ -6,6 +6,7 @@ Affiliation   : University of South Wales, UK
 Email         : stewart@smokeplume.co.uk
 Reveal Theme  : simple
 Beamer Theme  : singapore
+Toc Depth     : 1
 
 <script>
   revealConfig.transition='fade';
@@ -22,201 +23,175 @@ Beamer Theme  : singapore
 <iframe width="640" height="360" src="https://www.youtube.com/embed/3ewWOMg_ccc" frameborder="0" allowfullscreen></iframe>
 
 ## Sizing staircases
-~ Begin Columns
-~ Column { width:30% }
+~ Columns
+~~ Column { width:30%; vertical-align:top!important; }
 Flow rate and capacity to hold people taken into account when sizing staircases
-~
-~ Column
-
+~~
+~~ Column
 ![Stair1]
+~~
 ~
-~ End Columns
 
 [Stair1]: images/Stair1.JPG "Stair1" { width:auto; max-width:90% }
 
-
-
-
 ## Time to safety
-~ Begin Columns
-~ Column { width:30% }
+~ Columns
+~~ Column { width:30%; vertical-align:top!important; }
 When the last person enters the staircase people are safe
-~
-~ Column
+~~
+~~ Column
 ![door1]
-
-[door1]: images/door1.JPG "door1" { width:auto; max-width:100% }
+~~
 ~
-~ End Columns
+[door1]: images/door1.JPG "door1" { width:auto; max-width:100% }
 
 ## The starting point
 
+~ Center
 ![Bldg1]
+~
 
 [Bldg1]: images/Bldg1.JPG "Bldg1" { width:auto; max-width:90% }
 
 ## Guidance
-~ Begin Columns
-~ Column { width:50% }
-
+~ Columns
+~~ Column { width:50%; vertical-align:top!important; }
 ![ADB]
-
-[ADB]: images/ADB.JPG "ADB" { width:100% }
-
-~
-~ Column
-
+~~
+~~ Column {vertical-align:top!important;}
 ![BS9999]
-
-[BS9999]: images/BS9999.JPG "BS9999" { width:100% }
-
+~~
 ~
-~ End Columns
-
+[ADB]: images/ADB.JPG "ADB" { width:100% }
+[BS9999]: images/BS9999.JPG "BS9999" { width:100% }
 
 ## Guidance
 
-~ Begin Columns
-~ Column { width:50% }
-
-ADB says maximum of
-
+~ Columns
+~~ Column { width:50% }
+ADB says maximum of  
 350 people
-~
-~ Column
-
-BS 9999 says maximum of 
-
+~~
+~~ Column
+BS 9999 says maximum of  
 427 people
+~~
 ~
-~ End Columns
 
 
 # The observed evacuation drill
 
-
+~ Center
 ![Times]
+~
 
 [Times]: images/Times.JPG "Times" { width:100% }
 
 
 ## One staircase discounted
 
+~ Center
 ![fire1]
-
+~
 [fire1]: images/fire1.JPG "fire1" { width:100% }
+
 
 ## Model
 
-
+~ Center
 ![Model2]
+~
 
-[Model2]: images/Model2.JPG "Model2" { width:auto; max-width:90% }
+[Model2]: images/Model2.JPG "Model2" { width:90% }
 
 
 ## Times for each floor to evacuate
 
-
+~ Center
 ![Table1]
+~
 
 [Table1]: images/Table1.JPG "Table1" { width:70% }
 
+
 ## Safe?
 
-Building not considered safe 
-
+~ Center
+Building not considered safe  
 Remedial works were undertaken
+~
+
 
 # Remaining Question
 
-If the building had been code compliant
-
+~ Center
+If the building had been code compliant  
 what would the evacuation times have been?
+~
+
 
 # Pathfinder
 
-~ Begin Columns
-~ Column { width:70% }
-
-![Model1]
-
-[Model1]: images/Model1.JPG "Model1" { width:100% }
-~
-~ Column
-
+~ Center
+![Model1]  
 Evacuation reproduced in Pathfinder
 ~
-~ End Columns
+
+[Model1]: images/Model1.JPG "Model1" { width:100% }
 
 ## Model adjustments
-
-~ Begin Columns
-~ Column { width:30% }
-
-Priorities and speeds adjusted to closely match observed evacuation times
+~ Center
+![Model2]  
+Priorities and speeds adjusted to closely match observed evacuation times.
 ~
-~ Column
-
-![Model2]
-
-~
-
-~ End Columns
 
 ## Typical run
-
+~ Center
 <iframe width="640" height="360" src="https://www.youtube.com/embed/q_z1KBSOmT0" frameborder="0" allowfullscreen></iframe>
+~
 
 
 ## Evacuation times
 
-~ Begin Columns
-~ Column { width:30% }
-
-Population reduced to be code compliant (BS 9999)
-~
-~ Column
-
-
+~ Columns
+~~ Column {vertical-align:top!important}
+Population reduced to  
+be code compliant  
+(BS 9999)
+~~
+~~ Column {width:60%}
 ![Table2]
+~~
+~
 
 [Table2]: images/Table2.JPG "Table2" { width: 100% }
 
-~
-
-~ End Columns
 
 # Is there a problem?
 
-There appears to be a problem as people are unlikely to survive on a fire floor for over 6 minutes.
-
-
+~ Center
+There appears to be a problem as people are unlikely  
+to survive on a fire floor for over 6 minutes.
 
 And yet we have no history of deaths in office buildings
+~
 
 ## BS 9999
 
-This is new code
-
-It is less onerous than ADB
-
+~ Center
+This is new code  
+It is less onerous than ADB  
 It has not stood the test of time as ADB has
+~
 
 ## ADB compliant building
 
-~ Begin Columns
-~ Column { width:70% }
-
-![Table 3]
-
-[Table 3]: images/Table-3.JPG "Table 3" { width:100% }
-~
-
-~ Column
+~ Center
+![Table 3]  
 Population reduced to ADB max. and model run again
 ~
 
-~ End Columns
+[Table 3]: images/Table-3.JPG "Table 3" { width:50% }
 
 ## Methodology
 
@@ -235,13 +210,3 @@ But ADB results were not great
 Maybe we are too pessimistic about the performance of staircases
 
 As use of BS 9999 continues to grow time may reveal the answer
-
-
-
-
-
-
-
-
-
-
