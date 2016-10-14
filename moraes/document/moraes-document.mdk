@@ -6,10 +6,6 @@ Author        : Wagner Alberto de Moraes
 Affiliation   : Santa Catarina Military Fire Department
 Email         : wagnerm@cbm.sc.gov.br
 
-Author        : Vanderlei Vanderlino Vidal
-Affiliation   : Santa Catarina Military Fire Department
-Email         : vanderlino@cbm.sc.gov.br
-
 Bibliography  : references.bib
 Logo          : False
 Tex Header    :
@@ -42,16 +38,21 @@ burned the flammable sound insulation foam (polyurethane made).
 In a few seconds, black and toxic smoke spread throughout the
 nightclub, causing many people to faint. Others did strive towards 
 the doors (1.75m and 1.6m), which were only one meter far from each other. 
-The crowd rapidly blocked those exits, firefighters and volunteers tried to 
-open an alternative mean of escape on the wall by using sledgehammer. The Kiss tragedy
-alerted brazilians authorities that the fire safety codes must be improved. 
+The crowd rapidly blocked those exits, and firefighters and volunteers tried to 
+open an alternative mean of escape on the wall by using a sledgehammer. The Kiss tragedy
+alerted Brazilian authorities that the fire safety codes must be improved. 
 
 As units of the Brazilian federation, each state, through
 its fire department, is responsible to define the fire safety code and
 assure its application. For example, less than two years after Kiss, 
 Santa Catarina Military Fire Department (CBMSC), launched a new fire safety
-code (known as Normative Instructions or INs) banning the use of any type of fireworks
-and flammable foam in closed rooms. However, defining the size and 
+code (known as Normative Instructions or INs),
+
+
+being more explicit in prohibiting the use of any type of fireworks and flammable foam in closed rooms” 
+
+
+However, defining the size and 
 number of terminal emergency 
 exit, being both safe and cost-effective is not as simple as setting another
 article in a code. CBMSC launched an experiment in order to analyze what
@@ -122,7 +123,7 @@ during the experiment.
 Helbing, Farkas and Vicsek [@helbing2000simulating] presented an egress
 simulation model, here named as "Panic Package". The authors considered that in an 
 emergency, every individual should aim the exit, following a straight path at a desired
-speed. If those ahead are not at the same speed, they will be crowded by those 
+speed. If those ahead are not at the same speed, they will be crowded out by those 
 behind. Once the egress flow is reduced due to door blockages or a crowd, the pressure
 raises. According to this model, the forces inside a crowd in an
 uncoordinated egress are: a) physical, reaction to compression and friction either among
@@ -145,7 +146,7 @@ regarding nightclub's emergency egress.
 
 ## Qualitative Results { #sec-quali}
 Figure [#arch] presents a snapshot, at a point of the 175 crowd experiment, highlighting 
-two semicircles of individuals, shoulder to shoulder, forming an arch. Those individuals composing the
+two semicircles of individuals, shoulder to shoulder, forming an arch format. Those individuals composing the
 arches withstand a huge compressive force and transmit that shoulder to shoulder to the
 wall. The more people push towards the arch, the more it compacts itself. 
 ~ Figure { #arch; caption:"Snapshot highlighting the arch."}
@@ -198,82 +199,81 @@ As the initial population was increased in the experiments, the egress flow dimi
 However, the most crowded experiment (280) presented a flow higher than expected. 
 Checking out the videos viewing the crowd from its back (V1), it was verified that
 people had not pressed for escape as they should. As a lesson learned from the experiments,
-participants perceived on their own that the more they press, the longer will be the wait. 
-Furthermore, it is observed how uncoordinated egress is faster than an expected coordinated
-egress for the experiments up to crowd's density of 2.5 (175 individuals). 
+by themselves participants perceived that the more they press the longer will be the wait. 
+Furthermore, it is observed how the uncoordinated is faster than an expected coordinated
+egress for the experiments up to crowd's density of 2.5 (175 individuals). Remembering 
+that were no reentrances  
 
 To compare graphically all the experiments, Figure [#graf-all_Exp] presents
-the egress time versus the nth individual for all initial crowd's density, excepting 
+the egress time against the nth individual for all initial crowd's density, excepting 
 4.0 (280 individuals).
 ~ Figure { #graf-all_Exp; caption: "Egress time for the first 35 over several crowd initial density [individuals/m²]."}
 ![all_Exp]
 ~
 [all_Exp]: images/all_Exp.png "all_Exp" { width:auto; max-width:100% }
 
-The dark blue curve (crowd's density of 0.5, or 35 individuals) has a moderately constant slope, 
-meaning no blockages, almost a coordinated egress. The light blue curve, presents a sharp 
+The dark blue curve (crowd's density of 0.5, or 35 individuals) has a quite constant slope, 
+meaning no no blockages, almost a coordinated egress. The light blue curve, presents a sharp 
 slope at the 29th individual escape, which is the mathematical representation of a door
-blockage. Another way to see the blockages is through the time void between two
+blockage. Another way to see the blockages is through the time's void between two
 individual's exit, which is presented in Figure [#graf-210].
 ~ Figure { #graf-210; caption: "Time void between egresses for 210 individuals experiment."}
 ![210_void]
 ~
 [210_void]: images/210_void.png "210_void" { width:auto; max-width:100% }
 
-There are eight peaks over one second in Figure [#graf-210], which means during the
-emergency egress there were eight moments when the door was blocked for
+
+
+There are eight peaks over one second in Figure [#graf-210], that means, during the
+emergency egress there were eight moments when the door was blocked
 longer than a minute. During a peak, crowd pressure raises until the arch breaks and several individuals are expelled through
-the door. That is the mathematical view of what is observed in video, where people
-were right in front of the door, striving to egress but blocking each other, those behind giving more pressure until the blockage is broken and a
+the door. That is the mathematical view of what is observed in video, people
+were right in front of the door, striving to egress but blocking one against other, those behind giving more pressure until the blockage is broken and a
 stream of individuals breaks through the door. By instance, 
-right before the 37th individual's exit, the egress flow was stopped for more than 3.5
-seconds. 
+right before the 37th individual to exit, the egress flow was stopped during
+more than 3.5 seconds. 
 
 ## Verifying Simulation Model  
 
-Figures [#fig-expsim35] and [#fig-expsim210] present the comparison between experiment
-and simulation. The egress time is slightly lower at simulation, but the curve slope is
-relatively the same.
+Figures [#fig-expsim35] and [#fig-expsim210] presents the comparison between experiment
+and simulation. The egress time is slightly lower at simulation, but the curve slope is quite the same.
 
-~ Figure { #fig-expSim35; caption: "Experiment versus simulation: 35 individuals egressed."}
+~ Figure { #fig-expSim35; caption: "Experiment against simulation: 35 individuals egressed."}
 ![exp_sim_35]
 ~
 [exp_sim_35]: images/exp_sim_35.png "exp_sim_35" { width:auto; max-width:100% }
 
-~ Figure { #fig-expSim210; caption: "Experiment versus simulation: 210 individuals egressed."}
+~ Figure { #fig-expSim210; caption: "Experiment against simulation: 210 individuals egressed."}
 ![exp_sim_210]
 ~
 [exp_sim_210]: images/exp_sim_210.png "exp_sim_210" { width:auto; max-width:100% }
 
 ## Are IN 09's Requirements Enough?
 According to IN 09, for nightclubs similar to Kiss, the
-allowable public is double of the room area. That means, 
+allowable public is the double of room area. That means, 
 in a 100m² place, there will be 200 individuals allowed. Specifically to the terminal exit
-door, article 65, IV, c) [@IN09], states: "rooms above 400m² must have at least two
-doors, being one greater than 2m and the others greater than 1.2m". 
-Kiss had 615m² [@crea2013], under IN 09, a similar night
-club must have at most a public of 1230 and the doors should sum a width of at least 6.77m. 
+door, article 65, IV, c) [@IN09], states: "room above 400m² must have at least two
+doors being one greater than 2m and others greater than 1.2m". 
+Kiss had 615m² [@crea2013], under IN 09, such similar night
+club would have at most a public of 1230 and the doors should sum a width of at least 6.77m. 
 
 As the "Panic Package" does not  permit more than one door, it was assumed that the public
-will split itself and will follow to the closest door. For instance, in a 2 doors of 3.38m
+will split itself and will follow the closest door. For instance, in a 2 doors of 3.38m
 simulation, it will be done one simulation of one door with half of the public. 
 Two possibilities attending the code will be simulated: a) 2 doors of 3.38m and; 
 b) 3 doors of 2.26m. 
 
-Figure [#fig-all_sim] presents the simulation results for a nightclub with 1230
+Figure [#fig-all_sim] presents the simulation's results for a nightclub with 1230
 individuals. The egress time for a simulation of a nightclub like Kiss with 2 doors
-is doubly faster than the expected by IN 09, showing that its recommendations are 
-adequately safe. Furthermore, adding a third door reduced the egress time in 28% in simulations.
-~ Figure { #fig-all_sim; caption: "Experiment versus simulation: 210 individuals egressed."}
+is double faster than the expected by IN 09, showing that its recommendations are 
+quite safe. Furthermore, adding a third door reduced the egress time in 28% in 
+simulations.
+~ Figure { #fig-all_sim; caption: "Experiment against simulation: 210 individuals egressed."}
 ![all_sim]
 ~
 [all_sim]: images/all_sim.png "all_sim" { width:auto; max-width:100% }
 
 # CONCLUSION
-Although an uncoordinated egress is something to be avoided using 
-
-the experiments considered the  
-
 
 HELP ME HERE!
 
