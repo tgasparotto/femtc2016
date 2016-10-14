@@ -18,7 +18,7 @@ Bibliography  : references.bib
 Logo          : False
 Tex Header    :
   \def\refname{&name-references;}
-name-references : REFERENCES
+name-references : REFERENCES 
 
 [TITLE]
 
