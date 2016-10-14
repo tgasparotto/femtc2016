@@ -121,7 +121,7 @@ This is the case in this simple example, but can also happen for some RSET evalu
 
 In most of the cases, a maximum value exists, 
 but the finite samples number prevent from calculating this maximum value.
-A statistical analysis can indeed only give percentiles, 
+A stochastic analysis can indeed only give percentiles, 
 which get closer to 100% when the number of sample grows.
 In addition, a maximum RSET value can reflect very extreme
 scenarios where all worst case situations happen simultaneously.
@@ -164,7 +164,6 @@ and their flow rate is 2.0&nbsp;occupant/m/s.
 Concerning population, some attributes are arbitrarily fixed and others are variable
 depending on test cases:
 
-* occupants are all men,
 * occupants have identical leaderships (in this case 10). This parameter affects how conflicts are resolved
 when two occupants want to occupy the same node which is impossible.
 BuildingExodus applies by default a conflict resolution time between 0.8&nbsp;s
@@ -409,7 +408,7 @@ Table [#table-6] summarize the three simulations sets results:
 
 * 95^th^ percentile confidence interval (I~p95%~),
 * width of I~p95%~ L~Ip95%~ (see figure [#fig6_4]),
-* the interval between the lower bound of the 5th percentile and the upper bound of the 95^th^ percentile I~p5%-95%~,
+* the interval between the lower bound of the 5^th^ percentile and the upper bound of the 95^th^ percentile I~p5%-95%~,
 * width of I~p5%-95%~ L~Ip5%-95%~ (see figure [#fig6_4]),
 * the ratio between L~Ip5%-95%~ and the 50^th^ percentile L~Ip5%-95%~/q~50%~.
 
@@ -438,7 +437,7 @@ of the conflict resolution time as well as to the effect
 of history produced by the various collisions. It is coherent with the fact
 that L~Ip95%~ is higher for the pattern including a bigger density of people. 
 The same phenomenon is observed for L~Ip5%-95%~. It is reminded
-that the choice of the 95^th^ percentile and by extension the one of the 5th percentile
+that the choice of the 95^th^ percentile and by extension the one of the 5^th^ percentile
 depends on the objectives of the study.
 
 ## Test case n°2
