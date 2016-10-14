@@ -8,9 +8,8 @@ Reveal Theme  : simple
 Beamer Theme  : singapore
 Toc Depth     : 1
 
-<script>
+JS Footer:
   revealConfig.transition='fade';
-</script>
 
 [TITLE]
 
