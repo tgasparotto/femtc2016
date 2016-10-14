@@ -127,7 +127,7 @@ In addition, a maximum RSET value can reflect very extreme
 scenarios where all worst case situations happen simultaneously.
 The value of this kind of extreme cases is questionable.
 
-Furthermore, the width of the confidence interval decreases when the samples number increases.
+Furthermore, the confidence interval width decreases when the samples number increases.
 
 Consequently, the required number of draws required by a stochastic analysis is set by:
 
