@@ -4,8 +4,12 @@ Sub Title     : A UK evacuation case study using Pathfinder questions the suitab
 Author        : Stewart Brown BSc (Hons) Dip Stat FIFireE 
 Affiliation   : University of South Wales, UK
 Email         : stewart@smokeplume.co.uk
-Reveal Theme  : sky
+Reveal Theme  : simple
 Beamer Theme  : singapore
+
+<script>
+  revealConfig.transition='fade';
+</script>
 
 [TITLE]
 
