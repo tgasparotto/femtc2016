@@ -1,16 +1,14 @@
 [INCLUDE=style/lncs]
 Title         : VALIDATING FDS AGAINST A LARGE-SCALE FIRE TEST FOR FACADE SYSTEMS
 
-Author        : Markus Nilsson
+Author        : Markus Nilsson, Johan Nilsen and Axel Mossberg
 Affiliation   : Brandskyddslaget AB, Sweden
 Email         : markus.nilsson@brandskyddslaget.se
 
-Author        : Johan Nilsen
-
-Author        : Axel Mossberg
-
 Bibliography  : references.bib
 Logo          : False
+Csl Style     : madoko-numeric-nosort
+
 Tex Header    :
   \def\refname{&name-references;}
 name-references : REFERENCES
@@ -40,11 +38,6 @@ name-references : REFERENCES
  particularly close to the fire, a high mesh resolution was needed,
  namely a $D^{*}/\delta x$ of at least 30.
 ~
-
-[editor]: https://www.madoko.net/editor.html "Madoko.net Editor"
-[reference-manual]: http://research.microsoft.com/en-us/um/people/daan/madoko/doc/reference.html "Madoko Reference Manual"
-[femtc2016]: https://github.com/thunderheadeng/femtc2016
-[emaillink]: mailto:conference@thunderheadeng.com "conference@thunderheadeng.com"
 
 # INTRODUCTION { #sec-intro }
 Today FDS calculations are often used to model fires in complex building
@@ -156,6 +149,7 @@ development during the reference test is seen.
 ~ Figure { #Figure1; caption:"Upper - Illustration of the dimensions of the modified SP FIRE 105 facade test rig and the instrumentation consisting of six Inconel steel plate thermometers (C21-C26) and six sheathed type K thermocouples (C27-C32). Lower - Pictures showing the fire development during the reference test at different split times."}
 ![Figure1]
 ~
+
 [Figure1]: images/Figure1.jpg "Figure1" { width:auto; max-width:100% }
 
 ## Arrangement, instrumentation and measurements in the reference test
