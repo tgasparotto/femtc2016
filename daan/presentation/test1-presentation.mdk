@@ -9,9 +9,9 @@ Beamer Theme  : singapore
 
 Css: http://vjs.zencdn.net/5.11.7/video-js.css
 
-Slide {
-  data-transition:fade
-}
+<script>
+  revealConfig.transition='fade';
+</script>
 
 [TITLE]
 
