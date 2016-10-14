@@ -2,7 +2,7 @@
 Title         : 
 Sub Title     : A UK evacuation case study using Pathfinder questions the suitability of fire safety guidance
 Author        : Stewart Brown BSc (Hons) Dip Stat FIFireE 
-Affiliation   : University of South Wales
+Affiliation   : University of South Wales, UK
 Email         : stewart@smokeplume.co.uk
 Reveal Theme  : sky
 Beamer Theme  : singapore
@@ -17,22 +17,23 @@ Beamer Theme  : singapore
 
 <iframe width="640" height="360" src="https://www.youtube.com/embed/3ewWOMg_ccc" frameborder="0" allowfullscreen></iframe>
 
-## 
+## Sizing staircases
 ~ Begin Columns
 ~ Column { width:30% }
 Flow rate and capacity to hold people taken into account when sizing staircases
 ~
 ~ Column
-![Stair1]
 
-[Stair1]: images/Stair1.JPG "Stair1" { width:auto; max-width:100% }
+![Stair1]
 ~
 ~ End Columns
 
+[Stair1]: images/Stair1.JPG "Stair1" { width:auto; max-width:90% }
 
 
 
-## 
+
+## Time to safety
 ~ Begin Columns
 ~ Column { width:30% }
 When the last person enters the staircase people are safe
@@ -44,13 +45,13 @@ When the last person enters the staircase people are safe
 ~
 ~ End Columns
 
-## 
+## The starting point
 
 ![Bldg1]
 
 [Bldg1]: images/Bldg1.JPG "Bldg1" { width:auto; max-width:90% }
 
-## 
+## Guidance
 ~ Begin Columns
 ~ Column { width:50% }
 
@@ -109,5 +110,77 @@ BS 9999 says maximum of
 [Model2]: images/Model2.JPG "Model2" { width:auto; max-width:90% }
 
 
-## 
+## Times for each floor to evacuate
+
+
+![Table1]
+
+[Table1]: images/Table1.JPG "Table1" { width:70% }
+
+## Safe?
+
+Building not considered safe 
+
+Remedial works were undertaken
+
+# Remaining Question
+
+If the building had been code compliant
+
+what would the evacuation times have been?
+
+# Pathfinder
+
+~ Begin Columns
+~ Column { width:70% }
+
+![Model1]
+
+[Model1]: images/Model1.JPG "Model1" { width:100% }
+~
+~ Column
+
+Evacuation reproduced in Pathfinder
+~
+~ End Columns
+
+## Model adjustments
+
+~ Begin Columns
+~ Column { width:30% }
+
+Priorities and speeds adjusted to closely match observed evacuation times
+~
+~ Column
+
+![Model2]
+
+~
+
+~ End Columns
+
+## Evacuation times
+
+~ Begin Columns
+~ Column { width:30% }
+
+Population reduced to be code compliant (BS 9999)
+~
+~ Column
+
+
+![Table2]
+
+[Table2]: images/Table2.JPG "Table2" { width: 100% }
+
+~
+
+~ End Columns
+
+
+
+
+
+
+
 
