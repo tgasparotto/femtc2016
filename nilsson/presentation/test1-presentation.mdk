@@ -14,37 +14,40 @@ Beamer Theme  : singapore
 
 [TOC]
 
-# Madoko Presentation
+# Introduction
 
-Using [Madoko] it is easy to create beautiful presentations.
+# Experimental setup
 
-* [Html][slide]:
-  Uses the `Reveal.js` library by [Hakim El Hattab](http://hakim.se).\
-  This slide demo in Madoko is an adaption of his online demo.
-* [Pdf][slide-pdf]:
-  Uses the `Beamer` package for LaTeX
-* [Source][slide-mdk]:
-  Click to see the source of this presentation.
-
-
-[madoko]: http://madoko.codeplex.com
-
-## Reveal.js
-
-`reveal.js` is a framework for easily creating beautiful presentations using
-HTML. You'll need a browser with support for CSS 3D transforms to see it in
-its full glory. 
-
-And any Madoko features just work. Here is some math:
+# Comparing the same output data
 
 ~ Begin Framed { padding:1ex; margin-top:1ex }
-A famous equation is $e = mc^2$, but this one is 
-famous too:
+Incident radiation $\dot{q}^{\prime\prime}_{INC}$ $(W/m^{2})$ from Equation [#equation1]
 
-~ Equation  {#eq-gaussian}
-\int_{-\infty}^\infty e^{-a x^2} d x = \sqrt{\frac{\pi}{a}} 
+~ Equation  {#Equation1; caption:"Equation1" }
+  \dot{q}^{\prime\prime}_{INC} = \sigma T_{S}^{4} - \dfrac{h_{c}(T_{g}-T_{s})}{\epsilon} + \dfrac{dc\rho}{\epsilon} \cdot \dfrac{dT}{dt}
+~
+where:
+~ Equation  {#Equation2; caption:"Equation2" }
+  h_{c} = 2.4 T_{f}^{0.085} \cdot u_{\infty}^{1/2} \cdot x^{-1/2}
 ~
 ~ End Framed
+
+# Results
+
+## Vertical Slides {#vertical}
+Slides can be nested inside of other slides,
+try pressing [down].
+
+[![arrowdown]][down]
+
+[down]: # { .navigate-down }
+[arrowdown]: images/arrow.png "Down arrow" { width:178px; height:238px }
+
+![Figure5]
+
+[Figure5]: images/Figure5.png "Figure5" { width:auto; max-width:90% }
+
+# Conclusion
 
 ~~ Notes
 Oh hey, these are some notes. They'll be hidden in your presentation, but you
@@ -52,16 +55,6 @@ can see them if you open the speaker notes window (hit 's' on your keyboard).
 ~~
 
 ## Code
-
-Here is code, highlighted by Madoko 
-
-``` javascript
-function sqr( x ) {
-  var \(&pi;\) = 3.141593;
-  return x*x;  /* the square */
-}
-```
-We used `\(` and `\)` to escape into markdown to write &pi;.
 
 <!-- Example of nested vertical slides -->
 ~ Begin Vertical { data-background:Gainsboro }
@@ -208,9 +201,6 @@ This can be useful when using a [server to run revealjs](https://github.com/haki
 where you may use something like:
 
     @nopreview Reveal Url: http://localhost:8000/reveal.js
-
-
-## Thanks for looking :-)
 
 [slide]: http://research.microsoft.com/en-us/um/people/daan/madoko/samples/slidedemo/out/slidedemo.html
 [slide-mdk]: https://www.madoko.net/editor.html?#url=http://research.microsoft.com/en-us/um/people/daan/madoko/samples/slidedemo/slidedemo.mdk&options={"delayedUpdate":"true"}
