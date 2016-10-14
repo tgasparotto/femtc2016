@@ -334,7 +334,7 @@ ventilation applied a degree of smoke layering is still present.
 | [Track-level walkway]{font-weight:bold}            | [Elevated walkway]{font-weight:bold}               |
 | Visibility at 2m above track                       | Visibility at 3.2m above track                    |
 |                       \                             |                    \                                |
-| ![cropped-FT-M-05-M-0-V0-23-xt-WalkVIS-pathWalk23] | ![cropped-FT-M-05-M-0-V0-23-xt-ElevVIS-pathElev23]|
+| ![cropped-FT-M-05-M-0-V0-23-xt-WalkVIS-pathWalk23] | ![cropped-FT-M-05-M-0-V0-23-xt-ElevVIS-pathElev23]  |
 | (a) Still conditions (open boundaries at each end)                                                     ||
 | ![cropped-FT-M-05-M-0-V1-23-xt-WalkVIS-pathWalk23] | ![cropped-FT-M-05-M-0-V1-23-xt-ElevVIS-pathElev23] |
 | (b) Still conditions (open boundaries at each end)                                                     ||
@@ -390,7 +390,7 @@ ventilation applied a degree of smoke layering is still present.
 
 ## Agent Evacuation and FID
 The evacuation assessment was undertaken using the 1-D evacuation model discussed above. 
-Four sets of results are presented that compare the different parameters shown in Table [#exampleasetparameters]. 
+Four sets of results are presented that compare the different parameters shown in Table [#scenariotable]. 
 FID results have been truncated at unity. Other results have been normalized to present values between zero and 
 unity. The normalization used for each result is provided in the figure title. This normalization is convenient 
 to show a fraction of the worst-case outcome across the scenarios considered. 
