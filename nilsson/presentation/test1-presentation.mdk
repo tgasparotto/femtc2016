@@ -1,9 +1,10 @@
 [INCLUDE=presentation]
-Title         : Demo presentation in Madoko
-Sub Title     : In both HTML and PDF
-Author        : Daan Leijen
-Affiliation   : Microsoft Research
-Email         : daan@microsoft.com
+Title         : VALIDATING FDS AGAINST A LARGE-SCALE FIRE TEST FOR FACADE SYSTEMS
+Author        : Markus Nilsson
+Affiliation   : Brandskyddslaget AB
+Email         : markus.nilsson@brandskyddslaget.se
+Author        : Johan Nilsen
+Author        : Axel Mossberg
 Reveal Theme  : sky
 Beamer Theme  : singapore
 
