@@ -93,11 +93,11 @@ conditions during a fire with limited consideration of airflow transients.
 To simplify the number of simulations and to provide direct comparison of key parameters, some 
 inputs have been kept constant that might vary in reality. This is discussed in the following sections.
 
-# INPUTS AND MODELLING METHODOLOGY
+# INPUTS AND MODELING METHODOLOGY
 
 ## Scenario Selection
-CFD modelling and evacuation calculations where coupled in order to calculate agent tenability 
-during a fire event. Table [#ScenarioTable] show parameters that were considered for the CFD and evacuation modelling (RSET) respectively. It is acknowledged that this is a simplification compared to
+CFD modeling and evacuation calculations where coupled in order to calculate agent tenability 
+during a fire event. Table [#ScenarioTable] shows parameters that were considered for the CFD and evacuation modeling. It is acknowledged that this is a simplification compared to
 an actual metro system. Even so, combining all of these inputs in a parametric study would result
 in over 100,000 separate scenarios. To limit the number of scenarios the values in bold were selected. 
 This resulted in 12 separate CFD scenarios and 144 evacuation scenarios. 
@@ -329,7 +329,7 @@ Figure X Visibility [m] for 4% grade and 29m2 tunnel section
 The evacuation assessment was undertaken using the 1-D evacuation model discussed above. 
 Four sets of results are presented that compare the different parameters shown in Table [#exampleasetparameters]. 
 FID results have been truncated at unity. Other results have been normalised to present values between zero and 
-unity. The normalisation used for each result is provided in the figure title. This normalisation is convenient 
+unity. The normalization used for each result is provided in the figure title. This normalization is convenient 
 to show a fraction of the worst-case outcome across the scenarios considered. 
 
 The results for the evacuation assessment are generally as expected. As the exit spacing increases and 
@@ -365,9 +365,9 @@ tunnel ventilation, albeit less likely.
 
 Figure XX – Maximum agent FID. 
 
-Figure X – Number of agents exposed to FED ≥ 0.3. Values normalised by 600 (number of agents moving towards furthest exit).
+Figure X – Number of agents exposed to FED ≥ 0.3. Values normalized by 600 (number of agents moving towards furthest exit).
 
-Figure X – Number of agents exposed to less than 5m visibility for greater than 10 minutes. Values normalised by 600 (number of agents moving towards furthest exit).
+Figure X – Number of agents exposed to less than 5m visibility for greater than 10 minutes. Values normalized by 600 (number of agents moving towards furthest exit).
 
 Figure X – Maximum exit time. Values shown in hours because the maximum evacuation time across all simulations is approximately 1 hour. 
 
