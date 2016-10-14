@@ -58,8 +58,8 @@ The solution to simulate premixed flames consists of modeling the combustion lik
 
 Izar uses propane gas as source of energy. The physical properties of the combustible are well documented in the literature. 
 The flame temperature is one of these and it is the main model parameter. The combustion in Izar occurs under stoichiometric conditions achieving very high combustion efficiencies, 
-an very high temperatures.   rThe right flae an very high tan very high temperatures.   rThe right flame an very high tempes.   rThe right flame an very high tan very high temperatures.   rThe right fly high tempes.   rThe right flame an very high tan very high temperatures.   rThe right flamy high tempes.   r. The right flame temperatan vh an very high temperatures. The right flame an very high tempratures. The right flame temperatan vh an very high temperatures. The right flame aan very high tempratures. The right flame temperatan vh an very high temperatures. The right flame aan very high tempratures. The right flame temperatan vh an very high temperatures. The right flame aan very high tempratures. The right flame temperatan vh an very high temperatures. The right flame aan very high tempratures.  right flame temperatan vh an very high temperatures. The right flame y high tempratures.  right flame temperatan vh an very high temperatures. The right flame aan flame y high tempratures.  right flame temperatan vh an very high temperatures. The right flame high tempratures.  right flame temperatan vh an very high temperatures. The right flame aan  high tempratures.  right flame temperatan vh an very high tempeh temperatures. The right flame aan  high tempratures.  right flame temperatan vh ah tempeh temperatures. The right flame aan  high tempratures.  right flame temperatan vh an veryh tempeh temperatures. The right flame aan  high temprempratures.  right flame temperatan vh an veryh tempeh temperatures. The right flam temprempratures.  right flame temperatan vh an veryh tempeh temperatures. The right  temprempratures.  right flame temperatan vh an veryh tn vh an veryh tempeh temperatures. The right  temprempratures.  rightperatan vh an veryh tn vveryh tn vh an veryh tempeh es. The right  temprempratur The chosen flame temperature is the adiabatic temperature with dissociation. For the propane this temperature is 1995 °C (ref Drysdale !!!!)   Above the combustion region, the plume temperature can be calculated using the fluid mechanic equations available in FDS.
-ď
+an very high temperatures. The chosen flame temperature is the adiabatic temperature with dissociation. For the propane this temperature is 1995 °C (ref Drysdale !!!!). Above the combustion region, the plume can be represented using the fluid mechanic equations available in FDS.
+
 The plume contains the combustion products generated during the combustion. In the diffusion flames the efficiency of the combustion process defines the amount of products and particles which are commonly called smoke.
 However in a premixed combustion these combustion products are well known and do not change under different environment conditions. By a simple chemical balance its is easy to calculate these combustion products and the amount of them:
 
@@ -82,11 +82,11 @@ Once the chemical balance is available, the ratio fuel/product can be defined fo
 |----------|------------------|--------------------|----------------------|
 ~
 
-The molecular weight of these species is well known and making use of another well known value, the propane heat of combustion 46 kJ/g, it is straightforward to calculate the necessary kilograms of propane required to achieve a certain power.The chemical equation can be after adjusted to determinate the kg of products produced. Using the mass ratio available in the Table [#malecular-weight], can be calculated the amount of products generated.
+The molecular weight of these species is well known and making use of another well known value, the propane heat of combustion 46 kJ/g, it is straightforward to calculate the necessary kilograms of propane required to achieve a certain power.The chemical equation can be after adjusted to determinate the kg of products produced. Using the mass ratio available in the Table [#malecular-weight],the amount of products generated, can be calculated.
 
-For example, in order to generate a power of 500 kW, 10.78 g/s of propane are needed. Using the mass ratio available in the Table [#malecular-weight], the generated amount of products are:
+For example, in order to generate a power of 500 kW, 10.78 g/s of propane are needed. Using the mass ratio available in the Table [#molecular-weight], the generated amount of products are:
 
-~ Tablefigure {#Malecular-weight; caption:"Calculation example to determine the amount of product released from a 500 kW fire"}
+~ Tablefigure {#Molecular-weight; caption:"Calculation example to determine the amount of product released from a 500 kW fire"}
 
 |----------|----------------|-----------|--------------------|
 | Specie   | Amount of fuel | Mass ratio| Amount of products |
@@ -100,16 +100,16 @@ For example, in order to generate a power of 500 kW, 10.78 g/s of propane are ne
 |----------|----------------|-----------|--------------------|
 ~
 
-These calculation guarantees that the proper mass is being introduced in the system, and the subsequents mass balance in the system will be based on the correct initial mass values.
+These calculation guarantees that the proper mass is being introduced in the system, and the subsequents mass balance in the system will be based on correct initial mass values.
 
-These values must be in the FDS code introduced with the unit (kg/m&sdot;s). 
-therefore the combustion area must be also considered. In the studied case the burning chamber is open and has a V-Shape; it is 122 cm long and 17 cm wide. The geometry plays also an important roll to define the size of mesh. The mesh must represent the combustion area as accurate as possible. The initial geometry is related with the moment balance in the system, because it defines the initial velocities in the system. After a sensitivity analysis a 6.5 cm mesh was chosen for this case. 
+These values must be introduced in the FDS code with the unit (kg/m&sdot;s). 
+therefore the combustion area must be also considered. In the studied case the burning chamber is open and has a V-Shape; it is 122 cm long and 17 cm wide. The geometry plays also an important roll to define the size of mesh. The mesh must represent the combustion area as accurate as possible. The initial geometry is related to the moment balance in the system, because it defines the initial velocities in the system. After a sensitivity analysis a 6.5 cm mesh was chosen for this case. 
 
-Another significant factor in the model is the temperature. The adiabatic combustion temperature from propane was chosen. Per definition the mixture fuel-air is predefined and known in a premixed combustion. Stoichiometric mixtures can be defined in order to achieve the highest flame temperatures. These temperatures are the adiabatic combustion temperatures.
+Another significant factor in the model is the temperature. The adiabatic combustion temperature of the propane was chosen. Per definition the mixture fuel-air is predefined and known in a premixed combustion. Stoichiometric mixtures can be defined in order to achieve the highest flame temperatures. These temperatures are the adiabatic combustion temperatures.
 
 The definition of the initial temperature by means of the adiabatic temperatures guarantees that the initial energy represents the correct energy system and the subsequent energy balance in the model are based on proper initial values.
 
-~ begin Figure {#plume-comparison; caption:"Comparison between two models with different powers. It can be observed the different heigths of the hot region which represents the flames, according to the power of the simulation "}
+~ begin Figure {#plume-comparison; caption:"Comparison between two models with different powers. The different heigths of the hot region can be observed. These represent the flames, according to the power of the simulation "}
 ~ begin SubFigureRow
 ~ SubFigure {caption:"100 kW"}
 ![Temperature 0_1 MW]
@@ -128,17 +128,17 @@ The definition of the initial temperature by means of the adiabatic temperatures
 
 ~ End Figure
 
-To model needs a previously mention factor, the radiation. The higher the combustion efficiency, the lower the flame radiation fraction, since less soot is produced and the flame becomes transparent. However a small heat fraction is still as radiation released. 
-The fraction of heat released as convective heat, can be calculated using the partial pressures of CO~2~ and water vapour in the products. Using the chemical balance, see above Equation [#propan-combustion], the molar quantities are calculated and these values correspond to the partial pressures (surrounding pressure, ambient pressure, 1 atm). The adiabatic temperature T= 2.000 °C is considered:
+To model needs a previously mentioned factor, the radiation. The higher the combustion efficiency, the lower the flame radiation fraction, since less soot is produced and the flame becomes transparent. However a small heat fraction is still as radiation released. 
+The fraction of heat released as convective heat, can be calculated using the partial pressures of CO~2~ and water vapour in the products. Using the chemical balance, see above Equation [#propan-combustion], the molar quantities are calculated and these values correspond to the partial pressures (surrounding pressure, ambient pressure, 1 atm). The flame temperature T= 1995 °C is considered:
 
 
 * CO~2~: _p ~C02~_  --> 3 / (3 + 4 + 18.8 ) --> 0.116 atm
 * Water vapour: _p ~H20~_  --> 4 / (3 + 4 + 18.8 ) --> 0.155 atm
 
 ~ Equation {#Radiation; caption:"Radiation calculation"}
-R = 1.7 \cdot 10^{-6} (p_{CO_{2}}+p_{H_{2}0}) \cdot T^{2} = 0.978
+R = 1.7 \cdot 10^{-6} (p_{CO_{2}}+0.18 \cdot p_{H_{2}0}) \cdot T^{2} = 0.973
 ~
-The remaining fraction, around 2%, is the radiative fraction. This result is important both for the computer models implemented to study the system and to estimate the equivalent natural fire that the burner represents.
+The remaining fraction, around 3%, is the radiative fraction. This result is important both for the computer models implemented to study the system and to estimate the equivalent natural fire that the burner represents.
 
 # Model validation
 
@@ -150,9 +150,9 @@ The temperatures of the plume with the system working at four different powers w
 The temperatures were recorded following a similar grid like the one programmed in the simulations. 
 
 In the simulations a measurement grid was implemented along the X and Y axis, with a measurement position each 20 cm and reproduced in the Z- direction each 19.5 cm equivalent to three cells. 
-The validated FDS model for Izar eliminates also the uncertainties related with the fuel and it combustions. The measure grid can be seen in the figure [#grid].
+The validated FDS model for Izar eliminates also the uncertainties related to the fuel and its combustions. The measure grid can be seen in the figure [#grid].
 
-During the test not all the points could be controlled. Only the central position and two position along the X and Y axis were recorded. These positions were controlled at three different heights above the burner surface: 3 m, 4 m and 6 m. The measure grid can be seen in the figure [#grid].
+During the test not all positions could be controlled. Only the central position and two position along the X and Y axis were recorded. These positions were controlled at three different heights above the burner surface: 3 m, 4 m and 6 m. The measurement grid can be seen in the figure [#grid].
 
 ~ begin Figure  {#grid; caption:"The figure shows the measure grids use in FDS model and during the full scale tests"}
 ~begin SubFigureRow
@@ -167,12 +167,12 @@ During the test not all the points could be controlled. Only the central positio
 ~ End SubFigureRow
 ~ end Figure 
 
-[Grid sensor full scale]: images/Grid-sensor-full-scale.jpg "Grid sensor full scale" { width:auto; max-width:60% }
+[Grid sensor full scale]: images/Grid-sensor-full-scale.jpg "Grid sensor full scale" { width:auto; max-width:90% }
 
-These measures can be defined like local measures.
-The following graphs show the comparison between the recorded temperatures in the simulations and the ones recorded during the full scale test.
+These measurements can be defined as local.
+The graphs in figure [#central] show the comparison between the recorded temperatures in the simulations and the ones recorded during the full scale test.
 
-~ figure {caption:"Temperature comparison between the measured temperatures during the real scale test (blue) and the measured temepratures in FDS (green). The indicated heigths are referred to the burning surface. Temperatures obtained with the system working at full power, 1.200 kW"}
+~ figure {#central; caption:"Temperature comparison between the measured temperatures during the real scale test (blue) and the measured temepratures in FDS (green). The indicated heigths are referred to the burning surface. Temperatures obtained with the system working at full power, 1.200 kW"}
 
 ![Temperatures plume]
 ~ 
