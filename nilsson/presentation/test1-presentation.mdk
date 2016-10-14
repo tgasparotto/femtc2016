@@ -11,62 +11,50 @@ Beamer Theme  : singapore
 [TITLE]
 
 # Introduction
-
 Text
 
 ~ Begin Vertical
 # Experimental setup
 ![Namnlös1]
-
 [Namnlös1]: images/Namnl-s1.png "Namnlös1" { width:auto; max-width:100% }
 
-# Setup
+# Setup in FDS
 ![Figure4]
+[Figure4]: images/Figure4.jpg "Figure4" { width:auto; max-width:100% }
 
-[Figure4]: images/Figure4.jpg "Figure4" { width:auto; max-width:90% }
-
-# Setup
+# Fire development
 ![Figure1-2ny]
-
-[Figure1-2ny]: images/Figure1-2ny.png "Figure1-2ny" { width:auto; max-width:90% }
+[Figure1-2ny]: images/Figure1-2ny.png "Figure1-2ny" { width:auto; max-width:100% }
 
 ~ End Vertical
 
-# Comparing the same form of output data
+# Comparing the same form of data
 
-~ Begin Framed { padding:1ex; margin-top:1ex }
-Incident radiation $\dot{q}^{\prime\prime}_{INC}$ $(W/m^{2})$ from Equation [#equation1]
+* Incident radiation $\dot{q}^{\prime\prime}_{INC}$ $(W/m^{2})$
 
-~ Equation  {#Equation1; caption:"Equation1" }
-  \dot{q}^{\prime\prime}_{INC} = \sigma T_{S}^{4} - \dfrac{h_{c}(T_{g}-T_{s})}{\epsilon} + \dfrac{dc\rho}{\epsilon} \cdot \dfrac{dT}{dt}
-~
-where:
-~ Equation  {#Equation2; caption:"Equation2" }
-  h_{c} = 2.4 T_{f}^{0.085} \cdot u_{\infty}^{1/2} \cdot x^{-1/2}
-~
-~ End Framed
+$\dot{q}^{\prime\prime}_{INC} = \sigma T_{S}^{4} - \dfrac{h_{c}(T_{g}-T_{s})}{\epsilon} + \dfrac{dc\rho}{\epsilon} \cdot \dfrac{dT}{dt}$
+
+$h_{c} = 2.4 T_{f}^{0.085} \cdot u_{\infty}^{1/2} \cdot x^{-1/2}$
+
+$\epsilon_{PT} \dot{q}^{\prime\prime}_{inc} - \epsilon_{PT} \sigma T_{PT}^{4} + h_{PT} (T_{g} - T_{PT}) + K(T_{g} - T_{PT}) = C \dfrac{dT_{PT}}{dT}$
 
 ~ Begin Vertical
 # Results
 
 ## Thermocouples 5 cm grid
 ![Figure5]
-
 [Figure5]: images/Figure5.png "Figure5" { width:auto; max-width:100% }
 
 ## Thermometers 5 cm grid
 ![Figure6]
-
 [Figure6]: images/Figure6.png "Figure6" { width:auto; max-width:100% }
 
 ## $T_{AST}$ 5 cm grid
 ![Figure7]
-
 [Figure7]: images/Figure7.png "Figure7" { width:auto; max-width:100% }
 
 ## $\dot{q}^{\prime\prime}_{IRHF}$ 5 cm grid
 ![Figure8]
-
 [Figure8]: images/Figure8.png "Figure8" { width:auto; max-width:100% }
 
 ~ End Vertical
@@ -76,22 +64,18 @@ where:
 
 ## Grid sensitivity, thermocouples
 ![Figure9]
-
 [Figure9]: images/Figure9.png "Figure9" { width:auto; max-width:100% }
 
 ## Grid sensitivity, thermometers
 ![Figure10]
-
 [Figure10]: images/Figure10.png "Figure10" { width:auto; max-width:100% }
 
 ## Grid sensitivity, $T_{AST}$
 ![Figure11]
-
 [Figure11]: images/Figure11.png "Figure11" { width:auto; max-width:100% }
 
 ## Grid sensitivity, $\dot{q}^{\prime\prime}_{IRHF}$
 ![Figure12]
-
 [Figure12]: images/Figure12.png "Figure12" { width:auto; max-width:100% }
 
 ~ End Vertical
@@ -101,13 +85,15 @@ where:
 
 ## FDS 6.2.0 vs FDS 5.5.3, temperature
 ![Figure14]
-
 [Figure14]: images/Figure14.png "Figure14" { width:auto; max-width:100% }
 
 ## FDS 6.2.0 vs FDS 5.5.3, $\dot{q}^{\prime\prime}_{IRHF}$
 ![Figure15]
-
 [Figure15]: images/Figure15.png "Figure15" { width:auto; max-width:50% }
+
+## Facade damage
+![facadedamage]
+[facadedamage]: images/facadedamage.PNG "facadedamage" { width:auto; max-width:100% }
 
 ~ End Vertical
 
