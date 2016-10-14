@@ -26,28 +26,37 @@ Modified SP Fire 105 test rig
 ~~
 ~
 
-# Setup in FDS
-![Figure4]
-[Figure4]: images/Figure4.jpg "Figure4" { width:auto; max-width:100% }
-
 # Fire development
 ![Figure1-2ny]
 [Figure1-2ny]: images/Figure1-2ny.png "Figure1-2ny" { width:auto; max-width:100% }
 
+# Setup in FDS
+![Figure4]
+[Figure4]: images/Figure4.jpg "Figure4" { width:auto; max-width:100% }
+
+~ End Vertical
+~ Begin Vertical
+# Incident radiation
+# $\dot{q}^{\prime\prime}_{IRHF}$ from the test
+~ Center
+$\dot{q}^{\prime\prime}_{INC} = \sigma T_{S}^{4} - \dfrac{h_{c}(T_{g}-T_{s})}{\epsilon} + \dfrac{dc\rho}{\epsilon} \cdot \dfrac{dT}{dt}$
+~
+~ Center
+$h_{c} = 2.4 T_{f}^{0.085} \cdot u_{\infty}^{1/2} \cdot x^{-1/2}$
+~
+~ Center
+$\epsilon_{PT} \dot{q}^{\prime\prime}_{inc} - \epsilon_{PT} \sigma T_{PT}^{4} + h_{PT} (T_{g} - T_{PT}) + K(T_{g} - T_{PT})$
+~ 
+~ Center
+$= C \dfrac{dT_{PT}}{dT}$
+~
+# $\dot{q}^{\prime\prime}_{IRHF}$ in FDS
+
+
 ~ End Vertical
 
-# Comparing the same form of data
-
-* Incident radiation $\dot{q}^{\prime\prime}_{INC}$ $(W/m^{2})$
-
-$\dot{q}^{\prime\prime}_{INC} = \sigma T_{S}^{4} - \dfrac{h_{c}(T_{g}-T_{s})}{\epsilon} + \dfrac{dc\rho}{\epsilon} \cdot \dfrac{dT}{dt}$
-
-$h_{c} = 2.4 T_{f}^{0.085} \cdot u_{\infty}^{1/2} \cdot x^{-1/2}$
-
-$\epsilon_{PT} \dot{q}^{\prime\prime}_{inc} - \epsilon_{PT} \sigma T_{PT}^{4} + h_{PT} (T_{g} - T_{PT}) + K(T_{g} - T_{PT}) = C \dfrac{dT_{PT}}{dT}$
-
 ~ Begin Vertical
-# Sensitivity analysis
+# Results
 
 ## Grid sensitivity, thermocouples
 ![Figure9]
@@ -88,12 +97,10 @@ $\epsilon_{PT} \dot{q}^{\prime\prime}_{inc} - \epsilon_{PT} \sigma T_{PT}^{4} + 
 
 # Conclusions
 
+~ Center
 * Need of a high mesh resolution to obtain credible results, namely a $D^{*}/\delta x$ of at least 30.
 * It is crucial to compare the same form of output
 * 
-
-~ Slide
-A slide with no header
 ~
 
 ~ Begin Vertical
@@ -114,6 +121,8 @@ A slide with no header
 ## $\dot{q}^{\prime\prime}_{IRHF}$ 5 cm grid
 ![Figure8]
 [Figure8]: images/Figure8.png "Figure8" { width:auto; max-width:100% }
+
+* Incident radiation $\dot{q}^{\prime\prime}_{INC}$ $(W/m^{2})$
 
 ~ End Vertical
 
