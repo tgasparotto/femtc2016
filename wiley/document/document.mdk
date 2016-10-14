@@ -38,7 +38,7 @@ and researched. These scenarios provide novel uses for existing egress
 models as well as present unique challenges.
 
 This paper reviews the current capabilities of people movement models,
-new uses for egress models not related to fire egress, and the
+non-traditional uses for egress models not related to fire egress, and the
 adaptations of models necessary to enable broader more robust
 simulations, including security and ingress, dynamic signage and active
 wayfinding, and interior tasks (carrying or pushing objects, occupant
@@ -75,7 +75,7 @@ setup requirements. Additionally, alternate uses of current egress models
 may be specifically requested, increasing their applicability outside the
 fire evacuation field, including the security and building management
 sectors. This paper reviews the current capabilities of people
-movement models, new uses for egress models not related to fire egress,
+movement models, non-traditional uses for egress models not related to fire egress,
 and the adaptations of models necessary to enable broader more robust
 simulations.
 
@@ -91,8 +91,8 @@ Traditionally, people movement models are used to perform evacuation studies in 
 
 Generally, the constraints placed on movement of occupants reflect the objective to egress. For example, a model may include the ability to specify a subset of exits that are available or known to an occupant or group of occupants but not interior doors. Generally, the limitations of the models are such that occupants are presumed to have some level of omniscience as to the paths that are available to them, the total distance of each potential path, and the state of key elements throughout the building (e.g., whether a door is open or closed). While knowledge of the paths and relative distances involved will vary with the occupants' familiarity with the building, in a real-world scenario, occupants will not be aware that an exit path is blocked or closed unless notified. It is possible to show the effects of redirecting occupants by assigning occupants to go to "dead end" locations before going to an available exit, but this process can be somewhat labor-intensive.
 
-# NEW USES
-As the state of the art in people movement modeling continues to evolve, many new uses of the models will be developed and identified. This may be driven by the developers in an effort to improve their models or by the modeling community and their clients as new areas of interest are identified. This section focuses on several new and developing uses for traditional egress models, but is by no means intended to be exhaustive.
+# NON-TRADITIONAL USES
+As the state of the art in people movement modeling continues to evolve, many non-traditional uses of the models will be developed and identified. This may be driven by the developers in an effort to improve their models or by the modeling community and their clients as areas of interest are identified. This section focuses on several non-traditional and developing uses for traditional egress models, but is by no means intended to be exhaustive.
 
 ## Ingress and Security
 Models that have been developed for traditional egress evaluations are
@@ -113,7 +113,7 @@ One such study involved an assessment of ingress in the elevator lobby of a high
 ~
 [elev2]: images/elev2.png "elev2" { width:auto; max-width:90% }
 
-While the above example represents a relatively simple ingress arrangement, detailed studies of factors affecting ingress, and their application to ingress modeling have been performed. One such study [@Strege:PED2014] examined more closely the effects of security screening and variations in arrival rate on congestion in an ingress scenario. The manufacturer of the security equipment, which consisted of revolving doors with a card scanner, had specified a throughput rate that was found through field testing to be achievable only in ideal conditions. In practice, a percentage of users would have their cards misread or have the revolving doors "kickback" to prevent piggy-backing behavior, resulting in a lower effective flow rate. Additionally, capturing "bursts" and "lulls" in arrival rates was found to be critical for predicting occupant congestion. Assuming a constant, average occupant ingress rate resulted in overly optimistic results and did not predict periods of occupant congestion that were observed in the field during population bursts. The findings of this study demonstrate that in real-world applications the dynamics of building entry can be complicated and using an over-simplified approach may result in grossly under predicting congestion levels and wait times.
+While the previous example represents a relatively simple ingress arrangement, detailed studies of factors affecting ingress, and their application to ingress modeling have been performed. One such study [@Strege:PED2014] examined more closely the effects of security screening and variations in arrival rate on congestion in an ingress scenario. The manufacturer of the security equipment, which consisted of revolving doors with a card scanner, had specified a throughput rate that was found through field testing to be achievable only in ideal conditions. In practice, a percentage of users would have their cards misread or have the revolving doors "kickback" to prevent piggy-backing behavior, resulting in a lower effective flow rate. Additionally, capturing "bursts" and "lulls" in arrival rates was found to be critical for predicting occupant congestion. Assuming a constant, average occupant ingress rate resulted in overly optimistic results and did not predict periods of occupant congestion that were observed in the field during population bursts. The findings of this study demonstrate that in real-world applications the dynamics of building entry can be complicated and using an over-simplified approach may result in grossly under predicting congestion levels and wait times.
 
 Many of the features and the underlying theory needed to model ingress have already been incorporated into existing people movement models designed primarily for egress. The flow and potential queuing around a door or other checkpoint is not significantly altered by the direction of movement (exceptions of door swing, etc., aside). Some models currently incorporate features such as turnstiles or ticket gates that allow the modeler to specify a flow-rate or a fixed delay time for each person to pass through. However, even in those models that do not, it is generally possible to use the existing features to simulate such behavior. Similarly, some models provide a way to directly specify a source term for occupants entering the simulation, while in others the desired flow rate must be achieved using metered doors and "holding rooms". Lastly, in some cases, the end goal of reaching an exit that is a basic tenet of models originally built for egress may provide some unique challenges when occupant flow is reversed to model ingress. Depending upon the desired final location or task of an ingressing occupant, it may be possible to create artificial exits in order to achieve the desired movement within the building.
 
@@ -140,7 +140,7 @@ mobility impaired occupants is accounted for by the use of slower speeds
 and limitations on the use of stairs. Occupants using mobility assistive
 devices such as wheelchairs or walkers or occupants carrying or pushing
 large items such as rolling luggage or hospital beds are accounted for by
-either increasing the size of occupants or not at all. In practices,
+either increasing the size of occupants or not at all. In practice,
 these limitations may oversimplify the complex dynamics that occur during
 an assisted evacuation or when a significant number of people are
 carrying luggage (e.g., airports and other transit stations). Assisted
@@ -159,7 +159,7 @@ greater than transit time for occupants without roller
 bags[@Goodhead:airport]. This decrease was attributed to the increased
 effective length of an occupant pulling rolling luggage and their inability to "twist" their shoulders, causing single file movement through the exit doorway.
 
-Existing egress models can simulate assistance and carrying behaviors to varying degrees. In those models that have group evacuation features, the act of staff going to the occupant in need of assistance and escorting them out of the building or to a safe location may be simulated using a number of groups. However, this may not be practical in the case where a staff member makes many trips back and forth to provide assistance. Furthermore, in scenarios where there are occupants are using wheelchairs or other mobility assistive devices, the evacuation strategy involves horizontal exiting or internal relocation, rather than simple building egress. In this scenario, a means whereby occupants may be given a final goal of relocating to a given room or area rather than exiting the simulation is needed. As with the previously discussed new uses of egress models, this behavior can often be mimicked in existing egress models but cannot be specified directly.
+Existing egress models can simulate assistance and carrying behaviors to varying degrees. In those models that have group evacuation features, the act of staff going to the occupant in need of assistance and escorting them out of the building or to a safe location may be simulated using a number of groups. However, this may not be practical in the case where a staff member makes many trips back and forth to provide assistance. Furthermore, in scenarios where there are occupants are using wheelchairs or other mobility assistive devices, the evacuation strategy involves horizontal exiting or internal relocation, rather than simple building egress. In this scenario, a means whereby occupants may be given a final goal of relocating to a given room or area rather than exiting the simulation is needed. As with the previously discussed non-traditional uses of egress models, this behavior can often be mimicked in existing egress models but cannot be specified directly.
 
 Thunderhead Engineering is currently developing an assisted evacuation capability into its Pathfinder model through the use of vehicles that can be customized in terms of their geometry and attachment points for assistants[@Thunderhead:assist]. While still in the development stage, this additional feature has the potential to greatly improve the capacity to model assisted evacuation and the evacuation of occupants in wheelchairs or with other mobility assistive devices. Figure [#fig-assistedevac] shows an example of what this new capability might look like[@Thunderhead:assist].
 
@@ -170,7 +170,7 @@ Thunderhead Engineering is currently developing an assisted evacuation capabilit
 
 # SUMMARY
 
-The people movement models currently available are generally designed and well-suited for simulating evacuation in the event of a fire emergency. However, often these models are capable of simulating a wider array of uses. The range of potential applications of existing people movement models are expanding to meet the demand for more complex emergency evacuation scenarios as well as analyses outside the fire and emergency management fields. Existing models may often be configured to simulate these new scenarios and behaviors, though implementation of model changes of various levels of complexity would improve the ability of modelers to reflect new and complex behaviors more organically. In either case, the end result is a more robust model capable of handling a wide range of applications.
+The people movement models currently available are generally designed and well-suited for simulating evacuation in the event of a fire emergency. However, often these models are capable of simulating a wider array of uses. The range of potential applications of existing people movement models are expanding to meet the demand for more complex emergency evacuation scenarios as well as analyses outside the fire and emergency management fields. Existing models may often be configured to simulate these scenarios and behaviors, though implementation of model changes of various levels of complexity would improve the ability of modelers to reflect non-traditional and complex behaviors more organically. In either case, the end result is a more robust model capable of handling a wide range of applications.
 
 
 [BIB]
