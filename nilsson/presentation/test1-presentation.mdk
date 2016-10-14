@@ -39,27 +39,6 @@ $h_{c} = 2.4 T_{f}^{0.085} \cdot u_{\infty}^{1/2} \cdot x^{-1/2}$
 $\epsilon_{PT} \dot{q}^{\prime\prime}_{inc} - \epsilon_{PT} \sigma T_{PT}^{4} + h_{PT} (T_{g} - T_{PT}) + K(T_{g} - T_{PT}) = C \dfrac{dT_{PT}}{dT}$
 
 ~ Begin Vertical
-# Results
-
-## Thermocouples 5 cm grid
-![Figure5]
-[Figure5]: images/Figure5.png "Figure5" { width:auto; max-width:100% }
-
-## Thermometers 5 cm grid
-![Figure6]
-[Figure6]: images/Figure6.png "Figure6" { width:auto; max-width:100% }
-
-## $T_{AST}$ 5 cm grid
-![Figure7]
-[Figure7]: images/Figure7.png "Figure7" { width:auto; max-width:100% }
-
-## $\dot{q}^{\prime\prime}_{IRHF}$ 5 cm grid
-![Figure8]
-[Figure8]: images/Figure8.png "Figure8" { width:auto; max-width:100% }
-
-~ End Vertical
-
-~ Begin Vertical
 # Sensitivity analysis
 
 ## Grid sensitivity, thermocouples
@@ -97,12 +76,36 @@ $\epsilon_{PT} \dot{q}^{\prime\prime}_{inc} - \epsilon_{PT} \sigma T_{PT}^{4} + 
 
 ~ End Vertical
 
+# Conclusions
+
+* Need of a high mesh resolution to obtain credible results, namely a $D^{*}/\delta x$ of at least 30.
+* It is crucial to compare the same form of output
+* 
+
 ~ Slide
 A slide with no header
 ~
 
-# Conclusion
+~ Begin Vertical
+# Results
 
+## Thermocouples 5 cm grid
+![Figure5]
+[Figure5]: images/Figure5.png "Figure5" { width:auto; max-width:100% }
+
+## Thermometers 5 cm grid
+![Figure6]
+[Figure6]: images/Figure6.png "Figure6" { width:auto; max-width:100% }
+
+## $T_{AST}$ 5 cm grid
+![Figure7]
+[Figure7]: images/Figure7.png "Figure7" { width:auto; max-width:100% }
+
+## $\dot{q}^{\prime\prime}_{IRHF}$ 5 cm grid
+![Figure8]
+[Figure8]: images/Figure8.png "Figure8" { width:auto; max-width:100% }
+
+~ End Vertical
 
 [slide]: http://research.microsoft.com/en-us/um/people/daan/madoko/samples/slidedemo/out/slidedemo.html
 [slide-mdk]: https://www.madoko.net/editor.html?#url=http://research.microsoft.com/en-us/um/people/daan/madoko/samples/slidedemo/slidedemo.mdk&options={"delayedUpdate":"true"}
