@@ -311,26 +311,26 @@ Figure9. The average ascent velocity on each floor in Condition 3 (The error bar
 Figure10. The average ascent velocity on each floor in Condition 4 (The error bar illustrates the uncertainty of the mean ascent velocity): a Male; b Female.
 ~
 In normal condition, the fastest average speeds of males and females were 1.28m/s and 0.97m/s which both took place on the first flight of stairs, 
-and then it decreases continuously during the ascending movement until on the 10th floor. 
+and then it decreases continuously during the ascending movement until on the 10^th^ floor. 
 After that the ascent speed remains a constant of around 0.69m/s for the males and 0.57m/s for the females. 
-The lowest average speed of males was around 0.63 m/s, which was observed on the 14th floor. 
-The lowest average speed of females was around 0.53 m/s, which was observed on the 10th floor.
+The lowest average speed of males was around 0.63 m/s, which was observed on the 14^th^ floor. 
+The lowest average speed of females was around 0.53 m/s, which was observed on the 10^th^ floor.
 
 In lighting-out condition, the fastest average speeds of males and females were 0.97m/s and 0.82m/s which both at the 1st level, 
 and then the speeds decreased continuously for the 1-12 floors and 1-10 floors respectively, and then kept at around 0.68 m/s for the males and 0.57 m/s for the females. 
 After that the ascent speeds remained a constant of around 0.68m/s for the males and 0.57m/s for the females. 
 The lowest average speed of males was around 0.60 m/s, which was observed on the 17-18th level. 
-The lowest average speed of females was around 0.53 m/s, which was observed on the 15th level and the 18th level.
+The lowest average speed of females was around 0.53 m/s, which was observed on the 15^th^ level and the 18^th^ level.
 
 In the condition of wearing 27% transmittance eye-patch, the ascent speeds of males and females maintained at 0.71m/s and 0.51m/s respectively. 
-For the males, the fastest average speed was 0.84m/s which took place at 1st floor, 
+For the males, the fastest average speed was 0.84m/s which took place at 1^st^ floor, 
 and the lowest average speed was around 0.57 m/s, which was observed on the 14-15th floor. 
 For the females the fastest average speed of females was 0.55m/s which took on 14th floor, 
 and the lowest average speed was around 0.51 m/s, which was observed on the 14-15th floor. 
 
 In the condition of wearing 16% transmittance eye-patch, the ascent speeds of males and females maintain at 0.54m/s and 0.48m/s respectively. 
 The fastest average speed was 0.62m/s of males and 0.55m/s of females, 
-which appeared at 6-7th level. The lowest average speed was 0.48m/s on the 13-14th level for the males and 0.44m/s on the 10th level for the females.
+which appeared at 6-7th level. The lowest average speed was 0.48m/s on the 13-14th level for the males and 0.44m/s on the 10^th^ level for the females.
 
 In Jeon’s research, he pointed out that for the four visibility conditions, 
 the evacuation speed were 1.34m/s-1.69m/s in Condition 1, 1.23m/s-1.61m/s in Condition 2, 0.62m/s-0.64m/s in Condition 3 and 0.51m/s-0.61m/s in Condition 4, respectively. 
@@ -359,8 +359,8 @@ Figure11. The cumulative average velocity on each floor in Condition 1 (The erro
 Figure12. The cumulative average velocity on each floor in Condition 2 (The error bar illustrates the uncertainty of the mean ascent velocity): a Male; b Female.
 ~
 In normal condition, for the males, the fastest cumulative average speed was 1.28m/s which took place on the first flight of stairs, 
-the lowest cumulative average speed was 0.79m/s which observed on the 20th level, and the difference between the fastest and the slowest speed was 0.39m/s. 
-For the females, the fastest cumulative average speed was 0.98 m/s which appeared on the 2nd floor, 
+the lowest cumulative average speed was 0.79m/s which observed on the 20^th^ level, and the difference between the fastest and the slowest speed was 0.39m/s. 
+For the females, the fastest cumulative average speed was 0.98 m/s which appeared on the 2^nd^ floor, 
 the lowest cumulative average speed was 0.62 m/s which observed on the 17th, 18th, 19th and 20th levels, 
 and the difference between the fastest and the slowest speeds were 0.36m/s.
 
@@ -373,7 +373,7 @@ and the longer the ascending traveling distance, the smaller the impact.
 In light-out condition, the fastest cumulative average speed of males was 0.97m/s on the first flight of stairs, 
 and decreased to 0.70m/s on the 19-20th level, and the difference between the two speeds were 0.27m/s. 
 The fastest cumulative average speed of females was 0.83m/s on the 1st level, 
-the lowest cumulative average speeds of females were 0.60m/s on the 18th, 19th and 20th levels, 
+the lowest cumulative average speeds of females were 0.60m/s on the 18^th^, 19^th^ and 20^th^ levels, 
 and the difference between the fastest and the slowest speeds were 0.23m/s.
 
 ~ Center
@@ -388,7 +388,7 @@ Figure13. The cumulative average velocity on each floor in Condition 3 (The erro
 Figure14. The cumulative average velocity on each floor in Condition 4 (The error bar illustrates the uncertainty of the mean ascent velocity): a Male; b Female.
 ~
 
-In the condition of wearing 27% transmittance eye-patch, the fastest cumulative average speed of males and females were 0.84m/s and 0.55m/s, both at 1st level. 
+In the condition of wearing 27% transmittance eye-patch, the fastest cumulative average speed of males and females were 0.84m/s and 0.55m/s, both at 1^st^ level. 
 The lowest cumulative average speeds of males and females were 0.69m/s and 0.46m/s. 
 The difference between the fastest and the slowest speeds of males and females were 0.15m/s and 0.09m/s.
 
@@ -407,6 +407,7 @@ In general, the females are more likely to use the handrail than the males throu
 The percentage of participants who used the handrail on different levels are presented in Figure 17.
 
 ~ Center
+
 ![Firgue15 a]
 [Firgue15 a]: images/Firgue15-a.png "Firgue15 a" { width:45%; max-width:90% }
 Figure15. The ration of handrail utilization
@@ -425,12 +426,12 @@ Figure16. The behavior of handrail utilization: a Male; b Female.
 Figure17. The ration of handrail utilization on different levels: a Condition 1; b Condition 2;c Condition 3; d Condition 4.
 ~
 In Condition 1, the ratio of handrail utilization on the first few floors was quite low and it increased continuously with the ascending floors. 
-For the males, the ratio reached the peak was on the 17th floor, which occupied around 20%. 
-For the females, the ratio reaches the peak was on the 8th floor, which occupied around 40%. 
+For the males, the ratio reached the peak was on the 17^th^ floor, which occupied around 20%. 
+For the females, the ratio reaches the peak was on the 8^th^ floor, which occupied around 40%. 
 In Condition 2, the ratio of handrail utilization was fluctuated with the ascending floors. 
-The ratio reaches the top of males was 46.7% on the 14th level and females was 53% on the 8th level. 
+The ratio reaches the top of males was 46.7% on the 14^th^ level and females was 53% on the 8^th^ level. 
 In Condition 3, the ratio of handrail utilization for the males was quite low at first and it increased on the 1-9floors and it decreased on the rest of stairs. 
-For the males, the peak of the ratio was 93.3% on the 5th and 8th floors, and the bottom of the ratio was 53.3% on the 15th floor. 
+For the males, the peak of the ratio was 93.3% on the 5^th^ and 8^th^ floors, and the bottom of the ratio was 53.3% on the 15^th^ floor. 
 For the males, the ratio was around 100% with the ascending floors. In condition 4, generally all the participants used the handrail during the upward movement.
 
 # Conclusions
