@@ -184,10 +184,9 @@ seats or surpassing other agents.
 ![CdM_Sala1PF2]
 ~
 
-
 [CdM_Sala1PF2]: images/CdM_Sala1PF2.png "CdM_Sala1PF2" { width:auto; max-width:90% }
 
-Figure [#figCcdM_sala1PF2] shows a snapshot of the simulation process, having only the 
+Figure [#figCdM_sala1PF2] shows a snapshot of the simulation process, having only the 
 usual 4 exits, left and right, and the rear emergency exits closed (red rectangle).
 This represents the layout used to collect data shown at table [#table1].
 
@@ -296,8 +295,8 @@ preliminary tests to evaluate the tool and prove its application as a valuable a
 for the emergency planner and the safety manager. Pathfinder simulations 
 can be expanded to increase the number of possibilities and scenarios. For instance, 
 to test a blocked exit, by fire or another event, such as a terrorist attack or
-simply a riot and/or conflits amongts the spectators.
- 
+simply a riot and/or conflicts amongst the spectators.
+
 The aforementioned examples are among the ways to extend the work
 presented and stem other research, exploring the Pathfinder possibilities to its limit.
 
@@ -322,47 +321,6 @@ test version of Pathfinder that was used for the case studies.
 At last, to University do Porto, and LIACC, Laboratório de Inteligência Artificial
 e Ciências dos Computadores, that funded the presence at this Conference.
  
-
-# BIBLIOGRAPHY AND REFERENCES
-When references are used in the text, tie them to an alphabetical (by
-principal author) list of references to be included as the last item of
-your paper. The format commonly used in scientific literature follows:
-
-Smith, J. S., Bloggs, R. T. and Jones, E. R. (1974), "Magnetic Anomalies
-in Geothermal Systems", Journal of Fluid Mechanics, 254, 73-79
-
-Leslie Lamport, LaTeX: A Document Preparation System (2nd Edition), Addison-Wesley, 1994
-
-When using Madoko, edit the content of the .bib file in the document
-folder, and use the reference methods as shown in the [Bibliography and
-Citations
-Section](http://research.microsoft.com/en-us/um/people/daan/madoko/doc/reference.html#sec-bib)
-of the Madoko Manual.
-
-A bibliography file consists of all your references in the BibTeX format, for example:
-
-    @BOOK{ Knuth:TeX,  
-        author   = "Knuth, Donald E.",  
-        title    = "The {\TeX} book",  
-        publisher= "Addison-Wesley",  
-        year     = 1984  
-    }
-
-Entries in the bibliography files can now be referenced using semi-colon
-separated references, for example:
-``` Markdown 
-Read about LaTeX and TeX [@Knuth:TeX; @Lamport:LaTeX].
-```
-Results in: Read about LaTeX and TeX [@Knuth:TeX; @Lamport:LaTeX].
-
-Please include full title of journal articles or other references,
-journal, volume, date, pages. There is a nice [table on
-Wikipedia](https://en.wikibooks.org/wiki/LaTeX/Bibliography_Management#BibTeX)
-that shows all of the different data fields for the BibTeX file.
-
-
-
-[BIB]
 
 &pagebreak;
 
