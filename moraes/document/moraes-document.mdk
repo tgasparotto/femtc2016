@@ -47,12 +47,10 @@ its fire department, is responsible to define the fire safety code and
 assure its application. For example, less than two years after Kiss, 
 Santa Catarina Military Fire Department (CBMSC), launched a new fire safety
 code (known as Normative Instructions or INs), being more explicit in prohibiting
-the use of any type of fireworks and flammable foam in closed rooms” 
-
-However, defining the size and 
-number of terminal emergency 
-exit, being both safe and cost-effective is not as simple as setting another
-article in a code. CBMSC launched an experiment in order to analyze what
+the use of any type of fireworks and flammable foam in closed rooms. However, 
+defining the size and number of terminal emergency exit, being both safe and
+cost-effective is not as simple as setting another
+article in a code. CBMSC made an experiment in order to analyze what
 happens during an uncoordinated egress like the one that took place at Kiss. 
 
 As part of a monograph of CBMSC's Military Academy, an experiment
@@ -198,8 +196,15 @@ Checking out the videos viewing the crowd from its back (V1), it was verified th
 people had not pressed for escape as they should. As a lesson learned from the experiments,
 by themselves participants perceived that the more they press the longer will be the wait. 
 Furthermore, it is observed how the uncoordinated is faster than an expected coordinated
-egress for the experiments up to crowd's density of 2.5 (175 individuals). Remembering 
-that were no reentrances  
+egress for the experiments up to crowd's density of 2.5 (175 individuals). 
+
+
+However, the experiments only considered a will to exit, no individual reentries were
+stimulated. Reentry is the act of an egressed individual who tries to come back inside 
+the building seeking someone else. Besides of helping obstructing the doorway reentries 
+can make the others confused about the right direction to take [@costa2012aplicaccao].
+
+
 
 To compare graphically all the experiments, Figure [#graf-all_Exp] presents
 the egress time against the nth individual for all initial crowd's density, excepting 
@@ -245,13 +250,13 @@ and simulation. The egress time is slightly lower at simulation, but the curve s
 ~
 [exp_sim_210]: images/exp_sim_210.png "exp_sim_210" { width:auto; max-width:100% }
 
-## Are IN 09's Requirements Enough?
+## Are IN-09's Requirements Enough?
 According to IN 09, for nightclubs similar to Kiss, the
 allowable public is the double of room area. That means, 
 in a 100m² place, there will be 200 individuals allowed. Specifically to the terminal exit
 door, article 65, IV, c) [@IN09], states: "room above 400m² must have at least two
 doors being one greater than 2m and others greater than 1.2m". 
-Kiss had 615m² [@crea2013], under IN 09, such similar night
+Kiss had 615m² [@crea2013], under IN 009, such similar night
 club would have at most a public of 1230 and the doors should sum a width of at least 6.77m. 
 
 As the "Panic Package" does not  permit more than one door, it was assumed that the public
@@ -272,7 +277,24 @@ simulations.
 
 # CONCLUSION
 
-HELP ME HERE!
+It was verified on experiments how is the influence on the egress flow as the crowd density
+rises. For higher crowd pressures, it was observed door blockages and crowd 
+turbulence. The last experiment, where individuals became aware that the more they pushed 
+the longer they waited, proves how lowering the crowd pressure can improve the egress 
+flow. 
+
+Regarding to Panic Package simulator, the egress curve obtained was very close to the
+experimental results, being a good alternative to simulate egress time for an specific door
+given an initial number of individuals. Although it was not possible to simulate with more
+than one door or obstacle, it was possible to estimate how it would be the uncoordinated 
+egress in a nightclub with the same area as Kiss if the door were designed nowadays.
+
+The IN 09 requirements for door width at nightclubs (exit discharge) can be considered safe.
+The uncoordinated egress was doubly faster than it would be expected from a coordinated egress.
+However, those simulations assumed simplified conditions, not considering falls or fainting
+people, smoke and heat from fire and internal obstacles which are part of a real nightclub 
+fire scene.
+
 
 
 [BIB]
