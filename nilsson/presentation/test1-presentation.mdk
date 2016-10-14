@@ -87,6 +87,20 @@ $= C \dfrac{dT_{PT}}{dT}$
 ![Figure12]
 [Figure12]: images/Figure12.png "Figure12" { width:auto; max-width:100% }
 
+## Facade damage
+![facadedamage]
+[facadedamage]: images/facadedamage.PNG "facadedamage" { width:auto; max-width:100% }
+
+## Other parameters studied
+
+~ Center
+* Influence of mesh alignments
+* Influence of the choice of thermocouple position
+* Influence of increased radiation angles
+* Influence if increased HRRPUA
+* Influence of increased soot yield
+~
+
 ~ End Vertical
 
 ~ Begin Vertical
@@ -101,10 +115,6 @@ $= C \dfrac{dT_{PT}}{dT}$
 ![Figure15]
 [Figure15]: images/Figure15.png "Figure15" { width:auto; max-width:50% }
 ~
-
-## Facade damage
-![facadedamage]
-[facadedamage]: images/facadedamage.PNG "facadedamage" { width:auto; max-width:100% }
 
 ~ End Vertical
 
