@@ -451,7 +451,7 @@ In this case too, the distribution functions are not uniform despite the fact th
 conflict resolution time is fixed to 1.15&nbsp;s. 
 It demonstrates the strong non-linearity of the history effects.
 In addition, this implies that the
-distribution functions of test case 3 and 4 will not be uniform. Synthetically table
+distribution functions of test case 3 and 4 will not be uniform. Synthetically, table
 [#table-7] presents I~p95%~, L~Ip95%~, I~p5%-95%~, L~Ip5%-95%~ and L~Ip5%-95%~/q~50%~ for
 the three simulations and compared to those of the test case n°1. The widths of
 intervals are included in figure [#fig6_5]. This demonstrates the very weak influence of the 
