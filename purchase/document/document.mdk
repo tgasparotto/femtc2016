@@ -329,12 +329,12 @@ full tunnel cross section. This effect is more noticeable for the track-level
 walkway than for the elevated walkway which suggests that even with tunnel 
 ventilation applied a degree of smoke layering is still present.
 
-~ Figure { #fig-Vis-0-23; caption:"Visibility [m] for 0% grade and 23m^2^ tunnel section."; .wide }
+~ TableFigure { #fig-Vis-0-23; caption:"Visibility [m] for 0% grade and 23m^2^ tunnel section."; .wide }
 |:----------------------------:|:-----------------------------------:|:
 | [Track-level walkway]{font-weight:bold}            | [Elevated walkway]{font-weight:bold}               |
-| Visibility at 2m above track                       | Visibility at 3.2m above track                    |
-|                       \                             |                    \                                |
-| ![cropped-FT-M-05-M-0-V0-23-xt-WalkVIS-pathWalk23] | ![cropped-FT-M-05-M-0-V0-23-xt-ElevVIS-pathElev23]  |
+| Visibility at 2m above track                       | Visibility at 3.2m above track                     |
+| \                                                  | \                                                  |
+| ![cropped-FT-M-05-M-0-V0-23-xt-WalkVIS-pathWalk23] | ![cropped-FT-M-05-M-0-V0-23-xt-ElevVIS-pathElev23] |
 | (a) Still conditions (open boundaries at each end)                                                     ||
 | ![cropped-FT-M-05-M-0-V1-23-xt-WalkVIS-pathWalk23] | ![cropped-FT-M-05-M-0-V1-23-xt-ElevVIS-pathElev23] |
 | (b) Still conditions (open boundaries at each end)                                                     ||
@@ -346,46 +346,47 @@ ventilation applied a degree of smoke layering is still present.
 
 [cbar]: images/cbar.png "cbar" { width:auto; max-width:90% }
 
-[cropped-FT-M-05-M-0-V0-23-xt-WalkVIS-pathWalk23]: images/cropped-FT-M-05-M-0-V0-23-xt-WalkVIS-pathWalk23.png "cropped-FT-M-05-M-0-V0-23-xt-WalkVIS-pathWalk23" { width:auto; max-width:100% }
+[cropped-FT-M-05-M-0-V0-23-xt-WalkVIS-pathWalk23]: images/cropped-FT-M-05-M-0-V0-23-xt-WalkVIS-pathWalk23.png "cropped-FT-M-05-M-0-V0-23-xt-WalkVIS-pathWalk23" { width:auto; max-width:50% }
 
-[cropped-FT-M-05-M-0-V0-23-xt-ElevVIS-pathElev23]: images/cropped-FT-M-05-M-0-V0-23-xt-ElevVIS-pathElev23.png "cropped-FT-M-05-M-0-V0-23-xt-ElevVIS-pathElev23" { width:auto; max-width:100% }
+[cropped-FT-M-05-M-0-V0-23-xt-ElevVIS-pathElev23]: images/cropped-FT-M-05-M-0-V0-23-xt-ElevVIS-pathElev23.png "cropped-FT-M-05-M-0-V0-23-xt-ElevVIS-pathElev23" { width:auto; max-width:50% }
 
-[cropped-FT-M-05-M-0-V1-23-xt-WalkVIS-pathWalk23]: images/cropped-FT-M-05-M-0-V1-23-xt-WalkVIS-pathWalk23.png "cropped-FT-M-05-M-0-V1-23-xt-WalkVIS-pathWalk23" { width:auto; max-width:100% }
+[cropped-FT-M-05-M-0-V1-23-xt-WalkVIS-pathWalk23]: images/cropped-FT-M-05-M-0-V1-23-xt-WalkVIS-pathWalk23.png "cropped-FT-M-05-M-0-V1-23-xt-WalkVIS-pathWalk23" { width:auto; max-width:50% }
 
-[cropped-FT-M-05-M-0-V1-23-xt-ElevVIS-pathElev23]: images/cropped-FT-M-05-M-0-V1-23-xt-ElevVIS-pathElev23.png "cropped-FT-M-05-M-0-V1-23-xt-ElevVIS-pathElev23" { width:auto; max-width:100% }
+[cropped-FT-M-05-M-0-V1-23-xt-ElevVIS-pathElev23]: images/cropped-FT-M-05-M-0-V1-23-xt-ElevVIS-pathElev23.png "cropped-FT-M-05-M-0-V1-23-xt-ElevVIS-pathElev23" { width:auto; max-width:50% }
 
-[cropped-FT-M-05-M-0-V2-23-xt-WalkVIS-pathWalk23]: images/cropped-FT-M-05-M-0-V2-23-xt-WalkVIS-pathWalk23.png "cropped-FT-M-05-M-0-V2-23-xt-WalkVIS-pathWalk23" { width:auto; max-width:100% }
+[cropped-FT-M-05-M-0-V2-23-xt-WalkVIS-pathWalk23]: images/cropped-FT-M-05-M-0-V2-23-xt-WalkVIS-pathWalk23.png "cropped-FT-M-05-M-0-V2-23-xt-WalkVIS-pathWalk23" { width:auto; max-width:50% }
 
-[cropped-FT-M-05-M-0-V2-23-xt-ElevVIS-pathElev23]: images/cropped-FT-M-05-M-0-V2-23-xt-ElevVIS-pathElev23.png "cropped-FT-M-05-M-0-V2-23-xt-ElevVIS-pathElev23" { width:auto; max-width:100% }
+[cropped-FT-M-05-M-0-V2-23-xt-ElevVIS-pathElev23]: images/cropped-FT-M-05-M-0-V2-23-xt-ElevVIS-pathElev23.png "cropped-FT-M-05-M-0-V2-23-xt-ElevVIS-pathElev23" { width:auto; max-width:50% }
 
 
-~ Figure { #fig-Vis-4-23; caption:"Visibility [m] for 4% grade and 23m^2^ tunnel section."; .wide }
+~ TableFigure { #fig-Vis-4-23; caption:"Visibility [m] for 4% grade and 23m^2^ tunnel section."; .wide }
 
 |:----------------------------:|:-----------------------------------:|:
 | [Track-level walkway]{font-weight:bold}            | [Elevated walkway]{font-weight:bold}               |
-| Visibility at 2m above track                       | Visibility at 3.2m above track                    |
-|                       \                             |                    \                                |
+| Visibility at 2m above track                       | Visibility at 3.2m above track                     |
+| \                                                  | \                                                  |
 | ![cropped-FT-M-05-M-4-V0-23-xt-WalkVIS-pathWalk23] | ![cropped-FT-M-05-M-4-V0-23-xt-ElevVIS-pathElev23] |
 | (a) Still conditions (open boundaries at each end)                                                     ||
 | ![cropped-FT-M-05-M-4-V1-23-xt-WalkVIS-pathWalk23] | ![cropped-FT-M-05-M-4-V1-23-xt-ElevVIS-pathElev23] |
 | (b) Still conditions (open boundaries at each end)                                                     ||
 | ![cropped-FT-M-05-M-4-V2-23-xt-WalkVIS-pathWalk23] | ![cropped-FT-M-05-M-4-V2-23-xt-ElevVIS-pathElev23] |
 | (c) Critical velocity                                                                                  ||
-|       \                                        |                                                     |
+| \                                                  |                                                    |
 | ![cbar]                                                                                                ||
+
 ~
 
-[cropped-FT-M-05-M-4-V0-23-xt-WalkVIS-pathWalk23]: images/cropped-FT-M-05-M-4-V0-23-xt-WalkVIS-pathWalk23.png "cropped-FT-M-05-M-4-V0-23-xt-WalkVIS-pathWalk23" { width:auto; max-width:90% }
+[cropped-FT-M-05-M-4-V0-23-xt-WalkVIS-pathWalk23]: images/cropped-FT-M-05-M-4-V0-23-xt-WalkVIS-pathWalk23.png "cropped-FT-M-05-M-4-V0-23-xt-WalkVIS-pathWalk23" { width:auto; max-width:50% }
 
-[cropped-FT-M-05-M-4-V0-23-xt-ElevVIS-pathElev23]: images/cropped-FT-M-05-M-4-V0-23-xt-ElevVIS-pathElev23.png "cropped-FT-M-05-M-4-V0-23-xt-ElevVIS-pathElev23" { width:auto; max-width:90% }
+[cropped-FT-M-05-M-4-V0-23-xt-ElevVIS-pathElev23]: images/cropped-FT-M-05-M-4-V0-23-xt-ElevVIS-pathElev23.png "cropped-FT-M-05-M-4-V0-23-xt-ElevVIS-pathElev23" { width:auto; max-width:50% }
 
-[cropped-FT-M-05-M-4-V1-23-xt-WalkVIS-pathWalk23]: images/cropped-FT-M-05-M-4-V1-23-xt-WalkVIS-pathWalk23.png "cropped-FT-M-05-M-4-V1-23-xt-WalkVIS-pathWalk23" { width:auto; max-width:90% }
+[cropped-FT-M-05-M-4-V1-23-xt-WalkVIS-pathWalk23]: images/cropped-FT-M-05-M-4-V1-23-xt-WalkVIS-pathWalk23.png "cropped-FT-M-05-M-4-V1-23-xt-WalkVIS-pathWalk23" { width:auto; max-width:50% }
 
-[cropped-FT-M-05-M-4-V1-23-xt-ElevVIS-pathElev23]: images/cropped-FT-M-05-M-4-V1-23-xt-ElevVIS-pathElev23.png "cropped-FT-M-05-M-4-V1-23-xt-ElevVIS-pathElev23" { width:auto; max-width:90% }
+[cropped-FT-M-05-M-4-V1-23-xt-ElevVIS-pathElev23]: images/cropped-FT-M-05-M-4-V1-23-xt-ElevVIS-pathElev23.png "cropped-FT-M-05-M-4-V1-23-xt-ElevVIS-pathElev23" { width:auto; max-width:50% }
 
-[cropped-FT-M-05-M-4-V2-23-xt-WalkVIS-pathWalk23]: images/cropped-FT-M-05-M-4-V2-23-xt-WalkVIS-pathWalk23.png "cropped-FT-M-05-M-4-V2-23-xt-WalkVIS-pathWalk23" { width:auto; max-width:90% }
+[cropped-FT-M-05-M-4-V2-23-xt-WalkVIS-pathWalk23]: images/cropped-FT-M-05-M-4-V2-23-xt-WalkVIS-pathWalk23.png "cropped-FT-M-05-M-4-V2-23-xt-WalkVIS-pathWalk23" { width:auto; max-width:50% }
 
-[cropped-FT-M-05-M-4-V2-23-xt-ElevVIS-pathElev23]: images/cropped-FT-M-05-M-4-V2-23-xt-ElevVIS-pathElev23.png "cropped-FT-M-05-M-4-V2-23-xt-ElevVIS-pathElev23" { width:auto; max-width:90% }
+[cropped-FT-M-05-M-4-V2-23-xt-ElevVIS-pathElev23]: images/cropped-FT-M-05-M-4-V2-23-xt-ElevVIS-pathElev23.png "cropped-FT-M-05-M-4-V2-23-xt-ElevVIS-pathElev23" { width:auto; max-width:50% }
 
 
 ## Agent Evacuation and FID
