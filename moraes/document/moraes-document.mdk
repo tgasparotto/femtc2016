@@ -163,14 +163,14 @@ individuals (first V2 filmed position as a dot and final crossing the door)
 
 In a coordinated egress, that means people walking in an ordered queue flow, through each
 0.55m of the door's width will pass 100 individuals per minute [@NBR9077],[@in09]. That means 
-egress flow is controlled by the size of the door. For example, where there are 100, they
-will take around 30 seconds to cross a 1.10m sized door. By linearity, the egress 
-of 200 would last a minute. However, in an uncoordinated egress, the crowd 's dynamics
-blow with linearities. Table [#tab-tempo] presents the egress time and mean egress flow in 
-two condition: a) uncoordinated egress experiments and; b) coordinated egress as expected
-following the Normative Instruction 09 [@IN09].
+egress flow is controlled by the size of the door. For example, where there are 100 individuals,
+they will take around 30 seconds to cross a 1.10m sized door. By linearity, the egress 
+of 200 would last a minute. However, in an uncoordinated egress, the crowd dynamics
+don’t follow a linear pattern. Table [#tab-tempo] presents the egress time and mean
+egress flow in two condition: a) uncoordinated egress experiments; and b) coordinated
+egress as expected following the Normative Instruction 09 [@IN09].
 
-~ TableFigure { #tab-tempo; caption: "Egress time and average flow from experiments and IN 09's estimative"; .wide }
+~ TableFigure { #tab-tempo; caption: "Egress time and mean flow versus population"; .wide }
 
 |            |experiment            || IN 09               ||
 |            | uncoordinated egress || coordinated egress  ||
@@ -188,7 +188,7 @@ following the Normative Instruction 09 [@IN09].
 |------------|-----------|--------------------------------||||
 ~
 
-As the initial population was increased in experiments, the egress flow diminishes. 
+As the initial population was increased in the experiments, the egress flow diminishes. 
 However, the most crowded experiment (280) presented a flow higher than expected. 
 Checking out the videos viewing the crowd from its back (V1), it was verified that
 people had not pressed for escape as they should. As a lesson learned from the experiments,
