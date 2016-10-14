@@ -1,0 +1,460 @@
+[INCLUDE=style/lncs]
+Title         : Experimental Study the Impact of Visibility on Individual Ascent Speed in Stair
+
+Author        : Jianyu Wang
+Affiliation   : School of Transportation & Logistics, National United Engineering Laboratory of Integrated and Intelligent Transportation, Southwest Jiaotong University, Sichuan, 610031, China
+Email         : jianyuwang0602@163.com
+
+Author        : Junmin Chen
+Affiliation   : Faculty of Geosciences and Environmental Engineering, Southwest Jiaotong University, State-province Joint Engineering Laboratory of Spatial Information Technology of High-Speed Rail Safety, Chengdu, Sichuan, 610031, China
+Email         :junminchen@dingtalk.com
+
+Author        : Rong Liu
+Affiliation   : Faculty of Geosciences and Environmental Engineering, Southwest Jiaotong University, State-province Joint Engineering Laboratory of Spatial Information Technology of High-Speed Rail Safety, Chengdu, Sichuan, 610031, China
+Email         : 369338310@qq.com
+
+Author        : Peng Lin
+Affiliation   : Faculty of Geosciences and Environmental Engineering, Southwest Jiaotong University, State-province Joint Engineering Laboratory of Spatial Information Technology of High-Speed Rail Safety, Chengdu, Sichuan, 610031, China
+Email         : drag76@163.com
+
+Author        : Xi Chen
+Affiliation   : Faculty of Geosciences and Environmental Engineering, Southwest Jiaotong University, State-province Joint Engineering Laboratory of Spatial Information Technology of High-Speed Rail Safety, Chengdu, Sichuan, 610031, China
+Email         : cx19191919@qq.com
+
+Bibliography  : references.bib
+Logo          : False
+Csl Style     : madoko-numeric-nosort
+Tex Header    :
+  \def\refname{&name-references;}
+name-references : REFERENCES
+
+[TITLE] Experimental Study the Impact of Visibility on Individual Ascent Speed in Stair
+~ Abstract
+An experiment was conducted in a 20-level building, 
+where 120 participants were asked to walk upward in the stair in four kinds of visibility conditions 
+(i.e., normal visibility condition, lighting-out condition, 
+the condition of wearing 27% transmittance eye-patch and the condition of wearing 16% transmittance eye-patch). 
+Their upward movement, ascent speeds and behaviors were recorded by cameras. 
+In normal visibility condition, the ascent speeds of males and females decrease continuously for the 1–10 levels, 
+and then the speeds keep at around 0.69 m/s for the males and 0.57 m/s for the females. 
+In lighting-out condition, the ascent speeds of males and females decrease continuously for the 1–12 floors and 1-10 floors respectively, 
+and then keep at around 0.68 m/s for the males and 0.57 m/s for the females. 
+For the two scenarios, participants used the handrail in upward movement process as physical exertion. 
+In condition of wearing 27% transmittance eye-patch, the ascent speeds of males and females maintain at 0.71m/s and 0.51m/s. 
+In condition of wearing 16% transmittance eye-patch, the ascent speeds of males and females maintain at 0.54m/s and 0.48m/s. 
+In the movement process of the two scenarios, participants used handrail to identify the direction of movement. 
+The experimental results showed that individual ascent speed and characteristics of movement are affected by gender, 
+traveling distance and visibility, whilst visibility could be a dominator factor when it is below a certain value.
+~
+
+[editor]: https://www.madoko.net/editor.html "Madoko.net Editor"
+[reference-manual]: http://research.microsoft.com/en-us/um/people/daan/madoko/doc/reference.html "Madoko Reference Manual"
+[femtc2016]: https://github.com/thunderheadeng/femtc2016
+[emaillink]: mailto:conference@thunderheadeng.com "conference@thunderheadeng.com"
+
+# Introduction { #sec-intro }
+Staircase is the key to vertical evacuation, whether it is on the ground of multi-story buildings, high-rise buildings or underground facilities, pedestrian must use varieties of stairs ascent or decent to the ground or safety places in case of fire emergency.
+
+In the early 1960s, the behaviors and laws of evacuation on stairs have been raised people’s attention. 
+Paulsen[@Paulsen:TeX], Fruin[@Fruin:TeX], Proulx[@Proulx:Tex], Frantzich[@Frantzich:TeX] and Fujiyama[@Fujiyama02:Tex] et al. conducted a comprehensive studies of the evacuation on staircase. 
+The effects of individuals’ density, age, gender, merger, the dimensions and the inclination of the stairs on the movement speed were systematic analyzed. 
+An increasing number of high-rise buildings and underground facilities were built or under construction due to the rapid development of modern cities. 
+Many studies have been conducted to understand the behaviors of human on long stairs. Tobias[@Tobias06:Tex] found that the ascending speeds were 0.4-0.5m/s by observing the pedestrians on long stairs outside Netherlands pavilion in Hanover World Expo. 
+Galea[@Galea:TeX] interviewed 245 survivors of the 911 event, obtained that the average descending speed was 0.29m/s. 
+Peacock[@Peacock03:TeX] statistically analyzed the drill video data of 8 office buildings (floor 6-62) and found that the average descending speeds on stairwell were 0.48±0.16m/s. 
+Choi[@Choi03:TeX] conducted an evacuation experiment in a 50 levels high-rise building, in which 30 females and 30 males took part, and measured that the descending speeds of males and females were 0.83m/s and 0.74m/s, the ascending speeds were 0.66m/s and 0.48m/s respectively.
+
+These researches were all carried out in normal conditions. 
+However, with the decline of personnel visibility level during evacuation caused many casualties, evacuation behavior characteristics in different visibility conditions have attracted wide attention.
+
+About 30 years ago, Jin[@Jin:TeX] (1970-1990), Weber (1979) carried out a large number of experiments in different visibility conditions to analyze the effects of extinction coefficient (flue and gas conditions) on evacuation speed, level of visibility and visual perception. 
+From 1999 to 2006, in order to explore the effects of phosphorescent materials on evacuation on stairs, National Research Council of Canada (NRC) [@Klingsch03:Tex;@Proulx04:TeX;@Proulx02:Tex] investigated evacuation behavior of 457 people in a 10-story office building while Public Works and Government Services Canada (PWGSC) carried out some evacuation experiments on evacuation behavior of 1198 people in a 13-story office building. 
+It was concluded that using the handrails was a main factor leading to evacuation congestion and 80% of the participants used the handrails during evacuation. 
+In 2011, experiments on evacuation behavior of 125 people under 4 different visibility conditions were implemented in a underground 4-story subway station by Jeon[@Jeon02:TeX;@Gyu04:TeX] in Kyungpook National University to explore the influence of visibility conditions on evacuation for underground constructions. 
+For the first time, smoke conditions were simulated by the method of wearing eye-patches. 
+
+Bellamy, Boer and Frantzich et al. performed a lot of research on evacuation speed under different fire conditions. 
+In 1990, Bellamy[@Bellamy02:TeX] found that pedestrian speed were 0.5-1.0m/s in the smoke tunnels without lighting and 1.0-1.45m/s in lighting condition. 
+In 2005, it was found that the average velocity of personnel was 1.37m/s in the road tunnels with smoke by Boer[@Waldau04:Tex]. 
+In 2003, Nilsson[@Nilsson02:TeX] in Lund University implemented evacuation experiments in a 37-meter-long tunnel. 
+Irritant gases were used to simulate conditions of fire and they pointed out that in the absence of light the average velocity of personnel was 0.2 - 0.8m/s with the smoke dissipation coefficient being 2.0-8.0m^-1^. 
+Besides, using the same simulation method, Fridolf[@Fridolf04:TeX] carried out evacuation experiments under different visibility conditions in a 200-metre-long tunnel and got the conclusion that personnel movement speed was 0.42m/s to 0.81m/s when the smoke dissipation coefficient was 2.2 m-1 in 2005.
+
+As noted, only Jeon and NRC et al. studied the effect of visibility on evacuation behavior on stairs. 
+However, Jeon’s researches were finished in an underground 4-story subway station, most evacuation in it was horizontal. 
+The conclusions obtained were not suitable for long-distance evacuations on stairs. 
+NRC carried out the experiments in a 10-story office building but they didn’t pay any attention to upward evacuation experiments. 
+Also, they didn’t consider the effect of smoke conditions on individuals’ speed. 
+Therefore, exploring the effects of visibility on evacuation speed on stairs, studying the evacuation laws and behavior and building evacuation velocity models in different visibility conditions are important problems that are needed to be solved urgently.
+
+In this work, based on the previous researches of stair evacuation and considered the evacuation particularity in buildings, individuals ascending and descending experiments were carried out in four type visibility conditions, including: (1) participants didn’t wear eye masks and lighting systems on stairs were normally open (Condition 1), on behalf of the normal condition; (2) participants didn’t wear eye masks and lighting systems were closed (Condition 2), on behalf of the condition in which the lighting was fail while personnel was not affected by the smoke conditions; (3) participants wore 27% transmittance eye-patches (Condition 3), on behalf of the condition in which personnel was not familiar with the building structure and slightly affected by smoke; (4) participants wore 16% transmittance eye-patches (Condition 4) on behalf of the condition in which personnel was familiar with the building structure and seriously influenced by smoke.
+
+# Experimental Settings
+## Experimental Project
+
+~ Center
+![Figure 1]
+~
+[Figure 1]: images/Figure-1.png "Figure 1" { width:auto; max-width:90% }
+~ Center
+Figure1. The dimension of the staircase in the study: a Section diagrammatic of stairwell; b Size diagrammatic of step (Unit: cm); c Plan of stairwell 1-2 (Unit: cm); d Plan of stairwell2-20 (Unit: cm).
+~
+
+The experiment was conducted in a 26-level typical residential building located in Chengdu, PRC China. One of the staircases from the 1st floor to the 20th floor in this building was selected for the study. The height of the first floor is around 4.48 m and the height of all other levels is 2.72 m. The total length of the staircase is 53.44 m and the width of the stair is 1.16 m. The first floor has two flights, each with 14 steps and a landing in the middle. The dimension of the landing is 0.260m×0.192m. The stairs connecting other floor have single flight, each with 17 steps and a landing in the entrance. The dimension of the landing is 0.260m×0.140m.All the stairs is 26 cm for the tread riser and 16 cm for the tread depth.
+~ Center
+![Figure 2(a)]    ![Figure2 (c)]
+[Figure 2(a)]: images/Figure-2(a).jpg "Figure 2(a)" { width:45%; max-width:45% }
+[Figure2 (c)]: images/Figure2-(c).jpg "Figure2 (c)" { width:45%; max-width:90% }
+~
+
+~ Center
+Figure2. The view of the staircase in lighting-out condition: a on the inside of the stair; b on the outside of the stair.
+~
+
+~ Center
+Table1. Participant information
+
+|----------|----------|-------------|----------------|----------------|
+|   SEX    | Number   | Average Age | Average Height | Average Weight |
+|          |          |             |      (cm)      |     (kg)       |
++----------|----------|-------------|----------------|----------------+
+|   Male   |    60    |    19.6     |     173.2      |      66.4      |
+|  Female  |    60    |    19.5     |     159.2      |       55       |
+|----------|----------|-------------|----------------|----------------|
+~
+
+~ Center
+Table2. Illumination statistics information
+
+|---------|---------|-------------|-------------|-------------|-------------|
+|         | Time    | Condition 1 | Condition 2 | Condition 3 | Condition 5 |
++---------|---------|-------------|-------------|-------------|-------------+
+|         | t=0     |   113.0     |      0      |  112.7      |  57.5       |
+| Point 1 | t=30min |   127.3     |      0      |  134.6      |  59.4       |
+|         | t=60min |   84.8      |      0      |  108.6      |  26.4       |
+|         | t=90min |   64.7      |      0      |  100.6      |  16.9       |
+|---------|---------|-------------|-------------|-------------|-------------|
+|         | t=0     |   38.3      |      0      |   33.9      |  26.0       |
+| Point 2 | t=30min |   35.2      |      0      |   35.1      |  14.8       |
+|         | t=60min |   41.1      |      0      |   32.6      |  7.9        |
+|         | t=90min |   19.7      |      0      |   27.8      |  5.6        |
+|---------|---------|-------------|-------------|-------------|-------------|
+{  }
+~
+
+A high-definition camera was installed on the platform of each floor to record the behavior and time before the experiment. 
+Figue2 shows the view of the staircase in lighting-out condition. 
+According to different visibility conditions and number, only 1 participant took part in each time. 
+And in order to avoid interferences by adjacent participants, each time the interval was more than 3 minutes. 
+Each condition selected 30 individuals, including 15 males and 15 females. A total of 120 pedestrians aged from 18 to 21 were college students. 
+The participant information was listed in Table 1.
+
+Besides, using the spherical illuminometer monitored the illumination condition in stairs every 30 minutes. 
+Each floor chose two places as a detection point, point 1 was set in the corner of the platform and point 2 was set in the middle of the staircase. 
+The illumination statistics information was listed in Table 2.
+
+## Visibility Parameters
+Smoke is one of the most focus on characteristics in the fire dynamics study. 
+Only a part of light could through smoke due to the effect of absorption and scattering, which lead to reduce the visibility within the scope of the fire area and go against evacuation and rescue. 
+When a bunch of wavelength &lambda; passes through the smoke, the Lambert-Beer's law can be describe as equation（1）:
+
+~ Equation { #eq-gaussian-1}
+Cs = \frac{1}{L} log e (\frac{I~\lambda_0~}{I~\lambda~}) 
+~
+
+Cs: Photosensitivity coefficient (m^-1^);
+L: Distance between light source and lighted object (m);
+I~&lambda;0~:Luminosity without smoke (lux);
+I~&lambda;~: Luminosity with smoke (lux);
+
+Equation (1) illustrates that the distance L and photosensitivity coefficient Cs have an inverse relationship. 
+Besides, the relation between I~&lambda;0~ and I~&lambda;~ by smoke can be expressed as the transimissivity (T) of the eye-patch.
+
+~ Equation {#eq-gaussian-2}
+T  = (\frac{I~\lambda~}{I~\lambda_0~})   \ast 100 = 100 \ast e^{(CsL)}
+~
+
+~ Center
+Table3. Relation between the distance and photosensitivity coefficient
+
+|-{width:10%}--|------{width:10%}-----|-{width:10%}--|-{width:10%}-|---{width:10%}--|-{width:10%}-|-{width:10%}-|-{width:10%}-|
+|              |      27%Transimissivity             |             |                |16%Transimissivity         |             |
+| _L_(m)       |_Cs_(m^-1^)           | _L_(m)       |_Cs_(m^-1^)  | _L_(m)         |_Cs_(m^-1^)  | _L_(m)      |_Cs_(m^-1^)  |
++--------------|----------------------|--------------|-------------|----------------|-------------|-------------|-------------+
+|   1          |  1.304               | 6            | 0.217       | 1              | 1.827       | 6           | 0.304       |
+|   2          |  0.652               | 7            | 0.186       | 2              | 0.913       | 7           | 0.261       |
+|   3          |  0.434               | 8            | 0.163       | 3              | 0.609       | 8           | 0.228       |
+|   4          |  0.326               | 9            | 0.145       | 4              | 0.456       | 9           | 0.203       |
+|   5          |  0.260               | 10           | 0.130       | 5              | 0.365       | 10          | 0.183       |
+|--------------|----------------------|--------------|-------------|----------------|-------------|-------------|-------------|
+~
+
+From the equation (2) above, the relation between the distance and photosensitivity coefficient is as in Table 3. 
+As Table 3 shows, when the visibility that can identify the luminaries and objects is 5-10m while wearing an eye-patch with 27% transmissivity, 
+it can be said that the smoke density is 0.13m-1–0.26 m^-1^. 
+Also, when the visibility that can identify the luminaries and objects is 3–7m while wearing an eye-patch with 16% transmissivity, 
+it can be said that the smoke density is 0.26 m^-1^–0.60 m^-1^[@Lee:TeX].
+
+## The Estimation of Distance and Ascent Speed
+London Transport Board (1958), Pauls(1971-1980), Predtechenskii (1978), Fruin (1987), Proulx (2007) and Peacock (2010) et al.
+have done many research on the caculate of the travel distance on the stairs and prospered their calculation methods. 
+Hoskins[@Hoskins02:TeX] through comparatived and analysised different calculation methods and combined with the occupants’ behaviors in the buildings, 
+suggested the traveling distance on the stair includes two components, 
+the first part is the distance on the inclined stair and the second component is the distance on the platform landing. 
+The travel distance on the platform on the stairs is a semi-circle.
+
+~ Equation {#eq-gaussian-3}
+L~L~ = \sum_{i=1}^{n=20}\left(L~turning,i~ + L~inclination,i~ \right)
+~
+
+~ Equation {#eq-gaussian-4}
+L~inclination,n~ = n \ast (d^{2} + h^{2}) ^{\frac{1}{2}} \
+~
+
+~ Equation { #eq-gaussian-5}
+L~turning~ = \pi \ast \frac{b}{2} \
+~ 
+
+_b_:the width of the stairwell, 2.56m;
+_d_:the trend of the stairwell, 0.27m;
+_h_: the height of the stairwell, 0.16m;
+_n_:the number of the steps on the stairwell,where i=1,n=14; where i=2,3,4 …, 18, 19,n=18;
+
+The traveling distance on the first floor is 13.37 m and the traveling on other floors is around 7.01 m. 
+The total traveling distance from the first floor to the 20th floor is around 139.59 m as shown in Table4.
+
+~ Center
+Table4. The Distance of Stairs
+
+|--{width:30%}-|---{width:30%}----------|
+| Stairs       | Traveling distance (m) |
++--------------|------------------------+
+| S~1-2~       | 13.37                  |
+| S~i-j~       | 7.01                   |
+| S~1-20~      | 139.59                 |
+|--------------|------------------------|
+
+Where i = 2, 3, 4, …, 18, 19; j = i + 1
+~
+
+The speeds of participants on each floor in this study and can be calculated as:
+~ Equation { #eq-euler ;#eq-gaussian;}
+V = \frac{L}{T} \
+~
+_V_: the velocity on the stair on each floor, m/s;
+_L_: the traveling distance on the stair on adjacent two floors, m;
+_T_:the traveling time on the stair on adjacent two floors, s;
+
+
+# The Results and Discussion
+## The Ascent Travelling Time
+The probability and statistics results of evacuation time were shown in figure 3 to figure 6.
+~ Center
+![Firgue3 a]![Firgue3 b]
+[Firgue3 a]: images/Firgue3-a.png "Firgue3 a" { width:45%; max-width:90% }
+[Firgue3 b]: images/Firgue3-b.png "Firgue3 b" { width:45%; max-width:90% }
+Figure3. The probability distribution of evacuation time in Condition 1: a Male; b female.
+
+![Firgue4 a]![Firgue4 b]
+[Firgue4 a]: images/Firgue4-a.png "Firgue4 a" { width:45%; max-width:90% }
+[Firgue4 b]: images/Firgue4-b.png "Firgue4 b" { width:45%; max-width:90% }
+
+Figure4. The probability distribution of evacuation time in Condition 2: a Male; b female.
+
+![Firgue5 a]![Firgue5 b]
+[Firgue5 a]: images/Firgue5-a.png "Firgue5 a" { width:45%; max-width:90% }
+[Firgue5 b]: images/Firgue5-b.png "Firgue5 b" { width:45%; max-width:90% }
+
+Figure5. The probability distribution of evacuation time in Condition3: a Male; b female.
+
+![Firgue6 a]![Firgue6 b]
+[Firgue6 a]: images/Firgue6-a.png "Firgue6 a" { width:45%; max-width:90% }
+[Firgue6 b]: images/Firgue6-b.png "Firgue6 b" { width:45%; max-width:90% }
+
+
+Figure6. The probability distribution of evacuation time in condition4: a Male; b female.
+~
+Males’ and females’ evacuation time distribution ranges are quite wide but not even. 
+Males’ showed a trend of increasing before decreasing, while females’ increased gradually. 
+In Condition 1, 93.33% of males’ evacuation time was in the range of 140s-200s, 
+and 93.33% of females’ evacuation time was in the range of 200s-260s. 
+In Condition 2, 93.33% of males’ evacuation time distributed in the range of 160s-240s, 
+and 86.67% of females’ evacuation time distributed in the range of 180s-260s. 
+In Condition 3, 93.33% of males’ and females’ evacuation time were in the ranges of 160s-260s and 240s-320s respectively. 
+In Condition 4, 80% of males’ evacuation time was in the range of 240s-280s and the rest was 300s-320s, 
+and 80% of females’ evacuation time was in the range of 240s-320s, 
+only 6.67% of the whole females’ is greater than 420s.
+
+## The Ascent Speed
+The ascent speed of each occupant on each stair during the experiment was calculated based on Equations. (3), (4), (5) and (6). 
+The individual ascent speeds for all participants on different levels under 4 visibility conditions are shown in Figure 7 to Figure 10. 
+It was found that males’ and females’ ascent speeds varied with different floors under various visibility conditions.
+~ Center
+![Firgue7 a]![Firgue7 b]
+[Firgue7 a]: images/Firgue7-a.png "Firgue7 a" { width:45%; max-width:90% }
+[Firgue7 b]: images/Firgue7-b.png "Firgue7 b" { width:45%; max-width:90% }
+Figure7. The average ascent velocity on each floor in Condition 1 (The error bar illustrates the uncertainty of the mean ascent velocity): a Male; b Female.
+
+![Firgue8 a]![Firgue8 b]
+[Firgue8 a]: images/Firgue8-a.png "Firgue8 a" { width:45%; max-width:90% }
+[Firgue8 b]: images/Firgue8-b.png "Firgue8 b" { width:45%; max-width:90% }
+Figure8. The average ascent velocity on each floor in Condition 2 (The error bar illustrates the uncertainty of the mean ascent velocity): a Male; b Female.
+
+![Firgue9 a]![Firgue9 b]
+[Firgue9 a]: images/Firgue9-a.png "Firgue9 a" { width:45%; max-width:90% }
+[Firgue9 b]: images/Firgue9-b.png "Firgue9 b" { width:45%; max-width:90% }
+Figure9. The average ascent velocity on each floor in Condition 3 (The error bar illustrates the uncertainty of the mean ascent velocity): a Male; b Female.
+
+![Firgue10 a]![Firgue10 b]
+[Firgue10 a]: images/Firgue10-a.png "Firgue10 a" { width:45%; max-width:90% }
+[Firgue10 b]: images/Firgue10-b.png "Firgue10 b" { width:45%; max-width:90% }
+Figure10. The average ascent velocity on each floor in Condition 4 (The error bar illustrates the uncertainty of the mean ascent velocity): a Male; b Female.
+~
+In normal condition, the fastest average speeds of males and females were 1.28m/s and 0.97m/s which both took place on the first flight of stairs, 
+and then it decreases continuously during the ascending movement until on the 10^th^ floor. 
+After that the ascent speed remains a constant of around 0.69m/s for the males and 0.57m/s for the females. 
+The lowest average speed of males was around 0.63 m/s, which was observed on the 14^th^ floor. 
+The lowest average speed of females was around 0.53 m/s, which was observed on the 10^th^ floor.
+
+In lighting-out condition, the fastest average speeds of males and females were 0.97m/s and 0.82m/s which both at the 1st level, 
+and then the speeds decreased continuously for the 1-12 floors and 1-10 floors respectively, and then kept at around 0.68 m/s for the males and 0.57 m/s for the females. 
+After that the ascent speeds remained a constant of around 0.68m/s for the males and 0.57m/s for the females. 
+The lowest average speed of males was around 0.60 m/s, which was observed on the 17-18th level. 
+The lowest average speed of females was around 0.53 m/s, which was observed on the 15^th^ level and the 18^th^ level.
+
+In the condition of wearing 27% transmittance eye-patch, the ascent speeds of males and females maintained at 0.71m/s and 0.51m/s respectively. 
+For the males, the fastest average speed was 0.84m/s which took place at 1^st^ floor, 
+and the lowest average speed was around 0.57 m/s, which was observed on the 14-15th floor. 
+For the females the fastest average speed of females was 0.55m/s which took on 14th floor, 
+and the lowest average speed was around 0.51 m/s, which was observed on the 14-15th floor. 
+
+In the condition of wearing 16% transmittance eye-patch, the ascent speeds of males and females maintain at 0.54m/s and 0.48m/s respectively. 
+The fastest average speed was 0.62m/s of males and 0.55m/s of females, 
+which appeared at 6-7th level. The lowest average speed was 0.48m/s on the 13-14th level for the males and 0.44m/s on the 10^th^ level for the females.
+
+In Jeon’s research, he pointed out that for the four visibility conditions, 
+the evacuation speed were 1.34m/s-1.69m/s in Condition 1, 1.23m/s-1.61m/s in Condition 2, 0.62m/s-0.64m/s in Condition 3 and 0.51m/s-0.61m/s in Condition 4, respectively. 
+As can be seen from Figure10 to Figure13, the experimental results of Condition 1 and Condition 2 in this paper showed a bigger difference with Jeon’s. 
+There are two reasons: (1) Jeon carried out the experiments at underground transportation junction, firstly, pedestrian experienced horizontal evacuation to stairwells. 
+Then they evacuated vertically to safety area by stairs. Therefore, before evacuation by stairs people already had a certain velocity; 
+(2) there were a lot of phosphorescence guidance equipments at underground transportation hub, 
+which can provide instructions and directions for evacuation in the absence of illumination conditions. 
+While there was only emergency evacuation indication in each stair section, individuals can only depend on handrails of stair for evacuation. 
+For Condition 3 and Condition 4, this research and Jeon’s has a good accordance. With the loss of light transmittance of eye masks, 
+the results were more consistent, which can guarantee the reasonability of the results in this paper.
+
+Cumulative average speeds are shows in figure 14 to figure 17. 
+It can be seen that males’ and females’ cumulative average speeds were gradually reduced with the increase of the floor in Condition 1 and Condition 2, 
+and not changed with the floor in Condition 3 and Condition 4.
+
+~ Center
+![Figure11.(a)]![Firgue11 b]
+[Figure11.(a)]: images/Figure11.(a).png "Figure11.(a)" { width:45%; max-width:90% }
+[Firgue11 b]: images/Firgue11-b.png "Firgue11 b" { width:45%; max-width:90% }
+Figure11. The cumulative average velocity on each floor in Condition 1 (The error bar illustrates the uncertainty of the mean ascent velocity): a Male; b Female.
+
+![Firgue12 a]![Firgue12 b]
+[Firgue12 a]: images/Firgue12-a.png "Firgue12 a" { width:45%; max-width:90% }
+[Firgue12 b]: images/Firgue12-b.png "Firgue12 b" { width:45%; max-width:90% }
+Figure12. The cumulative average velocity on each floor in Condition 2 (The error bar illustrates the uncertainty of the mean ascent velocity): a Male; b Female.
+~
+In normal condition, for the males, the fastest cumulative average speed was 1.28m/s which took place on the first flight of stairs, 
+the lowest cumulative average speed was 0.79m/s which observed on the 20^th^ level, and the difference between the fastest and the slowest speed was 0.39m/s. 
+For the females, the fastest cumulative average speed was 0.98 m/s which appeared on the 2^nd^ floor, 
+the lowest cumulative average speed was 0.62 m/s which observed on the 17th, 18th, 19th and 20th levels, 
+and the difference between the fastest and the slowest speeds were 0.36m/s.
+
+In Jun-Ho’s research, he pointed out that males’ and females’ cumulative average speeds were 0.75m/s and 0.53m/s for the 1-25 floors. 
+Although there were differences in the ages of participant, but experimental results and Jun-Ho’s has a good accordance. 
+This suggests that in the process of long-distance ascending evacuation, within a certain age range, 
+age difference is not the important factor affecting the cumulative average evacuation speed, 
+and the longer the ascending traveling distance, the smaller the impact.
+
+In light-out condition, the fastest cumulative average speed of males was 0.97m/s on the first flight of stairs, 
+and decreased to 0.70m/s on the 19-20th level, and the difference between the two speeds were 0.27m/s. 
+The fastest cumulative average speed of females was 0.83m/s on the 1st level, 
+the lowest cumulative average speeds of females were 0.60m/s on the 18^th^, 19^th^ and 20^th^ levels, 
+and the difference between the fastest and the slowest speeds were 0.23m/s.
+
+~ Center
+![Firgue13 a]![Firgue13 b]
+[Firgue13 a]: images/Firgue13-a.png "Firgue13 a" { width:45%; max-width:90% }
+[Firgue13 b]: images/Firgue13-b.png "Firgue13 b" { width:45%; max-width:90% }
+Figure13. The cumulative average velocity on each floor in Condition 3 (The error bar illustrates the uncertainty of the mean ascent velocity): a Male; b Female.
+
+![Firgue14 a]![Firgue14 b]
+[Firgue14 a]: images/Firgue14-a.png "Firgue14 a" { width:45%; max-width:90% }
+[Firgue14 b]: images/Firgue14-b.png "Firgue14 b" { width:45%; max-width:90% }
+Figure14. The cumulative average velocity on each floor in Condition 4 (The error bar illustrates the uncertainty of the mean ascent velocity): a Male; b Female.
+~
+
+In the condition of wearing 27% transmittance eye-patch, the fastest cumulative average speed of males and females were 0.84m/s and 0.55m/s, both at 1^st^ level. 
+The lowest cumulative average speeds of males and females were 0.69m/s and 0.46m/s. 
+The difference between the fastest and the slowest speeds of males and females were 0.15m/s and 0.09m/s.
+
+In the condition of wearing 16% transmittance eye-patch, the fastest cumulative average speeds of males and females were 0.55m/s and 0.47m/s, 
+both on the first flight of stairs. 
+The lowest cumulative average speeds of males and females were 0.46m/s and 0.47m/s. 
+The difference between the fastest and the slowest speeds of males and females were only 0.03m/s and 0.01m/s.
+
+## The Ratio of Handrail Utilization
+The staircase in the experiment is provided with the handrail on one side as shown in Figure 2. 
+The handrail can facilitate the movement. 
+The number of participants who used the handrail on each floor was extracted from the video record. 
+The percentage of participants who used the handrail during upward movement is presented in Figure 15. 
+The ratio of handrail utilization of males and females were 27% and 47% in Condition 1, 47% and 67% in Condition 2, 93.3% and 100% in Condition 3 and the whole in Condition 4 respectively. 
+In general, the females are more likely to use the handrail than the males throughout the upward movement. 
+The percentage of participants who used the handrail on different levels are presented in Figure 17.
+
+~ Center
+
+![Firgue15 a]
+[Firgue15 a]: images/Firgue15-a.png "Firgue15 a" { width:45%; max-width:90% }
+Figure15. The ration of handrail utilization
+
+![Figure16 a] ![Figure16 b]
+[Figure16 a]: images/Figure16-a.png "Figure16 a" { width:45%; max-width:90% }
+[Figure16 b]: images/Figure16-b.png "Figure16 b" { width:45%; max-width:90% }
+Figure16. The behavior of handrail utilization: a Male; b Female.
+
+![Firgue17 a]![Firgue17 b]
+[Firgue17 a]: images/Firgue17-a.png "Firgue17 a" { width:45%; max-width:90% }
+[Firgue17 b]: images/Firgue17-b.png "Firgue17 b" { width:45%; max-width:90% }
+![Firgue17 c]![Firgue17 d]
+[Firgue17 c]: images/Firgue17-c.png "Firgue17 c" { width:45%; max-width:90% }
+[Firgue17 d]: images/Firgue17-d.png "Firgue17 d" { width:45%; max-width:90% } 
+Figure17. The ration of handrail utilization on different levels: a Condition 1; b Condition 2;c Condition 3; d Condition 4.
+~
+In Condition 1, the ratio of handrail utilization on the first few floors was quite low and it increased continuously with the ascending floors. 
+For the males, the ratio reached the peak was on the 17^th^ floor, which occupied around 20%. 
+For the females, the ratio reaches the peak was on the 8^th^ floor, which occupied around 40%. 
+In Condition 2, the ratio of handrail utilization was fluctuated with the ascending floors. 
+The ratio reaches the top of males was 46.7% on the 14^th^ level and females was 53% on the 8^th^ level. 
+In Condition 3, the ratio of handrail utilization for the males was quite low at first and it increased on the 1-9floors and it decreased on the rest of stairs. 
+For the males, the peak of the ratio was 93.3% on the 5^th^ and 8^th^ floors, and the bottom of the ratio was 53.3% on the 15th floor. 
+For the males, the ratio was around 100% with the ascending floors. In condition 4, generally all the participants used the handrail during the upward movement.
+
+# Conclusions
+This paper studied the individual ascent speeds of college students in China on long stair under 4 visibility conditions, obtained the following conclusions:
+
+ (1) In the condition of changes in visibility by indoor ordinary lights, males’ and females’ ascent speeds showed a steady trend after the first decrease. 
+ In normal condition, males’ and females’ ascent speeds first decreased continuously for the first 10 floors, then the speed remained of around 0.69 m/s and 0.57m/s. 
+ In light-out condition, the ascent speeds of males and females decreased continuously for the 1-12 floors and 1-10 floors, respectively, 
+ and then kept at around 0.68 m/s for the males and 0.57 m/s for the females. 
+ In the condition of changes in visibility by smoke, males’ and females’ ascent speeds showed no obvious changes with the ascending floors. 
+ In the condition of wearing 27% transmittance eye-patch, males’ and females’ ascent speeds maintained at 0.71m/s and 0.51m/s. 
+ In condition of wearing 16% transmittance eye-patch, the ascent speeds of males and females maintained at 0.54m/s and 0.48m/s. 
+
+(2) Participates were likely to use the handrail throughout the upward movement. 
+In Condition1 and Condition 2, participants used the handrail in upward movement process as physical exertion. 
+In Condition 3 and Condition 4, participants used handrail to identify the direction of movement.
+
+(3) According to the two aspects of behavior of handrail utilization in the ascending process and the changes of the speeds with visibility conditions, 
+females were likely more affected by the visibility of the stairs than males, and males’ ability to adapt to the environment were superior to females’.
+
+# Acknowledgements
+Authors are grateful to the support from the National Natural Foundation Project (No. 71573215) and Chongqing science and technology plan application development key project (Nos. cstc2014yykfB30003 and 2015H01615).
+
+[BIB]
+
+
