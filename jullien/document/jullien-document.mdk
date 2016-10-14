@@ -219,7 +219,7 @@ document).
 ~
 [fig5_2]: images/fig5_2.PNG "fig5_2" { width:auto; max-width:70% }
 
-Note that the number of draws is too low to reach the theoretical minimum
+Note that the number of simulations is too low to reach the theoretical minimum
 RSET corresponding to a single occupant positioned in front of an exit. Indeed,
 one could expect a RSET close to 15&nbsp;s in this case (RSET = response time + traveling
 time, minimum traveling time being 0&nbsp;s).
