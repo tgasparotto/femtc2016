@@ -15,8 +15,16 @@ Text
 
 ~ Begin Vertical
 # Experimental setup
+
+~ Slide
+~~ Center
+Modified SP Fire 105 test rig
+~~
+~~ Center
 ![Namnlös1]
 [Namnlös1]: images/Namnl-s1.png "Namnlös1" { width:auto; max-width:100% }
+~~
+~
 
 # Setup in FDS
 ![Figure4]
@@ -60,15 +68,17 @@ $\epsilon_{PT} \dot{q}^{\prime\prime}_{inc} - \epsilon_{PT} \sigma T_{PT}^{4} + 
 ~ End Vertical
 
 ~ Begin Vertical
-# A comparison with FDS version 5.5.3
+# FDS 6.2.0 vs FDS 5.5.3
 
 ## FDS 6.2.0 vs FDS 5.5.3, temperature
 ![Figure14]
 [Figure14]: images/Figure14.png "Figure14" { width:auto; max-width:100% }
 
 ## FDS 6.2.0 vs FDS 5.5.3, $\dot{q}^{\prime\prime}_{IRHF}$
+~ Center
 ![Figure15]
 [Figure15]: images/Figure15.png "Figure15" { width:auto; max-width:50% }
+~
 
 ## Facade damage
 ![facadedamage]
