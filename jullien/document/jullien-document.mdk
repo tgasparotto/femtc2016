@@ -48,8 +48,8 @@ The model takes into account a population panel supposed to be typical of the re
 the input data of the simulation are subjected to a statistical
 spread implies a statistical spread on the outputs and particularly on the
 RSET. However, the main goal of an egress simulation is
-to calculate a RSET which insures compatible
-tenability conditions with the evacuation and for 100% of the cases. 
+to calculate a RSET which insures 
+evacuation compatible tenability conditions in all cases. 
 Hence, 
 a statistical approach is relevant to explore the possible range
 for the RSET value. The numerical tool is
@@ -179,8 +179,8 @@ to change direction.
 * the response time is set at 15&nbsp;s or variable between 0 and 30&nbsp;s depending on the
 test case. The response time in this study is the delay before
 the occupants begin to move toward the exit.
-* occupants act independently of each other, that is to say that if an occupant begins
-to move toward the exit it will not make another occupant in movement before its response time is elapsed.
+* occupants act independently of each other: if an occupant begins
+to move toward the exit he will not make another occupant move before its response time is elapsed.
 
 This document do not present the attributes specifically related to fire such as incapacitating
 concentrations of toxic gases (HCl, HBr, HF, SO~2~, NO~2~, CH~2~CHO,…) because
@@ -205,7 +205,7 @@ They are meaningless regarding to the proposed analysis method.
 ## Use of the statistical analysis method
 
 In this reference test case, two random simulations sets are carried out. Each simulation takes 
-into models a random occupant number between 1 and 1,000, randomly located in the room. 
+into account a random occupant number between 1 and 1,000, randomly located in the room. 
 The first set contains 100 simulations, the second one contains 1,000 simulations.
 Figures [#fig5_1] and [#fig5_2] show the calculated RSET distribution functions as well as
  the lower and upper bounds
@@ -238,13 +238,8 @@ In accordance with what has been announced above, it is observed that:
 intervals for 100 and 1,000&nbsp;simulations.
 
 Thus, it is not possible to statistically determine a maximum RSET value.
-In addition, in the case where we determine a RSET
-max, we might question the relevance of such a value that would be drawn from a
-disaster scenario and so wold be very severe in a more realistic study case. It seems preferable
-to retain the associated RSET 95^th^ percentile value of which we can estimate an
-relevant confidence interval with a limited number of draws. Table [#table-1] shows
-the confidence intervals associated with the 95^th^ percentile for 100, 200, 500,
-1,000 and 5,000&nbsp;draws. This choice implies that in 95% of cases all occupants have
+Table [#table-1] shows the confidence intervals associated with the 95^th^ percentile for 100,
+ 200, 500, 1,000 and 5,000&nbsp;draws. This choice implies that in 95% of cases all occupants have
 evacuated with a probability of 90%. 
 The choice of the studied percentile order should be discussed in further studies,
 as it is the key parameter associated to the building safety level.
@@ -252,7 +247,7 @@ The confidence level impacts the confidence interval width,
 and must be chosen according to the required precision (see section [#sec-statistical]).
 
 
-~ TableFigure { #table-1; caption: "Confidence intervals of the 95^th^ percentile for 100, 200, 500, 1,000 and 5,000 draws"; .wide }
+~ TableFigure { #table-1; caption: "Confidence intervals of the 95^th^ percentile for 100, 200, 500, 1,000 and 5,000 simulations"; .wide }
 |                  |------------------------------|------------------------------|
 |                  | confidence interval          | Width of confidence interval |
 |                  | of the 95^th^ percentile (s) | of the 95^th^ percentile (s) |
@@ -280,7 +275,7 @@ In conclusion, the proposed statistical analysis method quantitatively
 evaluates the number of simulations that seems most relevant to carry out a study.
 
 
-~ Figure { #fig5_3; caption:"Width of the confidence interval according to the number of simulations";  page-align:forcehere}
+~ Figure { #fig5_3; caption:"Confidence interval width vs. number of simulations";  page-align:forcehere}
 ![fig5_3]
 ~
 [fig5_3]: images/fig5_3.PNG "fig5_3" { width:auto; max-width:60% }
@@ -288,71 +283,68 @@ evaluates the number of simulations that seems most relevant to carry out a stud
 &pagebreak;
 
 ~ TableFigure { #table-2; caption: "Decrease of the width of the confidence interval according to the number of simulations"; .wide }
-|                  |--------------------------------------------------|-----|
-|                  | Decrease of the width of the confidence interval |     |
-|                  | (%)                                              |     |
-|                  |                                                  |     |
-|:-----------------|:------------------------------------------------:|:---:|
-| 100&nbsp;draws   | Reference                                        |     |
-| 200&nbsp;draws   | 40                                               |     |
-| 500&nbsp;draws   | 70                                               |     |
-| 1,000&nbsp;draws | 84                                               |     |
-| 5,000&nbsp;draws | 88                                               |     |
+|                  |------------------------------------------|-----|
+|                  | Decrease of the confidence interval width|     |
+|                  | (%)                                      |     |
+|:-----------------|:----------------------------------------:|:---:|
+| 100&nbsp;draws   | Reference                                |     |
+| 200&nbsp;draws   | 40                                       |     |
+| 500&nbsp;draws   | 70                                       |     |
+| 1,000&nbsp;draws | 84                                       |     |
+| 5,000&nbsp;draws | 88                                       |     |
 ~
 
 ## Complementary analysis
 
 It is observed that at least three separate evacuation patterns exist according to the
 number of occupants (see figures [#fig5_1] and [#fig5_2]) the table [#table-3] gives the
-correspondence with the RSET obtained. These three schemes correspond to three
-density ranges of people highlighting the influence of this one on the RSET.
+correspondence with the RSET obtained. These three patterns correspond to three
+density ranges of people highlighting its influence on the RSET.
 Indeed, the density of people influences on congestion time and average speed of
 the occupants which has a direct influence on the RSET.
 
-~ TableFigure { #table-3; caption: "Ranges of differents schemes for 100 draws"; .wide ; page-align:forcehere}
+~ TableFigure { #table-3; caption: "Ranges of differents patterns for 100 simulations"; .wide ; page-align:forcehere}
 |                                |-------------------------|-------------------------|-------------------------|
-|                                | Scheme 1                | Scheme 2                | Scheme 3                |
-|                                |                         |                         |                         |
+|                                | Pattern 1               | pattern 2               | pattern 3               |
 |:-------------------------------|:-----------------------:|:-----------------------:|:-----------------------:|
 | RSET&nbsp;(s)                  | [22.4&nbsp;;&nbsp;37.4] | [37.4&nbsp;;&nbsp;72.2] | [72.2&nbsp;;&nbsp;82.6] |
-| Number&nbsp;of&nbsp;occupants  | [34&nbsp;;&nbsp;297]    | [297&nbsp;;&nbsp;806]   | [806&nbsp;;&nbsp;982]   |
+| Occupants number               | [34&nbsp;;&nbsp;297]    | [297&nbsp;;&nbsp;806]   | [806&nbsp;;&nbsp;982]   |
 | Population density (person/m²) | [0.1&nbsp;;&nbsp;1.2]   | [1.2&nbsp;;&nbsp;3.1]   | [3.1&nbsp;;&nbsp;3.8]   |
 | Average waiting time (s)       | 2.7                     | 13.5                    | 23.5                    |
 | Average speed (m/s)            | 0.8                     | 0.3                     | 0.2                     |
 ~
 
 
-The figures [#fig5_4] and [#fig5_5] show the dispersion of the number of occupants
+The figures [#fig5_4] and [#fig5_5] show the occupants number scattering
 according to RSET for 100 and 1,000&nbsp;simulations. A greater dispersion is
-observed for the scheme n°1. This implies that for this scheme, it is not the
-number of occupant who controls the RSET but the distance from the last occupant
-to the exit. This shows the interest of the approach developed in this
+observed for the pattern n°1. In this case, the RSET is controlled by the distance 
+from the last occupant to the exit, rather than the population density.
+It demonstrates the interest of the approach developed in this
 document, which provides additional elements to understand evacuation
 behaviors.
 
 
 &pagebreak;
 
-~ Figure { #fig5_4; caption:"Dispersion of the number of occupants according to the RSET for 100&nbsp;draws";  page-align:forcehere}
+~ Figure { #fig5_4; caption:"Occupants number scattering vs. RSET for 100&nbsp;simulations";  page-align:forcehere}
 ![fig5_4]
 ~
 [fig5_4]: images/fig5_4.PNG "fig5_4" { width:auto; max-width:70% }
 
-~ Figure { #fig5_5; caption:"Dispersion of the number of occupants according to the RSET for 1,000&nbsp;draws";  page-align:forcehere}
+~ Figure { #fig5_5; caption:"Occupants number scattering vs. RSET for 1,000&nbsp;simulations";  page-align:forcehere}
 ![fig5_5]
 ~
 [fig5_5]: images/fig5_5.PNG "fig5_5" { width:auto; max-width:70% }
 
-Applying the method to the reference test case shows that there is very little
-simulations with the same number of occupant. This implies that we can-not
+As there are very little
+simulations with the same number of occupant, it is not impossible to
 quantify the influence of position and conflict resolution time on the RSET at
 this stage of the study. This is the topic of the next chapter.
 
 # ANALYSIS OF THE PARAMETERS' STATISTICAL INFLUENCE { #sec-analysis }
 
-In this part, we look at the influence of certain parameters on the results of the
-reference test case for the three schemes previously identified and at the quantification
-of this impact using the statistical analysis method. Table [#table-4] shows the
+This chapter studies the influence of some parameters on the results of the
+reference test case for the three patterns previously identified. Table [#table-4] shows the
 characteristics of each test case.
 
 
@@ -369,20 +361,19 @@ characteristics of each test case.
 | Test&nbsp;case&nbsp;4 | [0.8&nbsp;;&nbsp;1.5] | Random          | [0&nbsp;;&nbsp;30] |                      |
 ~
 
-In each case there is provided 3 sets of simulations. Each of these series take
+For each case 3 sets of simulations are performed. Each of these sets takes
 into account a fixed number of people, corresponding to the median RSET of each
-scheme identified above.
+pattern identified above.
 
 Table [#table-5] shows the characteristics of these simulations.
 
 ~ TableFigure { #table-5; caption: "Simulations selected for test cases n°1, 2, 3 and 4"; .wide ; page-align:forcehere}
-|                                |----------|----------|----------|
-|                                | Scheme 1 | Scheme 2 | Scheme 3 |
-|                                |          |          |          |
-|:-------------------------------|:--------:|:--------:|:--------:|
-| RSET&nbsp;(s)                  | 30.5     | 55.8     | 78.3     |
-| Number&nbsp;of&nbsp;occupants  | 187      | 610      | 927      |
-| Population density (person/m²) | 0.7      | 2.4      | 3.6      |
+|                                |-----------|-----------|-----------|
+|                                | pattern 1 | pattern 2 | pattern 3 |
+|:-------------------------------|:---------:|:---------:|:---------:|
+| Reference case RSET&nbsp;(s)   | 30.5      | 55.8      | 78.3      |
+| Occupants number               | 187       | 610       | 927       |
+| Population density (person/m²) | 0.7       | 2.4       | 3.6       |
 ~
 
 ## Test case n°1
@@ -396,21 +387,21 @@ It involves that the variability
 of the conflict resolution time and the effects of histories
 have an influence on the RSET.
 
-~ Figure { #fig6_1; caption:"Distribution function for 1,000&nbsp;draws and lower and upper bounds of the confidence interval under the scheme 1 (test case n°1)";  page-align:forcehere}
+~ Figure { #fig6_1; caption:"Distribution function for 1,000&nbsp;draws and lower and upper bounds of the confidence interval under the pattern 1 (test case n°1)";  page-align:forcehere}
 ![fig6_1]
 ~
 [fig6_1]: images/fig6_1.PNG "fig6_1" { width:auto; max-width:75% }
 
 
 
-~ Figure { #fig6_2; caption:"Distribution function for 1,000&nbsp;draws and lower and upper bounds of the confidence interval under the scheme 2 (test case n°1)";  page-align:forcehere}
+~ Figure { #fig6_2; caption:"Distribution function for 1,000&nbsp;draws and lower and upper bounds of the confidence interval under the pattern 2 (test case n°1)";  page-align:forcehere}
 ![fig6_2]
 ~
 [fig6_2]: images/fig6_2.PNG "fig6_2" { width:auto; max-width:70% }
 
 &pagebreak;
 
-~ Figure { #fig6_3; caption:"Distribution function for 1,000&nbsp;draws and lower and upper bounds of the confidence interval under the scheme 3 (test case n°1)";  page-align:forcehere}
+~ Figure { #fig6_3; caption:"Distribution function for 1,000&nbsp;draws and lower and upper bounds of the confidence interval under the pattern 3 (test case n°1)";  page-align:forcehere}
 ![fig6_3]
 ~
 [fig6_3]: images/fig6_3.PNG "fig6_3" { width:auto; max-width:70% }
@@ -438,7 +429,7 @@ These notations are used all along the document.
 | S. 3      | 78.3      | [79.2&nbsp;;&nbsp;79.7] | 0.5      | [75.6&nbsp;;&nbsp;79.7] |4.1         |5.4                |
 ~
 
-~ Figure { #fig6_4; caption:"Width of the confidence intervals for the 3 Schemes of the test case n°1";  page-align:forcehere}
+~ Figure { #fig6_4; caption:"Width of the confidence intervals for the 3 patterns of the test case n°1";  page-align:forcehere}
 ![fig6_4]
 ~
 [fig6_4]: images/fig6_4.PNG "fig6_4" { width:auto; max-width:70% }
@@ -447,7 +438,7 @@ We observe that there is a certain variability of the RSET even when the
 starting positions of the occupants are fixed. This variability is due to the variability
 of the conflict resolution time as well as to the effect
 of history produced by the various collisions. It is coherent with the fact
-that L~Ip95%~ is higher for the scheme including a bigger density of people. We
+that L~Ip95%~ is higher for the pattern including a bigger density of people. We
 also observe the same phenomenon for the width of I~p5%-95%~. We call back
 that the choice of the 95^th^ percentile and by extension the one of the 5th percentile
 depends on objectives of studies.
@@ -485,7 +476,7 @@ logical given the low variability of this one.
 |      | 3      | [79.3&nbsp;;&nbsp;79.8] | 0.5      | [75.4&nbsp;;&nbsp;79.8] | 4.4         |5.6                |
 ~
 &pagebreak;
-~ Figure { #fig6_5; caption:"Comparison of the width of the confidence interval for the 3 schemes between test cases n°1 and n°2";  page-align:forcehere}
+~ Figure { #fig6_5; caption:"Comparison of the width of the confidence interval for the 3 patterns between test cases n°1 and n°2";  page-align:forcehere}
 ![fig6_5]
 ~
 [fig6_5]: images/fig6_5.PNG "fig6_5" { width:auto; max-width:65% }
@@ -520,7 +511,7 @@ what is in accordance with what we could wait.
 
 &pagebreak;
 
-~ Figure { #fig6_6; caption:"Comparison of the width of the confidence interval for the 3 schemes between test cases n°1 and n°3";  page-align:forcehere}
+~ Figure { #fig6_6; caption:"Comparison of the width of the confidence interval for the 3 patterns between test cases n°1 and n°3";  page-align:forcehere}
 ![fig6_6]
 ~
 [fig6_6]: images/fig6_6.PNG "fig6_6" { width:auto; max-width:90% }
@@ -535,7 +526,7 @@ Synthetically table [#table-9] shows I~p95%~, L~Ip95%~, I~p5%-95%~, L~Ip5%-95%~ 
 for the three simulations and compared to those of the test case
 n°3. The widths of intervals are included in figure [#fig6_7]. We conclude that the
 variability in response time affects the RSET which is logical. It is also observed
-that the RSET min increases for scheme n°1 when the variability is added to the
+that the RSET min increases for pattern n°1 when the variability is added to the
 response time. It is possible that on the 1,000&nbsp;achievements few extreme cases
 were drawn.
 
@@ -557,7 +548,7 @@ were drawn.
 |      | 3      | [82.3&nbsp;;&nbsp;83.1] | 0.8      | [74.3&nbsp;;&nbsp;83.1] | 8.8         |11.3               |
 ~
 
-~ Figure { #fig6_7; caption:"Comparison of the width of the confidence interval for the 3 schemes between test cases n°3 and n°4";  page-align:forcehere}
+~ Figure { #fig6_7; caption:"Comparison of the width of the confidence interval for the 3 patterns between test cases n°3 and n°4";  page-align:forcehere}
 ![fig6_7]
 ~
 [fig6_7]: images/fig6_7.PNG "fig6_7" { width:auto; max-width:90% }
@@ -569,7 +560,7 @@ The application of this statistical analysis method based on the quantile distri
 confidence interval width in line with the desired accuracy or 1,000&nbsp;simulations
 in this document,
 * to better understand the phenomena occurring during
-an evacuation such as the existence of different evacuation schemes all along this
+an evacuation such as the existence of different evacuation patterns all along this
 study,
 * to show the nonlinear nature of the effects of the input parameters on the
 RSET which are in this case: conflict resolution time, the position of occupants,
@@ -610,7 +601,7 @@ variability of an input parameter to an output parameter: the RSET and secondly
 to quantify the number of simulations required to make to have a short confidence interval.
 This objective is reached on the test cases presented.
 Moreover, we have also obtained information allowing on one hand to highlight some
-physical phenomena as the existence of different evacuation schemes depending on
+physical phenomena as the existence of different evacuation patterns depending on
 the density of people and on the other hand to claim that the distribution functions are
 not linear despite the fact that the input parameters are drawn to a uniform
 law or fixed. Finally, despite the fact it is impossible to statistically determine a
