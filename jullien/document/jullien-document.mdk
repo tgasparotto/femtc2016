@@ -35,7 +35,7 @@ This method will be applied to analyze case studies simulated with BuildingExodu
 # INTRODUCTION { #sec-intro }
 
 The practice of the egress engineering relies on numerical models. Their purpose
-is to determine the time put by last occupant to evacuate a building either in normal or accidental
+is to determine the time taken by last occupant to evacuate a building either in normal or accidental
 situation. This time is called Required Safe Egress Time (RSET) all along
 the present document. The various human behavior phenomena
 occurring during an evacuation are not deterministic. Indeed, the
@@ -85,7 +85,7 @@ of a random variable which distribution is normal.
 In the following chapters the variable considered will be the RSET.
 60&nbsp;samples are randomly drawn.
 
-Then, we build a confidence interval I~p~ for each quantile &alpha; from the sample of size
+A confidence interval I~p~ for each quantile &alpha; from the sample of size
 n = 60 by choosing a level of confidence p equal to 90%. The confidence interval
 is the interval which includes the real value of the estimated quantiles with a 90% probability.
 This confidence interval is calculated as follows:
@@ -120,10 +120,10 @@ variable: in some cases, the random variable will have no maximum upper value.
 This is the case in this simple example, but can also happen for some RSET evaluations.
 
 In most of the cases, a maximum value exists, 
-but the finite samples number do not allow to access to this maximum value.
+but the finite samples number prevent from calculating this maximum value.
 A statistical analysis can indeed only give percentiles, 
 which get closer to 100% when the number of sample grows.
-Furthermore, a maximum RSET value can reflect very extreme
+In addition, a maximum RSET value can reflect very extreme
 scenarios where all worst case situations happen simultaneously.
 The value of this kind of extreme cases is questionable.
 
@@ -150,7 +150,7 @@ The connection model is the Moore's model as shown on figure [#fig4_1].
 
 The test case is a 16&nbsp;m square room with 4&nbsp;exits distributed on
 each side (figure [#fig4_2]). Each occupant occupies one complete node.
-Two occupants can-not coexist on the same node. The exits are 3&nbsp;m of wide,
+Two occupants cannot coexist on the same node. The exits are 3&nbsp;m of wide,
 and their flow rate is 2.0&nbsp;occupant/m/s.
 
 &pagebreak;
@@ -167,8 +167,8 @@ depending on test cases:
 * occupants are all men,
 * occupants have identical leaderships (in this case 10). This parameter affects how conflicts are resolved
 when two occupants want to occupy the same node which is impossible.
-BuildingExodus applies by default to the occupants a conflict resolution time between 0.8&nbsp;s
- and 1.5&nbsp;s before one of them occupies the node point of contention.
+BuildingExodus applies by default a conflict resolution time between 0.8&nbsp;s
+ and 1.5&nbsp;s to the occupants.
 For some test cases, the conflict resolution time is set at the average value of the
 interval, that is to say 1.15&nbsp;s.
 * occupant's patience is imposed to 10&nbsp;s. This implies that the occupants
@@ -187,16 +187,13 @@ concentrations of toxic gases (HCl, HBr, HF, SO~2~, NO~2~, CH~2~CHO,…) because
 they have no influence on the treated cases.
 
 Varying parameters are randomly drawn according to a uniform law between two extreme values.
-
 The most advanced behavioral options are left at their default values (e.g:
 occupants are aware of all exits). The objective of the occupants is to reach
 the nearest exit from their initial position.
-
 Finally, when several simulations in large numbers for the same
 test cases are performed, they are not used again from one case to another. That is to say that if
 100 and 1,000 achievements are performed, the first 100 are not part of the following
 1,000. The draw is completely redone every time.
-
 These choices are made for simplification purposes. 
 They are meaningless regarding to the proposed analysis method.
 
@@ -216,7 +213,7 @@ document).
 ~ Figure { #fig5_1; caption:"Distribution function for 100 draws and lower and upper bounds of the confidence interval (reference test case)";  page-align:forcehere}
 ![fig5_1]
 ~
-[fig5_1]: images/fig5_1.PNG "fig5_1" { width:auto; max-width:75% }
+[fig5_1]: images/fig5_1.PNG "fig5_1" { width:auto; max-width:65% }
 
 ~ Figure { #fig5_2; caption:"Distribution function for 1,000 draws and lower and upper bounds of the confidence interval (reference test case)";  page-align:forcehere}
 ![fig5_2]
@@ -239,24 +236,25 @@ intervals for 100 and 1,000&nbsp;simulations.
 
 Thus, it is not possible to statistically determine a maximum RSET value.
 Table [#table-1] shows the confidence intervals associated with the 95^th^ percentile for 100,
- 200, 500, 1,000 and 5,000&nbsp;draws. This choice implies that in 95% of cases all occupants have
+ 200, 500, 1,000 and 5,000&nbsp;simulations. This choice implies that in 95% of cases all occupants have
 evacuated with a probability of 90%. 
 The choice of the studied percentile order should be discussed in further studies,
 as it is the key parameter associated to the building safety level.
 The confidence level impacts the confidence interval width,
 and must be chosen according to the required precision (see section [#sec-statistical]).
 
+&pagebreak;
 
 ~ TableFigure { #table-1; caption: "Confidence intervals of the 95^th^ percentile for 100, 200, 500, 1,000 and 5,000 simulations"; .wide }
-|                  |------------------------------|------------------------------|
-|                  | confidence interval          | Width of confidence interval |
-|                  | of the 95^th^ percentile (s) | of the 95^th^ percentile (s) |
-|:-----------------|:----------------------------:|:----------------------------:|
-| 100&nbsp;draws   | [76.9&nbsp;;&nbsp;82.6]      | 5.7                          |
-| 200&nbsp;draws   | [76.6&nbsp;;&nbsp;80.0]      | 3.4                          |
-| 500&nbsp;draws   | [78.0&nbsp;;&nbsp;79.7]      | 1.7                          |
-| 1,000&nbsp;draws | [78.4&nbsp;;&nbsp;79.3]      | 0.9                          |
-| 5,000&nbsp;draws | [78.1&nbsp;;&nbsp;78.8]      | 0.7                          |
+|                        |------------------------------|------------------------------|
+|                        | confidence interval          | Width of confidence interval |
+|                        | of the 95^th^ percentile (s) | of the 95^th^ percentile (s) |
+|:-----------------------|:----------------------------:|:----------------------------:|
+| 100&nbsp;simulations   | [76.9&nbsp;;&nbsp;82.6]      | 5.7                          |
+| 200&nbsp;simulations   | [76.6&nbsp;;&nbsp;80.0]      | 3.4                          |
+| 500&nbsp;simulations   | [78.0&nbsp;;&nbsp;79.7]      | 1.7                          |
+| 1,000&nbsp;simulations | [78.4&nbsp;;&nbsp;79.3]      | 0.9                          |
+| 5,000&nbsp;simulations | [78.1&nbsp;;&nbsp;78.8]      | 0.7                          |
 ~
 
 
@@ -266,8 +264,8 @@ which the width of the confidence interval is sufficiently low to be acceptable.
 Moreover, beyond this number an increase of the number of simulation does not provide
 significant accuracy (see table [#table-2]) while it considerably increases the computing time.
 Indeed, the simulations are all performed in very short times,
-despite the fact that the population can vary from 1 to 1,000&nbsp;occupants. So we
-deduce that the time spent to perform the simulations is proportional
+despite the fact that the population can vary from 1 to 1,000&nbsp;occupants:
+the time spent to perform the simulations is proportional
 to the number of simulations (simulations are achieved in a sequentially way). So for all
 these reasons, 1,000&nbsp;simulations seem to be sufficient in the case studied here.
 
@@ -278,34 +276,34 @@ evaluates the number of simulations that seems most relevant to carry out a stud
 ~ Figure { #fig5_3; caption:"Confidence interval width vs. number of simulations";  page-align:forcehere}
 ![fig5_3]
 ~
-[fig5_3]: images/fig5_3.PNG "fig5_3" { width:auto; max-width:60% }
+[fig5_3]: images/fig5_3.PNG "fig5_3" { width:auto; max-width:70% }
 
 &pagebreak;
 
 ~ TableFigure { #table-2; caption: "Decrease of the width of the confidence interval according to the number of simulations"; .wide }
-|                        |------------------------------------------|
-|                        | Decrease of the confidence interval width|
-|                        | (%)                                      |
-|:-----------------------|:----------------------------------------:|
-| 100&nbsp;simulations   | Reference                                |
-| 200&nbsp;simulations   | 40                                       |
-| 500&nbsp;simulations   | 70                                       |
-| 1,000&nbsp;simulations | 84                                       |
-| 5,000&nbsp;simulations | 88                                       |
+|                  |------------------------------------------|-----|
+|                  | Decrease of the confidence interval width|     |
+|                  | (%)                                      |     |
+|:-----------------|:----------------------------------------:|:---:|
+| 100&nbsp;draws   | Reference                                |     |
+| 200&nbsp;draws   | 40                                       |     |
+| 500&nbsp;draws   | 70                                       |     |
+| 1,000&nbsp;draws | 84                                       |     |
+| 5,000&nbsp;draws | 88                                       |     |
 ~
 
 ## Complementary analysis
 
-It is observed that at least three separate evacuation patterns exist according to the
+At least three separate evacuation patterns exist according to the
 number of occupants (see figures [#fig5_1] and [#fig5_2]) the table [#table-3] gives the
 correspondence with the RSET obtained. These three patterns correspond to three
 density ranges of people highlighting its influence on the RSET.
-Indeed, the density of people influences on congestion time and average speed of
-the occupants which has a direct influence on the RSET.
+Indeed, the density of people has influence on the congestion time and the average occupants speed.
+
 
 ~ TableFigure { #table-3; caption: "Ranges of differents patterns for 100 simulations"; .wide ; page-align:forcehere}
 |                                |-------------------------|-------------------------|-------------------------|
-|                                | Pattern 1               | Pattern 2               | Pattern 3               |
+|                                | Pattern 1               | pattern 2               | pattern 3               |
 |:-------------------------------|:-----------------------:|:-----------------------:|:-----------------------:|
 | RSET&nbsp;(s)                  | [22.4&nbsp;;&nbsp;37.4] | [37.4&nbsp;;&nbsp;72.2] | [72.2&nbsp;;&nbsp;82.6] |
 | Occupants number               | [34&nbsp;;&nbsp;297]    | [297&nbsp;;&nbsp;806]   | [806&nbsp;;&nbsp;982]   |
@@ -337,7 +335,7 @@ behaviors.
 [fig5_5]: images/fig5_5.PNG "fig5_5" { width:auto; max-width:70% }
 
 As there are very little
-simulations with the same number of occupant, it is not impossible to
+simulations with the same number of occupant, it is impossible to
 quantify the influence of position and conflict resolution time on the RSET at
 this stage of the study. This is the topic of the next chapter.
 
@@ -393,11 +391,10 @@ as a uniform random parameter can lead to complex statistical REST behavior.
 [fig6_1]: images/fig6_1.PNG "fig6_1" { width:auto; max-width:75% }
 
 
-
 ~ Figure { #fig6_2; caption:"Distribution function for 1,000&nbsp;simulations and lower and upper bounds of the confidence interval for pattern 2 (test case n°1)";  page-align:forcehere}
 ![fig6_2]
 ~
-[fig6_2]: images/fig6_2.PNG "fig6_2" { width:auto; max-width:70% }
+[fig6_2]: images/fig6_2.PNG "fig6_2" { width:auto; max-width:75% }
 
 &pagebreak;
 
@@ -405,6 +402,8 @@ as a uniform random parameter can lead to complex statistical REST behavior.
 ![fig6_3]
 ~
 [fig6_3]: images/fig6_3.PNG "fig6_3" { width:auto; max-width:70% }
+
+
 
 Table [#table-6] summarize the three simulations sets results:
 
@@ -427,7 +426,7 @@ Table [#table-6] summarize the three simulations sets results:
 | S. 3      | 78.3      | [79.2&nbsp;;&nbsp;79.7] | 0.5      | [75.6&nbsp;;&nbsp;79.7] |4.1         |5.4                |
 ~
 
-~ Figure { #fig6_4; caption:"Width of the confidence intervals for the 3 patterns of the test case n°1";  page-align:forcehere}
+~ Figure { #fig6_4; caption:"Confidence intervals width for the 3 patterns of the test case n°1";  page-align:forcehere}
 ![fig6_4]
 ~
 [fig6_4]: images/fig6_4.PNG "fig6_4" { width:auto; max-width:70% }
@@ -463,7 +462,7 @@ time on the results, at least in this simple case.
 ~ TableFigure { #table-7; caption: "N°2 test case results synthesis and comparison with test case n°1"; .wide ; page-align:forcehere}
 |------|--------|-------------------------|----------|-------------------------|-------------|-------------------|
 |      |        |                         |          |                         |             |                   |
-| Test | P.     |I~p95%~                  | L~Ip95%~ |I~p5%-95%~               | L~Ip5%-95%~ | L~Ip5%-95%~/q~50%~|
+| Test | S.     |I~p95%~                  | L~Ip95%~ |I~p5%-95%~               | L~Ip5%-95%~ | L~Ip5%-95%~/q~50%~|
 | case |        | (s)                     | (s)      | (s)                     | (s)         | (%)               |
 |      |        |                         |          |                         |             |                   |
 |:-----|:-------|:-----------------------:|:--------:|:-----------------------:|:-----------:|:-----------------:|
@@ -495,7 +494,7 @@ the low and average densities of population than on a strong density.
 ~ TableFigure { #table-8; caption: "N°3 test case results synthesis and comparison with n°1"; .wide ; page-align:forcehere}
 |------|--------|-------------------------|----------|-------------------------|-------------|-------------------|
 |      |        |                         |          |                         |             |                   |
-| Test | P.     |I~p95%~                  | L~Ip95%~ |I~p5%-95%~               | L~Ip5%-95%~ | L~Ip5%-95%~/q~50%~|
+| Test | S.     |I~p95%~                  | L~Ip95%~ |I~p5%-95%~               | L~Ip5%-95%~ | L~Ip5%-95%~/q~50%~|
 | case |        | (s)                     | (s)      | (s)                     | (s)         | (%)               |
 |      |        |                         |          |                         |             |                   |
 |:-----|:-------|:-----------------------:|:--------:|:-----------------------:|:-----------:|:-----------------:|
@@ -521,12 +520,11 @@ Again, 3 sets of 1,000&nbsp;simulations are run, each one with a fixed occupant 
 
 Table [#table-9] summarize the three simulations sets results and compared to n°3 test case.
 The intervals widths are presented in figure [#fig6_7]. The response time
-variability strongly affects the RSET distributions patterns 2 and 3. It is also observed
-that the RSET min increases for pattern n°1 when the variability is added to the
-response time. It is possible that on the 1,000&nbsp;achievements few extreme cases
-were drawn.
+variability strongly affects the RSET distributions patterns 2 and 3. 
+The RSET minimum value increases for pattern n°1 when the variability is added to the
+response time. This may be caused by some few extreme cases drawn among the 1,000 simulations.
 
-&pagebreak;
+
 
 ~ TableFigure { #table-9; caption: "N°4 test case result synthesis and comparison with n°3"; .wide ; page-align:forcehere}
 |------|--------|-------------------------|----------|-------------------------|-------------|-------------------|
@@ -547,7 +545,7 @@ were drawn.
 ~ Figure { #fig6_7; caption:"Confidence interval width comparison for the 3 patterns between test cases n°3 and n°4";  page-align:forcehere}
 ![fig6_7]
 ~
-[fig6_7]: images/fig6_7.PNG "fig6_7" { width:auto; max-width:90% }
+[fig6_7]: images/fig6_7.PNG "fig6_7" { width:auto; max-width:80% }
 
 # SYNTHESIS { #sec-synthesis }
 
@@ -603,12 +601,18 @@ scattered nature of the human behavior phenomena.
 
 The work presented here is a first step towards a statistical view on egress engineering.
 Is focuses on the quantified results given by the mathematical tools.
-There is still a lot of work to produce in order to achieve engineering level tool.
+There is still a lot of work to produce in order to get an engineering level tool.
+
 First, the method developed here has been carried out by simple automation scripts. 
 It should be enhanced and industrialized by using stochastic-dedicated tools.
+
 Furthermore, and maybe above all, the input data required by this method still have to be refined.
+The input parameters distributions should especially be studied.
 As presented above, applying a stochastic approach can help sorting out the main influences,
-and prioritizing which evacuation tests to perform.
+and prioritizing which evacuation tests to perform in order to get these informations.
+This action requires deeper and more extensive analysis of the different behavior parameters,
+possibly using experimental plans.
+A comparison between various egress engineering tools parameters should also be carried out.
 
 Finally, the quantitative precision and evaluation criteria given by this approach
 can also help comparing simulations and experiments. It can also help setting up relevant
