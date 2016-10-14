@@ -141,9 +141,9 @@ It is appreciated that the observed drill was one result that belongs to a distr
 The objective of this exercise was to investigate expected evacuation times in a code compliant building so the building in the model was made to be code compliant by removing some of the people from the building to make the population of the upper floors 427.  This was done in a proportionate way for each floor and the relative proportions of priorities for the individuals were maintained.
 
 So, the model was run again a number of times, with redistributed populations each time, to see how a code compliant building would perform.
-Remembering that the objective evacuation time for each floor is approximately 2 and a half minutes, these are the evacuation times for each floor.
+Remembering that the objective evacuation time for each floor is approximately 2 and a half minutes, these are the average evacuation times for each floor.
 
-Table [#table-modelledtimes] shows the modeled evacuation times for each floor when the building complies with the maximum BS 9999 recommended number of people.
+Table [#table-modelledtimes] shows the average modeled evacuation times for each floor when the building complies with the maximum BS 9999 recommended number of people.
 
 
 ~ TableFigure { #table-modelledtimes; caption: "Modelled evacuation times for each floor in the code compliant building"; .narrow }
