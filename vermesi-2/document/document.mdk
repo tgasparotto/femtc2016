@@ -77,7 +77,7 @@ tunnel at 24.51 km.
 With an increasing number of long tunnels used for transport infrastructure, these tunnels 
 need to be adequately ventilated to ensure tunnel users will not be negatively impacted
 by fumes from vehicles or by smoke in a fire.  Although there are various options to provide ventilation in a tunnel, these methods can be
-broadly categories into longitudinal, transverse or semi-transverse ventilation. In design 
+broadly categorises into longitudinal, transverse or semi-transverse ventilation. In design 
 and engineering, the ventilation system in tunnels are currently designed using both 1D and full 
 CFD modelling methods.  
 
@@ -134,7 +134,7 @@ We have used FDS6.1 (current at the time the work was carried out) and the built
 feature to implement the multi-scale modelling method.  Briefly, multi-scale modelling can 
 be divided into two methods, namely the direct and indirect method [@ang].  
 
-A key consideration for a multi-scale model is the length, L~3D~ of the CFD domain 
+A key consideration for a multi-scale model is the length of the CFD domain 
 (near field), i.e. regions where CFD is needed to resolve the flow's characteristic.  Once this is decided, the remaining areas are treated as far field regions 
 where these can be represented in 1D. 
 
@@ -157,17 +157,17 @@ See Figure 2 for the implementation of the multi-scale model. Note that L~P~
 ## COMPARISON OF NUMERICAL MODELLING TO FIELD DATA
 To compare the numerical model for cold flow multi-scale modelling against field data, we have
 carried out modelling for five scenarios including one with only background velocity (no jet fans active), 
-and models with one, four, seven and fourteen jet fans pairs activated.  
+and models with one, four, seven and fourteen jet fans pairs activated [@ang].  
 
 Figure 3 shows the comparison of the on-site and both 1D and full CFD modelling average velocities at the
 centre of the tunnel. Although the velocities at 20 m to 60 m have weak correlations to the field data, 
 the velocity profiles further downstream of the jet fans correlate with the field data. This is
 within expectation as the numerical modelling of the jet fans are highly sensitive, particularly
 when considering the velocities profile near to the jet fans (highly turbulent and sensitive to the
-configuration of the jet fans).  As the results show, as the flow from the jet fans become
+configuration of the jet fans).  As the results show, as the flow from the jet fans becomes
 fully developed, the velocity profiles are within the field measurements.  
 
-~ Figure { #fig-figure; caption:"Comparison of the Velocity Profiles Downstream of the Jet Fans. [@ang]"}
+~ Figure { #fig-figure; caption:"Comparison of the Velocity Profiles Downstream of the Jet Fans. @ang"}
 ![fig_120]
 ![fig_100]
 ![fig_80]
@@ -193,7 +193,7 @@ modelling method also provides significant time saving compared to the full CFD 
 
 Figure 4 shows the computational time between the full CFD method and the multi-scale modelling
 method where depending on the length of the 1D zone, where the larger a proportion of the model
-is represented in 1D against 3D, the more significant is the time savings, i.e. up to 2.2 times.
+is represented in 1D against 3D, the more significant is the time savings, i.e. up to 2.2 times [@ang].
 
 ~ Figure { #fig-figure; caption:"Computational Time between Full CFD and the Multi-scale Modelling Method. @ang"}
 ![fig1_time1]
@@ -208,7 +208,7 @@ by introducing a fire in the centre of the tunnel. The model includes three fire
 35 MW, 55 MW and 75 MW.  
 
 Implementation of the multi-scale model is similar to that of the cold flow modelling with the
-exception the fire is located in the 3D section. See Figure 5.  Note that L~fire~is 170 m and this
+exception the fire is located in the 3D section. See Figure 5.  Note that L~fire~ is 170 m and this
 has been determined based on the calibration of the model to ensure the fire has enough length to
 be fully developed when the smoke plume reaches the 1D section.  
 
