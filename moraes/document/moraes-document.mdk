@@ -19,7 +19,7 @@ People fleeing from an overcrowded fire scene may delay their
 own escape by obstructing the emergency exit by themselves. 
 In a controlled environment free of obstacle, evacuation experiments
 were performed where firefighters trainees had to escape through
-a single door with 1.12 meter span, varying the crowd density. 
+a single door with a 1.12 meter span, varying the crowd density. 
 In the filming, besides the formation of supporting arches where
 people get stuck to each other and against the walls, it was observed
 turbulence, characterized by random and involuntary movements of people within the crowd. 
@@ -33,42 +33,42 @@ turbulence, characterized by random and involuntary movements of people within t
 # INTRODUCTION { #sec-intro }
 On 27th January 2013, a fire at the nightclub Kiss caused the death of 
 243 people in Santa Maria, Brazil. Investigators [@kissPC],[@crea2013] concluded that 
-the fire was caused by use of flare stick which sparks
+the fire was caused by use of flare stick whose sparks
 burned the flammable sound insulation foam (polyurethane made). 
 In a few seconds, black and toxic smoke spread throughout the
 nightclub, causing many people to faint. Others did strive towards 
-the unique and undersized exit door. Kiss tragedy required improvements 
-on fire safety code. 
+the only and undersized exit door. The Kiss tragedy alerted brazilians authorities 
+that the fire safety codes must be improved. 
 
-As unit of Brazilian federation, each state, through
+As units of the Brazilian federation, each state, through
 its fire department, is responsible to define the fire safety code and
-assure its application. For example, one less than two years after Kiss, 
+assure its application. For example, less than two years after Kiss, 
 Santa Catarina Military Fire Department (CBMSC), launched a new fire safety
 code (known as Normative Instructions or INs) banning the use of any type of fireworks
 and flammable foam in closed rooms. However, defining the size and 
 number of terminal emergency 
-exit, being either safe and cost-effective is not simple as setting another
+exit, being both safe and cost-effective is not as simple as setting another
 article in a code. CBMSC launched an experiment in order to analyze what
-happens during an uncoordinated egress like the one took place at Kiss. 
+happens during an uncoordinated egress like the one that took place at Kiss. 
 
 As part of a monograph of CBMSC's Military Academy, an experiment
 was done to analyze what happens inside the crowd during an uncoordinated egress like
-the one took place at Kiss. This paper presents some of those results like exit blockages, 
-crowd's turbulence, egress time and egress flow. The variable was the crowd's density, 
-varying it from 0.5 to 4.0 individuals per square meter. At last, a computer model was
-validated against the experiment's results and used to evaluate the Normative Instructions 09,
-specifically the regarding to evacuation capability through doors at the ground
-floor of nightclubs and similar.
+the one that took place at Kiss. This paper presents some of those results
+, such as exit blockages, crowd turbulence, egress time and egress flow. The variable
+utilized was crowd density, varying it from 0.5 to 4.0 individuals per square meter. 
+Lastly, a computer model was validated with the experiment's results and used
+to evaluate the Normative Instructions 09, specifically regarding evacuation
+capability through doors at the ground floor of nightclubs and similar.
 
 # UNCOORDINATED EGRESS { #sec-egress}
 Evacuation capability is the ability of occupants, residents, and staff as a group either 
 to evacuate a building or to relocate from the point of occupancy to a point of safety
-[@code2009nfpa]. An evacuation process would be: a) coordinated, when
-people leaves the place in an ordered queue, coordinated flow without rush; b) uncoordinated, 
+[@code2009nfpa]. An evacuation process could be: a) coordinated, when
+people leaves the place in an ordered queue, coordinated flow without rush or; b) uncoordinated, 
 when everyone rush for the exit, pressing others ahead, the flow become nonlinear with stops
 and goes, either with or without mass panic. Based on literature review and empirical
 research, Helbing, Farkas and Vicsek @helbing2000simulating lists the events that
-can occur during an emergency evacuation, right after the identification of the threat: 
+can occur during an emergency evacuation, right after the identification of the threat, as: 
 (1) people try to move faster than normal; 
 (2) individuals press to exit, causing physical interactions with those around; 
 (3) movement becomes uncoordinated through the openings; 
@@ -81,18 +81,18 @@ can occur during an emergency evacuation, right after the identification of the 
 
 ## Experiment { #sec-experiment}
 The uncoordinated egress experiment aims to verify some of those events above described. 
-Otherwise, several crowd density were applied to assert how it influences on the egress
+Furthermore, several crowd densities were applied to assert how it influences the egress
 time and egress flux. Figure [#fig-ginasio] shows a top view, out of scale, of part of
 the CBMSC Military Academy's Sport Hall, detailing the experiment. In a controlled 
-environment, with only a 1.12m exit door, a group of 20 to 30 years old, firefighting 
-students, were distributed over 70m² emulating a night club environment. A whistle sounds.
-All occupants are urged to leave the area immediately, as it would be the reaction observed
+environment, with only a 1.12m exit door, a group of 20 to 30 years old firefighting 
+students were distributed over 70m² emulating a night club environment. At the sound of
+whistle, all occupants are urged to leave the area immediately, as it would be the reaction observed
 by people perceiving imminent risk to their lives. 
 
-The V1 camera films the crowd from behind. Fixed above the door, V2 camera records people
-near the door. The V3 is positioned over a vehicle parked next to the exit and facing the
+The camera V1 films the crowd from behind. Fixed above the door, the camera V2 records people
+near the door. V3 is positioned over a vehicle parked next to the exit and facing the
 door from outside. The angle of view of those cameras are represented by a dashed blue
-semicircle and a red and yellow lines.
+semicircle and red and yellow lines.
 
 ~ Figure { #fig-ginasio; caption:"Egress experiment scheme."}
 ![esquemaExperimento_02]
@@ -100,13 +100,13 @@ semicircle and a red and yellow lines.
 [esquemaExperimento_02]: images/esquemaExperimento_02.png "esquemaExperimento_02" { width:auto; max-width:100% }
 
 During the experiments there were no visibility restriction or lack of fresh air, 
-participants were quite homogeneous concerning mobility and decision-making skills, 
+participants were reasonably homogeneous concerning mobility and decision-making skills, 
 they saw and knew which direction to take to egress and there were no obstacles. 
 Seven trials were performed, varying the initial population as follows: 35, 70, 105, 
 140, 175, 210 and 280. Figure [#3cam] shows a  snapshot of cameras V1, V2 and V3
 during the experiment.
 
-~ Figure { #3CAM; caption:"Simultaneous snapshots taken during experiment."}
+~ Figure { #3CAM; caption:"Simultaneous snapshots taken during the experiment."}
 ![snapshot3CAM]
 ~
 [snapshot3CAM]: images/snapshot3CAM.png "snapshot3CAM" { width:auto; max-width:100% }
@@ -114,12 +114,13 @@ during the experiment.
 
 ## Simulation { #sec-sim}
 Helbing, Farkas and Vicsek [@helbing2000simulating] presented an egress
-simulation model, here named as "Panic Package". Authors considered that in an 
+simulation model, here named as "Panic Package". The authors considered that in an 
 emergency, every individual should aim the exit, following a straight path at a desired
-speed. If those ahead are not at the same speed, they will be underwent by those behind, 
-raising the crowd pressure. According to this model, the forces inside a crowd in an
+speed. If those ahead are not at the same speed, they will be crowded out by those 
+behind. Once the egress flow is reduced due to door blockages or a crowd, the pressure
+raises. According to this model, the forces inside a crowd in an
 uncoordinated egress are: a) physical, reaction to compression and friction either among
-individuals or against walls; b) socio-psychological, related to aversion of crowding.
+individuals or against walls; and b) socio-psychological, related to aversion of crowding.
 
 Panic Package is part of the article publicized on Nature
 on 2000 @helbing2000simulating. Simulation parameters were maintained as default, except 
@@ -131,7 +132,7 @@ particles, set according to the number of individuals.
 
 # RESULTS   { #sec-results}
 The experiment results are here divided in: qualitative, where is presented the blockages
-and crowd's turbulence on videos and; quantitative, regarding to egress time and flow 
+and crowd's turbulence on videos; and quantitative, regarding to egress time and flow 
 analysis. Then, "Panic Package" simulation results are compared against the experimental. 
 That validated simulation model is used to check effectiveness of some aspects of IN 09
 regarding to nightclub's emergency egress. 
