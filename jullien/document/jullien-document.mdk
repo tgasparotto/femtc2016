@@ -205,16 +205,16 @@ into account a random occupant number between 1 and 1,000, randomly located in t
 The first set contains 100 simulations, the second one contains 1,000 simulations.
 Figures [#fig5_1] and [#fig5_2] show the calculated RSET distribution functions as well as
  the lower and upper bounds
-of the confidence intervals for 100 draws, respectively 1,000 draws. The selected
+of the confidence intervals for 100 simulations, respectively 1,000 simulations. The selected
 level of confidence is 90% (the same level of confidence is used in the rest of the
 document).
 
-~ Figure { #fig5_1; caption:"Distribution function for 100 draws and lower and upper bounds of the confidence interval (reference test case)";  page-align:forcehere}
+~ Figure { #fig5_1; caption:"Distribution function for 100 simulations and lower and upper bounds of the confidence interval (reference test case)";  page-align:forcehere}
 ![fig5_1]
 ~
 [fig5_1]: images/fig5_1.PNG "fig5_1" { width:auto; max-width:65% }
 
-~ Figure { #fig5_2; caption:"Distribution function for 1,000 draws and lower and upper bounds of the confidence interval (reference test case)";  page-align:forcehere}
+~ Figure { #fig5_2; caption:"Distribution function for 1,000 simulations and lower and upper bounds of the confidence interval (reference test case)";  page-align:forcehere}
 ![fig5_2]
 ~
 [fig5_2]: images/fig5_2.PNG "fig5_2" { width:auto; max-width:70% }
@@ -229,7 +229,7 @@ In accordance with what has been announced above, it is observed that:
 
 
 * the confidence interval width decreases when simulation number increase from 8.1&nbsp;s on average for
-100&nbsp;draws to 2.5&nbsp;s on average for 1,000&nbsp;draws,
+100&nbsp;simulations to 2.5&nbsp;s on average for 1,000&nbsp;simulations,
 * extreme percentiles have unbound confidence
 intervals for 100 and 1,000&nbsp;simulations.
 
@@ -284,11 +284,11 @@ evaluates the number of simulations that seems most relevant to carry out a stud
 |                  | Decrease of the confidence interval width|     |
 |                  | (%)                                      |     |
 |:-----------------|:----------------------------------------:|:---:|
-| 100&nbsp;draws   | Reference                                |     |
-| 200&nbsp;draws   | 40                                       |     |
-| 500&nbsp;draws   | 70                                       |     |
-| 1,000&nbsp;draws | 84                                       |     |
-| 5,000&nbsp;draws | 88                                       |     |
+| 100&nbsp;simulations   | Reference                                |     |
+| 200&nbsp;simulations   | 40                                       |     |
+| 500&nbsp;simulations   | 70                                       |     |
+| 1,000&nbsp;simulations | 84                                       |     |
+| 5,000&nbsp;simulations | 88                                       |     |
 ~
 
 ## Complementary analysis
@@ -384,7 +384,7 @@ It demonstrates the sophisticated interactions between input parameters and RSET
 as a uniform random parameter can lead to complex statistical REST behavior.
 
 
-~ Figure { #fig6_1; caption:"Distribution function for 1,000&nbsp;drawssimulations and lower and upper bounds of the confidence interval for pattern 1 (test case n°1)";  page-align:forcehere}
+~ Figure { #fig6_1; caption:"Distribution function for 1,000&nbsp;simulations and lower and upper bounds of the confidence interval for pattern 1 (test case n°1)";  page-align:forcehere}
 ![fig6_1]
 ~
 [fig6_1]: images/fig6_1.PNG "fig6_1" { width:auto; max-width:75% }
