@@ -4,10 +4,14 @@ Sub Title     : In both HTML and PDF
 Author        : Daan Leijen
 Affiliation   : Microsoft Research
 Email         : daan@microsoft.com
-Reveal Theme  : sky
+Reveal Theme  : simple
 Beamer Theme  : singapore
 
 Css: http://vjs.zencdn.net/5.11.7/video-js.css
+
+Slide {
+  data-transition:fade
+}
 
 [TITLE]
 
