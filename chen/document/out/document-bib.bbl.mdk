@@ -1,0 +1,86 @@
+~ begin bibliography { .bib-numeric; cite-style:"numeric:'[',']',', '" ; caption:"21" ; data-style:"numeric" ; data-style:'madoko-numeric-nosort';  }
+~ begin bibitem {id:"Paulsen:TeX"; cite-year:"1984"; cite-authors:"Paulsen"; cite-authors-long:"Paulsen"; cite-label:"1"; caption:"Human behavior and fires: An introduction&nl;Paulsen, 1984"; data-line:"references.bib:1"; searchterm:"Human%20behavior%20and%20fires%3A%20An%20introduction%20Paulsen%2C%201984"; bibitem-label:"\[1\]"}
+\/R.&nbsp;Paulsen. _Human Behavior and Fires: An Introduction_. Volume 20. Fire technology. 1984.
+~ end bibitem
+
+~ begin bibitem {id:"Fruin:TeX"; cite-year:"1971"; cite-authors:"Fruin"; cite-authors-long:"Fruin"; cite-label:"2"; caption:"Pedestrian planning and design&nl;Fruin, 1971"; data-line:"references.bib:10"; searchterm:"Pedestrian%20planning%20and%20design%20Fruin%2C%201971"; bibitem-label:"\[2\]"}
+\/J.J.&nbsp;Fruin. _Pedestrian Planning and Design_. 1971.
+~ end bibitem
+
+~ begin bibitem {id:"Proulx:TeX"; cite-year:"1995"; cite-authors:"Proulx"; cite-authors-long:"Proulx"; cite-label:"3"; caption:"Evacuation time and movement in apartment buildings&nl;Proulx, 1995"; data-line:"references.bib:17"; searchterm:"Evacuation%20time%20and%20movement%20in%20apartment%20buildings%20Proulx%2C%201995"; bibitem-label:"\[3\]"}
+\/G.n. Proulx. _Evacuation Time and Movement in Apartment Buildings_. Volume 24. Fire Safety Journal. 1995.
+~ end bibitem
+
+~ begin bibitem {id:"Frantzich:TeX"; cite-year:"1996"; cite-authors:"Frantzich"; cite-authors-long:"Frantzich"; cite-label:"4"; caption:"Study of movement on stairs during evacuation using video analysing techniques&nl;Frantzich, 1996"; data-line:"references.bib:25"; searchterm:"Study%20of%20movement%20on%20stairs%20during%20evacuation%20using%20video%20analysing%20techniques%20Frantzich%2C%201996"; bibitem-label:"\[4\]"}
+\/H.&nbsp;Frantzich. _Study of Movement on Stairs during Evacuation Using Video Analysing Techniques_. LUTVDG/TVBB-3079-SE.&nbsp;1996.
+~ end bibitem
+
+~ begin bibitem {id:"Fujiyama02:TeX"; cite-year:"2004"; cite-authors:"Fujiyama and Tyler"; cite-authors-long:"Fujiyama and Tyler"; cite-label:"5"; caption:"An Explicit Study on Walking Speeds of Pedestrians on Stairs&nl;Fujiyama and Tyler, 2004"; data-line:"references.bib:32"; searchterm:"An%20Explicit%20Study%20on%20Walking%20Speeds%20of%20Pedestrians%20on%20Stairs%20Fujiyama%20and%20Tyler%2C%202004"; bibitem-label:"\[5\]"}
+\/T.&nbsp;Fujiyama, and N.&nbsp;Tyler. _An Explicit Study on Walking Speeds of Pedestrians on Stairs_. Procs 10th International Conference on Mobility and Transport for Elderly and Disabled People . 2004.
+~ end bibitem
+
+~ begin bibitem {id:"Tobias06:TeX"; cite-year:"2008"; cite-authors:"Tobias et al."; cite-authors-long:"Tobias, Anna, Andreas, Hubert, Tim, and Michael"; cite-label:"6"; caption:"Upstairs walking speed distributions on a long stairway&nl;Tobias, Anna, Andreas, Hubert, Tim, and Michael, 2008"; data-line:"references.bib:39"; searchterm:"Upstairs%20walking%20speed%20distributions%20on%20a%20long%20stairway%20Tobias%2C%20Anna%2C%20Andreas%2C%20Hubert%2C%20Tim%2C%20and%20Michael%2C%202008"; bibitem-label:"\[6\]"}
+\/K.&nbsp;Tobias, G.&nbsp;Anna, K.&nbsp;Andreas, K.&nbsp;Hubert, M.&nbsp;Tim, and S.&nbsp;Michael. _Upstairs Walking Speed Distributions on a Long Stairway_. Volume 46. Safety Science. 2008.
+~ end bibitem
+
+~ begin bibitem {id:"Galea:TeX"; cite-year:"2009"; cite-authors:"Galea"; cite-authors-long:"Galea"; cite-label:"7"; caption:"The UK WTC 9/11 Evacuation Study: an Overview of the Methodologies Employed and Some Analysis Relating to Fatigue, Stair Travel Speeds and Occupant Response Times&nl;Galea, 2009"; data-line:"references.bib:47"; searchterm:"The%20UK%20WTC%209%2F11%20Evacuation%20Study%3A%20an%20Overview%20of%20the%20Methodologies%20Employed%20and%20Some%20Analysis%20Relating%20to%20Fatigue%2C%20Stair%20Travel%20Speeds%20and%20Occupant%20Response%20Times%20Galea%2C%202009"; bibitem-label:"\[7\]"}
+\/E.R.&nbsp;Galea. _The UK WTC 9/11 Evacuation Study: An Overview of the Methodologies Employed and Some Analysis Relating to Fatigue, Stair Travel Speeds and Occupant Response Times_. in Proceedings of the Fourth International Symposium on Human Behaviour in Fire. 2009.
+~ end bibitem
+
+~ begin bibitem {id:"Peacock03:TeX"; cite-year:"2012"; cite-authors:"Peacock et al."; cite-authors-long:"Peacock, Hoskins, and Kuligowski"; cite-label:"8"; caption:"Overall and local movement speeds during fire drill evacuations in buildings up to 31 stories&nl;Peacock, Hoskins, and Kuligowski, 2012"; data-line:"references.bib:54"; searchterm:"Overall%20and%20local%20movement%20speeds%20during%20fire%20drill%20evacuations%20in%20buildings%20up%20to%2031%20stories%20Peacock%2C%20Hoskins%2C%20and%20Kuligowski%2C%202012"; bibitem-label:"\[8\]"}
+\/R.D.&nbsp;Peacock, B.L.&nbsp;Hoskins, and E.D.&nbsp;Kuligowski. _Overall and Local Movement Speeds during Fire Drill Evacuations in Buildings up to 31 Stories_. Volume 50. Safety Science. 2012.
+~ end bibitem
+
+~ begin bibitem {id:"Choi03:TeX"; cite-year:"2013"; cite-authors:"Choi et al."; cite-authors-long:"Choi, Galea, and Hong"; cite-label:"9"; caption:"Individual Stair Ascent and Descent Walk Speeds Measured in a Korean High-Rise Building&nl;Choi, Galea, and Hong, 2013"; data-line:"references.bib:62"; searchterm:"Individual%20Stair%20Ascent%20and%20Descent%20Walk%20Speeds%20Measured%20in%20a%20Korean%20HighRise%20Building%20Choi%2C%20Galea%2C%20and%20Hong%2C%202013"; bibitem-label:"\[9\]"}
+\/J.H.&nbsp;Choi, E.R.&nbsp;Galea, and W.H.&nbsp;Hong. _Individual Stair Ascent and Descent Walk Speeds Measured in a Korean High-Rise Building_. Volume 50. Fire Technology. 2013.
+~ end bibitem
+
+~ begin bibitem {id:"Jin:TeX"; cite-year:"1997"; cite-authors:"Jin"; cite-authors-long:"Jin"; cite-label:"10"; caption:"Studies on Human Behavior and Tenability in Fire Smoke&nl;Jin, 1997"; data-line:"references.bib:70"; searchterm:"Studies%20on%20Human%20Behavior%20and%20Tenability%20in%20Fire%20Smoke%20Jin%2C%201997"; bibitem-label:"\[10\]"}
+\/T.&nbsp;Jin. _Studies on Human Behavior and Tenability in Fire Smoke_. Fire Protection Equipment & Safety Center of Japan 2-9-16 Toranomon. 1997.
+~ end bibitem
+
+~ begin bibitem {id:"Klingsch03:TeX"; cite-year:"2008"; cite-authors:"Klingsch et al."; cite-authors-long:"Klingsch, Rogsch, and Andreas"; cite-label:"11"; caption:"Evacuation Movement in Photoluminescent Stairwells&nl;Klingsch, Rogsch, and Andreas, 2008"; data-line:"references.bib:77"; searchterm:"Evacuation%20Movement%20in%20Photoluminescent%20Stairwells%20Klingsch%2C%20Rogsch%2C%20and%20Andreas%2C%202008"; bibitem-label:"\[11\]"}
+\/W.&nbsp;Klingsch, C.&nbsp;Rogsch, and S.&nbsp;Andreas. _Evacuation Movement in Photoluminescent Stairwells_. Pedestrian and Evacuation Dynamics 2008. 2008.
+~ end bibitem
+
+~ begin bibitem {id:"Proulx04:TeX"; cite-year:"2013"; cite-authors:"Proulx et al."; cite-authors-long:"Proulx, Tiller, Kyle, and Crack"; cite-label:"12"; caption:"Assessment of Photoluminescent Material During Office Occupant Evacuation&nl;Proulx, Tiller, Kyle, and Crack, 2013"; data-line:"references.bib:84"; searchterm:"Assessment%20of%20Photoluminescent%20Material%20During%20Office%20Occupant%20Evacuation%20Proulx%2C%20Tiller%2C%20Kyle%2C%20and%20Crack%2C%202013"; bibitem-label:"\[12\]"}
+\/G.&nbsp;Proulx, D.k. Tiller, B.R.&nbsp;Kyle, and J.&nbsp;Crack. _Assessment of Photoluminescent Material During Office Occupant Evacuation_. National Research Council of Canada, Internal Report No.774. 2013.
+~ end bibitem
+
+~ begin bibitem {id:"Proulx02:TeX"; cite-year:"2009"; cite-authors:"Proulx and Bénichou"; cite-authors-long:"Proulx and Bénichou"; cite-label:"13"; caption:"Photoluminescent Stairway Installation for Evacuation in Office Buildings&nl;Proulx and Bénichou, 2009"; data-line:"references.bib:91"; searchterm:"Photoluminescent%20Stairway%20Installation%20for%20Evacuation%20in%20Office%20Buildings%20Proulx%20and%20B%C3%A9nichou%2C%202009"; bibitem-label:"\[13\]"}
+\/G.&nbsp;Proulx, and N.&nbsp;Bénichou. _Photoluminescent Stairway Installation for Evacuation in Office Buildings_. Volume 46. Fire Technology. 2009.
+~ end bibitem
+
+~ begin bibitem {id:"Jeon02:TeX"; cite-year:"2009"; cite-authors:"Jeon and Hong"; cite-authors-long:"Jeon and Hong"; cite-label:"14"; caption:"An experimental study on how phosphorescent guidance equipment influences on evacuation in impaired visibility&nl;Jeon and Hong, 2009"; data-line:"references.bib:99"; searchterm:"An%20experimental%20study%20on%20how%20phosphorescent%20guidance%20equipment%20influences%20on%20evacuation%20in%20impaired%20visibility%20Jeon%20and%20Hong%2C%202009"; bibitem-label:"\[14\]"}
+\/G.Y.&nbsp;Jeon, and W.H.&nbsp;Hong. _An Experimental Study on How Phosphorescent Guidance Equipment Influences on Evacuation in Impaired Visibility_. Volume 22. Journal of Loss Prevention in the Process Industries. 2009.
+~ end bibitem
+
+~ begin bibitem {id:"Gyu04:TeX"; cite-year:"2011"; cite-authors:"Gyu-Yeob et al."; cite-authors-long:"Gyu-Yeob, Ju-Young, Won-Hwa, and Godfried"; cite-label:"15"; caption:"Evacuation performance of individuals in different visibility conditions&nl;Gyu-Yeob, Ju-Young, Won-Hwa, and Godfried, 2011"; data-line:"references.bib:108"; searchterm:"Evacuation%20performance%20of%20individuals%20in%20different%20visibility%20conditions%20GyuYeob%2C%20JuYoung%2C%20WonHwa%2C%20and%20Godfried%2C%202011"; bibitem-label:"\[15\]"}
+\/J.&nbsp;Gyu-Yeob, K.&nbsp;Ju-Young, H.&nbsp;Won-Hwa, and A.&nbsp;Godfried. _Evacuation Performance of Individuals in Different Visibility Conditions_. Volume 46. Building and Environmental. 2011.
+~ end bibitem
+
+~ begin bibitem {id:"Bellamy02:TeX"; cite-year:"1990"; cite-authors:"Bellamy and Geyer"; cite-authors-long:"Bellamy and Geyer"; cite-label:"16"; caption:"Experimental programme to investigate informative fire warning characteristics for motivating fast evacuation&nl;Bellamy and Geyer, 1990"; data-line:"references.bib:116"; searchterm:"Experimental%20programme%20to%20investigate%20informative%20fire%20warning%20characteristics%20for%20motivating%20fast%20evacuation%20Bellamy%20and%20Geyer%2C%201990"; bibitem-label:"\[16\]"}
+\/L.&nbsp;Bellamy, and T.&nbsp;Geyer. _Experimental Programme to Investigate Informative Fire Warning Characteristics for Motivating Fast Evacuation_. London, UK: Building Research Establishment. 1990.
+~ end bibitem
+
+~ begin bibitem {id:"Waldau04:TeX"; cite-year:"2005"; cite-authors:"Waldau et al."; cite-authors-long:"Waldau, Gattermann, Knoflacher, and Schreckenberg"; cite-label:"17"; caption:"undefined&nl;Waldau, Gattermann, Knoflacher, and Schreckenberg, 2005"; data-line:"references.bib:123"; searchterm:"undefined%20Waldau%2C%20Gattermann%2C%20Knoflacher%2C%20and%20Schreckenberg%2C%202005"; bibitem-label:"\[17\]"}
+\/N.&nbsp;Waldau, P.&nbsp;Gattermann, H.&nbsp;Knoflacher, and M.&nbsp;Schreckenberg. Pedestrian and evacuation dynamics 2005. 2005.
+~ end bibitem
+
+~ begin bibitem {id:"Nilsson02:TeX"; cite-year:"2003"; cite-authors:"Håkan and Nilsson"; cite-authors-long:"Håkan and Nilsson"; cite-label:"18"; caption:"Utrymning genom tät rök  beteende och förflyttning.&nl;Håkan and Nilsson, 2003"; data-line:"references.bib:130"; searchterm:"Utrymning%20genom%20t%C3%A4t%20r%C3%B6k%20beteende%20och%20f%C3%B6rflyttning.%20H%C3%A5kan%20and%20Nilsson%2C%202003"; bibitem-label:"\[18\]"}
+\/T.&nbsp;Håkan, and D.&nbsp;Nilsson. _Utrymning Genom Tät Rök&nbsp;Beteende Och Förflyttning._ Department of Fire Safety Engineering Lund University. 2003.
+~ end bibitem
+
+~ begin bibitem {id:"Fridolf04:TeX"; cite-year:"2013"; cite-authors:"Fridolf et al."; cite-authors-long:"Fridolf, Ronchi, Nilsson, and Frantzich"; cite-label:"19"; caption:"Evacuation performance of individuals in different visibility conditions&nl;Fridolf, Ronchi, Nilsson, and Frantzich, 2013"; data-line:"references.bib:145"; searchterm:"Evacuation%20performance%20of%20individuals%20in%20different%20visibility%20conditions%20Fridolf%2C%20Ronchi%2C%20Nilsson%2C%20and%20Frantzich%2C%202013"; bibitem-label:"\[19\]"}
+\/K.&nbsp;Fridolf, E.&nbsp;Ronchi, D.&nbsp;Nilsson, and H.&nbsp;Frantzich. _Evacuation Performance of Individuals in Different Visibility Conditions_. Volume 59. Fire Safety Journal. 2013.
+~ end bibitem
+
+~ begin bibitem {id:"Lee:TeX"; cite-year:"2002"; cite-authors:"Lee"; cite-authors-long:"Lee"; cite-label:"20"; caption:"Disaster prevention in architecture&nl;Lee, 2002"; data-line:"references.bib:153"; searchterm:"Disaster%20prevention%20in%20architecture%20Lee%2C%202002"; bibitem-label:"\[20\]"}
+\/Y.J.&nbsp;Lee. _Disaster Prevention in Architecture_. Kimoondang. 2002.
+~ end bibitem
+
+~ begin bibitem {id:"Hoskins02:TeX"; cite-year:"2012"; cite-authors:"Hoskins and Milke"; cite-authors-long:"Hoskins and Milke"; cite-label:"21"; caption:"Differences in measurement methods for travel distance and area for estimates of occupant speed on stairs&nl;Hoskins and Milke, 2012"; data-line:"references.bib:160"; searchterm:"Differences%20in%20measurement%20methods%20for%20travel%20distance%20and%20area%20for%20estimates%20of%20occupant%20speed%20on%20stairs%20Hoskins%20and%20Milke%2C%202012"; bibitem-label:"\[21\]"}
+\/B.L.&nbsp;Hoskins, and J.A.&nbsp;Milke. _Differences in Measurement Methods for Travel Distance and Area for Estimates of Occupant Speed on Stairs_. Volume 48. Fire Safety Journal. 2012.
+~ end bibitem
+
+~ end bibliography
