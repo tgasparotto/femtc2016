@@ -236,8 +236,9 @@ concerts shown at table [#table2].
 ~ 
 [Cdm_Sala2PF2]: images/Cdm_Sala2PF2.png "Cdm_Sala2PF2" { width:auto; max-width:90% }
 
-The Pathfinder tool can be used to estimate the improvement that opening an emergency
-exit might have in the total evacuation time. Figure [#figcdm_sala2PF3] shows the same situation 
+The Pathfinder tool can be used to estimate the improvement when 
+opening an emergency exit might have in the total egress time. 
+Figure [#figcdm_sala2PF3] shows the same situation 
 presented before in figure [#figcdm_sala2PF2], this time having the emergency exit, near the stage, open. 
 
 
@@ -250,22 +251,22 @@ presented before in figure [#figcdm_sala2PF2], this time having the emergency ex
 
 # CASE STUDY: COLISEU DO PORTO
 
-The Coliseu do Porto is a theatre in Porto, Portugal. A local landmark, 
-it is a leading venue for music and cultural events. The building was finished in 1941 
+The Coliseu do Porto is a theatre in Porto, Portugal. A local landmark which 
+is a leading venue for music and cultural events. The building was finished in 1941 
 having the architect Cassiano Branco, among others prior to him, 
 to complete the whole project.
 
-In the 1990s two important events marked the history of the venue. In 1995 the building 
+In the 1990s two important events marked the history of the venue. In 1995, the building 
 was nearly sold to a Brazilian Church (Universal Church of the Kingdom of God). 
 However, a mass demonstration of the people of Porto, promoted by several prominent 
 members of the Portuguese and, especially, the city’s cultural milieu sparked an 
 intervention that prevented the deal to take place. The venue was handed over to 
 a group of citizens that, still today, manages the Coliseu as a cultural venue. 
 
-In 1996 a fire destroyed part of the venue, including the stage, the back-stage 
+In 1996, a fire destroyed part of the venue, including the stage, the back-stage 
 and part of the auditorium. Rebuilt over a very short period, it showed some 
 limitations and the venue suffered new interventions in 1997 and 1998. It was 
-offcially reopened in November 1998, about two years after the fire, and has since 
+officially reopened in November 1998, about two years after the fire, and has since 
 then regained its role as one of Porto’s most dynamic cultural spots.
 
 ~ Figure { #figColiseu1; caption:"Coliseu Porto: view of the concert hall from the stage"}
@@ -274,9 +275,9 @@ then regained its role as one of Porto’s most dynamic cultural spots.
 
 [coliseu]: images/coliseu.jpg "coliseu" { width:auto; max-width:90% }
 
-The main auditorium of Coliseu do Porto has a capacity for 3,500 people standing 
-and 2.955 seated when we count the 1st and 2nd stalls, the dress circle, 
-the boxes, upper circle and the reserved and general gallery.
+The main auditorium of Coliseu Porto has a capacity for 3,500 people standing 
+and 2,955 seated when we count the first and second stalls, the dress circle, 
+the boxes, the upper circle and the reserved and general gallery.
 
 TEXT MISSING: PICTURES OF THE PATHFINDER SIMULATION OF COLISEU; RESULTS; DISCUSSION.
 
@@ -284,31 +285,39 @@ TEXT MISSING: PICTURES OF THE PATHFINDER SIMULATION OF COLISEU; RESULTS; DISCUSS
 # CONCLUSIONS AND FUTURE WORK
 
 As shown in both examples, Pathfinder can be a useful tool to estimate egress
-times, even if they might be optimistic, and to evaluate other options, such as
+times, even if they are considering ideal (fire risk) scenarios as safety margins 
+can be used to balace this aspect; and to evaluate other options, such as
 opening an extra emergency exit.
 
 The two case studies presented were developed using a test version of Pathfinder, 
-without having much detail and optimization. The experiments made were only mere
-preliminary tests to evaluate the tool and prove its utility as a valuable aid
+without having much detail and optimization of all core parameters. 
+The experiments made were only mere
+preliminary tests to evaluate the tool and prove its application as a valuable aid
 for the emergency planner and the safety manager. Pathfinder simulations 
 can be expanded to increase the number of possibilities and scenarios. For instance, 
 to test a blocked exit, by fire or another event, such as a terrorist attack or
-simply a riot among spectators (meaning, people fitghing each other, is it "riot" ok?
- In Portuguese we refer to this as "alteração da ordem pública").
-
+simply a riot and/or conflits amongts the spectators.
  
 The aforementioned examples are among the ways to extend the work
 presented and stem other research, exploring the Pathfinder possibilities to its limit.
-    
+
+It is expected that through the case studies shown in this paper, 
+some additional light can be brought in how evacuation plans can be developed 
+and assessed as part of the whole fire safety management package, 
+having the particular context of the Portuguese building facilities management 
+as an example.  It is also expected that further work and research can be 
+developed exploring the Pathfinder capabilities for this type of real application. 
+
+
 
 # Acknowlegments
 
-The authors which to express their gratitude to the Management of Casa da Música, 
+The authors would like to express their gratitude to the Management of Casa da Música, 
 Eng. Paulo Sarmento e Cunha and Eng. Gilberto Gomes, for giving access to the data,
-plans needed to this research work. Similarly, we wish to thank Prof.Eduardo Paz 
-Barroso, President of Coliseu Porto and Dr.Fernando Pinheiro from the board of directors,
+plans needed to this research work. Similarly, we wish to thank Prof. Dr. Eduardo Paz 
+Barroso, President of Coliseu Porto and Dr. Fernando Pinheiro from the board of directors,
 for all the encouragement and access to Coliseu site.
-Thanks to Thunderhead Enginneering, speciallly to Bryan Klein, for supplying a
+Thanks to Thunderhead Enginneering, speciallly to Mr. Bryan Klein, for supplying a
 test version of Pathfinder that was used for the case studies.
 At last, to University do Porto, and LIACC, Laboratório de Inteligência Artificial
 e Ciências dos Computadores, that funded the presence at this Conference.
