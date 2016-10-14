@@ -23,14 +23,12 @@ name-references : REFERENCES
 [TITLE]
 
 ~ Abstract
-This paper utilises Computational Fluid Dynamics (CFD) and evacuation modelling 
+This paper utilizes Computational Fluid Dynamics (CFD) and evacuation modeling 
 to develop a benchmark set of considerations for fire safety provisions in a metro tunnel. 
 Example infrastructure configurations are used to show how combinations of parameters such as 
 exit spacing, walkway width, tunnel grade and tunnel ventilation could impact fire safety outcomes. 
 Different configurations are quantitatively compared on the basis of standard tenability criteria 
 such as visibility, but also using a Fractional Incapacitation Dosage (FID).
-
-
 ~
 
 [editor]: https://www.madoko.net/editor.html "Madoko.net Editor"
@@ -50,26 +48,25 @@ separations often dictate structural envelopes and can significantly contribute 
 project cost. As such, pressure might be put on the fire safety designer to demonstrate that certain 
 provisions are necessary or if these could be reduced or replaced in some way. Conversely, the fire 
 safety designer has a duty to deliver value for money and should be looking for opportunities to 
-simplify and minimise their design, while still providing an adequate level of safety.  
+simplify and minimize their design, while still providing an adequate level of safety.  
    
 At the early stages of a project the time and resources needed to make decisions about fire 
 safety provisions can be limited. While guidelines and standards provide a level of support, 
 the values might be given as a minimum or maximum requirement that needs to be achieved. However, 
 these can be interpreted by stakeholders or other design disciplines as the “acceptable” design, 
 when in reality a performance assessment is necessary to verify the overall solution. 
+
 This paper aims to provide a benchmark set of tunnel evacuation design configurations that can 
 be used by the fire safety designer in the early stages of design development. This can be used 
 to help inform other design disciplines or stakeholders about the implications of certain configurations.
 
 
-# ACKNOWLEDGEMENTS
-The authors would like to thank WSP Sverige AB for the support and funding which enabled this 
-work to be undertaken and presented
-
 # BACKGROUND
 To be developed
 
-# OTHER CONSIDERATIONS
+# INPUTS AND MODELING METHODOLOGY
+
+## Limitations
 While the intent of this paper is to provide the fire safety designer with a reference during 
 the early phases of a design, the work in this paper is no substitute for a project specific 
 fire safety analysis.   
@@ -92,8 +89,6 @@ conditions during a fire with limited consideration of airflow transients.
 
 To simplify the number of simulations and to provide direct comparison of key parameters, some 
 inputs have been kept constant that might vary in reality. This is discussed in the following sections.
-
-# INPUTS AND MODELING METHODOLOGY
 
 ## Scenario Selection
 CFD modeling and evacuation calculations where coupled in order to calculate agent tenability 
@@ -145,14 +140,19 @@ vary significantly. Tunnel grades of 0% and 4% were also nominally selected, alb
 could be towards the higher end for a metro system.  The grades are relative to the agent movement 
 with a positive grade having more potential for buoyant smoke to move in the direction of evacuation.
 
-Figure X shows a schematic of the scenarios modeled.
+Figure [#fig-Scenario] shows a schematic of the scenarios modeled.
 
+~ Figure { #fig-Scenario; caption:"Scenario modelled."; .wide }
+![Scenario]                      
+~
+
+[Scenario]: images/Scenario.png "Scenario" { width:auto; max-width:100% }
 
 
 INSERT FIGURE
 
 ## CFD Modeling
-The CFD modelling was undertaken with FDS version 6.1.2 [REF].  A 5MW fire was 
+The CFD modelling was undertaken with FDS version 6.1.2 REF.  A 5MW fire was 
 modelled with the spread-rate function used to approximate the medium t-squared 
 growth rate. Once the fire reaches peak heat release rate it is kept at this value 
 with no decay modelled. A soot yield of 0.1kg/kg and a Carbon Monoxide yield of 
@@ -160,18 +160,18 @@ with no decay modelled. A soot yield of 0.1kg/kg and a Carbon Monoxide yield of
 
 Grid sizes of 0.2m were used across the train length and approximately 10m beyond 
 the train ends. In the open sections grid sizes of 0.4m were used. This resulted in 
-characteristic fire parameters [FDS] of D*/dx = 9.1 and Q*=2.2 in the vicinity of 
+characteristic fire parameters REF of D*/dx = 9.1 and Q*=2.2 in the vicinity of 
 the fire. A grid convergence study was not undertaken. Grid sizes are considered 
 adequate based on previous experience and for the assessment purpose.
 
 The tunnel was modelled as being 900m in length. This allows for the maximum exit 
 spacing of 500m with at least 100m of tunnel beyond each exit. The two tunnel cross-sections 
-were modelled as per Figure X. For both cross-sections a walkway of 1200mm can be accommodated 
+were modelled as per Figure [#fig-geometry]. For both cross-sections a walkway of 1200mm can be accommodated 
 and is included in the evacuation calculation. For the 23m2 tunnel this might be impractical 
 due to tunnel services reducing the effective walkway width, but is still considered to 
 compare the impact of the reduced tunnel area. For the larger cross-section there is 
 provision for an 800mm walkway on the opposite side to the evacuation walkway. A 
-maintenance walkway of 800mm is sometimes required [ref]. This is not used in the 
+maintenance walkway of 800mm is sometimes required REF. This is not used in the 
 evacuation analysis, but is the basis for the increase in tunnel size. The tunnel 
 height is kept constant to eliminate another variable for consideration.
 
@@ -183,7 +183,11 @@ evacuation. A small opening in the incident train was used to allow oxygen to en
 the fire car prior to the doors opening. Windows stayed in-tact for the duration of 
 the simulation. The fire was not oxygen limited. 
 
-Figure X – 23m2 tunnel (left) and 29m2 tunnel (right). Blue blockage indicates train. 
+~ Figure { #fig-Geometry; caption:"23m^2^ tunnel (left) and 29m^2^ tunnel (right). Blue blockage indicates train."; .wide }
+![Geometry]                                                                          
+~
+
+[Geometry]: images/Geometry.png "Geometry" { width:auto; max-width:100% }
 
 ## Evacuation Modeling
 A simple 1-dimensional model was developed to undertake the evacuation assessment. 
@@ -195,6 +199,8 @@ to the relatively simple evacuation routes. This approach also provides complete
 of the evacuation correlations and flowrates. It is acknowledged that the model does not 
 include the more complex interactions in software such as Pathfinder and STEPs. However, 
 it is noted that the 1-D model developed produces results that are comparable to these more advanced methods.
+
+
 
 Agents are tracked in the evacuation model along a walkway path defined in the FDS model. 
 Along the path FDS devices are used to record visibility, temperature, Carbon Monoxide, 
@@ -261,8 +267,8 @@ compromised tenability (ISO 13571).
 # RESULTS
 
 ## Visibility and Other Tenability
-Visibility results from the CFD simulations are shown in Figure X and Figure X. Results are only 
-shown for the 23m2 tunnel. Results for the 29m2 tunnel are very similar, albeit visibility is 
+Visibility results from the CFD simulations are shown in Figure [#fig-Vis-0-23] and Figure [#fig-Vis-4-23]. Results are only 
+shown for the 23m^2 tunnel. Results for the 29m2 tunnel are very similar, albeit visibility is 
 slightly improved due to the larger cross-section. However, the variation in visibility is better 
 quantified with the results presented with the evacuation assessment. 
 
@@ -309,7 +315,7 @@ evacuation assessments. For the fire size used, this is likely corrected by the 
 velocity calculation in NFPA 502 [2017]. 
 
 The XT figures also show the variation in walkway elevation and tunnel cross section. 
-In general terms, visibility conditions are more favourable for a track-level walkway 
+In general terms, visibility conditions are more favorable for a track-level walkway 
 with a larger tunnel cross-section. This result is expected as the smoke layer is higher 
 relative to the agents on the walkway. 
 
@@ -384,13 +390,13 @@ ventilation applied a degree of smoke layering is still present.
 ## Agent Evacuation and FID
 The evacuation assessment was undertaken using the 1-D evacuation model discussed above. 
 Four sets of results are presented that compare the different parameters shown in Table [#exampleasetparameters]. 
-FID results have been truncated at unity. Other results have been normalised to present values between zero and 
+FID results have been truncated at unity. Other results have been normalized to present values between zero and 
 unity. The normalization used for each result is provided in the figure title. This normalization is convenient 
 to show a fraction of the worst-case outcome across the scenarios considered. 
 
 The results for the evacuation assessment are generally as expected. As the exit spacing increases and 
-the walkway width decreases, the maximum FIDs (Figure X),number of people exposed to FID ≥ 0.3 (Figure X), 
-number of visibility exposures (Figure X) and total evacuation time (Figure X) all increase. The walkway 
+the walkway width decreases, the maximum FIDs (Figure [#fig-Max-FID]),number of people exposed to FID ≥ 0.3 (Figure [#fig-NO-FID]), 
+number of visibility exposures (Figure [#fig-No-Vis]) and total evacuation time (Figure [#fig-Max-Evac]) all increase. The walkway 
 width and exit spacing directly affect the time that occupants are in the tunnel and exposed to combustion 
 gases. The relative magnitude of these increases for different exit spacing and walkway widths is a function
  of the walkway elevation, tunnel boundary conditions and tunnel grade. 
@@ -409,12 +415,12 @@ the fire site, preventing backlayering and directing the products of combustion 
 evacuating agents. However, a velocity due to the tunnel ventilation or grade effect caused dilution 
 across the train and improved tenability. This is in contract to a flat grade without an applied velocity 
 where exposures are generally higher. However, the results are not as definite with a 500m exit spacing 
-without an applied velocity. For some 500m exit spacing configurations agents start to outpace the 
-naturally developing smoke layer.  
+without an applied velocity. For some 500m exit spacing configurations agents start to out-pace the 
+naturally developing smoke layer. 
 
 It should be noted that the scenario modelled assumed the fire was located towards the 
-middle of the train and a judgement was made regarding the ventilation direction. If the 
-fire was at one end of the train then outcomes would be much more favourable towards a 
+middle of the train and a judgment was made regarding the ventilation direction. If the 
+fire was at one end of the train then outcomes would be much more favorable towards a 
 tunnel ventilation solution and walkway width and exit spacing may be less critical. 
 However, a middle train or incorrect mode operation is still a valid scenario with 
 tunnel ventilation, albeit less likely.
@@ -439,7 +445,7 @@ tunnel ventilation, albeit less likely.
 |Add figure | 
 ~
 
-~ Figure { #fig-No-FID; caption:"Number of agents exposed to less than 5m visibility for greater than 10 minutes. Values normalized by 600 (number of agents moving towards furthest exit)."; .wide}
+~ Figure { #fig-No-Vis; caption:"Number of agents exposed to less than 5m visibility for greater than 10 minutes. Values normalized by 600 (number of agents moving towards furthest exit)."; .wide}
 
 |:----------------------------:|:
 |Add figure |
@@ -449,7 +455,7 @@ tunnel ventilation, albeit less likely.
 |Add figure | 
 ~
 
-~ Figure { #fig-No-FID; caption:"Maximum exit time. Values shown in hours because the maximum evacuation time across all simulations is approximately 1 hour."; .wide}
+~ Figure { #fig-Max-Evac; caption:"Maximum exit time. Values shown in hours because the maximum evacuation time across all simulations is approximately 1 hour."; .wide}
 
 |:----------------------------:|:
 |Add figure |
@@ -489,10 +495,14 @@ closely spaced exits is likely to be preferred. With this configuration the need
 ventilation, the tunnel grade and the prevailing tunnel velocities may not be as critical 
 to the outcome.  This result is somewhat obvious, but the reality is that an ideal 
 configuration such as this can rarely be achieved. In real projects trade-offs are 
-required to produce an optimised solution that accounts for project-specific constraints 
+required to produce an optimized solution that accounts for project-specific constraints 
 and other practicalities. A constrained tunnel cross-section with an 800mm elevated 
 walkway and 500m exits may be acceptable if a suitable operating strategy for the 
 tunnel ventilation can be adopted.
+
+# ACKNOWLEDGMENTS
+The authors would like to thank WSP Sverige AB for the support and funding which enabled this 
+work to be undertaken and presented
 
 [BIB]
 
