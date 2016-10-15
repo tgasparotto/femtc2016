@@ -1,10 +1,12 @@
 [INCLUDE=style/lncs]
-Title         : UNCOORDINATED EGRESS: AN EXPERIMENT
-#Subtitle     : An optional subtitle.
+Title         : UNCOORDINATED EGRESS
+Subtitle      : An experiment
 
 Author        : Wagner Alberto de Moraes
 Affiliation   : Santa Catarina Military Fire Department
 Email         : wagnerm@cbm.sc.gov.br
+
+
 
 Bibliography  : references.bib
 Logo          : False
@@ -22,7 +24,10 @@ were performed where firefighters trainees had to escape through
 a single door with a 1.12 meter span, varying the crowd density. 
 In the filming, besides the formation of supporting arches where
 people get stuck to each other and against the walls, it was observed
-turbulence, characterized by random and involuntary movements of people within the crowd. 
+turbulence, characterized by random and involuntary movements of people within the crowd.
+The simulation model proposed by Helbing, Farkas and Vicsek (2000) was validated
+with experimental data and then used to investigate the relationship 
+between door size and evacuation time. 
 ~
 
 [editor]: https://www.madoko.net/editor.html "Madoko.net Editor"
