@@ -126,10 +126,7 @@ during the experiment.
 Helbing, Farkas and Vicsek [@helbing2000simulating] presented an egress
 simulation model, here named as "Panic Package". The authors considered that in an 
 emergency, every individual should aim the exit, following a straight path at a desired
-speed. 
-
-
-If those ahead are not at the same speed, they will be crowded out by those 
+speed. If those ahead are not at the same speed, they will be crowded by those 
 behind. Once the egress flow is reduced due to door blockages or a crowd, the pressure
 raises. According to this model, the forces inside a crowd in an
 uncoordinated egress are: a) physical, reaction to compression and friction either among
