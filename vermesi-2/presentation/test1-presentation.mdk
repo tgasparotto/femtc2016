@@ -1,32 +1,58 @@
 [INCLUDE=presentation]
-Title         : Demo presentation in Madoko
-Sub Title     : In both HTML and PDF
-Author        : Daan Leijen
-Affiliation   : Microsoft Research
-Email         : daan@microsoft.com
+Bibliography: multiscale.bib
+
+Title         : Multi-scale Fire Modelling Method in Longitudinally Ventilated Tunnels for FDS6.1
+Author        : Edmund Ang, Guillermo Rein, Joaquim Peiro, Roger Harrison, Izabella Vermesi
 Reveal Theme  : sky
 Beamer Theme  : singapore
 
+
 [TITLE]
 
-# Content
+# Contents
 
-[TOC]
+1. Introduction
+2. Multi-scale Modelling
 
-# Madoko Presentation
+# Introduction - Team
 
-Using [Madoko] it is easy to create beautiful presentations.
+* Work carried out in 2014
+* Led by Edmund Ang (Imperial College London), with collaborators: 
+  - Guillermo Rein (Imperial College London)
+  - Joaquin Peiro (Imperial College London)
+  - Roger Harrison (AECOM UK)
+  - Izabella Vermesi (Imperial College London)
+* Special thanks to software support from Thunderhead Engineering
 
-* [Html][slide]:
-  Uses the `Reveal.js` library by [Hakim El Hattab](http://hakim.se).\
-  This slide demo in Madoko is an adaption of his online demo.
-* [Pdf][slide-pdf]:
-  Uses the `Beamer` package for LaTeX
-* [Source][slide-mdk]:
-  Click to see the source of this presentation.
+# Introduction - Multi-scale Modelling
+
+* Multi-scale modelling based on Colella _et al_ [1]
+* Previous work based on commercial CFD package and Reynolds Averaged Navier Stokes
+* Multi-scale modelling using FDS6:
+  - Not attempted before
+  - Enabled by the FDS HVAC feature 
+  - Proof of concept by Vermesi _et al_ [2] 
+  - Constant flow specified at boundary
+  - No coupling of jet fans to the fire behaviour
+
+# Multi-scale Modelling - What and Why 
+
+* Increasingly denser and taller buildings
+  - Scarcity of land resources 
+  - High rise buildings
+  - Options for above ground rail or utility network limited
+* Tunnel is often the more practical solution 
+* Tunnels can be used for rail, roads or utilities 
+
+# Multi-scale Modelling - What and Why
 
 
-[madoko]: http://madoko.codeplex.com
+~ Figure { #fig-figure; caption:"ECRL Tunnel, Australia [from web]"}
+![Epping2Chastwood_H]
+
+[Epping2Chastwood_H]: images/Epping2Chastwood_H.jpg "Epping2Chastwood_H" { width:auto; max-width:90% }
+
+~
 
 ## Reveal.js
 
