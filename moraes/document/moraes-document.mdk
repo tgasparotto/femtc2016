@@ -277,25 +277,22 @@ simulations.
 
 # CONCLUSION
 
-It was verified on experiments how is the influence on the egress flow as the crowd density
-rises. For higher crowd pressures, it was observed door blockages and crowd 
-turbulence. The last experiment, where individuals became aware that the more they pushed 
-the longer they waited, proves how lowering the crowd pressure can improve the egress 
-flow. 
+The experiments verified how the egress flow was influenced by the rise of crowd density. 
+For higher crowd pressures, door blockages and crowd turbulence were observed. 
+The last experiment, in which individuals became aware that the more they pushed, 
+the longer they waited, proves that lowering the crowd pressure can improve the egress flow. 
 
-Regarding to Panic Package simulator, the egress curve obtained was very close to the
-experimental results, being a good alternative to simulate egress time for an specific door
-given an initial number of individuals. Although it was not possible to simulate with more
-than one door or obstacle, it was possible to estimate how it would be the uncoordinated 
-egress in a nightclub with the same area as Kiss if the door were designed nowadays.
+Regarding the Panic Package simulator, the egress curve obtained was very close to the 
+experimental results, showing it as a good alternative to simulate egress time for a specific 
+door, given an initial number of individuals. Although it was not possible to simulate with
+more than one door or obstacle, it was possible to estimate how the uncoordinated egress would
+be in a nightclub with the same area as Kiss if the doors were designed nowadays.
 
-The IN 09 requirements for door width at nightclubs (exit discharge) can be considered safe.
-The uncoordinated egress was doubly faster than it would be expected from a coordinated egress.
-However, those simulations assumed simplified conditions, not considering falls or fainting
-people, smoke and heat from fire and internal obstacles which are part of a real nightclub 
-fire scene.
-
-
+Based on these experiments and simulations, the IN 09 requirements for door width at nightclubs
+(exit discharge) can be considered safe. The uncoordinated egress was doubly faster than what
+would be expected from a coordinated egress. However, those simulations assumed simplified 
+conditions, not considering falls or fainting people, smoke and heat from fire, and internal
+obstacles, which are part of a real nightclub fire scene.
 
 [BIB]
 
