@@ -311,7 +311,7 @@ showing the Pathfinder tridimensional view rendering, for the 1,394 standing spe
 scenario.
 
 When comparing those times with the Jeremy Clementine's concert, it must be noticed 
-that the Pathfinder model only has a fration of the spectators, namely those 
+that the Pathfinder model only has a fraction of the spectators, namely those 
 standing at the parterre. Nevertheless, 
 after the end of the concert, most of spectators left the main auditorium in less
 than three minutes. This same situation was observed in several concerts afterwards.
@@ -319,14 +319,13 @@ So, the estimated time by Pathfinder is a realistic one. This shows it can be
 used for testing some more complex scenarios, such as having one or 
 more blocked exits and estimating the egress times in those scenarios. 
 
-
-~ Figure { #figColiseu_PF2; caption:"Pathfinder number of spectators during egress per location"}
-![Coliseu_pe3_1394.occupants]
+~ Figure { #figColiseu_PF2_graph; caption:"Pathfinder number of spectators during egress per location"}
+![COliseu_PF2_graph]
 ~
 
-[Coliseu_pe3_1394.occupants]: images/Coliseu_pe3_1394.occupants.png "Coliseu_pe3_1394.occupants" { width:auto; max-width:90% }
+[COliseu_PF2_graph]: images/COliseu_PF2_graph.png "COliseu_PF2_graph" { width:auto; max-width:90% }
 
-Figure [#figColiseu_PF2] shows how spectators are distributed during the egress
+Figure [#figColiseu_PF2_graph] shows how spectators are distributed during the egress
 timeline. Interestingly, the number of egressing spectators at the circular corridor 
 around the main auditorium ("Ferradura", horseshoe in Portuguese) is never more 
 than roughly two hundred at any given time. This in an interesting aspect, showing
