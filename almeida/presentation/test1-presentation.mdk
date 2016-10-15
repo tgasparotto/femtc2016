@@ -165,9 +165,23 @@ showing the Pathfinder tridimensional view rendering, for the 1,394 standing spe
 scenario.
 
 
+# Conclusions & Future Work
 
-## Thanks for looking :-)
+Conclusions:
+* Valuable Aid (Pathfinder)
+* Rapid prototyping
+* Results 
+* Calibration is paramount
+More examples and further*  scenarios are needed
 
-[slide]: http://research.microsoft.com/en-us/um/people/daan/madoko/samples/slidedemo/out/slidedemo.html
-[slide-mdk]: https://www.madoko.net/editor.html?#url=http://research.microsoft.com/en-us/um/people/daan/madoko/samples/slidedemo/slidedemo.mdk&options={"delayedUpdate":"true"}
-[slide-pdf]: http://research.microsoft.com/en-us/um/people/daan/madoko/samples/slidedemo/out/slidedemo.pdf
+
+GIGO Rule
+   
+“Garbage In, Garbage Out!”
+
+
+# Acknowlegments
+
+
+
+
