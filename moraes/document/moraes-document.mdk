@@ -149,8 +149,8 @@ regarding nightclub's emergency egress.
 
 ## Qualitative Results { #sec-quali}
 Figure [#arch] presents a snapshot, at a point of the 175 crowd experiment, highlighting 
-two semicircles of individuals, shoulder to shoulder, forming an arch format. Those individuals 
-composing the arches withstand a huge compressive force and transmit that shoulder to shoulder to the
+two semicircles of individuals, shoulder to shoulder, forming an arch format. Those individuals composing the
+arches withstand a huge compressive force and transmit that shoulder to shoulder to the
 wall. The more people push towards the arch, the more it compacts itself. 
 ~ Figure { #arch; caption:"Snapshot highlighting the arch."}
 ![arch]
@@ -162,14 +162,12 @@ can be imprisoned there. It was observed that an individual
 stood 32 seconds, next the door looking outside, pressed against the wall without
 moving itself regardless his efforts. The consequences of higher crowd pressures 
 could be turbulent flow, trampling and crushes. From those 3, just the first was
-observed at the experiments. Figure [#turb] overlays 15 screenshots taken from video at the 175 individuals egress experiment. The head of the tallest and heaviest individual is highlighted and numbered, representing the turbulent path that the crowd pushed him to follow. 
+observed at the experiments. Figure [#turb] overlays 15 screenshots taken from video
+at the 175 individuals egress experiment. The head of the tallest and heaviest
+individual is highlighted and numbered, representing the turbulent path that the
+crowd pushed him to follow. 
 
-
-Figure [#turb] represents the 15 overlaid snapshots 
-where the head of the tallest and heavier individual was marked by a numbered circle,
-indicating the sequence he appeared on video. From 1 to 5 he goes southeast to , from 5 to 7
-he is droven 
-~ Figure { #turb; caption: "Snapshots overlaid showing how turbulence affects the path followed by a person (1 is the first position and 15 the egress)"}
+~ Figure { #turb; caption: "Screenshots overlaid showing how turbulence affects the path followed by a person (1 is the first position and 15 the egress)"}
 ![turbulencia]
 ~
 [turbulencia]: images/turbulencia.png "turbulencia" { width:auto; max-width:100% }
