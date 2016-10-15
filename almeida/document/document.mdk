@@ -66,18 +66,23 @@ different scenarios, estimate egress times in a set of combinations with all
 As part of any adequate fire safety management for existing buildings, 
 the assessment of the means of escape, which includes the time the occupants will
 take to reach a place of relative safety, is paramount. With this assessment, 
-emergency evacuation plans are developed. For this, fire drills are undertaken. 
+emergency evacuation plans are developed. For this, fire drills are undertaken.
+
 However, carrying out fire drills often can demand certain amount of time in 
 organizing and conducting them, which can have negative impact in both aspects: on the 
 business continuity and wellbeing. In addition to that, fire drills might 
 not be realistic for the worst case scenarios, such as having one or more exits 
 blocked due to fires. Indeed, the challenge increases when other types of 
 emergency situations are considered, either natural or non-natural, such as 
-earthquakes or even terrorist attacks. For these reasons, a robust and 
+earthquakes or even terrorist attacks. 
+
+For these reasons, a robust and 
 validated People Movement (PM) model, such as Pathfinder, when appropriately used 
 can be a very useful tool for emergency evacuation planning. For instance, with 
 Pathfinder, it is possible to evaluate many combinations in a short time, 
-simulating various situations (i.e, fire risk scenarios). In this paper, the two major concert hall 
+simulating various situations (i.e, fire risk scenarios). 
+
+In this paper, the two major concert hall 
 theatres in Porto, Portugal, are used as case studies, namely: Casa da Música 
 (by renown Pritzker winner architect Rem Koolhaas, 2005) and Coliseu Porto 
 (a classic building from 1940). Both can hold many hundred spectators. For instance, 
@@ -85,8 +90,9 @@ Casa da Música can accomodate near 1250 perons, while Coliseu Porto around 3500
 By using Pathfinder it was possible to represent different (fire risk) scenarios, 
 for estimating egress times in a set of combinations with all or part of the exits available. 
 This allowed the emergency management team to prepare and train the evacuation personnel. 
+
 This paper presents some simulations using Pathfinder and compares their results 
-with the times of real egress video camera footage. Therefore, with tihs, it was possible to 
+with the times of real egress video camera footage. Therefore, with this, it was possible to 
 assess the simulation tool, evaluating the results and calibrating with the real data 
 in a variety of situations and occupations.
 
@@ -170,7 +176,7 @@ table can be used as benchmark for calibrating the model.
 ~
 The Pathfinder model is shown in figure [#figcdm_sala1pf1]. Each seat row was 
 plotted and put in location, having people assigned up to the maximum number of seats.
-The only way out for each seat row is at each end. Whith this, it was not possible to
+The only way out for each seat row is at each end. With this, it was not possible to
 have agents (i.e., the representation of the building occupants) going over 
 seats or surpassing other agents. 
 
@@ -280,6 +286,20 @@ the boxes, the upper circle and the reserved and general gallery.
 
 TEXT MISSING: PICTURES OF THE PATHFINDER SIMULATION OF COLISEU; RESULTS; DISCUSSION.
 
+Concerts with full capacity will have the seats remove and people stay
+standing at the parterre. In June this year, Jeremy Clementine concert filled up 
+almost completely the Coliseu. The real egress time was around 8,5 minutes. Since 
+there is no CCTV inside the main auditorium, times were estimated using a stopwatch.
+
+The Pathfinder model that was putup considered two main situations: 1,394 
+people standing at the parterre, the official maximum capacity, and 1,894 people,
+and additional 500 spectators. This is part of a process to increase the number
+of people at the parterre in the standing audience scenario.
+
+In both, total estimated egress times were under 4 minutes, indeed, the 1,394 people
+scenario was just bellow 3 minutes. 
+
+Comparing those times with the Jeremy Clementine's concert,             
 
 # CONCLUSIONS AND FUTURE WORK
 
