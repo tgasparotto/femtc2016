@@ -23,58 +23,80 @@ Beamer Theme  : singapore
 * Case Study: Coliseu Porto
 * Conclusions & Future Work
 
-## Reveal.js
+# Introduction
 
-`reveal.js` is a framework for easily creating beautiful presentations using
-HTML. You'll need a browser with support for CSS 3D transforms to see it in
-its full glory. 
+* Egress time => ASET > REST
+* Egress time ??
+* Fire Drills?
+![Picture3]
+![Picture2]
 
-And any Madoko features just work. Here is some math:
+[Picture2]: images/Picture2.png "Picture2" { width:auto; max-width:90% }
 
-~ Begin Framed { padding:1ex; margin-top:1ex }
-A famous equation is $e = mc^2$, but this one is 
-famous too:
+[Picture3]: images/Picture3.png "Picture3" { width:auto; max-width:90% }
 
-~ Equation  {#eq-gaussian}
-\int_{-\infty}^\infty e^{-a x^2} d x = \sqrt{\frac{\pi}{a}} 
+![Picture4]
+![Picture5]
+![Picture6]
+## Pathfinder 2016
+
+[Picture4]: images/Picture4.png "Picture4" { width:auto; max-width:90% }
+
+[Picture5]: images/Picture5.png "Picture5" { width:auto; max-width:90% }
+
+[Picture6]: images/Picture6.png "Picture6" { width:auto; max-width:90% }
+
+Agent-based egress simulator:
+
+* SFPE mode (Nelson and Mower, 2002) / Steering mode (Amor et al., 2006)
+* Calibration: IMO (International Maritime Organization ) tests
+* Navigable Mesh
+* Behaviours: seek goals; waypoints; exits
+* Path planning: locally quickest
+* Door choice: minimizing travelling cost
+
+
+
+April 2016
+Pathfinder Version 2016.1.0229 x64
+
+
+
+# Case Study: Casa da Música
+ 
+
+* International tender under - Porto 2001 European Culture Capital (em 1999) – winning bib: Arq. Rem Koolhaas OMA
+* Construction begun 1999 / Opening April15th 2005
+
+![CdM4] ![CdM2]
+[CdM4]: images/CdM4.png "CdM4" { width:auto; max-width:90% }
+
+[CdM2]: images/CdM2.png "CdM2" { width:auto; max-width:90% }
+
+
+## Case study: Sala 1 Suggia - Casa da Música
+
+![CdM_sala1view]
+
+[CdM_sala1view]: images/CdM_sala1view.png "CdM_sala1view" { width:auto; max-width:90% }
+
+
+* Main Auditorium, area: 1100 sqm
+* Capacity (seats): parterre 1069; Choir 143; Boxes I/II 13
+
+~ TableFigure { #table1; caption: "Comparison between real times and Pathfinder"; .wide }
+|------------|---------------------|---------|------------|------------|
+|    Date    | Event               | Audience|  real time | Pathfinder |
+|:-----------|:-------------------:|:-------:|:----------:|:----------:|
+| 10.04.2016 | NOS Club            |   1000  |     04:33  |   02:42    |
+| 12.04.2016 | Piano concert       |    738  |     04:05  |   01:50    |
+| 17.04.2016 | Classic Orchestra   |    900  |     05:55  |   02:42    |
+| 16.04.2016 | Vozes da radio      |   1000  |     07:07  |   02:21    |
+| 17.04.2016 | Choirs - Voice      |    638  |     04:10  |   01:34    |
+|------------|---------------------|---------|------------|------------|
 ~
-~ End Framed
-
-~~ Notes
-Oh hey, these are some notes. They'll be hidden in your presentation, but you
-can see them if you open the speaker notes window (hit 's' on your keyboard).
-~~
 
 
-
-## Themes {#themes}
-
-Reveal.js comes with a few themes built in:
-
-* [Default](?#/themes)
-* [Sky](?theme=sky#/themes)
-* [Beige](?theme=beige#/themes)
-* [Serif](?theme=serif#/themes)
-* [Simple](?theme=simple#/themes)
-* [Night](?theme=night#/themes)
-* [Moon](?theme=moon#/themes)
-* [Solarized](?theme=solarized#/themes)
-
-Theme demos are loaded after the presentation which leads to flicker. In
-production you should load your theme in the `<head>` using a
-`<link>`.
-
-## Transitions { #transitions }
-
-You can select from different transitions, like:\
-[Cube](?transition=cube#/transitions) -
-[Page](?transition=page#/transitions) -
-[Concave](?transition=concave#/transitions) -
-[Zoom](?transition=zoom#/transitions) -
-[Linear](?transition=linear#/transitions) -
-[Fade](?transition=fade#/transitions) -
-[None](?transition=none#/transitions) -
-[Default](?#/transitions)
 
 ## Video CdM Sala Suggia 1036
 ~ Center
@@ -92,54 +114,26 @@ Suggia_1036_4portas.wmv.
   <iframe width="560" height="315" src="https://youtu.be/CAsfK1snnNI" frameborder="0" allowfullscreen></iframe>
 </div>
 
-## Pauses?
 
-Some pauses.
+## Casa da Música: Sala 2
 
-* {.fragment} One
-* {.fragment} Two
-* {.fragment} Three
 
-And more:
+![Cdm_Sala2Palco]
+~ TableFigure { #table2; caption: "Comparison between real times and Pathfinder"; .wide }
+|------------|---------------------|---------|------------|------------|
+|    Date    | Event               | Audience|  real time | Pathfinder |
+|:-----------|:-------------------:|:-------:|:----------:|:----------:|
+| 11.04.2016 | Passaro e Fogo      |   211   |     04:00  |   02:42    |
+| 14.04.2016 | Legendary Tiger Man |   638   |     07:47  |   03:44    |
+|------------|---------------------|---------|------------|------------|
+~
 
-- Test 1
-- Test 2
-- Test 3
-{.fragmented}
+[Cdm_Sala2Palco]: images/Cdm_Sala2Palco.png "Cdm_Sala2Palco" { width:auto; max-width:90% }
 
-Cool!.
 
 ~ Slide
 A slide with no header
 ~
-
-
-## Point of View
-
-In Reveal.js Press **ESC** to enter the slide overview.
-
-Hold down alt and click on any element to zoom in on it using 
- [zoom.js]. Alt + click anywhere to zoom back out.
-
-
-[zoom.js]: http://lab.hakim.se/zoom-js
-
-
-## Works in Mobile Safari
-
-Try it out! You can swipe through the slides and pinch your way to the
-overview.
-
-
-## Printing
-
-You can print a `revealjs` presentation nicely from the browser.
-
-First give the `?print-pdf` or `?print-paper` query on your final
-presentation (in the browser address bar) and then print from the Chrome
-browser selecting `Save to PDF`.
-
-Read more about it at the [revealjs documentation](https://github.com/hakimel/reveal.js#pdf-export)
 
 
 
