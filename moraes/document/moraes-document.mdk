@@ -245,24 +245,24 @@ more than 3.5 seconds.
 Figures [#fig-expsim35] and [#fig-expsim210] presents the comparison between experiment
 and simulation. The egress time is slightly lower at simulation, but the curve slope is quite the same.
 
-~ Figure { #fig-expSim35; caption: "Experiment against simulation: 35 individuals egressed."}
+~ Figure { #fig-expSim35; caption: "Experiment versus simulation: 35 individuals egressed."}
 ![exp_sim_35]
 ~
 [exp_sim_35]: images/exp_sim_35.png "exp_sim_35" { width:auto; max-width:100% }
 
-~ Figure { #fig-expSim210; caption: "Experiment against simulation: 210 individuals egressed."}
+~ Figure { #fig-expSim210; caption: "Experiment versus simulation: 210 individuals egressed."}
 ![exp_sim_210]
 ~
 [exp_sim_210]: images/exp_sim_210.png "exp_sim_210" { width:auto; max-width:100% }
 
 ## Are IN-09's Requirements Enough?
 According to IN 09, for nightclubs similar to Kiss, the
-allowable public is the double of room area. That means, 
+allowable public is double of the room area. That means, 
 in a 100m² place, there will be 200 individuals allowed. Specifically to the terminal exit
-door, article 65, IV, c) [@IN09], states: "room above 400m² must have at least two
-doors being one greater than 2m and others greater than 1.2m". 
-Kiss had 615m² [@crea2013], under IN 009, such similar night
-club would have at most a public of 1230 and the doors should sum a width of at least 6.77m. 
+door, article 65, IV, c) [@IN09], states: "rooms above 400m² must have at least two
+doors, being one greater than 2m and the others greater than 1.2m". 
+Kiss had 615m² [@crea2013], under IN 009, a similar night
+club should have at most a public of 1230 and the doors must sum a width of at least 6.77m. 
 
 As the "Panic Package" does not  permit more than one door, it was assumed that the public
 will split itself and will follow the closest door. For instance, in a 2 doors of 3.38m
@@ -275,7 +275,7 @@ individuals. The egress time for a simulation of a nightclub like Kiss with 2 do
 is doubly faster than the expected by IN 09, showing that its recommendations are 
 adequately safe. Furthermore, adding a third door reduced the egress time in 28% in 
 simulations.
-~ Figure { #fig-all_sim; caption: "Experiment against simulation: 210 individuals egressed."}
+~ Figure { #fig-all_sim; caption: "Experiment versus simulation: 210 individuals egressed."}
 ![all_sim]
 ~
 [all_sim]: images/all_sim.png "all_sim" { width:auto; max-width:100% }
