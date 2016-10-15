@@ -163,7 +163,7 @@ condition, is very likely to have increased substancially the overall egress tim
 than expected in a real emergency situation. Nevertheless, the values in the
 table can be used as benchmark for calibrating the model. 
 
-~ TableFigure { #table1; caption: "Comparison between real times and Pathfinder"; .wide }
+~ TableFigure { #table1; caption: "Comparison between real times and Pathfinder - Sala Suggia"; .wide }
 |------------|---------------------|---------|------------|------------|
 |    Date    | Event               | Audience|  real time | Pathfinder |
 |:-----------|:-------------------:|:-------:|:----------:|:----------:|
@@ -221,7 +221,7 @@ Similarly to the table [#table1], real time was computed by visioning CCTV foota
 It was noticed that many of spectators left slowly, taking longer than what they 
 would probably take during a real emergency situation.
 
-~ TableFigure { #table2; caption: "Comparison between real times and Pathfinder"; .wide }
+~ TableFigure { #table2; caption: "Comparison between real times and Pathfinder - Sala 2"; .wide }
 |------------|---------------------|---------|------------|------------|
 |    Date    | Event               | Audience|  real time | Pathfinder |
 |:-----------|:-------------------:|:-------:|:----------:|:----------:|
