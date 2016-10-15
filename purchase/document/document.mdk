@@ -295,7 +295,7 @@ output for visibility and post-processed in GNU Octave [@Octave].
 
 Exit 1 is the exit closest to the fire and the multiple exit options are also indicated as 
 vertical lines. The XT contours have been clipped such that visibility greater than 10m is 
-shown as white space. Visibility is based on a light emitting surface (C = 8 [@FDSUserGuide]]). The 
+shown as white space. Visibility is based on a light emitting surface (C = 8 [@FDSUserGuide]). The 
 contours are produced for a track-level walkway (2m above track) and elevated walkway 
 (3.2m above track). The figures have been produced for a period of 30 minutes as outcomes 
 are obvious after this period. The simulations were run for 60 minutes. 
@@ -380,29 +380,29 @@ ventilation applied a degree of smoke layering is still present.
 
 [cbar]: images/cbar.png "cbar" { width:auto; max-width:90% }
 
-[cropped-FT-M-05-M-0-V0-23-xt-WalkVIS-pathWalk23]: images/cropped-FT-M-05-M-0-V0-23-xt-WalkVIS-pathWalk23.png "cropped-FT-M-05-M-0-V0-23-xt-WalkVIS-pathWalk23" { width:8cm; max-width:90% }
+[cropped-FT-M-05-M-0-V0-23-xt-WalkVIS-pathWalk23]: images/cropped-FT-M-05-M-0-V0-23-xt-WalkVIS-pathWalk23.png "cropped-FT-M-05-M-0-V0-23-xt-WalkVIS-pathWalk23" { width:7cm; max-width:90% }
 
-[cropped-FT-M-05-M-0-V0-23-xt-ElevVIS-pathElev23]: images/cropped-FT-M-05-M-0-V0-23-xt-ElevVIS-pathElev23.png "cropped-FT-M-05-M-0-V0-23-xt-ElevVIS-pathElev23" { width:8cm; max-width:90% }
+[cropped-FT-M-05-M-0-V0-23-xt-ElevVIS-pathElev23]: images/cropped-FT-M-05-M-0-V0-23-xt-ElevVIS-pathElev23.png "cropped-FT-M-05-M-0-V0-23-xt-ElevVIS-pathElev23" { width:7cm; max-width:90% }
 
-[cropped-FT-M-05-M-0-V1-23-xt-WalkVIS-pathWalk23]: images/cropped-FT-M-05-M-0-V1-23-xt-WalkVIS-pathWalk23.png "cropped-FT-M-05-M-0-V1-23-xt-WalkVIS-pathWalk23" { width:8cm; max-width:90% }
+[cropped-FT-M-05-M-0-V1-23-xt-WalkVIS-pathWalk23]: images/cropped-FT-M-05-M-0-V1-23-xt-WalkVIS-pathWalk23.png "cropped-FT-M-05-M-0-V1-23-xt-WalkVIS-pathWalk23" { width:7cm; max-width:90% }
 
-[cropped-FT-M-05-M-0-V1-23-xt-ElevVIS-pathElev23]: images/cropped-FT-M-05-M-0-V1-23-xt-ElevVIS-pathElev23.png "cropped-FT-M-05-M-0-V1-23-xt-ElevVIS-pathElev23" { width:8cm; max-width:90% }
+[cropped-FT-M-05-M-0-V1-23-xt-ElevVIS-pathElev23]: images/cropped-FT-M-05-M-0-V1-23-xt-ElevVIS-pathElev23.png "cropped-FT-M-05-M-0-V1-23-xt-ElevVIS-pathElev23" { width:7cm; max-width:90% }
 
-[cropped-FT-M-05-M-0-V2-23-xt-WalkVIS-pathWalk23]: images/cropped-FT-M-05-M-0-V2-23-xt-WalkVIS-pathWalk23.png "cropped-FT-M-05-M-0-V2-23-xt-WalkVIS-pathWalk23" { width:8cm; max-width:90% }
+[cropped-FT-M-05-M-0-V2-23-xt-WalkVIS-pathWalk23]: images/cropped-FT-M-05-M-0-V2-23-xt-WalkVIS-pathWalk23.png "cropped-FT-M-05-M-0-V2-23-xt-WalkVIS-pathWalk23" { width:7cm; max-width:90% }
 
-[cropped-FT-M-05-M-0-V2-23-xt-ElevVIS-pathElev23]: images/cropped-FT-M-05-M-0-V2-23-xt-ElevVIS-pathElev23.png "cropped-FT-M-05-M-0-V2-23-xt-ElevVIS-pathElev23" { width:8cm; max-width:90% }
+[cropped-FT-M-05-M-0-V2-23-xt-ElevVIS-pathElev23]: images/cropped-FT-M-05-M-0-V2-23-xt-ElevVIS-pathElev23.png "cropped-FT-M-05-M-0-V2-23-xt-ElevVIS-pathElev23" { width:7cm; max-width:90% }
 
-[cropped-FT-M-05-M-4-V0-23-xt-WalkVIS-pathWalk23]: images/cropped-FT-M-05-M-4-V0-23-xt-WalkVIS-pathWalk23.png "cropped-FT-M-05-M-4-V0-23-xt-WalkVIS-pathWalk23" { width:8cm; max-width:90% }
+[cropped-FT-M-05-M-4-V0-23-xt-WalkVIS-pathWalk23]: images/cropped-FT-M-05-M-4-V0-23-xt-WalkVIS-pathWalk23.png "cropped-FT-M-05-M-4-V0-23-xt-WalkVIS-pathWalk23" { width:7cm; max-width:90% }
 
-[cropped-FT-M-05-M-4-V0-23-xt-ElevVIS-pathElev23]: images/cropped-FT-M-05-M-4-V0-23-xt-ElevVIS-pathElev23.png "cropped-FT-M-05-M-4-V0-23-xt-ElevVIS-pathElev23" { width:8cm; max-width:90% }
+[cropped-FT-M-05-M-4-V0-23-xt-ElevVIS-pathElev23]: images/cropped-FT-M-05-M-4-V0-23-xt-ElevVIS-pathElev23.png "cropped-FT-M-05-M-4-V0-23-xt-ElevVIS-pathElev23" { width:7cm; max-width:90% }
 
-[cropped-FT-M-05-M-4-V1-23-xt-WalkVIS-pathWalk23]: images/cropped-FT-M-05-M-4-V1-23-xt-WalkVIS-pathWalk23.png "cropped-FT-M-05-M-4-V1-23-xt-WalkVIS-pathWalk23" { width:8cm; max-width:90% }
+[cropped-FT-M-05-M-4-V1-23-xt-WalkVIS-pathWalk23]: images/cropped-FT-M-05-M-4-V1-23-xt-WalkVIS-pathWalk23.png "cropped-FT-M-05-M-4-V1-23-xt-WalkVIS-pathWalk23" { width:7cm; max-width:90% }
 
-[cropped-FT-M-05-M-4-V1-23-xt-ElevVIS-pathElev23]: images/cropped-FT-M-05-M-4-V1-23-xt-ElevVIS-pathElev23.png "cropped-FT-M-05-M-4-V1-23-xt-ElevVIS-pathElev23" { width:8cm; max-width:90% }
+[cropped-FT-M-05-M-4-V1-23-xt-ElevVIS-pathElev23]: images/cropped-FT-M-05-M-4-V1-23-xt-ElevVIS-pathElev23.png "cropped-FT-M-05-M-4-V1-23-xt-ElevVIS-pathElev23" { width:7cm; max-width:90% }
 
-[cropped-FT-M-05-M-4-V2-23-xt-WalkVIS-pathWalk23]: images/cropped-FT-M-05-M-4-V2-23-xt-WalkVIS-pathWalk23.png "cropped-FT-M-05-M-4-V2-23-xt-WalkVIS-pathWalk23" { width:8cm; max-width:90% }
+[cropped-FT-M-05-M-4-V2-23-xt-WalkVIS-pathWalk23]: images/cropped-FT-M-05-M-4-V2-23-xt-WalkVIS-pathWalk23.png "cropped-FT-M-05-M-4-V2-23-xt-WalkVIS-pathWalk23" { width:7cm; max-width:90% }
 
-[cropped-FT-M-05-M-4-V2-23-xt-ElevVIS-pathElev23]: images/cropped-FT-M-05-M-4-V2-23-xt-ElevVIS-pathElev23.png "cropped-FT-M-05-M-4-V2-23-xt-ElevVIS-pathElev23" { width:8cm; max-width:90% }
+[cropped-FT-M-05-M-4-V2-23-xt-ElevVIS-pathElev23]: images/cropped-FT-M-05-M-4-V2-23-xt-ElevVIS-pathElev23.png "cropped-FT-M-05-M-4-V2-23-xt-ElevVIS-pathElev23" { width:7cm; max-width:90% }
 
 
 ## Agent Evacuation and FID
