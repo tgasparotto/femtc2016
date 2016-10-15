@@ -61,16 +61,26 @@ be used by the fire safety designer in the early stages of design development. T
 to help inform other design disciplines or stakeholders about the implications of certain configurations.
 
 
-# BACKGROUND
-To be developed [@Carvel2016]
+## Background 
+A tunnel is a relatively simple geometric structure. However, the complexities and uncertainties associated with a fire event mean that designing for evacuation from a rail tunnel is a complex process [@Purchase2013]. While the typical strategy is to continue to the next station, where detrainment can be rapid and egress routes are more familiar to agents [@Purchase2013]. There is, however, a residual risk that a fire could occur in the tunnel due to mechanical failure or congested network conditions. 
 
-The concept of using a forced ventilation solution to provide smoke control is well developed. A discussion of this is beyond the scope of this paper and is developed in numerous other publications [@Wu2000 @Kennedy1996 @NFPA130-2014 @NFPA502-2014 @SVS6]. Achieving critical velocity provides a clear path on one side of the fire adn this is often a key criteria to demonstrate fire safety in rail tunnels. This is driven by the requirements of NFPA 130 [@NFPA130-2014, @NFPA130-2017] which often acts as a de-facto rail tunnel fire safety guideline in many countries outside of the US. This raises the question, however, which way to direct the smoke if the fire location is uncertain. 
+The evacuation provisions required for a fire in a rail tunnel vary between countries. In general terms, walkway widths tend to vary between approximately 0.7m to 1.5m, exit spacings vary between approximately 240m to 500m  and there are differing guidance on weather an elevated or track-level walkway is suitable [@FIT2Rail; @FIT2Metro; @NFPA130-2014; @TSI]. 
 
-Edenbaum et. al. [@Edenbaum2006] investigated the spacing of rail cross-passages accounting for different walkway widths in view of the requirements of the 2003 edition of NFPA 130 [@NFPA130-2014]. Evacuation simulations were undertaken with SIMULEX [@SIMULEX], but did not consider the impact of smoke on the walking speed of occupants. This work concluded that a performance based approach allows for trade-offs between cross-passage spacing, walkway width and fire-hardening of the rail vehicle.
+The use of ventilation for smoke control also varies. In countries such as the USA, United Kingdom and Australia, it is the authors' experience that longitudinal ventilation for smoke control is generally required by the client and/or stakeholders. In other countries, such as Sweden, this is not as common. Fire safety designers may even perceived the use of longitudinal smoke control in a tunnel to be risky [@FIT2Rail]. 
 
-The walkway geometry also varies between countries and jurisdictions. For instance, Stockholm metro has 1.2m wide walkways that are at track-level with a 1.4 drop from the train to the walkway [@LUNDSTROM2014]. 
+It is interesting that there is so much variation in opinion about rail tunnel fire safety design considering the number of rail tunnels around the world. This is also the experience of the authors and the main motivation for this paper. 
 
-Lunström et. al. [@LUNDSTROM2014] provide an overview of walkway width and 
+The concept of longitudinal smoke control is well developed. A discussion of this is beyond the scope of this paper, but is developed in detail in numerous other publications [@Wu2000; @Kennedy1996; @NFPA130-2014; @NFPA502-2014; @SVS6]. Achieving critical velocity provides a clear path on one side of the fire. In countries where forced ventilation is required, this is often a key criteria to demonstrate fire safety in rail tunnels [@NFPA130-2014; @TfNSW]. The alternative point of view is that knowing which way to direct the smoke may not be certain and requires a level of judgment that could result in smoke being directed over evacuating agents [@Carvel2016].
+
+Exit spacings are often dictated by construction costs and the geology, with guidelines and standards providing maximum recommended or allowable separations. Edenbaum et. al. [@Edenbaum2006] investigated the spacing of rail cross-passages accounting for different walkway widths in view of the requirements of NFPA 130 [@NFPA130-2003]. Evacuation simulations were undertaken with SIMULEX [@SIMULEX]. The fire was located in the middle of the train and half the agents would have been exposed to smoky conditions. However, the impact of smoke on agent walking speed was not considered. This work concluded that a performance based approach allows for trade-offs between cross-passage spacing, walkway width and fire-hardening of the rail vehicle.
+
+The walkway geometry also varies between countries and jurisdictions. For instance, Stockholm metro has 1.2m wide walkways that are at track-level with a 1.4 drop from the train to the walkway [@LUNDSTROM2014]. On the other hand, an NFPA 130 [@NFPA130-2014] benchmark design could be at track or elevated and be as narrow as 610mm (walking surface, 760mm at 1575mm above walking height). In Australia, a typical walkway design could be 850mm and elevated from the track level [@TfNSW].  Lunström et. al. [@LUNDSTROM2014] provide a study of walkway design and the effect this has on evacuation behavior in rail tunnels. The empirical relationship developed in that work for walking speed with walkway width is used in this paper. 
+
+Fridolf [@FridolfPHD] provides a detailed review of human behavior in rail tunnels, including a signficant database of empirical and field observations of rail evacuation. KF - Could you write a short summary? I think you might be the best person to do so! 
+
+Kučera and Bradáčová [@Kucer2014] undertook FDS modeling of a bi-directional, 700m long rail tunnel fire. The geometry was quite large at 12.2m wide by 8m high owing to the double track geometry. Fires were modelled on 5% grade and with an applied velocity of 1m/s with a maximum fire size of 12MW. Evacuation simulations were undertaken with FDS+Evac [@FDS-EVAC], with 640 agents modelled and a maximum exit distance of approximately 600m. Walkways were modelled as 1.5m on both sides of the tunnel. For the scenarios considered they concluded that no agents would be exposed to untenable conditions. 
+
+Winkler and Carvel [@Carvel2016] investigated ventilation and egress strategies for passenger train fires in tunnels. This work concluded that if passengers are on both sides of the fire that mechanical ventilation should not be used as agents could be exposed to untenable conditions within a few minutes. As noted in the paper, the conclusions are only applicable to the scenarios modelled. Ultimately the fires modelled were quite severe with one fire being a linear growth from 0 to 45MW in 4 minutes and a linear growth from 0 to 10MW in 20 minutes. Both fires were held constant until the end of the egress time. 
 
 
 
@@ -139,7 +149,7 @@ This is considered a reasonable scenario to compare a ventilated and non-ventila
 
 Other parameters were selected based on a possible design in a particular jurisdiction. For instance, 
 a tunnel with an 800mm elevated walkway, 240m exit separation and tunnel ventilation to achieve critical 
-velocity might be representative of a NFPA 130 benchmark design [@NFPA130-2014, @NFPA130-2017], that might also be applicable in other countries such as Australia [@TfNSW]. On the other hand, a 1200mm track 
+velocity might be representative of a NFPA 130 benchmark design [@NFPA130-2014; @NFPA130-2017], that might also be applicable in other countries such as Australia [@TfNSW]. On the other hand, a 1200mm track 
 level walkway, 300m or 500m exit separation and no tunnel ventilation might be representative of a 
 European design [@FIT2Rail, Section 4.2.1.2]. The walkway width could also govern the structural design and resulting tunnel cross-section, which in turn could impact the smoke layer height.
 
@@ -174,7 +184,7 @@ adequate based on previous experience and for the assessment purpose.
 The tunnel was modelled as being 900m in length. This allows for the maximum exit 
 spacing of 500m with at least 100m of tunnel beyond each exit. The two tunnel cross-sections 
 were modelled as per Figure [#fig-geometry]. For both cross-sections a walkway of 1200mm can be accommodated 
-and is included in the evacuation calculation. For the 23m2 tunnel this might be impractical 
+and is included in the evacuation calculation. For the 23m^2^ tunnel this might be impractical 
 due to tunnel services reducing the effective walkway width, but is still considered to 
 compare the impact of the reduced tunnel area. For the larger cross-section there is 
 provision for an 800mm walkway on the opposite side to the evacuation walkway. A 
@@ -182,7 +192,7 @@ maintenance walkway of 800mm is sometimes required REF. This is not used in the
 evacuation analysis, but is the basis for the increase in tunnel size. The tunnel 
 height is kept constant to eliminate another variable for consideration.
 
-The train was modelled with a cross-sectional area of approximately 11m2 with a length of 
+The train was modelled with a cross-sectional area of approximately 11m^2^ with a length of 
 approximately 140m. The train is a three car consist, although each car is modelled 
 as being a separate unit without inter-car doors (i.e. smoke cannot spread inside the 
 train between cars). The train doors were modelled to be closed until the start of 
@@ -204,7 +214,7 @@ presented in this paper to be undertaken with minimal human input once the base 
 were setup. This approach was considered suitable for the current investigation due 
 to the relatively simple evacuation routes. This approach also provides complete control
 of the evacuation correlations and flow rates. It is acknowledged that the model does not 
-include the more complex interactions in software such as Pathfinder and STEPs. However, 
+include the more complex interactions in software such as Pathfinder [@PATHFINDER] and STEPs [@STEPS]. However, 
 it is noted that the 1-D model developed produces results that are comparable to these more advanced methods.
 
 
@@ -216,8 +226,8 @@ resolution of 5m are used to record these values. Agents are then tracked along 
 path of devices in a quasi-Lagrangian method to calculate their exposure to reduced 
 visibility and their Fractional Effective Dose (FED).
 
-To calculate the FED the same equations used by Pathfinder and FDS+EVAC have been 
-implemented, which are based on the work of Purser [@Purser2009,@PurserSFPE]. The contribution 
+To calculate the FED the same equations used by Pathfinder and FDS+EVAC [@FDS-EVAC] have been 
+implemented, which are based on the work of Purser [@Purser2009;@PurserSFPE]. The contribution 
 from Hydrogen Cyanide and other irritants are not included in the calculation of 
 FED. The FED is only accumulated once the occupants are leaving the train and while in the tunnel.
 
@@ -225,7 +235,7 @@ A hydraulic model is used to regulate the movement of agents along the walkway a
 crowding and the width of the walkway. For the flow rate of people along the walkway, the same 
 correlation was used independent of the walkway elevation. A fixed correlation enables a direct 
 comparison of the impact of the agents being closer to the smoke layer for the elevated walkway. 
-Equation [#flowratewalkway] shows the correlation used [@AhlfontMSC,@LUNDSTROM2014]:
+Equation [#flowratewalkway] shows the correlation used [@AhlfontMSC;@LUNDSTROM2014]:
 
 ~ Equation { #FlowRateWalkway }
 Flow\ rate\ of\ people\ [p/s]=1.27 * walkway\ width[m]+0.07
@@ -251,7 +261,7 @@ Walking\ speed [m/s]=-1.1423 * x+1.177
 There are seven doors per car that enable agents to evacuate onto the walkway. Detrainment is 
 based on a door flow of 0.2p/s regardless of the walkway height. This value appears to be 
 reasonable based on past field experiments [@FridolfPHD, Table 6]. Agents can only leave 
-the train if the walkway density is less than 4p/m2. The tunnel exits are assumed to be 2m 
+the train if the walkway density is less than 4p/m^2^. The tunnel exits are assumed to be 2m 
 wide with a door flow of 2p/s. 
 
 Agents are evenly distributed along the train (i.e. 300 agents per car). Each agent is 
@@ -318,7 +328,7 @@ to be 1-1.3m/s upstream of the 5MW design fire. Once this occurs smoke is driven
 direction. There is a small amount of back-layering noticeable for the 0% grade simulations 
 suggesting the critical velocity used was slightly under-sized, but this does not impact the 
 evacuation assessments. For the fire size used, this is likely corrected by the latest critical 
-velocity calculations from the NFPA guidelines for tunnels [@NFPA130-2017,@NFPA502-2014]. 
+velocity calculations from the NFPA guidelines for tunnels [@NFPA130-2017;@NFPA502-2014]. 
 
 The XT figures also show the variation in walkway elevation and tunnel cross section. 
 In general terms, visibility conditions are more favorable for a track-level walkway 
@@ -370,29 +380,29 @@ ventilation applied a degree of smoke layering is still present.
 
 [cbar]: images/cbar.png "cbar" { width:auto; max-width:90% }
 
-[cropped-FT-M-05-M-0-V0-23-xt-WalkVIS-pathWalk23]: images/cropped-FT-M-05-M-0-V0-23-xt-WalkVIS-pathWalk23.png "cropped-FT-M-05-M-0-V0-23-xt-WalkVIS-pathWalk23" { width:auto; max-width:90% }
+[cropped-FT-M-05-M-0-V0-23-xt-WalkVIS-pathWalk23]: images/cropped-FT-M-05-M-0-V0-23-xt-WalkVIS-pathWalk23.png "cropped-FT-M-05-M-0-V0-23-xt-WalkVIS-pathWalk23" { width:8cm; max-width:90% }
 
-[cropped-FT-M-05-M-0-V0-23-xt-ElevVIS-pathElev23]: images/cropped-FT-M-05-M-0-V0-23-xt-ElevVIS-pathElev23.png "cropped-FT-M-05-M-0-V0-23-xt-ElevVIS-pathElev23" { width:auto; max-width:90% }
+[cropped-FT-M-05-M-0-V0-23-xt-ElevVIS-pathElev23]: images/cropped-FT-M-05-M-0-V0-23-xt-ElevVIS-pathElev23.png "cropped-FT-M-05-M-0-V0-23-xt-ElevVIS-pathElev23" { width:8cm; max-width:90% }
 
-[cropped-FT-M-05-M-0-V1-23-xt-WalkVIS-pathWalk23]: images/cropped-FT-M-05-M-0-V1-23-xt-WalkVIS-pathWalk23.png "cropped-FT-M-05-M-0-V1-23-xt-WalkVIS-pathWalk23" { width:auto; max-width:90% }
+[cropped-FT-M-05-M-0-V1-23-xt-WalkVIS-pathWalk23]: images/cropped-FT-M-05-M-0-V1-23-xt-WalkVIS-pathWalk23.png "cropped-FT-M-05-M-0-V1-23-xt-WalkVIS-pathWalk23" { width:8cm; max-width:90% }
 
-[cropped-FT-M-05-M-0-V1-23-xt-ElevVIS-pathElev23]: images/cropped-FT-M-05-M-0-V1-23-xt-ElevVIS-pathElev23.png "cropped-FT-M-05-M-0-V1-23-xt-ElevVIS-pathElev23" { width:auto; max-width:90% }
+[cropped-FT-M-05-M-0-V1-23-xt-ElevVIS-pathElev23]: images/cropped-FT-M-05-M-0-V1-23-xt-ElevVIS-pathElev23.png "cropped-FT-M-05-M-0-V1-23-xt-ElevVIS-pathElev23" { width:8cm; max-width:90% }
 
-[cropped-FT-M-05-M-0-V2-23-xt-WalkVIS-pathWalk23]: images/cropped-FT-M-05-M-0-V2-23-xt-WalkVIS-pathWalk23.png "cropped-FT-M-05-M-0-V2-23-xt-WalkVIS-pathWalk23" { width:auto; max-width:90% }
+[cropped-FT-M-05-M-0-V2-23-xt-WalkVIS-pathWalk23]: images/cropped-FT-M-05-M-0-V2-23-xt-WalkVIS-pathWalk23.png "cropped-FT-M-05-M-0-V2-23-xt-WalkVIS-pathWalk23" { width:8cm; max-width:90% }
 
-[cropped-FT-M-05-M-0-V2-23-xt-ElevVIS-pathElev23]: images/cropped-FT-M-05-M-0-V2-23-xt-ElevVIS-pathElev23.png "cropped-FT-M-05-M-0-V2-23-xt-ElevVIS-pathElev23" { width:auto; max-width:90% }
+[cropped-FT-M-05-M-0-V2-23-xt-ElevVIS-pathElev23]: images/cropped-FT-M-05-M-0-V2-23-xt-ElevVIS-pathElev23.png "cropped-FT-M-05-M-0-V2-23-xt-ElevVIS-pathElev23" { width:8cm; max-width:90% }
 
-[cropped-FT-M-05-M-4-V0-23-xt-WalkVIS-pathWalk23]: images/cropped-FT-M-05-M-4-V0-23-xt-WalkVIS-pathWalk23.png "cropped-FT-M-05-M-4-V0-23-xt-WalkVIS-pathWalk23" { width:auto; max-width:90% }
+[cropped-FT-M-05-M-4-V0-23-xt-WalkVIS-pathWalk23]: images/cropped-FT-M-05-M-4-V0-23-xt-WalkVIS-pathWalk23.png "cropped-FT-M-05-M-4-V0-23-xt-WalkVIS-pathWalk23" { width:8cm; max-width:90% }
 
-[cropped-FT-M-05-M-4-V0-23-xt-ElevVIS-pathElev23]: images/cropped-FT-M-05-M-4-V0-23-xt-ElevVIS-pathElev23.png "cropped-FT-M-05-M-4-V0-23-xt-ElevVIS-pathElev23" { width:auto; max-width:90% }
+[cropped-FT-M-05-M-4-V0-23-xt-ElevVIS-pathElev23]: images/cropped-FT-M-05-M-4-V0-23-xt-ElevVIS-pathElev23.png "cropped-FT-M-05-M-4-V0-23-xt-ElevVIS-pathElev23" { width:8cm; max-width:90% }
 
-[cropped-FT-M-05-M-4-V1-23-xt-WalkVIS-pathWalk23]: images/cropped-FT-M-05-M-4-V1-23-xt-WalkVIS-pathWalk23.png "cropped-FT-M-05-M-4-V1-23-xt-WalkVIS-pathWalk23" { width:auto; max-width:90% }
+[cropped-FT-M-05-M-4-V1-23-xt-WalkVIS-pathWalk23]: images/cropped-FT-M-05-M-4-V1-23-xt-WalkVIS-pathWalk23.png "cropped-FT-M-05-M-4-V1-23-xt-WalkVIS-pathWalk23" { width:8cm; max-width:90% }
 
-[cropped-FT-M-05-M-4-V1-23-xt-ElevVIS-pathElev23]: images/cropped-FT-M-05-M-4-V1-23-xt-ElevVIS-pathElev23.png "cropped-FT-M-05-M-4-V1-23-xt-ElevVIS-pathElev23" { width:auto; max-width:90% }
+[cropped-FT-M-05-M-4-V1-23-xt-ElevVIS-pathElev23]: images/cropped-FT-M-05-M-4-V1-23-xt-ElevVIS-pathElev23.png "cropped-FT-M-05-M-4-V1-23-xt-ElevVIS-pathElev23" { width:8cm; max-width:90% }
 
-[cropped-FT-M-05-M-4-V2-23-xt-WalkVIS-pathWalk23]: images/cropped-FT-M-05-M-4-V2-23-xt-WalkVIS-pathWalk23.png "cropped-FT-M-05-M-4-V2-23-xt-WalkVIS-pathWalk23" { width:auto; max-width:90% }
+[cropped-FT-M-05-M-4-V2-23-xt-WalkVIS-pathWalk23]: images/cropped-FT-M-05-M-4-V2-23-xt-WalkVIS-pathWalk23.png "cropped-FT-M-05-M-4-V2-23-xt-WalkVIS-pathWalk23" { width:8cm; max-width:90% }
 
-[cropped-FT-M-05-M-4-V2-23-xt-ElevVIS-pathElev23]: images/cropped-FT-M-05-M-4-V2-23-xt-ElevVIS-pathElev23.png "cropped-FT-M-05-M-4-V2-23-xt-ElevVIS-pathElev23" { width:auto; max-width:90% }
+[cropped-FT-M-05-M-4-V2-23-xt-ElevVIS-pathElev23]: images/cropped-FT-M-05-M-4-V2-23-xt-ElevVIS-pathElev23.png "cropped-FT-M-05-M-4-V2-23-xt-ElevVIS-pathElev23" { width:8cm; max-width:90% }
 
 
 ## Agent Evacuation and FID
