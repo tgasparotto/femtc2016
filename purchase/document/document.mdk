@@ -62,7 +62,7 @@ to help inform other design disciplines or stakeholders about the implications o
 
 
 # BACKGROUND
-To be developed
+To be developed [@Carvel2016]
 
 # INPUTS AND MODELING METHODOLOGY
 
@@ -276,7 +276,7 @@ quantified with the results presented with the evacuation assessment.
 The visibility results are displayed as a function of distance from the fire (X) and increasing 
 time (T). XT figures provide a convenient way of representing a large amount of transient data 
 without having to display numerous contours. These figures were produced with the FDS device 
-output for visibility and post-processed in GNU Octave REF. 
+output for visibility and post-processed in GNU Octave [@Octave]. 
 
 Exit 1 is the exit closest to the fire and the multiple exit options are also indicated as 
 vertical lines. The XT contours have been clipped such that visibility greater than 10m is 
