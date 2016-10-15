@@ -204,10 +204,9 @@ As the initial population was increased in the experiments, the egress flow dimi
 However, the most crowded experiment (280) presented a flow higher than expected. 
 Checking out the videos viewing the crowd from its back (V1), it was verified that
 people had not pressed for escape as they should. As a lesson learned from the experiments,
-by themselves participants perceived that the more they press the longer will be the wait. 
-Furthermore, it is observed how the uncoordinated is faster than an expected coordinated
+participants perceived on their own that the more they press the longer will be the wait. 
+Furthermore, it is observed how uncoordinated is faster than an expected coordinated
 egress for the experiments up to crowd's density of 2.5 (175 individuals). 
-
 
 However, the experiments only considered a will to exit, no individual reentries were
 stimulated. Reentry is the act of an egressed individual who tries to come back inside 
@@ -243,7 +242,8 @@ more than 3.5 seconds.
 ## Verifying Simulation Model  
 
 Figures [#fig-expsim35] and [#fig-expsim210] presents the comparison between experiment
-and simulation. The egress time is slightly lower at simulation, but the curve slope is quite the same.
+and simulation. The egress time is slightly lower at simulation, but the curve slope is 
+relatively the same.
 
 ~ Figure { #fig-expSim35; caption: "Experiment versus simulation: 35 individuals egressed."}
 ![exp_sim_35]
