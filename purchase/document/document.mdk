@@ -329,64 +329,95 @@ full tunnel cross section. This effect is more noticeable for the track-level
 walkway than for the elevated walkway which suggests that even with tunnel 
 ventilation applied a degree of smoke layering is still present.
 
-~ TableFigure { #fig-Vis-0-23; caption:"Visibility [m] for 0% grade and 23m^2^ tunnel section."; .wide }
-|:----------------------------:|:-----------------------------------:|:
-| [Track-level walkway]{font-weight:bold}            | [Elevated walkway]{font-weight:bold}               |
-| Visibility at 2m above track                       | Visibility at 3.2m above track                     |
-| \                                                  | \                                                  |
-| ![cropped-FT-M-05-M-0-V0-23-xt-WalkVIS-pathWalk23] | ![cropped-FT-M-05-M-0-V0-23-xt-ElevVIS-pathElev23] |
-| (a) Still conditions (open boundaries at each end)                                                     ||
-| ![cropped-FT-M-05-M-0-V1-23-xt-WalkVIS-pathWalk23] | ![cropped-FT-M-05-M-0-V1-23-xt-ElevVIS-pathElev23] |
-| (b) Still conditions (open boundaries at each end)                                                     ||
-| ![cropped-FT-M-05-M-0-V2-23-xt-WalkVIS-pathWalk23] | ![cropped-FT-M-05-M-0-V2-23-xt-ElevVIS-pathElev23] |
-| (c) Critical velocity                                                                                  ||
-| \                                                  |                                                    |
-| ![cbar]                                                                                                ||
+
+~ Figure { #fig-Vis-0-23; caption:"Visibility [m] for 0% grade and 23m^2^ tunnel section."; .wide }
+[Track-level walkway]{font-weight:bold}            [Elevated walkway]{font-weight:bold}       
+Visibility at 2m above track                        Visibility at 3.2m above track                     
+![cropped-FT-M-05-M-0-V0-23-xt-WalkVIS-pathWalk23] ![cropped-FT-M-05-M-0-V0-23-xt-ElevVIS-pathElev23] \
+(a) Still conditions (open boundaries at each end) \                                            
+![cropped-FT-M-05-M-0-V1-23-xt-WalkVIS-pathWalk23]  ![cropped-FT-M-05-M-0-V1-23-xt-ElevVIS-pathElev23] \
+(b) Still conditions (open boundaries at each end) \
+![cropped-FT-M-05-M-0-V2-23-xt-WalkVIS-pathWalk23] | ![cropped-FT-M-05-M-0-V2-23-xt-ElevVIS-pathElev23] \
+(c) Critical velocity                                                                  
+\                      
+![cbar]       
 ~
 
 [cbar]: images/cbar.png "cbar" { width:auto; max-width:90% }
 
-[cropped-FT-M-05-M-0-V0-23-xt-WalkVIS-pathWalk23]: images/cropped-FT-M-05-M-0-V0-23-xt-WalkVIS-pathWalk23.png "cropped-FT-M-05-M-0-V0-23-xt-WalkVIS-pathWalk23" { width:auto; max-width:50% }
+[cropped-FT-M-05-M-0-V0-23-xt-WalkVIS-pathWalk23]: images/cropped-FT-M-05-M-0-V0-23-xt-WalkVIS-pathWalk23.png "cropped-FT-M-05-M-0-V0-23-xt-WalkVIS-pathWalk23" { width:auto; max-width:45% }
 
-[cropped-FT-M-05-M-0-V0-23-xt-ElevVIS-pathElev23]: images/cropped-FT-M-05-M-0-V0-23-xt-ElevVIS-pathElev23.png "cropped-FT-M-05-M-0-V0-23-xt-ElevVIS-pathElev23" { width:auto; max-width:50% }
+[cropped-FT-M-05-M-0-V0-23-xt-ElevVIS-pathElev23]: images/cropped-FT-M-05-M-0-V0-23-xt-ElevVIS-pathElev23.png "cropped-FT-M-05-M-0-V0-23-xt-ElevVIS-pathElev23" { width:auto; max-width:45% }
 
-[cropped-FT-M-05-M-0-V1-23-xt-WalkVIS-pathWalk23]: images/cropped-FT-M-05-M-0-V1-23-xt-WalkVIS-pathWalk23.png "cropped-FT-M-05-M-0-V1-23-xt-WalkVIS-pathWalk23" { width:auto; max-width:50% }
+[cropped-FT-M-05-M-0-V1-23-xt-WalkVIS-pathWalk23]: images/cropped-FT-M-05-M-0-V1-23-xt-WalkVIS-pathWalk23.png "cropped-FT-M-05-M-0-V1-23-xt-WalkVIS-pathWalk23" { width:auto; max-width:45% }
 
-[cropped-FT-M-05-M-0-V1-23-xt-ElevVIS-pathElev23]: images/cropped-FT-M-05-M-0-V1-23-xt-ElevVIS-pathElev23.png "cropped-FT-M-05-M-0-V1-23-xt-ElevVIS-pathElev23" { width:auto; max-width:50% }
+[cropped-FT-M-05-M-0-V1-23-xt-ElevVIS-pathElev23]: images/cropped-FT-M-05-M-0-V1-23-xt-ElevVIS-pathElev23.png "cropped-FT-M-05-M-0-V1-23-xt-ElevVIS-pathElev23" { width:auto; max-width:45% }
 
-[cropped-FT-M-05-M-0-V2-23-xt-WalkVIS-pathWalk23]: images/cropped-FT-M-05-M-0-V2-23-xt-WalkVIS-pathWalk23.png "cropped-FT-M-05-M-0-V2-23-xt-WalkVIS-pathWalk23" { width:auto; max-width:50% }
+[cropped-FT-M-05-M-0-V2-23-xt-WalkVIS-pathWalk23]: images/cropped-FT-M-05-M-0-V2-23-xt-WalkVIS-pathWalk23.png "cropped-FT-M-05-M-0-V2-23-xt-WalkVIS-pathWalk23" { width:auto; max-width:45% }
 
-[cropped-FT-M-05-M-0-V2-23-xt-ElevVIS-pathElev23]: images/cropped-FT-M-05-M-0-V2-23-xt-ElevVIS-pathElev23.png "cropped-FT-M-05-M-0-V2-23-xt-ElevVIS-pathElev23" { width:auto; max-width:50% }
+[cropped-FT-M-05-M-0-V2-23-xt-ElevVIS-pathElev23]: images/cropped-FT-M-05-M-0-V2-23-xt-ElevVIS-pathElev23.png "cropped-FT-M-05-M-0-V2-23-xt-ElevVIS-pathElev23" { width:auto; max-width:45% }
 
 
-~ TableFigure { #fig-Vis-4-23; caption:"Visibility [m] for 4% grade and 23m^2^ tunnel section."; .wide }
 
-|:----------------------------:|:-----------------------------------:|:
-| [Track-level walkway]{font-weight:bold}            | [Elevated walkway]{font-weight:bold}               |
-| Visibility at 2m above track                       | Visibility at 3.2m above track                     |
-| \                                                  | \                                                  |
-| ![cropped-FT-M-05-M-4-V0-23-xt-WalkVIS-pathWalk23] | ![cropped-FT-M-05-M-4-V0-23-xt-ElevVIS-pathElev23] |
-| (a) Still conditions (open boundaries at each end)                                                     ||
-| ![cropped-FT-M-05-M-4-V1-23-xt-WalkVIS-pathWalk23] | ![cropped-FT-M-05-M-4-V1-23-xt-ElevVIS-pathElev23] |
-| (b) Still conditions (open boundaries at each end)                                                     ||
-| ![cropped-FT-M-05-M-4-V2-23-xt-WalkVIS-pathWalk23] | ![cropped-FT-M-05-M-4-V2-23-xt-ElevVIS-pathElev23] |
-| (c) Critical velocity                                                                                  ||
-| \                                                  |                                                    |
-| ![cbar]                                                                                                ||
+~ Begin Columns
+~ Column
+[Track-level walkway]{font-weight:bold} \              
+Visibility at 2m above track
+~
+~ Column
+[Elevated walkway]{font-weight:bold}\
+Visibility at 3.2m above track 
+~                               
+~ End Columns                 
 
+![cropped-FT-M-05-M-4-V0-23-xt-WalkVIS-pathWalk23] ![cropped-FT-M-05-M-4-V0-23-xt-ElevVIS-pathElev23] \
+(a) Still conditions (open boundaries at each end) \                                            
+![cropped-FT-M-05-M-4-V1-23-xt-WalkVIS-pathWalk23]  ![cropped-FT-M-05-M-4-V1-23-xt-ElevVIS-pathElev23] \
+(b) Still conditions (open boundaries at each end) \
+![cropped-FT-M-05-M-4-V2-23-xt-WalkVIS-pathWalk23] | ![cropped-FT-M-05-M-4-V2-23-xt-ElevVIS-pathElev23] \
+(c) Critical velocity                                                                  
+\                      
+![cbar]
+
+~ Figure { #fig-Vis-4-23; caption:"Visibility [m] for 4% grade and 23m^2^ tunnel section."; .wide }     
 ~
 
-[cropped-FT-M-05-M-4-V0-23-xt-WalkVIS-pathWalk23]: images/cropped-FT-M-05-M-4-V0-23-xt-WalkVIS-pathWalk23.png "cropped-FT-M-05-M-4-V0-23-xt-WalkVIS-pathWalk23" { width:auto; max-width:50% }
+~ Begin Figure { #fig-subfigs; caption:"Examples of sub figures." }
+~ Begin SubFigureRow { vertical-align: bottom }
+~ SubFigure { #fig-subfig1; caption:"A butterfly" }
+![monarch]
+~
+~ SubFigure { #fig-subfig2; caption:"A matrix"; }
+~~ Math
+A_{m,n} = 
+ \begin{pmatrix}
+  a_{1,1} & a_{1,2} & \cdots & a_{1,n} \\
+  a_{2,1} & a_{2,2} & \cdots & a_{2,n} \\
+  \vdots  & \vdots  & \ddots & \vdots  \\
+  a_{m,1} & a_{m,2} & \cdots & a_{m,n} 
+ \end{pmatrix}
+~~
+~
+~ End SubFigureRow
+~ Begin SubFigureRow
+~ SubFigure { #fig-subfig3; caption:"A textual subfigure" }
+One more sub-figure with some text.
+~
+~ End SubFigureRow
+~ End Figure
 
-[cropped-FT-M-05-M-4-V0-23-xt-ElevVIS-pathElev23]: images/cropped-FT-M-05-M-4-V0-23-xt-ElevVIS-pathElev23.png "cropped-FT-M-05-M-4-V0-23-xt-ElevVIS-pathElev23" { width:auto; max-width:50% }
 
-[cropped-FT-M-05-M-4-V1-23-xt-WalkVIS-pathWalk23]: images/cropped-FT-M-05-M-4-V1-23-xt-WalkVIS-pathWalk23.png "cropped-FT-M-05-M-4-V1-23-xt-WalkVIS-pathWalk23" { width:auto; max-width:50% }
+[cropped-FT-M-05-M-4-V0-23-xt-WalkVIS-pathWalk23]: images/cropped-FT-M-05-M-4-V0-23-xt-WalkVIS-pathWalk23.png "cropped-FT-M-05-M-4-V0-23-xt-WalkVIS-pathWalk23" { width:auto; max-width:45% }
 
-[cropped-FT-M-05-M-4-V1-23-xt-ElevVIS-pathElev23]: images/cropped-FT-M-05-M-4-V1-23-xt-ElevVIS-pathElev23.png "cropped-FT-M-05-M-4-V1-23-xt-ElevVIS-pathElev23" { width:auto; max-width:50% }
+[cropped-FT-M-05-M-4-V0-23-xt-ElevVIS-pathElev23]: images/cropped-FT-M-05-M-4-V0-23-xt-ElevVIS-pathElev23.png "cropped-FT-M-05-M-4-V0-23-xt-ElevVIS-pathElev23" { width:auto; max-width:45% }
 
-[cropped-FT-M-05-M-4-V2-23-xt-WalkVIS-pathWalk23]: images/cropped-FT-M-05-M-4-V2-23-xt-WalkVIS-pathWalk23.png "cropped-FT-M-05-M-4-V2-23-xt-WalkVIS-pathWalk23" { width:auto; max-width:50% }
+[cropped-FT-M-05-M-4-V1-23-xt-WalkVIS-pathWalk23]: images/cropped-FT-M-05-M-4-V1-23-xt-WalkVIS-pathWalk23.png "cropped-FT-M-05-M-4-V1-23-xt-WalkVIS-pathWalk23" { width:auto; max-width:45% }
 
-[cropped-FT-M-05-M-4-V2-23-xt-ElevVIS-pathElev23]: images/cropped-FT-M-05-M-4-V2-23-xt-ElevVIS-pathElev23.png "cropped-FT-M-05-M-4-V2-23-xt-ElevVIS-pathElev23" { width:auto; max-width:50% }
+[cropped-FT-M-05-M-4-V1-23-xt-ElevVIS-pathElev23]: images/cropped-FT-M-05-M-4-V1-23-xt-ElevVIS-pathElev23.png "cropped-FT-M-05-M-4-V1-23-xt-ElevVIS-pathElev23" { width:auto; max-width:45% }
+
+[cropped-FT-M-05-M-4-V2-23-xt-WalkVIS-pathWalk23]: images/cropped-FT-M-05-M-4-V2-23-xt-WalkVIS-pathWalk23.png "cropped-FT-M-05-M-4-V2-23-xt-WalkVIS-pathWalk23" { width:auto; max-width:45% }
+
+[cropped-FT-M-05-M-4-V2-23-xt-ElevVIS-pathElev23]: images/cropped-FT-M-05-M-4-V2-23-xt-ElevVIS-pathElev23.png "cropped-FT-M-05-M-4-V2-23-xt-ElevVIS-pathElev23" { width:auto; max-width:45% }
 
 
 ## Agent Evacuation and FID
