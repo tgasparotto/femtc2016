@@ -6,6 +6,9 @@ Author        : Wagner Alberto de Moraes
 Affiliation   : Santa Catarina Military Fire Department
 Email         : wagnerm@cbm.sc.gov.br
 
+Author        : Vanderlei Vanderlino Vidal
+Affiliation   : Santa Catarina Military Fire Department
+Email         : vanderlino@cbm.sc.gov.br
 
 
 Bibliography  : references.bib
@@ -37,7 +40,8 @@ between door size and evacuation time.
 
 # INTRODUCTION { #sec-intro }
 On 27th January 2013, a fire at the nightclub Kiss caused the death of 
-243 people in Santa Maria, Brazil. Investigators [@kissPC],[@crea2013] concluded that 
+242 people in Santa Maria, Brazil [@kissPC]. Investigators [@kissPC],
+[@crea2013] concluded that 
 the fire was caused by use of flare stick whose sparks
 burned the flammable sound insulation foam (polyurethane made). 
 In a few seconds, black and toxic smoke spread throughout the
@@ -60,8 +64,7 @@ happens during an uncoordinated egress like the one that took place at Kiss.
 
 As part of a monograph of CBMSC's Military Academy, an experiment
 was done to analyze what happens inside the crowd during an uncoordinated egress like
-the one that took place at Kiss. This paper presents some of those results
-, such as exit blockages, crowd turbulence, egress time and egress flow. The variable
+the one that took place at Kiss. This paper presents some of those results, such as exit blockages, crowd turbulence, egress time and egress flow. The variable
 utilized was crowd density, varying it from 0.5 to 4.0 individuals per square meter. 
 Lastly, a computer model was validated with the experiment's results and used
 to evaluate the Normative Instructions 09, specifically regarding evacuation
@@ -71,7 +74,7 @@ capability through doors at the ground floor of nightclubs and similar.
 Evacuation capability is the ability of occupants, residents, and staff as a group either 
 to evacuate a building or to relocate from the point of occupancy to a point of safety
 [@code2009nfpa]. An evacuation process could be: a) coordinated, when
-people leaves the place in an ordered queue, coordinated flow without rush; or b) uncoordinated, 
+people leaves the place in an ordered queue, constant flow without rush; or b) uncoordinated, 
 when everyone rush for the exit, pressing others ahead, the flow become nonlinear with stops
 and goes, either with or without mass panic. Based on literature review and empirical
 research, Helbing, Farkas and Vicsek @helbing2000simulating lists the events that
@@ -159,8 +162,10 @@ can be imprisoned there. It was observed that an individual
 stood 32 seconds, next the door looking outside, pressed against the wall without
 moving itself regardless his efforts. The consequences of higher crowd pressures 
 could be turbulent flow, trampling and crushes. From those 3, just the first was
-observed at the experiments. Figure [#turb] represents the path taken by six 
-individuals (first V2 filmed position as a dot and final crossing the door)
+observed at the experiments. Figure [#turb] represents the 15 overlaid snapshots 
+where the head of the tallest and heavier individual was marked by a numbered circle,
+indicating the sequence he appeared on video. From 1 to 5 he goes southeast to , from 5 to 7
+he is droven 
 ~ Figure { #turb; caption: "Snapshots overlaid showing how turbulence affects the path followed by a person (1 is the first position and 15 the egress)"}
 ![turbulencia]
 ~
@@ -208,9 +213,6 @@ However, the experiments only considered a will to exit, no individual reentries
 stimulated. Reentry is the act of an egressed individual who tries to come back inside 
 the building seeking someone else. Besides of helping obstructing the doorway reentries 
 can make the others confused about the right direction to take [@costa2012aplicaccao].
-
-
-
 To compare graphically all the experiments, Figure [#graf-all_Exp] presents
 the egress time against the nth individual for all initial crowd's density, excepting 
 4.0 (280 individuals).
@@ -220,7 +222,7 @@ the egress time against the nth individual for all initial crowd's density, exce
 [all_Exp]: images/all_Exp.png "all_Exp" { width:auto; max-width:100% }
 
 The dark blue curve (crowd's density of 0.5, or 35 individuals) has a quite constant slope, 
-meaning no no blockages, almost a coordinated egress. The light blue curve, presents a sharp 
+meaning no blockages, almost a coordinated egress. The light blue curve, presents a sharp 
 slope at the 29th individual escape, which is the mathematical representation of a door
 blockage. Another way to see the blockages is through the time's void between two
 individual's exit, which is presented in Figure [#graf-210].
