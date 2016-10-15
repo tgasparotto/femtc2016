@@ -124,7 +124,7 @@ The observed evacuation of the office building was modeled using Pathfinder.  At
 
 [Model1]: images/Model1.JPG "Model1" { width:auto; max-width:90% }
 
-By increasing the priority of a number of individuals on the higher floors the outcomes of the model were made to replicate the observed evacuation times for each of the floors.  To give more robustness to the analysis, it was felt desirable to have a number of runs of the model with the populations on each floor redistributed around the space. 
+By increasing the priority of a number of individuals on the lower floors the outcomes of the model were made to replicate the observed evacuation times for each of the floors.  To give more robustness to the analysis, it was felt desirable to have a number of runs of the model with the populations on each floor redistributed around the space. 
 
 Moving the population around revealed that even small changes in the locations of a few individuals could have an apparently chaotic effect on the evacuation times for each floor.  But the chaos did have boundaries and a bounded distribution of results emerged.  The priorities of individuals and speeds in the staircase were adjusted so that the mean of the distribution of results was as close as possible to the observed drill.
 
