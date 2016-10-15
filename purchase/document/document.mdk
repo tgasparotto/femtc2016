@@ -49,7 +49,7 @@ project cost. As such, pressure might be put on the fire safety designer to demo
 provisions are necessary or if these could be reduced or replaced in some way. Conversely, the fire 
 safety designer has a duty to deliver value for money and should be looking for opportunities to 
 simplify and minimize their design, while still providing an adequate level of safety.  
-   
+
 At the early stages of a project the time and resources needed to make decisions about fire 
 safety provisions can be limited. While guidelines and standards provide a level of support, 
 the values might be given as a minimum or maximum requirement that needs to be achieved. However, 
@@ -58,11 +58,10 @@ when in reality a performance assessment is necessary to verify the overall solu
 
 This paper aims to provide a benchmark set of tunnel evacuation design configurations that can 
 be used by the fire safety designer in the early stages of design development. This can be used 
-to help inform other design disciplines or stakeholders about the implications of certain configurations.
-
+to help inform other design disciplines or stakeholders about possible implications of certain configurations.
 
 ## Background 
-A tunnel is a relatively simple geometric structure. However, the complexities and uncertainties associated with a fire event mean that designing for evacuation from a rail tunnel is a complex process [@Purchase2013]. While the typical strategy is to continue to the next station, where detrainment can be rapid and egress routes are more familiar to agents [@Purchase2013]. There is, however, a residual risk that a fire could occur in the tunnel due to mechanical failure or congested network conditions. 
+A tunnel is a relatively simple geometric structure. However, the complexities and uncertainties associated with a fire event mean that designing for evacuation from a rail tunnel is a complex process [@Purchase2013]. If a fire is detected on a train, the typical strategy is to continue to the next station, where detrainment can be rapid and egress routes are more familiar to agents [@Purchase2013]. There is, however, a residual risk that a fire could occur in the tunnel due to mechanical failure or congested network conditions. 
 
 The evacuation provisions required for a fire in a rail tunnel vary between countries. In general terms, walkway widths tend to vary between approximately 0.7m to 1.5m, exit spacings vary between approximately 240m to 500m  and there are differing guidance on weather an elevated or track-level walkway is suitable [@FIT2Rail; @FIT2Metro; @NFPA130-2014; @TSI]. 
 
@@ -118,7 +117,7 @@ an actual metro system. Even so, combining all of these inputs in a parametric s
 in over 100,000 separate scenarios. To limit the number of scenarios the values in bold were selected. 
 This resulted in 12 separate CFD scenarios and 144 evacuation scenarios. 
 
-~ TableFigure { #ScenarioTable; caption: "Example Parameters For Scenario Selection"; .wide .booktable}
+~ TableFigure { #ScenarioTable; caption: "Example Parameters For Scenario Selection"; .wide .booktable; page-align:forcehere}
 
 |:-----------------------|:---------:|:-----------:|:----------------:|:-----------------:|
 | [CFD Scenario Parameters]{font-weight:bold}                         ||             |                  |                   |
@@ -126,7 +125,7 @@ This resulted in 12 separate CFD scenarios and 144 evacuation scenarios.
 | Fire size              | MW        | [2]{color:grey}           | [5]{font-weight:bold}                | [>=10]{color:grey}              |
 | Fire growth rate       | t-squared | [Slow]{color:grey}        | [Medium]{font-weight:bold}           | [Fast]{color:grey}              |
 | Tunnel grade           | %         | [-4]{color:grey}          | [0]{font-weight:bold}                | [4]{font-weight:bold}                 |
-| Tunnel velocity        | -         | [No velocity]{font-weight:bold} | [2m/s portal wind]{font-weight:bold} | [Critical velocity]{font-weight:bold} |
+| Tunnel velocity        | -         | [No velocity]{font-weight:bold} | [2m/s wind]{font-weight:bold} | [Critical velocity]{font-weight:bold} |
 | Tunnel area            | m^2^        | [23]{font-weight:bold}          | [29]{font-weight:bold}               | [Double track]{color:grey}      |
 |------------------------|-----------|-------------|------------------|-------------------|
 |[Evacuation Scenario Paramters]{font-weight:bold}          |||                  |                   |
@@ -177,9 +176,8 @@ with no decay modelled. A soot yield of 0.1kg/kg and a Carbon Monoxide yield of
 
 Grid sizes of 0.2m were used across the train length and approximately 10m beyond 
 the train ends. In the open sections grid sizes of 0.4m were used. This resulted in 
-characteristic fire parameters [@FDSUserGuide] of D*/dx = 9.1 and Q*=2.2 in the vicinity of 
-the fire. A grid convergence study was not undertaken. Grid sizes are considered 
-adequate based on previous experience and for the assessment purpose.
+characteristic fire parameters [@FDSUserGuide] of $D^*/dx = 9.1$ and $Q^*=2.2$ in the vicinity of 
+the fire. 
 
 The tunnel was modelled as being 900m in length. This allows for the maximum exit 
 spacing of 500m with at least 100m of tunnel beyond each exit. The two tunnel cross-sections 
@@ -200,7 +198,7 @@ evacuation. A small opening in the incident train was used to allow oxygen to en
 the fire car prior to the doors opening. Windows stayed in-tact for the duration of 
 the simulation. The fire was not oxygen limited. 
 
-~ Figure { #fig-Geometry; caption:"23m^2^ tunnel (left) and 29m^2^ tunnel (right). Blue blockage indicates train."; .wide }
+~ Figure { #fig-Geometry; caption:"23m^2^ tunnel (left) and 29m^2^ tunnel (right). Blue blockage indicates train."; .wide ; page-align:forcehere}
 ![Geometry]                                                                          
 ~
 
@@ -276,7 +274,7 @@ achieved by each agent is ultimately a function of crowding, visibility conditio
 To estimate occupant tenability the FED is interpreted as a Fractional Incapacitation Dose (FID). 
 As defined by ISO 13571 [@ISO-13571-2012], an FID of 1.0 corresponds to a log-normal distribution of responses, with 
 statistically 50% of the population expected to experience tenable conditions, with 50% then 
-expected to experience compromised tenability. The threshold criteria of FID ≥ 0.3 used for 
+expected to experience compromised tenability. The threshold criteria of FID $\geq$ 0.3 used for 
 this assessment translates to 11.4% of the population being statistically susceptible to 
 compromised tenability [@ISO-13571-2012]. 
 
@@ -344,9 +342,12 @@ full tunnel cross section. This effect is more noticeable for the track-level
 walkway than for the elevated walkway which suggests that even with tunnel 
 ventilation applied a degree of smoke layering is still present.
 
-~ Begin Figure { #fig-Vis-0-23; caption:"Visibility \[m\] for 0% grade and 23m^2^ tunnel section."}
+{page-break-before}
+
+~ Begin Figure { #fig-Vis-0-23; caption:"Visibility \[m\] for 0% grade and 23m^2^ tunnel section."; page-align:page}
 |:----------------------------:|:-----------------------------------:|:
-| [Track-level walkway]{font-weight:bold}            | [Elevated walkway]{font-weight:bold}               |
+| \                                                  | \                                                  |
+| [Left Figures - Track-level walkway]{font-weight:bold}            | [Right Figures - Elevated walkway]{font-weight:bold}               |
 | Visibility at 2m above track                       | Visibility at 3.2m above track                     |
 | \                                                  | \                                                  |
 | ![cropped-FT-M-05-M-0-V0-23-xt-WalkVIS-pathWalk23] | ![cropped-FT-M-05-M-0-V0-23-xt-ElevVIS-pathElev23] |
@@ -361,9 +362,10 @@ ventilation applied a degree of smoke layering is still present.
 | ![cbar]                                                                                                ||
 ~ End Figure
 
-~ Begin Figure { #fig-Vis-4-23; caption:"Visibility \[m\] for 4% grade and 23m^2^ tunnel section."}
+~ Begin Figure { #fig-Vis-4-23; caption:"Visibility \[m\] for 4% grade and 23m^2^ tunnel section."; page-align:page}
 |:----------------------------:|:-----------------------------------:|:
-| [Track-level walkway]{font-weight:bold}            | [Elevated walkway]{font-weight:bold}               |
+| \                                                  | \                                                  |
+| [Left Figures - Track-level walkway]{font-weight:bold}            | [Right Figrues - Elevated walkway]{font-weight:bold}               |
 | Visibility at 2m above track                       | Visibility at 3.2m above track                     |
 | \                                                  | \                                                  |
 | ![cropped-FT-M-05-M-4-V0-23-xt-WalkVIS-pathWalk23] | ![cropped-FT-M-05-M-4-V0-23-xt-ElevVIS-pathElev23] |
@@ -377,6 +379,7 @@ ventilation applied a degree of smoke layering is still present.
 | \                                                  | \                                                  |
 | ![cbar]                                                                                                ||
 ~ End Figure
+
 
 [cbar]: images/cbar.png "cbar" { width:auto; max-width:90% }
 
@@ -413,7 +416,7 @@ unity. The normalization used for each result is provided in the figure title. T
 to show a fraction of the worst-case outcome across the scenarios considered. 
 
 The results for the evacuation assessment are generally as expected. As the exit spacing increases and 
-the walkway width decreases, the maximum FIDs (Figure [#fig-Max-FID]),number of people exposed to FID ≥ 0.3 (Figure [#fig-NO-FID]), 
+the walkway width decreases, the maximum FIDs (Figure [#fig-Max-FID]),number of people exposed to FID $\geq$ 0.3 (Figure [#fig-NO-FID]), 
 number of visibility exposures (Figure [#fig-No-Vis]) and total evacuation time (Figure [#fig-Max-Evac]) all increase. The walkway 
 width and exit spacing directly affect the time that occupants are in the tunnel and exposed to combustion 
 gases. The relative magnitude of these increases for different exit spacing and walkway widths is a function
@@ -443,7 +446,9 @@ tunnel ventilation solution and walkway width and exit spacing may be less criti
 However, a middle train or incorrect mode operation is still a valid scenario with 
 tunnel ventilation, albeit less likely.
 
-~ Figure { #fig-Max-FID; caption:"Maximum agent FID."; .wide}
+
+
+~ Figure { #fig-Max-FID; caption:"Maximum FIDs across all agents."; .wide; page-align:page}
 
 |:----------------------------:|:
 |![Header] |
@@ -453,7 +458,7 @@ tunnel ventilation, albeit less likely.
 |![MaxFED-29-1200] | 
 ~
 
-~ Figure { #fig-No-FID; caption:"Number of agents exposed to FED ≥ 0.3. Values normalized by 600 (number of agents moving towards furthest exit)."; .wide}
+~ Figure { #fig-No-FID; caption:"Number of agents exposed to FED $\geq$ 0.3. Values normalized by 600 (number of agents moving towards furthest exit)."; .wide; page-align:page}
 
 |:----------------------------:|:
 |![Header] |
@@ -463,7 +468,7 @@ tunnel ventilation, albeit less likely.
 |![ExpFED-29-1200] | 
 ~
 
-~ Figure { #fig-No-Vis; caption:"Number of agents exposed to less than 5m visibility for greater than 10 minutes. Values normalized by 600 (number of agents moving towards furthest exit)."; .wide}
+~ Figure { #fig-No-Vis; caption:"Number of agents exposed to less than 5m visibility for greater than 10 minutes. Values normalized by 600 (number of agents moving towards furthest exit)."; .wide; page-align:page}
 
 |:----------------------------:|:
 |![Header] |
@@ -473,7 +478,7 @@ tunnel ventilation, albeit less likely.
 |![ExpVIS-29-1200] | 
 ~
 
-~ Figure { #fig-Max-Evac; caption:"Maximum exit time. Values shown in hours because the maximum evacuation time across all simulations is approximately 1 hour."; .wide}
+~ Figure { #fig-Max-Evac; caption:"Maximum exit time. Values shown in hours because the maximum evacuation time across all simulations is approximately 1 hour."; .wide; page-align:page}
 
 |:----------------------------:|:
 |![Header] |
@@ -523,7 +528,7 @@ conditions. These results showed the influence of tunnel grade on smoke movement
 An evacuation assessment was used to further understand the influence of difference evacuation 
 configurations on agent tenability. The results for the evacuation assessment are generally as 
 expected. As the exit spacing increases and the walkway width decreases, the maximum FIDs, number 
-of people exposed to FID ≥ 0.3, number of visibility exposures and total evacuation time all 
+of people exposed to FID $\geq$ 0.3, number of visibility exposures and total evacuation time all 
 increase. However, the relative magnitude of these increases is a function of the walkway elevation, 
 tunnel boundary conditions and tunnel grade. 
 
