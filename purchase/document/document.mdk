@@ -83,7 +83,7 @@ specific to a particular system.
 Tunnel aerodynamics at the time of a fire event, particularly in metro systems, can be complex 
 and vary with many factors including non-incident train movements, atmospheric conditions, normal 
 operations ventilation and incident train piston flows. To properly implement boundary conditions 
-for a project specific CFD analysis a 1-D aerodynamic model such as SES [REF] could be used. For 
+for a project specific CFD analysis a 1-D aerodynamic model such as SES REF could be used. For 
 this comparative analysis the boundary conditions used are intended to represent possible flow 
 conditions during a fire with limited consideration of airflow transients.    
 
@@ -123,7 +123,7 @@ ventilation the worst case could be a fire at the front of the train that blocks
 results in the greatest distance to an alternative exit. For a tunnel with ventilation the 
 smoke control strategy is likely to be dependent on the location of the fire on the train. 
 This requires an operator decision or control loop that is simple if the fire is at one end 
-of the train, but may require judgment if the fire is located towards the centre of the train. 
+of the train, but may require judgment if the fire is located towards the center of the train. 
 For this reason the fire was located in the middle car, but biased towards the closest exit. 
 This is considered a reasonable scenario to compare a ventilated and non-ventilated solution.
 
@@ -153,7 +153,7 @@ Figure [#fig-Scenario] shows a schematic of the scenarios modeled.
 INSERT FIGURE
 
 ## CFD Modeling
-The CFD modelling was undertaken with FDS version 6.1.2 REF.  A 5MW fire was 
+The CFD modeling was undertaken with FDS version 6.1.2 REF.  A 5MW fire was 
 modelled with the spread-rate function used to approximate the medium t-squared 
 growth rate. Once the fire reaches peak heat release rate it is kept at this value 
 with no decay modelled. A soot yield of 0.1kg/kg and a Carbon Monoxide yield of 
@@ -197,7 +197,7 @@ are used as drivers to the main program. This enabled the 144 evacuation simulat
 presented in this paper to be undertaken with minimal human input once the base files 
 were setup. This approach was considered suitable for the current investigation due 
 to the relatively simple evacuation routes. This approach also provides complete control
-of the evacuation correlations and flowrates. It is acknowledged that the model does not 
+of the evacuation correlations and flow rates. It is acknowledged that the model does not 
 include the more complex interactions in software such as Pathfinder and STEPs. However, 
 it is noted that the 1-D model developed produces results that are comparable to these more advanced methods.
 
@@ -219,7 +219,7 @@ A hydraulic model is used to regulate the movement of agents along the walkway a
 crowding and the width of the walkway. For the flow rate of people along the walkway, the same 
 correlation was used independent of the walkway elevation. A fixed correlation enables a direct 
 comparison of the impact of the agents being closer to the smoke layer for the elevated walkway. 
-Equation [#flowratewalkway] shows the correlation used [Ahlfont]:
+Equation [#flowratewalkway] shows the correlation used Ahlfont REF:
 
 ~ Equation { #FlowRateWalkway }
 Flow\ rate\ of\ people\ [p/s]=1.27 * walkway\ width[m]+0.07
@@ -268,7 +268,7 @@ compromised tenability (ISO 13571).
 # RESULTS
 
 ## Visibility and Other Tenability
-Visibility results from the CFD simulations are shown in Figure [#fig-Vis-0-23] and Figure [#fig-Vis-4-23]. Results are only 
+Visibility results from the CFD simulations are shown in Figure XX and Figure XX. Results are only 
 shown for the 23m^2 tunnel. Results for the 29m2 tunnel are very similar, albeit visibility is 
 slightly improved due to the larger cross-section. However, the variation in visibility is better 
 quantified with the results presented with the evacuation assessment. 
@@ -329,95 +329,65 @@ full tunnel cross section. This effect is more noticeable for the track-level
 walkway than for the elevated walkway which suggests that even with tunnel 
 ventilation applied a degree of smoke layering is still present.
 
+~ Begin Figure { #fig-Vis-0-23; caption:"Visibility \[m\] for 0% grade and 23m^2^ tunnel section."}
+|:----------------------------:|:-----------------------------------:|:
+| [Track-level walkway]{font-weight:bold}            | [Elevated walkway]{font-weight:bold}               |
+| Visibility at 2m above track                       | Visibility at 3.2m above track                     |
+| \                                                  | \                                                  |
+| ![cropped-FT-M-05-M-0-V0-23-xt-WalkVIS-pathWalk23] | ![cropped-FT-M-05-M-0-V0-23-xt-ElevVIS-pathElev23] |
+| (a) Still conditions (open boundaries at each end)                                                     ||
+| \                                                  | \                                                  |
+| ![cropped-FT-M-05-M-0-V1-23-xt-WalkVIS-pathWalk23] | ![cropped-FT-M-05-M-0-V1-23-xt-ElevVIS-pathElev23] |
+| (b) Pressure boundaries based on 2m/s portal wind (applied on left side)                               ||
+| \                                                  | \                                                  |
+| ![cropped-FT-M-05-M-0-V2-23-xt-WalkVIS-pathWalk23] | ![cropped-FT-M-05-M-0-V2-23-xt-ElevVIS-pathElev23] |
+| (c) Critical velocity, started at 5 minutes (applied on left side)                                     ||
+| \                                                  | \                                                  |
+| ![cbar]                                                                                                ||
+~ End Figure
 
-~ Figure { #fig-Vis-0-23; caption:"Visibility [m] for 0% grade and 23m^2^ tunnel section."; .wide }
-[Track-level walkway]{font-weight:bold}            [Elevated walkway]{font-weight:bold}       
-Visibility at 2m above track                        Visibility at 3.2m above track                     
-![cropped-FT-M-05-M-0-V0-23-xt-WalkVIS-pathWalk23] ![cropped-FT-M-05-M-0-V0-23-xt-ElevVIS-pathElev23] \
-(a) Still conditions (open boundaries at each end) \                                            
-![cropped-FT-M-05-M-0-V1-23-xt-WalkVIS-pathWalk23]  ![cropped-FT-M-05-M-0-V1-23-xt-ElevVIS-pathElev23] \
-(b) Still conditions (open boundaries at each end) \
-![cropped-FT-M-05-M-0-V2-23-xt-WalkVIS-pathWalk23] | ![cropped-FT-M-05-M-0-V2-23-xt-ElevVIS-pathElev23] \
-(c) Critical velocity                                                                  
-\                      
-![cbar]       
-~
+~ Begin Figure { #fig-Vis-4-23; caption:"Visibility \[m\] for 4% grade and 23m^2^ tunnel section."}
+|:----------------------------:|:-----------------------------------:|:
+| [Track-level walkway]{font-weight:bold}            | [Elevated walkway]{font-weight:bold}               |
+| Visibility at 2m above track                       | Visibility at 3.2m above track                     |
+| \                                                  | \                                                  |
+| ![cropped-FT-M-05-M-4-V0-23-xt-WalkVIS-pathWalk23] | ![cropped-FT-M-05-M-4-V0-23-xt-ElevVIS-pathElev23] |
+| (a) Still conditions (open boundaries at each end)                                                     ||
+| \                                                  | \                                                  |
+| ![cropped-FT-M-05-M-4-V1-23-xt-WalkVIS-pathWalk23] | ![cropped-FT-M-05-M-4-V1-23-xt-ElevVIS-pathElev23] |
+| (b) Pressure boundaries based on 2m/s portal wind (applied on left side)                               ||
+| \                                                  | \                                                  |
+| ![cropped-FT-M-05-M-4-V2-23-xt-WalkVIS-pathWalk23] | ![cropped-FT-M-05-M-4-V2-23-xt-ElevVIS-pathElev23] |
+| (c) Critical velocity, started at 5 minutes (applied on left side)                                     ||
+| \                                                  | \                                                  |
+| ![cbar]                                                                                                ||
+~ End Figure
 
 [cbar]: images/cbar.png "cbar" { width:auto; max-width:90% }
 
-[cropped-FT-M-05-M-0-V0-23-xt-WalkVIS-pathWalk23]: images/cropped-FT-M-05-M-0-V0-23-xt-WalkVIS-pathWalk23.png "cropped-FT-M-05-M-0-V0-23-xt-WalkVIS-pathWalk23" { width:auto; max-width:45% }
+[cropped-FT-M-05-M-0-V0-23-xt-WalkVIS-pathWalk23]: images/cropped-FT-M-05-M-0-V0-23-xt-WalkVIS-pathWalk23.png "cropped-FT-M-05-M-0-V0-23-xt-WalkVIS-pathWalk23" { width:auto; max-width:90% }
 
-[cropped-FT-M-05-M-0-V0-23-xt-ElevVIS-pathElev23]: images/cropped-FT-M-05-M-0-V0-23-xt-ElevVIS-pathElev23.png "cropped-FT-M-05-M-0-V0-23-xt-ElevVIS-pathElev23" { width:auto; max-width:45% }
+[cropped-FT-M-05-M-0-V0-23-xt-ElevVIS-pathElev23]: images/cropped-FT-M-05-M-0-V0-23-xt-ElevVIS-pathElev23.png "cropped-FT-M-05-M-0-V0-23-xt-ElevVIS-pathElev23" { width:auto; max-width:90% }
 
-[cropped-FT-M-05-M-0-V1-23-xt-WalkVIS-pathWalk23]: images/cropped-FT-M-05-M-0-V1-23-xt-WalkVIS-pathWalk23.png "cropped-FT-M-05-M-0-V1-23-xt-WalkVIS-pathWalk23" { width:auto; max-width:45% }
+[cropped-FT-M-05-M-0-V1-23-xt-WalkVIS-pathWalk23]: images/cropped-FT-M-05-M-0-V1-23-xt-WalkVIS-pathWalk23.png "cropped-FT-M-05-M-0-V1-23-xt-WalkVIS-pathWalk23" { width:auto; max-width:90% }
 
-[cropped-FT-M-05-M-0-V1-23-xt-ElevVIS-pathElev23]: images/cropped-FT-M-05-M-0-V1-23-xt-ElevVIS-pathElev23.png "cropped-FT-M-05-M-0-V1-23-xt-ElevVIS-pathElev23" { width:auto; max-width:45% }
+[cropped-FT-M-05-M-0-V1-23-xt-ElevVIS-pathElev23]: images/cropped-FT-M-05-M-0-V1-23-xt-ElevVIS-pathElev23.png "cropped-FT-M-05-M-0-V1-23-xt-ElevVIS-pathElev23" { width:auto; max-width:90% }
 
-[cropped-FT-M-05-M-0-V2-23-xt-WalkVIS-pathWalk23]: images/cropped-FT-M-05-M-0-V2-23-xt-WalkVIS-pathWalk23.png "cropped-FT-M-05-M-0-V2-23-xt-WalkVIS-pathWalk23" { width:auto; max-width:45% }
+[cropped-FT-M-05-M-0-V2-23-xt-WalkVIS-pathWalk23]: images/cropped-FT-M-05-M-0-V2-23-xt-WalkVIS-pathWalk23.png "cropped-FT-M-05-M-0-V2-23-xt-WalkVIS-pathWalk23" { width:auto; max-width:90% }
 
-[cropped-FT-M-05-M-0-V2-23-xt-ElevVIS-pathElev23]: images/cropped-FT-M-05-M-0-V2-23-xt-ElevVIS-pathElev23.png "cropped-FT-M-05-M-0-V2-23-xt-ElevVIS-pathElev23" { width:auto; max-width:45% }
+[cropped-FT-M-05-M-0-V2-23-xt-ElevVIS-pathElev23]: images/cropped-FT-M-05-M-0-V2-23-xt-ElevVIS-pathElev23.png "cropped-FT-M-05-M-0-V2-23-xt-ElevVIS-pathElev23" { width:auto; max-width:90% }
 
+[cropped-FT-M-05-M-4-V0-23-xt-WalkVIS-pathWalk23]: images/cropped-FT-M-05-M-4-V0-23-xt-WalkVIS-pathWalk23.png "cropped-FT-M-05-M-4-V0-23-xt-WalkVIS-pathWalk23" { width:auto; max-width:90% }
 
+[cropped-FT-M-05-M-4-V0-23-xt-ElevVIS-pathElev23]: images/cropped-FT-M-05-M-4-V0-23-xt-ElevVIS-pathElev23.png "cropped-FT-M-05-M-4-V0-23-xt-ElevVIS-pathElev23" { width:auto; max-width:90% }
 
-~ Begin Columns
-~ Column
-[Track-level walkway]{font-weight:bold} \              
-Visibility at 2m above track
-~
-~ Column
-[Elevated walkway]{font-weight:bold}\
-Visibility at 3.2m above track 
-~                               
-~ End Columns                 
+[cropped-FT-M-05-M-4-V1-23-xt-WalkVIS-pathWalk23]: images/cropped-FT-M-05-M-4-V1-23-xt-WalkVIS-pathWalk23.png "cropped-FT-M-05-M-4-V1-23-xt-WalkVIS-pathWalk23" { width:auto; max-width:90% }
 
-![cropped-FT-M-05-M-4-V0-23-xt-WalkVIS-pathWalk23] ![cropped-FT-M-05-M-4-V0-23-xt-ElevVIS-pathElev23] \
-(a) Still conditions (open boundaries at each end) \                                            
-![cropped-FT-M-05-M-4-V1-23-xt-WalkVIS-pathWalk23]  ![cropped-FT-M-05-M-4-V1-23-xt-ElevVIS-pathElev23] \
-(b) Still conditions (open boundaries at each end) \
-![cropped-FT-M-05-M-4-V2-23-xt-WalkVIS-pathWalk23] | ![cropped-FT-M-05-M-4-V2-23-xt-ElevVIS-pathElev23] \
-(c) Critical velocity                                                                  
-\                      
-![cbar]
+[cropped-FT-M-05-M-4-V1-23-xt-ElevVIS-pathElev23]: images/cropped-FT-M-05-M-4-V1-23-xt-ElevVIS-pathElev23.png "cropped-FT-M-05-M-4-V1-23-xt-ElevVIS-pathElev23" { width:auto; max-width:90% }
 
-~ Figure { #fig-Vis-4-23; caption:"Visibility [m] for 4% grade and 23m^2^ tunnel section."; .wide }     
-~
+[cropped-FT-M-05-M-4-V2-23-xt-WalkVIS-pathWalk23]: images/cropped-FT-M-05-M-4-V2-23-xt-WalkVIS-pathWalk23.png "cropped-FT-M-05-M-4-V2-23-xt-WalkVIS-pathWalk23" { width:auto; max-width:90% }
 
-~ Begin Figure { #fig-subfigs; caption:"Examples of sub figures." }
-~ Begin SubFigureRow { vertical-align: bottom }
-~ SubFigure { #fig-subfig1; caption:"A butterfly" }
-![monarch]
-~
-~ SubFigure { #fig-subfig2; caption:"A matrix"; }
-~~ Math
-A_{m,n} = 
- \begin{pmatrix}
-  a_{1,1} & a_{1,2} & \cdots & a_{1,n} \\
-  a_{2,1} & a_{2,2} & \cdots & a_{2,n} \\
-  \vdots  & \vdots  & \ddots & \vdots  \\
-  a_{m,1} & a_{m,2} & \cdots & a_{m,n} 
- \end{pmatrix}
-~~
-~
-~ End SubFigureRow
-~ Begin SubFigureRow
-~ SubFigure { #fig-subfig3; caption:"A textual subfigure" }
-One more sub-figure with some text.
-~
-~ End SubFigureRow
-~ End Figure
-
-
-[cropped-FT-M-05-M-4-V0-23-xt-WalkVIS-pathWalk23]: images/cropped-FT-M-05-M-4-V0-23-xt-WalkVIS-pathWalk23.png "cropped-FT-M-05-M-4-V0-23-xt-WalkVIS-pathWalk23" { width:auto; max-width:45% }
-
-[cropped-FT-M-05-M-4-V0-23-xt-ElevVIS-pathElev23]: images/cropped-FT-M-05-M-4-V0-23-xt-ElevVIS-pathElev23.png "cropped-FT-M-05-M-4-V0-23-xt-ElevVIS-pathElev23" { width:auto; max-width:45% }
-
-[cropped-FT-M-05-M-4-V1-23-xt-WalkVIS-pathWalk23]: images/cropped-FT-M-05-M-4-V1-23-xt-WalkVIS-pathWalk23.png "cropped-FT-M-05-M-4-V1-23-xt-WalkVIS-pathWalk23" { width:auto; max-width:45% }
-
-[cropped-FT-M-05-M-4-V1-23-xt-ElevVIS-pathElev23]: images/cropped-FT-M-05-M-4-V1-23-xt-ElevVIS-pathElev23.png "cropped-FT-M-05-M-4-V1-23-xt-ElevVIS-pathElev23" { width:auto; max-width:45% }
-
-[cropped-FT-M-05-M-4-V2-23-xt-WalkVIS-pathWalk23]: images/cropped-FT-M-05-M-4-V2-23-xt-WalkVIS-pathWalk23.png "cropped-FT-M-05-M-4-V2-23-xt-WalkVIS-pathWalk23" { width:auto; max-width:45% }
-
-[cropped-FT-M-05-M-4-V2-23-xt-ElevVIS-pathElev23]: images/cropped-FT-M-05-M-4-V2-23-xt-ElevVIS-pathElev23.png "cropped-FT-M-05-M-4-V2-23-xt-ElevVIS-pathElev23" { width:auto; max-width:45% }
+[cropped-FT-M-05-M-4-V2-23-xt-ElevVIS-pathElev23]: images/cropped-FT-M-05-M-4-V2-23-xt-ElevVIS-pathElev23.png "cropped-FT-M-05-M-4-V2-23-xt-ElevVIS-pathElev23" { width:auto; max-width:90% }
 
 
 ## Agent Evacuation and FID
@@ -461,43 +431,64 @@ tunnel ventilation, albeit less likely.
 ~ Figure { #fig-Max-FID; caption:"Maximum agent FID."; .wide}
 
 |:----------------------------:|:
-|Add figure |
-|Add figure |
-|Add figure |
-|Add figure |
-|Add figure | 
+|![Header] |
+|![MaxFED-23-0800] |
+|![MaxFED-29-0800] |
+|![MaxFED-23-1200] |
+|![MaxFED-29-1200] | 
 ~
 
 ~ Figure { #fig-No-FID; caption:"Number of agents exposed to FED ≥ 0.3. Values normalized by 600 (number of agents moving towards furthest exit)."; .wide}
 
 |:----------------------------:|:
-|Add figure |
-|Add figure |
-|Add figure |
-|Add figure |
-|Add figure | 
+|![Header] |
+|![ExpFED-23-0800] |
+|![ExpFED-29-0800] |
+|![ExpFED-23-1200] |
+|![ExpFED-29-1200] | 
 ~
 
 ~ Figure { #fig-No-Vis; caption:"Number of agents exposed to less than 5m visibility for greater than 10 minutes. Values normalized by 600 (number of agents moving towards furthest exit)."; .wide}
 
 |:----------------------------:|:
-|Add figure |
-|Add figure |
-|Add figure |
-|Add figure |
-|Add figure | 
+|![Header] |
+|![ExpVIS-23-0800] |
+|![ExpVIS-29-0800] |
+|![ExpVIS-23-1200] |
+|![ExpVIS-29-1200] | 
 ~
 
 ~ Figure { #fig-Max-Evac; caption:"Maximum exit time. Values shown in hours because the maximum evacuation time across all simulations is approximately 1 hour."; .wide}
 
 |:----------------------------:|:
-|Add figure |
-|Add figure |
-|Add figure |
-|Add figure |
-|Add figure | 
+|![Header] |
+|![MaxEVC-23-0800] |
+|![MaxEVC-29-0800] |
+|![MaxEVC-23-1200] |
+|![MaxEVC-29-1200] | 
 ~
 
+[Header]: images/Header.png "Header" { width:auto; max-width:90% }
+
+[MaxEVC-23-0800]: images/MaxEVC-23-0800.png "MaxEVC-23-0800" { width:auto; max-width:90% }
+[MaxEVC-29-0800]: images/MaxEVC-29-0800.png "MaxEVC-29-0800" { width:auto; max-width:90% }
+[MaxEVC-23-1200]: images/MaxEVC-23-1200.png "MaxEVC-23-1200" { width:auto; max-width:90% }
+[MaxEVC-29-1200]: images/MaxEVC-29-1200.png "MaxEVC-29-1200" { width:auto; max-width:90% }
+
+[ExpVIS-23-0800]: images/ExpVIS-23-0800.png "ExpVIS-23-0800" { width:auto; max-width:90% }
+[ExpVIS-29-0800]: images/ExpVIS-29-0800.png "ExpVIS-29-0800" { width:auto; max-width:90% }
+[ExpVIS-23-1200]: images/ExpVIS-23-1200.png "ExpVIS-23-1200" { width:auto; max-width:90% }
+[ExpVIS-29-1200]: images/ExpVIS-29-1200.png "ExpVIS-29-1200" { width:auto; max-width:90% }
+
+[ExpFED-23-0800]: images/ExpFED-23-0800.png "ExpFED-23-0800" { width:auto; max-width:90% }
+[ExpFED-29-0800]: images/ExpFED-29-0800.png "ExpFED-29-0800" { width:auto; max-width:90% }
+[ExpFED-23-1200]: images/ExpFED-23-1200.png "ExpFED-23-1200" { width:auto; max-width:90% }
+[ExpFED-29-1200]: images/ExpFED-29-1200.png "ExpFED-29-1200" { width:auto; max-width:90% }
+
+[MaxFED-23-0800]: images/MaxFED-23-0800.png "MaxFED-23-0800" { width:auto; max-width:90% }
+[MaxFED-29-0800]: images/MaxFED-29-0800.png "MaxFED-29-0800" { width:auto; max-width:90% }
+[MaxFED-23-1200]: images/MaxFED-23-1200.png "MaxFED-23-1200" { width:auto; max-width:90% }
+[MaxFED-29-1200]: images/MaxFED-29-1200.png "MaxFED-29-1200" { width:auto; max-width:90% }
 
 # CONCLUSION
 This paper has provided a comparative study to develop a benchmark set of considerations for 
