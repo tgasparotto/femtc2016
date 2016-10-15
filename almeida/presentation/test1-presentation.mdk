@@ -135,6 +135,35 @@ Suggia_1036_4portas.wmv.
 A slide with no header
 ~
 
+# Case Study 2: Coliseu Porto
+
+![Coliseu_Porto]
+
+* Opened in 1941 (Cassiano Branco et al.)  
+* Capacity: 3,500 people standing; 2,955 seated
+* 1995: after decadence was almost sold to Brazilian Church
+* 1996: fire destroyed the stage and partially the main auditorium
+* 1998: reopened after 2 years of renovation 
+* 2014: new Management and new visibility with more concerts and cultural venues
+
+[Coliseu_Porto]: images/Coliseu_Porto.jpg "Coliseu_Porto" { width:auto; max-width:90% }
+
+## Coliseu Porto: main Auditorium 
+
+![coliseu]
+
+[coliseu]: images/coliseu.jpg "coliseu" { width:auto; max-width:90% }
+
+~ Figure { #figColiseu_PF1; caption:"Pathfinder 3D rendering of Coliseu Porto egress with 1,394 standing spectators"}
+![Coliseu_PF1]
+~
+
+[Coliseu_PF1]: images/Coliseu_PF1.png "Coliseu_PF1" { width:auto; max-width:90% }
+
+Figure [#figColiseu_PF1] presents a snapshot of the simulation process, 
+showing the Pathfinder tridimensional view rendering, for the 1,394 standing spectators
+scenario.
+
 
 
 ## Thanks for looking :-)
