@@ -291,7 +291,7 @@ standing at the parterre. In June this year, Jeremy Clementine concert filled up
 almost completely the Coliseu. The real egress time was around 8,5 minutes. Since 
 there is no CCTV inside the main auditorium, times were estimated using a stopwatch.
 
-The Pathfinder model that was putup considered two main situations: 1,394 
+The Pathfinder model that was put up having in mind two scenarios: 1,394 
 people standing at the parterre, the official maximum capacity, and 1,894 people,
 and additional 500 spectators. This is part of a process to increase the number
 of people at the parterre in the standing audience scenario.
@@ -299,7 +299,35 @@ of people at the parterre in the standing audience scenario.
 In both, total estimated egress times were under 4 minutes, indeed, the 1,394 people
 scenario was just bellow 3 minutes. 
 
-Comparing those times with the Jeremy Clementine's concert,             
+~ Figure { #figColiseu_PF1; caption:"Pathfinder 3D rendering of Coliseu Porto egress with 1,394 standing spectators"}
+![Coliseu_PF1]
+~
+
+[Coliseu_PF1]: images/Coliseu_PF1.png "Coliseu_PF1" { width:auto; max-width:90% }
+
+Figure [#figColiseu_PF1] presents a snapshot of the simulation process, 
+showing the Pathfinder rendering tridimensional view, for the 1,394 standing spectators
+scenario.
+
+When comparing those times with the Jeremy Clementine's concert, it must be noticed 
+that the Pathfinder model had just  partial some of total capacity. Nevertheless, 
+after the end of the concert, most of spectators left the main auditorium in less
+than three minutes. This same situation was observed in several concerts afterwards.
+So, the estimated time by Pathfinder, is a realistic one, and be used, although taken
+the proper cautions, for testing some more complex scenarios, such as having one or 
+more blocked exits, and estimating the egress times in those scenarios.
+
+Further improvements to the models are needed, including adding the second
+stall, the dress circle, the boxes, and upper circles. And more data on real
+ egressing times, in order to make more precise comparisons and calibrate the model.
+
+The preliminary results are encouraging, allowing managers to better understand the
+ dynamics of people movement, and realize the egress times. With a proper model put up
+ and more reliable data, it will be possible to perform more experiments and possibly
+ acquire valuable information to validate or improve the existing emergency proceedings.
+ 
+ 
+               
 
 # CONCLUSIONS AND FUTURE WORK
 
