@@ -83,7 +83,7 @@ specific to a particular system.
 Tunnel aerodynamics at the time of a fire event, particularly in metro systems, can be complex 
 and vary with many factors including non-incident train movements, atmospheric conditions, normal 
 operations ventilation and incident train piston flows. To properly implement boundary conditions 
-for a project specific CFD analysis a 1-D aerodynamic model such as SES REF could be used. For 
+for a project specific CFD analysis a 1-D aerodynamic model such as SES [@SVS6] could be used. For 
 this comparative analysis the boundary conditions used are intended to represent possible flow 
 conditions during a fire with limited consideration of airflow transients.    
 
@@ -153,7 +153,7 @@ Figure [#fig-Scenario] shows a schematic of the scenarios modeled.
 INSERT FIGURE
 
 ## CFD Modeling
-The CFD modeling was undertaken with FDS version 6.1.2 REF.  A 5MW fire was 
+The CFD modeling was undertaken with FDS version 6.1.2 [@FDSUserGuide].  A 5MW fire was 
 modelled with the spread-rate function used to approximate the medium t-squared 
 growth rate. Once the fire reaches peak heat release rate it is kept at this value 
 with no decay modelled. A soot yield of 0.1kg/kg and a Carbon Monoxide yield of 
@@ -161,7 +161,7 @@ with no decay modelled. A soot yield of 0.1kg/kg and a Carbon Monoxide yield of
 
 Grid sizes of 0.2m were used across the train length and approximately 10m beyond 
 the train ends. In the open sections grid sizes of 0.4m were used. This resulted in 
-characteristic fire parameters REF of D*/dx = 9.1 and Q*=2.2 in the vicinity of 
+characteristic fire parameters [@FDSUserGuide] of D*/dx = 9.1 and Q*=2.2 in the vicinity of 
 the fire. A grid convergence study was not undertaken. Grid sizes are considered 
 adequate based on previous experience and for the assessment purpose.
 
@@ -211,7 +211,7 @@ path of devices in a quasi-Lagrangian method to calculate their exposure to redu
 visibility and their Fractional Effective Dose (FED).
 
 To calculate the FED the same equations used by Pathfinder and FDS+EVAC have been 
-implemented, which are based on the work of REFER PURSER PAPERS. The contribution 
+implemented, which are based on the work of Purser [@Purser2009,@PurserSFPE]. The contribution 
 from Hydrogen Cyanide and other irritants are not included in the calculation of 
 FED. The FED is only accumulated once the occupants are leaving the train and while in the tunnel.
 
@@ -219,7 +219,7 @@ A hydraulic model is used to regulate the movement of agents along the walkway a
 crowding and the width of the walkway. For the flow rate of people along the walkway, the same 
 correlation was used independent of the walkway elevation. A fixed correlation enables a direct 
 comparison of the impact of the agents being closer to the smoke layer for the elevated walkway. 
-Equation [#flowratewalkway] shows the correlation used Ahlfont REF:
+Equation [#flowratewalkway] shows the correlation used Ahlfont [@AhlfontMSC]]:
 
 ~ Equation { #FlowRateWalkway }
 Flow\ rate\ of\ people\ [p/s]=1.27 * walkway\ width[m]+0.07
@@ -233,11 +233,10 @@ shown by Equation [#flowratenexttotrain]
 Flow\ rate\ of\ people\ [p/s]=1.19 * walkway\ width[m]
 ~
 
-In reduced visibility conditions the walking speed is based on the relation by 
-[Fridolf et al., 2013]. This is shown as Equation [#walkingspeed]], where x is the extinction 
+In reduced visibility conditions the walking speed is based on the relation by Fridolf et. al [@Fridolf2013]. This is shown as Equation [#walkingspeed]], where x is the extinction 
 coefficient. A maximum speed of 1.2m/s is allowed, with a minimum walking speed of 0.3m/s. 
 There is no reduction in walking speed with grade which is consistent with field measurement 
-with grades of 4.5% [Norén and Winér (2003)]
+with grades of 4.5% [@NorenWiner2003].
 
 ~ Equation { #WalkingSpeed }
 Walking\ speed [m/s]=-1.1423 * x+1.177
@@ -245,7 +244,7 @@ Walking\ speed [m/s]=-1.1423 * x+1.177
 
 There are seven doors per car that enable agents to evacuate onto the walkway. Detrainment is 
 based on a door flow of 0.2p/s regardless of the walkway height. This value appears to be 
-reasonable based on past field experiments [table 6, Fridolf 2015]. Agents can only leave 
+reasonable based on past field experiments [@FridolfPHD, Table 6]. Agents can only leave 
 the train if the walkway density is less than 4p/m2. The tunnel exits are assumed to be 2m 
 wide with a door flow of 2p/s. 
 
@@ -259,17 +258,17 @@ were assigned a maximum walking speed of 1.2m/s. It should be noted that the wal
 achieved by each agent is ultimately a function of crowding, visibility conditions and walkway flow rates. 
 
 To estimate occupant tenability the FED is interpreted as a Fractional Incapacitation Dose (FID). 
-As defined by ISO 13571, an FID of 1.0 corresponds to a log-normal distribution of responses, with 
+As defined by ISO 13571 [@ISO-13571-2012], an FID of 1.0 corresponds to a log-normal distribution of responses, with 
 statistically 50% of the population expected to experience tenable conditions, with 50% then 
 expected to experience compromised tenability. The threshold criteria of FID ≥ 0.3 used for 
 this assessment translates to 11.4% of the population being statistically susceptible to 
-compromised tenability (ISO 13571). 
+compromised tenability [@ISO-13571-2012]. 
 
 # RESULTS
 
 ## Visibility and Other Tenability
-Visibility results from the CFD simulations are shown in Figure XX and Figure XX. Results are only 
-shown for the 23m^2 tunnel. Results for the 29m2 tunnel are very similar, albeit visibility is 
+Visibility results from the CFD simulations are shown in Figure [#fig-Vis-0-23] and Figure [#fig-Vis-4-23]. Results are only 
+shown for the 23m^2^ tunnel. Results for the 29m^2^ tunnel are very similar, albeit visibility is 
 slightly improved due to the larger cross-section. However, the variation in visibility is better 
 quantified with the results presented with the evacuation assessment. 
 
@@ -280,12 +279,12 @@ output for visibility and post-processed in GNU Octave [@Octave].
 
 Exit 1 is the exit closest to the fire and the multiple exit options are also indicated as 
 vertical lines. The XT contours have been clipped such that visibility greater than 10m is 
-shown as white space. Visibility is based on a light emitting surface (C = 8 REF). The 
+shown as white space. Visibility is based on a light emitting surface (C = 8 [@FDSUserGuide]]). The 
 contours are produced for a track-level walkway (2m above track) and elevated walkway 
 (3.2m above track). The figures have been produced for a period of 30 minutes as outcomes 
 are obvious after this period. The simulations were run for 60 minutes. 
 
-XT figures were used to check all components of tenability (i.e. temperature, CO, CO2, and O2). 
+XT figures were used to check all components of tenability (i.e. temperature, CO, CO~2~, and O~2~). 
 For reasons of space these are not presented, but are part of the FID assessment. For all scenarios, temperatures 
 at tenability heights were less than 60 &deg;C away from the immediate vicinity of the fire site, and less
 than 40 &deg;C beyond the ends of the train. 
@@ -308,12 +307,12 @@ is biased toward the direction of egress for the reasons noted above.
 
 When a critical velocity is modelled the outcome is as expected. The tunnel ventilation 
 is started at 300 seconds and ramps to capacity in 60 seconds. The calculated critical 
-velocity for each area and grade varied, but was generally estimated (NFPA 502 2014) 
+velocity for each area and grade varied, but was generally estimated [@NFPA130-2014] 
 to be 1-1.3m/s upstream of the 5MW design fire. Once this occurs smoke is driven in one 
 direction. There is a small amount of back-layering noticeable for the 0% grade simulations 
 suggesting the critical velocity used was slightly under-sized, but this does not impact the 
 evacuation assessments. For the fire size used, this is likely corrected by the latest critical 
-velocity calculation in NFPA 502 [2017]. 
+velocity calculations from the NFPA guidelines for tunnels [@NFPA130-2017,@NFPA502-2014]. 
 
 The XT figures also show the variation in walkway elevation and tunnel cross section. 
 In general terms, visibility conditions are more favorable for a track-level walkway 
