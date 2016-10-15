@@ -13,17 +13,68 @@ Beamer Theme  : singapore
 
 [TOC]
 
-# Madoko Presentation
+# The Kiss nightclub tragedy
 
-Using [Madoko] it is easy to create beautiful presentations.
+~ Begin Columns
+~ Column { width:50% }
 
-* [Html][slide]:
-  Uses the `Reveal.js` library by [Hakim El Hattab](http://hakim.se).\
-  This slide demo in Madoko is an adaption of his online demo.
-* [Pdf][slide-pdf]:
-  Uses the `Beamer` package for LaTeX
-* [Source][slide-mdk]:
-  Click to see the source of this presentation.
+* 27th january 2013, Santa Maria, Brazil
+* fireworks on flammable sound insulation
+* obstacles, bad signaling and doors to close 
+* people blocked each other at doors 
+* result: 242 deaths
+ 
+~
+~ Column
+![boate-kiss]
+~
+~ End Columns
+[boate-kiss]: images/boate-kiss.jpg "boate-kiss" { width:auto; max-width:100% }
+
+
+## Normative Instructions
+
+
+* fire safety code revised 2013
+* fireworks and flammable insulation prohibited
+* which size a door should have?
+
+
+<!-- Example of nested vertical slides -->
+~ Begin Vertical { data-background:Gainsboro }
+
+# Experiment {#vertical}
+
+~ Begin Columns
+~ Column { width:20% }
+[![arrowdown]][down]
+~
+~ Column
+![esquemaExperimento_02]
+~
+~ End Columns
+[esquemaExperimento_02]: images/esquemaExperimento_02.png "esquemaExperimento_02" { width:auto; max-width:90% }
+
+[down]: # { .navigate-down }
+[arrowdown]: images/arrow.png "Down arrow" { width:178px; height:238px }
+
+
+## Videos {#vertical}
+![3cameras]
+[3cameras]: images/3cameras.jpeg "3cameras" { width:auto; max-width:90% }
+
+~ End Vertical
+
+
+
+
+
+
+
+
+
+
+
 
 
 [madoko]: http://madoko.codeplex.com
