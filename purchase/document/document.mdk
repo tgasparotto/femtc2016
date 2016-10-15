@@ -64,6 +64,16 @@ to help inform other design disciplines or stakeholders about the implications o
 # BACKGROUND
 To be developed [@Carvel2016]
 
+The concept of using a forced ventilation solution to provide smoke control is well developed. A discussion of this is beyond the scope of this paper and is developed in numerous other publications [@Wu2000 @Kennedy1996 @NFPA130-2014 @NFPA502-2014 @SVS6]. Achieving critical velocity provides a clear path on one side of the fire adn this is often a key criteria to demonstrate fire safety in rail tunnels. This is driven by the requirements of NFPA 130 [@NFPA130-2014, @NFPA130-2017] which often acts as a de-facto rail tunnel fire safety guideline in many countries outside of the US. This raises the question, however, which way to direct the smoke if the fire location is uncertain. 
+
+Edenbaum et. al. [@Edenbaum2006] investigated the spacing of rail cross-passages accounting for different walkway widths in view of the requirements of the 2003 edition of NFPA 130 [@NFPA130-2014]. Evacuation simulations were undertaken with SIMULEX [@SIMULEX], but did not consider the impact of smoke on the walking speed of occupants. This work concluded that a performance based approach allows for trade-offs between cross-passage spacing, walkway width and fire-hardening of the rail vehicle.
+
+The walkway geometry also varies between countries and jurisdictions. For instance, Stockholm metro has 1.2m wide walkways that are at track-level with a 1.4 drop from the train to the walkway [@LUNDSTROM2014]. 
+
+Lunström et. al. [@LUNDSTROM2014] provide an overview of walkway width and 
+
+
+
 # INPUTS AND MODELING METHODOLOGY
 
 ## Limitations
@@ -125,14 +135,13 @@ smoke control strategy is likely to be dependent on the location of the fire on 
 This requires an operator decision or control loop that is simple if the fire is at one end 
 of the train, but may require judgment if the fire is located towards the center of the train. 
 For this reason the fire was located in the middle car, but biased towards the closest exit. 
-This is considered a reasonable scenario to compare a ventilated and non-ventilated solution.
+This is considered a reasonable scenario to compare a ventilated and non-ventilated solution, and is consistent with previous work [@Edenbaum2006]. 
 
 Other parameters were selected based on a possible design in a particular jurisdiction. For instance, 
 a tunnel with an 800mm elevated walkway, 240m exit separation and tunnel ventilation to achieve critical 
-velocity might be representative of a NFPA 130 benchmark design. On the other hand, a 1200mm track 
+velocity might be representative of a NFPA 130 benchmark design [@NFPA130-2014, @NFPA130-2017], that might also be applicable in other countries such as Australia [@TfNSW]. On the other hand, a 1200mm track 
 level walkway, 300m or 500m exit separation and no tunnel ventilation might be representative of a 
-European design. The walkway width could also govern the structural design and resulting tunnel 
-cross-section, which in turn could impact the smoke layer height.
+European design [@FIT2Rail, Section 4.2.1.2]. The walkway width could also govern the structural design and resulting tunnel cross-section, which in turn could impact the smoke layer height.
 
 Other parameters such as the fire size, fire growth rate, pre-movement time and occupant load were 
 nominally selected. These parameters could vary significantly between projects, but the values 
@@ -148,9 +157,6 @@ Figure [#fig-Scenario] shows a schematic of the scenarios modeled.
 ~
 
 [Scenario]: images/Scenario.png "Scenario" { width:auto; max-width:100% }
-
-
-INSERT FIGURE
 
 ## CFD Modeling
 The CFD modeling was undertaken with FDS version 6.1.2 [@FDSUserGuide].  A 5MW fire was 
@@ -219,7 +225,7 @@ A hydraulic model is used to regulate the movement of agents along the walkway a
 crowding and the width of the walkway. For the flow rate of people along the walkway, the same 
 correlation was used independent of the walkway elevation. A fixed correlation enables a direct 
 comparison of the impact of the agents being closer to the smoke layer for the elevated walkway. 
-Equation [#flowratewalkway] shows the correlation used Ahlfont [@AhlfontMSC]]:
+Equation [#flowratewalkway] shows the correlation used [@AhlfontMSC,@LUNDSTROM2014]:
 
 ~ Equation { #FlowRateWalkway }
 Flow\ rate\ of\ people\ [p/s]=1.27 * walkway\ width[m]+0.07
