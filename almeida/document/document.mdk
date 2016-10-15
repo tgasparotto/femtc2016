@@ -286,18 +286,19 @@ the boxes, the upper circle and the reserved and general gallery.
 
 TEXT MISSING: PICTURES OF THE PATHFINDER SIMULATION OF COLISEU; RESULTS; DISCUSSION.
 
-Concerts with full capacity will have the seats remove and people stay
+Concerts with full capacity will have the seats removed and people 
 standing at the parterre. In June this year, Jeremy Clementine concert filled up 
 almost completely the Coliseu. The real egress time was around 8,5 minutes. Since 
 there is no CCTV inside the main auditorium, times were estimated using a stopwatch.
 
-The Pathfinder model that was put up having in mind two scenarios: 1,394 
+
+The Pathfinder model that was developed considered two scenarios: 1,394 
 people standing at the parterre, the official maximum capacity, and 1,894 people,
-and additional 500 spectators. This is part of a process to increase the number
+an additional 500 spectators. This is part of a process to increase the number
 of people at the parterre in the standing audience scenario.
 
 In both, total estimated egress times were under 4 minutes, indeed, the 1,394 people
-scenario was just bellow 3 minutes. 
+scenario was just below 3 minutes. 
 
 ~ Figure { #figColiseu_PF1; caption:"Pathfinder 3D rendering of Coliseu Porto egress with 1,394 standing spectators"}
 ![Coliseu_PF1]
@@ -306,16 +307,30 @@ scenario was just bellow 3 minutes.
 [Coliseu_PF1]: images/Coliseu_PF1.png "Coliseu_PF1" { width:auto; max-width:90% }
 
 Figure [#figColiseu_PF1] presents a snapshot of the simulation process, 
-showing the Pathfinder rendering tridimensional view, for the 1,394 standing spectators
+showing the Pathfinder tridimensional view rendering, for the 1,394 standing spectators
 scenario.
 
 When comparing those times with the Jeremy Clementine's concert, it must be noticed 
-that the Pathfinder model had just  partial some of total capacity. Nevertheless, 
+that the Pathfinder model only has a fration of the spectators, namely those 
+standing at the parterre. Nevertheless, 
 after the end of the concert, most of spectators left the main auditorium in less
 than three minutes. This same situation was observed in several concerts afterwards.
-So, the estimated time by Pathfinder, is a realistic one, and be used, although taken
-the proper cautions, for testing some more complex scenarios, such as having one or 
-more blocked exits, and estimating the egress times in those scenarios.
+So, the estimated time by Pathfinder is a realistic one. This shows it can be 
+used for testing some more complex scenarios, such as having one or 
+more blocked exits and estimating the egress times in those scenarios. 
+
+
+~ Figure { #figColiseu_PF2; caption:"Pathfinder number of spectators during egress per location"}
+![Coliseu_pe3_1394.occupants]
+~
+
+[Coliseu_pe3_1394.occupants]: images/Coliseu_pe3_1394.occupants.png "Coliseu_pe3_1394.occupants" { width:auto; max-width:90% }
+
+Figure [#figColiseu_PF2] shows how spectators are distributed during the egress
+timeline. Interestingly, the number of egressing spectators at the circular corridor 
+around the main auditorium ("Ferradura", horseshoe in Portuguese) is never more 
+than roughly two hundred at any given time. This in an interesting aspect, showing
+that the flow capacity of that corridor is well dimensioned so as to avoid bottlenecks. 
 
 Further improvements to the models are needed, including adding the second
 stall, the dress circle, the boxes, and upper circles. And more data on real
