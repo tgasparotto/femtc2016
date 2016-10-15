@@ -231,8 +231,6 @@ individual's exit, which is presented in Figure [#graf-210].
 ~
 [210_void]: images/210_void.png "210_void" { width:auto; max-width:100% }
 
-
-
 There are eight peaks over one second in Figure [#graf-210], that means, during the
 emergency egress there were eight moments when the door was blocked
 longer than a minute. During a peak, crowd pressure raises until the arch breaks and several individuals are expelled through
@@ -272,10 +270,10 @@ simulation, it will be done one simulation of one door with half of the public.
 Two possibilities attending the code will be simulated: a) 2 doors of 3.38m and; 
 b) 3 doors of 2.26m. 
 
-Figure [#fig-all_sim] presents the simulation's results for a nightclub with 1230
+Figure [#fig-all_sim] presents the simulation results for a nightclub with 1230
 individuals. The egress time for a simulation of a nightclub like Kiss with 2 doors
-is double faster than the expected by IN 09, showing that its recommendations are 
-quite safe. Furthermore, adding a third door reduced the egress time in 28% in 
+is doubly faster than the expected by IN 09, showing that its recommendations are 
+adequately safe. Furthermore, adding a third door reduced the egress time in 28% in 
 simulations.
 ~ Figure { #fig-all_sim; caption: "Experiment against simulation: 210 individuals egressed."}
 ![all_sim]
