@@ -191,23 +191,23 @@ egress as expected following the Normative Instruction 09 [@IN09].
 | initial    | time      | mean flow | time     | mean flow |
 | population | s         | s^-1^     |s         | s^-1^     |
 |------------|-----------|-----------|----------|-----------|
-|35          | 6.41      | 4.375     | 10.50    | 3,33      |
-|70          | 17.25     | 4.118     | 21.00    | 3,33      |
-|105         | 26.95     | 3.750     | 31.50    | 3,33      |
-|140         | 36.61     | 3.889     |42.00     | 3,33      |
-|175         | 54.55     | 3.182     |52.50     | 3,33      |
-|210         | 73.26     | 2.800     |63.00     | 3,33      |
-|280         | 85.00     | 3.333     |84.00     | 3,33      |
+|35          | 6.41      | 5.46      | 10.50    | 3,33      |
+|70          | 17.25     | 4.06      | 21.00    | 3,33      |
+|105         | 26.95     | 3.90      | 31.50    | 3,33      |
+|140         | 36.61     | 3.82      | 42.00    | 3,33      |
+|175         | 54.55     | 3.19      | 52.50    | 3,33      |
+|210         | 73.26     | 2.87      | 63.00    | 3,33      |
+|280         | 85.00     | 3.29      | 84.00    | 3,33      |
 |------------|-----------|--------------------------------||||
 ~
-
-As the initial population was increased in the experiments, the egress flow diminishes. 
-However, two experiments (140 and 280) presented a flow higher than expected. 
-Checking out the videos viewing the crowd from its back (V1), it was verified that
-people had not pressed for escape as they should. As a lesson learned from the experiments,
-participants perceived on their own that the more they press the longer will be the wait. 
-Furthermore, it is observed how uncoordinated is faster than an expected coordinated
-egress for the experiments up to crowd's density of 2.5 (175 individuals). 
+As the initial population was increased in the experiments, the egress flow
+diminishes. However, the most crowded experiment (280) presented a flow higher
+than expected. Checking out the videos viewing the crowd from its back (V1),
+it was verified that people had not pressed for escape as they should. As a
+lesson learned from the experiments, participants perceived on their own that
+the more they press the longer will be the wait. Furthermore, it is observed how
+uncoordinated is faster than an expected coordinated egress for the experiments
+up to crowd’s density of 2.5 (175 individuals)
 
 However, the experiments only considered a will to exit, no individual reentries were
 stimulated. Reentry is the act of an egressed individual who tries to come back inside 
