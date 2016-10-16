@@ -1,9 +1,9 @@
 [INCLUDE=presentation]
-Title         : Demo presentation in Madoko
-Sub Title     : In both HTML and PDF
-Author        : Daan Leijen
-Affiliation   : Microsoft Research
-Email         : daan@microsoft.com
+Title         : Simulation of premixed flames with FDS. Application to the hot smoke testing system Izar
+
+Author        : Juan José Blond Hernández
+Affiliation   : Basler & Hofmann AG
+Email         : juan.blond@baslerhofmann.ch
 Reveal Theme  : sky
 Beamer Theme  : singapore
 
@@ -13,9 +13,73 @@ Beamer Theme  : singapore
 
 [TOC]
 
-# Madoko Presentation
+# Introduction
 
-Using [Madoko] it is easy to create beautiful presentations.
+~ Align-Left
+* This work is based on the hot smoke testing system, Izar
+
+* It was developed by the swiss company Basler & Hofmann AG
+
+* A premixed combustion is the source of energy for the test
+
+* The results presented in this work are part of its development process
+  - The entire work was presented as master thesis within the IMFSE program in 2013
+~
+
+# What is Izar?
+
+~ Align-Left
+
+* Izar is hot smoke testing system
+
+* It is composed by: 
+  - A gas burner
+  - A gas supplier
+  - Some fog generators
+  
+* Its maximal power is 1.200 kW
+  - The energy is mainly released as convection heat
+  - Regarding the standard ratio 1/3 radiation 2/3 convection, the system can reproduce diffusion fires of 1.800 kW
+  - More modules can work in parallel to achieve higher powers
+~
+
+# What makes Izar something special?
+
+~ Align-Left
+* It doesn't generates soot yield
+  - No post-cleaning activities
+
+
+* Live control of the HRR 
+  - It is possible to follow fire curves like the t^2^-curve
+
+
+* A validated FDS model is available 
+~
+ 
+# Aim of the study
+
+~ Align-Left
+
+* The aim is to calculate the plume temperatures originated by Izar
+  - The temperature is the one of the main factors to design the tests
+  - The room limiting factor must be considered (sprinklers, lights, protected ceilings)
+  - Realistic test = high temperatures
+
+* How to calculate temperatures from premixed flames?
+  - The combustion efficiency is the most important factor for premixed flames
+  - What happens afterward? --> Not enough studied
+
+* A new framework is developed with FDS to calculate the temperature flames  
+
+~
+
+# The FDS model for Izar
+
+
+
+# Introduction
+
 
 * [Html][slide]:
   Uses the `Reveal.js` library by [Hakim El Hattab](http://hakim.se).\
