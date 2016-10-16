@@ -46,13 +46,47 @@ Beamer Theme  : singapore
 
 # Multi-scale Modelling - What and Why
 
+* Ventilation is needed to most tunnels
+  - Life safety (fumes or CO from fire)
+  - Regulating temperature (train operation)
+* Three main types of ventilation system
+  - Longitudinal (jet fans)
+  - Transverse (ducted supply and extract)
+  - Semi-transverse (hybrid of ducted and non-ducted)
 
-~ Figure { #fig-figure; caption:"ECRL Tunnel, Australia [from web]"}
+# Multi-scale Modelling - What and Why
+
+~ Figure { #fig-figure; caption:"ECRL Rail Tunnel, Australia"}
 ![Epping2Chastwood_H]
-
-[Epping2Chastwood_H]: images/Epping2Chastwood_H.jpg "Epping2Chastwood_H" { width:auto; max-width:90% }
-
+[Epping2Chastwood_H]: images/Epping2Chastwood_H.jpg "Epping2Chastwood_H" { width:auto; max-width:50%; }
 ~
+
+# Multi-scale Modelling - What and Why
+
+* Design of tunnel ventilation system 
+* 1D / Subway Environment Simulation (SES)
+  - Early stages of design
+  - Fast computation
+  - Provides global averaged prediction
+  - Limitations on gas species or high resolution calculations
+
+# Multi-scale Modelling - What and Why
+
+* 3D / Full CFD simulation
+  - To validate the design carried out at the earlier stages
+  - Time consuming
+  - Provides high resolution predictions, e.g. gas species and combustion
+  - Tunnel section models often shorten to reduce computational time
+* Is there a best of both world? 
+
+# Multi-scale Modelling - What and Why
+
+* Multi-scale modelling method
+* Using 1D for far field tunnel sections
+* Full CFD for near field, or tunnel section of interest
+* Significantly reduce the computational time
+* Off-set computational time for longer tunnel section
+  
 
 ## Reveal.js
 
