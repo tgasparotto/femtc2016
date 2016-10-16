@@ -1,10 +1,8 @@
 [INCLUDE=presentation]
 Title         : VALIDATING FDS AGAINST A LARGE-SCALE FIRE TEST FOR FACADE SYSTEMS
-Author        : Markus Nilsson
-Affiliation   : Brandskyddslaget AB
+Author        : Markus Nilsson, Johan Nilsen and Axel Mossberg
+Affiliation   : Brandskyddslaget AB, Sweden
 Email         : markus.nilsson@brandskyddslaget.se
-Author        : Johan Nilsen
-Author        : Axel Mossberg
 Reveal Theme  : simple
 Beamer Theme  : singapore
 
