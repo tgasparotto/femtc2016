@@ -13,6 +13,9 @@ Beamer Theme  : singapore
 
 [TOC]
 
+~ Begin Vertical
+
+
 # The Kiss nightclub tragedy
 
 ~ Begin Columns
@@ -30,10 +33,10 @@ Beamer Theme  : singapore
 ~
 ~ End Columns
 [boate-kiss]: images/boate-kiss.jpg "boate-kiss" { width:auto; max-width:100% }
+[![arrowdown]][down]
 
 
 ## Lessons Learned
-
 
 * later on 2013, Santa Catarina Military Fire Department launched new fire safety code
 * requirements for nightclubs:
@@ -42,6 +45,7 @@ Beamer Theme  : singapore
   * population density up to 2/m²
   * doors width calculated for allowed population
 * Problem: are the calculus safe for an uncoordinated egress? 
+~ End Vertical
 
 
 
@@ -92,26 +96,10 @@ Beamer Theme  : singapore
 
 <https://youtu.be/E2WNhcgIzuQ>
 
-~ End Vertical
-
-
-<!-- Example of nested vertical slides -->
-~ Begin Vertical { data-background:Gainsboro }
-
 ## Arch {#vertical}
-
-~ Begin Columns
-~ Column { width:30% }
-[![arrowdown]][down]
-~
-~ Column
 ![blockage02]
-~
-~ End Columns
-[blockage02]: images/blockage02.png "blockage02" { width:auto; max-width:100% }
-[down]: # { .navigate-down }
-[arrowdown]: images/arrow.png "Down arrow" { width:178px; height:238px }
 
+[blockage02]: images/blockage02.png "blockage02" { centering; width:auto; max-width:100% }
 
 ## Crowd Turbulence {#vertical}
 ![turbulencia]
@@ -120,7 +108,7 @@ Beamer Theme  : singapore
 <https://youtu.be/h72-I5E96uU>
 
 
-## Egress time and flow
+## Egress time and flow {#vertical}
 
 ~ TableFigure { #tab-tempo; caption: "Egress time and mean flow versus population"; .wide }
 
@@ -143,24 +131,24 @@ Beamer Theme  : singapore
 ~ End Vertical
 
 
-
 ~ Begin Vertical
 
-# Simulation Results
+# Simulation Results 
 
 * Experiment versus Simulation: 35 or 0.5/m²
 ![exp_sim_35]
 [exp_sim_35]: images/exp_sim_35.png "exp_sim_35" { width:auto; max-width:90% }
 
-* Experiment versus Simulation: 70 or 1.0/m² 
+
+* Experiment versus Simulation: 70 or 1.0/m² {#vertical} 
 ![exp_sim_70]
 [exp_sim_70]: images/exp_sim_70.png "exp_sim_70" { width:auto; max-width:90% }
 
-* Experiment versus Simulation: 105 or 1.5/m²
+* Experiment versus Simulation: 105 or 1.5/m² {#vertical}
 ![exp_sim_105]
 [exp_sim_105]: images/exp_sim_105.png "exp_sim_105" { width:auto; max-width:90% }
 
-* Experiment versus Simulation: 140 or 2.0/m²
+* Experiment versus Simulation: 140 or 2.0/m² {#vertical}
 ![exp_sim_140]
 [exp_sim_140]: images/exp_sim_140.png "exp_sim_140" { width:auto; max-width:90% }
 
