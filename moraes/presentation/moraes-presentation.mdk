@@ -75,7 +75,7 @@ Beamer Theme  : singapore
 ## Door Blockage and Arch {#vertical}
 
 ~ Begin Columns
-~ Column { width:0% }
+~ Column { width:30% }
 [![arrowdown]][down]
 ~
 ~ Column
@@ -94,6 +94,38 @@ Beamer Theme  : singapore
 <https://youtu.be/h72-I5E96uU>
 
 ~ End Vertical
+
+
+
+
+
+
+
+<!-- Example of nested vertical slides -->
+~ Begin Vertical { data-background:Gainsboro }
+
+
+~ Begin Columns
+~ Column { width:30% }
+[![arrowdown]][down]
+~
+~ Column
+![blockage02]
+~
+~ End Columns
+[blockage02]: images/blockage02.png "blockage02" { width:auto; max-width:100% }
+[down]: # { .navigate-down }
+[arrowdown]: images/arrow.png "Down arrow" { width:178px; height:238px }
+
+
+## Crowd Turbulence {#vertical}
+![turbulencia]
+[turbulencia]: images/turbulencia.png "turbulencia" { width:auto; max-width:90% }
+
+<https://youtu.be/h72-I5E96uU>
+
+~ End Vertical
+
 
 
 
