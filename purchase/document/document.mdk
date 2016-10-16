@@ -211,7 +211,7 @@ shows parameters that were considered for the CFD and evacuation
 modeling. It is acknowledged that this is a simplification, but even so,
 combining all of these inputs in a parametric study would result in over
 100,000 separate scenarios. To limit the number of scenarios the values
-in bold were selected. This resulted in 12 separate CFD scenarios and 144
+in _italics_ were selected. This resulted in 12 separate CFD scenarios and 144
 evacuation scenarios.
 
 ~ TableFigure { #ScenarioTable; caption: "Example Parameters For Scenario Selection"; .wide .booktable; page-align:forcehere}
@@ -221,7 +221,7 @@ evacuation scenarios.
 | Fire location in train | -         | [Front]{color:grey} | _Middle_           | [Back]{color:grey}         |
 | Fire size              | MW        | [2]{color:grey}     | _5_                | [>10]{color:grey}          |
 | Fire growth rate       | t-squared | [Slow]{color:grey}  |_Medium_            | [Fast]{color:grey}         |
-| Tunnel grade           | %         | [-4]{color:grey}    | _0_                | _+4_                        |
+| Tunnel grade           | %         | [-4]{color:grey}    | _0_                | _+4_                       |
 | Tunnel velocity        | -         | _No vel._           | _2m/s wind_        | _Critical vel._            |
 | Tunnel area            | m^2^      | _23_                | _29_               | [Double track]{color:grey} |
 |------------------------|-----------|---------------------|--------------------|----------------------------|
@@ -231,7 +231,6 @@ evacuation scenarios.
 | Occupant load          | people    | [600]{color:grey}   | _900_              | [1200]{color:grey}         |
 | Exit separation        | m         | _240_               | _300_              | _500_                      |
 | Walkway elevation      | -         | _Track_             | [Semi]{color:grey} | _Elevated_                 |
-|------------------------|-----------|---------------------|--------------------|----------------------------|
 ~
 
 The front of the train is assumed to come to a stop at a tunnel exit. For
@@ -641,25 +640,25 @@ mechanical ventilation.
 |![MaxEVC-29-1200] | 
 ~
 
-[Header]: images/Header.png "Header" { width:auto; max-width:90% }
+[Header]: images/Header.png "Header" { width:auto; max-width:100% }
 
-[ExpFED-23-0800]: images/ExpFED-23-0800.png "ExpFED-23-0800" { width:auto; max-width:90% }
-[ExpFED-23-1200]: images/ExpFED-23-1200.png "ExpFED-23-1200" { width:auto; max-width:90% }
-[ExpFED-29-0800]: images/ExpFED-29-0800.png "ExpFED-29-0800" { width:auto; max-width:90% }
-[ExpFED-29-1200]: images/ExpFED-29-1200.png "ExpFED-29-1200" { width:auto; max-width:90% }
-[ExpVIS-23-0800]: images/ExpVIS-23-0800.png "ExpVIS-23-0800" { width:auto; max-width:90% }
-[ExpVIS-23-1200]: images/ExpVIS-23-1200.png "ExpVIS-23-1200" { width:auto; max-width:90% }
-[ExpVIS-29-0800]: images/ExpVIS-29-0800.png "ExpVIS-29-0800" { width:auto; max-width:90% }
-[ExpVIS-29-1200]: images/ExpVIS-29-1200.png "ExpVIS-29-1200" { width:auto; max-width:90% }
-[MaxEVC-23-0800]: images/MaxEVC-23-0800.png "MaxEVC-23-0800" { width:auto; max-width:90% }
-[MaxEVC-29-0800]: images/MaxEVC-29-0800.png "MaxEVC-29-0800" { width:auto; max-width:90% }
-[MaxEVC-23-0800]: images/MaxEVC-23-0800.png "MaxEVC-23-0800" { width:auto; max-width:90% }
-[MaxEVC-23-1200]: images/MaxEVC-23-1200.png "MaxEVC-23-1200" { width:auto; max-width:90% }
-[MaxEVC-29-1200]: images/MaxEVC-29-1200.png "MaxEVC-29-1200" { width:auto; max-width:90% }
-[MaxFED-23-0800]: images/MaxFED-23-0800.png "MaxFED-23-0800" { width:auto; max-width:90% }
-[MaxFED-23-1200]: images/MaxFED-23-1200.png "MaxFED-23-1200" { width:auto; max-width:90% }
-[MaxFED-29-0800]: images/MaxFED-29-0800.png "MaxFED-29-0800" { width:auto; max-width:90% }
-[MaxFED-29-1200]: images/MaxFED-29-1200.png "MaxFED-29-1200" { width:auto; max-width:90% }
+[ExpFED-23-0800]: images/ExpFED-23-0800.png "ExpFED-23-0800" { width:auto; max-width:100% }
+[ExpFED-23-1200]: images/ExpFED-23-1200.png "ExpFED-23-1200" { width:auto; max-width:100% }
+[ExpFED-29-0800]: images/ExpFED-29-0800.png "ExpFED-29-0800" { width:auto; max-width:100% }
+[ExpFED-29-1200]: images/ExpFED-29-1200.png "ExpFED-29-1200" { width:auto; max-width:100% }
+[ExpVIS-23-0800]: images/ExpVIS-23-0800.png "ExpVIS-23-0800" { width:auto; max-width:100% }
+[ExpVIS-23-1200]: images/ExpVIS-23-1200.png "ExpVIS-23-1200" { width:auto; max-width:100% }
+[ExpVIS-29-0800]: images/ExpVIS-29-0800.png "ExpVIS-29-0800" { width:auto; max-width:100% }
+[ExpVIS-29-1200]: images/ExpVIS-29-1200.png "ExpVIS-29-1200" { width:auto; max-width:100% }
+[MaxEVC-23-0800]: images/MaxEVC-23-0800.png "MaxEVC-23-0800" { width:auto; max-width:100% }
+[MaxEVC-29-0800]: images/MaxEVC-29-0800.png "MaxEVC-29-0800" { width:auto; max-width:100% }
+[MaxEVC-23-0800]: images/MaxEVC-23-0800.png "MaxEVC-23-0800" { width:auto; max-width:100% }
+[MaxEVC-23-1200]: images/MaxEVC-23-1200.png "MaxEVC-23-1200" { width:auto; max-width:100% }
+[MaxEVC-29-1200]: images/MaxEVC-29-1200.png "MaxEVC-29-1200" { width:auto; max-width:100% }
+[MaxFED-23-0800]: images/MaxFED-23-0800.png "MaxFED-23-0800" { width:auto; max-width:100% }
+[MaxFED-23-1200]: images/MaxFED-23-1200.png "MaxFED-23-1200" { width:auto; max-width:100% }
+[MaxFED-29-0800]: images/MaxFED-29-0800.png "MaxFED-29-0800" { width:auto; max-width:100% }
+[MaxFED-29-1200]: images/MaxFED-29-1200.png "MaxFED-29-1200" { width:auto; max-width:100% }
 
 # CONCLUSION
 This paper has provided a comparative study to develop a benchmark set of
