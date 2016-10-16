@@ -69,6 +69,20 @@ Beamer Theme  : singapore
 
 
 
+
+<!-- Example of nested vertical slides -->
+~ Begin Vertical { data-background:Gainsboro }
+
+# Simulation {#vertical}
+* "Panic Package"
+![kiss_1000_335]
+[kiss_1000_335]: images/kiss_1000_335.png "kiss_1000_335" { width:auto; max-width:90% }
+
+Dirk Helbing, Illes Farkas, and Tamas Vicsek. “Simulating Dynamical Features of
+Escape Panic.” Nature 407 (6803). Nature Publishing Group: 487–490. 2000.
+
+
+
 <!-- Example of nested vertical slides -->
 ~ Begin Vertical { data-background:Gainsboro }
 
@@ -97,6 +111,62 @@ Beamer Theme  : singapore
 
 
 
+~ Begin Vertical
+
+
+## Egress time and flow
+
+~ TableFigure { #tab-tempo; caption: "Egress time and mean flow versus population"; .wide }
+
+|            |experiment            || IN 09               ||
+|            | uncoordinated egress || coordinated egress  ||
+|:----------:|:---------:|:---------:|:--------:|:---------:|
+| initial    | time      | mean flow | time     | mean flow |
+| population | s         | s^-1^     |s         | s^-1^     |
+|------------|-----------|-----------|----------|-----------|
+|35          | 6.41      | 5.46      | 10.50    | 3,33      |
+|70          | 17.25     | 4.06      | 21.00    | 3,33      |
+|105         | 26.95     | 3.90      | 31.50    | 3,33      |
+|140         | 36.61     | 3.82      | 42.00    | 3,33      |
+|175         | 54.55     | 3.19      | 52.50    | 3,33      |
+|210         | 73.26     | 2.87      | 63.00    | 3,33      |
+|280         | 85.00     | 3.29      | 84.00    | 3,33      |
+|------------|-----------|--------------------------------||||
+~
+
+## Experiment versus Simulation: 35 or 0.5/m²
+![exp_sim_35]
+[exp_sim_35]: images/exp_sim_35.png "exp_sim_35" { width:auto; max-width:90% }
+
+## Experiment versus Simulation: 70 or 1.0/m² 
+![exp_sim_70]
+[exp_sim_70]: images/exp_sim_70.png "exp_sim_70" { width:auto; max-width:90% }
+
+## Experiment versus Simulation: 105 or 1.5/m²
+![exp_sim_105]
+[exp_sim_105]: images/exp_sim_105.png "exp_sim_105" { width:auto; max-width:90% }
+
+## Experiment versus Simulation: 105 or 1.5/m²
+![exp_sim_140]
+[exp_sim_140]: images/exp_sim_140.png "exp_sim_140" { width:auto; max-width:90% }
+
+## Experiment versus Simulation: 105 or 1.5/m²
+![exp_sim_175]
+[exp_sim_175]: images/exp_sim_175.png "exp_sim_175" { width:auto; max-width:90% }
+
+## Experiment versus Simulation: 105 or 1.5/m²
+![exp_sim_210]
+[exp_sim_210]: images/exp_sim_210.png "exp_sim_210" { width:auto; max-width:90% }
+
+## Experiment versus Simulation: 105 or 1.5/m²
+![exp_sim_280]
+[exp_sim_280]: images/exp_sim_280.png "exp_sim_280" { width:auto; max-width:90% }
+
+
+~ End Vertical
+
+
+
 
 
 
@@ -117,12 +187,6 @@ Beamer Theme  : singapore
 [down]: # { .navigate-down }
 [arrowdown]: images/arrow.png "Down arrow" { width:178px; height:238px }
 
-
-## Crowd Turbulence {#vertical}
-![turbulencia]
-[turbulencia]: images/turbulencia.png "turbulencia" { width:auto; max-width:90% }
-
-<https://youtu.be/h72-I5E96uU>
 
 ~ End Vertical
 
