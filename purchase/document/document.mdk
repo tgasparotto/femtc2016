@@ -122,7 +122,7 @@ This resulted in 12 separate CFD scenarios and 144 evacuation scenarios.
 
 |:-----------------------|:---------:|:-----------:|:----------------:|:-----------------:|
 | [CFD Scenario Parameters]{font-weight:bold}                         ||             |                  |                   |
-| Fire location in train | -         | [Front of train]{color:grey}   | [Middle  of train]{font-weight:bold}       | [Back  of train]{color:grey}          |
+| Fire location in train | -         | [Front]{color:grey}   | [Middle]{font-weight:bold}       | [Back]{color:grey}          |
 | Fire size              | MW        | [2]{color:grey}           | [5]{font-weight:bold}                | [>=10]{color:grey}              |
 | Fire growth rate       | t-squared | [Slow]{color:grey}        | [Medium]{font-weight:bold}           | [Fast]{color:grey}              |
 | Tunnel grade           | %         | [-4]{color:grey}          | [0]{font-weight:bold}                | [4]{font-weight:bold}                 |
@@ -521,6 +521,8 @@ expected. As the exit spacing increases and the walkway width decreases, the max
 of people exposed to FID $\geq$ 0.3, number of visibility exposures and total evacuation time all 
 increase. However, the relative magnitude of these increases is a function of the walkway elevation, 
 tunnel boundary conditions and tunnel grade. 
+
+From a purely fire safety perspective, a larger tunnel cross-section with wide walkways and closely spaced exits is likely to be preferred. With this configuration the tunnel grade, atmospheric conditions and any benefit of longitudinal ventilation  may not be as critical to the outcome. This result is somewhat obvious, but the reality is that an ideal configuration from a fire safety perspective is rarely practical or cost effective. In real projects trade-offs are required to produce an optimized solution that accounts for project-specific constraints and other practicalities.
 
 # ACKNOWLEDGMENTS
 The authors would like to thank WSP Sverige AB for the support and funding which enabled this 
