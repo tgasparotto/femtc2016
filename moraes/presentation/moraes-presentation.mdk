@@ -15,28 +15,23 @@ Beamer Theme  : singapore
 
 ~ Begin Vertical
 
-
-# The Kiss nightclub tragedy
+# The Kiss nightclub tragedy {#vertical}
 
 ~ Begin Columns
 ~ Column { width:50% }
-
 * 27th January 2013, Santa Maria, Brazil
 * fireworks on flammable sound insulation
 * obstacles, bad signaling and inappropriate doors 
 * doors blocked by people 
 * result: 242 deaths
- 
 ~
 ~ Column
 ![boate-kiss]
 ~
 ~ End Columns
-[boate-kiss]: images/boate-kiss.jpg "boate-kiss" { width:auto; max-width:100% }
-[![arrowdown]][down]
+[boate-kiss]: images/boate-kiss.jpg "boate-kiss" { width:auto; max-width:100%}
 
-
-## Lessons Learned
+## Lessons Learned {#vertical}
 
 * later on 2013, Santa Catarina Military Fire Department launched new fire safety code
 * requirements for nightclubs:
@@ -44,10 +39,8 @@ Beamer Theme  : singapore
   * flammable insulation prohibited
   * population density up to 2/m²
   * doors width calculated for allowed population
-* Problem: are the calculus safe for an uncoordinated egress? 
+* **Problem: are the calculus safe for an uncoordinated egress**? 
 ~ End Vertical
-
-
 
 
 <!-- Example of nested vertical slides -->
@@ -86,29 +79,28 @@ Beamer Theme  : singapore
 ~
 ~ End Columns
 [esquemaExperimento_02]: images/esquemaExperimento_02.png "esquemaExperimento_02" { width:auto; max-width:90% }
-
 [down]: # { .navigate-down }
 [arrowdown]: images/arrow.png "Down arrow" { width:178px; height:238px }
 
-## Videos {#vertical}
+## Videos 
 ![3cameras]
-[3cameras]: images/3cameras.jpeg "3cameras" { width:auto; max-width:90% }
+[3cameras]: images/3cameras.jpeg "3cameras" { width:auto; max-width:100% }
 
 <https://youtu.be/E2WNhcgIzuQ>
 
-## Arch {#vertical}
+## Arch { data-transition:zoom }
 ![blockage02]
 
 [blockage02]: images/blockage02.png "blockage02" { centering; width:auto; max-width:100% }
 
-## Crowd Turbulence {#vertical}
+## Crowd Turbulence 
 ![turbulencia]
-[turbulencia]: images/turbulencia.png "turbulencia" { width:auto; max-width:90% }
+[turbulencia]: images/turbulencia.png "turbulencia" { width:auto; max-width:100% }
 
 <https://youtu.be/h72-I5E96uU>
 
 
-## Egress time and flow {#vertical}
+## Egress time and flow 
 
 ~ TableFigure { #tab-tempo; caption: "Egress time and mean flow versus population"; .wide }
 
@@ -137,42 +129,53 @@ Beamer Theme  : singapore
 
 * Experiment versus Simulation: 35 or 0.5/m²
 ![exp_sim_35]
-[exp_sim_35]: images/exp_sim_35.png "exp_sim_35" { width:auto; max-width:90% }
+[exp_sim_35]: images/exp_sim_35.png "exp_sim_35" { width:auto; max-width:100% }
 
 
-* Experiment versus Simulation: 70 or 1.0/m² {#vertical} 
+~ Slide
+* Experiment versus Simulation: 70 or 1.0/m²
 ![exp_sim_70]
-[exp_sim_70]: images/exp_sim_70.png "exp_sim_70" { width:auto; max-width:90% }
+[exp_sim_70]: images/exp_sim_70.png "exp_sim_70" { width:auto; max-width:100% }
+~
 
-* Experiment versus Simulation: 105 or 1.5/m² {#vertical}
+~ Slide
+* Experiment versus Simulation: 105 or 1.5/m² 
 ![exp_sim_105]
-[exp_sim_105]: images/exp_sim_105.png "exp_sim_105" { width:auto; max-width:90% }
+[exp_sim_105]: images/exp_sim_105.png "exp_sim_105" { width:auto; max-width:100% }
+~
 
-* Experiment versus Simulation: 140 or 2.0/m² {#vertical}
+~ Slide
+* Experiment versus Simulation: 140 or 2.0/m² 
 ![exp_sim_140]
-[exp_sim_140]: images/exp_sim_140.png "exp_sim_140" { width:auto; max-width:90% }
+[exp_sim_140]: images/exp_sim_140.png "exp_sim_140" { width:auto; max-width:100% }
+~ 
 
+~ Slide
 * Experiment versus Simulation: 175 or 2.5/m²
 ![exp_sim_175]
-[exp_sim_175]: images/exp_sim_175.png "exp_sim_175" { width:auto; max-width:90% }
+[exp_sim_175]: images/exp_sim_175.png "exp_sim_175" { width:auto; max-width:100% }
+~
 
+~ Slide
 * Experiment versus Simulation: 210 or 3.0/m²
 ![exp_sim_210]
-[exp_sim_210]: images/exp_sim_210.png "exp_sim_210" { width:auto; max-width:90% }
+[exp_sim_210]: images/exp_sim_210.png "exp_sim_210" { width:auto; max-width:100% }
+~
 
+~ Slide
 * Experiment versus Simulation: 280 or 4.0/m²
 ![exp_sim_280]
-[exp_sim_280]: images/exp_sim_280.png "exp_sim_280" { width:auto; max-width:90% }
+[exp_sim_280]: images/exp_sim_280.png "exp_sim_280" { width:auto; max-width:100% }
+~
 
 ## Kiss simulations
 ![all_sim]
-
-[all_sim]: images/all_sim.png "all_sim" { width:auto; max-width:90% }
+[all_sim]: images/all_sim.png "all_sim" { width:auto; max-width:100% }
 
 ~ End Vertical
 
 # Conclusion
-* uncoordinated egress experiment 
+* Uncoordinated egress experiment 
   * arches and turbulence were observed
   * the greater the crowd the lower the egress flow rate
   * when crowd stops pushing, flow increase 
