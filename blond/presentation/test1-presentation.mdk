@@ -144,10 +144,16 @@ C~3~H~8~ + 5 O~2~ + 5&sdot;3.76 N~2~ = 3 CO~2~ + 4 H~2~O + 5&sdot;3.76 N~2~
 ~ Align-Left
 * These values are the inputs for the model
 
-* Proper initial values for the subsequent system mass balance 
+* Proper initial values for the subsequent system mass balance
 ~
 
 # The initial temperature
+* 
+
+
+# Grid mesh and geometry
+
+
 
 
 
