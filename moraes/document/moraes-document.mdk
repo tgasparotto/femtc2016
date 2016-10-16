@@ -104,7 +104,7 @@ by people perceiving imminent risk to their lives.
 ~ Figure { #fig-ginasio; caption:"Egress experiment scheme."}
 ![esquemaExperimento_02]
 ~
-[esquemaExperimento_02]: images/esquemaExperimento_02.png "esquemaExperimento_02" { width:auto; max-width:65% }
+[esquemaExperimento_02]: images/esquemaExperimento_02.png "esquemaExperimento_02" { width:auto; max-width:70% }
 
 The camera V1 films the crowd from behind. Fixed above the door, the camera V2 records people
 near the door. V3 is positioned over a vehicle parked next to the exit and facing the
@@ -119,10 +119,9 @@ Seven trials were performed, varying the initial population as follows: 35, 70, 
 during the experiment.
 
 ~ Figure { #3CAM; caption:"Simultaneous snapshots taken during the experiment."}
-![snapshot3CAM]
+![3cameras]
 ~
-[snapshot3CAM]: images/snapshot3CAM.png "snapshot3CAM" { width:auto; max-width:90% }
-
+[3cameras]: images/3cameras.jpeg "3cameras" { width:auto; max-width:90% }
 
 ## Simulation { #sec-sim}
 Helbing, Farkas and Vicsek [@helbing2000simulating] presented an egress
@@ -243,7 +242,7 @@ more than 3.5 seconds.
 
 ## Verifying Simulation Model  
 
-Figures [#fig-expsim35], [#fig-expsim140] and [#fig-expsim210] presents the comparison between experiment
+Figures [#fig-expsim35] and [#fig-expsim175] presents the comparison between experiment
 and simulation. 
 
 ~ Figure { #fig-expSim35; caption: "Experiment versus simulation: 35 individuals egressed."}
