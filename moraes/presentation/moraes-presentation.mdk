@@ -50,29 +50,26 @@ Beamer Theme  : singapore
 ~ Begin Vertical { data-background:Gainsboro }
 
 # Uncoordinated Egress Model {#vertical}
-* “Simulating Dynamical Features of Escape Panic.” by Helbing, Farkas, and Vicsek (Nature 407)
-  * people move faster and press to exit
-  * uncoordinated movement trough openings
-  * side by side, individuals forms arching and locks
-  * 
+* “Simulating Dynamical Features of Escape Panic.” by Helbing, Farkas, and Vicsek (Nature 407):  
+  * people move faster and start pushing
+  * moving becomes uncoordinated (**turbulence**)
+  * **arching** and clogging at exits
+  * jams build up, pressures become dangerous
+  * escape is further slowed by fallen or injured people
+  * people show a tendency towards mass behaviour;
+  * alternative exits are often overlooked or not efficiently used.
+
+[![arrowdown]][down]
 
 
 ## "Panic Package"
 ![kiss_1000_335]
 [kiss_1000_335]: images/kiss_1000_335.png "kiss_1000_335" { width:auto; max-width:90% }
 
-
-
-
-
-
-
 ~ End Vertical
 
 
-
-
-
+~Begin Vertical
 
 # Experiment {#vertical}
 
@@ -89,7 +86,6 @@ Beamer Theme  : singapore
 [down]: # { .navigate-down }
 [arrowdown]: images/arrow.png "Down arrow" { width:178px; height:238px }
 
-
 ## Videos {#vertical}
 ![3cameras]
 [3cameras]: images/3cameras.jpeg "3cameras" { width:auto; max-width:90% }
@@ -99,13 +95,10 @@ Beamer Theme  : singapore
 ~ End Vertical
 
 
-
-
-
 <!-- Example of nested vertical slides -->
 ~ Begin Vertical { data-background:Gainsboro }
 
-## Door Blockage and Arch {#vertical}
+## Arch {#vertical}
 
 ~ Begin Columns
 ~ Column { width:30% }
@@ -126,13 +119,7 @@ Beamer Theme  : singapore
 
 <https://youtu.be/h72-I5E96uU>
 
-~ End Vertical
 
-
-
-~ Begin Vertical
-
-# REsults
 ## Egress time and flow
 
 ~ TableFigure { #tab-tempo; caption: "Egress time and mean flow versus population"; .wide }
@@ -153,7 +140,14 @@ Beamer Theme  : singapore
 |------------|-----------|--------------------------------||||
 ~
 
-## 
+~ End Vertical
+
+
+
+~ Begin Vertical
+
+# Simulation Results
+
 * Experiment versus Simulation: 35 or 0.5/m²
 ![exp_sim_35]
 [exp_sim_35]: images/exp_sim_35.png "exp_sim_35" { width:auto; max-width:90% }
@@ -182,40 +176,21 @@ Beamer Theme  : singapore
 ![exp_sim_280]
 [exp_sim_280]: images/exp_sim_280.png "exp_sim_280" { width:auto; max-width:90% }
 
-~ End Vertical
-
-
-<!-- Example of nested vertical slides -->
-~ Begin Vertical { data-background:Gainsboro }
-
-
-~ Begin Columns
-~ Column { width:30% }
-[![arrowdown]][down]
-~
-~ Column
-![blockage02]
-~
-~ End Columns
-[blockage02]: images/blockage02.png "blockage02" { width:auto; max-width:100% }
-[down]: # { .navigate-down }
-[arrowdown]: images/arrow.png "Down arrow" { width:178px; height:238px }
-
-
-~ End Vertical
-
 ## Kiss simulations
 ![all_sim]
 
 [all_sim]: images/all_sim.png "all_sim" { width:auto; max-width:90% }
 
-
+~ End Vertical
 
 # Conclusion
-* door blockages and arches
-* crowd turbulence
-* egress time 
-* The Kiss simulation 
+* uncoordinated egress experiment 
+  * arches and turbulence were observed
+  * the greater the crowd the lower the egress flow rate
+  * when crowd stops pushing, flow increase 
+* Simulation
+  * although simplified, model fits experiment
+  * door width applicable in Santa Catarina is safe
 
 
 
