@@ -76,18 +76,21 @@ to evacuate a building or to relocate from the point of occupancy to a point of 
 [@code2009nfpa]. An evacuation process could be: a) coordinated, when
 people leaves the place in an ordered queue, constant flow without rush; or b) uncoordinated, 
 when everyone rush for the exit, pressing others ahead, the flow become nonlinear with stops
-and goes, either with or without mass panic. Based on literature review and empirical
-research, Helbing, Farkas and Vicsek @helbing2000simulating lists the events that
-can occur during an emergency evacuation, right after the identification of the threat, as: 
-(1) people try to move faster than normal; 
-(2) individuals press to exit, causing physical interactions with those around; 
-(3) movement becomes uncoordinated through the openings; 
-(4) arcing and locks are observed; 
-(5) jams form; 
-(6) pressure become dangerous; 
-(7) injured or fallen people act as obstacles; 
-(8) tendency to mass behavior increases; 
-(9) alternatives are neglected.
+and goes, either with or without mass panic. 
+
+Based on literature review and empirical research, Helbing, Farkas and Vicsek @helbing2000simulating 
+lists the events that can occur during an emergency evacuation, right after the 
+identification of the threat, as:
+(1) people move or try to move considerably faster than normal;
+(2) individuals start pushing and interactions among people become physical;
+(3) moving and, in particular, passing of a bottleneck becomes uncoordinated;
+(4) at exits, arching and clogging are observed;
+(5) jams build up;
+(6) the physical interactions in the jammed crowd add up and cause
+dangerous pressures;
+(7) escape is further slowed by fallen or injured people acting as obstacles;
+(8) people show a tendency towards mass behaviour;
+(9) alternative exits are often overlooked or not efficiently used.
 
 ## Experiment { #sec-experiment}
 The uncoordinated egress experiment aims to verify some of those events above described. 
