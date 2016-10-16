@@ -13,6 +13,10 @@ Beamer Theme  : singapore
 
 1. Introduction
 2. Multi-scale Modelling
+3. Implementation of Multi-scale Modelling
+4. Cold Flow Multi-scale Modelling Results
+5. Multi-scale Fire Modelling Results
+6. Conclusion
 
 # Introduction - Team
 
@@ -86,7 +90,44 @@ Beamer Theme  : singapore
 * Full CFD for near field, or tunnel section of interest
 * Significantly reduce the computational time
 * Off-set computational time for longer tunnel section
+
+# Multi-scale Modelling - What and Why
+
+* Multi-scale modelling method
+* Direct and indirect coupling methods
+* FDS6.1 is based on indirect coupling method
+* Implemented using HVAC feature
+  - Acknowledge this is not the intended use of HVAC
+
+# Multi-scale Modelling - Implementation
+
+* Model is based on Dartford Tunnel West
+* Cold flow field measurement data available [1]
+* Dartford Tunnel West properties: 
+  - 1.5 km long
+  - 14 jet fans pairs (JFP)
+* Key of multi-scale model
+  - Interface between 1D and full CFD sections
+  - Flow need to be fully developed 
+
+# Multi-scale Modelling - Implementation
   
+
+~ Figure { #fig-figure; caption:"Representation of Multi-scale Model"}
+![Fig1]
+
+[Fig1]: images/Fig1.png "Fig1" { width:auto; max-width:70% }
+~
+* L~p~ is length of portal = 
+* L~JF,UP~ and L~JF,DW~ are length up and downstream of jet fans = xx xx respectively
+* L~fire~ is length each side of fire = 
+* Calibrated from running multiple models 
+
+# Cold Flow Modelling Results
+
+# Multi-scale Fire Modelling Results
+
+# Conclusion
 
 ## Reveal.js
 
