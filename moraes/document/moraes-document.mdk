@@ -76,6 +76,10 @@ to evacuate a building or to relocate from the point of occupancy to a point of 
 [@code2009nfpa]. An evacuation process could be: a) coordinated, when
 people leaves the place in an ordered queue, constant flow without rush; or b) uncoordinated, 
 when everyone rush for the exit, pressing others ahead, the flow become nonlinear with stops
+and goes, either with or without mass panic.
+
+<!-- begin merge (remove this line to resolve the conflict) -->
+~ Begin Remote
 and goes, either with or without mass panic. 
 
 Based on literature review and empirical research, Helbing, Farkas and Vicsek @helbing2000simulating 
@@ -91,6 +95,9 @@ dangerous pressures;
 (7) escape is further slowed by fallen or injured people acting as obstacles;
 (8) people show a tendency towards mass behaviour;
 (9) alternative exits are often overlooked or not efficiently used.
+~ End Remote
+
+
 
 ## Experiment { #sec-experiment}
 The uncoordinated egress experiment aims to verify some of those events above described. 
