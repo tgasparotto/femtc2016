@@ -76,13 +76,8 @@ to evacuate a building or to relocate from the point of occupancy to a point of 
 [@code2009nfpa]. An evacuation process could be: a) coordinated, when
 people leaves the place in an ordered queue, constant flow without rush; or b) uncoordinated, 
 when everyone rush for the exit, pressing others ahead, the flow become nonlinear with stops
-and goes, either with or without mass panic.
-
-<!-- begin merge (remove this line to resolve the conflict) -->
-~ Begin Remote
-and goes, either with or without mass panic. 
-
-Based on literature review and empirical research, Helbing, Farkas and Vicsek @helbing2000simulating 
+and goes, either with or without mass panic. Based on literature review and empirical research, 
+@helbing2000simulating 
 lists the events that can occur during an emergency evacuation, right after the 
 identification of the threat, as:
 (1) people move or try to move considerably faster than normal;
@@ -95,9 +90,6 @@ dangerous pressures;
 (7) escape is further slowed by fallen or injured people acting as obstacles;
 (8) people show a tendency towards mass behaviour;
 (9) alternative exits are often overlooked or not efficiently used.
-~ End Remote
-
-
 
 ## Experiment { #sec-experiment}
 The uncoordinated egress experiment aims to verify some of those events above described. 
@@ -109,15 +101,15 @@ students were distributed over 70m² emulating a night club environment. At the 
 whistle, all occupants are urged to leave the area immediately, as it would be the reaction observed
 by people perceiving imminent risk to their lives. 
 
+~ Figure { #fig-ginasio; caption:"Egress experiment scheme."}
+![esquemaExperimento_02]
+~
+[esquemaExperimento_02]: images/esquemaExperimento_02.png "esquemaExperimento_02" { width:auto; max-width:65% }
+
 The camera V1 films the crowd from behind. Fixed above the door, the camera V2 records people
 near the door. V3 is positioned over a vehicle parked next to the exit and facing the
 door from outside. The angle of view of those cameras are represented by a dashed blue
 semicircle and red and yellow lines.
-
-~ Figure { #fig-ginasio; caption:"Egress experiment scheme."}
-![esquemaExperimento_02]
-~
-[esquemaExperimento_02]: images/esquemaExperimento_02.png "esquemaExperimento_02" { width:auto; max-width:100% }
 
 During the experiments there were no visibility restriction or lack of fresh air, 
 participants were reasonably homogeneous concerning mobility and decision-making skills, 
@@ -129,7 +121,7 @@ during the experiment.
 ~ Figure { #3CAM; caption:"Simultaneous snapshots taken during the experiment."}
 ![snapshot3CAM]
 ~
-[snapshot3CAM]: images/snapshot3CAM.png "snapshot3CAM" { width:auto; max-width:100% }
+[snapshot3CAM]: images/snapshot3CAM.png "snapshot3CAM" { width:auto; max-width:90% }
 
 
 ## Simulation { #sec-sim}
@@ -148,8 +140,6 @@ those now described: a) door size, 1.12m; b) room's area, 70m²; c) circle
 (representing an individual) diameter, 47.5&plusmn;5.0cm; and d) initial number of
 particles, set according to the number of individuals.
  
- 
-
 # RESULTS   { #sec-results}
 The experiment results are here divided in: qualitative, where is presented the blockages
 and crowd turbulence on videos; and quantitative, regarding to egress time and flow 
@@ -165,7 +155,7 @@ wall. The more people push towards the arch, the more it compacts itself.
 ~ Figure { #arch; caption:"Snapshot highlighting the arch."}
 ![arch]
 ~
-[arch]: images/blockage02.png "blockage02" { width:auto; max-width:100% }
+[arch]: images/blockage02.png "blockage02" { width:auto; max-width:90% }
 
 One of the consequences of the arches is that the individual closest to the wall
 can be imprisoned there. It was observed that an individual 
@@ -180,7 +170,7 @@ crowd pushed him to follow.
 ~ Figure { #turb; caption: "Screenshots overlaid showing how turbulence affects the path followed by a person (1 is the first position and 15 the egress)"}
 ![turbulencia]
 ~
-[turbulencia]: images/turbulencia.png "turbulencia" { width:auto; max-width:100% }
+[turbulencia]: images/turbulencia.png "turbulencia" { width:auto; max-width:90% }
 
 ## Quantitative Results { #sec-quanti}
 
@@ -230,7 +220,7 @@ the egress time against the nth individual for all initial crowd's density, exce
 ~ Figure { #graf-all_Exp; caption: "Egress time for several crowd initial density [individuals/m²]."}
 ![all_Exp]
 ~
-[all_Exp]: images/all_Exp.png "all_Exp" { width:auto; max-width:100% }
+[all_Exp]: images/all_Exp.png "all_Exp" { width:auto; max-width:80% }
 
 The dark blue curve (crowd's density of 0.5, or 35 individuals) has a quite constant slope, 
 meaning no blockages, almost a coordinated egress. The light blue curve, presents a sharp 
@@ -240,7 +230,7 @@ individual's exit, which is presented in Figure [#graf-210].
 ~ Figure { #graf-210; caption: "Time void between egresses for 210 individuals experiment."}
 ![210_void]
 ~
-[210_void]: images/210_void.png "210_void" { width:auto; max-width:100% }
+[210_void]: images/210_void.png "210_void" { width:auto; max-width:80% }
 
 There are eight peaks over one second in Figure [#graf-210], that means, during the
 emergency egress there were eight moments when the door was blocked
@@ -260,16 +250,12 @@ and simulation.
 ![exp_sim_35]
 ~
 
-~ Figure { #fig-expSim140; caption: "Experiment versus simulation: 140 individuals egressed."}
-![exp_sim_140]
+~ Figure { #fig-expSim175; caption: "Experiment versus simulation: 175 individuals egressed."}
+![exp_sim_175]
 ~
 
-~ Figure { #fig-expSim210; caption: "Experiment versus simulation: 210 individuals egressed."}
-![exp_sim_210]
-~
-[exp_sim_35]: images/exp_sim_35.png "exp_sim_35" { width:auto; max-width:100% }
-[exp_sim_140]: images/exp_sim_140.png "exp_sim_140" { width:auto; max-width:90% }
-[exp_sim_210]: images/exp_sim_210.png "exp_sim_210" { width:auto; max-width:100% }
+[exp_sim_175]: images/exp_sim_175.png "exp_sim_175" { width:auto; max-width:80% }
+[exp_sim_35]: images/exp_sim_35.png "exp_sim_35" { width:auto; max-width:80% }
 
 ## Are IN-09's Requirements Enough?
 According to IN 09, for nightclubs similar to Kiss, the
@@ -291,10 +277,10 @@ individuals. The egress time for a simulation of a nightclub like Kiss with 2 do
 is doubly faster than the expected by IN 09, showing that its recommendations are 
 adequately safe. Furthermore, adding a third door reduced the egress time in 28% in 
 simulations.
-~ Figure { #fig-all_sim; caption: "Experiment versus simulation: 210 individuals egressed."}
+~ Figure { #fig-all_sim; caption: "Experiment versus simulation: 1230 individuals egressed."}
 ![all_sim]
 ~
-[all_sim]: images/all_sim.png "all_sim" { width:auto; max-width:100% }
+[all_sim]: images/all_sim.png "all_sim" { width:auto; max-width:80% }
 
 # CONCLUSION
 
