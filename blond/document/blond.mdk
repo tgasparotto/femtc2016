@@ -130,7 +130,7 @@ The definition of the initial temperature by means of the adiabatic temperatures
 
 ~ End Figure
 
-Regarding radiation the higher the combustion efficiency, the lower the flame radiation fraction, since less soot is produced and the flame becomes transparent. However a small heat fraction is still as radiation released. 
+Regarding radiation the higher the combustion efficiency, the lower the flame radiation fraction, since less soot is produced and the flame becomes transparent. However a small heat fraction is still released as radiation. 
 The fraction of heat released as convective heat, can be calculated using the partial pressures of CO~2~ and water vapour in the products. Using the chemical balance, see above Equation [#propan-combustion], the molar quantities are calculated and these values correspond to the partial pressures (surrounding pressure, ambient pressure, 1 atm). The flame temperature T= 1995 °C is considered:
 
 
@@ -151,10 +151,8 @@ Two validation process were carried out: the validation of the plume model and t
 The temperatures of the plume with the system working at four different powers were recorded during a measuring campaign. The chosen values are representative of the system and cover the low power, 100 kW, the highest power, 1.200 kW; and two intermediate values 400 kW and 800 kW.
 The temperatures were recorded following a similar grid like the one programmed in the simulations. 
 
-In the simulations a measurement grid was implemented along the X and Y axis, with a measurement position each 20 cm and reproduced in the Z- direction each 19.5 cm equivalent to three cells. 
+In the simulations a measurement grid was implemented along the X and Y axis, with a measurement device positioned each 20 cm and reproduced in the Z- direction each 19.5 cm equivalent to three cells. 
 The validated FDS model for Izar eliminates also the uncertainties related to the fuel and its combustions. The measure grid can be seen in the figure [#grid].
-
-During the test not all positions could be controlled. Only the central position and two position along the X and Y axis were recorded. These positions were controlled at three different heights above the burner surface: 3 m, 4 m and 6 m. The measurement grid can be seen in the figure [#grid].
 
 ~ begin Figure  {#grid; caption:"The figure shows the measure grids use in FDS model and during the full scale tests"}
 ~begin SubFigureRow
@@ -171,6 +169,8 @@ During the test not all positions could be controlled. Only the central position
 
 [Grid sensor full scale]: images/Grid-sensor-full-scale.jpg "Grid sensor full scale" { width:auto; max-width:120% }
 
+During the test not all positions could be controlled. Only the central position and two position along the X and Y axis were recorded. These positions were controlled at three different heights above the burner surface: 3 m, 4 m and 6 m. The measurement grid can be seen in the figure [#grid].
+
 These measurements can be defined as local.
 The graphs in figure [#central] show the comparison between the recorded temperatures in the simulations and the ones recorded during the full scale test.
 
@@ -183,7 +183,7 @@ The graphs in figure [#central] show the comparison between the recorded tempera
 
 ## Validation of the model during full scale tests
 Following the plume validation process the model was compared with the real data obtained from fuel scales tests with Izar in a big industrial hall.
-The aim of this validation was to confirm that the FDS model of Izar is capable of reproducing the behavior of the system during a real smoke test, and consequently capable of reproducing the created smoke layer.
+The aim of this validation was to confirm that the FDS model of Izar is capable of reproducing the behavior of the system during a real smoke test, and consequently capable of reproducing the generated smoke layer.
 
 The tests took place in a big industrial hall with an approximate area of 3.000 m^2^ and 9.5 m high. 
 Different tests with different powers were carried out and the temperatures within the smoke layer were recorded at 5 m, 10 m, and 20 m, from the burner position. A depth of 2.25 m under the ceiling was controlled. The distance between the temperature sensor can be found in the figure [#sensor-manegg]
@@ -196,8 +196,8 @@ Different tests with different powers were carried out and the temperatures with
 
 ~
 
-The geometry was reproduced in FDS and Izar was modeled using the method previously described. The temperature was recorded in the FDS model at the same positions as in the real test.
-Figure [#temp-sensor-manegg] shows thee example with the comparison between both temperatures at different positions.
+The geometry was reproduced in FDS and Izar was modeled using the previous description. The temperature was recorded in the FDS model at the same positions as in the real test.
+Figure [#temp-sensor-manegg] shows three position comparison between both temperatures at different positions.
 
 ~ begin Figure {#temp-sensor-manegg; caption:"Temperature comparison between the measured temperatures and the FDS Model. The positions are individually indicated"}
 ~ Begin SubFigureRow
@@ -225,11 +225,13 @@ Figure [#temp-sensor-manegg] shows thee example with the comparison between both
 
 # Conclusion
 
-The methodology presented in this paper is an efficient tool which allows modeling in FDS the plumes originated by the premixed combustion generated by the hot smoke testing system Izar. The model has been validated setting different powers in the system.
+The methodology presented in this paper is an efficient tool which allows modeling  the plumes originated by the premixed combustion generated by the hot smoke testing system Izar in FDS. The model has been validated during a set of full scale test in an industrial hall.
 
-The main model input parameters are the combustion products, the flame temperature and the geometry of the combustion region. The method takes advantage of the properties of the premixed combustion process, which allows easily to define the combustions products that are released during combustion and characterize its initial temperatures.
+The main model input parameters are the combustion species, the flame temperature and the geometry of the combustion region. The method takes advantage of the properties of the premixed combustion process, which allows defining the combustions products that are released during combustion and characterize its initial temperatures.
 
-The recorded temperatures during full scale test confirm the experimental results and allow the model validation. The agreement between the central plume temperatures is remarkable. These temperatures are the result of turbulence and entrainment process around the entire plume perimeter. The agreement between the real temperatures and the recorded temperatures in the FDS model, confirm that the turbulence process is correctly solve in FDS.
+The recorded temperatures during full scale test confirm the experimental results and allow the model validation. The agreement between the observed and modeled central plume temperatures is remarkable. These temperatures are the result of turbulence and entrainment process around the entire plume perimeter.
+
+The agreement between the real temperatures and the recorded temperatures in the FDS model, confirms that the turbulence produced by system Izar up tp 1.200 kW is resolved solve in FDS.
 
 The agreement between the temperatures recorded during the full scale tests and the ones obtained from FDS, confirm that presented FDS model is capable of representing the performance of the smoke testing system Izar.
 
@@ -242,12 +244,12 @@ It will be desirable to test the method with different geometries and fuels. The
 If the necessary information is available, a equivalent equation to those available to calculate the plume temperatures from diffusions flames could be developed.
 These information will be very valuable in order to extend the use of systems with premixed flames, for example a new generation of hot smoke testing systems.
 
-The available validated FDS model for Izar opens a wide range of possibilities regarding the validation of FDS geometries. 
-The design fires exceed the limits during the smoke tests and cannot be reproduced. Untenable temperatures will be reached in the room causing damages. However full scale test can be carried out with Izar under controlled temperatures conditions and the necessary measures can be recorded.
+The available validated FDS model for Izar opens a wide range of possibilities regarding FDS as design tool. 
+The design fires exceed the limits during the smoke tests and cannot be reproduced. Untenable temperatures will be reached in the room causing damages. However full scale test can be carried out with Izar under controlled conditions and the necessary measures can be recorded.
 
 The data obtained from the FDS models have a direct application in the design of hot smoke tests systems with Izar.
 The work experience gained from the commercial hot smoke test carried out with Izar confirms that, considering the room limiting test temperature (defined by factor such as the presence of sprinklers), it is possible to define the maximum test power making use of the correlation between power and plume temperatures, obtained from the FDS plume models. That means that the most realistic hot smoke test for the studied room can be carried out. 
 
-These temperature measures can be used to calibrate and validate the FDS geometry.The last step is to program the design fires in this previously validated geometry which eliminates many model uncertainties. 
+These temperature measurements can be used to calibrate and validate the FDS geometry.The last step is to program the design fires in this previously validated geometry which eliminates many model uncertainties. 
 
-These kind of "a priori" validated simulations offer a greater grade of confidence and may reduce the safety factors taken in the design of the smoke management systems, optimizing the solutions.
+These kind of "a priori" validated simulations offer a greater grade of confidence and may reduce the safety factors taken in the design of the smoke management systems and thus, optimizing the solutions.
