@@ -75,7 +75,7 @@ Beamer Theme  : singapore
 ## Door Blockage and Arch {#vertical}
 
 ~ Begin Columns
-~ Column { width:30% }
+~ Column { width:0% }
 [![arrowdown]][down]
 ~
 ~ Column
