@@ -217,7 +217,7 @@ To compare graphically all the experiments, Figure [#graf-all_Exp] presents
 the egress time against the nth individual for all initial crowd's density, excepting 
 4.0 (280 individuals).
 
-~ Figure { #graf-all_Exp; caption: "Egress time for the first 35 over several crowd initial density [individuals/m²]."}
+~ Figure { #graf-all_Exp; caption: "Egress time for several crowd initial density [individuals/m²]."}
 ![all_Exp]
 ~
 [all_Exp]: images/all_Exp.png "all_Exp" { width:auto; max-width:100% }
