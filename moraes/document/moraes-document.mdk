@@ -216,6 +216,7 @@ can make the others confused about the right direction to take [@costa2012aplica
 To compare graphically all the experiments, Figure [#graf-all_Exp] presents
 the egress time against the nth individual for all initial crowd's density, excepting 
 4.0 (280 individuals).
+
 ~ Figure { #graf-all_Exp; caption: "Egress time for the first 35 over several crowd initial density [individuals/m²]."}
 ![all_Exp]
 ~
@@ -242,18 +243,22 @@ more than 3.5 seconds.
 
 ## Verifying Simulation Model  
 
-Figures [#fig-expsim35] and [#fig-expsim210] presents the comparison between experiment
-and simulation. The egress time is slightly lower at simulation, but the curve slope is 
-relatively the same.
+Figures [#fig-expsim35], [#fig-expsim140] and [#fig-expsim210] presents the comparison between experiment
+and simulation. 
 
 ~ Figure { #fig-expSim35; caption: "Experiment versus simulation: 35 individuals egressed."}
 ![exp_sim_35]
 ~
-[exp_sim_35]: images/exp_sim_35.png "exp_sim_35" { width:auto; max-width:100% }
+
+~ Figure { #fig-expSim140; caption: "Experiment versus simulation: 140 individuals egressed."}
+![exp_sim_140]
+~
 
 ~ Figure { #fig-expSim210; caption: "Experiment versus simulation: 210 individuals egressed."}
 ![exp_sim_210]
 ~
+[exp_sim_35]: images/exp_sim_35.png "exp_sim_35" { width:auto; max-width:100% }
+[exp_sim_140]: images/exp_sim_140.png "exp_sim_140" { width:auto; max-width:90% }
 [exp_sim_210]: images/exp_sim_210.png "exp_sim_210" { width:auto; max-width:100% }
 
 ## Are IN-09's Requirements Enough?
