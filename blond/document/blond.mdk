@@ -208,9 +208,9 @@ Figure [#temp-sensor-manegg] shows three position comparison between both temper
 ~ SubFigure { #sensor 2; caption: "10 m distance, 75 cm under the ceiling"}
 
 ![sensor2]
-[Sensor 1]: images/Sensor-1.jpg "Sensor 1" { width:auto; max-width:100% }
+[Sensor 1]: images/Sensor-1.jpg "Sensor 1" { width:auto; max-width:110% }
 
-[sensor2]: images/sensor2.jpg "sensor2" {width:auto; max-width:100%}
+[sensor2]: images/sensor2.jpg "sensor2" {width:auto; max-width:110%}
 
 ~
 
@@ -221,7 +221,7 @@ Figure [#temp-sensor-manegg] shows three position comparison between both temper
 ~ End SubFigureRow
 ~ End Figure
 
-[sensor3]: images/sensor3.png "sensor3" {width:auto; max-width:100%}
+[sensor3]: images/sensor3.png "sensor3" {width:auto; max-width:110%}
 
 # Conclusion
 
