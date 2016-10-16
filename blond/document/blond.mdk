@@ -17,7 +17,7 @@ name-references : REFERENCES
 
 ~ Abstract
 The use of premixed flames in hot smoke tests present valuable advantages in comparison with
-traditional methods. The definition and control of the necessary power, HHR, is a great challenge due to the lack of information about the plumes originated by premixed flames. This work presents a method to model the hot smoke testing system Izar an calculate the temperature field within created plume.
+traditional methods. The definition and control of the necessary power, HRR, is a great challenge due to the lack of information about the plumes originated by premixed flames. This work presents a method to simulate the hot smoke testing system Izar in FDS an calculate the temperature field within the created plume.
 ~
 
 # Introduction     { #sec-intro }
@@ -28,46 +28,48 @@ Izar is the a smoke testing system composed of a gas burner, a gas supply system
 fog generators to visualize the smoke layer.
 
 The main characteristic of the system is the use of premixed flames as heat source. 
-The main advantage is the reduction, almost elimination, of the flame radiation and the elimination of the residues, soot yield, originated by the common diffusions flames.
+The main advantage is the reduction, almost elimination, of the heat loses due to radiation and the elimination of the residues, soot yield, originated by the common diffusions flames.
 The use of premixed flames made of Izar a pure convective heat source capable of reproducing the equivalent 
 convective part released by the common natural fires with diffusion flames. 
 
-The system can release a total power of 1'20 MW, which considered as a pure convective heat source, is equivalent to a natural fire of 1'80 MW. This equivalence considers the standard ratio 2/3 of the total heat released as convective heat and 1/3 as radiation heat. This ratio could be adjusted for each fuel if needed.
+The system can release a total power of 1,20 MW, which considered as a pure convective heat source, is equivalent to a natural fire of 1'80 MW. This equivalence considers the standard ratio 2/3 of the total heat released as convective heat and 1/3 as radiation heat. This ratio could be adjusted for each fuel if needed.
 
-# A brief description of the work context 
+This paper summarizes the main results obtained during the development of the hot smoke testing system regarding its modeling in FDS. The entire work was submitted as master thesis within the International  Master of Science in Fire Safety Engineering program.
+
+## A brief description of the work context 
 
 The presented method belongs to the development process of the hot smoke testing Izar, and must be understood in this context. 
 
-The testing system Izar works in buildings or tunnels already in use or just before the commissioning. During a smoke test the "most realistic" conditions must be created in order to proof the smoke management system under the "most realistic" conditions. Therefore, the system must generate the highest temperatures and at the same time guarantee that no damage will occur during the test. 
+The testing system Izar works in buildings or tunnels already in use or just before the commissioning. During a smoke test the "most realistic" conditions must be created in order to proof the smoke management system under the closer conditions to an accidental fire. Therefore, the system must generate the highest temperatures and at the same time guarantee that no damage will occur during the test. 
 
-This was one of the challenges faced on this work: to study the temperature field created by the system and to draw valuable conclusions and guaranteeing the safe developed of the tests. Additionally this work had to be done before the system was ready for the use an no laboratory test was possible at this point.
+This was one of the challenges faced on this work: to study the temperature field created by the system and to draw valuable conclusions and guaranteeing its safety development. Additionally this work had to be done before the system was ready to use an no laboratory test was already possible at this point.
 
-Different equations and models are available in literature to calculate the plume temperatures for diffusion flames according to its geometry and flame configuration (jet flame, etc.). For the common hot smoke test based on pool fires there is a vast literature and experience which make it possible to adjust the size of the pools according to the room geometry. But no model was found to calculate these parameters for plumes generated during the combustion process occurred in premixed flames.
+Different equations and models are available in literature to calculate the plume temperatures for diffusion flames according to its geometry and flame configuration (jet flame, etc.). For the common hot smoke test based on pool fires exits a vast literature and experience which make it possible to adjust the size of the pools according to the room geometry. But no model was found to calculate these parameters for plumes generated during the combustion process occurred in premixed flames.
 
-The processes with premixed flames are used normally in closed environments such as industrial ovens, in which the combustion efficiency is the main factor instead of the plumes produced by this combustion process. Therefore these plumes are not enough documented. 
+The processes with premixed flames are normally used normally in closed environments such as industrial ovens, in which the main interest is the combustion efficiency rather than the plumes development and thus, the phenomena is not documented enough.
 
-The geometry of the burning chamber, a rectangle, made also impossible to consider these traditional models mainly based on experiments with circular fire sources and extrapolate their results.
+The rectangular geometry of the burning chamber, made also impossible to consider these traditional models mainly based on experiments with circular fire sources such as the Heskestad plume model and extrapolate their results.
 
-Therefore a new frame work had to be developed to study the temperature field in the plume created by the premixed flames. The decision was to study the temperature field in the plume modeling the system with FDS. 
+A new framework had to be developed to study the temperature field in the plume created by Izar. The decision was to study the temperature field in the plume modeling the system with FDS. 
 
 # Modeling the hot smoke testing system Izar with FDS
 
-The approach of modeling the system with FDS was not so straightforward because the combustion models of this software are not capable of simulating a premixed combustion. 
+The approach of modeling the system with FDS was not straightforward because the program is not mainly thought to simulate premixed combustions. 
 
 The solution to simulate premixed flames consists of modeling the combustion like a source of combustion products released at the flame temperature. 
 
 Izar uses propane gas as source of energy. The physical properties of the combustible are well documented in the literature. 
 The flame temperature is one of these and it is the main model parameter. The combustion in Izar occurs under stoichiometric conditions achieving very high combustion efficiencies, 
-an very high temperatures. The chosen flame temperature is the adiabatic temperature with dissociation. For the propane this temperature is 1995 °C (ref Drysdale !!!!). Above the combustion region, the plume can be represented using the fluid mechanic equations available in FDS.
+an very high temperatures. The chosen flame temperature is the adiabatic temperature with dissociation. For the propane this temperature is 1995 °C (ref Drysdale !!!!). Above the combustion region, the plume can be represented using the fluid dynamic equations available in FDS.
 
 The plume contains the combustion products generated during the combustion. In the diffusion flames the efficiency of the combustion process defines the amount of products and particles which are commonly called smoke.
-However in a premixed combustion these combustion products are well known and do not change under different environment conditions. By a simple chemical balance its is easy to calculate these combustion products and the amount of them:
+However in a premixed combustion these combustion products are well known and do not change under different environment conditions. By a simple chemical balance its is possible to calculate these combustion products and the amount of them:
 
 ~ Equation {#Propan-combustion; caption:"Propan chemical balance"}
 C_{3}H_{8}+5 O_{2}+5\cdot3.76N_{2}=3CO_{2}+4H_{2}O+5\cdot3.76N_{2}
 ~
 
-Once the chemical balance is available, the ratio fuel/product can be defined for each specie. This ratio allows calculating the amount of product (kg) produced for each mass unit of fuel.
+Once the chemical balance is available, the fuel/product ratio can be defined for each specie. This ratio allows calculating the amount of product (kg) produced for each mass unit of fuel.
 
 ~ Tablefigure {#Malecular-weight; caption:"Molecular weight, and mass ratio between propane and combustion products"}
 
@@ -82,9 +84,9 @@ Once the chemical balance is available, the ratio fuel/product can be defined fo
 |----------|------------------|--------------------|----------------------|
 ~
 
-The molecular weight of these species is well known and making use of another well known value, the propane heat of combustion 46 kJ/g, it is straightforward to calculate the necessary kilograms of propane required to achieve a certain power.The chemical equation can be after adjusted to determinate the kg of products produced. Using the mass ratio available in the Table [#malecular-weight],the amount of products generated, can be calculated.
+The propane heat of combustion is well known and can be set to 46 kJ/g (REFF), it is straightforward to calculate the necessary kilograms of propane required to achieve a certain power.The chemical equation can be afterwards adjusted to determinate the kg of products produced. Using the mass ratio available in the Table [#malecular-weight], the amount of products generated can be calculated.
 
-For example, in order to generate a power of 500 kW, 10.78 g/s of propane are needed. Using the mass ratio available in the Table [#molecular-weight], the generated amount of products are:
+For example, in order to generate a power of 500 kW, a mass flow rate of 10.78 g/s of propane are needed. Using the mass ratio available in the Table [#Malecular-weight], the generated amount of products is calculated. The values for this example are in the Table [#Molecular-weight]
 
 ~ Tablefigure {#Molecular-weight; caption:"Calculation example to determine the amount of product released from a 500 kW fire"}
 
@@ -100,12 +102,12 @@ For example, in order to generate a power of 500 kW, 10.78 g/s of propane are ne
 |----------|----------------|-----------|--------------------|
 ~
 
-These calculation guarantees that the proper mass is being introduced in the system, and the subsequents mass balance in the system will be based on correct initial mass values.
+These calculation guarantees that the proper mass is being introduced in the system, and the subsequent mass balance in the system will be based on correct initial mass values.
 
 These values must be introduced in the FDS code with the unit (kg/m&sdot;s). 
-therefore the combustion area must be also considered. In the studied case the burning chamber is open and has a V-Shape; it is 122 cm long and 17 cm wide. The geometry plays also an important roll to define the size of mesh. The mesh must represent the combustion area as accurate as possible. The initial geometry is related to the moment balance in the system, because it defines the initial velocities in the system. After a sensitivity analysis a 6.5 cm mesh was chosen for this case. 
+therefore the combustion area must be also considered. In the studied case the burning chamber is open and has a V-Shape; it is 122 cm long and 17 cm wide. The geometry plays also an important roll to define the size of mesh. The mesh must represent the combustion area as accurate as possible. The initial geometry is related to the moment balance in the system, because it defines the initial velocities in the system. After a mesh grid sensitivity analysis a 6.5 cm mesh was chosen for this case. 
 
-Another significant factor in the model is the temperature. The adiabatic combustion temperature of the propane was chosen. Per definition the mixture fuel-air is predefined and known in a premixed combustion. Stoichiometric mixtures can be defined in order to achieve the highest flame temperatures. These temperatures are the adiabatic combustion temperatures.
+Another significant factor in the model is the initial temperature of the combustion products. The adiabatic combustion temperature of the propane was chosen. Per definition the mixture fuel-air is predefined and known in a premixed combustion. 
 
 The definition of the initial temperature by means of the adiabatic temperatures guarantees that the initial energy represents the correct energy system and the subsequent energy balance in the model are based on proper initial values.
 
@@ -128,7 +130,7 @@ The definition of the initial temperature by means of the adiabatic temperatures
 
 ~ End Figure
 
-To model needs a previously mentioned factor, the radiation. The higher the combustion efficiency, the lower the flame radiation fraction, since less soot is produced and the flame becomes transparent. However a small heat fraction is still as radiation released. 
+Regarding radiation the higher the combustion efficiency, the lower the flame radiation fraction, since less soot is produced and the flame becomes transparent. However a small heat fraction is still as radiation released. 
 The fraction of heat released as convective heat, can be calculated using the partial pressures of CO~2~ and water vapour in the products. Using the chemical balance, see above Equation [#propan-combustion], the molar quantities are calculated and these values correspond to the partial pressures (surrounding pressure, ambient pressure, 1 atm). The flame temperature T= 1995 °C is considered:
 
 
