@@ -66,6 +66,8 @@ Beamer Theme  : singapore
   - The room limiting factor must be considered (sprinklers, lights, protected ceilings)
   - Realistic test = high temperatures
 
+* Necessary data from temperatures from different powers at different heights 
+
 * How to calculate temperatures from premixed flames?
   - The combustion efficiency is the most important factor for premixed flames
   - What happens afterward? --> Not enough studied
@@ -75,6 +77,78 @@ Beamer Theme  : singapore
 ~
 
 # The FDS model for Izar
+
+~ Align-Left
+* The combustion itself is "not important", we want to model the plume
+  - The combustion will not be modeled 
+
+* We model the combustion products which conform the plume, the "smoke"
+
+* Three initial factors
+  - Species
+  - Temperature
+  - Origin surface
+~
+
+# The initial species (1/2)
+
+~ Align-Left
+* The combustion takes place under stoichiometric conditions
+
+* Well known which the combustion products are
+~
+
+~ Center
+C~3~H~8~ + 5 O~2~ + 5&sdot;3.76 N~2~ = 3 CO~2~ + 4 H~2~O + 5&sdot;3.76 N~2~
+~
+
+~ Align-Left
+* We define the mass ratio fuel/product 
+~
+
+~ Table  
+|----------|------------------|--------------------|----------------------| 
+| Specie   | Molecular weight | Amount of products | Mass ratio | 
+|          |               (g)   |        (g)           |                      | 
++:--------:+:----------------:+:------------------:+:--------------------:+ 
+| C~3~H~4~ | 40               | -                  |-                     | 
+| CO~2~    | 44               | 132                |3.3                   | 
+| H~2~O    | 18               |72                  |1.8                   | 
+| N~2~     | 28               | 526.40             |13.16                 | 
+|----------|------------------|--------------------|----------------------| 
+~ 
+
+# The initial species (2/2)
+
+~ Align-Left
+* We calculate the necessary mass flow rate for a desired HRR with the fuel heat of combustion 
+
+* Example for 500 kW
+  - Propane heat of combustion: 46 kJ/g
+  - Mass flow to achieve 500 kW  500 kW / 46 kJ/g = 10.85 g/s
+~
+
+~ Table 
+|----------|----------------|-----------|--------------------| 
+| Specie   | Amount of fuel | Mass ratio| Amount of products | 
+|          |       (g/s)          |           |               (g/s) | 
+|          |           |           |                    | 
++:--------:+:--------------:+:---------:+:------------------:+ 
+| C~3~H~4~ | 10.85          | -         |-                   | 
+| CO~2~    | -              | 3.3       |       35.80         | 
+| H~2~O    | -              | 1.8       |            19.53    | 
+| N~2~     | -              | 13.16     |          142.78   | 
+|----------|----------------|-----------|--------------------| 
+~ 
+
+~ Align-Left
+* These values are the inputs for the model
+
+* Proper initial values for the subsequent system mass balance 
+~
+
+# The initial temperature
+
 
 
 
