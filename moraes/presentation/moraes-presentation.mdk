@@ -39,7 +39,7 @@ Beamer Theme  : singapore
   * flammable insulation prohibited
   * population density up to 2/m²
   * doors width calculated for allowed population
-* **Problem: are the calculus safe for an uncoordinated egress**? 
+* **Problem: are the calculus safe for an uncoordinated egress?** 
 ~ End Vertical
 
 
@@ -50,7 +50,7 @@ Beamer Theme  : singapore
 * “Simulating Dynamical Features of Escape Panic.” by Helbing, Farkas, and Vicsek (Nature 407):  
   * people move faster and start pushing
   * moving becomes uncoordinated (**turbulence**)
-  * **arching** and clogging at exits
+  * **arching and clogging at exits**
   * jams build up, pressures become dangerous
   * escape is further slowed by fallen or injured people
   * people show a tendency towards mass behaviour;
@@ -66,9 +66,9 @@ Beamer Theme  : singapore
 ~ End Vertical
 
 
-~Begin Vertical
+~ Begin Vertical
 
-# Experiment {#vertical}
+# Experiment
 
 ~ Begin Columns
 ~ Column { width:30% }
