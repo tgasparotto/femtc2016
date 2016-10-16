@@ -18,10 +18,10 @@ Beamer Theme  : singapore
 ~ Begin Columns
 ~ Column { width:50% }
 
-* 27th january 2013, Santa Maria, Brazil
+* 27th January 2013, Santa Maria, Brazil
 * fireworks on flammable sound insulation
-* obstacles, bad signaling and doors to close 
-* people blocked each other at doors 
+* obstacles, bad signaling and inappropriate doors 
+* doors blocked by people 
 * result: 242 deaths
  
 ~
@@ -32,16 +32,44 @@ Beamer Theme  : singapore
 [boate-kiss]: images/boate-kiss.jpg "boate-kiss" { width:auto; max-width:100% }
 
 
-## Normative Instructions
+## Lessons Learned
 
 
-* fire safety code revised 2013
-* fireworks and flammable insulation prohibited
-* which size a door should have?
+* later on 2013, Santa Catarina Military Fire Department launched new fire safety code
+* requirements for nightclubs:
+  * fireworks prohibited
+  * flammable insulation prohibited
+  * population density up to 2/m²
+  * doors width calculated for allowed population
+* Problem: are the calculus safe for an uncoordinated egress? 
+
+
 
 
 <!-- Example of nested vertical slides -->
 ~ Begin Vertical { data-background:Gainsboro }
+
+# Uncoordinated Egress Model {#vertical}
+* “Simulating Dynamical Features of Escape Panic.” by Helbing, Farkas, and Vicsek (Nature 407)
+  * kjh
+
+
+## "Panic Package"
+![kiss_1000_335]
+[kiss_1000_335]: images/kiss_1000_335.png "kiss_1000_335" { width:auto; max-width:90% }
+
+
+
+
+
+
+
+~ End Vertical
+
+
+
+
+
 
 # Experiment {#vertical}
 
@@ -68,18 +96,6 @@ Beamer Theme  : singapore
 ~ End Vertical
 
 
-
-
-<!-- Example of nested vertical slides -->
-~ Begin Vertical { data-background:Gainsboro }
-
-# Simulation {#vertical}
-* "Panic Package"
-![kiss_1000_335]
-[kiss_1000_335]: images/kiss_1000_335.png "kiss_1000_335" { width:auto; max-width:90% }
-
-Dirk Helbing, Illes Farkas, and Tamas Vicsek. “Simulating Dynamical Features of
-Escape Panic.” Nature 407 (6803). Nature Publishing Group: 487–490. 2000.
 
 
 
@@ -196,7 +212,7 @@ Escape Panic.” Nature 407 (6803). Nature Publishing Group: 487–490. 2000.
 * door blockages and arches
 * crowd turbulence
 * egress time 
- 
+* The Kiss simulation 
 
 
 
