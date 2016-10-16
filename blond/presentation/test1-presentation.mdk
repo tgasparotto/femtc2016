@@ -15,18 +15,23 @@ Beamer Theme  : singapore
 
 # Introduction
 
+Don't worry, this section is not long...
+
 ~ Align-Left
 * This work is based on the hot smoke testing system, Izar
 
 * It was developed by the swiss company Basler & Hofmann AG
 
 * A premixed combustion is the source of energy for the test
+(Oh yes, that's why I am here attending this presentation)
 
 * The results presented in this work are part of its development process
   - The entire work was presented as master thesis within the IMFSE program in 2013
 ~
 
-# What is Izar?
+# Before we begin, what is Izar?
+
+I am very happy with your question...
 
 ~ Align-Left
 
@@ -36,33 +41,38 @@ Beamer Theme  : singapore
   - A gas burner
   - A gas supplier
   - Some fog generators
-  
+
 * Its maximal power is 1.200 kW
   - The energy is mainly released as convection heat
   - Regarding the standard ratio 1/3 radiation 2/3 convection, the system can reproduce diffusion fires of 1.800 kW
   - More modules can work in parallel to achieve higher powers
 ~
 
-# What makes Izar something special?
+# Nice! It sounds interesting, but what makes Izar something special?
+
+Well Izar is definitely a cool machine...
 
 ~ Align-Left
-* It doesn't generates soot yield
-  - No post-cleaning activities
-
+* It doesn't generate soot yield
+  - Nobody likes to clean...
 
 * Live control of the HRR 
   - It is possible to follow fire curves like the t^2^-curve
 
-
 * A validated FDS model is available 
+(Oh, a validated FDS for a testing system? It seems interesting, I will keep attending what this guy is saying...) 
 ~
  
-# Aim of the study
+# How is that you decided to combine FDS with Izar?
+
+It is not the best idea to do a smoke test an burn the room... I needed to figure out how to avoid it.
+
+(Yes, that is definitely a good reason)
 
 ~ Align-Left
 
 * The aim is to calculate the plume temperatures originated by Izar
-  - The temperature is the one of the main factors to design the tests
+  - The temperature is the one of the main factors to design the smoke tests
   - The room limiting factor must be considered (sprinklers, lights, protected ceilings)
   - Realistic test = high temperatures
 
@@ -76,7 +86,9 @@ Beamer Theme  : singapore
 
 ~
 
-# The FDS model for Izar
+# And how did you create teh FDS model for Izar
+
+
 
 ~ Align-Left
 * The combustion itself is "not important", we want to model the plume
@@ -148,29 +160,45 @@ C~3~H~8~ + 5 O~2~ + 5&sdot;3.76 N~2~ = 3 CO~2~ + 4 H~2~O + 5&sdot;3.76 N~2~
 ~
 
 # The initial temperature
-* 
-
+~ Align-Left
+* The initial temperature of the gas is related with the flame temperature
+* The combustion takes places under stoichiometric conditions
+* The adiabatic combustion temperature characterizes the flame temperature
+* For our case: Flame ~temperature~ = 1.995 °C (Propane adiabatic temperature)
+~
 
 # Grid mesh and geometry
 
+~ Align-Left
+* The mesh definition is a critical value in a FDS model
+* The combustion product must be introduced in kg/m^2^&sdot;s
+* The combustion surface defines the initial moment in the system
+* Our system has a geometry of 122 cm (length) x 17 cm (width)
+* A 6.5 cm cell size was chosen after a sensitivity analysis   
+~
+
+# Radiation
+~ Align-Left
+* High combustion efficiency --> low radiation loses
+* The radiation fraction can be calculated considering the partial pressures 
+* The radiation loses of the system are around 3 % 
+
+Juanjo, in maths, we trust, but a picture may help to believe what your are saying...
+  
+~
+
+# Validation of the FDS model
+~ Align-Left
+* You are probably thinking
+  - Nice method
+  - The theory is interesting, but I want to if it works
+  - Does he have more cool pictures?
+ 
+* Well, let's show the results
+  - And yes, there are some more pictures
+~
 
 
-
-
-
-# Introduction
-
-
-* [Html][slide]:
-  Uses the `Reveal.js` library by [Hakim El Hattab](http://hakim.se).\
-  This slide demo in Madoko is an adaption of his online demo.
-* [Pdf][slide-pdf]:
-  Uses the `Beamer` package for LaTeX
-* [Source][slide-mdk]:
-  Click to see the source of this presentation.
-
-
-[madoko]: http://madoko.codeplex.com
 
 ## Reveal.js
 
