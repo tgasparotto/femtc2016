@@ -7,11 +7,11 @@ Email         : juan.blond@baslerhofmann.ch
 
 
 
-Bibliography  : references.bib
+Bibliography  : blond_references.bib
 Logo          : False
 Tex Header    :
   \def\refname{&name-references;}
-name-references : REFERENCES
+name-references : 
 
 [TITLE]
 
@@ -253,3 +253,7 @@ The work experience gained from the commercial hot smoke test carried out with I
 These temperature measurements can be used to calibrate and validate the FDS geometry.The last step is to program the design fires in this previously validated geometry which eliminates many model uncertainties. 
 
 These kind of "a priori" validated simulations offer a greater grade of confidence and may reduce the safety factors taken in the design of the smoke management systems and thus, optimizing the solutions.
+
+
+## References   {-}
+[BIB]
