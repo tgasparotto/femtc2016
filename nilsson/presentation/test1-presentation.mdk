@@ -9,7 +9,9 @@ Beamer Theme  : singapore
 [TITLE]
 
 # Introduction
-* Text
+* MSc thesis
+* Previous numerical work on this test
+* Investigate differences in the program versions
 
 ~ Begin Vertical
 # Experimental setup
@@ -119,9 +121,13 @@ $= C \dfrac{dT_{PT}}{dT}$
 # Conclusions
 
 ~ Center
-* FDS 6.2.0 generally produce higher temperatures and $\dot{q}^{\prime\prime}_{IRHF}$ for the given setup
-* FDS 6.2.0 produce results that are more in line with the results from the test
-* Need of a high mesh resolution to obtain credible results, namely a $D^{*}/\delta x$ of at least 30.
+* FDS 6.2.0 generally produce higher temperatures and
+  $\dot{q}^{\prime\prime}_{IRHF}$ for the given setup compared to FDS
+  5.5.3
+* FDS 6.2.0 produce results that are more in line with the results from
+  the test compared to FDS 5.5.3
+* Need of a high mesh resolution to obtain credible results particularly
+  close to the fire, namely a $D^{*}/\delta x$ of at least 30.
 * It is crucial to compare the same form of output data in FDS
 ~
 
