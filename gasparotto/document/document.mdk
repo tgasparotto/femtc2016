@@ -1,20 +1,29 @@
 [INCLUDE=style/lncs]
-Title         : TITLE OF YOUR PAPER, IN CAPITAL LETTERS CENTERED ON PAGE, USING ONE OR MORE LINES AS NECESSARY
-Subtitle      : An optional subtitle.
+Title         : AN EMERGENCY EGRESS MODEL BASED ON A MACROSCOPIC CONTINUOUS APPROACH
+Subtitle      :
 
-Author        : First Author Name
-Affiliation   : Research institute
-Email         : you@bar.com
+Author        : Thomas GASPAROTTO
+Affiliation   : CNPP/LEMTA-Université de Lorraine
+Email         : thomas.gasparotto@cnpp.com
 
-Author        : My co-author 1
-Affiliation   : Other institute
-Email         : other1@bar.com
+Author        : Anthony COLLIN
+Affiliation   : LEMTA-Université de Lorraine
+Email         : anthony.collin@univ-lorraine.fr
 
-Author        : My co-author 2
-Affiliation   : Other institute
-Email         : other2@bar.com
+Author        : Pascal BOULET
+Affiliation   : LEMTA-Université de Lorraine
+Email         : pascal.boulet@univ-lorraine.fr
+
+Author        : Grégoire PIANET
+Affiliation   : CNPP
+Email         : gregoire.pianet@cnpp.com
+
+Author        : Armelle MULLER
+Affiliation   : CNPP
+Email         : armelle.muller@cnpp.com
 
 Bibliography  : references.bib
+Biblio Style  : unsrt
 Logo          : False
 Tex Header    :
   \def\refname{&name-references;}
@@ -23,227 +32,448 @@ name-references : REFERENCES
 [TITLE]
 
 ~ Abstract
-Papers should follow standard technical paper format, an abstract
-followed by the more detailed presentation. The abstract should be typed
-on this area of the first page, with the presentation following after two
-lines of space.
+Many modelling approaches can be used to assess evacuation time of buildings in fire 
+situations. We present in this paper a new model, implemented in a collaborative work between 
+LEMTA and CNPP, and based on a macroscopic continuous approach. 
+First, the assumptions and algorithm of  pedestrian movement model are detailed. 
+Secondly, our model is confronted to results from full-scale tests 
+carried out without any fire constraints and to other egress models on typical test 
+cases extracted from literature. Finally, the complete model (including fire 
+stresses) is compared with FDS+Evac on a simple fire scenario.
 ~
 
-[editor]: https://www.madoko.net/editor.html "Madoko.net Editor"
-[reference-manual]: http://research.microsoft.com/en-us/um/people/daan/madoko/doc/reference.html "Madoko Reference Manual"
-[femtc2016]: https://github.com/thunderheadeng/femtc2016
-[emaillink]: mailto:conference@thunderheadeng.com "conference@thunderheadeng.com"
+# INTRODUCTION { #sec-intro }
+Assessment of fire safety performance of buildings requires an estimation of 
+Required Safe Egress Time (RSET) in fire situation. Many egress models have 
+therefore been developed during the last decades, using various mechanisms. 
+First evacuation models were based on empiric relations between people density, 
+walking speed and geometric characteristics of the building (Togawa [@togawa], Pauls [@pauls]). 
+Then, advancement of numerical simulation and progress in human behaviour modelling 
+led to finer analysis of pedestrian motion, particularly microscopic approaches. 
+For instance, Lagrangian-type models (Evac [@FDSEvac], Simulex) consider people as particles, 
+whose respective motion is governed by different attractive or repulsive forces and 
+characteristic velocities. Another kind of physical model, such as cellular 
+automata (Blue and Adler [@blue], Klüpfel [@kluepfel], Tissera [@tissera]), considers a space-and-time 
+discretization with people who jump from cell to neighboring cell following given 
+transition laws. The main part of current evacuation computational tools are based on microscopic approaches. 
+However, these kinds of models provide output results which are 
+significant for the only simulated evacuation scenario and a particular initial 
+people distribution. So, these microscopic descriptions need a statistical treatment 
+of numerous simulations for a particular configuration to provide average data 
+(required evacuation time, flowrates through openings in terms of persons per time 
+unit) which can be considered representative of all scenarios likely to occur.
 
-# GENERAL INSTRUCTIONS { #sec-intro }
-You are encouraged to use the [Madoko.net Editor][editor] while using
-the [Madoko Reference Manual][reference-manual] to edit/commit your
-documents into the 'authoring' branch of the [femtc2016] GitHub repository. 
-More information about this method of contribution will be covered below.
+A macroscopic continuous egress model was developed in the present work, as an 
+alternative to this limitation. Instead of considering people as individual 
+entities with particular characteristics, our model tracks the evolution of people 
+density in space and time and takes into consideration average input parameters to 
+describe the population. The model is based on a people density balance solved in a 
+discretized two-dimensional space, with additional constraints, such as critical 
+flows through doors or congestion constraints, which make the problem more complex. 
+The complete model is also able to take fire stresses into account, in terms 
+of temperature, heat flux and visibility.
 
-Text styling, links, sub- and super-script, footnotes and other topics
-are covered in section [Syntax: Inline
-elements](http://research.microsoft.com/en-us/um/people/daan/madoko/doc/reference.html#sec-syntax--inline-elements)
-of the manual.
+This paper details the algorithm used to solve the problem and our
+perspectives in order to integrate fire effects into the pedestrian motion model. 
+Real-scale tests were carried out to check that our basis pedestrian motion model is able to 
+reproduce experimental data (without any fire constraint). At this stage, validation 
+of the complete model including fire stresses seems very difficult, due to the lack of 
+experimental data. Nevertheless, a comparison between our model and FDS+Evac 
+considering a simple test case extracted from literature leads to promising results.
 
-Headings, Figures and Tables, Lists, Code Blocks, Mathematics, etc. are
-covered in section [Syntax: Block
-elements](http://research.microsoft.com/en-us/um/people/daan/madoko/doc/reference.html#sec-syntax--block-elements)
-of the manual.
+# THE EGRESS MODEL
 
-The target length for submitted and invited papers is about eight pages.
-This length includes all figures and tables. However, because the
-Proceedings will not be printed on paper, there is no maximum limit on
-the number of pages. You are free to exceed the target length of eight
-pages.
+The model presented here relies on a macroscopic approach, in which people are 
+assimiled to their people density. These types of models, based on partial differential 
+equations solved in a continuous medium, have been studied since the 1950's with the 
+emergence of first vehicular traffic models [@lighthill]. The application of these models inspired 
+from fluid mechanics to people motion modelling is more recent and was initiated 
+with Hughes [@hughes]. In these studies, motion of people is described with the mass 
+continuity equation, with some additional hypothesis in order to integrate human 
+specificities and simple features of human behavior. Hughes' model was the source of
+further developments and mathematical studies. We can notice that macroscopic models 
+are generally used in crowd motion with high densities. In fact, microscopic approaches
+are not optimal to study large crowds, due to the complex interactions between persons
+and the consequent computation time. This limitation is overcame with macroscopic 
+approaches, in which calculation time depends on the size of computational domain 
+instead of the number of persons.
+We can also notice that macrosocpic egress models have been studied from a mathematical 
+point of view, but have not been implemented in a numerical tool devoted to evacuation 
+in fire situation.
 
-Please watch this short YouTube Video for a tutorial on how to use the system as intended.
 
-# MAIN HEADINGS LIKE THIS STYLE
-Main Headings are all upper case letters and underlined. In Madoko, a
-Single '#' symbol at the start of the line, followed by a space and then
-the heading text.
+## Assumptions and formulation
 
-## Subheadings Like This Style
-Subheadings within sections follow the same format as section titles, but
-with upper and lower case. In Madoko, a Double '#' symbol at the start of
-the line, followed by a space and then the heading text.
+### Basis hypothesis
 
-### Subsubheadings like this style
-Subsubheadings have no underline, and only the first letter capitalized.
-In Madoko, a Triple '#' symbol at the start of the line, followed by a
-space and then the heading text.
+The people motion model follows the temporal and spatial evolution of a macroscopic 
+quantity, which is the people density &rho; (person per square meter). It is based on 
+three fundamental assumptions:\
+1)	Without external constraint, people move at their preferred walking speed.\
+2)	People density has to respect a strict congestion constraint: it cannot exceed 
+a critical density.\
+3)	Flowrate through a door cannot exceed a critical rate.
 
-# FIGURES, TABLES, AND EQUATIONS
-Original drawings and photos may be included in your paper as figures.
-Diagrams may be in color.
+### Mathematical formulation
+Mathematically, a balance is written for the time- and space-varying people density 
+in a pre-calculated velocity field:\
 
-Figures and tables should immediately follow first mention of them in the
-text and can be placed in one column, or in the case of wider figures,
-can cover two columns (but only at the top or bottom of the page). The
-caption should start with either the word “figure” spelled out or
-abbreviated, followed by the figure number (i.e., Figure 1 or Fig. 1).
-The figure caption should be followed by a single line of space before
-the text resumes.
-
-## Figures
-Figure [#fig-smokeview] in Section [#sec-intro] shows an image from an
-older version of Smokeview. Note that you can drag&drop images into the
-editor pane to include them in the document, and similarly with bibtex
-files, latex style files, etc.
-
-~ Figure { #fig-smokeview; caption:"Illustration of placement of figure and caption. (use the `.wide` class for wide figure)."}
-![Ex1_0]
-~
-[Ex1_0]: images/Ex1_0.png "Ex1_0" { width:auto; max-width:90% }
-
-~ Note
-Images larger than about 1Mb in size will be rejected by the Madoko.net server.
-~
-
-## Tables
-Table [#table-sample] shows an example full width table figure.
-
-~ TableFigure { #table-sample; caption: "Modelle mit unterschiedlich geschätztem baseline hazard"; .wide }
-|                | $c(t)$                               ||||
-|                |---------|---------|---------|-----------|
-|                | (A0)    | (A1)    | (A2)    | (A3)      |
-|                | ohne    | Log     | Polynom | Stückweise|
-|                |         |         |         | konstant  |
-|:---------------|:-------:|:-------:|:-------:|:---------:|
-| Log likelihood | -6.798  | -6.733  | -6.715  | -6.686    |
-| Pseudeo $R^{2}$| 0,048   | 0,057   | 0,059   | -         |
-| AIC            | 13.615  | 13.489  | 13.456  | 13.483    |
-| BIC            | 13.711  | 13.594  | 13.580  | 14.009    |
-| N              | 105.484 | 105.484 | 105.484 | 105.484   |
-|----------------|---------|---------|---------|-----------|
+~ Equation {#eq1}
+\frac{\partial \rho}{\partial t}+\nabla (\rho \overrightarrow{v})=0
 ~
 
-## Equations
-Standard terminology should be used in equations. If possible, keep
-equations to one column. All equations should be numbered. A definition
-of $e$ is shown in Equation [#euler]:
-
-~ Equation { #euler }
-e = \lim_{n\to\infty} \left( 1 + \frac{1}{n} \right)^n
+~ Equation {#eq2}
+\overrightarrow{v}=P \overrightarrow{V}
 ~
 
-Or to use &logolatex; to align equations.
+where $\overrightarrow{v}$ is the effective transport velocity of people density 
+and $\overrightarrow{V}$ is the preferred walking speed of people. The operator P 
+refers to the projection of preferred speeds on the permissible velocity space in a 
+least square sense. So, real speed $v$  is necessarily lower than preferred walking 
+speed $V$ due to the presence of other persons.
 
-~ Equation { #eq-alignment; caption:"Alignment example" }
-\begin{aligned} 
- f(x)  &= a x^2+b x +c   &   g(x)  &= d x^3 \\
- f'(x) &= 2 a x +b       &   g'(x) &= 3 d x^2
-\end{aligned}
+### Key parameters
+To complete the evacuation model, we have to introduce four key parameters:\
+1) Preferred - or free - walking speed $V_{0}$, which depends on gender, age and 
+culture.\
+2) Reaction- and premovement-time $\tau$, which is the time between the trigger of an
+alarm signal and the beginning of the evacuation. Evaluation of premovement time is
+particularly complex, because of its dependence on hazard perception. Nevertheless, its
+estimation is a crucial point in the sense that it can be longer than travel time towards 
+exit.\
+3) Critical people density $\rho_{c}$, generally estimated between 4~6 persons per 
+square meter. In this paper, the value of 5.4 persons per square meter is chosen.\
+4) Critical flowrate through a door $\Phi_{c}$, which depends on the width of the opening. 
+For a 90 centimeter-wide door, we can estimate it at 1,1 person per second.\
+
+
+## Numerical algorithm without fire constraint
+
+The implementation of our model and the algorithm used in order to solve it 
+numerically (which is similar to the one adopted by Roudneff-Chupin [@roudneff]) are presented 
+in figure [#algo]. Two distinct parts are involved in a sequential process: subroutines PAULO 
+(Pathfinding Algorithm Using Length Optimization) and MARCOE (Macroscopic Analysis 
+of Rescue Configuration for Optimal Evacuation).
+
+~ Figure { #algo; caption:"Algorithm used for the computation of egress model"}
+![algo]
+~
+[algo]: images/algo.png { width:auto; max-width:90% }
+
+### Scenario creation
+The computational domain is discretized with a mesh of square cells, which can be 
+classified into three categories:\
+1)	Walls and other impenetrable obstacles are considered as blocked cells which cannot 
+be entered by people.\
+2)	Exit cells refer to the outward exit openings and are characterized by the 
+critical flowrate.\
+3)	Free cells symbolize available space for motion and can be occupied by people.\
+
+The scenario (initial spatial distribution of persons) may be defined in a realistic
+way taking into account the nature of the building.
+Nevertheless, in order to study a mean configuration representative for all potential 
+scenarios, the initial distribution of people density in the calculation area can be 
+considered uniform and fairly distributed on free cells.
+
+### Preferred velocities computation
+
+The preliminary step for the resolution of the density balance equation is the 
+computation of the velocity field in which the people density is transported. This 
+calculation is based on a simple observation: people tend to minimize their travel 
+time to their goal [@moussaid]. So it is assumed in this study that people have a perfect 
+knowledge of their environment and of the configuration of the building. For each 
+free cell, the velocity is directed along the shortest path to the nearest exit cell. 
+The shortest path between a current cell and its nearest exit cell is computed thanks 
+to the PAULO algorithm (Pathfinding Algorithm Using Length Optimization) inspired 
+from Dijkstra and able to take into consideration the specificities of the geometry 
+(particularly blocked cells). At this stage, it can be noticed that the norm of the 
+velocity is the preferred walking speed $V_{0}$.
+
+### Transport at preferred speed
+The space- and time-varying evolution of people density in the pre-calculated 
+velocity field is governed by the equation [#eq1]. The equation is solved numerically 
+using a finite volume method with an explicit temporal scheme. The advective part 
+of the equation is treated thanks to a QUICK scheme, which consists in a second 
+order interpolation in space and represents a good compromise between accuracy and 
+computational time. At this step, exit cells are treated as particular cases and 
+their outgoing flow is limited by the critical flux $\Phi_{c}$. Moreover, influence 
+of surrounding people density on walking speed is not considered at this stage. This 
+transport step is the first part of the MARCOE algorithm (Macroscopic Analysis of 
+Rescue Configuration for Optimal Evacuation).
+
+### Corrective step
+
+The previous calculation step (transport at preferred velocity) can lead to 
+non-physical situations where the people density can locally exceed the critical 
+density $\rho_{c}$. So a corrective part extracted from literature [@maury] is introduced 
+in order to respect congestion constraint for each cell. This corrective part 
+consists in a stochastic projection of local excess density:\
+1)	The saturated cells are identified.\
+2)	For each saturated cell, the density excess is calculated and redistributed 
+along a random walk, i.e. one of the four neighbors of the current cell is randomly 
+chosen to receive as much density as it can to respect critical density.\
+3)	The random walk continues until the excess density is fully redistributed.\
+
+It should be noticed that this corrective part is mathematically equivalent to 
+Equation [#eq2] and consists in its algorithmic implementation. This step is the 
+second part of the MARCOE algorithm.
+
+## Integration of fire effects
+
+The present model allows the inclusion of fire influence on egress conditions.
+
+Fire effects on humans are generally classified into three categories:\
+1) Thermal effects in terms of temperature and heat flux: high temperatures can 
+generate hyperthermia (increase in body temperature with alteration of mental
+abilities) and respiratory tract burns. Heat flux (from fire source and smoke 
+layer) is responsible for skin burns.\
+2) Optical effects: gases and soot particles present in smoke can reduce strongly the
+visibility distances due to their extinguishing properties. This loss of visibility
+may have a significant impact on evacuation process, because it is one of the most
+influent criteria on decision-making.
+3) Toxic effects: three different toxic effects are identified in literature.
+Asphyxiating gases affect the transportation of oxygen in the human system; irritant
+gases inflame human tissues and cause pains. Narcotic gases affect physical
+capabilities and can lead to loss of consciousness.
+
+In this study, it was decided not to deal with the question of toxic effects, because
+we can consider that toxic effects are correlated with optical and thermal effects.
+Moreover, reliability of gas concentration estimation sub-models (espacially those
+embedded in Fire Dynamics Simulator) is questionable.\
+
+Three different ways are considered to represent fire impact on evacuation 
+circumstances:\
+1)	Burning cells are treated as blocked cells (physical obstacles)\
+2)	The cells with thermal constraints (temperature, heat flux) and optical 
+constraints (optical density) above threshold values introduced in table 
+[#fire-effects] are also considered as blocked cells. In fact, beyond these
+threshold values, it can be generally considered that people are not able to ensure
+their own evacuation. The critical value chosen for extinction coefficient corresponds
+to a visibility distance of 10 m according to Jin's correlation for a
+light-reflecting object.\
+3)	Extinction coefficient of the smoke locally reduces the walking speed of 
+humans according to the empirical formula given by Frantzich and Nilsson [@frantzich]:\
+
+~ Equation { #frantzich-nilsson }
+v(\beta) = \max (0.1 V_{0}, (1-0.0807 \beta) V_{0})
 ~
 
-# FUN CONTENT EXAMPLES
-Let's program some JavaScript:
-``` javascript
-function hello() {
-  return "hello world!"
-}
-```
-Here is a footnote[^fn] reference.
-[^fn]: This is the content of the example footnote. 
-    You can continue a footnote by indenting content.
-    And notice the back link.
+where $v$ is the effective speed, $V_{0}$ is the preferred speed and $\beta$ is 
+the extinction coefficient ($m^{-1}$).
+Fire-related data are extracted from Fire Dynamics Simulator 6 (developed by the 
+NIST) and are updated at each time step.
 
-# BIBLIOGRAPHY AND REFERENCES
-When references are used in the text, tie them to an alphabetical (by
-principal author) list of references to be included as the last item of
-your paper. The format commonly used in scientific literature follows:
 
-Smith, J. S., Bloggs, R. T. and Jones, E. R. (1974), "Magnetic Anomalies
-in Geothermal Systems", Journal of Fluid Mechanics, 254, 73-79
+~ TableFigure { #fire-effects; caption: "Example of threshold values for fire constraints"}
++------------------------+-----------------+
+| Fire effect            | Threshold value |
++:----------------------:+:---------------:+
+| Temperature            | 60°C            |
+| Thermal flux           | 2,5 $kW.m^{-2}$ |
+| Extinction coefficient | 0,3 $m^{-1}$    |
+|------------------------|-----------------|
+~
 
-Leslie Lamport, LaTeX: A Document Preparation System (2nd Edition), Addison-Wesley, 1994
 
-When using Madoko, edit the content of the .bib file in the document
-folder, and use the reference methods as shown in the [Bibliography and
-Citations
-Section](http://research.microsoft.com/en-us/um/people/daan/madoko/doc/reference.html#sec-bib)
-of the Madoko Manual.
+# VALIDATION AND COMPARISON BETWEEN MODELS
 
-A bibliography file consists of all your references in the BibTeX format, for example:
+## Validation without fire stresses
 
-    @BOOK{ Knuth:TeX,  
-        author   = "Knuth, Donald E.",  
-        title    = "The {\TeX} book",  
-        publisher= "Addison-Wesley",  
-        year     = 1984  
-    }
+To the authors' knowledge, macroscopic models based on people density conservation
+have not been validated rightfully against real data yet. The objective in this 
+section is to validate the evacuation model at a small scale with repeated tests and 
+without fire constraints.
 
-Entries in the bibliography files can now be referenced using semi-colon
-separated references, for example:
-``` Markdown 
-Read about LaTeX and TeX [@Knuth:TeX; @Lamport:LaTeX].
-```
-Results in: Read about LaTeX and TeX [@Knuth:TeX; @Lamport:LaTeX].
+### Experimental setup
 
-Please include full title of journal articles or other references,
-journal, volume, date, pages. There is a nice [table on
-Wikipedia](https://en.wikibooks.org/wiki/LaTeX/Bibliography_Management#BibTeX)
-that shows all of the different data fields for the BibTeX file.
+The egress model was confronted against experience on a very simple configuration: 
+a 10 m² room (4 m long and 2,5 m wide) with a single 90 centimeter-wide exit (figures 
+[#experimental_configuration] and [#experimental_configuration2]). A GoPro 
+camera is set at the door in order to take the evacuation time of each person and 
+to determine at every moment the proportion of initial population which is out of 
+the room. Initial positions and orientations of the 10 persons are randomly chosen 
+and the start for evacuation is given by a sound signal.
 
-# PAPER DEADLINE
-Your paper, in final form, must be received by October 15th, 2016. The
-best way to edit and submit is to use the Madoko [editor] to edit your
-document in the 'authoring' branch of the GitHub [femtc2016] repository.
-If you choose to use some other document format and editing tool, PDF
-format is preferred, but ODT, DOC, or DOCX formats are acceptable. Please
-e-mail the files to [conference@thunderheadeng.com][emaillink].
+~ Figure { #experimental_configuration; caption:"Experimental setup"}
+![experimental_configuration]
+~
+[experimental_configuration]: images/experimental_configuration.png "experimental_configuration" { width:auto; max-width:90% }
 
-# PRESENTATION
-Each author must present his/her paper within the allotted time, allowing
-for some minutes of open discussion. The session chair is responsible for
-keeping authors within their time limit, in order to ensure that each
-author has enough time for their presentation. When preparing your
-presentation slides, make sure they are clear and large enough so that
-your audience can read them from as far as 80 feet away.
+\
 
-All presentations will be made using the computer projector available in
-the conference room. We will not have overhead projectors or slide
-projectors in the meeting rooms.
+~ Figure { #experimental_configuration2; caption:"Experimental setup"}
+![experimental_configuration2]
+~
+[experimental_configuration2]: images/experimental_configuration2.png "experimental_configuration2" { width:auto; max-width:90% }
 
-Your presentation, in final form, must be received by **October 15th,
-2016**. A final commit of the files to the GitHub repository is
-preferred. Once the final draft is complete and reviewed it will be
-merged into the master branch of the repository. If you decide to use
-some other tool for creating your presentation, PDF format is preferred,
-but ODP, PPT, or PPTX formats are acceptable. Please e-mail the files
-to [conference@thunderheadeng.com][emaillink].
+### First step: identification of walking speed and reaction time
+The aim of this preliminary step is to determine, for this particular experimental 
+configuration, the average free walking speed and reaction time of the 10 members 
+of the population. 100 evacuation tests were carried out with a single person to 
+obtain exit rate (percentage of the population who left the room) over time (figure [#identification]). 
 
-All presentations will be pre-loaded on the computers that are present.
-Please note that this approach will make it necessary for us to receive
-the presentation files prior to the conference. If you have a different
-software requirement, it should still be possible for you to attach your
-own computer to the projector if you bring it with you. This is not
-optimal, as it takes time and slows down the session.
+~ Figure { #identification; caption:"Identification of free walking speed and reaction time"}
+![identification]
+~
+[identification]: images/identification.png "identification" { width:auto; max-width:70% }
 
-# CONFERENCE CONTENT DISTRIBUTION
-The papers and presentation materials will be made available online
-during and after the conference. In addition, the organizers are planning
-to may broadcast live presentations online during the event. The papers,
-presentations, and videos will be archived and made available on the web
-after the conference.
+The analytical expression of this exit rate allowed the identification in a least 
+square sense ([#vitesse],[#reaction]) of mean preferred walking speed V0 and mean reaction 
+time of the population:
 
-Author(s) retain all rights to submitted material. The organizers are
-granted a non-exclusive right to copy and redistribute conference
-material submitted by the author(s).
+~ Equation { #vitesse }
+V_{0}=0.91 m.s^{-1}
+~
+
+~ Equation { #reaction }
+\tau=0.69 s
+~
+
+In this particular case, the identified reaction time $\tau$ includes the reaction to
+a beep and the orientation towards the exit. It can be noticed that average free walking 
+speed of our sample is particularly low due to the compact dimensions of the room.
+
+### Validation with 10 persons
+
+20 repeated egress tests were conducted with the same sample of 10 persons to 
+obtain average data significant for many different scenarios. Walking speed and 
+reaction time identified in the previous step were introduced into the code as 
+input parameters. Figure [#validation] represents mean experimental values (red), the solution 
+computed by our code which takes congestion constraint into consideration (green), 
+and the analytical solution which considers that people evacuate the room as if 
+they were alone (blue). 
+
+~ Figure {#validation; caption:"Validation with 10 persons"}
+![validation]
+~
+[validation]: images/validation.png "validation" { width:auto; max-width:70% }
+
+These results provide two main insights:\
+1)	Congestion is correctly taken into account.\
+2)	Evacuation rates computed from a unique simulation with a mean scenario are 
+similar to those obtained by a statistical treatment of 20 particular random 
+scenarios.
+
+
+## Comparison with other codes
+
+In this paragraph, we compare output results from our model with those obtained with
+other evacuation codes. The chosen scenario for this comparison is the one described
+in Test 9 extracted from the Guidelines for evacuation analysis for new and existing
+passenger ships, of International Maritime Organization [@IMO]. Characteristics of the test
+case are presented in Table [#characteristics].
+
+~ TableFigure { #characteristics; caption: "Characteristics of the chosen scenario"}
++------------------------------+--------------------------+------------------------------------------------------------------+
+|                              | MARCOE PAULO             | Other codes                                                      |
++:----------------------------:+:------------------------:+:----------------------------------------------------------------:+
+| Number of persons            | 1000                     | 1000                                                             |
++------------------------------|--------------------------|------------------------------------------------------------------+
+| Initial spatial distribution | uniform                  | random                                                           |
++------------------------------+--------------------------+------------------------------------------------------------------+
+| Free walking speed           | 1.295 $m.s^{-1}$         | uniform distribution between 0.97 $m.s^{-1}$ and 1.62 $m.s^{-1}$ |
++------------------------------|--------------------------+------------------------------------------------------------------+
+| Reaction time                | 0 s                      | 0 s                                                              |
++------------------------------+--------------------------+------------------------------------------------------------------+
+| Critical flowrate            | 1.1 $s^{-1}.m^{-1}$      | undefined                                                        |
++------------------------------+--------------------------+------------------------------------------------------------------+
+| Critical density             | 5.4 $m^{-2}$              | undefined                                                        |
++------------------------------+--------------------------+------------------------------------------------------------------+
+| Number of simulations        | 1                        | variable                                                         |
+|------------------------------|--------------------------|------------------------------------------------------------------|
+~
+
+Table [#intermodels] presents the evacuation times computed with different numeric 
+tools. 
+
+~ TableFigure { #intermodels; caption: "Comparison between our model and other codes"}
++--------------------------------+---------------------+
+| Code/model                     | Evacuation time (s) |
++:------------------------------:+:-------------------:+
+| Evac [@FDSEvac]                           | 240.8               |
+| Pathfinder (Steering mode) [@thunderhead]    | 196.7 - 199         |
+| Pathfinder (SFPE mode) [@thunderhead]        | 264.7 - 275.6       |
+| Pathfinder (Steering+SFPE mode) [@thunderhead] | 273.2 - 283.2       |
+| Zhang's model [@zhang]                 | 251 - 252           |
+| PedGo 2.5.0.7                  | 179                 |
+| MARCOE PAULO                   | 228                 |
+|--------------------------------|---------------------|
+~
+
+The evacuation time computed with our model MARCOE PAULO is coherent with output results
+of other codes. Nevertheless, it can be noticed that egress times calculated with different
+models are included in a very wide range of values. The lack of details on input parameters
+used in the different codes makes interpretation of these deviations particularly difficult.
+
+# INTEGRATION OF FIRE EFFECTS: COMPARISON WITH FDS+EVAC
+
+## Comparison case
+The geometry of our study case is the one adopted in Test 10 extracted from the 
+Guidelines of IMO [@IMO] (figure [#test10]). It consists in a group of open boat cabins with 
+two exits. One of the cabins contains a fire source whose nominal heat release 
+rate is 1 MW. It is assumed that the heat release rate is governed by a medium 
+growth according to NFPA 204 standard. Fire-related data (extinction coefficient, 
+temperature, thermal flux) are extracted from FDS at 1.8 meter high and are updated 
+every 5 seconds. A population of 23 persons is considered with uniform 
+characteristics (preferred walking speed of 1.25 $m.s^{-1}$ and reaction/pre-movement 
+time of 30 s).
+
+## Numerical results
+Evacuation process is simulated with our macroscopic model, and exit rate over 
+time is compared with the one obtained by a statistical post-processing of 30 
+simulations conducted with FDS6+Evac (figure [#test10]). 
+
+~ Figure {#test10; caption:"Comparison between our model and EVAC on a simple scenario"}
+![test10]
+~
+[test10]: images/test10.png "test10" { width:auto; max-width:90% }
+
+Table [#intermediate] presents intermediate 
+evacuation times $t_{n}$calculated with both codes ($t_{n}$ is the time that n % of the 
+initial population is outside).
+
+~ TableFigure { #intermediate; caption: "intermediate egress times"}
++---------------+----------+---------------+
+|               | EVAC     | MARCOE PAULO  |
++:--------------+----------+:-------------:+
+| $t_{50}$      | 40.1 s   | 38.4 s        |
++---------------|----------|---------------+
+| $t_{75}$      | 43.2 s   | 41.0 s        |
++---------------+----------+---------------+
+| $t_{90}$      | 45.7 s   | 43.1 s        |
++---------------|----------+---------------+
+| $t_{95}$      | 47.2 s   | 44.1 s        |
+|---------------|----------|---------------|
+~
+
+These numerical results show that evacuation rates over time have a similar 
+evolution for both models, and that a maximal flow rate through doors is observed 
+when congestion appears close to exits.
+Discrepancies can be explained by considering the different assumptions made by the 
+models, especially the decision making sub-models embedded into FDS 6+Evac.
+
+
+# CONCLUSION
+
+An evacuation model based on a macroscopic continuous approach has been developed 
+in order to provide reliable estimations of evacuation data (egress times, flow 
+rates) for a particular building configuration. To overcome potential limitations 
+of discrete models in terms of computational time, it consists in the tracking of 
+people density over time in a 2D domain. Evolution of people density is governed by 
+a balance equation and additional constraints treated by a specific algorithm to 
+include interactions between walking speed, density, congestion formation and 
+people flows. First validation tests performed at a small scale seem promising and 
+prove that our model is able to handle congestion properly. Comparison tests with 
+other egress codes (and particularly the one embedded in FDS 6) on simple scenarios 
+revealed that the model gives similar output data than usual models used in Fire 
+Safety Engineering. They also showed that a unique simulation with our model can 
+provide significant egress times and avoid heavy computations of numerous 
+particular scenarios. Complementary developments are still ongoing to improve the 
+reliability of the model. One of our main perspectives is the improvement of the
+inclusion of fire effects in the pedestrian model. The current method consists in
+considering threshold values to assess tenability of egress conditions. In fact, fire 
+effluents have a more complex influence and may have a strong impact on evacuation
+below a critical value. This further development will make our model more realistic,
+and more robust from a numerical point of view.
 
 [BIB]
-
-&pagebreak;
-
-# An appendix { @h1:"A" }
-"All the same, I should like it all plain and clear," said he
-obstinately, putting on his business manner (usually reserved for people
-who tried to borrow money off him), and doing his best to appear wise and
-prudent and professional and live up to Gandalf's recommendation. "Also I
-should like to know about risks, out-of-pocket expenses, time required
-and remuneration, and so forth" -- by which he meant: "What am I going to
-get out of it? and am I going to come back alive?"
-
-# Conclusion
-If you have any questions concerning your paper and/or the Conference,
-please email us at [conference@thunderheadeng.com][emaillink].
