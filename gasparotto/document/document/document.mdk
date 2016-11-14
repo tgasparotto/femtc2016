@@ -299,7 +299,6 @@ and the start for evacuation is given by a sound signal.
 ~
 [experimental_configuration]: images/experimental_configuration.png "experimental_configuration" { width:auto; max-width:90% }
 
-\
 
 ~ Figure { #experimental_configuration2; caption:"Experimental setup"}
 ![experimental_configuration2]
